@@ -1,0 +1,52 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 22 Apr 2014 02:00:23 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 22 Apr 2014 02:00:23 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(02:00:23 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(02:01:09 PM)</font> <b>Rubynaut:</b></font> ähm short question. is there no log for sails running an sails app in dev mode?<br/>
+<font color="#A82F2F"><font size="2">(02:01:20 PM)</font> <b>Rubynaut:</b></font> in rails i can see post params etc in my console<br/>
+<font color="#A82F2F"><font size="2">(02:03:39 PM)</font> <b>Rubynaut:</b></font> oh found config.log sorry :)<br/>
+<font color="#A82F2F"><font size="2">(02:04:32 PM)</font> <b>Rubynaut:</b></font> but would be nice to see post params etc in &quot;info&quot; mode.<br/>
+<font color="#A82F2F"><font size="2">(02:12:20 PM)</font> <b>da_wunder:</b></font> there is a log entries<br/>
+<font color="#A82F2F"><font size="2">(02:12:35 PM)</font> <b>da_wunder:</b></font> eg. verbose: Routing message over socket:  {&quot;url&quot;:&quot;/Sprint/&quot;,&quot;data&quot;:{&quot;project&quot;:12}}<br/>
+<font color="#A82F2F"><font size="2">(02:13:24 PM)</font> <b>da_wunder:</b></font> and if you have some custom actions just add sails.log.inf(&quot;your message here&quot;);<br/>
+<font color="#A82F2F"><font size="2">(02:13:28 PM)</font> <b>da_wunder:</b></font> +o<br/>
+<font color="#A82F2F"><font size="2">(02:14:00 PM)</font> <b>da_wunder:</b></font> but now some sleep -&gt;<br/>
+<font color="#A82F2F"><font size="2">(02:30:46 PM)</font> <b>robdubya:</b></font> man if i start arguiing with people in blogs, i&apos;m going to go OFF. i;m cranky today<br/>
+<font color="#A82F2F"><font size="2">(02:36:06 PM)</font> <b>screamingbanshee:</b></font> lol crabby?<br/>
+<font color="#062585"><font size="2">(02:37:52 PM)</font> <b>***lenswipe</b></font> makes robdubya coffee<br/>
+<font color="#A82F2F"><font size="2">(02:47:46 PM)</font> <b>rawtaz:</b></font> robdubya: stand in line will ya<br/>
+<font color="#A82F2F"><font size="2">(02:47:59 PM)</font> <b>rawtaz:</b></font> im the grumpy fuck, youll have to qualify<br/>
+<font color="#A82F2F"><font size="2">(02:49:34 PM)</font> <b>justinm:</b></font> anyone have success using express-helpers with sails v10?  Have tried this but no dice: http://stackoverflow.com/questions/22451076/how-to-configure-sails-js-to-use-ejs-view-helpers<br/>
+<font color="#062585"><font size="2">(02:50:49 PM)</font> <b>***lenswipe</b></font> draws on rawtaz <br/>
+<font size="2">(02:58:30 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:03:08 PM)</font> <b>Asweb:</b></font> Hello, Does anyone use req.isAjax?<br/>
+<font color="#A82F2F"><font size="2">(03:03:11 PM)</font> <b>Asweb:</b></font> 0.10 branch?<br/>
+<font color="#A82F2F"><font size="2">(03:27:03 PM)</font> <b>rawtaz:</b></font> lenswipe: oh noes<br/>
+<font color="#A82F2F"><font size="2">(03:28:26 PM)</font> <b>mikermcneil:</b></font> Asweb: you should use req.wantsJSON<br/>
+<font color="#A82F2F"><font size="2">(03:28:33 PM)</font> <b>mikermcneil:</b></font> check out reference in beta.sailsjs.org<br/>
+<font color="#A82F2F"><font size="2">(03:29:50 PM)</font> <b>Asweb:</b></font> thanks a lot mike<br/>
+<font color="#A82F2F"><font size="2">(03:30:53 PM)</font> <b>Asweb:</b></font> By the way, using .populate on branch 0.10, is there a way to tell like: Object.populate(&apos;OtherObject&apos;).where({ OtherObject.name = &quot;test&quot; })<br/>
+<font color="#A82F2F"><font size="2">(03:31:00 PM)</font> <b>Asweb:</b></font> like a condition after the populate<br/>
+<font color="#A82F2F"><font size="2">(04:50:05 PM)</font> <b>dchen:</b></font> any angular+sails (ngSails) users in the house?<br/>
+<font color="#A82F2F"><font size="2">(04:50:23 PM)</font> <b>robdubya:</b></font> sup<br/>
+<font color="#A82F2F"><font size="2">(04:51:50 PM)</font> <b>dchen:</b></font> I have all the CRUD operations working with angular and the blueprint api, now I&apos;m trying to do a two way binding<br/>
+<font color="#A82F2F"><font size="2">(04:51:59 PM)</font> <b>dchen:</b></font> $sails.on() never fires for me<br/>
+<font color="#A82F2F"><font size="2">(04:56:24 PM)</font> <b>robdubya:</b></font> which lib are you using?<br/>
+<font color="#A82F2F"><font size="2">(04:57:07 PM)</font> <b>dchen:</b></font> https://github.com/kyjan/angular-sails<br/>
+<font color="#A82F2F"><font size="2">(04:57:36 PM)</font> <b>robdubya:</b></font> ah. no idea then<br/>
+<font color="#A82F2F"><font size="2">(04:57:44 PM)</font> <b>dchen:</b></font> which repo are you using?<br/>
+<font color="#A82F2F"><font size="2">(05:00:10 PM)</font> <b>robdubya:</b></font> https://github.com/balderdashy/angularSails<br/>
+<font color="#A82F2F"><font size="2">(05:00:24 PM)</font> <b>robdubya:</b></font> balderdashy.github.io/angularSails/#/api/ngsails.$sailsSocket<br/>
+<font color="#A82F2F"><font size="2">(05:00:27 PM)</font> <b>robdubya:</b></font> (i&apos;m writing it)<br/>
+<font color="#A82F2F"><font size="2">(05:00:33 PM)</font> <b>dchen:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(05:00:45 PM)</font> <b>dchen:</b></font> ok thanks<br/>
+<font color="#A82F2F"><font size="2">(05:01:11 PM)</font> <b>robdubya:</b></font> that one is 10.0+ only though<br/>
+<font color="#A82F2F"><font size="2">(05:01:40 PM)</font> <b>dchen:</b></font> awesome, I&quot;m on 10+<br/>
+<font color="#A82F2F"><font size="2">(05:01:45 PM)</font> <b>dchen:</b></font> I&apos;ll check it out<br/>
+<font color="#A82F2F"><font size="2">(05:02:14 PM)</font> <b>dchen:</b></font> my repo is closest to https://github.com/ryancp/sailng<br/>
+<font color="#A82F2F"><font size="2">(05:02:47 PM)</font> <b>tskaggs:</b></font> Has anyone used the waterline many-many for 0.10<br/>
+<font color="#A82F2F"><font size="2">(05:02:48 PM)</font> <b>tskaggs:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(05:02:50 PM)</font> <b>dchen:</b></font> if everything is working right, do the blueprint api&apos;s automatically broadcast over sockets or do you have to write sails controllers<br/>
+<font color="#A82F2F"><font size="2">(05:03:37 PM)</font> <b>tskaggs:</b></font> User.find().populate(&apos;locations&apos;) isn&apos;t working correctly<br/>
+<font color="#A82F2F"><font size="2">(05:03:37 PM)</font> <b>robdubya:</b></font> if you turn on autoWatch, its all pretty much available via the blueprints<br/>
+<font color="#A82F2F"><font size="2">(05:04:12 PM)</font> <b>dchen:</b></font> great thanks<br/>
+<font size="2">(05:19:19 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

@@ -1,0 +1,83 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with snelsen@i3.com at Tue 12 Aug 2014 12:34:26 PM MDT on rhow@i3.com/utilworkstation (jabber)</title></head><body><h3>Conversation with snelsen@i3.com at Tue 12 Aug 2014 12:34:26 PM MDT on rhow@i3.com/utilworkstation (jabber)</h3>
+<font color="#A82F2F"><font size="2">(12:34:26 PM)</font> <b>Shawn Nelsen:</b></font> this one?<br/>&lt;add key =&quot;Tcod.RabbitMq&quot; value=&quot;rabbit.i3.local&quot;/&gt;<br/>
+<font color="#16569E"><font size="2">(12:34:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep</span><br/>
+<font color="#A82F2F"><font size="2">(12:34:59 PM)</font> <b>Shawn Nelsen:</b></font> can ping it just fine<br/>
+<font color="#16569E"><font size="2">(12:35:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, well... i'm still stumped</span><br/>
+<font color="#16569E"><font size="2">(12:35:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>do you see any logging stuff?</span><br/>
+<font color="#A82F2F"><font size="2">(12:35:56 PM)</font> <b>Shawn Nelsen:</b></font> does the rabbit do anything else?<br/>
+<font color="#16569E"><font size="2">(12:36:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it reproduces, that's a full time job</span><br/>
+<font color="#A82F2F"><font size="2">(12:36:37 PM)</font> <b>Shawn Nelsen:</b></font> I should have known better<br/>
+<font color="#16569E"><font size="2">(12:36:42 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(12:37:34 PM)</font> <b>Shawn Nelsen:</b></font> this is gonna be a mess.<br/>
+<font color="#A82F2F"><font size="2">(12:37:48 PM)</font> <b>Shawn Nelsen:</b></font> None of the specified endpoints were reachable<br/>Endpoints attempted:<br/>------------------------------------------------<br/>endpoint=amqp-0-9://rabbit.i3.local:5672, attempts=1<br/>RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=0, text=&quot;End of stream&quot;, classId=0, methodId=0, cause=System.IO.EndOfStreamException: Unable to read beyond the end of the stream.<br/>   at RabbitMQ.Client.Impl.Frame.ReadFrom(NetworkBinaryReader reader)<br/>   at RabbitMQ.Client.Impl.SocketFrameHandler_0_9.ReadFrame()<br/>   at RabbitMQ.Client.Impl.ConnectionBase.MainLoopIteration()<br/>   at RabbitMQ.Client.Impl.ConnectionBase.MainLoop()<br/>   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply()<br/>   at RabbitMQ.Client.Impl.ModelBase.ConnectionOpen(String virtualHost, String capabilities, Boolean insist)<br/>   at RabbitMQ.Client.Impl.ConnectionBase..ctor(ConnectionFactory factory, Boolean insist, IFrameHandler frameHandler)<br/>   at RabbitMQ.Client.Framing.Impl.v0_9_1.ProtocolBase.CreateConnection(ConnectionFactory factory, Boolean insist, IFrameHandler frameHandler)<br/>   at RabbitMQ.Client.ConnectionFactory.FollowRedirectChain(Int32 maxRedirects, IDictionary connectionAttempts, IDictionary connectionErrors, AmqpTcpEndpoint[]&amp; mostRecentKnownHosts, AmqpTcpEndpoint endpoint)<br/>================================================<br/>Stack trace:<br/>   at RabbitMQ.Client.ConnectionFactory.CreateConnection(Int32 maxRedirects)<br/>   at TcodManager.Models.Producer..ctor(String hostName, String queueName) in d:\_repos\tcod_manager\tcodmanager\Models\Producer.cs:line 20<br/>   at TcodManager.Models.TcodWork.SendMessage(String queue, String message) in d:\_repos\tcod_manager\tcodmanager\Models\TcodWork.cs:line 312<br/>   at TcodManager.Models.TcodWork.SendMessage(String queue, String jobId, String task, String message, Boolean testRun, JObject kwargs) in d:\_repos\tcod_manager\tcodmanager\Models\TcodWork.cs:line 306<br/>   at TcodManager.Models.TcodWork.Delete() in d:\_repos\tcod_manager\tcodmanager\Models\TcodWork.cs:line 238<br/>
+<font color="#A82F2F"><font size="2">(12:39:58 PM)</font> <b>Shawn Nelsen:</b></font> 2014-08-12 11:25:47,079 ERROR TcodManager.Models.TcodWork - Deletion Error<br/>
+<font color="#16569E"><font size="2">(12:40:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Nice!!  that's beautiful. </span><br/>
+<font color="#16569E"><font size="2">(12:40:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i guess... try it again.</span><br/>
+<font color="#16569E"><font size="2">(01:19:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>there's an IP address conflict </span><br/>
+<font color="#16569E"><font size="2">(01:19:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I just sent a ticket into IT.</span><br/>
+<font color="#A82F2F"><font size="2">(01:19:50 PM)</font> <b>Shawn Nelsen:</b></font> of coarse there is.<br/>
+<font color="#A82F2F"><font size="2">(01:19:58 PM)</font> <b>Shawn Nelsen:</b></font> do I still need to test?<br/>
+<font color="#16569E"><font size="2">(01:20:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>no i don't think so.</span><br/>
+<font color="#A82F2F"><font size="2">(01:20:24 PM)</font> <b>Shawn Nelsen:</b></font> that's what I figures<br/>
+<font color="#16569E"><font size="2">(01:21:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Michelle and David Eye are in a meeting.  So, not sure when this will get resolved.</span><br/>
+<font color="#A82F2F"><font size="2">(01:22:20 PM)</font> <b>Shawn Nelsen:</b></font> yeah, that sounds right<br/>
+<font color="#A82F2F"><font size="2">(10:53:33 AM)</font> <b>Shawn Nelsen:</b></font> it is still sitting in the submit phase, I guess it's possible that it hasn't even started anything yet. I still don't understand the flow.<br/>
+<font color="#A82F2F"><font size="2">(01:48:09 PM)</font> <b>Shawn Nelsen:</b></font> I assume that this is what you were thinking 2014-08-13 13:47:31,707 DEBUG TcodManager.Models.TcodWork - Message Sent - Job Id: 53137d8b-1ec9-4f62-91f9-0ca6d230bc6f; Task: tcod.manage.delete; Duration (ms): 12; Message: /data/1/dd/streaming/tomtom/i3cache/imagery_tcod/L21/L21_R1347968_C2019136_64_64.tif<br/>
+<font color="#16569E"><font size="2">(01:48:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, is that the last one?</span><br/>
+<font color="#A82F2F"><font size="2">(01:49:01 PM)</font> <b>Shawn Nelsen:</b></font> it was at the time I sent it<br/>
+<font color="#16569E"><font size="2">(01:49:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>very good.</span><br/>
+<font color="#A82F2F"><font size="2">(03:10:49 PM)</font> <b>Shawn Nelsen:</b></font> that was not my problem.<br/>
+<font color="#16569E"><font size="2">(03:11:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you ran L14?</span><br/>
+<font color="#A82F2F"><font size="2">(03:11:33 PM)</font> <b>Shawn Nelsen:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(03:11:44 PM)</font> <b>Shawn Nelsen:</b></font> it was not 14<br/>
+<font color="#16569E"><font size="2">(03:12:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>at AV, what you expect to be deleted did not?</span><br/>
+<font color="#A82F2F"><font size="2">(03:13:04 PM)</font> <b>Shawn Nelsen:</b></font> yeah, and it wasn't level 14 anyway<br/>
+<font color="#A82F2F"><font size="2">(03:13:24 PM)</font> <b>Shawn Nelsen:</b></font> I'm doing 15 and 16 now, just to see what happens.<br/>
+<font color="#16569E"><font size="2">(03:14:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#16569E"><font size="2">(03:15:31 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>got a tcod completion email, that's a good thing.</span><br/>
+<font color="#A82F2F"><font size="2">(03:15:41 PM)</font> <b>Shawn Nelsen:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(03:16:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, it's all working as expected.  (I'm not sure what your problem is =] )</span><br/>
+<font color="#A82F2F"><font size="2">(03:16:48 PM)</font> <b>Shawn Nelsen:</b></font> I am<br/>
+<font color="#A82F2F"><font size="2">(03:18:13 PM)</font> <b>Shawn Nelsen:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://gisservices.datadoors.net/i3_ArcGIS/html/tt_wmsc.html">http://gisservices.datadoors.net/i3_ArcGIS/html/tt_wmsc.html</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(03:18:27 PM)</font> <b>Shawn Nelsen:</b></font> can you go here?<br/>19450179.925468,-5057063.0407348,19458435.124522,-5053441.8365204<br/>
+<font color="#A82F2F"><font size="2">(01:59:29 PM)</font> <b>Shawn Nelsen:</b></font> do you know where on those machines that file lives?<br/><br/>
+<font color="#16569E"><font size="2">(01:59:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in a WFS folder.</span><br/>
+<font color="#16569E"><font size="2">(02:00:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>close to the dd src application</span><br/>
+<font color="#A82F2F"><font size="2">(02:01:39 PM)</font> <b>Shawn Nelsen:</b></font> on web01 and web02?<br/>
+<font color="#16569E"><font size="2">(02:01:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i think so.</span><br/>
+<font color="#A82F2F"><font size="2">(02:02:19 PM)</font> <b>Shawn Nelsen:</b></font> ok, I don't see anything, but maybe it's because those folders are hidden from me.<br/>
+<font color="#16569E"><font size="2">(02:02:52 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>do you only see logs, and the wms folders?</span><br/>
+<font color="#A82F2F"><font size="2">(02:03:11 PM)</font> <b>Shawn Nelsen:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(02:03:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, you'll need to get Chris access them.</span><br/>
+<font color="#A82F2F"><font size="2">(02:04:03 PM)</font> <b>Shawn Nelsen:</b></font> I see a few other folders at ftc, I asked him already, waiting for a reply.<br/>
+<font color="#16569E"><font size="2">(02:04:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#16569E"><font size="2">(04:03:40 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what's in the WFS web.config for subscriptions?</span><br/>
+<font color="#16569E"><font size="2">(08:57:01 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>morning.</span><br/>
+<font color="#A82F2F"><font size="2">(08:57:13 AM)</font> <b>Shawn Nelsen:</b></font> no<br/>
+<font color="#16569E"><font size="2">(08:57:21 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yes!</span><br/>
+<font color="#A82F2F"><font size="2">(08:57:24 AM)</font> <b>Shawn Nelsen:</b></font> it failed<br/>
+<font color="#16569E"><font size="2">(08:57:36 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.  good to know.</span><br/>
+<font color="#A82F2F"><font size="2">(08:58:03 AM)</font> <b>Shawn Nelsen:</b></font> same error as before.<br/>
+<font color="#16569E"><font size="2">(08:58:11 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.</span><br/>
+<font color="#A82F2F"><font size="2">(08:58:19 AM)</font> <b>Shawn Nelsen:</b></font> I didn't expect you to be on this already<br/>
+<font color="#16569E"><font size="2">(09:00:58 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in the log, is there a reference to the endpoint?</span><br/>
+<font color="#16569E"><font size="2">(09:01:14 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>got it:</span>endpoint=amqp-0-9://rabbit.i3.local:5672, attempts=1<br/>
+<font color="#A82F2F"><font size="2">(09:01:33 AM)</font> <b>Shawn Nelsen:</b></font> ok then<br/>
+<font color="#A82F2F"><font size="2">(09:02:26 AM)</font> <b>Shawn Nelsen:</b></font> and also...correct<br/>
+<font color="#16569E"><font size="2">(09:06:06 AM)</font> <b>Randy How:</b></font> can you do a small test?<br/>
+<font color="#16569E"><font size="2">(09:06:19 AM)</font> <b>Randy How:</b></font> and change the config<br/>
+<font color="#16569E"><font size="2">(09:06:22 AM)</font> <b>Randy How:</b></font> to...<br/>
+<font color="#A82F2F"><font size="2">(09:06:25 AM)</font> <b>Shawn Nelsen:</b></font> that was small<br/>
+<font color="#16569E"><font size="2">(09:06:30 AM)</font> <b>Randy How:</b></font> ?<br/>
+<font color="#16569E"><font size="2">(09:06:45 AM)</font> <b>Randy How:</b></font> ftc-ms01.i3.local<br/>
+<font color="#A82F2F"><font size="2">(09:06:59 AM)</font> <b>Shawn Nelsen:</b></font> hold on<br/>
+<font color="#16569E"><font size="2">(09:07:03 AM)</font> <b>Randy How:</b></font> k, thx<br/>
+<font color="#A82F2F"><font size="2">(09:08:50 AM)</font> <b>Shawn Nelsen:</b></font> sorry, a lot going on already<br/>
+<font color="#16569E"><font size="2">(09:10:54 AM)</font> <b>Randy How:</b></font> actually. do the test without the change<br/>
+<font color="#16569E"><font size="2">(09:13:28 AM)</font> <b>Randy How:</b></font> hey you still there?<br/>
+<font color="#A82F2F"><font size="2">(09:14:04 AM)</font> <b>Shawn Nelsen:</b></font> yeah, there is a steady line to come talk to me.<br/>
+<font color="#16569E"><font size="2">(09:14:19 AM)</font> <b>Randy How:</b></font> ok.  we'll do this later.<br/>
+<font color="#A82F2F"><font size="2">(09:16:07 AM)</font> <b>Shawn Nelsen:</b></font> sorry, let me get back to you in a few.<br/>
+<font color="#A82F2F"><font size="2">(09:39:44 AM)</font> <b>Shawn Nelsen:</b></font> sorry, so where do you want me to start?<br/>
+<font color="#16569E"><font size="2">(09:41:29 AM)</font> <b>Randy How:</b></font> We made a change to stingray, try the rabbit.i3.local address when you have a chance.<br/>
+<font color="#A82F2F"><font size="2">(09:41:41 AM)</font> <b>Shawn Nelsen:</b></font> ok<br/>

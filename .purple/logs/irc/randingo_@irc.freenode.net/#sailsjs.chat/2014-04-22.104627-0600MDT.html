@@ -1,0 +1,87 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 22 Apr 2014 10:46:27 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 22 Apr 2014 10:46:27 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(10:46:27 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:48:47 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: what about the cookie?<br/>
+<font color="#A82F2F"><font size="2">(10:48:58 AM)</font> <b>Davsebamse:</b></font> it is sent in the header of the get request<br/>
+<font color="#A82F2F"><font size="2">(10:53:39 AM)</font> <b>nunojsferreira:</b></font> Davsebamse: yes<br/>
+<font color="#A82F2F"><font size="2">(10:53:42 AM)</font> <b>nunojsferreira:</b></font> it sends<br/>
+<font color="#A82F2F"><font size="2">(10:53:46 AM)</font> <b>nunojsferreira:</b></font> Cookie:sails.sid=s%3A4qO5vmn3dUiuohBYiGnxGWHD.DLtHR%2BgAb8P9mUW1k2iLd9ak73qqvv2cxexwrsXxk5s<br/>
+<font color="#A82F2F"><font size="2">(10:56:07 AM)</font> <b>nunojsferreira:</b></font> this is strange<br/>
+<font color="#A82F2F"><font size="2">(10:56:09 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: do you get the exact same error if you try a new project?<br/>
+<font color="#A82F2F"><font size="2">(10:56:18 AM)</font> <b>nunojsferreira:</b></font> exactly the same problem<br/>
+<font color="#A82F2F"><font size="2">(10:56:23 AM)</font> <b>Davsebamse:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(10:56:25 AM)</font> <b>nunojsferreira:</b></font> just tried it again<br/>
+<font color="#A82F2F"><font size="2">(10:56:46 AM)</font> <b>Davsebamse:</b></font> and you are just accessing localhost:1337?<br/>
+<font color="#A82F2F"><font size="2">(10:57:11 AM)</font> <b>nunojsferreira:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(10:57:14 AM)</font> <b>nunojsferreira:</b></font> check the last console<br/>
+<font color="#A82F2F"><font size="2">(10:57:15 AM)</font> <b>nunojsferreira:</b></font> https://gist.github.com/nunojsferreira/11186618<br/>
+<font size="2">(10:57:16 AM)</font><b> sz0 is now known as sz0`</b><br/>
+<font color="#A82F2F"><font size="2">(10:57:41 AM)</font> <b>nunojsferreira:</b></font> it accepted two handshakes<br/>
+<font color="#A82F2F"><font size="2">(10:57:44 AM)</font> <b>nunojsferreira:</b></font> and then...boom<br/>
+<font color="#A82F2F"><font size="2">(10:58:04 AM)</font> <b>Davsebamse:</b></font> try curl localhost:1337<br/>
+<font color="#A82F2F"><font size="2">(10:58:06 AM)</font> <b>Davsebamse:</b></font> which browser?<br/>
+<font color="#A82F2F"><font size="2">(10:58:09 AM)</font> <b>nunojsferreira:</b></font> chrome<br/>
+<font color="#A82F2F"><font size="2">(10:58:14 AM)</font> <b>Davsebamse:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(10:59:16 AM)</font> <b>nunojsferreira:</b></font> curl is working like a charm<br/>
+<font color="#A82F2F"><font size="2">(10:59:39 AM)</font> <b>Davsebamse:</b></font> how do you create the sails app?<br/>
+<font color="#A82F2F"><font size="2">(10:59:41 AM)</font> <b>Davsebamse:</b></font> the test one that is<br/>
+<font color="#A82F2F"><font size="2">(11:00:00 AM)</font> <b>nunojsferreira:</b></font> i just did sails new projectName<br/>
+<font color="#A82F2F"><font size="2">(11:00:08 AM)</font> <b>nunojsferreira:</b></font> then in the folder<br/>
+<font color="#A82F2F"><font size="2">(11:00:10 AM)</font> <b>nunojsferreira:</b></font> sails lift<br/>
+<font color="#A82F2F"><font size="2">(11:02:01 AM)</font> <b>nunojsferreira:</b></font> and sometimes it just works<br/>
+<font color="#A82F2F"><font size="2">(11:02:05 AM)</font> <b>nunojsferreira:</b></font> like is working now<br/>
+<font color="#A82F2F"><font size="2">(11:02:13 AM)</font> <b>nunojsferreira:</b></font> now i am not getting any erro<br/>
+<font color="#A82F2F"><font size="2">(11:02:21 AM)</font> <b>nunojsferreira:</b></font> but if you check the last gist<br/>
+<font color="#A82F2F"><font size="2">(11:02:34 AM)</font> <b>nunojsferreira:</b></font> i got 2 valid handshakes and an error<br/>
+<font color="#A82F2F"><font size="2">(11:02:46 AM)</font> <b>Davsebamse:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(11:03:01 AM)</font> <b>Davsebamse:</b></font> I will just try to see if I can get the same error. In the meantime, try another browser<br/>
+<font color="#A82F2F"><font size="2">(11:03:19 AM)</font> <b>Davsebamse:</b></font> it is working very nicely for me<br/>
+<font color="#A82F2F"><font size="2">(11:03:36 AM)</font> <b>Davsebamse:</b></font> other question. Do you have any plugins/extenstions in chrome?<br/>
+<font color="#A82F2F"><font size="2">(11:04:02 AM)</font> <b>Davsebamse:</b></font> I have experined that some (mostly bad ones) overwrites the JS namespaces of other JS<br/>
+<font color="#A82F2F"><font size="2">(11:05:46 AM)</font> <b>nunojsferreira:</b></font> i have some<br/>
+<font color="#A82F2F"><font size="2">(11:05:53 AM)</font> <b>nunojsferreira:</b></font> let me try with another browser<br/>
+<font color="#A82F2F"><font size="2">(11:05:58 AM)</font> <b>nunojsferreira:</b></font> and another question<br/>
+<font color="#A82F2F"><font size="2">(11:06:30 AM)</font> <b>nunojsferreira:</b></font> how come can i have a different response for curl 127.0.0.1:1337 and the same on the browser?<br/>
+<font color="#A82F2F"><font size="2">(11:06:34 AM)</font> <b>nunojsferreira:</b></font> just notice...<br/>
+<font size="2">(11:06:43 AM)</font><b> sz0` is now known as sz0</b><br/>
+<font color="#A82F2F"><font size="2">(11:09:42 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: curl do not execute JS<br/>
+<font color="#A82F2F"><font size="2">(11:10:09 AM)</font> <b>nunojsferreira:</b></font> yep i know, but i got a completly diferent page<br/>
+<font color="#A82F2F"><font size="2">(11:10:16 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: and do not send chrome/webkit in the useragent<br/>
+<font color="#A82F2F"><font size="2">(11:11:05 AM)</font> <b>Davsebamse:</b></font> curl -A &quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36&quot; localhost:1337<br/>
+<font color="#A82F2F"><font size="2">(11:11:13 AM)</font> <b>Davsebamse:</b></font> try that one with curl<br/>
+<font color="#A82F2F"><font size="2">(11:11:23 AM)</font> <b>Davsebamse:</b></font> that will tell the server that it is a chrome on linux<br/>
+<font color="#A82F2F"><font size="2">(11:13:58 AM)</font> <b>nunojsferreira:</b></font> nice!<br/>
+<font color="#A82F2F"><font size="2">(11:15:15 AM)</font> <b>nunojsferreira:</b></font> i will dig more into it and try to see if it is smth i am doing wrong<br/>
+<font color="#A82F2F"><font size="2">(11:15:37 AM)</font> <b>Davsebamse:</b></font> did it work in another browser?<br/>
+<font color="#A82F2F"><font size="2">(11:15:38 AM)</font> <b>nunojsferreira:</b></font> i am just trying to build the confidence to develop my next project with sails<br/>
+<font color="#A82F2F"><font size="2">(11:15:41 AM)</font> <b>nunojsferreira:</b></font> nop<br/>
+<font color="#A82F2F"><font size="2">(11:15:45 AM)</font> <b>nunojsferreira:</b></font> same problem<br/>
+<font color="#A82F2F"><font size="2">(11:15:49 AM)</font> <b>nunojsferreira:</b></font> with firefox<br/>
+<font color="#A82F2F"><font size="2">(11:15:59 AM)</font> <b>Davsebamse:</b></font> ok. We are doing the new version of scoutrace.dk in sails<br/>
+<font color="#A82F2F"><font size="2">(11:16:24 AM)</font> <b>Davsebamse:</b></font> https://github.com/scoutrace/scoutrace-backend<br/>
+<font color="#A82F2F"><font size="2">(11:17:23 AM)</font> <b>nunojsferreira:</b></font> i am not sure what that is<br/>
+<font color="#A82F2F"><font size="2">(11:17:31 AM)</font> <b>nunojsferreira:</b></font> i came from symfony<br/>
+<font color="#A82F2F"><font size="2">(11:17:39 AM)</font> <b>nunojsferreira:</b></font> and just getting into node<br/>
+<font color="#A82F2F"><font size="2">(11:17:44 AM)</font> <b>Davsebamse:</b></font> well, I have not found a good way of describing it in english<br/>
+<font color="#A82F2F"><font size="2">(11:18:12 AM)</font> <b>nunojsferreira:</b></font> lol, np<br/>
+<font color="#A82F2F"><font size="2">(11:18:31 AM)</font> <b>nunojsferreira:</b></font> do sails have any big app in production?<br/>
+<font color="#A82F2F"><font size="2">(11:19:01 AM)</font> <b>nunojsferreira:</b></font> i am thinking in using sails + titanium to develop an iOS and android app<br/>
+<font color="#A82F2F"><font size="2">(11:19:38 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: nice. I do not know that.<br/>
+<font color="#A82F2F"><font size="2">(11:19:46 AM)</font> <b>Davsebamse:</b></font> I come from a Rails background :-)<br/>
+<font color="#A82F2F"><font size="2">(11:19:52 AM)</font> <b>Davsebamse:</b></font> why not phonegap?<br/>
+<font color="#A82F2F"><font size="2">(11:20:23 AM)</font> <b>nunojsferreira:</b></font> after some reading i kind of felt that titanium is more flexible<br/>
+<font color="#A82F2F"><font size="2">(11:20:39 AM)</font> <b>nunojsferreira:</b></font> and after some opinions of people who worked with both<br/>
+<font color="#A82F2F"><font size="2">(11:31:42 AM)</font> <b>Davsebamse:</b></font> nunojsferreira: okay. I have only looked at phonegap<br/>
+<font color="#A82F2F"><font size="2">(11:48:38 AM)</font> <b>HeN_:</b></font> hi wanted to know is it possible to use Model.create() with promises?<br/>
+<font color="#A82F2F"><font size="2">(11:49:29 AM)</font> <b>tskaggs_:</b></font> Hey all! I&apos;m using 0.10.0 and my model associations table isn&apos;t doing anything. I&apos;m creating a many-to-many relationship, user logins and creates a location. user.js (http://hastebin.com/ikafevekuz.scala) location.js (http://hastebin.com/evuzufelas.scala)<br/>
+<font color="#A82F2F"><font size="2">(11:49:53 AM)</font> <b>tskaggs_:</b></font> I&apos;m definitely missing something.<br/>
+<font size="2">(11:52:07 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(11:53:09 AM)</font> <b>tskaggs_:</b></font> HeN_  something like this? http://beta.sailsjs.org/#!documentation/reference/Models/Models.html<br/>
+<font color="#A82F2F"><font size="2">(12:13:13 PM)</font> <b>tskaggs_:</b></font> Anyone have a good working example of something like the &apos;Analogy&apos; section in http://beta.sailsjs.org/#!documentation/reference/Models/Models.html<br/>
+<font color="#A82F2F"><font size="2">(12:16:41 PM)</font> <b>HeN_:</b></font> tskaggs_: I&apos;m trying to use .then() after .create(), but it doesnt seem to work<br/>
+<font color="#A82F2F"><font size="2">(12:41:24 PM)</font> <b>jdcauley:</b></font> whats the word on csrf for some things and not others<br/>
+<font color="#A82F2F"><font size="2">(12:41:52 PM)</font> <b>jdcauley:</b></font> Analogy?<br/>
+<font color="#A82F2F"><font size="2">(12:53:25 PM)</font> <b>mikermcneil:</b></font> Hey guys, thought you might find this article interesting http://willricketts.com/sails-js-we-have-to-talk/  — I think a response would sound better coming from the community<br/>
+<font color="#A82F2F"><font size="2">(01:32:56 PM)</font> <b>lenswipe:</b></font> yooho<br/>
+<font color="#A82F2F"><font size="2">(01:32:58 PM)</font> <b>lenswipe:</b></font> anyone about&gt;?<br/>
+<font size="2">(01:44:18 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

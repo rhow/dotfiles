@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 28 Apr 2014 07:31:49 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 28 Apr 2014 07:31:49 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(07:31:49 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(07:39:34 AM)</font> <b>Drako:</b></font> depends on if  i can answer it  ;)<br/>
+<font color="#A82F2F"><font size="2">(07:41:09 AM)</font> <b>m_davis:</b></font> Drako: thanks :) it&apos;s a good practice question really<br/>
+<font color="#A82F2F"><font size="2">(07:41:58 AM)</font> <b>m_davis:</b></font> Drako: say I have a model &quot;tweet&quot; and I want to be able to add/update tweets with a PUT request<br/>
+<font color="#A82F2F"><font size="2">(07:42:40 AM)</font> <b>m_davis:</b></font> Drako: do I have to make the request to /tweet/:id or tweet/ ?<br/>
+<font color="#A82F2F"><font size="2">(07:43:02 AM)</font> <b>m_davis:</b></font> it seems that by default, sails asks to make the request to tweet/<br/>
+<font color="#A82F2F"><font size="2">(07:43:48 AM)</font> <b>Drako:</b></font> if you want to add a  tweet  you need to POST /tweet if you want to update PUT /tweet/:id<br/>
+<font color="#A82F2F"><font size="2">(07:44:58 AM)</font> <b>m_davis:</b></font> ok, so I can&apos;t use PUT to create stuff?<br/>
+<font color="#A82F2F"><font size="2">(07:45:09 AM)</font> <b>Drako:</b></font> haven&apos;t tested it yet<br/>
+<font color="#A82F2F"><font size="2">(07:45:24 AM)</font> <b>m_davis:</b></font> cause I seem to be able to do it, but i don&apos;t know if it&apos;s good to<br/>
+<font color="#A82F2F"><font size="2">(07:45:26 AM)</font> <b>Drako:</b></font> you could probably use  it  if you define the action in the route<br/>
+<font color="#A82F2F"><font size="2">(07:47:23 AM)</font> <b>m_davis:</b></font> Drako: alght, thx a lot Drako<br/>
+<font color="#A82F2F"><font size="2">(07:47:50 AM)</font> <b>Drako:</b></font> http://beta.sailsjs.org/#!documentation/guides/routes<br/>
+<font color="#A82F2F"><font size="2">(07:48:29 AM)</font> <b>m_davis:</b></font> thx!<br/>
+<font color="#A82F2F"><font size="2">(08:16:35 AM)</font> <b>Drako:</b></font> anyone knows if sails.io.put works?<br/>
+<font color="#A82F2F"><font size="2">(08:17:40 AM)</font> <b>Drako:</b></font> always getting : verbose: A request did not match any routes, and no `res.notFound` handler is configured.<br/>
+<font color="#A82F2F"><font size="2">(08:21:28 AM)</font> <b>brolin:</b></font> Hello, how can i add underscore functions to jade templates?<br/>
+<font color="#A82F2F"><font size="2">(08:23:02 AM)</font> <b>Drako:</b></font> hmm it should work out of the box - it does with ejs<br/>
+<font color="#A82F2F"><font size="2">(08:23:21 AM)</font> <b>Drako:</b></font> @brolin<br/>
+<font color="#A82F2F"><font size="2">(08:25:24 AM)</font> <b>brolin:</b></font> Drako: yes, but with jade doesn&apos;t work<br/>
+<font color="#A82F2F"><font size="2">(08:26:05 AM)</font> <b>brolin:</b></font> i&apos;m working in sails@beta<br/>
+<font color="#A82F2F"><font size="2">(08:26:43 AM)</font> <b>Drako:</b></font> maybe this one helps: http://stackoverflow.com/questions/8404259/how-to-use-underscore-in-jade-template<br/>
+<font color="#A82F2F"><font size="2">(08:26:58 AM)</font> <b>Drako:</b></font> you can define custom middleware in  config/express<br/>
+<font color="#A82F2F"><font size="2">(08:27:46 AM)</font> <b>brolin:</b></font> thanks, i will try it<br/>
+<font color="#A82F2F"><font size="2">(08:28:42 AM)</font> <b>m_davis:</b></font> is there a way to quickly populate the database that comes with sails.js<br/>
+<font color="#A82F2F"><font size="2">(08:29:10 AM)</font> <b>m_davis:</b></font> i tried writing in the file but it doesn&apos;t go so well. Is there a better way to do it?<br/>
+<font color="#A82F2F"><font size="2">(09:09:12 AM)</font> <b>sudo:</b></font> hello<br/>
+<font size="2">(09:09:24 AM)</font><b> sudo is now known as Guest75571</b><br/>
+<font color="#A82F2F"><font size="2">(09:10:22 AM)</font> <b>Guest75571:</b></font> where can i find advanced documentation for sails-mysql<br/>
+<font color="#A82F2F"><font size="2">(09:10:23 AM)</font> <b>Guest75571:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(09:13:24 AM)</font> <b>da_wunder:</b></font> what are you looking for?<br/>
+<font color="#A82F2F"><font size="2">(09:13:59 AM)</font> <b>da_wunder:</b></font> imho you should not do anything database specified<br/>
+<font color="#A82F2F"><font size="2">(09:14:28 AM)</font> <b>da_wunder:</b></font> because then you loose freedom on choice on database selection<br/>
+<font color="#A82F2F"><font size="2">(09:15:42 AM)</font> <b>Guest75571:</b></font> the problem is that i can&apos;t define columns with e.g. timestamp type when i&apos;m using migrations<br/>
+<font color="#A82F2F"><font size="2">(09:16:28 AM)</font> <b>Guest75571:</b></font> i&apos;m able to create only integer and strings as showed here: https://github.com/BlueHotDog/sails-migrations<br/>
+<font color="#A82F2F"><font size="2">(09:17:17 AM)</font> <b>Guest75571:</b></font> ok, date parameter has worked<br/>
+<font color="#A82F2F"><font size="2">(09:17:30 AM)</font> <b>da_wunder:</b></font> maybe because there is not type called &apos;timestamp&apos;<br/>
+<font color="#A82F2F"><font size="2">(09:17:41 AM)</font> <b>da_wunder:</b></font> https://github.com/balderdashy/sails-docs/blob/master/reference/Models.md#attribute-options<br/>
+</body></html>

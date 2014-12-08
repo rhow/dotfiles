@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Thu 10 Jul 2014 04:33:28 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Thu 10 Jul 2014 04:33:28 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(04:33:28 PM)</font><b> The topic for #sailsjs is: Documentation for v0.10 can be found at <a href="http://beta.sailsjs.org">http://beta.sailsjs.org</a></b><br/>
+<font color="#A82F2F"><font size="2">(04:42:53 PM)</font> <b>zonetti:</b></font> how to query for &quot;not null&quot;?<br/>
+<font color="#A82F2F"><font size="2">(04:43:07 PM)</font> <b>zonetti:</b></font> I mean, &quot;field is not null&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:44:07 PM)</font> <b>ponzicoder:</b></font> zonetti, you&apos;re trying to query your model for an attribute that is not null?<br/>
+<font color="#A82F2F"><font size="2">(04:45:50 PM)</font> <b>zonetti:</b></font> ponzicoder, something like Model.find({field: &apos;is null&apos;})<br/>
+<font color="#A82F2F"><font size="2">(04:47:10 PM)</font> <b>zonetti:</b></font> can&apos;t find this on https://github.com/balderdashy/waterline-docs/blob/master/query-language.md<br/>
+<font color="#A82F2F"><font size="2">(04:47:48 PM)</font> <b>ponzicoder:</b></font> have you tried Model.find({ name: { &apos;!&apos;: &apos;null&apos; }})<br/>
+<font color="#A82F2F"><font size="2">(04:47:50 PM)</font> <b>oskob:</b></font> {field: {&apos;!&apos;, null}<br/>
+<font color="#A82F2F"><font size="2">(04:47:51 PM)</font> <b>oskob:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(04:47:54 PM)</font> <b>oskob:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(04:48:41 PM)</font> <b>zonetti:</b></font> ponzicoder, oskob, yes =/<br/>
+<font color="#A82F2F"><font size="2">(04:48:48 PM)</font> <b>zonetti:</b></font> still nothing<br/>
+<font color="#A82F2F"><font size="2">(04:49:33 PM)</font> <b>ponzicoder:</b></font> which adapter (db) are you using?<br/>
+<font color="#A82F2F"><font size="2">(04:49:35 PM)</font> <b>oskob:</b></font> zonetti: you can always do Model.query if your adapter allows it ;)<br/>
+<font color="#A82F2F"><font size="2">(04:49:48 PM)</font> <b>zonetti:</b></font> ponzicoder, mysql<br/>
+<font color="#A82F2F"><font size="2">(04:49:57 PM)</font> <b>zonetti:</b></font> oskob, I know but I wanna avoid that :D<br/>
+<font color="#A82F2F"><font size="2">(04:50:07 PM)</font> <b>oskob:</b></font> understandable<br/>
+<font color="#A82F2F"><font size="2">(04:50:26 PM)</font> <b>ponzicoder:</b></font> yep…gonna test a couple of things.<br/>
+<font color="#A82F2F"><font size="2">(04:51:32 PM)</font> <b>mbmufffin:</b></font> Does the SailsJS session support the rolling: true attribute? It doesn&apos;t appear to be refreshing the cookie for my session.<br/>
+<font color="#A82F2F"><font size="2">(05:05:32 PM)</font> <b>ponzicoder:</b></font> hey zonetti: try Model.find({ name: { &apos;!&apos;: null}})<br/>
+<font color="#A82F2F"><font size="2">(05:05:49 PM)</font> <b>zonetti:</b></font> ponzicoder, tried already =/<br/>
+<font color="#A82F2F"><font size="2">(05:06:00 PM)</font> <b>ponzicoder:</b></font> without the quotes around null?<br/>
+<font color="#A82F2F"><font size="2">(05:06:10 PM)</font> <b>zonetti:</b></font> ponzicoder, with and without<br/>
+<font color="#A82F2F"><font size="2">(05:06:42 PM)</font> <b>ponzicoder:</b></font> k, I just spun up a sails app using mysql and it worked on my end….which version of sails are you using?<br/>
+<font color="#A82F2F"><font size="2">(05:07:21 PM)</font> <b>zonetti:</b></font> ponzicoder, actually I&apos;m just using waterline (sails&apos; ORM)<br/>
+<font color="#A82F2F"><font size="2">(05:07:25 PM)</font> <b>ponzicoder:</b></font> fyi: I&apos;m using rc8<br/>
+<font color="#A82F2F"><font size="2">(05:07:26 PM)</font> <b>zonetti:</b></font> waterline 0.10<br/>
+<font color="#A82F2F"><font size="2">(05:07:31 PM)</font> <b>zonetti:</b></font> and sails-mysql 010<br/>
+<font color="#A82F2F"><font size="2">(05:07:44 PM)</font> <b>ponzicoder:</b></font> one sec<br/>
+<font color="#A82F2F"><font size="2">(05:09:28 PM)</font> <b>ponzicoder:</b></font> the master branch of sails is using &quot;waterline&quot;: &quot;0.10.0-rc15&quot;,   for what it&apos;s worth that one worked.<br/>
+<font color="#A82F2F"><font size="2">(05:09:42 PM)</font> <b>ponzicoder:</b></font> Not sure if there&apos;d be a diff using waterline solo<br/>
+<font color="#A82F2F"><font size="2">(05:10:19 PM)</font> <b>zonetti:</b></font> ponzicoder, I see<br/>
+<font color="#A82F2F"><font size="2">(05:10:30 PM)</font> <b>zonetti:</b></font> ponzicoder, oskob, well thnx anyway... I&apos;ll get back to that later<br/>
+<font color="#A82F2F"><font size="2">(05:10:38 PM)</font> <b>zonetti:</b></font> I&apos;ll let u know if I find the answer :)<br/>
+<font color="#A82F2F"><font size="2">(05:11:09 PM)</font> <b>ponzicoder:</b></font> sounds good<br/>
+<font color="#A82F2F"><font size="2">(05:14:13 PM)</font> <b>zonetti:</b></font> ponzicoder, u were right :)<br/>
+<font color="#A82F2F"><font size="2">(05:14:40 PM)</font> <b>zonetti:</b></font> my problem was that I was sending the query over querystring, and then parsing<br/>
+<font color="#A82F2F"><font size="2">(05:15:05 PM)</font> <b>zonetti:</b></font> null became &quot;null&quot;<br/>
+<font size="2">(05:38:52 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

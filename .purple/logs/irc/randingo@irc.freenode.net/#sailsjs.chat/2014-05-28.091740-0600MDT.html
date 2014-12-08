@@ -1,0 +1,260 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 28 May 2014 09:17:40 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 28 May 2014 09:17:40 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:17:40 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:32:44 AM)</font> <b>RWOverdijk:</b></font> https://www.youtube.com/watch?v=DQwpaUqWOd4<br/>
+<font color="#A82F2F"><font size="2">(09:42:48 AM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(09:43:05 AM)</font> <b>da_wunder:</b></font> so what&apos;s the &quot;best&quot; fixture npm package for sails?<br/>
+<font color="#A82F2F"><font size="2">(09:43:42 AM)</font> <b>da_wunder:</b></font> https://github.com/akd3vs/sails-fixtures vs. https://github.com/bredikhin/barrels vs. https://github.com/proboston/sails-fixtures<br/>
+<font color="#A82F2F"><font size="2">(09:48:19 AM)</font> <b>da_wunder:</b></font> or is there yet another one?<br/>
+<font color="#A82F2F"><font size="2">(10:35:47 AM)</font> <b>spa-dev:</b></font> is there any way to give policies parameters in sailsjs?<br/>
+<font color="#A82F2F"><font size="2">(10:36:14 AM)</font> <b>spa-dev:</b></font> i&apos;d like to write a generic has permissions policy<br/>
+<font color="#A82F2F"><font size="2">(10:36:30 AM)</font> <b>spa-dev:</b></font> instead of a bunch of policies like &apos;canEdit&apos; &apos;canView&apos;<br/>
+<font color="#A82F2F"><font size="2">(10:36:31 AM)</font> <b>spa-dev:</b></font> etc<br/>
+<font color="#A82F2F"><font size="2">(10:36:44 AM)</font> <b>spa-dev:</b></font> which all do the same thing but check different strings<br/>
+<font color="#A82F2F"><font size="2">(10:57:16 AM)</font> <b>da_wunder:</b></font> spa-dev: i don&apos;t think so<br/>
+<font color="#A82F2F"><font size="2">(10:57:35 AM)</font> <b>da_wunder:</b></font> just make those canEdit, canView policies and make those to use some service<br/>
+<font color="#A82F2F"><font size="2">(11:00:55 AM)</font> <b>mbmufffin:</b></font> dida: http://beta.sailsjs.org/#/documentation/reference/Models<br/>
+<font color="#A82F2F"><font size="2">(11:03:28 AM)</font> <b>blce:</b></font> having trouble updating to sails .10  ... receiving a 500 error when i try to create a user.<br/>
+<font color="#A82F2F"><font size="2">(11:08:04 AM)</font> <b>da_wunder:</b></font> blce: what do you see in your console?<br/>
+<font color="#A82F2F"><font size="2">(11:10:36 AM)</font> <b>blce:</b></font> whoops, laptops about to die...<br/>
+<font color="#A82F2F"><font size="2">(11:10:42 AM)</font> <b>blce:</b></font> error: Sent 500 (&quot;Server Error&quot;) response error: TypeError: Object function (name, defaultValue){   var params = this.params || {};   var body = this.body || {};   var query = this.query || {};   if (null != params[name] &amp;&amp; params.hasOwnProperty(name)) return params[name];   if (null != body[name]) return body[name];   if (null != query[name]) return query[name];   return defaultValue; } has no method &apos;all&apos;     at module.exports.create<br/>
+<font color="#A82F2F"><font size="2">(11:10:44 AM)</font> <b>blce:</b></font> ...etc<br/>
+<font color="#A82F2F"><font size="2">(11:10:48 AM)</font> <b>da_wunder:</b></font> not here<br/>
+<font color="#A82F2F"><font size="2">(11:10:52 AM)</font> <b>da_wunder:</b></font> pastebin<br/>
+<font color="#A82F2F"><font size="2">(11:11:17 AM)</font> <b>da_wunder:</b></font> and paste your model definitions also<br/>
+<font color="#A82F2F"><font size="2">(11:11:32 AM)</font> <b>blce:</b></font> ehheh, sorry, i have to go my laptops dying.<br/>
+<font color="#A82F2F"><font size="2">(11:11:34 AM)</font> <b>da_wunder:</b></font> and the post data which creates that 500<br/>
+<font size="2">(11:15:48 AM)</font><b> blce left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(11:33:22 AM)</font> <b>blce:</b></font> hello,<br/>
+<font color="#A82F2F"><font size="2">(11:34:04 AM)</font> <b>blce:</b></font> i put console error, model, and post data on paste bin  http://pastebin.com/RAvDtagA<br/>
+<font color="#A82F2F"><font size="2">(11:34:26 AM)</font> <b>blce:</b></font> i&apos;m receiving a 500 error when trying to create a user<br/>
+<font color="#A82F2F"><font size="2">(11:34:42 AM)</font> <b>blce:</b></font> i think it might be a problem with my update to sails v.10<br/>
+<font color="#A82F2F"><font size="2">(11:40:19 AM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(11:40:27 AM)</font> <b>da_wunder:</b></font> and what is in your UserController<br/>
+<font color="#A82F2F"><font size="2">(11:40:56 AM)</font> <b>da_wunder:</b></font> you&apos;re not using default blueprint actions?<br/>
+<font color="#A82F2F"><font size="2">(11:44:22 AM)</font> <b>blce:</b></font> let me put it up...<br/>
+<font color="#A82F2F"><font size="2">(11:45:00 AM)</font> <b>da_wunder:</b></font> anyone know how /api/blueprints/someAction.js works?<br/>
+<font color="#A82F2F"><font size="2">(11:45:38 AM)</font> <b>da_wunder:</b></font> https://github.com/balderdashy/sails/issues/1653#issuecomment-43583019<br/>
+<font color="#A82F2F"><font size="2">(11:45:42 AM)</font> <b>da_wunder:</b></font> that one<br/>
+<font color="#A82F2F"><font size="2">(11:45:42 AM)</font> <b>blce:</b></font> i updated the pastebin http://pastebin.com/tGvm4b4r<br/>
+<font color="#A82F2F"><font size="2">(11:46:32 AM)</font> <b>da_wunder:</b></font> req.param.all() doesn&apos;t exists anymore<br/>
+<font color="#A82F2F"><font size="2">(11:46:39 AM)</font> <b>da_wunder:</b></font> and now question<br/>
+<font color="#A82F2F"><font size="2">(11:46:46 AM)</font> <b>da_wunder:</b></font> why have you override create?<br/>
+<font color="#A82F2F"><font size="2">(11:47:11 AM)</font> <b>da_wunder:</b></font> if that is all the logic you can use blueprint for that<br/>
+<font color="#A82F2F"><font size="2">(11:47:24 AM)</font> <b>da_wunder:</b></font> just remove that create function from there<br/>
+<font color="#A82F2F"><font size="2">(11:47:31 AM)</font> <b>da_wunder:</b></font> and let blueprint handle that for you<br/>
+<font color="#A82F2F"><font size="2">(11:48:05 AM)</font> <b>blce:</b></font> ah yes, that&apos;s right. i was following a tutorial and he was demonstrating how routing works.<br/>
+<font color="#A82F2F"><font size="2">(11:48:49 AM)</font> <b>da_wunder:</b></font> http://beta.sailsjs.org/#/documentation/reference/Request/req.allParams.html<br/>
+<font color="#A82F2F"><font size="2">(11:48:53 AM)</font> <b>blce:</b></font> thank you!! what exists in its place? i&apos;ll look through the documentaaa....<br/>
+<font color="#A82F2F"><font size="2">(11:49:05 AM)</font> <b>blce:</b></font> that&apos;s exactly it.<br/>
+<font color="#A82F2F"><font size="2">(12:28:08 PM)</font> <b>Aswebbb:</b></font> Hello guys, what kind of security system do you use for your blueprints? Passport?<br/>
+<font color="#A82F2F"><font size="2">(12:28:45 PM)</font> <b>Aswebbb:</b></font> Json Web token? Default Sails cookie token?<br/>
+<font color="#A82F2F"><font size="2">(12:40:49 PM)</font> <b>Drako:</b></font> short question: is it possible to have action blueprint with  id  param  like Model/update/:id   but  model/start/:id  without defining it in the routes?<br/>
+<font color="#A82F2F"><font size="2">(01:08:37 PM)</font> <b>da_wunder:</b></font> what is the &quot;right&quot; way to delete req.param(&apos;foo&apos;); on policy?<br/>
+<font color="#A82F2F"><font size="2">(01:19:54 PM)</font> <b>lenswipe:</b></font> robdubya, you around?<br/>
+<font color="#A82F2F"><font size="2">(01:20:19 PM)</font> <b>lenswipe:</b></font> da_wunder, I just use delete<br/>
+<font color="#A82F2F"><font size="2">(01:21:03 PM)</font> <b>JemiloII:</b></font> i wonder if this client will hide all the login and logout notices<br/>
+<font color="#A82F2F"><font size="2">(01:21:36 PM)</font> <b>da_wunder:</b></font> lenswipe: but how?<br/>
+<font color="#A82F2F"><font size="2">(01:21:57 PM)</font> <b>da_wunder:</b></font> delete request.body.foo; delete.request.query.foo; ?<br/>
+<font color="#A82F2F"><font size="2">(01:22:03 PM)</font> <b>da_wunder:</b></font> or something else?<br/>
+<font color="#A82F2F"><font size="2">(01:24:29 PM)</font> <b>lenswipe:</b></font> da_wunder, hold on<br/>
+<font color="#A82F2F"><font size="2">(01:24:52 PM)</font> <b>lenswipe:</b></font> da_wunder, https://gist.github.com/0a5276bddf0e153f5ec6<br/>
+<font color="#A82F2F"><font size="2">(01:25:52 PM)</font> <b>da_wunder:</b></font> lenswipe: nice<br/>
+<font color="#A82F2F"><font size="2">(01:25:54 PM)</font> <b>da_wunder:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(01:25:56 PM)</font> <b>lenswipe:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(01:26:19 PM)</font> <b>lenswipe:</b></font> da_wunder, that&apos;s how I am doing it<br/>
+<font color="#A82F2F"><font size="2">(01:26:22 PM)</font> <b>lenswipe:</b></font> that may not be the right way<br/>
+<font color="#A82F2F"><font size="2">(01:26:26 PM)</font> <b>lenswipe:</b></font> but it seems to work fo rme<br/>
+<font color="#A82F2F"><font size="2">(01:26:28 PM)</font> <b>lenswipe:</b></font> for me*<br/>
+<font color="#16569E"><font size="2">(01:31:04 PM)</font> <b>Randy How:</b></font> I'm trying to add the livereload option in the watch grunt task when watching assests, and I can't get it to work.  Anyone have an example?<br/>
+<font color="#A82F2F"><font size="2">(01:31:27 PM)</font> <b>lenswipe:</b></font> randingo, define &quot;live reload&quot; ?<br/>
+<font color="#16569E"><font size="2">(01:32:15 PM)</font> <b>Randy How:</b></font> https://github.com/gruntjs/grunt-contrib-watch#optionslivereload<br/>
+<font color="#16569E"><font size="2">(01:32:30 PM)</font> <b>Randy How:</b></font> It's to refresh the browser when changes to files occurs.<br/>
+<font color="#16569E"><font size="2">(01:36:41 PM)</font> <b>Randy How:</b></font> I can configure the port say 9000, relift sails (sails is running on 1337), hit localhost:9000 and I get the following,  {&quot;tinylr&quot;:&quot;Welcome&quot;,&quot;version&quot;:&quot;0.0.4&quot;}.  I'd say something is working.<br/>
+<font color="#16569E"><font size="2">(01:39:09 PM)</font> <b>Randy How:</b></font> I try to make a simple an simple exercise out of it, and then attempt to roll it into my sails project.<br/>
+<font color="#A82F2F"><font size="2">(01:39:32 PM)</font> <b>da_wunder:</b></font> randingo: check this out https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(01:39:57 PM)</font> <b>da_wunder:</b></font> i&apos;m using slush-angular + gulp for livereload stuff<br/>
+<font color="#A82F2F"><font size="2">(01:40:20 PM)</font> <b>da_wunder:</b></font> and sails.js is just backend nothing else, no frontend etc<br/>
+<font color="#A82F2F"><font size="2">(01:40:34 PM)</font> <b>da_wunder:</b></font> and another application for actual frontend<br/>
+<font color="#16569E"><font size="2">(01:40:38 PM)</font> <b>Randy How:</b></font> &quot;Slush-angular&quot;, that's kinda funny.<br/>
+<font color="#A82F2F"><font size="2">(01:41:07 PM)</font> <b>da_wunder:</b></font> https://github.com/slushjs/slush-angular<br/>
+<font color="#16569E"><font size="2">(01:41:47 PM)</font> <b>Randy How:</b></font> da_wunder: very good.  So, do you run Grunt and Gulp side by side?<br/>
+<font color="#A82F2F"><font size="2">(01:42:08 PM)</font> <b>da_wunder:</b></font> i don&apos;t use grunt<br/>
+<font color="#A82F2F"><font size="2">(01:42:20 PM)</font> <b>da_wunder:</b></font> sails.js is not running anything to frontend<br/>
+<font color="#A82F2F"><font size="2">(01:42:26 PM)</font> <b>da_wunder:</b></font> so no need for grunt<br/>
+<font color="#A82F2F"><font size="2">(01:43:15 PM)</font> <b>da_wunder:</b></font> and in my solution backend (sails.js) and frontend (slush-angular) are separated applications<br/>
+<font color="#16569E"><font size="2">(01:43:32 PM)</font> <b>Randy How:</b></font> &quot;sails.js is not running anything to frontend&quot;, sails is only providing data (Json), correct?<br/>
+<font color="#A82F2F"><font size="2">(01:43:40 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(01:44:17 PM)</font> <b>da_wunder:</b></font> there is current dist version http://wunder.sytes.net:3000/about<br/>
+<font color="#16569E"><font size="2">(01:44:49 PM)</font> <b>Randy How:</b></font> da_wunder: that makes sense.  does your app live in the assets dir with in the Sails structure?<br/>
+<font color="#A82F2F"><font size="2">(01:44:50 PM)</font> <b>da_wunder:</b></font> although it&apos;s broken with angular templates :D<br/>
+<font color="#A82F2F"><font size="2">(01:45:10 PM)</font> <b>da_wunder:</b></font> randingo: no, my frontend lives outside sails<br/>
+<font color="#A82F2F"><font size="2">(01:45:43 PM)</font> <b>da_wunder:</b></font> eg. backend: http://wunder.sytes.net:1339/, frontend: http://wunder.sytes.net:3000/<br/>
+<font color="#16569E"><font size="2">(01:45:46 PM)</font> <b>Randy How:</b></font> k, I've been waffling on the decision.<br/>
+<font color="#16569E"><font size="2">(01:47:52 PM)</font> <b>Randy How:</b></font> do you run Grunt for the backend?<br/>
+<font color="#16569E"><font size="2">(01:48:24 PM)</font> <b>Randy How:</b></font> (and Gulp for the frontend?)<br/>
+<font color="#16569E"><font size="2">(01:48:51 PM)</font> <b>Randy How:</b></font> it appears that way, according to the package.json<br/>
+<font color="#A82F2F"><font size="2">(01:49:41 PM)</font> <b>da_wunder:</b></font> randingo: i don&apos;t use grunt to nothing<br/>
+<font color="#16569E"><font size="2">(01:50:02 PM)</font> <b>Randy How:</b></font> ok, good to know.<br/>
+<font color="#A82F2F"><font size="2">(02:02:41 PM)</font> <b>diablo:</b></font> hey guys, back working on my sails project! just migrated to 0.10v succesfully and looks like a lot&apos;s been going on in the past few months :)<br/>
+<font color="#A82F2F"><font size="2">(02:03:06 PM)</font> <b>diablo:</b></font> excited and the associations works out of the box too<br/>
+<font color="#A82F2F"><font size="2">(02:04:44 PM)</font> <b>diablo:</b></font> trying to get a proper api for the app and just ran into this task of overriding the blueprint methods<br/>
+<font color="#A82F2F"><font size="2">(02:05:06 PM)</font> <b>diablo:</b></font> I&apos;ve prefixed a bunch of controllers under /api<br/>
+<font color="#A82F2F"><font size="2">(02:05:37 PM)</font> <b>diablo:</b></font> and just curious how people are writing their policies to only retrieve the records specific to the user in the session ?<br/>
+<font color="#A82F2F"><font size="2">(02:07:17 PM)</font> <b>diablo:</b></font> do I have to write policies for every controller ? or would it be simpler if I simply wrote the methods inside the controller as action methods ?<br/>
+<font color="#A82F2F"><font size="2">(02:18:57 PM)</font> <b>smcguinness:</b></font> diablo: if I am understanding you right...you don&apos;t have to create separate policies for each controller, as long as they are generic enough<br/>
+<font color="#A82F2F"><font size="2">(02:19:24 PM)</font> <b>smcguinness:</b></font> diablo: you can define which controllers have which policies in config/policies.js<br/>
+<font color="#A82F2F"><font size="2">(02:20:02 PM)</font> <b>da_wunder:</b></font> i think diablo is trying to make object specified rights not collection<br/>
+<font size="2">(02:21:09 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(02:21:37 PM)</font> <b>da_wunder:</b></font> eg. you have model Bar with values [{id: 1, type: 0, name: &quot;foo&quot;}, {id: 2, type: 0, name: &quot;bar&quot;}, {id: 3, type: 1, name: &quot;foobar&quot;}]<br/>
+<font color="#A82F2F"><font size="2">(02:21:42 PM)</font> <b>smcguinness:</b></font> da_wunder: not really any different right? just checking that req.user.id == object.user.id<br/>
+<font color="#A82F2F"><font size="2">(02:22:19 PM)</font> <b>da_wunder:</b></font> smcguinness: i know<br/>
+<font color="#A82F2F"><font size="2">(02:22:24 PM)</font> <b>da_wunder:</b></font> have done those<br/>
+<font color="#A82F2F"><font size="2">(02:22:59 PM)</font> <b>da_wunder:</b></font> smcguinness: quite big policy config https://github.com/tarlepp/Taskboard/blob/master/config/policies.js<br/>
+<font color="#A82F2F"><font size="2">(02:27:58 PM)</font> <b>smcguinness:</b></font> da_wunder: wow very nice. probably the biggest sails project I&apos;ve seen<br/>
+<font color="#A82F2F"><font size="2">(02:28:35 PM)</font> <b>da_wunder:</b></font> smcguinness: don&apos;t know the biggest there, but public<br/>
+<font color="#A82F2F"><font size="2">(02:28:48 PM)</font> <b>smcguinness:</b></font> da_wunder: yeah...public<br/>
+<font color="#A82F2F"><font size="2">(02:28:56 PM)</font> <b>da_wunder:</b></font> smcguinness: and that&apos;s my first node.js / sails.js app<br/>
+<font color="#A82F2F"><font size="2">(02:29:51 PM)</font> <b>smcguinness:</b></font> da_wunder: just looking at it has already helped me. I wanted to use services like you are but wasn&apos;t totally sold on that being the right way. but it looks good how you are using it<br/>
+<font color="#A82F2F"><font size="2">(02:30:02 PM)</font> <b>smcguinness:</b></font> da_wunder: especially the init<br/>
+<font color="#A82F2F"><font size="2">(02:30:30 PM)</font> <b>da_wunder:</b></font> there is a better way for that<br/>
+<font color="#A82F2F"><font size="2">(02:30:33 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(02:30:55 PM)</font> <b>da_wunder:</b></font> if you mean database init<br/>
+<font color="#A82F2F"><font size="2">(02:31:55 PM)</font> <b>da_wunder:</b></font> Foxandxss: hey<br/>
+<font color="#A82F2F"><font size="2">(02:32:02 PM)</font> <b>Foxandxss:</b></font> hey da_wunder<br/>
+<font color="#A82F2F"><font size="2">(02:32:37 PM)</font> <b>da_wunder:</b></font> in your example you just delete request.query.token<br/>
+<font color="#A82F2F"><font size="2">(02:32:46 PM)</font> <b>da_wunder:</b></font> that&apos;s not enough for socket request<br/>
+<font color="#A82F2F"><font size="2">(02:32:53 PM)</font> <b>Foxandxss:</b></font> it should<br/>
+<font color="#A82F2F"><font size="2">(02:32:57 PM)</font> <b>Foxandxss:</b></font> I did that for socket request<br/>
+<font color="#A82F2F"><font size="2">(02:33:02 PM)</font> <b>Foxandxss:</b></font> which I wasn&apos;t able to manage after all<br/>
+<font color="#A82F2F"><font size="2">(02:33:03 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(02:33:18 PM)</font> <b>Foxandxss:</b></font> I mean, I did first auth header, then param<br/>
+<font color="#A82F2F"><font size="2">(02:33:23 PM)</font> <b>Foxandxss:</b></font> didn&apos;t test the param properly<br/>
+<font color="#A82F2F"><font size="2">(02:33:27 PM)</font> <b>Foxandxss:</b></font> so I tried TRIED sockets :P<br/>
+<font color="#A82F2F"><font size="2">(02:33:31 PM)</font> <b>da_wunder:</b></font> did you use $sailssocket?<br/>
+<font color="#A82F2F"><font size="2">(02:33:35 PM)</font> <b>Foxandxss:</b></font> and then I saw I was getting nothing in exchange<br/>
+<font color="#A82F2F"><font size="2">(02:33:48 PM)</font> <b>da_wunder:</b></font> i think i solved that :D<br/>
+<font color="#A82F2F"><font size="2">(02:33:56 PM)</font> <b>Foxandxss:</b></font> both with normal sockets and then $sailsSocket<br/>
+<font color="#A82F2F"><font size="2">(02:33:57 PM)</font> <b>Foxandxss:</b></font> anyway<br/>
+<font color="#A82F2F"><font size="2">(02:33:59 PM)</font> <b>Foxandxss:</b></font> no response<br/>
+<font color="#A82F2F"><font size="2">(02:34:05 PM)</font> <b>Foxandxss:</b></font> so I tried normal http with token on param<br/>
+<font color="#A82F2F"><font size="2">(02:34:07 PM)</font> <b>Foxandxss:</b></font> no response<br/>
+<font color="#A82F2F"><font size="2">(02:34:15 PM)</font> <b>Foxandxss:</b></font> so my conclusion was that the token was also sent to the database<br/>
+<font color="#A82F2F"><font size="2">(02:34:25 PM)</font> <b>Foxandxss:</b></font> so I deleted it and then all worked, both http and socket<br/>
+<font color="#A82F2F"><font size="2">(02:34:41 PM)</font> <b>Foxandxss:</b></font> what&apos;s the behavior that are you seeing?<br/>
+<font color="#A82F2F"><font size="2">(02:35:03 PM)</font> <b>da_wunder:</b></font> a moment i have to get some food first :D<br/>
+<font color="#A82F2F"><font size="2">(02:35:22 PM)</font> <b>Foxandxss:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(02:35:33 PM)</font> <b>da_wunder:</b></font> but basically https://github.com/tarlepp/angular-sailsjs-boilerplate/blob/master/frontend/src/app/angular/Interceptors/AuthInterceptor.js<br/>
+<font color="#A82F2F"><font size="2">(02:35:44 PM)</font> <b>da_wunder:</b></font> that implementation doesn&apos;t work with sockets<br/>
+<font color="#A82F2F"><font size="2">(02:36:21 PM)</font> <b>da_wunder:</b></font> neither does this https://github.com/tarlepp/angular-sailsjs-boilerplate/blob/master/backend%2Fapi%2Fpolicies%2Fauthenticated.js<br/>
+<font color="#A82F2F"><font size="2">(02:36:26 PM)</font> <b>da_wunder:</b></font> as so simple<br/>
+<font color="#A82F2F"><font size="2">(02:36:51 PM)</font> <b>da_wunder:</b></font> I&apos;m just checking my codes over and then making new commit<br/>
+<font color="#A82F2F"><font size="2">(02:37:32 PM)</font> <b>da_wunder:</b></font> but basically in frontend side you have add token to payload not header, and in the backend side delete it from both<br/>
+<font color="#A82F2F"><font size="2">(02:37:41 PM)</font> <b>Foxandxss:</b></font> da_wunder: MY implementation does not<br/>
+<font color="#A82F2F"><font size="2">(02:37:56 PM)</font> <b>Foxandxss:</b></font> because I tried sockets<br/>
+<font color="#A82F2F"><font size="2">(02:38:00 PM)</font> <b>Foxandxss:</b></font> but I failed misserable<br/>
+<font color="#A82F2F"><font size="2">(02:38:04 PM)</font> <b>Foxandxss:</b></font> nobody helped<br/>
+<font color="#A82F2F"><font size="2">(02:38:10 PM)</font> <b>Foxandxss:</b></font> I put a question in SO<br/>
+<font color="#A82F2F"><font size="2">(02:38:17 PM)</font> <b>da_wunder:</b></font> url?<br/>
+<font color="#A82F2F"><font size="2">(02:38:17 PM)</font> <b>Foxandxss:</b></font> a member core responded what he wanted<br/>
+<font color="#A82F2F"><font size="2">(02:38:21 PM)</font> <b>Foxandxss:</b></font> and meh<br/>
+<font color="#A82F2F"><font size="2">(02:38:23 PM)</font> <b>Foxandxss:</b></font> fuck sails<br/>
+<font color="#A82F2F"><font size="2">(02:38:26 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(02:38:29 PM)</font> <b>Foxandxss:</b></font> I go bacdk to my rails<br/>
+<font color="#A82F2F"><font size="2">(02:38:41 PM)</font> <b>Foxandxss:</b></font> let me see<br/>
+<font color="#A82F2F"><font size="2">(02:38:56 PM)</font> <b>da_wunder:</b></font> my solution is really simple, really<br/>
+<font color="#A82F2F"><font size="2">(02:39:10 PM)</font> <b>Foxandxss:</b></font> http://stackoverflow.com/questions/23791966/filtering-socket-io-subscriptions<br/>
+<font color="#A82F2F"><font size="2">(02:39:54 PM)</font> <b>Foxandxss:</b></font> anyway da_wunder , with my implementation, I was able to do socket.get perfectly<br/>
+<font color="#A82F2F"><font size="2">(02:40:05 PM)</font> <b>Foxandxss:</b></font> and also my policies (of correct user and stuff like that) did work<br/>
+<font color="#A82F2F"><font size="2">(02:40:22 PM)</font> <b>Foxandxss:</b></font> my problem was ignoring some socket stuff (like the one on that post)<br/>
+<font color="#A82F2F"><font size="2">(02:43:42 PM)</font> <b>diablo:</b></font> sorry, was out for lunch<br/>
+<font color="#A82F2F"><font size="2">(02:44:00 PM)</font> <b>da_wunder:</b></font> Foxandxss: so my solution was https://github.com/tarlepp/angular-sailsjs-boilerplate/blob/master/frontend%2Fsrc%2Fapp%2Fangular%2FInterceptors%2FAuthInterceptor.js and https://github.com/tarlepp/angular-sailsjs-boilerplate/blob/master/backend%2Fapi%2Fpolicies%2Fauthenticated.js<br/>
+<font color="#A82F2F"><font size="2">(02:44:24 PM)</font> <b>Foxandxss:</b></font> aren&apos;t the same links as before?<br/>
+<font color="#A82F2F"><font size="2">(02:44:37 PM)</font> <b>Foxandxss:</b></font> ah, no<br/>
+<font color="#A82F2F"><font size="2">(02:45:03 PM)</font> <b>diablo:</b></font> thanks da_wunder<br/>
+<font color="#A82F2F"><font size="2">(02:45:12 PM)</font> <b>diablo:</b></font> taking a look at your policies<br/>
+<font color="#A82F2F"><font size="2">(02:45:30 PM)</font> <b>Foxandxss:</b></font> da_wunder: with that, you don&apos;t need to do a socket.get(&apos;/foo?token=asdasdq9wioudhslaqsjkdhalisuydg&apos;) ?<br/>
+<font color="#A82F2F"><font size="2">(03:07:54 PM)</font> <b>mikejoconnor:</b></font> has anyone built an angular + sails + socket.io app ?<br/>
+<font color="#A82F2F"><font size="2">(03:14:52 PM)</font> <b>da_wunder:</b></font> mikejoconnor: yep<br/>
+<font color="#A82F2F"><font size="2">(03:15:24 PM)</font> <b>mikejoconnor:</b></font> da_wunder: was it a good experience?  I don&apos;t want to start down the wrong path<br/>
+<font color="#A82F2F"><font size="2">(03:16:12 PM)</font> <b>da_wunder:</b></font> all just &quot;works&quot; :D<br/>
+<font color="#A82F2F"><font size="2">(03:16:29 PM)</font> <b>mikejoconnor:</b></font> da_wunder: thats what I like to hear<br/>
+<font color="#A82F2F"><font size="2">(03:16:36 PM)</font> <b>da_wunder:</b></font> mikejoconnor: https://github.com/tarlepp/Taskboard<br/>
+<font color="#A82F2F"><font size="2">(03:16:48 PM)</font> <b>da_wunder:</b></font> that was my first sails.js / node.js app<br/>
+<font color="#A82F2F"><font size="2">(03:16:55 PM)</font> <b>da_wunder:</b></font> that uses knockout though<br/>
+<font color="#A82F2F"><font size="2">(03:17:29 PM)</font> <b>mikejoconnor:</b></font> got it<br/>
+<font color="#A82F2F"><font size="2">(03:17:34 PM)</font> <b>da_wunder:</b></font> but i&apos;m working on boilerplate for sails.js backend + angular frontend<br/>
+<font color="#A82F2F"><font size="2">(03:17:42 PM)</font> <b>da_wunder:</b></font> progress there https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(03:17:56 PM)</font> <b>mikejoconnor:</b></font> da_wunder: sounds awesome.<br/>
+<font color="#A82F2F"><font size="2">(03:18:00 PM)</font> <b>da_wunder:</b></font> and livedemo there http://wunder.sytes.net:3000/<br/>
+<font color="#A82F2F"><font size="2">(03:18:05 PM)</font> <b>robdubya:</b></font> https://github.com/balderdashy/angularSails<br/>
+<font color="#A82F2F"><font size="2">(03:18:27 PM)</font> <b>da_wunder:</b></font> and i&apos;m using that what robdubya just points<br/>
+<font color="#A82F2F"><font size="2">(03:19:06 PM)</font> <b>da_wunder:</b></font> on that live demo frontend at: http://wunder.sytes.net:3000/ and backend (sails) at: http://wunder.sytes.net:1339<br/>
+<font color="#A82F2F"><font size="2">(03:22:58 PM)</font> <b>Foxandxss:</b></font> this is like a street market<br/>
+<font size="2">(03:25:27 PM)</font><b> mikejoconnor left the room (quit: Quit: mikejoconnor).</b><br/>
+<font color="#A82F2F"><font size="2">(03:27:30 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(03:42:41 PM)</font> <b>Drako:</b></font> anyone knows if theres a createOrUpdate  Model method?<br/>
+<font color="#A82F2F"><font size="2">(03:44:24 PM)</font> <b>da_wunder:</b></font> Drako: why don&apos;t just do it for yourself<br/>
+<font color="#A82F2F"><font size="2">(03:45:23 PM)</font> <b>Drako:</b></font> because it is more code and ugly<br/>
+<font color="#A82F2F"><font size="2">(03:45:45 PM)</font> <b>Drako:</b></font> or do you mean implementing the method?<br/>
+<font color="#A82F2F"><font size="2">(03:45:48 PM)</font> <b>da_wunder:</b></font> just add that to your base contoller<br/>
+<font color="#A82F2F"><font size="2">(03:45:54 PM)</font> <b>da_wunder:</b></font> controller<br/>
+<font color="#A82F2F"><font size="2">(03:46:17 PM)</font> <b>Drako:</b></font> will it  be exposed in the backend ?  i don&apos;t need via rest<br/>
+<font color="#A82F2F"><font size="2">(03:46:55 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(03:47:09 PM)</font> <b>da_wunder:</b></font> you should able to do that in your models also<br/>
+<font color="#A82F2F"><font size="2">(03:47:28 PM)</font> <b>da_wunder:</b></font> or just create service for that<br/>
+<font color="#A82F2F"><font size="2">(03:47:29 PM)</font> <b>Drako:</b></font> currently it looks like this: https://gist.github.com/Kuirak/fd5a3550dd83c7e451bf<br/>
+<font color="#A82F2F"><font size="2">(03:48:18 PM)</font> <b>da_wunder:</b></font> timestamp as unixtime?<br/>
+<font color="#A82F2F"><font size="2">(03:48:35 PM)</font> <b>Drako:</b></font> timestamp is just milliseconds<br/>
+<font color="#A82F2F"><font size="2">(03:48:51 PM)</font> <b>Drako:</b></font> so yeah should be unixtime<br/>
+<font color="#A82F2F"><font size="2">(03:48:58 PM)</font> <b>da_wunder:</b></font> and how much do you really get those events on same millisecond?<br/>
+<font color="#A82F2F"><font size="2">(03:49:11 PM)</font> <b>da_wunder:</b></font> with same type and session_id<br/>
+<font color="#A82F2F"><font size="2">(03:49:35 PM)</font> <b>Drako:</b></font> often why dou you ask?<br/>
+<font color="#A82F2F"><font size="2">(03:49:52 PM)</font> <b>da_wunder:</b></font> so you have some billions records?<br/>
+<font color="#A82F2F"><font size="2">(03:50:34 PM)</font> <b>Drako:</b></font> will be ;)<br/>
+<font color="#A82F2F"><font size="2">(03:50:49 PM)</font> <b>Foxandxss:</b></font> pr0n pr0n<br/>
+<font color="#A82F2F"><font size="2">(03:50:55 PM)</font> <b>da_wunder:</b></font> i really don&apos;t think so<br/>
+<font color="#A82F2F"><font size="2">(03:51:00 PM)</font> <b>da_wunder:</b></font> sorry<br/>
+<font color="#A82F2F"><font size="2">(03:51:26 PM)</font> <b>da_wunder:</b></font> 1000 events per seconds with same type and session_id<br/>
+<font color="#A82F2F"><font size="2">(03:51:42 PM)</font> <b>da_wunder:</b></font> second<br/>
+<font color="#A82F2F"><font size="2">(03:51:59 PM)</font> <b>da_wunder:</b></font> that&apos;s alot of data, really lot<br/>
+<font color="#A82F2F"><font size="2">(03:52:08 PM)</font> <b>Drako:</b></font> depends on the game  but could be<br/>
+<font color="#A82F2F"><font size="2">(03:53:13 PM)</font> <b>da_wunder:</b></font> have you calculated those numbers or are this just guesses?<br/>
+<font color="#A82F2F"><font size="2">(03:55:25 PM)</font> <b>Drako:</b></font> it is more guesses - but it  is up to the user of my system how many  events  he sends in a ms  -  but  a resolution of seconds is too low for game analytics<br/>
+<font color="#A82F2F"><font size="2">(03:56:35 PM)</font> <b>da_wunder:</b></font> eg 60fps<br/>
+<font color="#A82F2F"><font size="2">(03:56:49 PM)</font> <b>da_wunder:</b></font> really you should calculated those numbers<br/>
+<font color="#A82F2F"><font size="2">(03:57:36 PM)</font> <b>Drako:</b></font> i will do it- you sound so shocked  of me using timestamp as  a param - why?<br/>
+<font color="#A82F2F"><font size="2">(03:58:51 PM)</font> <b>da_wunder:</b></font> Drako: that was just the column what make me interested about your data loads<br/>
+<font color="#A82F2F"><font size="2">(03:59:19 PM)</font> <b>da_wunder:</b></font> that + two other columns make it just more interesting<br/>
+<font color="#A82F2F"><font size="2">(03:59:52 PM)</font> <b>Drako:</b></font> ah k  - i currently work on a system for  game analytics where you can define the data analysis via  a node editor<br/>
+<font color="#A82F2F"><font size="2">(04:00:34 PM)</font> <b>Drako:</b></font> it is for my bachelor thesis  so  i will do example calculations  for the data load  for the write up ;)  ty for reminding me of that<br/>
+<font color="#A82F2F"><font size="2">(04:00:57 PM)</font> <b>da_wunder:</b></font> i would start of those calculations<br/>
+<font color="#A82F2F"><font size="2">(04:03:00 PM)</font> <b>Drako:</b></font> i just need to build a prototype  so these kind of  calculations are for the theory part<br/>
+<font color="#A82F2F"><font size="2">(04:03:59 PM)</font> <b>da_wunder:</b></font> and you maybe don&apos;t need some of your code if you made those calculations<br/>
+<font color="#A82F2F"><font size="2">(04:04:20 PM)</font> <b>Drako:</b></font> Why i shouldn&apos;t need it ?<br/>
+<font color="#A82F2F"><font size="2">(04:05:38 PM)</font> <b>Drako:</b></font> because the calculations tell me not possible? or because the  updateOrCreate?  the update or create  is just for  reprocessing  which is part of the prototype and will be resolve via cache (in theory)<br/>
+<font color="#A82F2F"><font size="2">(04:05:52 PM)</font> <b>da_wunder:</b></font> why to over engineer your app, if that is not needed<br/>
+<font color="#A82F2F"><font size="2">(04:07:20 PM)</font> <b>da_wunder:</b></font> so you&apos;re assumin insert with same type and session_id from how many clients?<br/>
+<font color="#A82F2F"><font size="2">(04:07:35 PM)</font> <b>da_wunder:</b></font> 1, 10, 100, 1000, 10k<br/>
+<font color="#A82F2F"><font size="2">(04:09:00 PM)</font> <b>da_wunder:</b></font> i just need some numbers :D<br/>
+<font color="#A82F2F"><font size="2">(04:09:39 PM)</font> <b>da_wunder:</b></font> because at work i handle rfid manufacture app statistics and still we have no collisions on data<br/>
+<font color="#A82F2F"><font size="2">(04:09:43 PM)</font> <b>Drako:</b></font> session_id is per clientsession  so  start game  == sessionstart    end game==sessionend how many insert depends on the game : some thin like tetris =  around 1-10 inserts per second<br/>
+<font color="#A82F2F"><font size="2">(04:10:00 PM)</font> <b>Drako:</b></font> something more complicated like a FPS - alot more<br/>
+<font color="#A82F2F"><font size="2">(04:10:57 PM)</font> <b>da_wunder:</b></font> and we&apos;re talkin about 10+ factories, and 0.1-1.5billion tags from each of those factories<br/>
+<font color="#A82F2F"><font size="2">(04:12:06 PM)</font> <b>Drako:</b></font> as i said the updat or create is just for reprocessing   and will be replaced by a cache<br/>
+<font color="#A82F2F"><font size="2">(04:14:35 PM)</font> <b>morenoh150:</b></font> anyone ever setup cors with sails?<br/>
+<font color="#A82F2F"><font size="2">(04:15:26 PM)</font> <b>da_wunder:</b></font> morenoh150: yep<br/>
+<font color="#A82F2F"><font size="2">(04:15:43 PM)</font> <b>da_wunder:</b></font> Drako: ok, if your app is going to publis i would like to see it<br/>
+<font color="#A82F2F"><font size="2">(04:16:02 PM)</font> <b>Drako:</b></font> will take some time - but i will tell you<br/>
+<font color="#A82F2F"><font size="2">(04:16:14 PM)</font> <b>da_wunder:</b></font> no hurry here<br/>
+<font size="2">(04:24:14 PM)</font><b> Barbatos is now known as barbatos</b><br/>
+<font color="#A82F2F"><font size="2">(04:25:51 PM)</font> <b>morenoh150:</b></font> da_wunder: any example pretty please :)<br/>
+<font color="#A82F2F"><font size="2">(04:29:42 PM)</font> <b>da_wunder:</b></font> morenoh150: there https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(04:40:25 PM)</font> <b>morenoh150:</b></font> hmmm da_wunder you ever dealt with google cloud storage?<br/>
+<font color="#A82F2F"><font size="2">(04:41:12 PM)</font> <b>da_wunder:</b></font> morenoh150: no<br/>
+<font color="#A82F2F"><font size="2">(05:14:10 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(05:14:28 PM)</font> <b>da_wunder:</b></font> is there a way to do sort by object assoc count?<br/>
+<font color="#A82F2F"><font size="2">(05:15:07 PM)</font> <b>da_wunder:</b></font> eg. in Author I have &apos;books&apos; which is reference to Book model<br/>
+<font color="#A82F2F"><font size="2">(05:15:23 PM)</font> <b>da_wunder:</b></font> is there a way to sort Authors by book count?<br/>
+<font color="#A82F2F"><font size="2">(05:15:31 PM)</font> <b>da_wunder:</b></font> via blueprints<br/>
+<font size="2">(05:15:49 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

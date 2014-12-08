@@ -1,0 +1,150 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 04 Jun 2014 10:18:30 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 04 Jun 2014 10:18:30 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(10:18:30 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(11:06:00 AM)</font> <b>flaiks:</b></font> allo!<br/>
+<font color="#A82F2F"><font size="2">(11:06:30 AM)</font> <b>flaiks:</b></font> im having a problem, where if I populate an association, and say i have 20 models, and 18 of them dont have that assocation it returns 0<br/>
+<font color="#A82F2F"><font size="2">(11:06:33 AM)</font> <b>flaiks:</b></font> sorry<br/>
+<font color="#A82F2F"><font size="2">(11:06:44 AM)</font> <b>flaiks:</b></font> if none of them have the association populated it returns 0<br/>
+<font color="#A82F2F"><font size="2">(11:06:49 AM)</font> <b>flaiks:</b></font> then if 1 has it it returns all of them<br/>
+<font color="#A82F2F"><font size="2">(11:20:27 AM)</font> <b>lulzmachine:</b></font> Hey! I’m on 0.10 and trying to use a partial<br/>
+<font color="#A82F2F"><font size="2">(11:20:38 AM)</font> <b>lulzmachine:</b></font> I’m still using the 0.9 docs for it, since the 0.10 docs aren’t done for that yet<br/>
+<font color="#A82F2F"><font size="2">(11:20:51 AM)</font> <b>lulzmachine:</b></font> but I’m wondering… how do I set a variable to be used inside the partial?<br/>
+<font color="#A82F2F"><font size="2">(11:21:31 AM)</font> <b>lulzmachine:</b></font> right now i do something similar to &lt;% var blah = 5 %&gt;&lt;%- partial(‘../partials/blahshower’) %&gt;<br/>
+<font color="#A82F2F"><font size="2">(11:21:42 AM)</font> <b>lulzmachine:</b></font> and I’m getting blah is not defined<br/>
+<font color="#A82F2F"><font size="2">(11:24:29 AM)</font> <b>lulzmachine:</b></font> actually here’s the full error: http://pastebin.com/rcdtAmA5<br/>
+<font color="#A82F2F"><font size="2">(11:26:26 AM)</font> <b>flaiks:</b></font> anyone know much about associations ?<br/>
+<font color="#A82F2F"><font size="2">(11:29:19 AM)</font> <b>Murf:</b></font> Would it be advised to start a new project with v0.9 or would .10 be reccomended at this point.  And, does anyone have any idea what timeframe we ar looking at for an official .10 release?<br/>
+<font color="#A82F2F"><font size="2">(11:31:59 AM)</font> <b>flaiks:</b></font> Murf: i use 0.10<br/>
+<font color="#A82F2F"><font size="2">(11:32:02 AM)</font> <b>flaiks:</b></font> Murf: no problems so far<br/>
+<font color="#A82F2F"><font size="2">(11:38:44 AM)</font> <b>lulzmachine:</b></font> I use 0.10. Mainly since it has associations; 0.9 doesn’t really Murf. There are a few inconsistencies about controller action and view naming, but nothing breaking so far<br/>
+<font color="#A82F2F"><font size="2">(11:49:44 AM)</font> <b>benmcnelly:</b></font> hola peoples<br/>
+<font color="#A82F2F"><font size="2">(11:50:13 AM)</font> <b>flaiks:</b></font> anyone have any idea about associations ?<br/>
+<font color="#A82F2F"><font size="2">(11:50:18 AM)</font> <b>flaiks:</b></font> they’re giving me problems<br/>
+<font color="#A82F2F"><font size="2">(11:50:47 AM)</font> <b>benmcnelly:</b></font> it looks like the link on the default new project page (next steps) @ /views/home/index.ejs<br/>
+<font color="#A82F2F"><font size="2">(11:51:05 AM)</font> <b>benmcnelly:</b></font> are blank, or left #empty<br/>
+<font color="#A82F2F"><font size="2">(11:51:17 AM)</font> <b>benmcnelly:</b></font> is this because those links don&apos;t exist yet?<br/>
+<font color="#A82F2F"><font size="2">(11:51:35 AM)</font> <b>benmcnelly:</b></font> I was interested in clicking &quot;Build an API&quot; but you know..<br/>
+<font color="#A82F2F"><font size="2">(11:54:18 AM)</font> <b>lulzmachine:</b></font> sure a bit flaiks , whats ur problem?<br/>
+<font color="#A82F2F"><font size="2">(11:54:35 AM)</font> <b>flaiks:</b></font> if I pull models, and run populate, and none of them have that field populated it returns 0<br/>
+<font color="#A82F2F"><font size="2">(11:54:39 AM)</font> <b>flaiks:</b></font> even though theres like 30 models<br/>
+<font color="#A82F2F"><font size="2">(11:54:44 AM)</font> <b>flaiks:</b></font> the association isnt reuired<br/>
+<font color="#A82F2F"><font size="2">(11:55:36 AM)</font> <b>lulzmachine:</b></font> have you set schema: true for that?<br/>
+<font color="#A82F2F"><font size="2">(11:55:59 AM)</font> <b>da_wunder:</b></font> could you paste your models, and actual code that you&apos;re using to pastebin or somewhere?<br/>
+<font color="#A82F2F"><font size="2">(11:56:00 AM)</font> <b>lulzmachine:</b></font> and the association has an entry in the attributes<br/>
+<font color="#A82F2F"><font size="2">(11:58:13 AM)</font> <b>flaiks:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(11:58:15 AM)</font> <b>flaiks:</b></font> i can do that<br/>
+<font color="#A82F2F"><font size="2">(11:58:48 AM)</font> <b>flaiks:</b></font> http://pastebin.com/FihWzy9D<br/>
+<font color="#A82F2F"><font size="2">(11:58:50 AM)</font> <b>flaiks:</b></font> thats the model<br/>
+<font color="#A82F2F"><font size="2">(11:58:53 AM)</font> <b>flaiks:</b></font> im trying to pull<br/>
+<font color="#A82F2F"><font size="2">(11:59:20 AM)</font> <b>flaiks:</b></font> and if customer is empty, it wont return anything when i include populate(“customer”) in the query<br/>
+<font color="#A82F2F"><font size="2">(11:59:31 AM)</font> <b>da_wunder:</b></font> and the customers, salesitems and payments models?<br/>
+<font color="#A82F2F"><font size="2">(12:00:44 PM)</font> <b>da_wunder:</b></font> just try to pin point the problem via commenting out all the assoc definitions first<br/>
+<font color="#A82F2F"><font size="2">(12:00:53 PM)</font> <b>da_wunder:</b></font> and then add those one by one<br/>
+<font size="2">(12:03:13 PM)</font><b> natebunnyfield_ is now known as natebunnyfield</b><br/>
+<font color="#A82F2F"><font size="2">(12:05:11 PM)</font> <b>lulzmachine:</b></font> actually i didnt get that first part, “if that field is not populated it returns 0”, is that right flaiks ?<br/>
+<font color="#A82F2F"><font size="2">(12:05:19 PM)</font> <b>flaiks:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(12:05:21 PM)</font> <b>flaiks:</b></font> like for example<br/>
+<font color="#A82F2F"><font size="2">(12:05:24 PM)</font> <b>lulzmachine:</b></font> becaue that sounds like it could be intended behaviour<br/>
+<font color="#A82F2F"><font size="2">(12:05:37 PM)</font> <b>flaiks:</b></font> I have 10 Sales, and 0 of them have the customer field populated<br/>
+<font color="#A82F2F"><font size="2">(12:05:43 PM)</font> <b>lulzmachine:</b></font> im guessing you use an rdbms like mysql/postgres?<br/>
+<font color="#A82F2F"><font size="2">(12:05:47 PM)</font> <b>flaiks:</b></font> when i run populate(“customer”) on the query, it gives me NO sales<br/>
+<font color="#A82F2F"><font size="2">(12:05:55 PM)</font> <b>flaiks:</b></font> and when I dont run populate it gives me the 10<br/>
+<font color="#A82F2F"><font size="2">(12:06:00 PM)</font> <b>flaiks:</b></font> lulzmachine: yes I am, mysql<br/>
+<font color="#A82F2F"><font size="2">(12:06:06 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(12:06:12 PM)</font> <b>flaiks:</b></font> but say there are 10, 9 without customer, 1 with customer, and I run populate<br/>
+<font color="#A82F2F"><font size="2">(12:06:15 PM)</font> <b>flaiks:</b></font> it gives me all 10<br/>
+<font color="#A82F2F"><font size="2">(12:06:27 PM)</font> <b>flaiks:</b></font> its weird.<br/>
+<font color="#A82F2F"><font size="2">(12:06:59 PM)</font> <b>da_wunder:</b></font> yes that is what it should return<br/>
+<font color="#A82F2F"><font size="2">(12:07:45 PM)</font> <b>flaiks:</b></font> da_wunder: right<br/>
+<font color="#A82F2F"><font size="2">(12:08:06 PM)</font> <b>flaiks:</b></font> but i need it so, if I run populate, and none of them have customer filled, it still gives me all 10<br/>
+<font color="#A82F2F"><font size="2">(12:08:20 PM)</font> <b>lulzmachine:</b></font> it should always return all the sales<br/>
+<font color="#A82F2F"><font size="2">(12:08:29 PM)</font> <b>flaiks:</b></font> if none have the customer field filled, gives me 0, but if 1/10 does, it gives me 10<br/>
+<font color="#A82F2F"><font size="2">(12:08:31 PM)</font> <b>flaiks:</b></font> right, its weird.<br/>
+<font color="#A82F2F"><font size="2">(12:08:38 PM)</font> <b>flaiks:</b></font> perhaps a sails bug ?<br/>
+<font color="#A82F2F"><font size="2">(12:09:09 PM)</font> <b>lulzmachine:</b></font> yeah that sounds weird<br/>
+<font color="#A82F2F"><font size="2">(12:09:16 PM)</font> <b>lulzmachine:</b></font> to be picky it sounds like a waterline bug<br/>
+<font color="#A82F2F"><font size="2">(12:09:18 PM)</font> <b>da_wunder:</b></font> in my case it returns all<br/>
+<font color="#A82F2F"><font size="2">(12:09:25 PM)</font> <b>da_wunder:</b></font> http://wunder.sytes.net:3000/books<br/>
+<font color="#A82F2F"><font size="2">(12:09:29 PM)</font> <b>flaiks:</b></font> indeed.<br/>
+<font color="#A82F2F"><font size="2">(12:09:39 PM)</font> <b>flaiks:</b></font> asks for login .. ?<br/>
+<font color="#A82F2F"><font size="2">(12:09:48 PM)</font> <b>da_wunder:</b></font> demo / demodemodemo<br/>
+<font color="#A82F2F"><font size="2">(12:10:06 PM)</font> <b>da_wunder:</b></font> i just updated all book rows author to null<br/>
+<font color="#A82F2F"><font size="2">(12:10:13 PM)</font> <b>lulzmachine:</b></font> waterline is the ORM that sails uses. if you could condense the problem into a short piece of code that would help for making an issue ticket<br/>
+<font color="#A82F2F"><font size="2">(12:10:17 PM)</font> <b>da_wunder:</b></font> and still it return all<br/>
+<font color="#A82F2F"><font size="2">(12:10:35 PM)</font> <b>flaiks:</b></font> da_wunder: what version ?<br/>
+<font color="#A82F2F"><font size="2">(12:10:41 PM)</font> <b>da_wunder:</b></font> 0.10.0-rc7<br/>
+<font color="#A82F2F"><font size="2">(12:10:50 PM)</font> <b>flaiks:</b></font> hm<br/>
+<font color="#A82F2F"><font size="2">(12:10:50 PM)</font> <b>flaiks:</b></font> same<br/>
+<font color="#A82F2F"><font size="2">(12:11:04 PM)</font> <b>flaiks:</b></font> does populate need to come before or after .where() ?<br/>
+<font color="#A82F2F"><font size="2">(12:11:28 PM)</font> <b>da_wunder:</b></font> have you tried output via blueprints?<br/>
+<font color="#A82F2F"><font size="2">(12:11:40 PM)</font> <b>da_wunder:</b></font> or do you use custom query?<br/>
+<font color="#A82F2F"><font size="2">(12:11:43 PM)</font> <b>flaiks:</b></font> one sec<br/>
+<font color="#A82F2F"><font size="2">(12:12:09 PM)</font> <b>da_wunder:</b></font> if custom query it&apos;s the point where the error is, if the blueprint route works<br/>
+<font color="#A82F2F"><font size="2">(12:12:46 PM)</font> <b>lulzmachine:</b></font> yeah could you do a console.log() in the controller action to make sure it’s really being run<br/>
+<font color="#A82F2F"><font size="2">(12:13:03 PM)</font> <b>lulzmachine:</b></font> i’ve had a lot of problems with blueprints things being run even though i have a controller action<br/>
+<font color="#A82F2F"><font size="2">(12:13:05 PM)</font> <b>da_wunder:</b></font> or share that code, so we can take a better look<br/>
+<font color="#A82F2F"><font size="2">(12:13:28 PM)</font> <b>flaiks:</b></font> apparently its working now.<br/>
+<font color="#A82F2F"><font size="2">(12:13:40 PM)</font> <b>flaiks:</b></font> query:  Sales.find({ completed: true, shop: shop.id }).populate(&quot;customer&quot;).where({ createdAt: { &quot;&gt;=&quot;: (sinceTime.toISOString()) }}).exec(function(err, sales) {<br/>
+<font color="#A82F2F"><font size="2">(12:13:50 PM)</font> <b>da_wunder:</b></font> no not here<br/>
+<font color="#A82F2F"><font size="2">(12:14:18 PM)</font> <b>flaiks:</b></font> da_wunder: sorry, just 1 line, figured it wouldnt be a big issue<br/>
+<font color="#A82F2F"><font size="2">(12:14:32 PM)</font> <b>flaiks:</b></font> it apparently works fine now though<br/>
+<font color="#A82F2F"><font size="2">(12:17:36 PM)</font> <b>lulzmachine:</b></font> lol what did you do flaiks<br/>
+<font color="#A82F2F"><font size="2">(12:17:41 PM)</font> <b>lulzmachine:</b></font> just restarted?<br/>
+<font color="#A82F2F"><font size="2">(12:17:44 PM)</font> <b>flaiks:</b></font> not sure.<br/>
+<font color="#A82F2F"><font size="2">(12:17:52 PM)</font> <b>flaiks:</b></font> i moved populate to before the .where<br/>
+<font color="#A82F2F"><font size="2">(12:17:54 PM)</font> <b>lulzmachine:</b></font> maybe your browser was caching the GET?<br/>
+<font color="#A82F2F"><font size="2">(12:18:18 PM)</font> <b>lulzmachine:</b></font> whaaa<br/>
+<font size="2">(12:21:53 PM)</font><b> lulzmachine left the room (quit: Quit: lulzmachine).</b><br/>
+<font color="#A82F2F"><font size="2">(12:27:36 PM)</font> <b>itslennysfault:</b></font> Anyone here know if there is a change log for sails (or waterline) for the release candidates of 0.10.0?<br/>
+<font color="#A82F2F"><font size="2">(12:28:17 PM)</font> <b>itslennysfault:</b></font> I&apos;m running RC3 and when I upgrade to the latest a lot of things relating to the associations break and I can debug it blindly, but if there is a doc that would tell me what changed that&apos;d be really helpful.<br/>
+<font color="#A82F2F"><font size="2">(12:30:12 PM)</font> <b>cramrod:</b></font> itslennysfault, theres nothing specifically for waterline and nothing between rc3 and the current rc7 for sails.  What kind of problems are you having/<br/>
+<font color="#A82F2F"><font size="2">(12:30:15 PM)</font> <b>cramrod:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(12:30:49 PM)</font> <b>cramrod:</b></font> Also, which adapter are you using?<br/>
+<font color="#A82F2F"><font size="2">(12:30:56 PM)</font> <b>itslennysfault:</b></font> It&apos;s mostly with the .add() method. I haven&apos;t dug in yet, but I&apos;m doing .create() then .add() with it&apos;s not associating<br/>
+<font color="#A82F2F"><font size="2">(12:31:26 PM)</font> <b>itslennysfault:</b></font> Also, one fairly odd error was I got &quot;[Object object]&quot; in the uuid for the association instead of the uuid<br/>
+<font color="#A82F2F"><font size="2">(12:31:31 PM)</font> <b>cramrod:</b></font> are you calling .save() after your add?<br/>
+<font color="#A82F2F"><font size="2">(12:31:43 PM)</font> <b>cramrod:</b></font> Mongo, right?<br/>
+<font color="#A82F2F"><font size="2">(12:31:44 PM)</font> <b>itslennysfault:</b></font> Yea it&apos;s working fine on RC3<br/>
+<font color="#A82F2F"><font size="2">(12:31:47 PM)</font> <b>itslennysfault:</b></font> no postgres<br/>
+<font color="#A82F2F"><font size="2">(12:31:52 PM)</font> <b>itslennysfault:</b></font> sorry forgot to specify<br/>
+<font color="#A82F2F"><font size="2">(12:34:10 PM)</font> <b>itslennysfault:</b></font> it is add with an object which might be my issue .. maybe that is no longer supported? Like I said I haven&apos;t started digging yet and that&apos;s basically my plan for the day, but I thought I&apos;d see if there were any known issues or changes before I get going.<br/>
+<font color="#A82F2F"><font size="2">(12:34:40 PM)</font> <b>itslennysfault:</b></font> this.assessments.add({status:&apos;pending&apos;,user:uid,creator:creator});   is the actual code (followed by a save() ) works on rc3 does nothing on rc7<br/>
+<font color="#A82F2F"><font size="2">(12:35:41 PM)</font> <b>itslennysfault:</b></font> that&apos;s inside of a model method meant for adding an assessment to a campaign (not that those terms mean much to you) but one object to another.<br/>
+<font color="#A82F2F"><font size="2">(12:37:10 PM)</font> <b>cramrod:</b></font> I know that nested creates are now available in waterline (I think for every adapter).  They might have changed the parameters for &apos;add&apos; during that processes.<br/>
+<font color="#A82F2F"><font size="2">(12:37:58 PM)</font> <b>itslennysfault:</b></font> I&apos;ll just start troubleshooting it and come back with more info. I just thought I might be able to save some time if this was already reported. I looked through the issues on github but didn&apos;t really see anything that fit this behavior.<br/>
+<font color="#A82F2F"><font size="2">(12:37:59 PM)</font> <b>cramrod:</b></font> I thought .add()  accepted either a primaryKey or an array of objects<br/>
+<font color="#A82F2F"><font size="2">(12:38:08 PM)</font> <b>cramrod:</b></font> yeah, sorry man.<br/>
+<font color="#A82F2F"><font size="2">(12:38:40 PM)</font> <b>itslennysfault:</b></font> beta docs say: &quot;{},[{}], string, int&quot;<br/>
+<font color="#A82F2F"><font size="2">(12:39:02 PM)</font> <b>itslennysfault:</b></font> I&apos;ll figure it out. Thanks anyways.<br/>
+<font color="#A82F2F"><font size="2">(12:47:32 PM)</font> <b>tskaggs:</b></font> Hey! I need some passport.js help. I&apos;m building a simple chat app and working with passport to local auth.<br/>
+<font color="#A82F2F"><font size="2">(12:47:51 PM)</font> <b>tskaggs:</b></font> I have registration and signup working.<br/>
+<font color="#A82F2F"><font size="2">(12:48:16 PM)</font> <b>tskaggs:</b></font> login works... kind of but it doesn&apos;t invoke the session for some reason<br/>
+<font color="#A82F2F"><font size="2">(12:48:43 PM)</font> <b>tskaggs:</b></font> So &lt;% if (session.authenticated) { %&gt; doesn&apos;t work when I login<br/>
+<font color="#A82F2F"><font size="2">(12:48:56 PM)</font> <b>da_wunde1:</b></font> tskaggs: http://wunder.sytes.net:3000/chat<br/>
+<font color="#A82F2F"><font size="2">(12:48:58 PM)</font> <b>tskaggs:</b></font> &lt;% if (session.authenticated) { %&gt; only works after a success up registration<br/>
+<font color="#A82F2F"><font size="2">(12:48:58 PM)</font> <b>da_wunde1:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:50:12 PM)</font> <b>tskaggs:</b></font> I&apos;m wanting to build this myself so I can understand things better<br/>
+<font color="#A82F2F"><font size="2">(12:50:13 PM)</font> <b>tskaggs:</b></font> ...<br/>
+<font color="#A82F2F"><font size="2">(12:50:14 PM)</font> <b>tskaggs:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(12:50:18 PM)</font> <b>tskaggs:</b></font> but this is pretty rad<br/>
+<font color="#A82F2F"><font size="2">(12:51:42 PM)</font> <b>tskaggs:</b></font> I notice on all the Passport examples, there&apos;s no registration page. Kind of odd.<br/>
+<font color="#A82F2F"><font size="2">(12:52:18 PM)</font> <b>itslennysfault:</b></font> I&apos;m not sure of your exact usage, but I use req.user in the controller and pass that through to the view<br/>
+<font color="#A82F2F"><font size="2">(12:52:27 PM)</font> <b>da_wunde1:</b></font> tskaggs: you can use https://www.npmjs.org/package/sails-generate-auth<br/>
+<font color="#A82F2F"><font size="2">(12:52:40 PM)</font> <b>da_wunde1:</b></font> it has support for registration<br/>
+<font color="#A82F2F"><font size="2">(12:54:18 PM)</font> <b>tskaggs:</b></font> da_wunde1 I have it working fine. It&apos;s all good but the session isn&apos;t getting set when I login via the login() function<br/>
+<font color="#A82F2F"><font size="2">(12:54:52 PM)</font> <b>tskaggs:</b></font> Which means by templates aren&apos;t working properly with &lt;% if (session.authenticated) { %&gt;<br/>
+<font color="#A82F2F"><font size="2">(01:17:10 PM)</font> <b>da_wunde1:</b></font> tskaggs: could you provide url to your app and sources?<br/>
+<font color="#A82F2F"><font size="2">(01:17:47 PM)</font> <b>tskaggs:</b></font> da_wunde1 https://github.com/tskaggs/sails-chat-passport<br/>
+<font color="#A82F2F"><font size="2">(01:20:51 PM)</font> <b>delight:</b></font> is socket 1.x going to land in sails 0.10 ? I thought I read something about this beeing one of the key parts for the 0.10 release but I couldn’t see any work on the intergration of it yet<br/>
+<font color="#A82F2F"><font size="2">(01:23:03 PM)</font> <b>da_wunde1:</b></font> tskaggs: hmmm is session available on views like that?<br/>
+<font color="#A82F2F"><font size="2">(01:23:12 PM)</font> <b>tskaggs:</b></font> yea<br/>
+<font color="#A82F2F"><font size="2">(01:23:16 PM)</font> <b>da_wunde1:</b></font> i haven&apos;t used it that way never<br/>
+<font color="#A82F2F"><font size="2">(01:23:31 PM)</font> <b>tskaggs:</b></font> I&apos;ve used it that way for a few projects<br/>
+<font color="#A82F2F"><font size="2">(01:23:38 PM)</font> <b>delight:</b></font> funny part socket.io had about 5 releases since the 28. of mai :-D<br/>
+<font color="#A82F2F"><font size="2">(01:24:42 PM)</font> <b>da_wunde1:</b></font> tskaggs: and all of those sails 0.10?<br/>
+<font color="#A82F2F"><font size="2">(01:26:57 PM)</font> <b>tskaggs:</b></font> Yea it&apos;s 0.10.0-rc7<br/>
+<font color="#A82F2F"><font size="2">(01:46:59 PM)</font> <b>cramrod:</b></font> Hey sailors!  We just open-sourced beta.sailsjs.org.  When v0.10 is released, it will become the main site.  If there&apos;s something you hate about it, submit a PR.  You too can make a difference.<br/>
+<font color="#A82F2F"><font size="2">(01:52:42 PM)</font> <b>da_wunder:</b></font> cramrod: nice<br/>
+<font color="#A82F2F"><font size="2">(02:09:48 PM)</font> <b>seydoggy:</b></font> I&apos;m looking to use sails 0.10.0-r7 with passport-http-bearer for consumption of a token. With oauth2 I want to use a grant-password flow (the trusted client flow). So far all examples I&apos;ve delved into use the redirect flow. Anyone know of any good examples that fit the bill?<br/>
+<font color="#A82F2F"><font size="2">(02:15:56 PM)</font> <b>da_wunder:</b></font> sorry haven&apos;t done that<br/>
+<font size="2">(06:25:04 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

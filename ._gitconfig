@@ -1,0 +1,18 @@
+[user]
+        email = rhow@i3.com
+        name = Randy How
+[core]
+        excludesfile = /home/likewise-open/I3/rhow/.gitignore_global
+[color]
+        ui = true
+[alias]
+        ci = commit
+        di = diff
+        st = status
+	pm = push origin master
+	co = checkout
+	br = branch
+	a = add
+
+[url "https://github"]
+	insteadOf = git://github

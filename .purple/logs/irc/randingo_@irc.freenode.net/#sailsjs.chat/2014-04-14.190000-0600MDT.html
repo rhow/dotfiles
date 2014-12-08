@@ -1,0 +1,54 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 14 Apr 2014 07:00:00 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 14 Apr 2014 07:00:00 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(07:00:00 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(07:31:16 PM)</font> <b>MGDSoft:</b></font> orbsio, did you test it?<br/>
+<font color="#A82F2F"><font size="2">(07:31:41 PM)</font> <b>MGDSoft:</b></font> i am too interested but u think query will be executed<br/>
+<font color="#A82F2F"><font size="2">(07:32:16 PM)</font> <b>orbsio:</b></font> MGDSoft: no, didn&apos;t test it. I&apos;m pretty sure that syntax won&apos;t work. Mainly asking if there was some syntax that would work.<br/>
+<font color="#A82F2F"><font size="2">(07:34:20 PM)</font> <b>MGDSoft:</b></font> if there was a serious way i think it will be the same to load<br/>
+<font color="#A82F2F"><font size="2">(08:14:18 PM)</font> <b>henry_:</b></font> is it possible to .find in the EJS view?<br/>
+<font color="#A82F2F"><font size="2">(08:25:54 PM)</font> <b>ransico:</b></font> henry_ - that is not a great way to do things, I&apos;d do the .find in the controller then pass it in as a view parameter<br/>
+<font color="#A82F2F"><font size="2">(08:29:28 PM)</font> <b>henry_:</b></font> ransico: trying to hacks something together real quick<br/>
+<font color="#A82F2F"><font size="2">(08:30:10 PM)</font> <b>henry_:</b></font> getting an error though that I can&apos;t figure out - http://pastebin.com/CPfHYXiA<br/>
+<font color="#A82F2F"><font size="2">(08:30:48 PM)</font> <b>henry_:</b></font> hmm prolly cant do var userHack[i] = user;<br/>
+<font color="#A82F2F"><font size="2">(08:31:27 PM)</font> <b>ransico:</b></font> line 13<br/>
+<font color="#A82F2F"><font size="2">(08:31:30 PM)</font> <b>ransico:</b></font> yeh :p<br/>
+<font color="#A82F2F"><font size="2">(08:34:48 PM)</font> <b>henry_:</b></font> ransico can i array push with a key?<br/>
+<font color="#A82F2F"><font size="2">(08:35:41 PM)</font> <b>ransico:</b></font> the key for the array is just the index for it?<br/>
+<font color="#A82F2F"><font size="2">(08:35:42 PM)</font> <b>henry_:</b></font> or perhaps i just need to var userHack = new Array(); before it ... testing<br/>
+<font color="#A82F2F"><font size="2">(08:35:55 PM)</font> <b>henry_:</b></font> yah 0, 1, 2, 3 etc<br/>
+<font color="#A82F2F"><font size="2">(08:36:29 PM)</font> <b>ransico:</b></font> yeh init the array before your loop, then just userHack.push(user)<br/>
+<font color="#A82F2F"><font size="2">(08:38:25 PM)</font> <b>henry_:</b></font> SyntaxError: Unexpected token ;<br/>
+<font color="#A82F2F"><font size="2">(08:40:17 PM)</font> <b>henry_:</b></font> uhh... where can this possibly happen :/<br/>
+<font color="#A82F2F"><font size="2">(08:40:39 PM)</font> <b>ransico:</b></font> that would normally indicate you have a semicolon instead of a comma, or the like<br/>
+<font color="#A82F2F"><font size="2">(08:42:03 PM)</font> <b>ransico:</b></font> hard to say without seing the exact syntax though.. since it is saying your JS doesn&apos;t arse<br/>
+<font color="#A82F2F"><font size="2">(08:42:08 PM)</font> <b>ransico:</b></font> * parse (lol)<br/>
+<font color="#A82F2F"><font size="2">(08:42:38 PM)</font> <b>henry_:</b></font> http://pastebin.com/Q39a4W7M<br/>
+<font color="#A82F2F"><font size="2">(08:43:22 PM)</font> <b>henry_:</b></font> i&apos;m pretty sure i&apos;ve got all of my commas and semicolons in place<br/>
+<font color="#A82F2F"><font size="2">(08:46:04 PM)</font> <b>ransico:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(08:46:16 PM)</font> <b>ransico:</b></font> I think it is the &lt; operator on the for loop<br/>
+<font color="#A82F2F"><font size="2">(08:48:35 PM)</font> <b>henry_:</b></font> if i remove the .findOne part it works<br/>
+<font color="#A82F2F"><font size="2">(08:48:44 PM)</font> <b>henry_:</b></font> so i don&apos;t think that&apos;s it<br/>
+<font color="#A82F2F"><font size="2">(08:49:56 PM)</font> <b>ransico:</b></font> oh yep I see it<br/>
+<font color="#A82F2F"><font size="2">(08:50:29 PM)</font> <b>ransico:</b></font> line 14, you might need to close the bracket<br/>
+<font color="#A82F2F"><font size="2">(08:50:30 PM)</font> <b>ransico:</b></font> });<br/>
+<font color="#A82F2F"><font size="2">(08:52:10 PM)</font> <b>henry_:</b></font> oh that&apos;s it<br/>
+<font color="#A82F2F"><font size="2">(08:52:25 PM)</font> <b>henry_:</b></font> thanks!<br/>
+<font color="#A82F2F"><font size="2">(08:52:40 PM)</font> <b>ransico:</b></font> 	nps<br/>
+<font size="2">(08:53:07 PM)</font><b> ransico left the room (quit: Quit: Leaving.).</b><br/>
+<font color="#A82F2F"><font size="2">(08:53:08 PM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(08:53:17 PM)</font> <b>lenswipe:</b></font> anyone know a good tool for writing API documentation?<br/>
+<font color="#A82F2F"><font size="2">(08:53:31 PM)</font> <b>robdubya:</b></font> jsdoc/ngdoc<br/>
+<font color="#A82F2F"><font size="2">(08:53:45 PM)</font> <b>robdubya:</b></font> balderdashy.github.io/angularSails &lt;- autogenerated from comments in code<br/>
+<font color="#A82F2F"><font size="2">(08:53:51 PM)</font> <b>henry_:</b></font> i dont think the .push is working though ransico, getting TypeError - http://pastebin.com/87U35N64<br/>
+<font color="#A82F2F"><font size="2">(08:55:15 PM)</font> <b>henry_:</b></font> console logging to test<br/>
+<font color="#A82F2F"><font size="2">(08:58:25 PM)</font> <b>henry_:</b></font> yah for each [i] they are undefined :/<br/>
+<font color="#A82F2F"><font size="2">(08:59:37 PM)</font> <b>henry_:</b></font> really weird, it is populating each with 4 undefined with each user property<br/>
+<font color="#A82F2F"><font size="2">(09:00:06 PM)</font> <b>henry_:</b></font> so it knows how many attributes-- but undefined still. this is so wierd<br/>
+<font color="#A82F2F"><font size="2">(09:01:58 PM)</font> <b>henry_:</b></font> ooooooh this is a async thing<br/>
+<font color="#A82F2F"><font size="2">(09:02:01 PM)</font> <b>henry_:</b></font> i got it, fixed<br/>
+<font color="#A82F2F"><font size="2">(09:02:13 PM)</font> <b>henry_:</b></font> thanks rodubya!!!!!<br/>
+<font color="#A82F2F"><font size="2">(09:02:26 PM)</font> <b>henry_:</b></font> robdubya***<br/>
+<font color="#A82F2F"><font size="2">(09:30:05 PM)</font> <b>henry_:</b></font> gah this is displaying undefined because it not waiting for the .findOne to finish<br/>
+<font color="#A82F2F"><font size="2">(09:30:16 PM)</font> <b>henry_:</b></font> is there anyway i can make something wait?<br/>
+<font color="#A82F2F"><font size="2">(09:30:46 PM)</font> <b>henry_:</b></font> document.write is not working saying undefined document<br/>
+<font size="2">(09:39:43 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

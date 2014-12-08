@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with bthorp@1rgs.com at Wed 29 Oct 2014 02:31:12 PM MDT on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with bthorp@1rgs.com at Wed 29 Oct 2014 02:31:12 PM MDT on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(02:31:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>YOOOooooo!  Bill!</span><br/>
+<font color="#A82F2F"><font size="2">(02:31:36 PM)</font> <b>Bill Thorp:</b></font> hello good sir!<br/>
+<font color="#16569E"><font size="2">(02:32:01 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey guess what!</span><br/>
+<font color="#A82F2F"><font size="2">(02:32:24 PM)</font> <b>Bill Thorp:</b></font> methinks politics have been politiced<br/>
+<font color="#16569E"><font size="2">(02:32:42 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>exactly!</span><br/>
+<font color="#A82F2F"><font size="2">(02:32:46 PM)</font> <b>Bill Thorp:</b></font> swell!<br/>
+<font color="#16569E"><font size="2">(02:32:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>let's fix it!</span><br/>
+<font color="#16569E"><font size="2">(02:33:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have skype?</span><br/>
+<font color="#A82F2F"><font size="2">(02:33:27 PM)</font> <b>Bill Thorp:</b></font> I <span style='font-weight: bold;'>could*</span><br/>
+<font color="#16569E"><font size="2">(02:33:58 PM)</font> <b>Randy How:</b></font> I just pinged billthorp on Skype.<br/>
+<font color="#A82F2F"><font size="2">(02:34:10 PM)</font> <b>Bill Thorp:</b></font> (I'm installing it now)<br/>
+<font color="#16569E"><font size="2">(02:34:44 PM)</font> <b>Randy How:</b></font> =]<br/>
+<font color="#16569E"><font size="2">(02:34:47 PM)</font> <b>Randy How:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(02:35:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>So is the issue we're working on this one:<br/><a href="http://utility6/redmine/issues/10735#change-61660">http://utility6/redmine/issues/10735#change-61660</a></span><br/>
+<font color="#A82F2F"><font size="2">(02:37:22 PM)</font> <b>Bill Thorp:</b></font> errr... I can't see your redmine<br/>
+<font color="#A82F2F"><font size="2">(02:37:29 PM)</font> <b>Bill Thorp:</b></font> but I'm going w/ nope<br/>
+<font color="#16569E"><font size="2">(02:37:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh that's mine.</span><br/>
+<font color="#16569E"><font size="2">(02:37:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right</span><br/>
+<font color="#A82F2F"><font size="2">(02:37:41 PM)</font> <b>Bill Thorp:</b></font> that was &quot;&quot;out of memory&quot; error - most likely MUGG DAL issue&quot;, right?<br/>
+<font color="#16569E"><font size="2">(02:38:01 PM)</font> <b>Randy How:</b></font> <a href="http://utility6/redmine/issues/10735#change-61660">Bug #10735: &quot;out of memory&quot; error - most likely MUGG DAL issue</a><br/>
+<font color="#A82F2F"><font size="2">(02:38:10 PM)</font> <b>Bill Thorp:</b></font> yeah, so that's totally fixed on my end<br/>
+<font color="#16569E"><font size="2">(02:38:12 PM)</font> <b>Randy How:</b></font> yep!<br/>
+<font color="#16569E"><font size="2">(02:38:17 PM)</font> <b>Randy How:</b></font> Awesome!<br/>
+<font color="#16569E"><font size="2">(02:38:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, is it high priority for next week?</span><br/>
+<font color="#A82F2F"><font size="2">(02:38:54 PM)</font> <b>Bill Thorp:</b></font> yeah ... 1 sec here<br/>
+<font color="#A82F2F"><font size="2">(02:39:22 PM)</font> <b>Bill Thorp:</b></font> can you see this : https://support.1rgs.com/issues/1158<br/>
+<font color="#16569E"><font size="2">(02:39:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yes</span><br/>
+<font color="#A82F2F"><font size="2">(02:40:46 PM)</font> <b>Bill Thorp:</b></font> so we need a new method in the IDAL - GetLayersByMapIdAndExtent<br/>
+<font color="#16569E"><font size="2">(02:41:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Oh do we?</span><br/>
+<font color="#A82F2F"><font size="2">(02:41:17 PM)</font> <b>Bill Thorp:</b></font> you can change the abstract DAL so that GetLayersByMapId just calls GetLayersByMapIdAndExtent<br/>
+<font color="#A82F2F"><font size="2">(02:41:32 PM)</font> <b>Bill Thorp:</b></font> and so for most DALs essentially nothing changes<br/>
+<font color="#A82F2F"><font size="2">(02:42:03 PM)</font> <b>Bill Thorp:</b></font> but this way I'll be able to override that method and make GATOR sing<br/>
+<font color="#16569E"><font size="2">(02:42:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(02:48:13 PM)</font> <b>Bill Thorp:</b></font> you know, we might throw &quot;level&quot; into that new method<br/>
+<font color="#16569E"><font size="2">(02:50:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>public abstract Content GetLayersByMapIdAndExtent(Guid mapId, IEnvelope envelope);</span><br/>
+<font color="#16569E"><font size="2">(02:51:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Ienvelope is in: using DotSpatial.Topology;</span><br/>
+<font color="#A82F2F"><font size="2">(02:51:39 PM)</font> <b>Bill Thorp:</b></font> if you make it virtual you can just have it call GetLayersByMapId() by default<br/>
+<font color="#A82F2F"><font size="2">(02:51:44 PM)</font> <b>Bill Thorp:</b></font> then you don't have to change the other DAL methods<br/>
+<font color="#16569E"><font size="2">(02:52:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have audio for skype?</span><br/>
+<font color="#A82F2F"><font size="2">(02:52:53 PM)</font> <b>Bill Thorp:</b></font> ha.  no.<br/>
+<font color="#16569E"><font size="2">(02:52:58 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(02:53:01 PM)</font> <b>Bill Thorp:</b></font> I thought you were going to screen share<br/>
+<font color="#16569E"><font size="2">(02:53:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i am</span><br/>
+<font color="#A82F2F"><font size="2">(02:53:35 PM)</font> <b>Bill Thorp:</b></font> somehow I can't hear you yet either<br/>
+<font color="#16569E"><font size="2">(02:53:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can you see my screen?</span><br/>
+<font color="#A82F2F"><font size="2">(02:54:01 PM)</font> <b>Bill Thorp:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(02:54:20 PM)</font> <b>Bill Thorp:</b></font> ha.  I couldn't hear you b/c my headphones weren't in my ears<br/>
+<font color="#16569E"><font size="2">(02:54:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>calling</span><br/>
+<font color="#A82F2F"><font size="2">(02:54:42 PM)</font> <b>Bill Thorp:</b></font> so you can just talk and I can type<br/>
+<font color="#16569E"><font size="2">(02:54:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>or you could answer your phone?</span><br/>
+<font color="#A82F2F"><font size="2">(02:55:05 PM)</font> <b>Bill Thorp:</b></font> 372-5561<br/>
+<font color="#A82F2F"><font size="2">(02:55:14 PM)</font> <b>Bill Thorp:</b></font> we can't have our cell phones in the office<br/>
+<font color="#16569E"><font size="2">(02:55:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#A82F2F"><font size="2">(03:35:39 PM)</font> <b>Bill Thorp:</b></font> thanks randy!<br/>
+<font color="#16569E"><font size="2">(03:35:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep!</span><br/>
+</body></html>

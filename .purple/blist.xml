@@ -1,0 +1,3661 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<purple version='1.0'>
+	<blist>
+		<group name='Buddies'>
+			<setting name='collapsed' type='bool'>0</setting>
+		</group>
+		<group name='i-cubed'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1406157118</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>esky@utilworkstation</name>
+					<alias>Evan Sky</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1406143780</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>2c21d6c0de85abc433539c180be0eff641b062a5.png</setting>
+					<setting name='icon_checksum' type='string'>2c21d6c0de85abc433539c180be0eff641b062a5</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1406148437</setting>
+					<setting name='buddy_icon' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e.png</setting>
+					<setting name='icon_checksum' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>239e71b571b34d411d7461a12fca5a1b312f5bef.png</setting>
+					<setting name='icon_checksum' type='string'>239e71b571b34d411d7461a12fca5a1b312f5bef</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ybenard@utilworkstation</name>
+					<alias>Yann Benard</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431.png</setting>
+					<setting name='icon_checksum' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1409870214</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>esky@utilworkstation</name>
+					<alias>Evan Sky</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>aeb3508bec57aaaadf82fc04354d4304047332f5.png</setting>
+					<setting name='icon_checksum' type='string'>aeb3508bec57aaaadf82fc04354d4304047332f5</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e.png</setting>
+					<setting name='icon_checksum' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mwalton@utilworkstation</name>
+					<alias>Marie Walton</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e.png</setting>
+					<setting name='icon_checksum' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1410216420</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>4811383e9364cb21bca13b9c206bef067c500076.png</setting>
+					<setting name='icon_checksum' type='string'>4811383e9364cb21bca13b9c206bef067c500076</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d.png</setting>
+					<setting name='icon_checksum' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1410281121</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gdidier@utilworkstation</name>
+					<alias>Gwenael Didier</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9.png</setting>
+					<setting name='icon_checksum' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ybenard@utilworkstation</name>
+					<alias>Yann Benard</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431.png</setting>
+					<setting name='icon_checksum' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1417824664</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1414446133</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>esky@utilworkstation</name>
+					<alias>Evan Sky</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1417819678</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e910852004c86bde4c190a5907f16c02f9033aa2.png</setting>
+					<setting name='icon_checksum' type='string'>e910852004c86bde4c190a5907f16c02f9033aa2</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1417830124</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e.png</setting>
+					<setting name='icon_checksum' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>aleitermann@utilworkstation</name>
+					<alias>Andy Leitermann</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mwalton@utilworkstation</name>
+					<alias>Marie Walton</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e.png</setting>
+					<setting name='icon_checksum' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1415655665</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1417817644</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1417831422</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>4811383e9364cb21bca13b9c206bef067c500076.png</setting>
+					<setting name='icon_checksum' type='string'>4811383e9364cb21bca13b9c206bef067c500076</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d.png</setting>
+					<setting name='icon_checksum' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>gdidier@utilworkstation</name>
+					<alias>Gwenael Didier</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9.png</setting>
+					<setting name='icon_checksum' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ekuitert@utilworkstation</name>
+					<alias>Erik Kuitert</alias>
+					<setting name='last_seen' type='int'>1417822331</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='RGS'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bthorp@1rgs.com</name>
+					<alias>Bill Thorp</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rcowart@1rgs.com</name>
+					<alias>Russ Cowart</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bthorp@1rgs.com</name>
+					<alias>Bill Thorp</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rcowart@1rgs.com</name>
+					<alias>Russ Cowart</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bthorp@1rgs.com</name>
+					<alias>Bill Thorp</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rcowart@1rgs.com</name>
+					<alias>Russ Cowart</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Friends'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>thomas.bonfort@gmail.com</name>
+					<alias>thomas bonfort</alias>
+					<setting name='last_seen' type='int'>1406065989</setting>
+					<setting name='buddy_icon' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf.jpg</setting>
+					<setting name='icon_checksum' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>simpsorv@co.larimer.co.us</name>
+					<alias>Royce Simpson (work)</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>roycenlisa@gmail.com</name>
+					<alias>Royce Simpson</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sontag.stephen@gmail.com</name>
+					<setting name='last_seen' type='int'>1406150818</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1miskupt2x3xl1jphvbvlcsstu@public.talk.google.com</name>
+					<alias>Randy How</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1.jpg</setting>
+					<setting name='icon_checksum' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>3brgp93okmcju22yvu3wp4acjg@public.talk.google.com</name>
+					<alias>Dave Bouwman</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>dffff4c763b051b45f9ceaff903ba7f310474915.jpg</setting>
+					<setting name='icon_checksum' type='string'>dffff4c763b051b45f9ceaff903ba7f310474915</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>botemout@gmail.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1v4ufwn5l5qdi29pvw9x7lj7x5@public.talk.google.com</name>
+					<alias>Yann Justeau</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48.jpg</setting>
+					<setting name='icon_checksum' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>thomas.bonfort@gmail.com</name>
+					<alias>thomas bonfort</alias>
+					<setting name='last_seen' type='int'>1410201206</setting>
+					<setting name='buddy_icon' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf.jpg</setting>
+					<setting name='icon_checksum' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>simpsorv@co.larimer.co.us</name>
+					<alias>Royce Simpson (work)</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>roycenlisa@gmail.com</name>
+					<alias>Royce Simpson</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sontag.stephen@gmail.com</name>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1miskupt2x3xl1jphvbvlcsstu@public.talk.google.com</name>
+					<alias>Randy How</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1.jpg</setting>
+					<setting name='icon_checksum' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>3brgp93okmcju22yvu3wp4acjg@public.talk.google.com</name>
+					<alias>Dave Bouwman</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>dffff4c763b051b45f9ceaff903ba7f310474915.jpg</setting>
+					<setting name='icon_checksum' type='string'>dffff4c763b051b45f9ceaff903ba7f310474915</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>botemout@gmail.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1410283193</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1v4ufwn5l5qdi29pvw9x7lj7x5@public.talk.google.com</name>
+					<alias>Yann Justeau</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48.jpg</setting>
+					<setting name='icon_checksum' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>thomas.bonfort@gmail.com</name>
+					<alias>thomas bonfort</alias>
+					<setting name='last_seen' type='int'>1417820085</setting>
+					<setting name='buddy_icon' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf.jpg</setting>
+					<setting name='icon_checksum' type='string'>a33507532822e624ac673d2ac2307bf082a0aedf</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1miskupt2x3xl1jphvbvlcsstu@public.talk.google.com</name>
+					<alias>Randy How</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1.jpg</setting>
+					<setting name='icon_checksum' type='string'>1f39e70cf3e5a2972169764400153f5714a092e1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>simpsorv@co.larimer.co.us</name>
+					<alias>Royce Simpson (work)</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>813d29dc23e9adb4df8f54c7a9a4d8865730efdb.jpg</setting>
+					<setting name='icon_checksum' type='string'>813d29dc23e9adb4df8f54c7a9a4d8865730efdb</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>roycenlisa@gmail.com</name>
+					<alias>Royce Simpson</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>f3e5c0ecb79228e9769176c18e8fa9e18752e32f.jpg</setting>
+					<setting name='icon_checksum' type='string'>f3e5c0ecb79228e9769176c18e8fa9e18752e32f</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sontag.stephen@gmail.com</name>
+					<setting name='last_seen' type='int'>1417998238</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>3brgp93okmcju22yvu3wp4acjg@public.talk.google.com</name>
+					<alias>Dave Bouwman</alias>
+					<setting name='last_seen' type='int'>1417993730</setting>
+					<setting name='buddy_icon' type='string'>afe3e0b507d11026e0555255482b4339e545b064.jpg</setting>
+					<setting name='icon_checksum' type='string'>afe3e0b507d11026e0555255482b4339e545b064</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>botemout@gmail.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>1v4ufwn5l5qdi29pvw9x7lj7x5@public.talk.google.com</name>
+					<alias>Yann Justeau</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48.jpg</setting>
+					<setting name='icon_checksum' type='string'>4e3029cd2ae6010fc7fb76194e26bcdb20750a48</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Google Chat'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3.jpg</setting>
+					<setting name='icon_checksum' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@i3.com</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>15d0813965b8b85b3fa5b2f35be5e2aedc7c29f1.jpg</setting>
+					<setting name='icon_checksum' type='string'>15d0813965b8b85b3fa5b2f35be5e2aedc7c29f1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@i3.com</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@i3.com</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>adavis@i3.com</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>283aa842aec8a93ca2b3686a5f1cff835a25d943.jpg</setting>
+					<setting name='icon_checksum' type='string'>283aa842aec8a93ca2b3686a5f1cff835a25d943</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@i3.com</name>
+					<alias>Jason Adams</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@i3.com</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cdickson@i3.com</name>
+					<alias>Corey Dickson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dsteveley@i3.com</name>
+					<alias>David Steveley</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@i3.com</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@i3.com</name>
+					<alias>Jeremy Hale</alias>
+					<setting name='last_seen' type='int'>1406204280</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@i3.com</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@i3.com</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@i3.com</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@i3.com</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@i3.com</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@i3.com</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bhartz@i3.com</name>
+					<alias>Brian Hartz</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@i3.com</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@i3.com</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50.jpg</setting>
+					<setting name='icon_checksum' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@i3.com</name>
+					<alias>David Eye</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@i3.com</name>
+					<alias>David Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@i3.com</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@i3.com</name>
+					<alias>Frances Cunning</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>frittwager@i3.com</name>
+					<alias>Frank Rittwager</alias>
+					<setting name='last_seen' type='int'>1406156975</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@i3.com</name>
+					<alias>Greta Koepsell</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>bdcb52776192193c632efa249165705895512230.jpg</setting>
+					<setting name='icon_checksum' type='string'>bdcb52776192193c632efa249165705895512230</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@i3.com</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@i3.com</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb.jpg</setting>
+					<setting name='icon_checksum' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@i3.com</name>
+					<alias>Jakob Grothe</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@i3.com</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1406149962</setting>
+					<setting name='buddy_icon' type='string'>f9787f63de52dc7999eee12c012c209cd2162459.jpg</setting>
+					<setting name='icon_checksum' type='string'>f9787f63de52dc7999eee12c012c209cd2162459</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@i3.com</name>
+					<alias>Jill Mamini</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@i3.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@i3.com</name>
+					<alias>Jeremiah Teague</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@i3.com</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1406062545</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@i3.com</name>
+					<alias>Mark Fiorentino</alias>
+					<setting name='last_seen' type='int'>1406155400</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mgarrett@i3.com</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@i3.com</name>
+					<alias>T Matthew Staten</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>cadbd6a403ac4b77363545d237867314a81eba55.jpg</setting>
+					<setting name='icon_checksum' type='string'>cadbd6a403ac4b77363545d237867314a81eba55</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@i3.com</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b.jpg</setting>
+					<setting name='icon_checksum' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rfarrell@i3.com</name>
+					<alias>Ryan Farrell</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sandrews@i3.com</name>
+					<alias>Steve Andrews</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@i3.com</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@i3.com</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7.jpg</setting>
+					<setting name='icon_checksum' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfriesner@i3.com</name>
+					<alias>Ted Friesner</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>vjetly@i3.com</name>
+					<alias>Vikalpa Jetly</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@i3.com</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@i3.com</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>be8571e1044eb57db063265942bc7af111097f26.jpg</setting>
+					<setting name='icon_checksum' type='string'>be8571e1044eb57db063265942bc7af111097f26</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@i3.com</name>
+					<alias>Nick McPherson</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>florent.loang@gmail.com</name>
+					<alias>Florent Loang</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3.jpg</setting>
+					<setting name='icon_checksum' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@i3.com</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>15d0813965b8b85b3fa5b2f35be5e2aedc7c29f1.jpg</setting>
+					<setting name='icon_checksum' type='string'>15d0813965b8b85b3fa5b2f35be5e2aedc7c29f1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@i3.com</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@i3.com</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@i3.com</name>
+					<alias>Jason Adams</alias>
+					<setting name='last_seen' type='int'>1410220702</setting>
+					<setting name='buddy_icon' type='string'>800ae4eee0b37256d96ce413caf461b8b0609bdc.jpg</setting>
+					<setting name='icon_checksum' type='string'>800ae4eee0b37256d96ce413caf461b8b0609bdc</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@i3.com</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dsteveley@i3.com</name>
+					<alias>David Steveley</alias>
+					<setting name='last_seen' type='int'>1410275059</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@i3.com</name>
+					<alias>Jeremy Hale</alias>
+					<setting name='last_seen' type='int'>1410234017</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@i3.com</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1410282871</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cdickson@i3.com</name>
+					<alias>Corey Dickson</alias>
+					<setting name='last_seen' type='int'>1407526700</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@i3.com</name>
+					<alias>Jakob Grothe</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@i3.com</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@i3.com</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1410285948</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@i3.com</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@i3.com</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@i3.com</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bhartz@i3.com</name>
+					<alias>Brian Hartz</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@i3.com</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1407868670</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@i3.com</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50.jpg</setting>
+					<setting name='icon_checksum' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@i3.com</name>
+					<alias>David Eye</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@i3.com</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1410279988</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@i3.com</name>
+					<alias>David Cole</alias>
+					<setting name='last_seen' type='int'>1410290208</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@i3.com</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@i3.com</name>
+					<alias>Frances Cunning</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>frittwager@i3.com</name>
+					<alias>Frank Rittwager</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@i3.com</name>
+					<alias>Greta Koepsell</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>bdcb52776192193c632efa249165705895512230.jpg</setting>
+					<setting name='icon_checksum' type='string'>bdcb52776192193c632efa249165705895512230</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@i3.com</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@i3.com</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb.jpg</setting>
+					<setting name='icon_checksum' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@i3.com</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>f9787f63de52dc7999eee12c012c209cd2162459.jpg</setting>
+					<setting name='icon_checksum' type='string'>f9787f63de52dc7999eee12c012c209cd2162459</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@i3.com</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>41f1f83d163b56a380319f55ac5489e09dbea563.jpg</setting>
+					<setting name='icon_checksum' type='string'>41f1f83d163b56a380319f55ac5489e09dbea563</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@i3.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@i3.com</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e.png</setting>
+					<setting name='icon_checksum' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@i3.com</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@i3.com</name>
+					<alias>Mark Fiorentino</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mgarrett@i3.com</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@i3.com</name>
+					<alias>T Matthew Staten</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>cadbd6a403ac4b77363545d237867314a81eba55.jpg</setting>
+					<setting name='icon_checksum' type='string'>cadbd6a403ac4b77363545d237867314a81eba55</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@i3.com</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b.jpg</setting>
+					<setting name='icon_checksum' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rfarrell@i3.com</name>
+					<alias>Ryan Farrell</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sandrews@i3.com</name>
+					<alias>Steve Andrews</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@i3.com</name>
+					<alias>Steve Clark</alias>
+					<setting name='last_seen' type='int'>1407856821</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@i3.com</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7.jpg</setting>
+					<setting name='icon_checksum' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfriesner@i3.com</name>
+					<alias>Ted Friesner</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>vjetly@i3.com</name>
+					<alias>Vikalpa Jetly</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@i3.com</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+					<setting name='buddy_icon' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9.png</setting>
+					<setting name='icon_checksum' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@i3.com</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1408403392</setting>
+					<setting name='buddy_icon' type='string'>0cc671d3d840fedae3e9e48780472daa27e428ac.jpg</setting>
+					<setting name='icon_checksum' type='string'>0cc671d3d840fedae3e9e48780472daa27e428ac</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@i3.com</name>
+					<alias>Nick McPherson</alias>
+					<setting name='last_seen' type='int'>1410283837</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>florent.loang@gmail.com</name>
+					<alias>Florent Loang</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+					<setting name='last_seen' type='int'>1417796623</setting>
+					<setting name='buddy_icon' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3.jpg</setting>
+					<setting name='icon_checksum' type='string'>e28ec3d1d3d8419976e26d577fe4223963b117b3</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@i3.com</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e085f0bf773767cc918cb0844754950d561780d8.jpg</setting>
+					<setting name='icon_checksum' type='string'>e085f0bf773767cc918cb0844754950d561780d8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@i3.com</name>
+					<alias>Jakob Grothe</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@i3.com</name>
+					<alias>Mark Fiorentino</alias>
+					<setting name='last_seen' type='int'>1417905288</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@i3.com</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1417831422</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@i3.com</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>adavis@i3.com</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>283aa842aec8a93ca2b3686a5f1cff835a25d943.jpg</setting>
+					<setting name='icon_checksum' type='string'>283aa842aec8a93ca2b3686a5f1cff835a25d943</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@i3.com</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@i3.com</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@i3.com</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1417816649</setting>
+					<setting name='buddy_icon' type='string'>f9787f63de52dc7999eee12c012c209cd2162459.jpg</setting>
+					<setting name='icon_checksum' type='string'>f9787f63de52dc7999eee12c012c209cd2162459</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@i3.com</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1417819678</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@i3.com</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@i3.com</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1417831318</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@i3.com</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@i3.com</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e.png</setting>
+					<setting name='icon_checksum' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@i3.com</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@i3.com</name>
+					<alias>Steve Clark</alias>
+					<setting name='last_seen' type='int'>1417542144</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@i3.com</name>
+					<alias>Frances Cunning</alias>
+					<setting name='last_seen' type='int'>1410472998</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@i3.com</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>41f1f83d163b56a380319f55ac5489e09dbea563.jpg</setting>
+					<setting name='icon_checksum' type='string'>41f1f83d163b56a380319f55ac5489e09dbea563</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@i3.com</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e265b71312feb76193469e8018b7a5564d26eeb7.jpg</setting>
+					<setting name='icon_checksum' type='string'>e265b71312feb76193469e8018b7a5564d26eeb7</setting>
+				</buddy>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bhartz@i3.com</name>
+					<alias>Brian Hartz</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cdickson@i3.com</name>
+					<alias>Corey Dickson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@i3.com</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1415986650</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@i3.com</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50.jpg</setting>
+					<setting name='icon_checksum' type='string'>015ebb900e039198bdf181be1c87f70e70a5ac50</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@i3.com</name>
+					<alias>David Eye</alias>
+					<setting name='last_seen' type='int'>1417822034</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@i3.com</name>
+					<alias>David Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>frittwager@i3.com</name>
+					<alias>Frank Rittwager</alias>
+					<setting name='last_seen' type='int'>1417889080</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@i3.com</name>
+					<alias>Greta Koepsell</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>bdcb52776192193c632efa249165705895512230.jpg</setting>
+					<setting name='icon_checksum' type='string'>bdcb52776192193c632efa249165705895512230</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@i3.com</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1417925176</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@i3.com</name>
+					<alias>Jason Adams</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>800ae4eee0b37256d96ce413caf461b8b0609bdc.jpg</setting>
+					<setting name='icon_checksum' type='string'>800ae4eee0b37256d96ce413caf461b8b0609bdc</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@i3.com</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1415826027</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@i3.com</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb.jpg</setting>
+					<setting name='icon_checksum' type='string'>ddbd7ed69b6b1b38f704bed2ee193c38536fe4eb</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@i3.com</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1417795904</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@i3.com</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mgarrett@i3.com</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@i3.com</name>
+					<alias>T Matthew Staten</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>cadbd6a403ac4b77363545d237867314a81eba55.jpg</setting>
+					<setting name='icon_checksum' type='string'>cadbd6a403ac4b77363545d237867314a81eba55</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@i3.com</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b.jpg</setting>
+					<setting name='icon_checksum' type='string'>b332457dc8b886600f6f88bfe6389b70c14a9f1b</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rfarrell@i3.com</name>
+					<alias>Ryan Farrell</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sandrews@i3.com</name>
+					<alias>Steve Andrews</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@i3.com</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1417110201</setting>
+					<setting name='buddy_icon' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7.jpg</setting>
+					<setting name='icon_checksum' type='string'>e45dfe5d90439f360b18924806a975f3cf0176c7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfriesner@i3.com</name>
+					<alias>Ted Friesner</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>vjetly@i3.com</name>
+					<alias>Vikalpa Jetly</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dsteveley@i3.com</name>
+					<alias>David Steveley</alias>
+					<setting name='last_seen' type='int'>1415637026</setting>
+					<setting name='buddy_icon' type='string'>65ca64912a399e5fdd1db4cb3040289bd5822b28.jpg</setting>
+					<setting name='icon_checksum' type='string'>65ca64912a399e5fdd1db4cb3040289bd5822b28</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@i3.com</name>
+					<alias>Jeremy Hale</alias>
+					<setting name='last_seen' type='int'>1417719006</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@i3.com</name>
+					<alias>Nick McPherson</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@i3.com</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dwright@i3.com</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>florent.loang@gmail.com</name>
+					<alias>Florent Loang</alias>
+				</buddy>
+			</contact>
+		</group>
+		<group name='i3 Local'>
+			<setting name='collapsed' type='bool'>1</setting>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1406157118</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>admin@utilworkstation</name>
+					<alias>Administrator</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1406143780</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>2c21d6c0de85abc433539c180be0eff641b062a5.png</setting>
+					<setting name='icon_checksum' type='string'>2c21d6c0de85abc433539c180be0eff641b062a5</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>frittwager@utilworkstation</name>
+					<alias>Frank Rittwager</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1406148437</setting>
+					<setting name='buddy_icon' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e.png</setting>
+					<setting name='icon_checksum' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dsteveley@utilworkstation</name>
+					<alias>David Steveley</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mgarrett@utilworkstation</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>239e71b571b34d411d7461a12fca5a1b312f5bef.png</setting>
+					<setting name='icon_checksum' type='string'>239e71b571b34d411d7461a12fca5a1b312f5bef</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1406157161</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431.png</setting>
+					<setting name='icon_checksum' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1409870214</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>admin@utilworkstation</name>
+					<alias>Administrator</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>aeb3508bec57aaaadf82fc04354d4304047332f5.png</setting>
+					<setting name='icon_checksum' type='string'>aeb3508bec57aaaadf82fc04354d4304047332f5</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>frittwager@utilworkstation</name>
+					<alias>Frank Rittwager</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e.png</setting>
+					<setting name='icon_checksum' type='string'>1b63e3e176518bbcd8a91421dee934fa0392077e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>dsteveley@utilworkstation</name>
+					<alias>David Steveley</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e.png</setting>
+					<setting name='icon_checksum' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1410216420</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mgarrett@utilworkstation</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>4811383e9364cb21bca13b9c206bef067c500076.png</setting>
+					<setting name='icon_checksum' type='string'>4811383e9364cb21bca13b9c206bef067c500076</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d.png</setting>
+					<setting name='icon_checksum' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+					<setting name='last_seen' type='int'>1410281121</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.com/Google' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1410291509</setting>
+					<setting name='buddy_icon' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9.png</setting>
+					<setting name='icon_checksum' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>cseitz@utilworkstation</name>
+					<alias>Colter Seitz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bcarpenter@utilworkstation</name>
+					<alias>Bryan Carpenter</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431.png</setting>
+					<setting name='icon_checksum' type='string'>e25e95f69d83ecafe32d13827fa4c36b2aa78431</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jpeek@utilworkstation</name>
+					<alias>Jana Peek</alias>
+					<setting name='last_seen' type='int'>1417824664</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>rgambirasi@utilworkstation</name>
+					<alias>Russ Gambirasi</alias>
+					<setting name='last_seen' type='int'>1414446133</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jgrothe@utilworkstation</name>
+					<alias>Jakob Grothe</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>nmcpherson@utilworkstation</name>
+					<alias>Nick McPherson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ssutton@utilworkstation</name>
+					<alias>Scott Sutton</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339.png</setting>
+					<setting name='icon_checksum' type='string'>15c9f5910a9bc0bd4429d918046753b2f294f339</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>admin@utilworkstation</name>
+					<alias>Administrator</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>fcunning@utilworkstation</name>
+					<alias>Frances Cunning </alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>abarton@utilworkstation</name>
+					<alias>Austin Barton</alias>
+					<setting name='last_seen' type='int'>1417819678</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ajohnson@utilworkstation</name>
+					<alias>Alicia Davis</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>deye@utilworkstation</name>
+					<alias>David Eye</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mlikes@utilworkstation</name>
+					<alias>Michelle Likes</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace.png</setting>
+					<setting name='icon_checksum' type='string'>b56dccdfa54b12c7a08babfebe2db3d6db708ace</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jporter@utilworkstation</name>
+					<alias>Jeff Porter</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>sclark@utilworkstation</name>
+					<alias>Steve Clark</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dcole@utilworkstation</name>
+					<alias>Dave Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>e910852004c86bde4c190a5907f16c02f9033aa2.png</setting>
+					<setting name='icon_checksum' type='string'>e910852004c86bde4c190a5907f16c02f9033aa2</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dwright@utilworkstation</name>
+					<alias>David Wright</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>cmccarty@utilworkstation</name>
+					<alias>Chris McCarty</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dwatts@utilworkstation</name>
+					<alias>Darren Watts</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mdillon@utilworkstation</name>
+					<alias>Michael Dillon</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tdiel@utilworkstation</name>
+					<alias>Tyler Diel</alias>
+					<setting name='last_seen' type='int'>1417830124</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dgardner@utilworkstation</name>
+					<alias>Daiva Gardner</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>stravis@utilworkstation</name>
+					<alias>Sabrina Travis</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>frittwager@utilworkstation</name>
+					<alias>Frank Rittwager</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jteague@utilworkstation</name>
+					<alias>Jeremiah Teague</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e.png</setting>
+					<setting name='icon_checksum' type='string'>acc811cad16da1bcdcfab8fb208be4d4b1c5383e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>dsteveley@utilworkstation</name>
+					<alias>David Steveley</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mmiddendorf@utilworkstation</name>
+					<alias>Matt Middendorf</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440.png</setting>
+					<setting name='icon_checksum' type='string'>1936d01ce164071b940fd0964c31e3fe6445e440</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>kperrault@utilworkstation</name>
+					<alias>Karl Perrault</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ckunz@utilworkstation</name>
+					<alias>Carol Kunz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e.png</setting>
+					<setting name='icon_checksum' type='string'>59074cfbaa76e4e81fd802590b65ca67aa40a67e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mstaten@utilworkstation</name>
+					<alias>Matt Staten</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8.png</setting>
+					<setting name='icon_checksum' type='string'>1a1b4c4a66bab1c5531b7404bf89ee03075072e8</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bmattison@utilworkstation</name>
+					<alias>Brad Mattison</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tbjick@utilworkstation</name>
+					<alias>Tracey Bjick</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>snelsen@utilworkstation</name>
+					<alias>Shawn Nelsen</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>hmcclellan@utilworkstation</name>
+					<alias>Hayle McClellan</alias>
+					<setting name='last_seen' type='int'>1415655665</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mcordovano@utilworkstation</name>
+					<alias>Mark Cordovano</alias>
+					<setting name='last_seen' type='int'>1417817644</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jadams@utilworkstation</name>
+					<alias>Jason Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>bross@utilworkstation</name>
+					<alias>Bobby Ross</alias>
+					<setting name='last_seen' type='int'>1417831422</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mgarrett@utilworkstation</name>
+					<alias>Mick Garrett</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ptucker@utilworkstation</name>
+					<alias>Phil Tucker</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jleijabonnart@utilworkstation</name>
+					<alias>Jennifer Leija-Bonnart</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>4811383e9364cb21bca13b9c206bef067c500076.png</setting>
+					<setting name='icon_checksum' type='string'>4811383e9364cb21bca13b9c206bef067c500076</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jmamini@utilworkstation</name>
+					<alias>Jill Mamini</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d.png</setting>
+					<setting name='icon_checksum' type='string'>58c9233bba466c1f94e3e6e1de2e940b49690d9d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jdahlke@utilworkstation</name>
+					<alias>Jeff Dahlke</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>gfielitz@utilworkstation</name>
+					<alias>Greta Fielitz</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c.png</setting>
+					<setting name='icon_checksum' type='string'>af8d27ff28204fcc706332ee7dfb1733daa9994c</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>astrachan@utilworkstation</name>
+					<alias>Alistair Strachan</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e.png</setting>
+					<setting name='icon_checksum' type='string'>ed045593876dd6fc9ce12293942bb5d28bffda3e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jerdman@utilworkstation</name>
+					<alias>Jacob Erdman</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jrsmith@utilworkstation</name>
+					<alias>John Smith</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>tfry@utilworkstation</name>
+					<alias>Travis Fry</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93.png</setting>
+					<setting name='icon_checksum' type='string'>57f8f98fa4ed6e95adbeacfd6e78f06df3142b93</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jhale@utilworkstation</name>
+					<alias>Jeremy Hale</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>mfiorentino@utilworkstation</name>
+					<alias>Mark Fiorentino</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>djcole@utilworkstation</name>
+					<alias>David J. Cole</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>jwoodworth@utilworkstation</name>
+					<alias>Jason Woodworth</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>sdiel@utilworkstation</name>
+					<alias>Sandy Diel</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='rhow@i3.local/utilworkstation' proto='prpl-jabber'>
+					<name>ysiddiqui@utilworkstation</name>
+					<alias>Yusuf Siddiqui</alias>
+					<setting name='last_seen' type='int'>1417926714</setting>
+					<setting name='buddy_icon' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9.png</setting>
+					<setting name='icon_checksum' type='string'>699c44a000dc756f19119d5df55ed290aba10ab9</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Chats'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#kitchenci</component>
+			</chat>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#vagrant</component>
+			</chat>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#learnchef</component>
+			</chat>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#chef</component>
+			</chat>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#rvm</component>
+			</chat>
+			<chat proto='prpl-irc' account='randingo@irc.freenode.net'>
+				<component name='channel'>#SailsJS</component>
+				<setting name='gtk-mute-sound' type='bool'>0</setting>
+				<setting name='gtk-autojoin' type='bool'>1</setting>
+			</chat>
+		</group>
+	</blist>
+	<privacy>
+		<account proto='prpl-irc' name='randingo@irc.twice-irc.de' mode='1'/>
+		<account proto='prpl-irc' name='randingo@irc.freenode.net' mode='1'/>
+		<account proto='prpl-jabber' name='rhow@i3.com/Google' mode='1'/>
+		<account proto='prpl-jabber' name='rhow@i3.local/utilworkstation' mode='1'/>
+	</privacy>
+</purple>

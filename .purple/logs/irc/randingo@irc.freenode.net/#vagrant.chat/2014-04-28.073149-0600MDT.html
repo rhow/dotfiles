@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #vagrant at Mon 28 Apr 2014 07:31:49 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #vagrant at Mon 28 Apr 2014 07:31:49 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(07:31:49 AM)</font><b> The topic for #vagrant is: Welcome to the Vagrant IRC channel! Don&apos;t be afraid to ask questions! <a href="http://vagrantup.com">http://vagrantup.com</a></b><br/>
+<font size="2">(07:36:59 AM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font size="2">(07:39:18 AM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font size="2">(07:41:11 AM)</font><b> nthdegreeburns is now known as nthdegree_afk</b><br/>
+<font size="2">(07:44:02 AM)</font><b> nthdegree_afk is now known as nthdegreeburns</b><br/>
+<font size="2">(07:58:29 AM)</font><b> dean|away is now known as dean</b><br/>
+<font size="2">(08:03:01 AM)</font><b> nthdegreeburns is now known as nthdegree_afk</b><br/>
+<font size="2">(08:03:43 AM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font size="2">(08:04:40 AM)</font><b> nthdegree_afk is now known as nthdegreeburns</b><br/>
+<font size="2">(08:05:30 AM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font size="2">(08:15:08 AM)</font><b> nszceta_ is now known as nszceta</b><br/>
+<font color="#A82F2F"><font size="2">(08:19:47 AM)</font> <b>hio:</b></font> so vagrant can create images in an openshift cloud?<br/>
+<font size="2">(08:36:14 AM)</font><b> happytux_ is now known as happytux</b><br/>
+<font color="#A82F2F"><font size="2">(08:38:30 AM)</font> <b>vagrant244:</b></font> Hi all. I have a question. I&apos;m running into the following error on linux (non-gui) when trying to deploy via &quot;vagrant up&quot;: http://pastebin.com/s1ubejMr<br/>
+<font size="2">(08:38:55 AM)</font><b> boztek is now known as boztek|afk</b><br/>
+<font color="#A82F2F"><font size="2">(08:44:23 AM)</font> <b>offby1:</b></font> vagrant244: if that keeps happeneing, then I have no advice.  But if this is the first time it&apos;s happened, I&apos;d try (* ahem *) &quot;vagrant destroy -f ; vagrant up&quot; :-|<br/>
+<font color="#A82F2F"><font size="2">(08:44:24 AM)</font> <b>vagrant244:</b></font> it fails at this point: ==&gt; default: Waiting for machine to boot. This may take a few minutes...     default: SSH address: 127.0.0.1:2200     default: SSH username: vagrant     default: SSH auth method: private key     default: Warning: Connection refused. Retrying...<br/>
+<font color="#A82F2F"><font size="2">(08:44:36 AM)</font> <b>offby1:</b></font> That&apos;s morally equivalent to &quot;have you tried turning it off and then turning it back on&quot;<br/>
+<font color="#A82F2F"><font size="2">(08:44:37 AM)</font> <b>vagrant244:</b></font> offby1: It&apos;s kept happening.<br/>
+<font color="#A82F2F"><font size="2">(08:44:44 AM)</font> <b>offby1:</b></font> oh well<br/>
+<font color="#A82F2F"><font size="2">(08:44:49 AM)</font> <b>vagrant244:</b></font> offby1: I&apos;ve tried booting the machine a few times<br/>
+<font color="#A82F2F"><font size="2">(08:45:02 AM)</font> <b>offby1:</b></font> computers ... can&apos;t live with &apos;em; can&apos;t live without &apos;em<br/>
+<font color="#A82F2F"><font size="2">(08:48:19 AM)</font> <b>jtreminio:</b></font> why would you want to live without them<br/>
+<font size="2">(08:59:42 AM)</font><b> zz_timnovinger is now known as timnovinger</b><br/>
+<font color="#A82F2F"><font size="2">(09:07:09 AM)</font> <b>stompyj:</b></font> So, online, when you read about docker vs vagrant, there’s all these articles talking about which to use when<br/>
+<font color="#A82F2F"><font size="2">(09:07:22 AM)</font> <b>stompyj:</b></font> Why isn’t hte answer use vagrant to boot up a large VM that you apportion docker slices onto?<br/>
+<font color="#A82F2F"><font size="2">(09:07:39 AM)</font> <b>stompyj:</b></font> this seems like a slam dunk no brainer… or am I missing something?<br/>
+<font color="#A82F2F"><font size="2">(09:32:50 AM)</font> <b>vagrant244:</b></font> Hi all. I have a question. I&apos;m running into the following error on linux (non-gui) when trying to deploy via &quot;vagrant up&quot;: http://pastebin.com/s1ubejMr<br/>
+<font color="#A82F2F"><font size="2">(09:33:05 AM)</font> <b>vagrant244:</b></font> would anyone happen to know what may cause this error? I&apos;m using vagrant 1.5.4 and vbox 4.3.10<br/>
+<font color="#A82F2F"><font size="2">(09:33:44 AM)</font> <b>Fusty:</b></font> do you have the ability to check virtualbox&apos;s gui?<br/>
+<font size="2">(09:39:43 AM)</font><b> larryone1 is now known as larryone</b><br/>
+<font color="#A82F2F"><font size="2">(10:07:49 AM)</font> <b>stevefink:</b></font> Hey all, when working with a Vagrantfile for a team (versioned controlled).. what&apos;s the best way where developers can customize their own settings, such as project directory locations etc (different for every developer)<br/>
+<font color="#A82F2F"><font size="2">(10:08:29 AM)</font> <b>jtopper:</b></font> beat them until they conform ;)<br/>
+<font color="#A82F2F"><font size="2">(10:08:41 AM)</font> <b>jtopper:</b></font> alternatively, load them from a yaml file in the Vagrantfile<br/>
+<font color="#A82F2F"><font size="2">(10:09:12 AM)</font> <b>stevefink:</b></font> jtopper: I figured that might be the best way, then just have a sample YAML file that&apos;s version controlled, and ignore the actual one being parsed by Vagrantfile<br/>
+<font color="#A82F2F"><font size="2">(10:11:28 AM)</font> <b>jtopper:</b></font> yep, that&apos;s how I&apos;ve done it with stuff like the vagrant-aws plugin where you don&apos;t want to check in all your keys etc.<br/>
+<font color="#A82F2F"><font size="2">(10:12:29 AM)</font> <b>stevefink:</b></font> sounds good -- I&apos;ll just do that. thanks for the tip<br/>
+<font color="#A82F2F"><font size="2">(10:15:43 AM)</font> <b>jtopper:</b></font> the trick is to put good error messages around it too<br/>
+<font color="#A82F2F"><font size="2">(10:16:09 AM)</font> <b>jtopper:</b></font> so that if the config is absent, your users get a nice explanation as to why things aren&apos;t working, and how to go about fixing it<br/>
+<font color="#A82F2F"><font size="2">(10:16:22 AM)</font> <b>jtopper:</b></font> gotta remember that the vagrant CLI is a UI of sorts<br/>
+<font color="#A82F2F"><font size="2">(10:28:12 AM)</font> <b>sethvargo:</b></font> Has anyone experienced an issue where a vmware_fusion box doesn&apos;t setup networking and just hangs?<br/>
+<font color="#A82F2F"><font size="2">(10:28:28 AM)</font> <b>sethvargo:</b></font> I can login the the VM through the GUI, but when I issue ifconfig, vagrant never setup the networking<br/>
+<font color="#A82F2F"><font size="2">(10:28:33 AM)</font> <b>sethvargo:</b></font> It&apos;s *just* localhost<br/>
+<font color="#A82F2F"><font size="2">(10:29:38 AM)</font> <b>h1pp1e:</b></font> Someone, has idea why whe repackage a box dont see de changes into the vitualmachine<br/>
+<font color="#A82F2F"><font size="2">(10:37:34 AM)</font> <b>vagrant244:</b></font> So I had issues getting my vagrant up to work. I found that when I upped the debug level this was the error I&apos;m getting: &quot;Stderr: VBoxManage: error: Could not find a storage controller named &apos;SATA Controller&apos;&quot;<br/>
+<font color="#A82F2F"><font size="2">(10:44:37 AM)</font> <b>ciwolsey:</b></font> does adding the simple form gem update devise views to use simple form?<br/>
+<font color="#A82F2F"><font size="2">(10:44:43 AM)</font> <b>ciwolsey:</b></font> sorry, wrong channel<br/>
+<font color="#A82F2F"><font size="2">(10:52:33 AM)</font> <b>jtreminio:</b></font> mitchellh: ping<br/>
+<font color="#A82F2F"><font size="2">(10:59:13 AM)</font> <b>stompyj:</b></font> why is docker provisioner under 1.6 as unreleased<br/>
+<font color="#A82F2F"><font size="2">(10:59:34 AM)</font> <b>stompyj:</b></font> how does that differ then the docker provisioner that exists in 1.5?<br/>
+<font size="2">(11:18:40 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

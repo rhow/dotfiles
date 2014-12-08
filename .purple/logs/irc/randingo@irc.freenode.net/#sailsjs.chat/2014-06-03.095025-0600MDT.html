@@ -1,0 +1,105 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 03 Jun 2014 09:50:25 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 03 Jun 2014 09:50:25 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:50:25 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:52:02 AM)</font> <b>ychaim:</b></font> hi there<br/>
+<font color="#A82F2F"><font size="2">(09:52:27 AM)</font> <b>ychaim:</b></font> dump command line  ?<br/>
+<font color="#A82F2F"><font size="2">(10:03:54 AM)</font> <b>lulzmachine:</b></font> Hey! I’m using the sails beta. I want to have a controller action corresponding to /links/13 (where 13 is an ID). what should it be called to match? I tried show, find, get<br/>
+<font color="#A82F2F"><font size="2">(10:05:09 AM)</font> <b>da_wunder:</b></font> lulzmachine: if you just want your data for that 13 id you don&apos;t need any actions if you are using blueprints<br/>
+<font color="#A82F2F"><font size="2">(10:05:32 AM)</font> <b>lulzmachine:</b></font> yes i know, but now I want to overwrite the default behaivour<br/>
+<font color="#A82F2F"><font size="2">(10:06:10 AM)</font> <b>da_wunder:</b></font> findOne<br/>
+<font color="#A82F2F"><font size="2">(10:08:01 AM)</font> <b>lulzmachine:</b></font> what I’m wondering, is how do I name the action to make sure it will be run when the user does a GET /links/13<br/>
+<font color="#A82F2F"><font size="2">(10:08:24 AM)</font> <b>lulzmachine:</b></font> with the default blueprint routing<br/>
+<font color="#A82F2F"><font size="2">(10:09:01 AM)</font> <b>da_wunder:</b></font> https://github.com/balderdashy/sails/blob/master/lib/hooks/blueprints/index.js#L298<br/>
+<font color="#A82F2F"><font size="2">(10:11:30 AM)</font> <b>lulzmachine:</b></font> oooh i c<br/>
+<font color="#A82F2F"><font size="2">(10:11:46 AM)</font> <b>lulzmachine:</b></font> i thought u meant Model.findOne to get it. thanks.<br/>
+<font color="#A82F2F"><font size="2">(11:22:48 AM)</font> <b>lulzmachine:</b></font> Is there a way to register a route that should only be tried after the blueprint-routes?<br/>
+<font color="#A82F2F"><font size="2">(11:23:13 AM)</font> <b>lulzmachine:</b></font> like I want /* as a sort of catch-all, but still /links/ should work as a normal REST path<br/>
+<font color="#A82F2F"><font size="2">(11:23:36 AM)</font> <b>lulzmachine:</b></font> I guess in sails-terms i want an explicit route after my implicit routes?<br/>
+<font color="#A82F2F"><font size="2">(11:29:45 AM)</font> <b>da_wunder:</b></font> don&apos;t know about that, what is your use case?<br/>
+<font size="2">(11:31:31 AM)</font><b> lulzmachine left the room (quit: Quit: lulzmachine).</b><br/>
+<font color="#A82F2F"><font size="2">(11:54:00 AM)</font> <b>tskaggs:</b></font> Hi! http://beta.sailsjs.org/#/!documentation/reference/ModelAssociations/ModelAssociations.html is empty<br/>
+<font color="#A82F2F"><font size="2">(11:54:12 AM)</font> <b>tskaggs:</b></font> Is there a new page that I should be looking for?<br/>
+<font color="#A82F2F"><font size="2">(11:55:57 AM)</font> <b>Aswebbb:</b></font> da_wunder: Are you there?<br/>
+<font color="#A82F2F"><font size="2">(11:58:13 AM)</font> <b>BillCriswell:</b></font> tskaggs: http://beta.sailsjs.org/#/documentation/reference/Models/Associations<br/>
+<font color="#A82F2F"><font size="2">(11:58:24 AM)</font> <b>BillCriswell:</b></font> That page totally capsized.<br/>
+<font color="#A82F2F"><font size="2">(11:58:48 AM)</font> <b>tskaggs:</b></font> HAZZAH! Thanks BillCriswell!<br/>
+<font color="#A82F2F"><font size="2">(11:58:58 AM)</font> <b>BillCriswell:</b></font> tskaggs: No sweat.<br/>
+<font color="#A82F2F"><font size="2">(12:00:00 PM)</font> <b>BillCriswell:</b></font> The octopus on the beta site is insane.<br/>
+<font color="#A82F2F"><font size="2">(12:00:02 PM)</font> <b>BillCriswell:</b></font> I like it.<br/>
+<font color="#A82F2F"><font size="2">(12:01:48 PM)</font> <b>da_wunder:</b></font> Aswebbb: yes, for a little while before sauna<br/>
+<font color="#A82F2F"><font size="2">(12:02:40 PM)</font> <b>Aswebbb:</b></font> da_wunder: Well, I had small questions about angular, do you put your angular project in assets folder on sails?<br/>
+<font color="#A82F2F"><font size="2">(12:03:00 PM)</font> <b>Aswebbb:</b></font> Do you also use some jQuery plugins ? if I use Angular, will I have to &quot;translate&quot; them all to Angular directives?<br/>
+<font color="#A82F2F"><font size="2">(12:04:04 PM)</font> <b>da_wunder:</b></font> Aswebbb: no<br/>
+<font color="#A82F2F"><font size="2">(12:04:16 PM)</font> <b>da_wunder:</b></font> angular app is independent application<br/>
+<font color="#A82F2F"><font size="2">(12:04:30 PM)</font> <b>da_wunder:</b></font> sails is just a backend, which will not provide any assets<br/>
+<font color="#A82F2F"><font size="2">(12:04:38 PM)</font> <b>da_wunder:</b></font> only the api<br/>
+<font color="#A82F2F"><font size="2">(12:07:36 PM)</font> <b>Aswebbb:</b></font> Oh I see<br/>
+<font color="#A82F2F"><font size="2">(12:07:43 PM)</font> <b>Aswebbb:</b></font> but you have both apps on the same server right?<br/>
+<font color="#A82F2F"><font size="2">(12:07:51 PM)</font> <b>Aswebbb:</b></font> your front / back end<br/>
+<font color="#A82F2F"><font size="2">(12:08:09 PM)</font> <b>da_wunder:</b></font> same server different port<br/>
+<font color="#A82F2F"><font size="2">(12:08:45 PM)</font> <b>Aswebbb:</b></font> so for instance<br/>
+<font color="#A82F2F"><font size="2">(12:09:14 PM)</font> <b>Aswebbb:</b></font> you have a taskboard folder (the sails API) with api folder, assets, files etc...<br/>
+<font color="#A82F2F"><font size="2">(12:09:31 PM)</font> <b>Aswebbb:</b></font> and you have a separate folder &quot;front-end&quot; for example with all your Angular stuff?<br/>
+<font color="#A82F2F"><font size="2">(12:10:01 PM)</font> <b>Aswebbb:</b></font> myfolder =&gt; taskboard folder (API back end)  and &quot;front-end&quot; (front-end Angular stuff here)<br/>
+<font color="#A82F2F"><font size="2">(12:10:33 PM)</font> <b>da_wunder:</b></font> Aswebbb: that&apos;s going to change a lot<br/>
+<font color="#A82F2F"><font size="2">(12:10:49 PM)</font> <b>da_wunder:</b></font> you should look this https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(12:12:48 PM)</font> <b>da_wunder:</b></font> i&apos;m going to throw away current 0.10 branch on taskboard and start again with that structure<br/>
+<font color="#A82F2F"><font size="2">(12:18:37 PM)</font> <b>Aswebbb:</b></font> da_wunder: Well done, do you advice to use rob angular adapter?<br/>
+<font color="#A82F2F"><font size="2">(12:18:57 PM)</font> <b>da_wunder:</b></font> i&apos;m using it<br/>
+<font color="#A82F2F"><font size="2">(12:19:06 PM)</font> <b>da_wunder:</b></font> haven&apos;t found better one<br/>
+<font color="#A82F2F"><font size="2">(12:19:22 PM)</font> <b>da_wunder:</b></font> and it seems to work<br/>
+<font color="#A82F2F"><font size="2">(12:20:43 PM)</font> <b>robdubya:</b></font> thank fuck for that<br/>
+<font color="#A82F2F"><font size="2">(12:20:59 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:26:29 PM)</font> <b>robdubya:</b></font> so far swift is cool<br/>
+<font color="#A82F2F"><font size="2">(12:36:32 PM)</font> <b>Aswebbb:</b></font> da_wunder: For your front-end, do you use node-static server?<br/>
+<font color="#A82F2F"><font size="2">(12:44:32 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:52:57 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(12:53:21 PM)</font> <b>da_wunder:</b></font> saikos noista githubin repo sivujen kävijöistä mitenkään statseja?<br/>
+<font color="#A82F2F"><font size="2">(12:53:23 PM)</font> <b>Jules`:</b></font> do you guys do anything for cache busting in your production sites?<br/>
+<font color="#A82F2F"><font size="2">(12:53:50 PM)</font> <b>Jules`:</b></font> when we push our angular sites up, we need to hit refresh to get the latest<br/>
+<font color="#A82F2F"><font size="2">(12:53:55 PM)</font> <b>da_wunder:</b></font> sorry, wrong window :D<br/>
+<font color="#A82F2F"><font size="2">(12:54:11 PM)</font> <b>Jules`:</b></font> in one site I started using https://github.com/UltCombo/gulp-buster<br/>
+<font color="#A82F2F"><font size="2">(12:54:30 PM)</font> <b>Jules`:</b></font> but required a bit of custom work in the bootstrap.js file<br/>
+<font color="#A82F2F"><font size="2">(12:55:27 PM)</font> <b>da_wunder:</b></font> Jules`: that won&apos;t require much work if you separate back and frontend<br/>
+<font color="#A82F2F"><font size="2">(12:58:10 PM)</font> <b>lulzmachine:</b></font> da_wunder: sry got disconnected. basically i want to make a shorlinking-site<br/>
+<font color="#A82F2F"><font size="2">(12:58:17 PM)</font> <b>lulzmachine:</b></font> so i want some routes for managing your links<br/>
+<font color="#A82F2F"><font size="2">(12:58:34 PM)</font> <b>lulzmachine:</b></font> and then i want to be able to use /blabla for the actual outgoing links<br/>
+<font color="#A82F2F"><font size="2">(12:58:44 PM)</font> <b>lulzmachine:</b></font> so i want to first match all the implicit REST-routes<br/>
+<font color="#A82F2F"><font size="2">(12:58:52 PM)</font> <b>lulzmachine:</b></font> and then catch the unmatched with /*<br/>
+<font color="#A82F2F"><font size="2">(12:59:23 PM)</font> <b>lulzmachine:</b></font> I guess for now I could just add a ? and match /?blabla with the index controller<br/>
+<font color="#A82F2F"><font size="2">(01:21:48 PM)</font> <b>Aswebbb:</b></font> Foxands here?<br/>
+<font color="#A82F2F"><font size="2">(01:28:26 PM)</font> <b>RWOverdijk:</b></font> Aswebbb, No<br/>
+<font color="#A82F2F"><font size="2">(01:28:56 PM)</font> <b>RWOverdijk:</b></font> I own a company. What is my &quot;title&quot;? For the business card? I was going to use &quot;founder&quot; but that doesn&apos;t really mean anything does it...<br/>
+<font color="#A82F2F"><font size="2">(01:30:15 PM)</font> <b>leepers41:</b></font> what is up sailsjs!!!!<br/>
+<font color="#A82F2F"><font size="2">(01:30:23 PM)</font> <b>leepers41:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(01:44:48 PM)</font> <b>DarwinIsGod:</b></font> anyone use the active_directory npm package?<br/>
+<font color="#A82F2F"><font size="2">(01:45:13 PM)</font> <b>DarwinIsGod:</b></font> i’m having trouble with an ETIMEDOUT error, and it’s somewhere in there.<br/>
+<font size="2">(02:15:00 PM)</font><b> pln is now known as _pln</b><br/>
+<font color="#A82F2F"><font size="2">(02:32:07 PM)</font> <b>NS|Glock_Coma:</b></font> question: how do i run multiple sailsjs apps locally on the same port but with different subdomains?<br/>
+<font color="#A82F2F"><font size="2">(02:32:44 PM)</font> <b>NS|Glock_Coma:</b></font> i have the subdomains specified in the local.js config file<br/>
+<font color="#A82F2F"><font size="2">(02:46:17 PM)</font> <b>da_wunder:</b></font> NS|Glock_Coma: our it-guys said that is just simple to run different ports and use nginx to handle subdomains<br/>
+<font color="#A82F2F"><font size="2">(02:51:14 PM)</font> <b>zinigor:</b></font> Hey, people! Can someone explain to me (or point me to where I can read about it) about &quot;migrate: safe&quot; in models? I think I&apos;m getting hit by this bug here: https://github.com/balderdashy/waterline/issues/284<br/>
+<font color="#A82F2F"><font size="2">(03:02:39 PM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(03:15:45 PM)</font> <b>morenoh152:</b></font> zinigor: beta.sailsjs.org<br/>
+<font color="#A82F2F"><font size="2">(03:36:01 PM)</font> <b>JemiloII:</b></font> hey how can I use forever to run my sails app with forever commands?<br/>
+<font color="#A82F2F"><font size="2">(03:36:18 PM)</font> <b>JemiloII:</b></font> forever -w --uid &quot;appname&quot; start app.js<br/>
+<font color="#A82F2F"><font size="2">(03:36:34 PM)</font> <b>JemiloII:</b></font> creates a forever loop of starting and restarting<br/>
+<font color="#A82F2F"><font size="2">(03:36:54 PM)</font> <b>JemiloII:</b></font> the tmp folder consistently creates this issue<br/>
+<font color="#A82F2F"><font size="2">(03:37:26 PM)</font> <b>JemiloII:</b></font> -w is to watch for a file change to restart the server<br/>
+<font color="#A82F2F"><font size="2">(03:37:59 PM)</font> <b>JemiloII:</b></font> --uid &quot;appname&quot; gives the forever app a name so you can do forever restart appname and not restart all apps<br/>
+<font color="#A82F2F"><font size="2">(04:11:13 PM)</font> <b>NS|Glock_Coma:</b></font> @da_wunder - thanks that’s what i ended up doing<br/>
+<font color="#A82F2F"><font size="2">(04:31:28 PM)</font> <b>JemiloII:</b></font> okay i figure out my problem<br/>
+<font color="#A82F2F"><font size="2">(04:31:46 PM)</font> <b>JemiloII:</b></font> forever start -w --uid &quot;domain&quot; start app.js --prod<br/>
+<font color="#A82F2F"><font size="2">(04:32:09 PM)</font> <b>JemiloII:</b></font> forever start creates a daemon/background process<br/>
+<font color="#A82F2F"><font size="2">(04:32:22 PM)</font> <b>JemiloII:</b></font> -w watches the folder to restart on changes<br/>
+<font color="#A82F2F"><font size="2">(04:32:32 PM)</font> <b>JemiloII:</b></font> -a adds to the forever log file<br/>
+<font color="#A82F2F"><font size="2">(04:32:57 PM)</font> <b>JemiloII:</b></font> --uid &quot;appname&quot; gives the forever app a readable name so you can forever restart appname<br/>
+<font color="#A82F2F"><font size="2">(04:33:22 PM)</font> <b>JemiloII:</b></font> um you don&apos;t need start in front of app.js<br/>
+<font color="#A82F2F"><font size="2">(04:33:34 PM)</font> <b>JemiloII:</b></font> --prod is setting sails to production mode<br/>
+<font color="#A82F2F"><font size="2">(04:34:00 PM)</font> <b>JemiloII:</b></font> in your sails root create a file called .foreverignore and add these lines<br/>
+<font color="#A82F2F"><font size="2">(04:34:07 PM)</font> <b>JemiloII:</b></font> **/.tmp/**<br/>
+<font color="#A82F2F"><font size="2">(04:34:08 PM)</font> <b>JemiloII:</b></font> **/views/**<br/>
+<font color="#A82F2F"><font size="2">(04:34:08 PM)</font> <b>JemiloII:</b></font> **/assets/**<br/>
+<font color="#A82F2F"><font size="2">(04:34:38 PM)</font> <b>JemiloII:</b></font>  this way it&apos;ll ignore sails doing its temp file creation for production<br/>
+<font color="#A82F2F"><font size="2">(04:35:18 PM)</font> <b>JemiloII:</b></font> forever start -w -a --uid &quot;appname&quot; app.js --prod<br/>
+<font size="2">(05:09:20 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

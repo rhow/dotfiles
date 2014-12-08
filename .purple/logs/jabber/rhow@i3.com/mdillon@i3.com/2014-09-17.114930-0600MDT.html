@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with mdillon@i3.com at Wed 17 Sep 2014 11:49:30 AM MDT on rhow@i3.com/Internal (jabber)</title></head><body><h3>Conversation with mdillon@i3.com at Wed 17 Sep 2014 11:49:30 AM MDT on rhow@i3.com/Internal (jabber)</h3>
+<font color="#16569E"><font size="2">(11:50:06 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Check this out!  <br/><a href="http://utility2:8081/mapcache/mapcache-admin/source/36f0b38b6e9852a0a5806f77c9b31bd0eda62246:">http://utility2:8081/mapcache/mapcache-admin/source/36f0b38b6e9852a0a5806f77c9b31bd0eda62246:</a></span><br/>
+<font color="#A82F2F"><font size="2">(11:57:53 AM)</font> <b>Michael Dillon:</b></font> ooo - purdy repos<br/>
+<font color="#16569E"><font size="2">(11:58:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thank you.</span><br/>
+<font color="#A82F2F"><font size="2">(11:58:31 AM)</font> <b>Michael Dillon:</b></font> Nice use of the md file<br/>
+<font color="#16569E"><font size="2">(11:58:54 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>finally got far enough with the mapcache-admin to be worth to create a repo and push it.</span><br/>
+<font color="#A82F2F"><font size="2">(11:58:57 AM)</font> <b>Michael Dillon:</b></font> (idea has a nice editor/viewer plugin for those if you didn't know)<br/>
+<font color="#16569E"><font size="2">(11:59:36 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i have it, maybe i have a different one; it doesn't support the non-tabbed code blocking.</span><br/>
+<font color="#16569E"><font size="2">(11:59:45 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(which seems to be preferred)</span><br/>
+<font color="#A82F2F"><font size="2">(12:01:13 PM)</font> <b>Michael Dillon:</b></font> Also, I was able to have redmine integrate with git<br/>
+<font color="#A82F2F"><font size="2">(12:01:41 PM)</font> <b>Michael Dillon:</b></font> And...   we're experimenting with Jenkins instead of cruisecontrol....   <br/>
+<font color="#A82F2F"><font size="2">(12:02:01 PM)</font> <b>Michael Dillon:</b></font> Ask JT if you want to play too.<br/>
+<font color="#A82F2F"><font size="2">(12:02:02 PM)</font> <b>Michael Dillon:</b></font> http://devbuild:8080/<br/>
+<font color="#16569E"><font size="2">(12:02:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I&quot;m using the &quot;Markdown&quot; plugin version 0.9.6; it has a preview but the blocking only works with tabs and on '''</span><br/>
+<font color="#A82F2F"><font size="2">(12:02:18 PM)</font> <b>Michael Dillon:</b></font> ah<br/>
+<font color="#16569E"><font size="2">(12:03:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Jenkins is the one that Git uses to indicate if a repo passes the build and testing?</span><br/>
+<font color="#16569E"><font size="2">(12:03:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Git/Github</span><br/>
+<font color="#A82F2F"><font size="2">(12:04:02 PM)</font> <b>Michael Dillon:</b></font> yeah - in gitorious, after a push, it will send a POST to jenkins<br/>
+<font color="#16569E"><font size="2">(12:04:18 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool.</span><br/>
+<font color="#A82F2F"><font size="2">(12:04:44 PM)</font> <b>Michael Dillon:</b></font> Jenkins is just another continuous integration option.  meh<br/>
+<font color="#16569E"><font size="2">(12:05:42 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I was thinking of the &quot;build | passing&quot; icon on the page:<br/><a href="https://github.com/tomchristie/django-rest-framework">https://github.com/tomchristie/django-rest-framework</a></span><br/>
+<font color="#A82F2F"><font size="2">(12:07:32 PM)</font> <b>Michael Dillon:</b></font> I think that all depends on the repos - where they've decided to do builds<br/>
+<font color="#A82F2F"><font size="2">(12:10:39 PM)</font> <b>Michael Dillon:</b></font> Jenkins supports the same travis.yml, but I don't think we've paid much attention to it<br/>
+<font color="#16569E"><font size="2">(12:16:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>At some point I'd like to show you my MapCache-Admin</span><br/>
+<font color="#A82F2F"><font size="2">(12:18:33 PM)</font> <b>Michael Dillon:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(12:18:49 PM)</font> <b>Michael Dillon:</b></font> maybe tomorrow after lunch? <br/>
+<font color="#16569E"><font size="2">(12:18:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sounds good.</span><br/>
+<font color="#A82F2F"><font size="2">(12:18:57 PM)</font> <b>Michael Dillon:</b></font> I need to focus on some things this PM<br/>
+<font color="#16569E"><font size="2">(12:21:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(04:36:08 PM)</font> <b>Michael Dillon:</b></font> Try this in a git folder:  git instaweb --httpd=webrick<br/>
+<font color="#A82F2F"><font size="2">(04:36:29 PM)</font> <b>Michael Dillon:</b></font> http://git-scm.com/book/ch4-6.html<br/>
+<font color="#16569E"><font size="2">(04:38:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's pretty interesting.</span><br/>
+<font color="#A82F2F"><font size="2">(04:38:30 PM)</font> <b>Michael Dillon:</b></font> it will stay running unless you stop it<br/>
+<font color="#A82F2F"><font size="2">(04:38:43 PM)</font> <b>Michael Dillon:</b></font> kinda handy.  enjoy<br/>
+<font color="#A82F2F"><font size="2">(04:39:01 PM)</font> <b>Michael Dillon:</b></font> http://127.0.0.1:1234/?p=.git;a=summary<br/>
+<font color="#16569E"><font size="2">(04:43:03 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that is pretty slick.</span><br/>
+<font color="#A82F2F"><font size="2">(04:43:34 PM)</font> <b>Michael Dillon:</b></font> http://utility2:8084/mediawiki/Git_Command_Reference<br/>
+<font color="#16569E"><font size="2">(04:50:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>$ alias | grep git<br/>alias g='git'<br/>alias gadd='git add --all'<br/>alias gcommit='git commit -a -m'<br/>alias glog='git log --graph --pretty=format&quot;:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset&quot;'<br/>alias gstat='git status'<br/></span><br/>
+<font color="#A82F2F"><font size="2">(04:51:13 PM)</font> <b>Michael Dillon:</b></font> alias gcommit='git commit -a -m' - DANGER<br/>
+<font color="#A82F2F"><font size="2">(04:51:39 PM)</font> <b>Michael Dillon:</b></font> bad habit - imho<br/>
+<font color="#16569E"><font size="2">(04:52:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, probably is.</span><br/>
+<font color="#16569E"><font size="2">(04:53:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>because of the -a?</span><br/>
+<font color="#16569E"><font size="2">(04:53:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>-a, --all<br/>           Tell the command to automatically stage files that have been modified and deleted, but new files you have not told git about are not affected.<br/></span><br/>
+<font color="#A82F2F"><font size="2">(04:54:18 PM)</font> <b>Michael Dillon:</b></font> yeah - I mainly think it's too much like svn<br/>
+<font color="#A82F2F"><font size="2">(04:54:24 PM)</font> <b>Michael Dillon:</b></font> lazy<br/>
+<font color="#A82F2F"><font size="2">(04:54:37 PM)</font> <b>Michael Dillon:</b></font> you can specify filenames on the commit<br/>
+<font color="#16569E"><font size="2">(04:54:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the gcommit ?</span><br/>
+<font color="#16569E"><font size="2">(04:54:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right, that's what i was doing, and it was laborious.</span><br/>
+<font color="#16569E"><font size="2">(04:56:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>workflow is usually: gstat (review); then gadd.... then think about it and gcommit 'this is the stuff i did'</span><br/>
+<font color="#A82F2F"><font size="2">(04:56:35 PM)</font> <b>Michael Dillon:</b></font> you need a guh and gag in there too<br/>
+<font color="#16569E"><font size="2">(04:58:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i only travel the blissful happy path</span><br/>
+<font color="#16569E"><font size="2">(04:58:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>if you have a minute, swing by i'll show ya the mapcache-admin stuff.</span><br/>
+<font color="#A82F2F"><font size="2">(04:59:04 PM)</font> <b>Michael Dillon:</b></font> oh - sorry... forgot<br/>
+<font color="#A82F2F"><font size="2">(04:59:16 PM)</font> <b>Michael Dillon:</b></font> tomorrow morning - I swear<br/>
+<font color="#16569E"><font size="2">(04:59:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>no worries, if you have time.</span><br/>
+<font color="#16569E"><font size="2">(04:59:31 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sounds good.</span><br/>
+</body></html>

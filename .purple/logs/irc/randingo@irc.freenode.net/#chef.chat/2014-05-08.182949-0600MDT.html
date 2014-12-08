@@ -1,0 +1,20 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Thu 08 May 2014 06:29:49 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Thu 08 May 2014 06:29:49 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(06:29:50 PM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font color="#A82F2F"><font size="2">(06:29:52 PM)</font> <b>redondos:</b></font> i remember it used to add dos line breaks to nodes<br/>
+<font color="#A82F2F"><font size="2">(06:30:04 PM)</font> <b>redondos:</b></font> the latest one only shows like 20-25 entries in the &quot;status&quot; list<br/>
+<font color="#A82F2F"><font size="2">(06:30:26 PM)</font> <b>sauraus1:</b></font> That&apos;s actually not a bug but an intentional limitations :D<br/>
+<font color="#A82F2F"><font size="2">(06:30:29 PM)</font> <b>redondos:</b></font> adding attributes to a node needs a special incantation i can never remember<br/>
+<font color="#A82F2F"><font size="2">(06:30:50 PM)</font> <b>coderanger:</b></font> sauraus1: Hmm, it shouldn&apos;t allow you to submit with bas JSON (unless someone took out that code) so that would point at something cranky on the backend<br/>
+<font color="#A82F2F"><font size="2">(06:30:56 PM)</font> <b>redondos:</b></font> it sucks either from bugs or decisions i don&apos;t agree with, true.<br/>
+<font size="2">(06:32:20 PM)</font><b> redondos left the room (quit: Excess Flood).</b><br/>
+<font color="#A82F2F"><font size="2">(06:32:40 PM)</font> <b>sauraus1:</b></font> OMG I just created a data_bag called &apos;new&apos; when I hit edit it redirects me to create a new data_bag :D<br/>
+<font size="2">(06:32:48 PM)</font><b> redondos [<em>~redondos@38.111.159.50</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(06:33:17 PM)</font> <b>dtrott:</b></font> Well you created one perhaps you want another one :-P<br/>
+<font color="#A82F2F"><font size="2">(06:33:23 PM)</font> <b>sauraus1:</b></font> LOL<br/>
+<font color="#A82F2F"><font size="2">(06:34:04 PM)</font> <b>coderanger:</b></font> sauraus1: Yeah, I ignored that particular case<br/>
+<font color="#A82F2F"><font size="2">(06:34:10 PM)</font> <b>coderanger:</b></font> sauraus1: Same thing will happen with roles too<br/>
+<font color="#A82F2F"><font size="2">(06:34:22 PM)</font> <b>coderanger:</b></font> sauraus1: It was deemed &quot;your own damn fault&quot; :)<br/>
+<font color="#062585"><font size="2">(06:34:52 PM)</font> <b>***dtrott</b></font> adds a new “YODF” status to his bug tracking system.<br/>
+<font color="#A82F2F"><font size="2">(06:35:50 PM)</font> <b>sauraus1:</b></font> ok I can repro the case now, I create a data_bag, add &quot;id&quot;:&quot;x&quot; to it, save the bag, then replace &quot;x&quot; with a private RSA key and hit safe, which returns then An application error has occured. Please try again later (Error 10000)<br/>
+<font color="#A82F2F"><font size="2">(06:37:07 PM)</font> <b>coderanger:</b></font> sauraus1: Hmm, any weird characters in there? Notably newlines or unicode whitespace?<br/>
+</body></html>

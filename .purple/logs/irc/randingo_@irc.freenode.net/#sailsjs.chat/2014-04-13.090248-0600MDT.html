@@ -1,0 +1,36 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 13 Apr 2014 09:02:48 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 13 Apr 2014 09:02:48 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(09:02:48 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:17:35 AM)</font> <b>Drako:</b></font> miname&quot;  0.9 or 0.10<br/>
+<font color="#A82F2F"><font size="2">(09:17:54 AM)</font> <b>miname:</b></font> 0.9<br/>
+<font color="#A82F2F"><font size="2">(09:18:16 AM)</font> <b>Drako:</b></font> sry  only worked with 0.10<br/>
+<font color="#A82F2F"><font size="2">(09:18:26 AM)</font> <b>miname:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(09:18:27 AM)</font> <b>Drako:</b></font> linking is different there<br/>
+<font color="#A82F2F"><font size="2">(10:55:54 AM)</font> <b>darekzak:</b></font> da_wunder: I see that you install libraries by bowe in bower_components folder. What do you think about this approach? http://milanito.github.io/sails%20javascript/2014/01/10/the-sails-the-grunt-and-the-bower/<br/>
+<font color="#A82F2F"><font size="2">(10:57:41 AM)</font> <b>darekzak:</b></font> i just want to figure out the best way to do it :)<br/>
+<font color="#16569E"><font size="2">(11:14:22 AM)</font> <b>Randy How:</b></font> i'm looking for the config in Sails to change the id values from simple integers to a guid-ish value.  Can you help me out?<br/>
+<font color="#A82F2F"><font size="2">(11:14:34 AM)</font> <b>da_wunder:</b></font> darekzak: i have bower install as in npm post-install<br/>
+<font color="#A82F2F"><font size="2">(11:14:51 AM)</font> <b>da_wunder:</b></font> darekzak: https://github.com/tarlepp/Taskboard/blob/master/package.json#L39<br/>
+<font color="#A82F2F"><font size="2">(11:15:19 AM)</font> <b>da_wunder:</b></font> so basically just clone repo and type npm install and voila everything is ready<br/>
+<font color="#A82F2F"><font size="2">(11:15:52 AM)</font> <b>da_wunder:</b></font> randingo_: use mongo for that<br/>
+<font color="#A82F2F"><font size="2">(11:18:32 AM)</font> <b>da_wunder:</b></font> darekzak: in my approach the only &quot;down&quot; side is that i have to manually inject those libraries<br/>
+<font color="#A82F2F"><font size="2">(11:18:46 AM)</font> <b>da_wunder:</b></font> but i think there isn&apos;t another way to handle that<br/>
+<font color="#A82F2F"><font size="2">(11:19:04 AM)</font> <b>da_wunder:</b></font> because those need to loaded as in specified order and etc.<br/>
+<font color="#A82F2F"><font size="2">(11:19:51 AM)</font> <b>da_wunder:</b></font> + those bower packages contains usually more than you need, so i think it&apos;s good to inject those manually<br/>
+<font color="#16569E"><font size="2">(11:28:41 AM)</font> <b>Randy How:</b></font> da_wunder: hmm, i'm not sure if mongo is going to be in my final solution.  (just getting started)  but in general are you suggesting to use the db for ID generation?  (I thought I saw in Sails this option in a config somewhere)<br/>
+<font color="#A82F2F"><font size="2">(11:29:42 AM)</font> <b>da_wunder:</b></font> randingo_: what db do you use?<br/>
+<font color="#A82F2F"><font size="2">(11:30:06 AM)</font> <b>da_wunder:</b></font> i haven&apos;t seen that option, though<br/>
+<font color="#16569E"><font size="2">(11:35:01 AM)</font> <b>Randy How:</b></font> Historically Postgres/PostGIS, maybe moving to more mongo-ish db's.  I thought I saw in 0.9 the option of ID types (config/blueprints?), maybe i'm mistaken.<br/>
+<font color="#A82F2F"><font size="2">(12:13:22 PM)</font> <b>Loch:</b></font> Are &quot;afterCreate&quot; methods called before the creation callback is called?<br/>
+<font color="#A82F2F"><font size="2">(12:17:58 PM)</font> <b>da_wunder:</b></font> afterCreate is called after create...<br/>
+<font color="#A82F2F"><font size="2">(12:25:04 PM)</font> <b>Loch:</b></font> Sure, but is it called before create&apos;s callback? So if I create a reference to another model in the afterCreate method, will it be available in the created object within the create&apos;s callback?<br/>
+<font color="#A82F2F"><font size="2">(12:26:00 PM)</font> <b>Loch:</b></font> User.create(..., function(err, user) { log(user.roles) }) -- will user.roles be empty if it&apos;s populated in the afterCreate method?<br/>
+<font color="#A82F2F"><font size="2">(12:26:03 PM)</font> <b>da_wunder:</b></font> beforeValidation -&gt; beforeCreate -&gt; create -&gt; afterCreate<br/>
+<font color="#A82F2F"><font size="2">(12:27:14 PM)</font> <b>cramrod:</b></font> Do any of you guys use angular?<br/>
+<font color="#A82F2F"><font size="2">(12:27:30 PM)</font> <b>da_wunder:</b></font> not yet with sails<br/>
+<font color="#A82F2F"><font size="2">(12:27:43 PM)</font> <b>da_wunder:</b></font> too much work on my app to convert to that<br/>
+<font color="#A82F2F"><font size="2">(12:28:00 PM)</font> <b>cramrod:</b></font> Is there any way to register a controller before app.run()?  Im trying to attach a controller to an element inside the layout page from which my &lt;script&gt;s are included<br/>
+<font size="2">(01:01:26 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font size="2">(01:21:35 PM)</font><b> sz0` is now known as sz0</b><br/>
+<font size="2">(01:32:29 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font size="2">(01:36:08 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

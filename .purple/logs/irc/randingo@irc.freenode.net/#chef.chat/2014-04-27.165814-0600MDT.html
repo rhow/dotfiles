@@ -1,0 +1,230 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Sun 27 Apr 2014 04:58:14 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Sun 27 Apr 2014 04:58:14 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(04:58:15 PM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font color="#A82F2F"><font size="2">(05:01:34 PM)</font> <b>coderanger:</b></font> iroller: trololol<br/>
+<font color="#A82F2F"><font size="2">(05:01:47 PM)</font> <b>coderanger:</b></font> iroller: See https://coderanger.net/2013/06/arrays-and-chef/ :-)<br/>
+<font color="#A82F2F"><font size="2">(05:04:17 PM)</font> <b>iroller:</b></font> coderanger: I don&apos;t care about the order, they aren&apos;t being merged for some reason :/ Am I missing something?<br/>
+<font color="#A82F2F"><font size="2">(05:05:45 PM)</font> <b>coderanger:</b></font> iroller: It depends on exactly how the expansion is run<br/>
+<font color="#A82F2F"><font size="2">(05:07:20 PM)</font> <b>holms:</b></font> can it be that remote_file doesn&apos;t override file, when it&apos;s changed on vm?<br/>
+<font color="#A82F2F"><font size="2">(05:07:37 PM)</font> <b>holms:</b></font> cause i have in files/ one file .. and modified file on vm, and after reprovision, nothing is updated<br/>
+<font color="#A82F2F"><font size="2">(05:07:41 PM)</font> <b>holms:</b></font> i expect to overrite it<br/>
+<font color="#A82F2F"><font size="2">(05:08:11 PM)</font> <b>iroller:</b></font> coderanger: I have 3 roles including each other and they all set default attribute - array somewhere deep (:a =&gt; :b =&gt; :c =&gt; []). The only last one gets to the node attribute after chef run. Can I do something about that?<br/>
+<font color="#A82F2F"><font size="2">(05:08:41 PM)</font> <b>coderanger:</b></font> iroller: Yes, stop using arrays<br/>
+<font color="#A82F2F"><font size="2">(05:09:47 PM)</font> <b>iroller:</b></font> coderanger: too many roles to rewrite :/ no chance to get arrays merged correctly ?<br/>
+<font color="#A82F2F"><font size="2">(05:09:59 PM)</font> <b>coderanger:</b></font> iroller: There is no &quot;correctly&quot; here<br/>
+<font color="#A82F2F"><font size="2">(05:10:10 PM)</font> <b>coderanger:</b></font> iroller: The semantics are poorly defined at best<br/>
+<font color="#A82F2F"><font size="2">(05:10:27 PM)</font> <b>coderanger:</b></font> You are trying to take advantage of an old impl detail<br/>
+<font color="#A82F2F"><font size="2">(05:10:27 PM)</font> <b>iroller:</b></font> coderanger: ok, I mean I want it to be just merged, not replaced with another array<br/>
+<font color="#A82F2F"><font size="2">(05:11:15 PM)</font> <b>coderanger:</b></font> iroller: Like I said, the correct solution is to fix your roles, failing that you can manually load each role in your recipe code and process it independently<br/>
+<font color="#A82F2F"><font size="2">(05:11:46 PM)</font> <b>holms:</b></font> so how to rewrite updated files with remote_file ?<br/>
+<font color="#A82F2F"><font size="2">(05:12:31 PM)</font> <b>iroller:</b></font> coderanger: short term solution is to convert all the arrays to hashes like default[&apos;chruby&apos;][&apos;rubies&apos;] = {&apos;jruby&apos; =&gt; true, &apos;1.9.3&apos; =&gt; true, &apos;2.0.0&apos; =&gt; true}, right?<br/>
+<font color="#A82F2F"><font size="2">(05:14:03 PM)</font> <b>coderanger:</b></font> Yep<br/>
+<font color="#A82F2F"><font size="2">(05:14:30 PM)</font> <b>coderanger:</b></font> holms: not sure what you mean, remote_file is idempotent, if the file changes it updates<br/>
+<font color="#A82F2F"><font size="2">(05:14:43 PM)</font> <b>holms:</b></font> in my case it doesn&apos;t<br/>
+<font color="#A82F2F"><font size="2">(05:14:46 PM)</font> <b>holms:</b></font> and i dunno why<br/>
+<font color="#A82F2F"><font size="2">(05:15:06 PM)</font> <b>coderanger:</b></font> holms: Do you have a checksum specified manually and/or does the server not correctly implment if-modified-since?<br/>
+<font color="#A82F2F"><font size="2">(05:15:50 PM)</font> <b>iroller:</b></font> coderanger: thank you sir<br/>
+<font color="#A82F2F"><font size="2">(05:15:56 PM)</font> <b>holms:</b></font> i don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(05:15:59 PM)</font> <b>holms:</b></font> i need checksum?<br/>
+<font color="#A82F2F"><font size="2">(05:16:03 PM)</font> <b>coderanger:</b></font> iroller: Processing them manually might be easier, just fyi<br/>
+<font color="#A82F2F"><font size="2">(05:16:37 PM)</font> <b>iroller:</b></font> coderanger: not sure I get it. What do you mean?<br/>
+<font color="#A82F2F"><font size="2">(05:16:47 PM)</font> <b>coderanger:</b></font> iroller: node[&apos;roles&apos;].map do |r| role = Role.load(r); r.default_attributes[&apos;a&apos;][&apos;b&apos;]}.flatten<br/>
+<font color="#A82F2F"><font size="2">(05:17:02 PM)</font> <b>coderanger:</b></font> iroller: Slow, but would work :-)<br/>
+<font color="#A82F2F"><font size="2">(05:17:26 PM)</font> <b>iroller:</b></font> coderanger: thanks, will try it too<br/>
+<font color="#A82F2F"><font size="2">(05:19:17 PM)</font> <b>coderanger:</b></font> iroller: Of note that snippet is full of syntax errors because I&apos;m not that awake, but you get the idea :)<br/>
+<font color="#A82F2F"><font size="2">(05:19:24 PM)</font> <b>iroller:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(05:19:25 PM)</font> <b>holms:</b></font> coderanger: have you tried to launch gunicorn from virtualenv, with supervisord? does it need to activate virtualenv first? i&apos;ve got &quot;importerror module main&quot; from gunicorn<br/>
+<font color="#A82F2F"><font size="2">(05:19:29 PM)</font> <b>coderanger:</b></font> holms: No, just if you had one it would prevent updates<br/>
+<font color="#A82F2F"><font size="2">(05:20:07 PM)</font> <b>coderanger:</b></font> holms: You have to launch it inside the venv, path/to/env/bin/gunicorn<br/>
+<font color="#A82F2F"><font size="2">(05:20:18 PM)</font> <b>holms:</b></font> that&apos;s what i&apos;ve did<br/>
+<font color="#A82F2F"><font size="2">(05:20:22 PM)</font> <b>coderanger:</b></font> the activate script isn&apos;t used much on servers, its just an interactive convenience<br/>
+<font color="#A82F2F"><font size="2">(05:20:36 PM)</font> <b>holms:</b></font> i&apos;ll collect output then, cause it&apos;s strange<br/>
+<font color="#A82F2F"><font size="2">(05:20:45 PM)</font> <b>coderanger:</b></font> Is &quot;main&quot; supposed to be your app module?<br/>
+<font size="2">(05:21:02 PM)</font><b> gondoi is now known as zz_gondoi</b><br/>
+<font color="#A82F2F"><font size="2">(05:21:07 PM)</font> <b>coderanger:</b></font> If so, make sure you&apos;ve installed your package or set the cwd correctly so your code is importable<br/>
+<font color="#A82F2F"><font size="2">(05:21:29 PM)</font> <b>holms:</b></font> not sure actually it&apos;s my module<br/>
+<font color="#A82F2F"><font size="2">(05:22:12 PM)</font> <b>holms:</b></font> coderanger: http://pastebin.com/upvY3HmN<br/>
+<font color="#A82F2F"><font size="2">(05:22:37 PM)</font> <b>coderanger:</b></font> holms: Where on disk is main.py?<br/>
+<font color="#A82F2F"><font size="2">(05:23:29 PM)</font> <b>holms:</b></font> oops :d<br/>
+<font color="#A82F2F"><font size="2">(05:23:58 PM)</font> <b>holms:</b></font> *bow*<br/>
+<font size="2">(05:25:57 PM)</font><b> zz_gondoi is now known as gondoi</b><br/>
+<font size="2">(05:32:56 PM)</font><b> adnichols_ is now known as adnichols</b><br/>
+<font color="#A82F2F"><font size="2">(05:35:44 PM)</font> <b>holms:</b></font> coderanger: i&apos;m a bit lucky today http://pastebin.com/a43v9Vv3<br/>
+<font color="#A82F2F"><font size="2">(05:35:58 PM)</font> <b>holms:</b></font> it does work under activated virtual env :) python app.py i mean<br/>
+<font color="#A82F2F"><font size="2">(05:36:08 PM)</font> <b>holms:</b></font> but supervisor fails<br/>
+<font color="#A82F2F"><font size="2">(05:40:23 PM)</font> <b>coderanger:</b></font> holms: There should be no difference<br/>
+<font color="#A82F2F"><font size="2">(05:40:40 PM)</font> <b>holms:</b></font> in here they say env var is needed http://stackoverflow.com/questions/6532486/supervising-virutalenv-django-app-via-supervisor<br/>
+<font color="#A82F2F"><font size="2">(05:40:41 PM)</font> <b>coderanger:</b></font> holms: Check that if you run bin/python -c &apos;import flask&apos; it works<br/>
+<font color="#A82F2F"><font size="2">(05:40:46 PM)</font> <b>holms:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:41:15 PM)</font> <b>holms:</b></font> it works<br/>
+<font color="#A82F2F"><font size="2">(05:41:18 PM)</font> <b>holms:</b></font> your command<br/>
+<font color="#A82F2F"><font size="2">(05:41:22 PM)</font> <b>coderanger:</b></font> And yes, setting the path is probably a good idea as well<br/>
+<font color="#A82F2F"><font size="2">(05:41:33 PM)</font> <b>holms:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(05:41:45 PM)</font> <b>coderanger:</b></font> Though that isn&apos;t what you want to set it to<br/>
+<font color="#A82F2F"><font size="2">(05:41:53 PM)</font> <b>coderanger:</b></font> that would override the whole path, you just want to prepend<br/>
+<font color="#A82F2F"><font size="2">(05:43:00 PM)</font> <b>holms:</b></font> and how to prepend it<br/>
+<font color="#A82F2F"><font size="2">(05:43:41 PM)</font> <b>holms:</b></font> PATH=&quot;/dir:$PATH&quot; ?<br/>
+<font color="#A82F2F"><font size="2">(05:44:51 PM)</font> <b>coderanger:</b></font> holms: You would have to do it in your Ruby code<br/>
+<font color="#A82F2F"><font size="2">(05:45:16 PM)</font> <b>coderanger:</b></font> environment &apos;PATH&apos; =&gt; &quot;/path/to/app:#{ENV[&apos;PATH&apos;]}&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:45:33 PM)</font> <b>holms:</b></font> thanks :)<br/>
+<font color="#A82F2F"><font size="2">(05:50:20 PM)</font> <b>iroller:</b></font> coderanger: fyi replacing arrays with hashes didn&apos;t do the trick in my case. Getting the last hash as the result instead of merged hashes anyway<br/>
+<font color="#A82F2F"><font size="2">(05:51:34 PM)</font> <b>coderanger:</b></font> iroller: That sounds like your roles aren&apos;t picking each other up correctly?<br/>
+<font color="#A82F2F"><font size="2">(05:51:42 PM)</font> <b>coderanger:</b></font> iroller: Do you see all of them in node[&apos;roles&apos;]?<br/>
+<font size="2">(05:52:29 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font color="#A82F2F"><font size="2">(05:55:45 PM)</font> <b>holms:</b></font> coderanger: http://i.imgur.com/WoZiasp.png<br/>
+<font size="2">(05:58:15 PM)</font><b> mwhite|away is now known as mwhite</b><br/>
+<font color="#A82F2F"><font size="2">(06:00:23 PM)</font> <b>iroller:</b></font> coderanger: yes I see them all in node[&apos;roles&apos;]. Here&apos;s what I&apos;m doing: https://gist.github.com/iroller/9555ee966db932da4e9a<br/>
+<font color="#A82F2F"><font size="2">(06:01:18 PM)</font> <b>coderanger:</b></font> iroller: You are still using an array, you need to change the commands to a hash too<br/>
+<font color="#A82F2F"><font size="2">(06:01:19 PM)</font> <b>rayrod2030:</b></font> coderanger: to role or not to role.  That is the question.<br/>
+<font color="#A82F2F"><font size="2">(06:01:36 PM)</font> <b>coderanger:</b></font> iroller: Just never put arrays in node attrs, evarrrrr<br/>
+<font color="#A82F2F"><font size="2">(06:02:46 PM)</font> <b>pipework:</b></font> coderanger: As a rubyist, I&apos;m confused why that would be something one should not do.<br/>
+<font color="#A82F2F"><font size="2">(06:02:55 PM)</font> <b>iroller:</b></font> coderanger: I tried changing [cmd1, cmd11] and [cmd2, cmd22] to {cmd1: true, cmd11: true} and {cmd2: true, cmd22: true}. And I got {cmd2:true, cmd22:true} as the result, still missing first two commands<br/>
+<font color="#A82F2F"><font size="2">(06:03:15 PM)</font> <b>coderanger:</b></font> pipework: Nothing to do with Ruby, deep merging arrays has no usefully definable semantics<br/>
+<font color="#A82F2F"><font size="2">(06:04:13 PM)</font> <b>pipework:</b></font> coderanger: Do you mean with respect towards the indices any given item is located at after the merge?<br/>
+<font color="#A82F2F"><font size="2">(06:04:21 PM)</font> <b>pipework:</b></font> What do you mean by deep merging arrays?<br/>
+<font color="#A82F2F"><font size="2">(06:04:26 PM)</font> <b>coderanger:</b></font> pipework: No, I mean merging at all<br/>
+<font color="#A82F2F"><font size="2">(06:04:40 PM)</font> <b>coderanger:</b></font> iroller: If you have all the arrays converted to hashes, it should work :)<br/>
+<font color="#A82F2F"><font size="2">(06:04:54 PM)</font> <b>holms:</b></font> coderanger: any ideas why app is not found?<br/>
+<font color="#A82F2F"><font size="2">(06:04:56 PM)</font> <b>coderanger:</b></font> pipework: Node attrs are built by recursively merging roles+envs+cookbooks<br/>
+<font color="#A82F2F"><font size="2">(06:05:09 PM)</font> <b>coderanger:</b></font> pipework: you can&apos;t recursively merge an array though, it has no meaning<br/>
+<font color="#A82F2F"><font size="2">(06:05:18 PM)</font> <b>pipework:</b></font> Oh I see.<br/>
+<font color="#A82F2F"><font size="2">(06:06:11 PM)</font> <b>coderanger:</b></font> iroller: I note that your second one has invalid JSON in it (you have some Ruby syntax in there), maybe it failed to upload?<br/>
+<font color="#A82F2F"><font size="2">(06:06:58 PM)</font> <b>iroller:</b></font> coderanger: I&apos;ll try it once again, but I&apos;m pretty sure it was uploaded just fine. It&apos;s just a typo in gist<br/>
+<font color="#A82F2F"><font size="2">(06:07:58 PM)</font> <b>pipework:</b></font> coderanger: surely though, for an unordered set/array, it shouldn&apos;t be a problem though?<br/>
+<font color="#A82F2F"><font size="2">(06:10:24 PM)</font> <b>coderanger:</b></font> pipework: Ruby doesn&apos;t have though though<br/>
+<font color="#A82F2F"><font size="2">(06:10:29 PM)</font> <b>coderanger:</b></font> Nor does JSON<br/>
+<font color="#A82F2F"><font size="2">(06:10:35 PM)</font> <b>pipework:</b></font> coderanger: doesn&apos;t have though though?<br/>
+<font color="#A82F2F"><font size="2">(06:10:46 PM)</font> <b>coderanger:</b></font> &quot;those though&quot;<br/>
+<font color="#A82F2F"><font size="2">(06:11:01 PM)</font> <b>pipework:</b></font> coderanger: Sorry, I meant an array or set where I don&apos;t really care about the order.<br/>
+<font color="#A82F2F"><font size="2">(06:11:06 PM)</font> <b>pipework:</b></font> It&apos;s just a collection.<br/>
+<font color="#A82F2F"><font size="2">(06:11:48 PM)</font> <b>coderanger:</b></font> pipework: Yes, but there is no way for Chef to know that<br/>
+<font color="#A82F2F"><font size="2">(06:11:59 PM)</font> <b>coderanger:</b></font> because there is no syntax for &quot;unordered set&quot;<br/>
+<font color="#A82F2F"><font size="2">(06:12:13 PM)</font> <b>pipework:</b></font> coderanger: Well, I haven&apos;t dug into the source, but I&apos;ve made such things in ruby.<br/>
+<font color="#A82F2F"><font size="2">(06:12:31 PM)</font> <b>pipework:</b></font> It isn&apos;t necessarily a syntax, mostly a gotcha turned into a feature.<br/>
+<font color="#A82F2F"><font size="2">(06:12:47 PM)</font> <b>pipework:</b></font> If you don&apos;t care about the actual order, use it, otherwise beware.<br/>
+<font color="#A82F2F"><font size="2">(06:14:10 PM)</font> <b>coderanger:</b></font> pipework: Again, thats fine in the abstract, but node attributes (and JSON, etc) lack the semantic info to do it usefully :)<br/>
+<font color="#A82F2F"><font size="2">(06:14:25 PM)</font> <b>coderanger:</b></font> So you have to pick one behavior for all arrays, either merging or not merging<br/>
+<font color="#A82F2F"><font size="2">(06:14:31 PM)</font> <b>coderanger:</b></font> or be liuke chef and use _both_<br/>
+<font color="#A82F2F"><font size="2">(06:14:41 PM)</font> <b>coderanger:</b></font> (in different places and unpredictably)<br/>
+<font color="#A82F2F"><font size="2">(06:17:07 PM)</font> <b>rburton-:</b></font> I&apos;m not having any success with RVM + Chef to get 2.0.0 Ruby installed<br/>
+<font color="#A82F2F"><font size="2">(06:17:25 PM)</font> <b>rburton-:</b></font> curl -L https://get.rvm.io | bash  -s -- --branch stable --version &lt;version&gt; fails everytime<br/>
+<font color="#A82F2F"><font size="2">(06:18:09 PM)</font> <b>holms:</b></font> lol so it had to be app:app not app:application. why then it&apos;s :application in here https://github.com/benoitc/gunicorn/blob/master/examples/supervisor.conf<br/>
+<font color="#A82F2F"><font size="2">(06:18:10 PM)</font> <b>pipework:</b></font> rburton-: I think there was a problem earlier. Are you on RHEL?<br/>
+<font color="#A82F2F"><font size="2">(06:18:10 PM)</font> <b>holms:</b></font> hrrr<br/>
+<font color="#A82F2F"><font size="2">(06:18:28 PM)</font> <b>rburton-:</b></font> debian 12.x<br/>
+<font color="#A82F2F"><font size="2">(06:18:30 PM)</font> <b>coderanger:</b></font> rburton-: Is this for a workstation or a server?<br/>
+<font color="#A82F2F"><font size="2">(06:18:30 PM)</font> <b>pipework:</b></font> coderanger: I mean, you can&apos;t pick one or the other because it&apos;s a fixed behaviour of the system.<br/>
+<font color="#A82F2F"><font size="2">(06:18:34 PM)</font> <b>rburton-:</b></font> server<br/>
+<font color="#A82F2F"><font size="2">(06:18:56 PM)</font> <b>coderanger:</b></font> rburton-: Are you trying to use rvm for chef-client or to install it with chef-client?<br/>
+<font color="#A82F2F"><font size="2">(06:19:09 PM)</font> <b>rburton-:</b></font> chef-solo<br/>
+<font color="#A82F2F"><font size="2">(06:19:16 PM)</font> <b>coderanger:</b></font> rburton-: same differece<br/>
+<font color="#A82F2F"><font size="2">(06:19:29 PM)</font> <b>rburton-:</b></font> I was just trying to be specific.<br/>
+<font color="#A82F2F"><font size="2">(06:19:46 PM)</font> <b>coderanger:</b></font> holms: the thing after that : is the variable name of the WSGI callable in your module<br/>
+<font color="#A82F2F"><font size="2">(06:19:54 PM)</font> <b>coderanger:</b></font> rburton-: Sure, but which are you trying to do :)<br/>
+<font color="#A82F2F"><font size="2">(06:20:03 PM)</font> <b>rburton-:</b></font> my web.json https://gist.github.com/rburton/11358829<br/>
+<font color="#A82F2F"><font size="2">(06:20:29 PM)</font> <b>rburton-:</b></font> cookbook &apos;rvm&apos;, github: &apos;fnichol/chef-rvm&apos;<br/>
+<font color="#A82F2F"><font size="2">(06:20:35 PM)</font> <b>coderanger:</b></font> rburton-: Okay, so you have working chef and are trying to install ruby 2.0 to be used with your app<br/>
+<font color="#A82F2F"><font size="2">(06:20:46 PM)</font> <b>rburton-:</b></font> Correct<br/>
+<font color="#A82F2F"><font size="2">(06:20:47 PM)</font> <b>coderanger:</b></font> rburton-: Use poise-ruby<br/>
+<font color="#A82F2F"><font size="2">(06:20:57 PM)</font> <b>coderanger:</b></font> rvm has no business being on servers :)<br/>
+<font size="2">(06:21:51 PM)</font><b> mwhite is now known as mwhite|away</b><br/>
+<font color="#A82F2F"><font size="2">(06:21:59 PM)</font> <b>holms:</b></font> coderanger: thanks now i can go sleep in piece ))<br/>
+<font color="#A82F2F"><font size="2">(06:22:01 PM)</font> <b>rburton-:</b></font> Okay let me try that<br/>
+<font color="#A82F2F"><font size="2">(06:23:48 PM)</font> <b>coderanger:</b></font> rburton-: I have builds up for debian 7 and 6 I think<br/>
+<font size="2">(06:24:30 PM)</font><b> ohadlevy is now known as Guest28772</b><br/>
+<font color="#A82F2F"><font size="2">(06:24:36 PM)</font> <b>pipework:</b></font> coderanger: Oh also, chefdk was trying to install debugger with 2.1.1, and it was breaking hard. It also uses a shitton of threads whenever it tries to bootstrap the system, so it tries to install debugger on each of those threads, I believe.<br/>
+<font color="#A82F2F"><font size="2">(06:25:11 PM)</font> <b>coderanger:</b></font> pipework: I&apos;ve not used chefdk and probably will never, so I would recommend filing a bug on jira<br/>
+<font color="#A82F2F"><font size="2">(06:25:36 PM)</font> <b>pipework:</b></font> coderanger: Ah so you don&apos;t work for the company then?<br/>
+<font color="#A82F2F"><font size="2">(06:25:42 PM)</font> <b>coderanger:</b></font> pipework: Nope<br/>
+<font color="#A82F2F"><font size="2">(06:25:45 PM)</font> <b>pipework:</b></font> gotcha.<br/>
+<font color="#A82F2F"><font size="2">(06:26:20 PM)</font> <b>pipework:</b></font> Unfortunately I live right next to puppet labs office and not opscode. Puppet isn&apos;t as interesting to me. :(<br/>
+<font color="#A82F2F"><font size="2">(06:27:57 PM)</font> <b>coderanger:</b></font> I think there are a few employees in Portland<br/>
+<font color="#A82F2F"><font size="2">(06:28:47 PM)</font> <b>pipework:</b></font> Sometimes I glare out my window at their office.<br/>
+<font color="#A82F2F"><font size="2">(06:31:01 PM)</font> <b>rburton-:</b></font> coderanger so it doesn&apos;t se the path by default?<br/>
+<font color="#A82F2F"><font size="2">(06:32:04 PM)</font> <b>coderanger:</b></font> rburton-: What doesnlt?<br/>
+<font color="#A82F2F"><font size="2">(06:32:10 PM)</font> <b>rburton-:</b></font> posie-ruby<br/>
+<font color="#A82F2F"><font size="2">(06:32:11 PM)</font> <b>coderanger:</b></font> (I really can&apos;t type today)<br/>
+<font color="#A82F2F"><font size="2">(06:32:16 PM)</font> <b>rburton-:</b></font> it installs ruby at /opt/ruby-200/bin/ruby<br/>
+<font color="#A82F2F"><font size="2">(06:32:18 PM)</font> <b>coderanger:</b></font> No, it just installs a package<br/>
+<font color="#A82F2F"><font size="2">(06:32:25 PM)</font> <b>gchristensen:</b></font> I wonder if chef will have trouble with http://www.chefdk.com/<br/>
+<font color="#A82F2F"><font size="2">(06:32:31 PM)</font> <b>coderanger:</b></font> Linux has no unified way to set system-wide path changes<br/>
+<font color="#A82F2F"><font size="2">(06:32:34 PM)</font> <b>coderanger:</b></font> so I don&apos;t try<br/>
+<font color="#A82F2F"><font size="2">(06:32:48 PM)</font> <b>rburton-:</b></font> $PATH=...?<br/>
+<font color="#A82F2F"><font size="2">(06:33:23 PM)</font> <b>coderanger:</b></font> rburton-: Not sure what you mean, but I can say pretty authoritatively there is no unified way to do it :)<br/>
+<font color="#A82F2F"><font size="2">(06:33:48 PM)</font> <b>rburton-:</b></font> setting it in the PATH will make it visible via the shell<br/>
+<font color="#A82F2F"><font size="2">(06:34:14 PM)</font> <b>coderanger:</b></font> There is no &quot;the PATH&quot;<br/>
+<font color="#A82F2F"><font size="2">(06:34:18 PM)</font> <b>ctracey:</b></font> rburton-: that is not system-wide ;)<br/>
+<font color="#A82F2F"><font size="2">(06:34:19 PM)</font> <b>coderanger:</b></font> Not centrally anyway<br/>
+<font color="#A82F2F"><font size="2">(06:34:43 PM)</font> <b>rburton-:</b></font> right, but to be able to set it for a given user would be useful<br/>
+<font color="#A82F2F"><font size="2">(06:34:45 PM)</font> <b>pipework:</b></font> gchristensen: lul, probably not.<br/>
+<font color="#A82F2F"><font size="2">(06:34:46 PM)</font> <b>coderanger:</b></font> Debian-oids have /etc/environment which is sourced most of the time<br/>
+<font size="2">(06:34:51 PM)</font><b> adnichols_ is now known as adnichols</b><br/>
+<font color="#A82F2F"><font size="2">(06:35:00 PM)</font> <b>coderanger:</b></font> rburton-: A system package can&apos;t alter a user&apos;s shell rcs<br/>
+<font color="#A82F2F"><font size="2">(06:35:08 PM)</font> <b>rburton-:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(06:35:40 PM)</font> <b>coderanger:</b></font> But yeah, this is just a systemic problem with Linux, one I love to note that Windows has had solved for decades<br/>
+<font color="#A82F2F"><font size="2">(06:36:13 PM)</font> <b>rburton-:</b></font> watching this show about North Korea, man these people are mindfucked<br/>
+<font color="#A82F2F"><font size="2">(06:36:52 PM)</font> <b>iroller:</b></font> coderanger: whew, got it working with hashes, thanks again.<br/>
+<font color="#A82F2F"><font size="2">(06:37:56 PM)</font> <b>coderanger:</b></font> iroller: :)<br/>
+<font color="#A82F2F"><font size="2">(07:09:15 PM)</font> <b>jidar:</b></font> because it&apos;s a distro problem, not a kernel problem<br/>
+<font color="#A82F2F"><font size="2">(07:12:35 PM)</font> <b>coderanger:</b></font> jidar: Kind of, env vars _are_ a kernel construct<br/>
+<font color="#A82F2F"><font size="2">(07:12:49 PM)</font> <b>jidar:</b></font> you mean, for the shell?<br/>
+<font color="#A82F2F"><font size="2">(07:12:51 PM)</font> <b>coderanger:</b></font> jidar: and the limitations on how they are set have become unhelpful<br/>
+<font color="#A82F2F"><font size="2">(07:13:24 PM)</font> <b>coderanger:</b></font> jidar: Env vars like in kernel space, they are part of a process struct<br/>
+<font color="#A82F2F"><font size="2">(07:13:58 PM)</font> <b>jidar:</b></font> env vars live in the shell<br/>
+<font color="#A82F2F"><font size="2">(07:14:02 PM)</font> <b>coderanger:</b></font> No, they don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(07:14:11 PM)</font> <b>coderanger:</b></font> shell vars live in the shell<br/>
+<font color="#A82F2F"><font size="2">(07:14:12 PM)</font> <b>jidar:</b></font> if I start a new shell, it inherits it from whatever he was told to<br/>
+<font color="#A82F2F"><font size="2">(07:14:22 PM)</font> <b>coderanger:</b></font> env vars live in the kernel<br/>
+<font color="#A82F2F"><font size="2">(07:14:26 PM)</font> <b>jidar:</b></font> zsh and bash might look at different places<br/>
+<font color="#A82F2F"><font size="2">(07:14:32 PM)</font> <b>coderanger:</b></font> this is why set != export<br/>
+<font color="#A82F2F"><font size="2">(07:14:44 PM)</font> <b>jidar:</b></font> set and export are both shell constructs<br/>
+<font color="#A82F2F"><font size="2">(07:14:49 PM)</font> <b>coderanger:</b></font> No, they really aren&apos;t<br/>
+<font color="#A82F2F"><font size="2">(07:14:58 PM)</font> <b>coderanger:</b></font> getenv and setenv are syscalls<br/>
+<font color="#A82F2F"><font size="2">(07:16:05 PM)</font> <b>coderanger:</b></font> bash just happens to call them for you<br/>
+<font color="#A82F2F"><font size="2">(07:16:13 PM)</font> <b>coderanger:</b></font> but bash is just another userspace process<br/>
+<font color="#A82F2F"><font size="2">(07:16:21 PM)</font> <b>coderanger:</b></font> it has no magic when it comes to things like fork()<br/>
+<font color="#A82F2F"><font size="2">(07:18:13 PM)</font> <b>coderanger:</b></font> The only way to pass env vars to a child proc is via the parent<br/>
+<font color="#A82F2F"><font size="2">(07:18:26 PM)</font> <b>coderanger:</b></font> this means they can&apos;t be centrally managed without a userspace shim<br/>
+<font color="#A82F2F"><font size="2">(07:18:35 PM)</font> <b>coderanger:</b></font> which sucks<br/>
+<font size="2">(07:19:44 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font color="#A82F2F"><font size="2">(07:20:25 PM)</font> <b>coderanger:</b></font> hah, TIL POSIX defines a &quot;secure_getenv&quot;<br/>
+<font color="#A82F2F"><font size="2">(07:20:54 PM)</font> <b>jidar:</b></font> http://lkml.iu.edu/hypermail/linux/kernel/0508.2/0666.html<br/>
+<font color="#A82F2F"><font size="2">(07:21:07 PM)</font> <b>jidar:</b></font> I found this interesting<br/>
+<font color="#A82F2F"><font size="2">(07:21:21 PM)</font> <b>jidar:</b></font> while not providing a solution of course<br/>
+<font color="#A82F2F"><font size="2">(07:22:44 PM)</font> <b>coderanger:</b></font> jidar: Yeah, if you tried to fix it by declaring global stuff like PATH in pid0, you would have to reboot to change them :-(<br/>
+<font color="#A82F2F"><font size="2">(07:23:05 PM)</font> <b>jidar:</b></font> so it sort of goes back to what I said though<br/>
+<font color="#062585"><font size="2">(07:23:12 PM)</font> <b>***jidar</b></font> shrugs<br/>
+<font size="2">(07:23:15 PM)</font><b> gondoi is now known as zz_gondoi</b><br/>
+<font color="#A82F2F"><font size="2">(07:23:41 PM)</font> <b>jidar:</b></font> but I hear what you&apos;re saying too, I just feel like it&apos;s still solved via shell variables or process variables<br/>
+<font color="#A82F2F"><font size="2">(07:23:47 PM)</font> <b>coderanger:</b></font> jidar: The nicest fix would be for the kernel to read a config of some kind (note: they will never do this) on env vars to set after every fork<br/>
+<font color="#A82F2F"><font size="2">(07:23:51 PM)</font> <b>jidar:</b></font> not directly from the kernel<br/>
+<font color="#A82F2F"><font size="2">(07:24:05 PM)</font> <b>coderanger:</b></font> jidar: Try doing this, ssh &lt;some server&gt; env<br/>
+<font color="#A82F2F"><font size="2">(07:24:11 PM)</font> <b>mjuszczak:</b></font> I have a question about environments.  Are they meant to be environments for configuration management code, or environments for application code, or both?  For instance, if I have a &quot;production&quot; and &quot;development&quot; environment inside chef, is that meant for production and/or development chef cookbooks, or meant for servers that live in my product&apos;s production and development environments?<br/>
+<font size="2">(07:24:13 PM)</font><b> zz_gondoi is now known as gondoi</b><br/>
+<font color="#A82F2F"><font size="2">(07:24:13 PM)</font> <b>jidar:</b></font> blank?<br/>
+<font color="#A82F2F"><font size="2">(07:24:20 PM)</font> <b>coderanger:</b></font> You&apos;ll notice most shell-set variables aren&apos;t there, since no shell was ever run :)<br/>
+<font color="#A82F2F"><font size="2">(07:24:36 PM)</font> <b>jidar:</b></font> yea, env isn&apos;t going to set variables<br/>
+<font color="#A82F2F"><font size="2">(07:24:37 PM)</font> <b>jidar:</b></font> hahah<br/>
+<font color="#A82F2F"><font size="2">(07:24:38 PM)</font> <b>coderanger:</b></font> mjuszczak: Up to you<br/>
+<font color="#A82F2F"><font size="2">(07:24:44 PM)</font> <b>coderanger:</b></font> jidar: No, it will print them<br/>
+<font color="#A82F2F"><font size="2">(07:24:45 PM)</font> <b>jidar:</b></font> ahhh, but I do see how this could benifit chef<br/>
+<font color="#A82F2F"><font size="2">(07:25:06 PM)</font> <b>coderanger:</b></font> jidar: If you did ssh &lt;some server&gt; bash -c &apos;env&apos;, you&apos;ll see likely different output<br/>
+<font color="#A82F2F"><font size="2">(07:25:08 PM)</font> <b>jidar:</b></font> so you&apos;d like to see the need for the shell to go away for bootstrapping or chef runs?<br/>
+<font color="#A82F2F"><font size="2">(07:25:27 PM)</font> <b>jidar:</b></font> rather than bash-&gt;chef, just chef<br/>
+<font color="#A82F2F"><font size="2">(07:25:28 PM)</font> <b>coderanger:</b></font> Ditto on init scripts, which don&apos;t involve a shell<br/>
+<font color="#A82F2F"><font size="2">(07:25:41 PM)</font> <b>jidar:</b></font> er, ssh-&gt;bash-&gt;chef<br/>
+<font color="#A82F2F"><font size="2">(07:25:54 PM)</font> <b>coderanger:</b></font> mjuszczak: All envs give you is a way to control which cookbooks are in use<br/>
+<font color="#A82F2F"><font size="2">(07:26:01 PM)</font> <b>jidar:</b></font> ditto on the learning something new everyday<br/>
+<font size="2">(07:27:03 PM)</font><b> cwebber is now known as cwebber-away</b><br/>
+<font color="#A82F2F"><font size="2">(07:33:43 PM)</font> <b>coderanger:</b></font> jidar: Env vars are a bit of a weird bit of magic, up there with how file descriptors work. They blur the line between kernel space and userspace<br/>
+<font size="2">(07:33:51 PM)</font><b> adnichols_ is now known as adnichols</b><br/>
+<font size="2">(07:35:44 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font size="2">(07:35:52 PM)</font><b> adnichols_ is now known as adnichols</b><br/>
+<font size="2">(07:53:29 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font color="#A82F2F"><font size="2">(07:54:00 PM)</font> <b>ctracey:</b></font> mjuszczak: can you clarify?<br/>
+<font size="2">(08:12:04 PM)</font><b> cwebber is now known as cwebber-away</b><br/>
+<font size="2">(08:36:21 PM)</font><b> adnichols_ is now known as adnichols</b><br/>
+<font color="#A82F2F"><font size="2">(08:52:26 PM)</font> <b>mjuszczak:</b></font> coderanger: Still around?<br/>
+<font size="2">(08:52:49 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font color="#A82F2F"><font size="2">(08:53:29 PM)</font> <b>mjuszczak:</b></font> coderanger: In a base cookbook, per your method and the berkshelf model, would SSH keys go inside attributes/, to be called by recipes/keys.rb (or something similar)?<br/>
+<font size="2">(09:28:36 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

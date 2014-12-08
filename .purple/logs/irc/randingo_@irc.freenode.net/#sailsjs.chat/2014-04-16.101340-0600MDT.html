@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 16 Apr 2014 10:13:40 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 16 Apr 2014 10:13:40 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(10:13:40 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:14:09 AM)</font> <b>jkdev:</b></font> mit: and I am not sure it will return return error code / message but if not at least you can query for existing value at that time. This will reduce amount of DB calls at least<br/>
+<font color="#A82F2F"><font size="2">(10:14:40 AM)</font> <b>jkdev:</b></font> it will return different* error code/ message<br/>
+<font color="#A82F2F"><font size="2">(10:15:26 AM)</font> <b>jkdev:</b></font> oh… mit left the chat.. :)<br/>
+<font size="2">(10:24:29 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(10:31:17 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(10:35:45 AM)</font> <b>beardtree:</b></font> How would I add a script in a view to be included after the scripts in the layout?<br/>
+<font color="#A82F2F"><font size="2">(10:39:11 AM)</font> <b>jdcauley:</b></font> can you have multiple beforeCreates?<br/>
+<font color="#A82F2F"><font size="2">(10:50:23 AM)</font> <b>jdcauley:</b></font> anyone?<br/>
+<font color="#A82F2F"><font size="2">(10:58:45 AM)</font> <b>da_wunder:</b></font> sfb: weird<br/>
+<font color="#A82F2F"><font size="2">(10:58:49 AM)</font> <b>da_wunder:</b></font> haven&apos;t seen that<br/>
+<font color="#A82F2F"><font size="2">(10:58:51 AM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font size="2">(10:58:52 AM)</font><b> Fishy_ is now known as Fishy</b><br/>
+<font color="#A82F2F"><font size="2">(10:59:01 AM)</font> <b>da_wunder:</b></font> have you tried my app before?<br/>
+<font color="#A82F2F"><font size="2">(10:59:30 AM)</font> <b>brandom:</b></font> da_wunder: Do you know if .limit returning +1 is on purpose? I understand why, just seems weird..<br/>
+<font color="#A82F2F"><font size="2">(10:59:51 AM)</font> <b>da_wunder:</b></font> wut<br/>
+<font color="#A82F2F"><font size="2">(11:00:08 AM)</font> <b>da_wunder:</b></font> so .limit(1) returns two records?<br/>
+<font color="#A82F2F"><font size="2">(11:00:12 AM)</font> <b>brandom:</b></font> If I limit to 10 I get 11.<br/>
+<font color="#A82F2F"><font size="2">(11:00:13 AM)</font> <b>brandom:</b></font> Yes<br/>
+<font color="#A82F2F"><font size="2">(11:00:25 AM)</font> <b>brandom:</b></font> Maybe it&apos;s just sails-mongo..<br/>
+<font color="#A82F2F"><font size="2">(11:00:28 AM)</font> <b>da_wunder:</b></font> that gotta be bug<br/>
+<font color="#A82F2F"><font size="2">(11:03:20 AM)</font> <b>brandom:</b></font> da_wunder: Actually, I lied.. 1 returns 1. 6 returns 6. 7 returns 8 and everything upwards in +1. I no longer understand why, hah!<br/>
+<font color="#A82F2F"><font size="2">(11:03:38 AM)</font> <b>brandom:</b></font> So its clearly a bug and a very strange one.<br/>
+<font color="#A82F2F"><font size="2">(11:07:48 AM)</font> <b>brandom:</b></font> This is probably another weird side effect from sails-mongo&apos;s populate bug as outlined in my latest github book entitled WTF?!: https://github.com/balderdashy/sails-mongo/issues/122#issuecomment-39476099<br/>
+<font color="#A82F2F"><font size="2">(11:08:36 AM)</font> <b>brandom:</b></font> Which would explain why something like this could fly under the radar.<br/>
+<font color="#A82F2F"><font size="2">(11:29:57 AM)</font> <b>da_wunder:</b></font> anyone participating to hello world open?<br/>
+<font color="#A82F2F"><font size="2">(11:30:14 AM)</font> <b>da_wunder:</b></font> https://helloworldopen.com/<br/>
+<font size="2">(12:02:55 PM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(12:06:15 PM)</font> <b>maartendb:</b></font> hi all. got a question about subscribing/unsubscribing my socket from a Model<br/>
+<font color="#A82F2F"><font size="2">(12:06:53 PM)</font> <b>maartendb:</b></font> imagine I have a Model Item, and I get all instances with /item<br/>
+<font color="#A82F2F"><font size="2">(12:07:50 PM)</font> <b>maartendb:</b></font> that, if I understand it correctly, gets me subscribed to the entire Item class room<br/>
+<font color="#A82F2F"><font size="2">(12:08:33 PM)</font> <b>maartendb:</b></font> now, I at some point I am interestign in only one specific item, so I get /item/&lt;id&gt;<br/>
+<font color="#A82F2F"><font size="2">(12:08:48 PM)</font> <b>maartendb:</b></font> which subscribes my to that instance room<br/>
+<font color="#A82F2F"><font size="2">(12:09:07 PM)</font> <b>maartendb:</b></font> but I am still subscribed to the class room to, right?<br/>
+<font color="#A82F2F"><font size="2">(12:09:25 PM)</font> <b>maartendb:</b></font> it there any way to unsubscribe from the class room?<br/>
+<font color="#A82F2F"><font size="2">(12:09:27 PM)</font> <b>jkdev:</b></font> da_wunder: what is hwo ? I just checked their site and it seems very interesting but I stil no clue what it is about.<br/>
+<font color="#A82F2F"><font size="2">(12:10:11 PM)</font> <b>da_wunder:</b></font> just fun<br/>
+<font color="#A82F2F"><font size="2">(12:10:39 PM)</font> <b>da_wunder:</b></font> just create your own AI and compete with others<br/>
+<font color="#A82F2F"><font size="2">(12:14:12 PM)</font> <b>jkdev:</b></font> ai about virtual car racing ?<br/>
+<font color="#A82F2F"><font size="2">(12:14:27 PM)</font> <b>jkdev:</b></font> how to compete ?<br/>
+<font color="#A82F2F"><font size="2">(12:20:49 PM)</font> <b>da_wunder:</b></font> after you register you get access to git repo that has all needed<br/>

@@ -1,0 +1,26 @@
+[global_config]
+  focus = system
+  close_button_on_tab = False
+[keybindings]
+  full_screen = <Ctrl><Shift>F10
+[profiles]
+  [[default]]
+    foreground_color = "#ffffff"
+    use_system_font = False
+    font = DejaVu Sans Mono 15
+    urgent_bell = True
+    cursor_color = red
+    cursor_blink = False
+    login_shell = True
+    show_titlebar = False
+    copy_on_selection = True
+    scrollback_lines = 999
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

@@ -1,0 +1,228 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 13 Apr 2014 01:50:09 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 13 Apr 2014 01:50:09 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(01:50:09 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(01:50:09 PM)</font> <b>leguin.freenode.net:</b></font> (notice) [freenode-info] if you&apos;re at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp<br/>
+<font size="2">(01:51:05 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font color="#A82F2F"><font size="2">(02:49:04 PM)</font> <b>hai:</b></font> quick question - is there a way to find an object by a MongoDB ObjectID in sails?<br/>
+<font color="#A82F2F"><font size="2">(02:50:24 PM)</font> <b>da_wunder:</b></font> YourModel.findOne(objectId).exec(function(error, result) { ... });<br/>
+<font color="#A82F2F"><font size="2">(02:50:37 PM)</font> <b>da_wunder:</b></font> http://www.flippybitandtheattackofthehexadecimalsfrombase16.com/<br/>
+<font color="#A82F2F"><font size="2">(02:50:41 PM)</font> <b>da_wunder:</b></font> awesome game<br/>
+<font color="#A82F2F"><font size="2">(02:52:27 PM)</font> <b>friar:</b></font> hello all, first time on the irc channel.<br/>
+<font color="#A82F2F"><font size="2">(02:52:29 PM)</font> <b>pln:</b></font> Hello, what is the correct way to define a JSON only body parser?<br/>
+<font color="#A82F2F"><font size="2">(02:53:14 PM)</font> <b>da_wunder:</b></font> pln: what do you mean of that?<br/>
+<font color="#A82F2F"><font size="2">(02:53:49 PM)</font> <b>pln:</b></font> im trying to cleanup some stuff, and sails 0.10 gives a warning about the default bodyparser, i dont need multipart<br/>
+<font color="#A82F2F"><font size="2">(02:54:03 PM)</font> <b>pln:</b></font> express bodyparser is apperently broken<br/>
+<font color="#A82F2F"><font size="2">(02:54:22 PM)</font> <b>hai:</b></font> da_wunder - YourModel.findOne(objectId) ... objectId is a string?<br/>
+<font color="#A82F2F"><font size="2">(02:54:54 PM)</font> <b>da_wunder:</b></font> hai: it could be string, number or object<br/>
+<font color="#A82F2F"><font size="2">(02:55:38 PM)</font> <b>friar:</b></font> hai: for .9 sails, it is usually best to parseInt(objectId) just to be sure the underlying adapter doesn&apos;t choke.<br/>
+<font color="#A82F2F"><font size="2">(02:55:40 PM)</font> <b>hai:</b></font> right...the problem I&apos;m running into is that the ID is ObjectId(&quot;519e5330aa5bb99cdd000002&quot;) in the DB<br/>
+<font color="#A82F2F"><font size="2">(02:55:49 PM)</font> <b>da_wunder:</b></font> .findOne(&quot;sdfsfds&quot;) .findOne(123) .findOne({foo: &quot;bar&quot;})<br/>
+<font color="#A82F2F"><font size="2">(02:56:15 PM)</font> <b>friar:</b></font> .findOne(&quot;123&quot;) and .findOne(123) are differnt.<br/>
+<font color="#A82F2F"><font size="2">(02:56:52 PM)</font> <b>friar:</b></font> they *shouldn&apos;t* be...but it does seem to matter depending on your adapter.<br/>
+<font color="#A82F2F"><font size="2">(02:57:09 PM)</font> <b>da_wunder:</b></font> oh, i didn&apos;t know that<br/>
+<font color="#A82F2F"><font size="2">(02:57:24 PM)</font> <b>da_wunder:</b></font> i just assumed that it work that way<br/>
+<font color="#A82F2F"><font size="2">(02:57:33 PM)</font> <b>friar:</b></font> I lost several hours to that for mongodb vrs file.<br/>
+<font color="#A82F2F"><font size="2">(02:57:48 PM)</font> <b>da_wunder:</b></font> i can imagine that<br/>
+<font color="#A82F2F"><font size="2">(02:59:11 PM)</font> <b>friar:</b></font> Anybody know how to call a mongodb stored proc from sails .9?<br/>
+<font color="#A82F2F"><font size="2">(02:59:53 PM)</font> <b>friar:</b></font> I want to define a model that autoincrements _id...<br/>
+<font color="#A82F2F"><font size="2">(02:59:54 PM)</font> <b>da_wunder:</b></font> i think there was some natural() or similar<br/>
+<font color="#A82F2F"><font size="2">(03:00:20 PM)</font> <b>da_wunder:</b></font> but i would not use any procedures, triggers or functions within sails<br/>
+<font color="#A82F2F"><font size="2">(03:00:45 PM)</font> <b>da_wunder:</b></font> main purpose is that app is not relied to one adapter only<br/>
+<font color="#A82F2F"><font size="2">(03:00:56 PM)</font> <b>da_wunder:</b></font> imho<br/>
+<font color="#A82F2F"><font size="2">(03:01:14 PM)</font> <b>friar:</b></font> Yeah, preferably it would &quot;just work&quot; on insert.<br/>
+<font color="#A82F2F"><font size="2">(03:01:37 PM)</font> <b>da_wunder:</b></font> friar: or just use those life cycle callbacks<br/>
+<font color="#A82F2F"><font size="2">(03:01:42 PM)</font> <b>friar:</b></font> (which for the other mysql based project I have, works great with schema defined autoincrement).<br/>
+<font color="#A82F2F"><font size="2">(03:01:46 PM)</font> <b>da_wunder:</b></font> i use those in my app widely<br/>
+<font color="#A82F2F"><font size="2">(03:03:07 PM)</font> <b>da_wunder:</b></font> friar: there is some complicated examples https://github.com/tarlepp/Taskboard/blob/master/api/models/Task.js#L127<br/>
+<font color="#A82F2F"><font size="2">(03:03:10 PM)</font> <b>friar:</b></font> well, I&apos;m in a situation where there can be N number of sails machines all connected back to a mongodb cluster.<br/>
+<font color="#A82F2F"><font size="2">(03:03:52 PM)</font> <b>friar:</b></font> so incrementing an in-memory counter isn&apos;t gonna work.<br/>
+<font color="#A82F2F"><font size="2">(03:04:44 PM)</font> <b>da_wunder:</b></font> hmm, at work we use 4-6 sql servers for same app<br/>
+<font color="#A82F2F"><font size="2">(03:05:09 PM)</font> <b>da_wunder:</b></font> with same number of backend servers<br/>
+<font color="#A82F2F"><font size="2">(03:05:24 PM)</font> <b>da_wunder:</b></font> and yet we haven&apos;t got any collisions with id&apos;s<br/>
+<font color="#A82F2F"><font size="2">(03:05:58 PM)</font> <b>da_wunder:</b></font> about 13k active users per day<br/>
+<font color="#A82F2F"><font size="2">(03:06:43 PM)</font> <b>friar:</b></font> Well, I&apos;d expect any SQL server to work just fine, either using Oracle Sequences or Mysql-like autoincrement.<br/>
+<font color="#A82F2F"><font size="2">(03:06:48 PM)</font> <b>pln:</b></font> ok the answer for changing body parser to json only was var express = require(&apos;../node_modules/sails/node_modules/express&apos;);   and then just use  app.use(express.json()); in customMiddleWare<br/>
+<font color="#A82F2F"><font size="2">(03:07:38 PM)</font> <b>da_wunder:</b></font> but now some sleep -&gt;<br/>
+<font color="#A82F2F"><font size="2">(03:08:33 PM)</font> <b>pln:</b></font> what app is that? :) interested to see production sails apps<br/>
+<font color="#A82F2F"><font size="2">(03:09:43 PM)</font> <b>friar:</b></font> Not yet ready for the public heh.<br/>
+<font color="#A82F2F"><font size="2">(03:09:57 PM)</font> <b>friar:</b></font> I should be able to announce both projects next month. :)<br/>
+<font color="#A82F2F"><font size="2">(03:10:33 PM)</font> <b>pln:</b></font> yeah, was thinking about da_wunders app 13k active users...<br/>
+<font color="#A82F2F"><font size="2">(03:13:13 PM)</font> <b>friar:</b></font> Hmm....I guess the _id field is the only auto-unique field in mongodb....guess I&apos;ll have to think through whether I really need any others.<br/>
+<font color="#A82F2F"><font size="2">(03:26:18 PM)</font> <b>pln:</b></font> Argh I didn&apos;t manage to change body parser. Apperently one should set the bodyParser:<br/>
+<font color="#A82F2F"><font size="2">(03:26:32 PM)</font> <b>pln:</b></font> But I don&apos;t get it.. how do I configure express.json there<br/>
+<font color="#A82F2F"><font size="2">(03:26:47 PM)</font> <b>pln:</b></font> Apparently it&apos;s not a good idea to run the default one: http://andrewkelley.me/post/do-not-use-bodyparser-with-express-js.html<br/>
+<font color="#A82F2F"><font size="2">(03:34:12 PM)</font> <b>robdubya:</b></font> holla<br/>
+<font color="#A82F2F"><font size="2">(03:36:44 PM)</font> <b>whatttt:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(03:36:58 PM)</font> <b>whatttt:</b></font> how can i do a raw query in a controller?  im using the mysql adapter<br/>
+<font color="#A82F2F"><font size="2">(03:37:24 PM)</font> <b>whatttt:</b></font> Model.query(&apos;query&apos;, {}, cb) isn&apos;t working.. says theres no such function as query<br/>
+<font color="#A82F2F"><font size="2">(03:47:30 PM)</font> <b>whatttt:</b></font> :O<br/>
+<font size="2">(03:56:56 PM)</font><b> whatttt left the room (quit: Ping timeout: 258 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(03:57:42 PM)</font> <b>friar:</b></font> I just lost several hours to that whatttt.....go make sure you have the mysql adapter selected as the default.<br/>
+<font color="#A82F2F"><font size="2">(03:57:52 PM)</font> <b>friar:</b></font> instead of &quot;files&quot;.<br/>
+<font size="2">(04:03:42 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(04:12:52 PM)</font> <b>cramrod:</b></font> robdubya, you alive?<br/>
+<font color="#A82F2F"><font size="2">(04:13:02 PM)</font> <b>robdubya:</b></font> yessir<br/>
+<font color="#A82F2F"><font size="2">(04:13:06 PM)</font> <b>cramrod:</b></font> HES ALIVE!<br/>
+<font color="#A82F2F"><font size="2">(04:14:03 PM)</font> <b>cramrod:</b></font> Ive been playing with angular on and off for the past few weeks (mostly off because I hate it and keep stopping)<br/>
+<font color="#A82F2F"><font size="2">(04:14:18 PM)</font> <b>robdubya:</b></font> hah<br/>
+<font color="#A82F2F"><font size="2">(04:14:36 PM)</font> <b>robdubya:</b></font> i can&apos;t stop<br/>
+<font color="#A82F2F"><font size="2">(04:14:38 PM)</font> <b>robdubya:</b></font> won&apos;t stop<br/>
+<font color="#A82F2F"><font size="2">(04:15:55 PM)</font> <b>cramrod:</b></font> When you made the factory for doing sails socket.io stuff, why did you do the socket.io calls as promises?<br/>
+<font color="#A82F2F"><font size="2">(04:17:11 PM)</font> <b>robdubya:</b></font> because angular is built around promises<br/>
+<font color="#A82F2F"><font size="2">(04:17:40 PM)</font> <b>robdubya:</b></font> and the $http adapter is all promise based<br/>
+<font color="#A82F2F"><font size="2">(04:18:12 PM)</font> <b>robdubya:</b></font> &quot;promise = the future result of an async operation&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:18:34 PM)</font> <b>whatttt:</b></font> how can i do a raw query in a controller?  im using the mysql adapter<br/>
+<font color="#A82F2F"><font size="2">(04:18:42 PM)</font> <b>whatttt:</b></font> Model.query(&apos;query&apos;, {}, cb) isn&apos;t working.. says theres no such function as query<br/>
+<font color="#A82F2F"><font size="2">(04:19:09 PM)</font> <b>robdubya:</b></font> whatttt https://github.com/balderdashy/sails-mysql/blob/master/lib/adapter.js#L66-L80<br/>
+<font color="#A82F2F"><font size="2">(04:19:46 PM)</font> <b>whatttt:</b></font> ya<br/>
+<font color="#A82F2F"><font size="2">(04:19:48 PM)</font> <b>robdubya:</b></font> cramrod in my experience so far, people who don&apos;t like promises are poisoned by the JQ idea of promises, which are broken<br/>
+<font color="#A82F2F"><font size="2">(04:19:49 PM)</font> <b>whatttt:</b></font> i see it in the adapter<br/>
+<font color="#A82F2F"><font size="2">(04:19:59 PM)</font> <b>whatttt:</b></font> how do i access the apater in a controller? :O<br/>
+<font color="#A82F2F"><font size="2">(04:20:19 PM)</font> <b>whatttt:</b></font> adapter*<br/>
+<font color="#A82F2F"><font size="2">(04:20:37 PM)</font> <b>cramrod:</b></font> I dont have anything against them.  I just havnt bothered to learn how to write good code with them.<br/>
+<font color="#A82F2F"><font size="2">(04:20:45 PM)</font> <b>robdubya:</b></font> cramrod that&apos;s a broad-ass generalization :D<br/>
+<font color="#A82F2F"><font size="2">(04:20:54 PM)</font> <b>robdubya:</b></font> stuck on something?<br/>
+<font color="#A82F2F"><font size="2">(04:21:00 PM)</font> <b>cramrod:</b></font> yeah, I am<br/>
+<font color="#A82F2F"><font size="2">(04:21:13 PM)</font> <b>robdubya:</b></font> tell me your woes<br/>
+<font color="#A82F2F"><font size="2">(04:21:25 PM)</font> <b>cramrod:</b></font> Let me post some code<br/>
+<font color="#A82F2F"><font size="2">(04:22:53 PM)</font> <b>whatttt:</b></font> sails.adapter.query()?<br/>
+<font color="#A82F2F"><font size="2">(04:22:57 PM)</font> <b>robdubya:</b></font> whatttt https://github.com/balderdashy/sails/issues/760<br/>
+<font color="#A82F2F"><font size="2">(04:24:34 PM)</font> <b>cramrod:</b></font> I&apos;ve been kind of working from the ground up so I can properly understand everything thats happening behind the scenes.<br/>
+<font color="#A82F2F"><font size="2">(04:24:41 PM)</font> <b>cramrod:</b></font> http://hastebin.com/gekukexupi.js<br/>
+<font color="#A82F2F"><font size="2">(04:25:48 PM)</font> <b>cramrod:</b></font> I made this factory to go between sails and the client via socket.io .  I&apos;m trying to inject it into the controller.  The problem is, the controller registers before the factory executes the callback.<br/>
+<font color="#A82F2F"><font size="2">(04:26:32 PM)</font> <b>cramrod:</b></font> so in my console I see &apos;socket:undefined&apos;, and I cant use the socket<br/>
+<font color="#A82F2F"><font size="2">(04:27:32 PM)</font> <b>robdubya:</b></font> cramrod so the $sailsSocket i wrote handles this problem, but 2 secs, i&apos;ll plunk this and show you<br/>
+<font color="#A82F2F"><font size="2">(04:27:37 PM)</font> <b>cramrod:</b></font> I considered putting the socket code in the `resolve` key on the ui-router route definition<br/>
+<font color="#A82F2F"><font size="2">(04:27:47 PM)</font> <b>cramrod:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(04:28:56 PM)</font> <b>cramrod:</b></font> Im having so much trouble with angular because I dont seem to have any control over the order in which my code runs.<br/>
+<font color="#A82F2F"><font size="2">(04:31:52 PM)</font> <b>cramrod:</b></font> whatttt, what version of the adapter are you using?<br/>
+<font color="#A82F2F"><font size="2">(04:33:11 PM)</font> <b>DarezGhost:</b></font> can I not use HAML layouts?<br/>
+<font color="#A82F2F"><font size="2">(04:33:19 PM)</font> <b>DarezGhost:</b></font> I have a haml view, which is working fine<br/>
+<font color="#A82F2F"><font size="2">(04:33:21 PM)</font> <b>robdubya:</b></font> cramrod are you gonna be around for a while? totally happy to talk you through this - need to grab a bite real quick.<br/>
+<font color="#A82F2F"><font size="2">(04:33:24 PM)</font> <b>DarezGhost:</b></font> but it is not picking up my layout<br/>
+<font color="#A82F2F"><font size="2">(04:33:32 PM)</font> <b>DarezGhost:</b></font> I removed the layout.ejs file<br/>
+<font color="#A82F2F"><font size="2">(04:33:37 PM)</font> <b>DarezGhost:</b></font> and replaced it with a layout.haml<br/>
+<font color="#A82F2F"><font size="2">(04:34:14 PM)</font> <b>cramrod:</b></font> whatttt, you asked &quot;how do I access the adapter in a controller&quot;.  Heres the answer.  All of the methods in the adapter are accessed through your model.  For example, if you wanted to access .query on your `User` model, your controller code would use User.query(params,cb)<br/>
+<font color="#A82F2F"><font size="2">(04:34:52 PM)</font> <b>cramrod:</b></font> robdubya, of course.  Do your thing.  Ill be here<br/>
+<font color="#A82F2F"><font size="2">(04:35:12 PM)</font> <b>cramrod:</b></font> whatttt, post your controller code and ill see if I can help.<br/>
+<font color="#A82F2F"><font size="2">(04:38:53 PM)</font> <b>robdubya:</b></font> cramrod cool. i actually have a how-to-promise course i&apos;m sketching up. hour or so.<br/>
+<font color="#A82F2F"><font size="2">(04:39:20 PM)</font> <b>DarezGhost:</b></font> anyone know how to get the layouts working<br/>
+<font color="#A82F2F"><font size="2">(04:39:30 PM)</font> <b>DarezGhost:</b></font> getting no debug spew in console either<br/>
+<font color="#A82F2F"><font size="2">(04:41:17 PM)</font> <b>whatttt:</b></font> hi folks, one sec cramrod<br/>
+<font color="#A82F2F"><font size="2">(04:41:49 PM)</font> <b>cramrod:</b></font> DarezGhost, did you change the settings in config/views.js ?  Im not sure if thats required but it&apos;s something worth checking.<br/>
+<font color="#A82F2F"><font size="2">(04:42:21 PM)</font> <b>whatttt:</b></font> cramrod: Thought.query(query, {}, cb)<br/>
+<font color="#A82F2F"><font size="2">(04:42:23 PM)</font> <b>whatttt:</b></font> thats my actual code<br/>
+<font color="#A82F2F"><font size="2">(04:42:36 PM)</font> <b>cramrod:</b></font> Are you getting an error?<br/>
+<font color="#A82F2F"><font size="2">(04:42:39 PM)</font> <b>whatttt:</b></font> Thought is a model.<br/>
+<font color="#A82F2F"><font size="2">(04:42:48 PM)</font> <b>DarezGhost:</b></font> yes i did of course<br/>
+<font color="#A82F2F"><font size="2">(04:42:54 PM)</font> <b>DarezGhost:</b></font> i changed it to my layout&apos;s file name<br/>
+<font color="#A82F2F"><font size="2">(04:43:07 PM)</font> <b>whatttt:</b></font> ya, its telling me Object [Object object] has no method &apos;query&apos;<br/>
+<font color="#A82F2F"><font size="2">(04:44:37 PM)</font> <b>cramrod:</b></font> whatttt, have you set the sails-mysql adapter as the default for this particular model?<br/>
+<font color="#A82F2F"><font size="2">(04:45:32 PM)</font> <b>whatttt:</b></font> not sure how to check that out<br/>
+<font color="#A82F2F"><font size="2">(04:47:28 PM)</font> <b>cramrod:</b></font> Lift your app using `sails console` then when its finished lifting, do `sails.models.thought.connections`<br/>
+<font color="#A82F2F"><font size="2">(04:48:15 PM)</font> <b>cramrod:</b></font> It should display an object with the first key being the name of the connection.  You should be able to tell by the key name.<br/>
+<font color="#A82F2F"><font size="2">(04:50:08 PM)</font> <b>whatttt:</b></font> ooo says sails-disk<br/>
+<font color="#A82F2F"><font size="2">(04:50:10 PM)</font> <b>whatttt:</b></font> this may be a problem<br/>
+<font color="#A82F2F"><font size="2">(04:50:16 PM)</font> <b>whatttt:</b></font> good call<br/>
+<font color="#A82F2F"><font size="2">(04:50:19 PM)</font> <b>whatttt:</b></font> how doth i fix this?<br/>
+<font color="#A82F2F"><font size="2">(04:50:58 PM)</font> <b>cramrod:</b></font> That is the problem.  What version of sails are you on?<br/>
+<font color="#A82F2F"><font size="2">(04:51:46 PM)</font> <b>DarezGhost:</b></font> does coffeescript doesn&apos;t work with sails out of the box<br/>
+<font color="#A82F2F"><font size="2">(04:51:50 PM)</font> <b>DarezGhost:</b></font> do i need to configure something<br/>
+<font color="#A82F2F"><font size="2">(04:52:34 PM)</font> <b>cramrod:</b></font> If youre in v0.10, you can set the default adapter in config/models.js  It might be slightly different in v0.09x<br/>
+<font color="#A82F2F"><font size="2">(04:53:53 PM)</font> <b>whatttt:</b></font> 0.9.16<br/>
+<font color="#A82F2F"><font size="2">(04:54:05 PM)</font> <b>cramrod:</b></font> damn son, you need to upgrade<br/>
+<font color="#A82F2F"><font size="2">(04:54:06 PM)</font> <b>cramrod:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(04:54:07 PM)</font> <b>whatttt:</b></font> :O<br/>
+<font color="#A82F2F"><font size="2">(04:54:29 PM)</font> <b>whatttt:</b></font> i just pulled from npm<br/>
+<font color="#A82F2F"><font size="2">(04:54:43 PM)</font> <b>whatttt:</b></font> ill go update my package.json<br/>
+<font color="#A82F2F"><font size="2">(04:54:53 PM)</font> <b>cramrod:</b></font> not so quick.  Things are likely to break.<br/>
+<font color="#A82F2F"><font size="2">(04:55:14 PM)</font> <b>cramrod:</b></font> There were a lot of changes between 0.9.16 and v.10<br/>
+<font color="#A82F2F"><font size="2">(04:55:31 PM)</font> <b>whatttt:</b></font> uh oh<br/>
+<font color="#A82F2F"><font size="2">(04:55:45 PM)</font> <b>whatttt:</b></font> this is rapidly turning into a much bigger issue<br/>
+<font color="#A82F2F"><font size="2">(04:56:23 PM)</font> <b>whatttt:</b></font> are there migration nodes?<br/>
+<font color="#A82F2F"><font size="2">(04:56:36 PM)</font> <b>whatttt:</b></font> im just starting a new project, so i can move all of my models and controllers and routes pretty easily i&apos;d think<br/>
+<font color="#A82F2F"><font size="2">(04:56:39 PM)</font> <b>whatttt:</b></font> only have one table so far<br/>
+<font color="#A82F2F"><font size="2">(04:57:03 PM)</font> <b>cramrod:</b></font> http://beta.sailsjs.org/#!documentation/reference/Upgrading/Upgrading.html<br/>
+<font color="#A82F2F"><font size="2">(04:58:09 PM)</font> <b>cramrod:</b></font> GOod idea.  I would do a global install of the latest version then create a new project.  Then copy your logic over from the old to the new.<br/>
+<font color="#A82F2F"><font size="2">(04:58:23 PM)</font> <b>cramrod:</b></font> http://beta.sailsjs.org has the most recent documentation on it.<br/>
+<font color="#A82F2F"><font size="2">(04:59:46 PM)</font> <b>DarezGhost:</b></font> doesn&apos;t like this project is ready for primetime. oh well. back to express<br/>
+<font color="#A82F2F"><font size="2">(05:00:29 PM)</font> <b>whatttt:</b></font> oh also<br/>
+<font color="#A82F2F"><font size="2">(05:00:39 PM)</font> <b>whatttt:</b></font> i opened a ticket for model generation<br/>
+<font color="#A82F2F"><font size="2">(05:01:17 PM)</font> <b>whatttt:</b></font> https://github.com/balderdashy/sails/issues/1593<br/>
+<font color="#A82F2F"><font size="2">(05:01:30 PM)</font> <b>whatttt:</b></font> basically, an easy way to generate a full project using mixins<br/>
+<font color="#A82F2F"><font size="2">(05:02:01 PM)</font> <b>whatttt:</b></font> kinda like LESS but for ORMs<br/>
+<font color="#A82F2F"><font size="2">(05:02:44 PM)</font> <b>whatttt:</b></font> hrmmm<br/>
+<font color="#A82F2F"><font size="2">(05:02:53 PM)</font> <b>whatttt:</b></font> sudo npm install sails -g<br/>
+<font color="#A82F2F"><font size="2">(05:02:57 PM)</font> <b>whatttt:</b></font> still installed 0.9.16<br/>
+<font color="#A82F2F"><font size="2">(05:05:36 PM)</font> <b>whatttt:</b></font> ok lol installing 0.10.0-rc5<br/>
+<font color="#A82F2F"><font size="2">(05:06:27 PM)</font> <b>cramrod:</b></font> whatttt, thats strange.  try `sudo npm -g remove sails` then `sudo npm -g install sails@0.10.0-rc4`<br/>
+<font color="#A82F2F"><font size="2">(05:07:09 PM)</font> <b>cramrod:</b></font> That is almost as new as it gets.<br/>
+<font color="#A82F2F"><font size="2">(05:08:04 PM)</font> <b>whatttt:</b></font> ya<br/>
+<font color="#A82F2F"><font size="2">(05:08:08 PM)</font> <b>whatttt:</b></font> did that :D<br/>
+<font color="#A82F2F"><font size="2">(05:08:13 PM)</font> <b>whatttt:</b></font> okay time to migrate and play<br/>
+<font color="#A82F2F"><font size="2">(05:09:15 PM)</font> <b>cramrod:</b></font> have fun<br/>
+<font color="#A82F2F"><font size="2">(05:09:27 PM)</font> <b>whatttt:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(05:14:12 PM)</font> <b>whatttt:</b></font> cramrod: so the config/models.js connection should be &apos;mysql&apos; instead of &apos;localDiskDb&apos;<br/>
+<font color="#A82F2F"><font size="2">(05:14:17 PM)</font> <b>whatttt:</b></font> or should it be &apos;sails-mysql&apos;?<br/>
+<font color="#A82F2F"><font size="2">(05:15:31 PM)</font> <b>cramrod:</b></font> first look at config/connections.js<br/>
+<font color="#A82F2F"><font size="2">(05:15:50 PM)</font> <b>cramrod:</b></font> That is where you define connections.<br/>
+<font color="#A82F2F"><font size="2">(05:16:37 PM)</font> <b>cramrod:</b></font> in config/models.js, you will reference those connections by the keyname in connections.js<br/>
+<font color="#A82F2F"><font size="2">(05:16:41 PM)</font> <b>whatttt:</b></font> told me to npm install sails-mysql<br/>
+<font color="#A82F2F"><font size="2">(05:16:50 PM)</font> <b>whatttt:</b></font> but im getting unmet dependency warnings<br/>
+<font color="#A82F2F"><font size="2">(05:17:32 PM)</font> <b>cramrod:</b></font> did you do an `npm install` after you created your new project?<br/>
+<font color="#A82F2F"><font size="2">(05:18:57 PM)</font> <b>whatttt:</b></font> ya i installed sails<br/>
+<font color="#A82F2F"><font size="2">(05:18:59 PM)</font> <b>whatttt:</b></font> then created a new project<br/>
+<font color="#A82F2F"><font size="2">(05:19:04 PM)</font> <b>whatttt:</b></font> then changed directory into that project<br/>
+<font color="#A82F2F"><font size="2">(05:19:09 PM)</font> <b>whatttt:</b></font> then did npm install sails-mysql --save<br/>
+<font color="#A82F2F"><font size="2">(05:20:06 PM)</font> <b>cramrod:</b></font> just do `npm install` without any other arguments<br/>
+<font color="#A82F2F"><font size="2">(05:20:21 PM)</font> <b>whatttt:</b></font> oh<br/>
+<font color="#A82F2F"><font size="2">(05:20:29 PM)</font> <b>whatttt:</b></font> npm is still porviding 0.9x for everything<br/>
+<font color="#A82F2F"><font size="2">(05:20:34 PM)</font> <b>whatttt:</b></font> i need to manually specify verions<br/>
+<font color="#A82F2F"><font size="2">(05:20:53 PM)</font> <b>robdubya:</b></font> lol @ coffeescript being &quot;primetime&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:21:34 PM)</font> <b>cramrod:</b></font> when you create a new project, it uses generators to make all the files.  This includes the package.json.  when you run `npm install` by itself, it will install everything in package.json<br/>
+<font color="#A82F2F"><font size="2">(05:21:45 PM)</font> <b>whatttt:</b></font> ya<br/>
+<font color="#A82F2F"><font size="2">(05:22:00 PM)</font> <b>whatttt:</b></font> the connections.js says run npm install sails-mysql<br/>
+<font color="#A82F2F"><font size="2">(05:22:05 PM)</font> <b>whatttt:</b></font> but that uses 0.9x<br/>
+<font color="#A82F2F"><font size="2">(05:22:13 PM)</font> <b>whatttt:</b></font> but im using sails .10<br/>
+<font color="#A82F2F"><font size="2">(05:22:20 PM)</font> <b>whatttt:</b></font> so i gotta specify the .10 for mysql too<br/>
+<font color="#A82F2F"><font size="2">(05:24:57 PM)</font> <b>cramrod:</b></font> You wouldnt normally but I think it got confused because you did the `npm install sails-mysql` first.  Just do `npm remove sails-mysql` followed by `npm install sails-mysql@0.10.0-rc4`<br/>
+<font color="#A82F2F"><font size="2">(05:25:07 PM)</font> <b>cramrod:</b></font> or just edit your package.json manually<br/>
+<font color="#A82F2F"><font size="2">(05:26:17 PM)</font> <b>cramrod:</b></font> whatttt, v0.10 of Sails isnt officially out yet which is why the npm registry doesnt point to the latest version of everything.<br/>
+<font color="#A82F2F"><font size="2">(05:27:43 PM)</font> <b>whatttt:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(05:27:52 PM)</font> <b>whatttt:</b></font> now im getting A hook (`orm`) failed to load!<br/>
+<font color="#A82F2F"><font size="2">(05:27:56 PM)</font> <b>whatttt:</b></font> :/<br/>
+<font color="#A82F2F"><font size="2">(05:28:16 PM)</font> <b>whatttt:</b></font> do i have to create the database in advance or will sails do that?<br/>
+<font color="#A82F2F"><font size="2">(05:29:08 PM)</font> <b>cramrod:</b></font> No, sails will create it.<br/>
+<font color="#A82F2F"><font size="2">(05:29:19 PM)</font> <b>cramrod:</b></font> Thats a strange error.<br/>
+<font color="#A82F2F"><font size="2">(05:29:29 PM)</font> <b>whatttt:</b></font> it is :(<br/>
+<font color="#A82F2F"><font size="2">(05:29:37 PM)</font> <b>whatttt:</b></font> TypeError: Cannot read property &apos;connection&apos; of undefined at Object.teardown (/home/programmer/Projects/twoPenny/node_modules/sails-mysql/lib/connections/teardown.js:23:37)<br/>
+<font color="#A82F2F"><font size="2">(05:29:40 PM)</font> <b>cramrod:</b></font> I would do a `rm -rf node_modules` then `npm install`<br/>
+<font color="#A82F2F"><font size="2">(05:29:46 PM)</font> <b>whatttt:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(05:29:58 PM)</font> <b>cramrod:</b></font> ohhh wait<br/>
+<font color="#A82F2F"><font size="2">(05:29:59 PM)</font> <b>cramrod:</b></font> no hold up<br/>
+<font color="#A82F2F"><font size="2">(05:30:05 PM)</font> <b>whatttt:</b></font> too late!<br/>
+<font color="#A82F2F"><font size="2">(05:30:07 PM)</font> <b>cramrod:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(05:30:42 PM)</font> <b>cramrod:</b></font> Try to lift it again and see if you have the same problem<br/>
+<font color="#A82F2F"><font size="2">(05:37:59 PM)</font> <b>whatttt:</b></font> sigh<br/>
+<font color="#A82F2F"><font size="2">(05:38:01 PM)</font> <b>whatttt:</b></font> its a mess now<br/>
+<font color="#A82F2F"><font size="2">(05:38:03 PM)</font> <b>whatttt:</b></font> things aren&apos;t installing<br/>
+<font color="#A82F2F"><font size="2">(05:38:31 PM)</font> <b>whatttt:</b></font> uglify is failing<br/>
+<font color="#A82F2F"><font size="2">(05:41:22 PM)</font> <b>whatttt:</b></font> jesus<br/>
+<font color="#A82F2F"><font size="2">(05:41:34 PM)</font> <b>whatttt:</b></font> i dont understand why it is so hard to get mysql support<br/>
+<font color="#A82F2F"><font size="2">(05:41:48 PM)</font> <b>whatttt:</b></font> 0.10 is simply not ready for anything at this point<br/>
+<font color="#A82F2F"><font size="2">(05:41:53 PM)</font> <b>whatttt:</b></font> i can&apos;t even do an npm install of it<br/>
+<font color="#A82F2F"><font size="2">(05:42:16 PM)</font> <b>robdubya:</b></font> fwiw, i&apos;ve probably done 6 installations today w/ npm install sails@beta<br/>
+<font color="#A82F2F"><font size="2">(05:42:24 PM)</font> <b>robdubya:</b></font> on mysql/postgres/mongo<br/>
+<font color="#A82F2F"><font size="2">(05:44:27 PM)</font> <b>whatttt:</b></font> just a screen full of npm ERR<br/>
+<font color="#A82F2F"><font size="2">(05:44:44 PM)</font> <b>whatttt:</b></font> thats all im getting<br/>
+<font color="#A82F2F"><font size="2">(05:45:01 PM)</font> <b>cramrod:</b></font> haha, that sounds about normal for npm<br/>
+<font color="#A82F2F"><font size="2">(05:45:10 PM)</font> <b>cramrod:</b></font> I swear it goes down twice a week.<br/>
+<font color="#A82F2F"><font size="2">(05:45:48 PM)</font> <b>cramrod:</b></font> whatttt, let me try it on my end<br/>
+<font color="#A82F2F"><font size="2">(05:50:19 PM)</font> <b>cramrod:</b></font> whatttt, http://hastebin.com/nemufecele.hs<br/>
+<font color="#A82F2F"><font size="2">(05:50:34 PM)</font> <b>robdubya:</b></font> cramrod http://plnkr.co/edit/GHkdbmViaP9tx8PUaaGF?p=preview &lt;- start with that. not answer your question directly, just a bit of background to start...<br/>
+<font color="#A82F2F"><font size="2">(05:50:59 PM)</font> <b>cramrod:</b></font> Thats step by step what I did to create a new sails project and install sails-mysql adapter.<br/>
+<font color="#A82F2F"><font size="2">(05:51:10 PM)</font> <b>cramrod:</b></font> thanks robdubya.  Ill check it out now.<br/>
+<font color="#A82F2F"><font size="2">(05:56:26 PM)</font> <b>whatttt:</b></font> ok lemme replay<br/>
+<font color="#A82F2F"><font size="2">(05:57:40 PM)</font> <b>whatttt:</b></font> at this point im trying to do an npm install of everything becaus ei blew up the node_module folder as you suggested<br/>
+<font color="#A82F2F"><font size="2">(05:58:43 PM)</font> <b>robdubya:</b></font> cramrod pt2 http://plnkr.co/edit/wVdSARN9K0Nx6NkwdHGy?p=preview<br/>
+<font size="2">(06:05:04 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

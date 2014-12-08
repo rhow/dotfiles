@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 27 May 2014 01:19:41 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 27 May 2014 01:19:41 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(01:19:41 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(01:44:21 PM)</font> <b>beardtree:</b></font> kavuri: make sure you `npm update` first<br/>
+<font color="#A82F2F"><font size="2">(01:44:53 PM)</font> <b>beardtree:</b></font> kavuri: if that doesn&apos;t work, `npm install sails@^0.10`<br/>
+<font color="#A82F2F"><font size="2">(01:45:14 PM)</font> <b>kavuri:</b></font> beardtree: I do have sails 0.10 and sails-mongo 0.10.0-rc5<br/>
+<font color="#A82F2F"><font size="2">(01:46:19 PM)</font> <b>kavuri:</b></font> but I am running npm update on my complete package list (just in case)<br/>
+<font color="#A82F2F"><font size="2">(01:46:49 PM)</font> <b>Matsy_:</b></font> kavuri: Do you have the source?<br/>
+<font color="#A82F2F"><font size="2">(01:47:34 PM)</font> <b>kavuri:</b></font> Matsy_: I have the source under node_modules<br/>
+<font color="#A82F2F"><font size="2">(01:47:39 PM)</font> <b>Matsy_:</b></font> I mean<br/>
+<font color="#A82F2F"><font size="2">(01:47:43 PM)</font> <b>Matsy_:</b></font> Can you pastebin it?<br/>
+<font color="#A82F2F"><font size="2">(01:48:02 PM)</font> <b>Matsy_:</b></font> How you are calling the groupBy()<br/>
+<font color="#A82F2F"><font size="2">(01:48:15 PM)</font> <b>kavuri:</b></font> Subreport.find().groupBy(&apos;severity&apos;).average(&apos;severity&apos;).done(function(err, res) {console.log(res); });<br/>
+<font color="#A82F2F"><font size="2">(01:48:24 PM)</font> <b>kavuri:</b></font> Matsy_: ^<br/>
+<font color="#A82F2F"><font size="2">(01:49:08 PM)</font> <b>Matsy_:</b></font> eh<br/>
+<font color="#A82F2F"><font size="2">(01:49:12 PM)</font> <b>Matsy_:</b></font> I am using it in exactly the same way<br/>
+<font color="#A82F2F"><font size="2">(01:50:08 PM)</font> <b>Matsy_:</b></font> https://github.com/balderdashy/waterline/blob/master/lib/waterline/query/deferred.js#L320<br/>
+<font color="#A82F2F"><font size="2">(01:50:09 PM)</font> <b>Matsy_:</b></font> Should exist<br/>
+<font color="#A82F2F"><font size="2">(01:51:40 PM)</font> <b>kavuri:</b></font> Matsy_: I get this error when I use groupBy<br/>
+<font color="#A82F2F"><font size="2">(01:51:41 PM)</font> <b>kavuri:</b></font> TypeError: Cannot call method &apos;map&apos; of undefined<br/>
+<font color="#A82F2F"><font size="2">(01:51:41 PM)</font> <b>kavuri:</b></font>   at /home/kavuri/hmc/hmc-server/node_modules/sails-mongo/lib/collection.js:80:28<br/>
+<font color="#A82F2F"><font size="2">(01:52:11 PM)</font> <b>kavuri:</b></font> beardtree: I updated to the latest, but I still get the same error<br/>
+<font color="#A82F2F"><font size="2">(01:53:18 PM)</font> <b>kavuri:</b></font> now, its not about groupBy not available, but rather about the call to &apos;map&apos; of undefined<br/>
+<font color="#A82F2F"><font size="2">(01:59:45 PM)</font> <b>kavuri:</b></font> any help?<br/>
+<font color="#A82F2F"><font size="2">(02:00:21 PM)</font> <b>da_wunder:</b></font> sorry haven&apos;t seen that<br/>
+<font color="#A82F2F"><font size="2">(02:00:33 PM)</font> <b>da_wunder:</b></font> create an issue about that to github<br/>
+<font color="#A82F2F"><font size="2">(02:00:47 PM)</font> <b>kavuri:</b></font> da_wunder: what would be the syntax for groupBy?<br/>
+<font color="#A82F2F"><font size="2">(02:01:01 PM)</font> <b>da_wunder:</b></font> don&apos;t haven&apos;t used that<br/>
+<font color="#A82F2F"><font size="2">(02:02:19 PM)</font> <b>da_wunder:</b></font> kavuri: https://github.com/balderdashy/waterline/issues/435<br/>
+<font color="#A82F2F"><font size="2">(02:03:00 PM)</font> <b>kavuri:</b></font> da_wunder: thanks. Got the same issue<br/>
+<font color="#A82F2F"><font size="2">(02:03:33 PM)</font> <b>da_wunder:</b></font> add comment to that one and lets hope that someone answers<br/>
+<font color="#A82F2F"><font size="2">(02:03:59 PM)</font> <b>kavuri:</b></font> da_wunder: added<br/>
+<font color="#A82F2F"><font size="2">(02:19:53 PM)</font> <b>robdubya_:</b></font> that&apos;s probably not going to work<br/>
+<font color="#A82F2F"><font size="2">(02:20:05 PM)</font> <b>robdubya_:</b></font> think about it - a groupBy changes the entire structure of the returned data<br/>
+<font color="#A82F2F"><font size="2">(02:20:27 PM)</font> <b>robdubya_:</b></font> its more or less the same if you were to do a raw mongo aggregate<br/>
+<font size="2">(02:36:40 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:06:05 PM)</font> <b>natebunnyfield:</b></font> is there any way to query another model’s attributes in a custom instance method? I am new to this, but it seems like a callback might be necessary to do this.<br/>
+<font color="#A82F2F"><font size="2">(03:07:12 PM)</font> <b>natebunnyfield:</b></font> (and it seems custom instance methods don’t accept callbacks.)<br/>
+<font color="#A82F2F"><font size="2">(03:13:46 PM)</font> <b>Jules`:</b></font> anyone know how to query Waterline for a value that exists?<br/>
+<font color="#A82F2F"><font size="2">(03:13:49 PM)</font> <b>Jules`:</b></font> I&apos;m looking at this page: https://github.com/balderdashy/waterline-docs/blob/master/query-language.md<br/>
+<font color="#A82F2F"><font size="2">(03:14:09 PM)</font> <b>Jules`:</b></font> I want the equivalent for the Mongo {$exists:  {field:1}{ query<br/>
+<font color="#A82F2F"><font size="2">(03:14:36 PM)</font> <b>Jules`:</b></font> http://docs.mongodb.org/manual/reference/operator/query/exists/<br/>
+<font color="#A82F2F"><font size="2">(03:14:46 PM)</font> <b>Jules`:</b></font> it&apos;s actually { field: { $exists: &lt;boolean&gt; } }<br/>
+<font color="#A82F2F"><font size="2">(03:34:14 PM)</font> <b>natebunnyfield:</b></font> tried querying with a callback method instead of deferred… still no dice.<br/>
+<font color="#A82F2F"><font size="2">(03:56:24 PM)</font> <b>morenoh149:</b></font> anyone know how to do this in node? http://codeartists.com/post/36892733572/how-to-directly-upload-files-to-amazon-s3-from-your<br/>
+<font color="#A82F2F"><font size="2">(04:46:15 PM)</font> <b>morenoh149:</b></font> where are the docs for cors in sails 0.10.x<br/>
+<font color="#A82F2F"><font size="2">(04:46:17 PM)</font> <b>morenoh149:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(04:46:30 PM)</font> <b>morenoh149:</b></font> this was for 0.9.x https://github.com/balderdashy/sails-docs/blob/0.9/config.cors.md<br/>
+<font color="#A82F2F"><font size="2">(04:52:44 PM)</font> <b>morenoh149:</b></font> found it http://beta.sailsjs.org/#/documentation/reference/Configuration/Routes.html<br/>
+<font color="#A82F2F"><font size="2">(04:53:14 PM)</font> <b>morenoh149:</b></font> had to use githubs search feature to search through the repo holding the 0.10 docs<br/>
+<font color="#A82F2F"><font size="2">(04:56:56 PM)</font> <b>morenoh149:</b></font> https://github.com/balderdashy/sails-docs/blob/08b3b7b0b3b8652d23ee449ac79278d711075365/config.cors.md<br/>
+<font color="#A82F2F"><font size="2">(05:06:25 PM)</font> <b>robdubya_:</b></font> waterline + angular = http://embed.plnkr.co/M5MiihM06t0lQjhLTTRC/preview<br/>
+<font size="2">(05:53:25 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

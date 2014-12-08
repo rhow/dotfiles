@@ -1,0 +1,698 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 25 Mar 2014 09:52:42 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 25 Mar 2014 09:52:42 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:52:42 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font size="2">(09:53:13 AM)</font><b> flaiks [<em>~flaiks@dhcp-108-170-160-20.cable.user.start.ca</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(09:53:16 AM)</font> <b>flaiks:</b></font> ello<br/>
+<font size="2">(09:53:36 AM)</font><b> hugeaim left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(09:53:45 AM)</font><b> huafu left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(09:54:12 AM)</font> <b>flaiks:</b></font> im having problems saving a model using backbone(ajax) that has a one to many association, I push the attribute as an array of ids and it update successfully<br/>
+<font color="#A82F2F"><font size="2">(09:54:24 AM)</font> <b>flaiks:</b></font> but then i view the models, the  one-to-many field is empty!<br/>
+<font color="#A82F2F"><font size="2">(09:55:47 AM)</font> <b>flaiks:</b></font> wait, i may know why it’s not working lol<br/>
+<font size="2">(09:56:52 AM)</font><b> jetfault [<em>~jetfault@207.198.106.18</em>] entered the room.</b><br/>
+<font size="2">(09:58:11 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(09:59:05 AM)</font><b> [A3G1S] [<em>~A3G1S]@124.125.22.20</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(09:59:18 AM)</font> <b>flaiks:</b></font> i am attemping to associate the wrong model lol<br/>
+<font size="2">(09:59:57 AM)</font><b> fiction [<em>~fiction@c-67-164-18-151.hsd1.ca.comcast.net</em>] entered the room.</b><br/>
+<font size="2">(10:01:51 AM)</font><b> _jeroengerits left the room (quit: Quit: My MacBook has gone to sleep. ZZZzzz…).</b><br/>
+<font size="2">(10:02:16 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font size="2">(10:02:27 AM)</font><b> huafu [<em>~huafu@ppp-27-55-159-54.revip3.asianet.co.th</em>] entered the room.</b><br/>
+<font size="2">(10:02:33 AM)</font><b> Es0teric_ [<em>~Es0teric@cpe-98-14-255-163.nyc.res.rr.com</em>] entered the room.</b><br/>
+<font size="2">(10:03:18 AM)</font><b> frostig [<em>~frostig@c-2631e155.1026-1-64736c10.cust.bredbandsbolaget.se</em>] entered the room.</b><br/>
+<font size="2">(10:03:57 AM)</font><b> Es0teric left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font size="2">(10:04:14 AM)</font><b> [A3G1S] left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font size="2">(10:06:00 AM)</font><b> frostig left the room (quit: Read error: Operation timed out).</b><br/>
+<font size="2">(10:07:53 AM)</font><b> bmac left the room (quit: Quit: My MacBook Pro has gone to sleep. ZZZzzz…).</b><br/>
+<font size="2">(10:17:14 AM)</font><b> evotuned [<em>~evotuned@ip68-99-129-84.ph.ph.cox.net</em>] entered the room.</b><br/>
+<font size="2">(10:18:24 AM)</font><b> evotuned left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(10:18:35 AM)</font><b> evotuned [<em>~evotuned@ip68-99-129-84.ph.ph.cox.net</em>] entered the room.</b><br/>
+<font size="2">(10:20:56 AM)</font><b> maremp left the room (quit: Quit: maremp).</b><br/>
+<font size="2">(10:22:49 AM)</font><b> illizian [<em>~illizian@host-92-26-50-91.as13285.net</em>] entered the room.</b><br/>
+<font size="2">(10:23:04 AM)</font><b> wedgwood left the room (quit: Quit: Leaving.).</b><br/>
+<font size="2">(10:27:24 AM)</font><b> evotuned left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(10:39:04 AM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(10:39:52 AM)</font><b> kbz [<em>~J@c-71-204-169-12.hsd1.ca.comcast.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(10:40:15 AM)</font> <b>flaiks:</b></font> hmm<br/>
+<font size="2">(10:40:20 AM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(10:40:22 AM)</font> <b>flaiks:</b></font> okay so now I am associating the proper one<br/>
+<font color="#A82F2F"><font size="2">(10:40:42 AM)</font> <b>illizian:</b></font> Anyone else had an issue where the destroy function doesn&apos;t callback or do anything<br/>
+<font color="#A82F2F"><font size="2">(10:40:54 AM)</font> <b>illizian:</b></font> just hangs! In 10-rc4<br/>
+<font size="2">(10:43:14 AM)</font><b> oscargodson [<em>~oscargods@ec2-54-193-11-223.us-west-1.compute.amazonaws.com</em>] entered the room.</b><br/>
+<font size="2">(10:44:30 AM)</font><b> bmac left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(10:45:21 AM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(10:47:10 AM)</font><b> Es0teric_ left the room (quit: Quit: Computer has gone to sleep.).</b><br/>
+<font size="2">(10:49:54 AM)</font><b> dweaver06 [<em>~dweaver@75-148-25-17-WashingtonDC.hfc.comcastbusiness.net</em>] entered the room.</b><br/>
+<font size="2">(10:49:57 AM)</font><b> fiction left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(10:50:44 AM)</font><b> bmac left the room (quit: Quit: My MacBook Pro has gone to sleep. ZZZzzz…).</b><br/>
+<font color="#A82F2F"><font size="2">(10:50:48 AM)</font> <b>dweaver06:</b></font> Hey guys have a noob question which i’m sure is being asked a lot but I’m having trouble finding definitive infor:  What is statys of associations in waterline?<br/>
+<font color="#A82F2F"><font size="2">(10:50:58 AM)</font> <b>dweaver06:</b></font> *status<br/>
+<font size="2">(10:51:20 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(10:51:55 AM)</font><b> DrShoggoth [<em>~prakwtf@68-188-85-162.static.stls.mo.charter.com</em>] entered the room.</b><br/>
+<font size="2">(10:53:46 AM)</font><b> cojack [<em>~quassel@89-71-30-74.dynamic.chello.pl</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(10:53:56 AM)</font> <b>dweaver06:</b></font> specifically for postgres<br/>
+<font color="#A82F2F"><font size="2">(10:54:11 AM)</font> <b>cojack:</b></font> yo guys<br/>
+<font color="#A82F2F"><font size="2">(10:54:20 AM)</font> <b>cojack:</b></font> how to write own validator for model?<br/>
+<font size="2">(10:54:21 AM)</font><b> maremp left the room (quit: Quit: maremp).</b><br/>
+<font size="2">(10:55:24 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font size="2">(10:55:35 AM)</font><b> Es0teric [<em>~Es0teric@cpe-98-14-255-163.nyc.res.rr.com</em>] entered the room.</b><br/>
+<font size="2">(10:55:40 AM)</font><b> sailias left the room (quit: Ping timeout: 246 seconds).</b><br/>
+<font size="2">(10:56:17 AM)</font><b> [A3G1S] [<em>~A3G1S]@182.64.196.82</em>] entered the room.</b><br/>
+<font size="2">(10:57:57 AM)</font><b> k03ll [<em>~galactica@91.141.3.3.wireless.dyn.drei.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(10:58:00 AM)</font> <b>cojack:</b></font> guys how this event beforeValidation works?<br/>
+<font size="2">(10:58:03 AM)</font><b> sailias [<em>~Sailias@192.75.165.69</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(10:58:08 AM)</font> <b>cojack:</b></font> what do I need to return?<br/>
+<font size="2">(10:58:08 AM)</font><b> fiction [<em>~fiction@2601:9:3680:6c6:cd34:9a8c:59dd:7943</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:01:17 AM)</font> <b>robdubya:</b></font> the status of associations is that its in beta<br/>
+<font color="#A82F2F"><font size="2">(11:02:20 AM)</font> <b>dweaver06:</b></font> thank you robduya<br/>
+<font size="2">(11:02:21 AM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:05:09 AM)</font> <b>robdubya:</b></font> dweaver06 keep it in ehre so everybody benefits<br/>
+<font color="#A82F2F"><font size="2">(11:05:42 AM)</font> <b>robdubya:</b></font> if you&apos;re starting a new project, i&apos;d be using the beta<br/>
+<font color="#A82F2F"><font size="2">(11:06:00 AM)</font> <b>dweaver06:</b></font> oh sorry<br/>
+<font color="#A82F2F"><font size="2">(11:06:06 AM)</font> <b>dweaver06:</b></font> ok thank you<br/>
+<font color="#A82F2F"><font size="2">(11:06:07 AM)</font> <b>robdubya:</b></font> rather than trying to work around something that will be likely be released before you&apos;re done<br/>
+<font color="#A82F2F"><font size="2">(11:06:17 AM)</font> <b>robdubya:</b></font> its fairly stable atm<br/>
+<font color="#A82F2F"><font size="2">(11:06:44 AM)</font> <b>robdubya:</b></font> (no worries on the PM, its just inevitably people are gonna ask the same question!)<br/>
+<font color="#A82F2F"><font size="2">(11:06:58 AM)</font> <b>dweaver06:</b></font> gotcha thanks<br/>
+<font color="#A82F2F"><font size="2">(11:07:05 AM)</font> <b>dweaver06:</b></font> so this branch? https://github.com/balderdashy/sails/tree/beta<br/>
+<font size="2">(11:07:14 AM)</font><b> fiction left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(11:07:18 AM)</font> <b>robdubya:</b></font> yeah you can just do npm install sails@beta -g<br/>
+<font color="#A82F2F"><font size="2">(11:07:23 AM)</font> <b>dweaver06:</b></font> awesome<br/>
+<font color="#A82F2F"><font size="2">(11:07:34 AM)</font> <b>robdubya:</b></font> ditto for the pg adapter<br/>
+<font color="#A82F2F"><font size="2">(11:07:42 AM)</font> <b>robdubya:</b></font> npm install sails-postgresql@beta -g<br/>
+<font color="#A82F2F"><font size="2">(11:07:51 AM)</font> <b>dweaver06:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(11:08:00 AM)</font> <b>dweaver06:</b></font> is waterline installed with sails?<br/>
+<font color="#A82F2F"><font size="2">(11:08:04 AM)</font> <b>robdubya:</b></font> yup<br/>
+<font color="#A82F2F"><font size="2">(11:08:40 AM)</font> <b>dweaver06:</b></font> thanks again. I’m sure I’l be back!<br/>
+<font size="2">(11:09:14 AM)</font><b> jetfault left the room (quit: Ping timeout: 265 seconds).</b><br/>
+<font size="2">(11:11:34 AM)</font><b> frostig [<em>~frostig@c-2631e155.1026-1-64736c10.cust.bredbandsbolaget.se</em>] entered the room.</b><br/>
+<font size="2">(11:15:59 AM)</font><b> just-paja_ left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font size="2">(11:16:02 AM)</font><b> k03ll left the room (quit: Quit: So say we all!).</b><br/>
+<font size="2">(11:19:59 AM)</font><b> jkdev [<em>~jkdev@157.166.175.129</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:22:58 AM)</font> <b>cojack:</b></font> in docs, I guess is missing in models info about types<br/>
+<font color="#A82F2F"><font size="2">(11:23:26 AM)</font> <b>cojack:</b></font> or just send user to the waterline docs<br/>
+<font color="#A82F2F"><font size="2">(11:23:45 AM)</font> <b>cojack:</b></font> because sailsjs.org docs about models is out of date<br/>
+<font size="2">(11:27:22 AM)</font><b> Fervicus_ [<em>~hanif@lns4-pool2-181.adsl.user.start.ca</em>] entered the room.</b><br/>
+<font size="2">(11:29:32 AM)</font><b> Es0teric left the room (quit: Ping timeout: 265 seconds).</b><br/>
+<font size="2">(11:30:36 AM)</font><b> Fervicus left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font size="2">(11:31:13 AM)</font><b> aitiba [<em>~aitiba@232.209.16.95.dynamic.jazztel.es</em>] entered the room.</b><br/>
+<font size="2">(11:31:13 AM)</font><b> aitiba left the room (quit: Changing host).</b><br/>
+<font size="2">(11:31:13 AM)</font><b> aitiba [<em>~aitiba@unaffiliated/aitiba</em>] entered the room.</b><br/>
+<font size="2">(11:34:14 AM)</font><b> jetfault [<em>~jetfault@nat/yahoo/x-veiajlkfxmrpyqmw</em>] entered the room.</b><br/>
+<font size="2">(11:35:29 AM)</font><b> illizian left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(11:35:39 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(11:35:57 AM)</font><b> Scrunshes [<em>~Scrunshes@tri69-6-78-226-212-248.fbx.proxad.net</em>] entered the room.</b><br/>
+<font size="2">(11:41:38 AM)</font><b> Secretmapper left the room (quit: Quit: Leaving).</b><br/>
+<font size="2">(11:41:39 AM)</font><b> wedgwood [<em>~mw@38.122.48.218</em>] entered the room.</b><br/>
+<font size="2">(11:43:07 AM)</font><b> Scrunshes_ [<em>~Scrunshes@tri69-6-78-226-212-248.fbx.proxad.net</em>] entered the room.</b><br/>
+<font size="2">(11:43:09 AM)</font><b> Scrunshes left the room (quit: Quit: Leaving).</b><br/>
+<font size="2">(11:43:11 AM)</font><b> Scrunshes_ left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(11:43:12 AM)</font><b> dweaver06 left the room.</b><br/>
+<font size="2">(11:43:29 AM)</font><b> Scrunshes [<em>~Scrunshes@tri69-6-78-226-212-248.fbx.proxad.net</em>] entered the room.</b><br/>
+<font size="2">(11:43:40 AM)</font><b> n8n [<em>~n8n@c-69-181-104-122.hsd1.ca.comcast.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:46:28 AM)</font> <b>robdubya:</b></font> beta.sailsjs.org<br/>
+<font color="#A82F2F"><font size="2">(11:46:35 AM)</font> <b>robdubya:</b></font> @cojack<br/>
+<font size="2">(11:46:35 AM)</font><b> jetfault_ [<em>~jetfault@nat/yahoo/x-xhehrurtanqlduci</em>] entered the room.</b><br/>
+<font size="2">(11:47:28 AM)</font><b> jetfault left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(11:47:37 AM)</font> <b>cojack:</b></font> robdubya: still missing types as it&apos;s described in waterline<br/>
+<font color="#A82F2F"><font size="2">(11:47:54 AM)</font> <b>cojack:</b></font> robdubya: https://github.com/balderdashy/waterline ctrl+f types<br/>
+<font color="#A82F2F"><font size="2">(11:48:09 AM)</font> <b>cojack:</b></font> exactly it&apos;s Custom Types<br/>
+<font color="#A82F2F"><font size="2">(11:48:37 AM)</font> <b>cojack:</b></font> and it wrong name, it should be custom validator types or just custom validators<br/>
+<font color="#A82F2F"><font size="2">(11:48:45 AM)</font> <b>cojack:</b></font> wrong named*<br/>
+<font color="#A82F2F"><font size="2">(11:49:11 AM)</font> <b>cojack:</b></font> as type you can say string, integer, double, float etc...<br/>
+<font color="#A82F2F"><font size="2">(11:49:30 AM)</font> <b>cojack:</b></font> minLength or notEmpty is validator type<br/>
+<font color="#A82F2F"><font size="2">(11:50:28 AM)</font> <b>robdubya:</b></font> wat are you talking about<br/>
+<font size="2">(11:50:39 AM)</font><b> wedgwood1 [<em>~mw@38.122.48.218</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:53:10 AM)</font> <b>robdubya:</b></font> see also https://github.com/balderdashy/waterline-docs/blob/master/models.md<br/>
+<font size="2">(11:53:30 AM)</font><b> wedgwood left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(11:54:33 AM)</font><b> evotuned [<em>~evotuned@172.56.31.56</em>] entered the room.</b><br/>
+<font size="2">(11:56:50 AM)</font><b> glenselle [<em>~glenselle@108-253-125-102.lightspeed.stlsmo.sbcglobal.net</em>] entered the room.</b><br/>
+<font size="2">(11:57:26 AM)</font><b> RWOverdijk [<em>~RWOverdij@195-240-235-226.ip.telfort.nl</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:04:58 PM)</font> <b>delight:</b></font> http://beta.sailsjs.org/#!documentation/reference/ModelProperties/attributes.html + http://beta.sailsjs.org/#!documentation/reference/ModelProperties/Validations.html<br/>
+<font size="2">(12:06:04 PM)</font><b> evotuned left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(12:06:21 PM)</font><b> evotuned [<em>~evotuned@172.56.31.56</em>] entered the room.</b><br/>
+<font size="2">(12:17:34 PM)</font><b> huafu left the room (quit: Ping timeout: 246 seconds).</b><br/>
+<font size="2">(12:19:32 PM)</font><b> huafu [<em>~huafu@ppp-27-55-159-54.revip3.asianet.co.th</em>] entered the room.</b><br/>
+<font size="2">(12:19:51 PM)</font><b> Fervicus_ left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(12:20:42 PM)</font><b> Fervicus_ [<em>~hanif@Adelaide.securitycompass.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:24:50 PM)</font> <b>cojack:</b></font> delight: +1<br/>
+<font size="2">(12:25:09 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(12:25:44 PM)</font><b> bmac left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font color="#A82F2F"><font size="2">(12:27:02 PM)</font> <b>flaiks:</b></font> are there any articles on rest auth for blueprints ?<br/>
+<font color="#A82F2F"><font size="2">(12:28:25 PM)</font> <b>flaiks:</b></font> or can I just extend the blueprints to check for a session var ?<br/>
+<font size="2">(12:28:42 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:28:44 PM)</font> <b>flaiks:</b></font> as of right now, anyone can make post requests and create items, not good.<br/>
+<font size="2">(12:30:55 PM)</font><b> leepers41 left the room (quit: Ping timeout: 265 seconds).</b><br/>
+<font size="2">(12:31:53 PM)</font><b> huafu left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(12:31:53 PM)</font> <b>robdubya:</b></font> flaiks this is what pollices are for<br/>
+<font color="#A82F2F"><font size="2">(12:32:04 PM)</font> <b>robdubya:</b></font> the blueprint / andor controllers should be the last link in a chain<br/>
+<font color="#A82F2F"><font size="2">(12:32:12 PM)</font> <b>cojack:</b></font> uhm beforeCreate doesn&apos;t seems to be fired when I do POST on User model<br/>
+<font size="2">(12:32:28 PM)</font><b> jkdev left the room (quit: Quit: jkdev).</b><br/>
+<font color="#A82F2F"><font size="2">(12:32:31 PM)</font> <b>flaiks:</b></font> ah okay<br/>
+<font color="#A82F2F"><font size="2">(12:32:44 PM)</font> <b>flaiks:</b></font> i will have to figure out how to get backbone to send session data<br/>
+<font size="2">(12:32:51 PM)</font><b> rishy [<em>uid14633@gateway/web/irccloud.com/x-nnyoubiqdafzmhmk</em>] entered the room.</b><br/>
+<font size="2">(12:33:04 PM)</font><b> mikehostetler [<em>~mhostetle@c-67-184-231-81.hsd1.il.comcast.net</em>] entered the room.</b><br/>
+<font size="2">(12:34:47 PM)</font><b> fiction [<em>~fiction@74.120.190.9</em>] entered the room.</b><br/>
+<font size="2">(12:36:04 PM)</font><b> huafu [<em>~huafu@ppp-27-55-159-54.revip3.asianet.co.th</em>] entered the room.</b><br/>
+<font size="2">(12:36:53 PM)</font><b> makenai [<em>~Adium@ip70-170-9-45.lv.lv.cox.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:37:17 PM)</font> <b>makenai:</b></font> Oooh. Hi. I wasn&apos;t expecting this many people in here.<br/>
+<font color="#A82F2F"><font size="2">(12:37:37 PM)</font> <b>robdubya:</b></font> hello<br/>
+<font size="2">(12:37:42 PM)</font><b> HeN left the room (quit: Quit: Connection closed for inactivity).</b><br/>
+<font color="#A82F2F"><font size="2">(12:38:21 PM)</font> <b>cojack:</b></font> maybe some one will know why beforeCreate might not be called when I do POST on User model?<br/>
+<font color="#A82F2F"><font size="2">(12:39:12 PM)</font> <b>makenai:</b></font> I&apos;m trying to figure out the behavior of the /min/ route in production - ie, /min/production.css, but can&apos;t seem to locate where it lives in the sails codebase. Anyone know off hand?<br/>
+<font color="#A82F2F"><font size="2">(12:39:53 PM)</font> <b>robdubya:</b></font> cojack you probably dont have it defined properly. paste the model somewehre<br/>
+<font color="#A82F2F"><font size="2">(12:40:50 PM)</font> <b>cojack:</b></font> robdubya: http://paste.kde.org/ppldgk5zg<br/>
+<font color="#A82F2F"><font size="2">(12:41:40 PM)</font> <b>rawtaz:</b></font> makenai: get used to it ;P<br/>
+<font color="#A82F2F"><font size="2">(12:42:47 PM)</font> <b>makenai:</b></font> rawtaz: Yes, it&apos;s a bit magical. I guess right now I want to make sure it&apos;s not doing anything costly like recompiling assets every time it is hit. Later, I want to statically compile the assets for production.<br/>
+<font color="#A82F2F"><font size="2">(12:43:18 PM)</font> <b>rawtaz:</b></font> makenai: oh, i meant the number of p33ps in the room<br/>
+<font color="#A82F2F"><font size="2">(12:43:27 PM)</font> <b>robdubya:</b></font> cojack yeah - the lifecycle callbacks should be at the top level<br/>
+<font color="#A82F2F"><font size="2">(12:43:30 PM)</font> <b>robdubya:</b></font> not insdie in the attrs block<br/>
+<font color="#A82F2F"><font size="2">(12:43:36 PM)</font> <b>makenai:</b></font> rawtaz: Oh oh. Sure. Sorry. :)<br/>
+<font color="#A82F2F"><font size="2">(12:43:46 PM)</font> <b>cojack:</b></font> robdubya: how stupid Im<br/>
+<font color="#A82F2F"><font size="2">(12:43:54 PM)</font> <b>robdubya:</b></font> happens :)<br/>
+<font color="#A82F2F"><font size="2">(12:43:59 PM)</font> <b>cojack:</b></font> i don&apos;t figure it out, sorry dude<br/>
+<font color="#A82F2F"><font size="2">(12:44:04 PM)</font> <b>flaiks:</b></font> cojack: i’ve done stuff like that too, like defining my adapter inside the attributes<br/>
+<font color="#A82F2F"><font size="2">(12:44:05 PM)</font> <b>robdubya:</b></font> wtf is a pesel, btw?<br/>
+<font size="2">(12:44:15 PM)</font><b> leepers41 [<em>~lrosen@96.45.198.106</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:44:17 PM)</font> <b>robdubya:</b></font> makenai the basic process :<br/>
+<font color="#A82F2F"><font size="2">(12:44:18 PM)</font> <b>cojack:</b></font> robdubya: it&apos;s a ID of person<br/>
+<font color="#A82F2F"><font size="2">(12:44:33 PM)</font> <b>robdubya:</b></font> when you lift, sails runs the grunt tasks, and compiles it to the .tmp folder<br/>
+<font color="#A82F2F"><font size="2">(12:44:39 PM)</font> <b>robdubya:</b></font> thats where the assets are served from<br/>
+<font color="#A82F2F"><font size="2">(12:44:50 PM)</font> <b>robdubya:</b></font> so its not gonna recompile errytime<br/>
+<font color="#A82F2F"><font size="2">(12:45:43 PM)</font> <b>makenai:</b></font> robdubya: Ah, good to know. I saw references to this in the Gruntfile, but wasn&apos;t sure. I&apos;ll investigate that - thanks!<br/>
+<font color="#A82F2F"><font size="2">(12:45:52 PM)</font> <b>cojack:</b></font> robdubya: works as well, thx ;)<br/>
+<font color="#A82F2F"><font size="2">(12:46:03 PM)</font> <b>cojack:</b></font> I mean, it works :D<br/>
+<font color="#A82F2F"><font size="2">(12:46:06 PM)</font> <b>robdubya:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(12:48:12 PM)</font> <b>Miguel_:</b></font> Hi all I am learning how to make tests and i follow this doc to use supertest with sails https://github.com/balderdashy/sails/issues/797 , but i getting error: sails is not defined in sails.simple.js (i think its normal ) how can i solve it? (Sorry for the dummy question...)<br/>
+<font size="2">(12:50:35 PM)</font><b> Fervicus_ left the room (quit: Quit: WeeChat 0.4.3).</b><br/>
+<font size="2">(12:52:47 PM)</font><b> bmac left the room (quit: Quit: My MacBook Pro has gone to sleep. ZZZzzz…).</b><br/>
+<font size="2">(12:53:05 PM)</font><b> UniBot [<em>~UniBot@unaffiliated/proloser/bot/unibot</em>] entered the room.</b><br/>
+<font size="2">(12:54:15 PM)</font><b> Miguel_ is now known as MGDSoft</b><br/>
+<font size="2">(01:14:54 PM)</font><b> huafu left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(01:21:08 PM)</font><b> tskaggs_ [<em>~tskaggs@251.sub-70-198-129.myvzw.com</em>] entered the room.</b><br/>
+<font size="2">(01:23:58 PM)</font><b> cojack left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(01:24:38 PM)</font><b> tskaggs left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font size="2">(01:31:01 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(01:31:34 PM)</font><b> tskaggs [<em>~tskaggs@251.sub-70-198-129.myvzw.com</em>] entered the room.</b><br/>
+<font size="2">(01:32:21 PM)</font><b> evotuned left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(01:34:43 PM)</font><b> tskaggs_ left the room (quit: Ping timeout: 265 seconds).</b><br/>
+<font size="2">(01:35:44 PM)</font><b> oscargodson left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font size="2">(01:40:58 PM)</font><b> _jeroengerits [<em>~textual@dhcp-077-248-218-008.chello.nl</em>] entered the room.</b><br/>
+<font size="2">(01:41:23 PM)</font><b> mikehostetler left the room (quit: Quit: mikehostetler).</b><br/>
+<font size="2">(01:49:34 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font size="2">(01:49:50 PM)</font><b> fiction left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(01:50:04 PM)</font><b> adifah [<em>~iDent@p50921DF8.dip0.t-ipconnect.de</em>] entered the room.</b><br/>
+<font size="2">(01:51:42 PM)</font><b> Sojourner [<em>a7f63d03@gateway/web/freenode/ip.167.246.61.3</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(01:52:20 PM)</font> <b>Sojourner:</b></font> Hey folks. So I&apos;ve got a sailsjs application going on into beta this week :)<br/>
+<font size="2">(01:53:00 PM)</font><b> RWOverdijk left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font size="2">(01:53:36 PM)</font><b> tskaggs_ [<em>~tskaggs@c-98-212-24-33.hsd1.in.comcast.net</em>] entered the room.</b><br/>
+<font size="2">(01:55:00 PM)</font><b> bmac left the room (quit: Quit: My MacBook Pro has gone to sleep. ZZZzzz…).</b><br/>
+<font size="2">(01:55:53 PM)</font><b> RWOverdijk [<em>~RWOverdij@195-240-235-226.ip.telfort.nl</em>] entered the room.</b><br/>
+<font size="2">(01:56:37 PM)</font><b> tskaggs left the room (quit: Ping timeout: 246 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(01:57:50 PM)</font> <b>MGDSoft:</b></font> n1 Sojourner<br/>
+<font color="#A82F2F"><font size="2">(01:58:06 PM)</font> <b>MGDSoft:</b></font> its open source?<br/>
+<font color="#A82F2F"><font size="2">(01:58:32 PM)</font> <b>Sojourner:</b></font> Nah, its a corporate app. Its going to be used in a &apos;banking&apos; situation<br/>
+<font color="#A82F2F"><font size="2">(02:00:04 PM)</font> <b>MGDSoft:</b></font> aahh ok : ) diverted the funds to your account then<br/>
+<font size="2">(02:00:17 PM)</font><b> [A3G1S] left the room (quit: Quit: Quit).</b><br/>
+<font color="#A82F2F"><font size="2">(02:00:23 PM)</font> <b>Drako:</b></font> hey there  anyone else expierencing that waterline isn&apos;t auto casting  ints to string or vice versa<br/>
+<font size="2">(02:04:26 PM)</font><b> brolin left the room (quit: Quit: leaving).</b><br/>
+<font size="2">(02:06:47 PM)</font><b> lenswipe [<em>~lenswipe@95.146.72.105</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:06:52 PM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font size="2">(02:06:53 PM)</font><b> fiction [<em>~fiction@74.120.190.9</em>] entered the room.</b><br/>
+<font size="2">(02:07:00 PM)</font><b> oscargodson [<em>~oscargods@ec2-54-193-11-223.us-west-1.compute.amazonaws.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:08:10 PM)</font> <b>rawtaz:</b></font> hi Len! =D<br/>
+<font color="#062585"><font size="2">(02:08:13 PM)</font> <b>***rawtaz</b></font> waves<br/>
+<font size="2">(02:08:34 PM)</font><b> IrishGringo [<em>~chatzilla@c-50-181-104-90.hsd1.md.comcast.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:08:44 PM)</font> <b>Sojourner:</b></font> MGDSoft I wish. Its a startup :D<br/>
+<font color="#A82F2F"><font size="2">(02:08:47 PM)</font> <b>lenswipe:</b></font> hey rawtaz<br/>
+<font color="#A82F2F"><font size="2">(02:08:58 PM)</font> <b>lenswipe:</b></font> does anyone know how to make grunt watch my scss?<br/>
+<font color="#A82F2F"><font size="2">(02:09:17 PM)</font> <b>Sojourner:</b></font> Is there a release date for 0.10?<br/>
+<font color="#A82F2F"><font size="2">(02:09:26 PM)</font> <b>Sojourner:</b></font> Proposed, projected, or otherwise?<br/>
+<font color="#A82F2F"><font size="2">(02:10:01 PM)</font> <b>rawtaz:</b></font> lenswipe: sure, add a watch task<br/>
+<font color="#A82F2F"><font size="2">(02:10:10 PM)</font> <b>lenswipe:</b></font> rawtaz, yeah, I don&apos;t know how<br/>
+<font color="#A82F2F"><font size="2">(02:10:22 PM)</font> <b>rawtaz:</b></font> didnt i give you an example from my Gruntfile the other day?<br/>
+<font color="#A82F2F"><font size="2">(02:10:41 PM)</font> <b>lenswipe:</b></font> you did and I couldn&apos;t get it to work<br/>
+<font color="#A82F2F"><font size="2">(02:10:42 PM)</font> <b>lenswipe:</b></font> http://pastebin.com/dK4B1vf1<br/>
+<font color="#A82F2F"><font size="2">(02:10:45 PM)</font> <b>lenswipe:</b></font> that&apos;s my watch.js file<br/>
+<font color="#A82F2F"><font size="2">(02:10:53 PM)</font> <b>rawtaz:</b></font> ok, how does it not work?<br/>
+<font color="#A82F2F"><font size="2">(02:11:04 PM)</font> <b>lenswipe:</b></font> can&apos;t remember - i reverted it so that i could lift my app<br/>
+<font color="#A82F2F"><font size="2">(02:11:08 PM)</font> <b>rawtaz:</b></font> mhm<br/>
+<font color="#A82F2F"><font size="2">(02:11:13 PM)</font> <b>rawtaz:</b></font> well do you have my paste?<br/>
+<font color="#A82F2F"><font size="2">(02:11:17 PM)</font> <b>lenswipe:</b></font> not anymore<br/>
+<font color="#A82F2F"><font size="2">(02:11:45 PM)</font> <b>rawtaz:</b></font> it&apos;s at http://pastebin.mozilla.org/4682634<br/>
+<font size="2">(02:11:49 PM)</font><b> wdent_ left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(02:12:09 PM)</font> <b>lenswipe:</b></font> ignore everything i just said<br/>
+<font color="#A82F2F"><font size="2">(02:12:13 PM)</font> <b>lenswipe:</b></font> it seems to be working now, somehow<br/>
+<font color="#A82F2F"><font size="2">(02:12:15 PM)</font> <b>lenswipe:</b></font> O_o<br/>
+<font color="#A82F2F"><font size="2">(02:12:16 PM)</font> <b>rawtaz:</b></font> the css part is the one that watches scss files and triggers a few tasks when something changes<br/>
+<font color="#A82F2F"><font size="2">(02:12:19 PM)</font> <b>rawtaz:</b></font> ok<br/>
+<font size="2">(02:13:22 PM)</font><b> fiction left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(02:14:55 PM)</font><b> fiction [<em>~fiction@74.120.190.9</em>] entered the room.</b><br/>
+<font size="2">(02:15:24 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(02:16:21 PM)</font><b> bmac left the room (quit: Client Quit).</b><br/>
+<font size="2">(02:18:58 PM)</font><b> maremp left the room (quit: Quit: maremp).</b><br/>
+<font size="2">(02:25:37 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(02:25:42 PM)</font><b> HeN [<em>uid3747@gateway/web/irccloud.com/x-azybwrrtfvbrpxel</em>] entered the room.</b><br/>
+<font size="2">(02:29:05 PM)</font><b> cprodigy29 [<em>~cprodigy2@c-50-183-180-92.hsd1.co.comcast.net</em>] entered the room.</b><br/>
+<font size="2">(02:30:01 PM)</font><b> [A3G1S] [<em>~A3G1S]@182.64.196.82</em>] entered the room.</b><br/>
+<font size="2">(02:30:27 PM)</font><b> jon__ [<em>~jon@05475e08.skybroadband.com</em>] entered the room.</b><br/>
+<font size="2">(02:31:17 PM)</font><b> felixjet left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font size="2">(02:33:34 PM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font size="2">(02:35:48 PM)</font><b> [A3G1S] left the room (quit: Quit: Quit).</b><br/>
+<font color="#A82F2F"><font size="2">(02:37:48 PM)</font> <b>jon__:</b></font> Is it possible to use gulp in place of grunt?<br/>
+<font color="#A82F2F"><font size="2">(02:38:31 PM)</font> <b>jon__:</b></font> On github, it says I need to disable hooks?<br/>
+<font color="#A82F2F"><font size="2">(02:38:41 PM)</font> <b>maremp:</b></font> just a quick, unrelated thought: why are people still using pastebin when there is https://gist.github.com/ , which is way better imo<br/>
+<font size="2">(02:40:38 PM)</font><b> Sojourner left the room (quit: Ping timeout: 245 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(02:40:39 PM)</font> <b>MGDSoft:</b></font> because some questions are temporal<br/>
+<font color="#A82F2F"><font size="2">(02:40:58 PM)</font> <b>makenai:</b></font> Just like wormholes in space<br/>
+<font color="#A82F2F"><font size="2">(02:41:44 PM)</font> <b>MGDSoft:</b></font> How can i get var express from Sails to use in tests :S<br/>
+<font size="2">(02:44:50 PM)</font><b> feelfine left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(02:45:24 PM)</font><b> feelfine [<em>~feelfine@187.65.28.205</em>] entered the room.</b><br/>
+<font size="2">(02:48:22 PM)</font><b> danijel [<em>~danijel@dsl-hkibrasgw4-50dc4d-117.dhcp.inet.fi</em>] entered the room.</b><br/>
+<font size="2">(02:49:37 PM)</font><b> feelfine left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font size="2">(02:50:21 PM)</font><b> wdent [<em>~wdent@c-69-254-78-107.hsd1.ga.comcast.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:50:42 PM)</font> <b>robdubya:</b></font> jon__ its possible, but its not gonna be whole hell of lot of fun<br/>
+<font color="#A82F2F"><font size="2">(02:51:39 PM)</font> <b>rawtaz:</b></font> https://www.youtube.com/watch?v=4bM3Gut1hIk very interesting video if youre interested in reveng<br/>
+<font color="#A82F2F"><font size="2">(02:52:36 PM)</font> <b>jon__:</b></font> robdubya, out of interest, what was the rationale for selecting grunt initially?<br/>
+<font color="#A82F2F"><font size="2">(02:52:57 PM)</font> <b>robdubya:</b></font> i imagine because gulp didnt exist when sails was created<br/>
+<font size="2">(02:53:33 PM)</font><b> UniBot left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(02:53:40 PM)</font><b> wdent left the room (quit: Read error: Operation timed out).</b><br/>
+<font color="#A82F2F"><font size="2">(02:53:58 PM)</font> <b>rawtaz:</b></font> why do you want to use gulp instead of grunt?<br/>
+<font color="#A82F2F"><font size="2">(02:54:12 PM)</font> <b>rawtaz:</b></font> speaking of that, i wonder when there&apos;s a new major grunt coming up :)<br/>
+<font color="#A82F2F"><font size="2">(02:57:15 PM)</font> <b>MGDSoft:</b></font> I am doing a oublic port from https://github.com/fnakstad/angular-client-side-auth in sails, but i dont know, how can i use supertest with sails? here https://github.com/MGDSoft/sails_angular-client-side-auth/blob/master/test/policies/sails.simple.js sails.express.app is undefined<br/>
+<font size="2">(02:59:37 PM)</font><b> jetfault_ left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font size="2">(02:59:41 PM)</font><b> makenai left the room (quit: Quit: Leaving.).</b><br/>
+<font size="2">(02:59:43 PM)</font><b> jetfault [<em>~jetfault@nat/yahoo/x-barpodupywvnbulj</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:01:03 PM)</font> <b>robdubya:</b></font> damn you mikemcneil<br/>
+<font color="#A82F2F"><font size="2">(03:01:11 PM)</font> <b>robdubya:</b></font> stop changing shit out from under meeeeee<br/>
+<font size="2">(03:01:46 PM)</font><b> koell [<em>~galactica@91.141.3.3.wireless.dyn.drei.com</em>] entered the room.</b><br/>
+<font size="2">(03:04:52 PM)</font><b> sailias left the room (quit: Ping timeout: 246 seconds).</b><br/>
+<font size="2">(03:08:05 PM)</font><b> bmac left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font size="2">(03:09:29 PM)</font><b> duckbox left the room (quit: Quit: My iMac has gone to sleep. ZZZzzz…).</b><br/>
+<font size="2">(03:11:23 PM)</font><b> ddelrio1986 left the room (quit: Ping timeout: 265 seconds).</b><br/>
+<font size="2">(03:12:10 PM)</font><b> UniBot [<em>~UniBot@unaffiliated/proloser/bot/unibot</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:14:03 PM)</font> <b>robdubya:</b></font> jon__ i like gulp a lot, but it would be a non-trivial thing to plug it into sails<br/>
+<font size="2">(03:16:53 PM)</font><b> evotuned [<em>~evotuned@ip68-99-129-84.ph.ph.cox.net</em>] entered the room.</b><br/>
+<font size="2">(03:19:20 PM)</font><b> mikermcneil [<em>~mikermcne@cpe-72-179-43-116.austin.res.rr.com</em>] entered the room.</b><br/>
+<font size="2">(03:19:36 PM)</font><b> mode (+o mikermcneil) by ChanServ</b><br/>
+<font size="2">(03:20:30 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font size="2">(03:21:01 PM)</font><b> ponzicoder [<em>~ponzicode@cpe-72-179-43-116.austin.res.rr.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:23:22 PM)</font> <b>ponzicoder:</b></font> robydubya, I have a question about AngularSails when you have a moment.<br/>
+<font color="#A82F2F"><font size="2">(03:23:28 PM)</font> <b>robdubya:</b></font> go for it<br/>
+<font size="2">(03:23:38 PM)</font><b> samuelstiles left the room (quit: Quit: samuelstiles).</b><br/>
+<font color="#A82F2F"><font size="2">(03:26:09 PM)</font> <b>delight:</b></font> When generating a new project with sails 0.10rc4 i changed connection.example.js in a way that I replaced ‚/firehose‘ and ‚firehose’ with /todo and todo … shouldn’t it log something onto the console when I create / update / destroy an instance on another browser ?<br/>
+<font color="#A82F2F"><font size="2">(03:26:10 PM)</font> <b>ponzicoder:</b></font> When using the $add method on a model (&apos;user&apos;) in sails.  When the new model is added, should the publishUpdate within blueprints update the controller $scope such that it triggers the dirty checking and therefore renders any views associated with the $scope?<br/>
+<font color="#A82F2F"><font size="2">(03:26:14 PM)</font> <b>delight:</b></font> socket.get(&apos;/todo&apos; … is called<br/>
+<font color="#A82F2F"><font size="2">(03:26:27 PM)</font> <b>delight:</b></font> but socket.on(&apos;todo&apos;, … is not reached<br/>
+<font color="#A82F2F"><font size="2">(03:26:42 PM)</font> <b>delight:</b></font> should this work out of the box or am I missing something ?<br/>
+<font color="#A82F2F"><font size="2">(03:27:14 PM)</font> <b>robdubya:</b></font> ponzicoder so a bit of background first, so you understand wtf is happening here<br/>
+<font color="#A82F2F"><font size="2">(03:27:33 PM)</font> <b>robdubya:</b></font> a - angularSails is in major flux<br/>
+<font color="#A82F2F"><font size="2">(03:27:37 PM)</font> <b>robdubya:</b></font> so be aware of that<br/>
+<font color="#A82F2F"><font size="2">(03:27:43 PM)</font> <b>robdubya:</b></font> and its in a few parts<br/>
+<font color="#A82F2F"><font size="2">(03:28:05 PM)</font> <b>ponzicoder:</b></font> fair enough<br/>
+<font color="#A82F2F"><font size="2">(03:28:10 PM)</font> <b>robdubya:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(03:28:19 PM)</font> <b>robdubya:</b></font> (also, are you on .10?)<br/>
+<font color="#A82F2F"><font size="2">(03:28:25 PM)</font> <b>ponzicoder:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(03:28:28 PM)</font> <b>robdubya:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(03:28:42 PM)</font> <b>delight:</b></font> ponzicoder: I implemented something with angularSails … it worked only so far for me … every request-method was publishing on the socket .. .only the $add was not !<br/>
+<font size="2">(03:28:49 PM)</font><b> sembrestels [<em>~Icedove@83.230.139.137</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:28:57 PM)</font> <b>robdubya:</b></font> so how you do this depends on what your project is about<br/>
+<font color="#A82F2F"><font size="2">(03:29:12 PM)</font> <b>robdubya:</b></font> the socket itself works more or less like angular&apos;s $http<br/>
+<font color="#A82F2F"><font size="2">(03:29:32 PM)</font> <b>robdubya:</b></font> (and i have an open PR that makes that even more like angular)<br/>
+<font color="#A82F2F"><font size="2">(03:30:05 PM)</font> <b>robdubya:</b></font> one thing that isn&apos;t clear right now (and this is sails, not ngSails)<br/>
+<font color="#A82F2F"><font size="2">(03:30:14 PM)</font> <b>robdubya:</b></font> is that by default, create events aren&apos;t broadcast<br/>
+<font size="2">(03:31:51 PM)</font><b> dweaver06 [<em>~dweaver@75-148-25-17-WashingtonDC.hfc.comcastbusiness.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:32:02 PM)</font> <b>dweaver06:</b></font> hey all<br/>
+<font color="#A82F2F"><font size="2">(03:32:32 PM)</font> <b>dweaver06:</b></font> I’m looking for some decent docs on model associations<br/>
+<font color="#A82F2F"><font size="2">(03:32:38 PM)</font> <b>dweaver06:</b></font> (using beta branch)<br/>
+<font color="#A82F2F"><font size="2">(03:32:49 PM)</font> <b>dweaver06:</b></font> doc / examples<br/>
+<font color="#A82F2F"><font size="2">(03:32:52 PM)</font> <b>robdubya:</b></font> so you can turn that on by setting autoWatch : true in your config/blueprints<br/>
+<font color="#A82F2F"><font size="2">(03:32:53 PM)</font> <b>robdubya:</b></font> i&apos;m not really involved in the bit you&apos;re using - its sort of a different track<br/>
+<font color="#A82F2F"><font size="2">(03:33:06 PM)</font> <b>robdubya:</b></font> http://i.imgur.com/wgyIShI.png ponzicoder<br/>
+<font size="2">(03:34:02 PM)</font><b> wdent [<em>~wdent@2601:5:9680:612:f5b1:b7dc:da2:9d51</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:34:14 PM)</font> <b>delight:</b></font> wow autoWatch:true did the trick … I was searching into it for quite some while … and could not figure out why it was not broadcasting<br/>
+<font color="#A82F2F"><font size="2">(03:34:30 PM)</font> <b>delight:</b></font> so this is a general problem with sails 0.10 ?<br/>
+<font color="#A82F2F"><font size="2">(03:34:39 PM)</font> <b>robdubya:</b></font> delight not a problem - a feature<br/>
+<font color="#A82F2F"><font size="2">(03:34:51 PM)</font> <b>ponzicoder:</b></font> robdubya: trying autowatch  back in a sec<br/>
+<font color="#A82F2F"><font size="2">(03:35:00 PM)</font> <b>robdubya:</b></font> the idea being depending o nthe situation, you may not want all notitifactions<br/>
+<font size="2">(03:35:08 PM)</font><b> feelfine [<em>~feelfine@187.65.28.205</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:35:10 PM)</font> <b>robdubya:</b></font> its a change from .9 though<br/>
+<font color="#A82F2F"><font size="2">(03:36:04 PM)</font> <b>robdubya:</b></font> so 2 tracks, so y&apos;all know whats up<br/>
+<font color="#A82F2F"><font size="2">(03:36:18 PM)</font> <b>robdubya:</b></font> the one you&apos;re using is the firebasey type thing<br/>
+<font color="#A82F2F"><font size="2">(03:36:24 PM)</font> <b>robdubya:</b></font> collection based<br/>
+<font color="#A82F2F"><font size="2">(03:36:33 PM)</font> <b>robdubya:</b></font> the other (not yet ready) is Model based<br/>
+<font color="#A82F2F"><font size="2">(03:36:41 PM)</font> <b>robdubya:</b></font> eg Model.find() etc angular side<br/>
+<font color="#A82F2F"><font size="2">(03:39:47 PM)</font> <b>ponzicoder:</b></font> robdubya: You&apos;re a genius.<br/>
+<font color="#A82F2F"><font size="2">(03:39:47 PM)</font> <b>ponzicoder:</b></font> thanks for the heads-up<br/>
+<font size="2">(03:39:47 PM)</font><b> Scrunshes left the room (quit: Quit: Leaving).</b><br/>
+<font color="#A82F2F"><font size="2">(03:39:47 PM)</font> <b>delight:</b></font> robdubya: I experieced another problem … the result of a $sailsRef was available only later … after the page was rendered and $scope.$watch on such a result run into an angular error<br/>
+<font color="#A82F2F"><font size="2">(03:39:48 PM)</font> <b>delight:</b></font> RangeError: Maximum call stack size exceeded<br/>
+<font size="2">(03:39:48 PM)</font><b> feelfine left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(03:39:48 PM)</font> <b>MGDSoft:</b></font> dweaver06: https://github.com/balderdashy/sails/issues/124<br/>
+<font color="#A82F2F"><font size="2">(03:39:57 PM)</font> <b>delight:</b></font> btw. I’m still fresh with angular ;)<br/>
+<font size="2">(03:40:42 PM)</font><b> zhobbs left the room (quit: Ping timeout: 264 seconds).</b><br/>
+<font size="2">(03:42:45 PM)</font><b> zhobbs [<em>~zach@c-69-181-27-245.hsd1.ca.comcast.net</em>] entered the room.</b><br/>
+<font size="2">(03:45:25 PM)</font><b> cfstout [<em>8fd77a7f@gateway/web/freenode/ip.143.215.122.127</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:45:27 PM)</font> <b>delight:</b></font> I ment something like $scope.todos = $sailsRef(’/todo’);<br/>
+<font size="2">(03:45:28 PM)</font><b> GabeH [<em>~gabeh@cpe-72-179-43-116.austin.res.rr.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:45:44 PM)</font> <b>GabeH:</b></font> Hi delight. What problem were you having with sailsRef?<br/>
+<font color="#A82F2F"><font size="2">(03:47:11 PM)</font> <b>cfstout:</b></font> Can anyone offer insight to using find calls to query the database. I am attempting to do a search based on a query to populate the front end of my website. I am passing an or {name: {contains: query}, creator: {contains: query}} to the find. Initially to populate the page I want to query based off the empty string so that all events are returned, and then enable narrowing down the results with search based on the query. When I do<br/>
+<font color="#A82F2F"><font size="2">(03:47:28 PM)</font> <b>delight:</b></font> GabeH: 1st the result of a $sailsRef was available only later after the page was rendered!  And 2nd $scope.$watch on such a result run into an angular error<br/>
+<font color="#A82F2F"><font size="2">(03:47:41 PM)</font> <b>cfstout:</b></font> { [MongoError: $or requires nonempty array] name: &apos;MongoError&apos; }<br/>
+<font size="2">(03:47:49 PM)</font><b> danijel left the room (quit: Quit: danijel).</b><br/>
+<font color="#A82F2F"><font size="2">(03:49:23 PM)</font> <b>GabeH:</b></font> Do you have this up on a repo somewhere? I can take a look if you send me a link to it.<br/>
+<font color="#A82F2F"><font size="2">(03:49:34 PM)</font> <b>delight:</b></font> GabeH: RangeError: Maximum call stack size exceeded … so I was not able to do some „continuous calculations“ over the result in the controller<br/>
+<font size="2">(03:49:43 PM)</font><b> maremp left the room (quit: Quit: maremp).</b><br/>
+<font color="#A82F2F"><font size="2">(03:50:15 PM)</font> <b>robdubya:</b></font> ah ha, mister GabeH<br/>
+<font color="#A82F2F"><font size="2">(03:50:32 PM)</font> <b>delight:</b></font> GabeH: I can upload the app to a repo on github … its a TodoMVC with mongo and and angular + angularSails<br/>
+<font size="2">(03:50:58 PM)</font><b> just-paja left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font size="2">(03:51:09 PM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font size="2">(03:51:22 PM)</font><b> bmac left the room (quit: Quit: My MacBook Pro has gone to sleep. ZZZzzz…).</b><br/>
+<font color="#A82F2F"><font size="2">(03:51:35 PM)</font> <b>GabeH:</b></font> hey robdubya, hows it going<br/>
+<font color="#A82F2F"><font size="2">(03:51:41 PM)</font> <b>robdubya:</b></font> not bad, yourself?<br/>
+<font color="#A82F2F"><font size="2">(03:52:03 PM)</font> <b>GabeH:</b></font> pretty good. about to look more at angular sails stuff<br/>
+<font color="#A82F2F"><font size="2">(03:52:11 PM)</font> <b>robdubya:</b></font> have a look at the PR i opened<br/>
+<font color="#A82F2F"><font size="2">(03:52:22 PM)</font> <b>robdubya:</b></font> refactored the socket a bunch<br/>
+<font color="#A82F2F"><font size="2">(03:52:56 PM)</font> <b>GabeH:</b></font> yah i saw that there was a PR. Ill check it out.<br/>
+<font color="#A82F2F"><font size="2">(03:53:12 PM)</font> <b>robdubya:</b></font> acts more angularly, also does the queue thing the vanilla sails.io thing does<br/>
+<font size="2">(03:53:58 PM)</font><b> cfstout left the room (quit: Ping timeout: 245 seconds).</b><br/>
+<font size="2">(03:53:58 PM)</font><b> flaiks left the room (quit: Quit: flaiks).</b><br/>
+<font size="2">(03:54:32 PM)</font><b> mikedevita [<em>~mikedevit@16.sub-70-209-72.myvzw.com</em>] entered the room.</b><br/>
+<font size="2">(03:54:47 PM)</font><b> Danny_ [<em>~Danneh@host81-157-218-97.range81-157.btcentralplus.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:54:47 PM)</font> <b>mikedevita:</b></font> anyone know of a client side email service?<br/>
+<font size="2">(03:55:02 PM)</font><b> Es0teric [<em>~Es0teric@cpe-69-200-242-113.nyc.res.rr.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(03:55:04 PM)</font> <b>mikedevita:</b></font> i really dont want to stand up a server-side proxy to handle email requests lol<br/>
+<font color="#A82F2F"><font size="2">(03:56:30 PM)</font> <b>robdubya:</b></font> mikedevita mmm not really<br/>
+<font color="#A82F2F"><font size="2">(03:57:10 PM)</font> <b>mikedevita:</b></font> i fear thats the answer im going ot have to live with lol<br/>
+<font color="#A82F2F"><font size="2">(03:57:20 PM)</font> <b>robdubya:</b></font> GabeH only other thing - i suck at grunt - can you set it up so during dev, it copies to /example but not concat?<br/>
+<font color="#A82F2F"><font size="2">(03:57:27 PM)</font> <b>mikedevita:</b></font> i have a single page angular site that .. all it needs is to serve index.html and handle emails.<br/>
+<font color="#A82F2F"><font size="2">(03:57:31 PM)</font> <b>robdubya:</b></font> makes it a bit harder to test stuff in isolation<br/>
+<font color="#A82F2F"><font size="2">(03:57:40 PM)</font> <b>GabeH:</b></font> ha yah i was just about to do that.<br/>
+<font color="#A82F2F"><font size="2">(03:57:54 PM)</font> <b>delight:</b></font> GabeH: https://github.com/delight/todomvc-sailing<br/>
+<font color="#A82F2F"><font size="2">(03:58:08 PM)</font> <b>GabeH:</b></font> right now you can run grunt build and it will copy over dist/angularSails.js to the example<br/>
+<font color="#A82F2F"><font size="2">(03:58:38 PM)</font> <b>GabeH:</b></font> but ill set it up a dev task that does that when you update the source<br/>
+<font color="#A82F2F"><font size="2">(03:58:49 PM)</font> <b>robdubya:</b></font> yeah, thats what i don&apos;t want :D i&apos;ve fixed it on my end, but i&apos;m sure it&apos;ll fuck everything up<br/>
+<font color="#A82F2F"><font size="2">(03:58:57 PM)</font> <b>delight:</b></font> GabeH: its set to sails mongo right now … you might need to change that<br/>
+<font color="#A82F2F"><font size="2">(03:59:54 PM)</font> <b>robdubya:</b></font> btw GabeH did you and mikermcneil meet up this wk/end?<br/>
+<font size="2">(04:00:14 PM)</font><b> jetfault_ [<em>~jetfault@nat/yahoo/x-lqxqptawtauoobfl</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:00:52 PM)</font> <b>GabeH:</b></font> meetup? No, but we work together so we see each other pretty much every day.<br/>
+<font size="2">(04:01:05 PM)</font><b> bmac [<em>~bmac@66.193.45.14</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:01:14 PM)</font> <b>GabeH:</b></font> delight, thanks ill check this out.<br/>
+<font color="#A82F2F"><font size="2">(04:01:35 PM)</font> <b>robdubya:</b></font> ok. he pinged me about meeting up to discuss this ngSails shenanigans<br/>
+<font color="#A82F2F"><font size="2">(04:02:21 PM)</font> <b>delight:</b></font> GabeH: I just commented the $scope.$watch part in TodoCtrl.js …<br/>
+<font color="#A82F2F"><font size="2">(04:02:28 PM)</font> <b>GabeH:</b></font> yah we&apos;d be down to meet and talk about it whenever you are free<br/>
+<font size="2">(04:02:33 PM)</font><b> dweaver06 left the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:02:34 PM)</font> <b>delight:</b></font> just fyi<br/>
+<font color="#A82F2F"><font size="2">(04:03:04 PM)</font> <b>robdubya:</b></font> k. i&apos;m munging through the model stuff at the moment.<br/>
+<font size="2">(04:03:35 PM)</font><b> cprodigy29 left the room (quit: Quit: cprodigy29).</b><br/>
+<font size="2">(04:03:44 PM)</font><b> jetfault left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(04:03:46 PM)</font> <b>robdubya:</b></font> can just do a hangout, might be easier<br/>
+<font size="2">(04:04:08 PM)</font><b> wedgwood1 left the room (quit: Quit: Leaving.).</b><br/>
+<font color="#A82F2F"><font size="2">(04:07:43 PM)</font> <b>mikermcneil:</b></font> do you guys want autoWatch on by default<br/>
+<font color="#A82F2F"><font size="2">(04:08:08 PM)</font> <b>robdubya:</b></font> seems to be the preferred option so far<br/>
+<font size="2">(04:09:01 PM)</font><b> mikedevita left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(04:09:05 PM)</font> <b>mikermcneil:</b></font> im ok w/ it<br/>
+<font color="#A82F2F"><font size="2">(04:09:19 PM)</font> <b>mikermcneil:</b></font> just need to document it more<br/>
+<font color="#A82F2F"><font size="2">(04:09:28 PM)</font> <b>mikermcneil:</b></font> i&apos;ve been working through all that stuff, slowly but surely<br/>
+<font size="2">(04:09:52 PM)</font><b> ponzicoder left the room (quit: Quit: ponzicoder).</b><br/>
+<font color="#A82F2F"><font size="2">(04:09:53 PM)</font> <b>robdubya:</b></font> @mikermcneil can you essplain the difference that sending the sdk params makes?<br/>
+<font color="#A82F2F"><font size="2">(04:10:37 PM)</font> <b>robdubya:</b></font> it seems to work in the PR, but i need to handle the .9 case i guess<br/>
+<font size="2">(04:13:04 PM)</font><b> nownot [<em>~nownot@pool-71-123-232-68.dllstx.fios.verizon.net</em>] entered the room.</b><br/>
+<font size="2">(04:13:04 PM)</font><b> nownot left the room (quit: Changing host).</b><br/>
+<font size="2">(04:13:04 PM)</font><b> nownot [<em>~nownot@unaffiliated/nownot</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:14:30 PM)</font> <b>nownot:</b></font> robdubya: yo, got a few questions if you’re around<br/>
+<font color="#A82F2F"><font size="2">(04:14:42 PM)</font> <b>robdubya:</b></font> yar<br/>
+<font color="#A82F2F"><font size="2">(04:15:46 PM)</font> <b>nownot:</b></font> so, angular is assests folder, not really using much our of the views folder. but the post, put, remove routes are still intercepted by routes.js and the rest (basically just get request) are sent to angulars app.js,<br/>
+<font color="#A82F2F"><font size="2">(04:15:47 PM)</font> <b>nownot:</b></font> right?<br/>
+<font size="2">(04:16:04 PM)</font><b> cprodigy29 [<em>~cprodigy2@c-50-183-180-92.hsd1.co.comcast.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:16:30 PM)</font> <b>robdubya:</b></font> not sure i understand that :p<br/>
+<font size="2">(04:16:32 PM)</font><b> duckbox [<em>~duckbox@cpc4-belf10-2-0-cust711.2-1.cable.virginm.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:17:51 PM)</font> <b>robdubya:</b></font> the answer i think is yes<br/>
+<font color="#A82F2F"><font size="2">(04:18:03 PM)</font> <b>nownot:</b></font> so there’s angluar’s route provieder and sails routes.js<br/>
+<font color="#A82F2F"><font size="2">(04:18:09 PM)</font> <b>robdubya:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(04:18:15 PM)</font> <b>robdubya:</b></font> yeah - distinct and seperate<br/>
+<font color="#A82F2F"><font size="2">(04:18:26 PM)</font> <b>robdubya:</b></font> client side routing (eg no refresh) vs sails routes<br/>
+<font color="#A82F2F"><font size="2">(04:18:27 PM)</font> <b>nownot:</b></font> I guess im asking get routes are handled by route provider, and post, pust, remove are sails route.js<br/>
+<font color="#A82F2F"><font size="2">(04:18:47 PM)</font> <b>robdubya:</b></font> no - the only thing the angualr router handles is *navigation*<br/>
+<font color="#A82F2F"><font size="2">(04:19:07 PM)</font> <b>robdubya:</b></font> anything you do with $http is all sails routing<br/>
+<font color="#A82F2F"><font size="2">(04:19:16 PM)</font> <b>nownot:</b></font> ahh yeah, true<br/>
+<font size="2">(04:19:40 PM)</font><b> yoshokatana left the room (quit: Quit: yoshokatana).</b><br/>
+<font color="#A82F2F"><font size="2">(04:19:57 PM)</font> <b>robdubya:</b></font> in effect - if you find yourself doing res.view / res.render in a sails ocntroller, you&apos;re probably doing it Wrong (tm)<br/>
+<font color="#A82F2F"><font size="2">(04:20:16 PM)</font> <b>nownot:</b></font> ok makes sense, the only resson I over the post in routes.js is b/c I’m doing a non default post, so I have to call a function from the controller to create etc ..<br/>
+<font color="#A82F2F"><font size="2">(04:20:27 PM)</font> <b>nownot:</b></font> *overwrite<br/>
+<font color="#A82F2F"><font size="2">(04:20:36 PM)</font> <b>robdubya:</b></font> thats fine - but when you&apos;re done, you&apos;d res.json the result<br/>
+<font color="#A82F2F"><font size="2">(04:20:45 PM)</font> <b>robdubya:</b></font> thats the key<br/>
+<font color="#A82F2F"><font size="2">(04:20:53 PM)</font> <b>robdubya:</b></font> its just data in, data out<br/>
+<font color="#A82F2F"><font size="2">(04:21:10 PM)</font> <b>GabeH:</b></font> hey delight<br/>
+<font color="#A82F2F"><font size="2">(04:21:11 PM)</font> <b>nownot:</b></font> the last question, it seems when I create use a angluar view its localhost:1337/#/view , how do I make it where the pound isn’t needd?<br/>
+<font color="#A82F2F"><font size="2">(04:21:15 PM)</font> <b>GabeH:</b></font> so i got it working for me<br/>
+<font color="#A82F2F"><font size="2">(04:21:21 PM)</font> <b>robdubya:</b></font> as far as *templates* (vs views) those should be servied from assets too<br/>
+<font color="#A82F2F"><font size="2">(04:21:21 PM)</font> <b>GabeH:</b></font> let me push up what i have<br/>
+<font color="#A82F2F"><font size="2">(04:21:33 PM)</font> <b>robdubya:</b></font> nownot honestly, don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(04:21:59 PM)</font> <b>robdubya:</b></font> angular has html5mode, which removes the hashbang, but guaranteed it&apos;s gonna confuse the shit out of you<br/>
+<font color="#A82F2F"><font size="2">(04:22:06 PM)</font> <b>nownot:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(04:22:15 PM)</font> <b>robdubya:</b></font> it confuses the shit out of me, every single time i try it<br/>
+<font color="#A82F2F"><font size="2">(04:22:37 PM)</font> <b>delight:</b></font> GabeH: sounds good to me … I worked around the $scope.$watch issues as far as possible by calculating inside the page … which was just a workaround<br/>
+<font color="#A82F2F"><font size="2">(04:22:39 PM)</font> <b>robdubya:</b></font> its not always pretty, but the # is a clear indicator that you&apos;re doing SPA routing<br/>
+<font color="#A82F2F"><font size="2">(04:23:01 PM)</font> <b>GabeH:</b></font> hum cool<br/>
+<font color="#A82F2F"><font size="2">(04:23:20 PM)</font> <b>robdubya:</b></font> nownot i have that in my list of todos, figure out a nice implementation to support html5mode<br/>
+<font color="#A82F2F"><font size="2">(04:23:29 PM)</font> <b>GabeH:</b></font> in fact i didnt change anything, besides the adapter. It looked like you had it working already<br/>
+<font color="#A82F2F"><font size="2">(04:23:31 PM)</font> <b>robdubya:</b></font> but its kinda ugly whatever<br/>
+<font color="#A82F2F"><font size="2">(04:23:43 PM)</font> <b>nownot:</b></font> so when user registeres I want to redirect to success.html, how do I do this in the aingluar controller<br/>
+<font color="#A82F2F"><font size="2">(04:24:51 PM)</font> <b>robdubya:</b></font> nownot are you doing this purely client side?<br/>
+<font color="#A82F2F"><font size="2">(04:25:09 PM)</font> <b>robdubya:</b></font> (if you take this shit outta dropbox and throw it on gh i can have a look)<br/>
+<font color="#A82F2F"><font size="2">(04:25:19 PM)</font> <b>mikermcneil:</b></font> @robdubya just saw the question<br/>
+<font color="#A82F2F"><font size="2">(04:25:32 PM)</font> <b>mikermcneil:</b></font> um what do you mean<br/>
+<font color="#A82F2F"><font size="2">(04:25:35 PM)</font> <b>mikermcneil:</b></font> like the version?<br/>
+<font color="#A82F2F"><font size="2">(04:25:56 PM)</font> <b>mikermcneil:</b></font> I think it&apos;s totally ok for angularSails to not support 0.9<br/>
+<font color="#A82F2F"><font size="2">(04:26:10 PM)</font> <b>robdubya:</b></font> i guess what i&apos;m asking is - when i send the params - what behavior changes does that introduce<br/>
+<font color="#A82F2F"><font size="2">(04:26:14 PM)</font> <b>delight:</b></font> GabeH: well yes … I got it working … but as I said the part that throws errors is TodoCtrl.js line 16-25 its in the /* comments */ … $scope.$watch … which is for sure not working :-/<br/>
+<font size="2">(04:26:21 PM)</font><b> mode (+o robdubya) by ChanServ</b><br/>
+<font size="2">(04:26:40 PM)</font><b> mode (+o GabeH) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(04:27:42 PM)</font> <b>delight:</b></font> and without it .. there a small functionalities of TodoMVC I couldn’t get to run …<br/>
+<font color="#A82F2F"><font size="2">(04:28:32 PM)</font> <b>nownot:</b></font> once a user registeres I want to push them to success. so in the angluar controller if registration is true I want to redirect<br/>
+<font color="#A82F2F"><font size="2">(04:28:49 PM)</font> <b>delight:</b></font> + i have quite a bit of ugly code in the homepage.ejs because of it<br/>
+<font size="2">(04:29:36 PM)</font><b> feelfine [<em>~feelfine@187.65.28.205</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:30:26 PM)</font> <b>robdubya:</b></font> nownot ok<br/>
+<font color="#16569E"><font size="2">(04:30:28 PM)</font> <b>Randy How:</b></font> regarding Angular and Sails, I came across this:<br/>
+<font color="#16569E"><font size="2">(04:30:28 PM)</font> <b>Randy How:</b></font> http://github.com/mikedevita/sailsjs-v10-angularjs-requirejs-boilerplate<br/>
+<font color="#16569E"><font size="2">(04:30:28 PM)</font> <b>Randy How:</b></font> Seems to demonstrate the organization that robdubya was mentioning.<br/>
+<font size="2">(04:30:33 PM)</font><b> glenselle left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(04:30:39 PM)</font> <b>robdubya:</b></font> so you&apos;d do the $http.post<br/>
+<font color="#A82F2F"><font size="2">(04:30:46 PM)</font> <b>nownot:</b></font> YES SIR<br/>
+<font color="#A82F2F"><font size="2">(04:30:54 PM)</font> <b>robdubya:</b></font> if you get a successful response<br/>
+<font color="#A82F2F"><font size="2">(04:30:56 PM)</font> <b>robdubya:</b></font> eg<br/>
+<font size="2">(04:31:10 PM)</font><b> glenselle [<em>~glenselle@108-253-125-102.lightspeed.stlsmo.sbcglobal.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:31:17 PM)</font> <b>robdubya:</b></font> http.post(&apos;/register&apos;,data).success(<br/>
+<font color="#A82F2F"><font size="2">(04:32:08 PM)</font> <b>robdubya:</b></font> $location.path(&apos;/success&apos;)<br/>
+<font color="#A82F2F"><font size="2">(04:32:13 PM)</font> <b>nownot:</b></font> gotcha<br/>
+<font color="#A82F2F"><font size="2">(04:32:33 PM)</font> <b>robdubya:</b></font> which *should* send you to :1337/#/success<br/>
+<font color="#A82F2F"><font size="2">(04:32:44 PM)</font> <b>robdubya:</b></font> which *should* trigger your ngRoute<br/>
+<font color="#A82F2F"><font size="2">(04:33:30 PM)</font> <b>robdubya:</b></font> randingo kinda sorta<br/>
+<font color="#A82F2F"><font size="2">(04:33:57 PM)</font> <b>robdubya:</b></font> depending on the use case. i dislike mixing concerns - eg i dont use /views at *all* when doing ng<br/>
+<font size="2">(04:34:12 PM)</font><b> feelfine left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(04:34:43 PM)</font> <b>robdubya:</b></font> how come i have an @ in my name?<br/>
+<font color="#A82F2F"><font size="2">(04:34:44 PM)</font> <b>robdubya:</b></font> wat<br/>
+<font color="#16569E"><font size="2">(04:34:44 PM)</font> <b>Randy How:</b></font> that's actually where i was confused looking at that example.<br/>
+<font color="#A82F2F"><font size="2">(04:35:38 PM)</font> <b>robdubya:</b></font> randingo i think &quot;assets&quot; kinda cheapens angular. but that&apos;s me being a sensitive snowflake<br/>
+<font color="#A82F2F"><font size="2">(04:35:58 PM)</font> <b>robdubya:</b></font> i just think &quot;asset == app&quot; in my brain<br/>
+<font color="#A82F2F"><font size="2">(04:36:18 PM)</font> <b>robdubya:</b></font> and everything angular lives in there<br/>
+<font color="#A82F2F"><font size="2">(04:36:24 PM)</font> <b>robdubya:</b></font> css/js/templates<br/>
+<font color="#A82F2F"><font size="2">(04:36:52 PM)</font> <b>robdubya:</b></font> makes it portable<br/>
+<font color="#A82F2F"><font size="2">(04:37:12 PM)</font> <b>robdubya:</b></font> cuz you just have to change the url to run it in phonegap or w/e<br/>
+<font color="#16569E"><font size="2">(04:37:17 PM)</font> <b>Randy How:</b></font> ok, good to know.<br/>
+<font size="2">(04:37:33 PM)</font><b> rishy left the room (quit: Quit: Connection closed for inactivity).</b><br/>
+<font color="#A82F2F"><font size="2">(04:38:01 PM)</font> <b>robdubya:</b></font> mike hangs out in here, so if he pops up i&apos;ll ask him about it<br/>
+<font color="#A82F2F"><font size="2">(04:38:17 PM)</font> <b>robdubya:</b></font> randingo the exception to that rule might be stuff like login/registration<br/>
+<font color="#A82F2F"><font size="2">(04:39:05 PM)</font> <b>robdubya:</b></font> in that case, the registration / login would happen in a sails view, and then you&apos;d get redirected to assets/index.html<br/>
+<font color="#16569E"><font size="2">(04:39:13 PM)</font> <b>Randy How:</b></font> those would be views that includes ng?<br/>
+<font color="#A82F2F"><font size="2">(04:39:35 PM)</font> <b>nownot:</b></font> robdubya: dont forget about that email :)<br/>
+<font color="#A82F2F"><font size="2">(04:39:36 PM)</font> <b>robdubya:</b></font> they could, but they&apos;d be a totlally different app/module<br/>
+<font color="#A82F2F"><font size="2">(04:39:47 PM)</font> <b>robdubya:</b></font> nownot yeah i&apos;m wrapping my brain around it<br/>
+<font color="#A82F2F"><font size="2">(04:39:53 PM)</font> <b>robdubya:</b></font> have a few q&apos;s<br/>
+<font color="#A82F2F"><font size="2">(04:40:03 PM)</font> <b>nownot:</b></font> cool, just send them over, we’ll get it cleared up<br/>
+<font color="#A82F2F"><font size="2">(04:40:14 PM)</font> <b>robdubya:</b></font> m&apos;fing algorithms<br/>
+<font size="2">(04:40:17 PM)</font><b> frostig left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(04:40:27 PM)</font> <b>robdubya:</b></font> gonna have to get all CS up on that<br/>
+<font color="#16569E"><font size="2">(04:42:09 PM)</font> <b>Randy How:</b></font> thanks robdubya.  i'll keep that in mind.<br/>
+<font color="#A82F2F"><font size="2">(04:42:45 PM)</font> <b>robdubya:</b></font> randingo some sort of app folder at the root might work too<br/>
+<font color="#A82F2F"><font size="2">(04:42:47 PM)</font> <b>robdubya:</b></font> vs assets<br/>
+<font color="#A82F2F"><font size="2">(04:42:53 PM)</font> <b>robdubya:</b></font> would require some grunt tweaking<br/>
+<font color="#A82F2F"><font size="2">(04:43:11 PM)</font> <b>robdubya:</b></font> but /app and /api works nicely for me<br/>
+<font color="#A82F2F"><font size="2">(04:43:19 PM)</font> <b>robdubya:</b></font> vs /assets /api<br/>
+<font color="#A82F2F"><font size="2">(04:45:27 PM)</font> <b>robdubya:</b></font> and (sorry) my preferred nomenclature is *templates* when talking ng html<br/>
+<font color="#A82F2F"><font size="2">(04:45:36 PM)</font> <b>robdubya:</b></font> vs &quot;views&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:46:22 PM)</font> <b>robdubya:</b></font> @mikermcneil what would it take to rename /assets to /app(s)<br/>
+<font color="#A82F2F"><font size="2">(04:46:33 PM)</font> <b>delight:</b></font> GabeH: did you see the Uncaught Error: [$rootScope:infdig] 10 $digest() iterations reached. Aborting!<br/>
+<font color="#A82F2F"><font size="2">(04:46:33 PM)</font> <b>delight:</b></font> Watchers fired in the last 5 iterations: [] ?<br/>
+<font color="#A82F2F"><font size="2">(04:46:36 PM)</font> <b>delight:</b></font> RangeError: Maximum call stack size exceeded<br/>
+<font size="2">(04:46:36 PM)</font><b> evotuned left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(04:47:04 PM)</font> <b>robdubya:</b></font> delight link?<br/>
+<font size="2">(04:47:14 PM)</font><b> evotuned [<em>~evotuned@ip68-99-129-84.ph.ph.cox.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:47:20 PM)</font> <b>delight:</b></font> https://github.com/delight/todomvc-sailing<br/>
+<font color="#A82F2F"><font size="2">(04:47:31 PM)</font> <b>GabeH:</b></font> yah ive seen it<br/>
+<font color="#A82F2F"><font size="2">(04:47:37 PM)</font> <b>GabeH:</b></font> im trying to debug it now<br/>
+<font color="#A82F2F"><font size="2">(04:47:46 PM)</font> <b>delight:</b></font> ok … just wanted to make sure :)<br/>
+<font color="#A82F2F"><font size="2">(04:47:49 PM)</font> <b>delight:</b></font> no hurry<br/>
+<font color="#A82F2F"><font size="2">(04:48:37 PM)</font> <b>delight:</b></font> robdubya: app thats what most yeoman generated apps use :)<br/>
+<font color="#A82F2F"><font size="2">(04:48:38 PM)</font> <b>robdubya:</b></font> hey GabeH - can in in theory wrap a $sailsRef in a factory (vs assigning it to scope?)<br/>
+<font color="#A82F2F"><font size="2">(04:48:49 PM)</font> <b>robdubya:</b></font> *can i<br/>
+<font color="#A82F2F"><font size="2">(04:49:00 PM)</font> <b>GabeH:</b></font> yah for sure<br/>
+<font color="#A82F2F"><font size="2">(04:49:27 PM)</font> <b>robdubya:</b></font> i think that will work nicely for the model cache then<br/>
+<font color="#A82F2F"><font size="2">(04:49:30 PM)</font> <b>robdubya:</b></font> hmmmm<br/>
+<font color="#A82F2F"><font size="2">(04:49:31 PM)</font> <b>GabeH:</b></font> I was hoping people would use it that way.<br/>
+<font color="#A82F2F"><font size="2">(04:50:40 PM)</font> <b>robdubya:</b></font> GabeH ping me when you have a few<br/>
+<font size="2">(04:51:00 PM)</font><b> evotuned_ [<em>~evotuned@ip68-99-129-84.ph.ph.cox.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:51:10 PM)</font> <b>nownot:</b></font> this is giving me error 500, https://gist.github.com/anonymous/9773207, sure I’m doing something I’m not suppose to be<br/>
+<font color="#A82F2F"><font size="2">(04:51:36 PM)</font> <b>robdubya:</b></font> https://gist.github.com/anonymous/9773207#file-gistfile1-txt-L6<br/>
+<font color="#A82F2F"><font size="2">(04:51:38 PM)</font> <b>robdubya:</b></font> render?<br/>
+<font size="2">(04:51:50 PM)</font><b> evotuned left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(04:52:03 PM)</font> <b>robdubya:</b></font> prob not gonna work if you&apos;re calling that from ng<br/>
+<font color="#A82F2F"><font size="2">(04:52:13 PM)</font> <b>nownot:</b></font> sails.config.user.requireUserActivation is false so thats not running<br/>
+<font color="#A82F2F"><font size="2">(04:52:19 PM)</font> <b>nownot:</b></font> well, this is sails controller<br/>
+<font color="#A82F2F"><font size="2">(04:52:42 PM)</font> <b>robdubya:</b></font> sure - but where&apos;s the requset coming from?<br/>
+<font color="#A82F2F"><font size="2">(04:53:04 PM)</font> <b>nownot:</b></font> my angular controller is posting back to sails<br/>
+<font color="#A82F2F"><font size="2">(04:53:11 PM)</font> <b>robdubya:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(04:53:20 PM)</font> <b>nownot:</b></font> *calling that from* read that as calling in<br/>
+<font size="2">(04:53:21 PM)</font><b> maremp left the room (quit: Quit: maremp).</b><br/>
+<font color="#A82F2F"><font size="2">(04:53:32 PM)</font> <b>robdubya:</b></font> log that err out - whats it say?<br/>
+<font color="#A82F2F"><font size="2">(04:53:45 PM)</font> <b>robdubya:</b></font> and also check what happens if you do it from postman or whatever<br/>
+<font color="#A82F2F"><font size="2">(04:53:56 PM)</font> <b>nownot:</b></font> but, that does work, If I keep it with as res.redirect(&apos;/success&apos;); it fails the redirect (becuase of the #), and sends email<br/>
+<font color="#A82F2F"><font size="2">(04:54:15 PM)</font> <b>delight:</b></font> robdubya: did you ever try the https://www.npmjs.org/package/generator-angular-fullstack ? I like how you start it with grunt:serve and it refreshes your browser on every save and restarts the app when you chane the backend (lib-folder) … pretty smooth … I think I’ll try to build something similar for sails once 0.10 is out<br/>
+<font color="#A82F2F"><font size="2">(04:54:44 PM)</font> <b>mikermcneil:</b></font> robdubya, to rename assets, its just a matter of changing the gruntfile<br/>
+<font color="#A82F2F"><font size="2">(04:54:53 PM)</font> <b>mikermcneil:</b></font> err grunt tasks I mean<br/>
+<font color="#A82F2F"><font size="2">(04:54:58 PM)</font> <b>mikermcneil:</b></font> to pull from the other place<br/>
+<font size="2">(04:55:08 PM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:55:10 PM)</font> <b>mikermcneil:</b></font> the Sails process doesn&apos;t even know about your assets dir<br/>
+<font color="#A82F2F"><font size="2">(04:55:30 PM)</font> <b>robdubya:</b></font> @mikermcneil nice. thoughts on renaming that by default?<br/>
+<font color="#A82F2F"><font size="2">(04:55:44 PM)</font> <b>mikermcneil:</b></font> &quot;app&quot; looks a lot like &quot;api&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:56:27 PM)</font> <b>robdubya:</b></font> client? apps?<br/>
+<font color="#A82F2F"><font size="2">(04:56:34 PM)</font> <b>mikermcneil:</b></font> could add `--asset-dir=apps` option in frontend generator<br/>
+<font color="#A82F2F"><font size="2">(04:56:36 PM)</font> <b>robdubya:</b></font> assets is less relevant the more spa things get<br/>
+<font color="#A82F2F"><font size="2">(04:56:48 PM)</font> <b>robdubya:</b></font> errything&apos;s an asset<br/>
+<font color="#A82F2F"><font size="2">(04:56:55 PM)</font> <b>mikermcneil:</b></font> but everything&apos;s an app<br/>
+<font color="#A82F2F"><font size="2">(04:57:14 PM)</font> <b>mikermcneil:</b></font> client is most appealing<br/>
+<font color="#A82F2F"><font size="2">(04:57:18 PM)</font> <b>robdubya:</b></font> not if we rename app.js to server.js :p<br/>
+<font color="#A82F2F"><font size="2">(04:57:25 PM)</font> <b>mikermcneil:</b></font> but people are less familiar w/ that term<br/>
+<font color="#A82F2F"><font size="2">(04:57:28 PM)</font> <b>mikermcneil:</b></font> (client I mean)<br/>
+<font size="2">(04:57:32 PM)</font><b> zz_Brocken is now known as Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(04:57:35 PM)</font> <b>mikermcneil:</b></font> re renaming app.js- I agree philosophically<br/>
+<font size="2">(04:57:42 PM)</font><b> dweaver06 [<em>~dweaver@pool-71-163-46-26.washdc.fios.verizon.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:57:47 PM)</font> <b>mikermcneil:</b></font> it&apos;s only app.js because it&apos;s the node standard<br/>
+<font size="2">(04:57:51 PM)</font><b> maremp left the room (quit: Client Quit).</b><br/>
+<font color="#A82F2F"><font size="2">(04:57:58 PM)</font> <b>robdubya:</b></font> yeah.<br/>
+<font size="2">(04:58:00 PM)</font><b> leepers41 left the room (quit: Ping timeout: 268 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(04:58:02 PM)</font> <b>mikermcneil:</b></font> used to be .app.js<br/>
+<font color="#A82F2F"><font size="2">(04:58:04 PM)</font> <b>mikermcneil:</b></font> (hidden file)<br/>
+<font color="#062585"><font size="2">(04:59:22 PM)</font> <b>***delight</b></font> thinks app/ lib/ server.js and test/<br/>
+<font color="#A82F2F"><font size="2">(04:59:36 PM)</font> <b>robdubya:</b></font> i like API<br/>
+<font color="#A82F2F"><font size="2">(04:59:38 PM)</font> <b>robdubya:</b></font> thats what it is<br/>
+<font color="#A82F2F"><font size="2">(04:59:48 PM)</font> <b>robdubya:</b></font> er /api<br/>
+<font color="#A82F2F"><font size="2">(05:00:04 PM)</font> <b>robdubya:</b></font> lib/src/whatever are &apos;no touchie&apos; folders<br/>
+<font color="#A82F2F"><font size="2">(05:00:08 PM)</font> <b>mikermcneil:</b></font> to me, ideal scenario is we have 2-3 different generators that support different fronted use cases<br/>
+<font color="#A82F2F"><font size="2">(05:00:17 PM)</font> <b>robdubya:</b></font> @mikermcneil sounds good to me<br/>
+<font color="#A82F2F"><font size="2">(05:01:01 PM)</font> <b>robdubya:</b></font> i&apos;ll do one for angular - but i&apos;d like to set it up so its a bit more q/a<br/>
+<font color="#A82F2F"><font size="2">(05:01:05 PM)</font> <b>robdubya:</b></font> like when you do npm init<br/>
+<font color="#A82F2F"><font size="2">(05:01:16 PM)</font> <b>nownot:</b></font> robdubya: https://github.com/akatreyt/angularSailsEmailAuth/commits/master, finally put up a repo :) but this is what I’m having issues with<br/>
+<font color="#A82F2F"><font size="2">(05:01:25 PM)</font> <b>nownot:</b></font> let me know when you can pull down and I can tell you where issue is<br/>
+<font size="2">(05:01:35 PM)</font><b> maremp [<em>~maremp@89-212-193-166.dynamic.t-2.net</em>] entered the room.</b><br/>
+<font size="2">(05:01:40 PM)</font><b> jon__ left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(05:03:00 PM)</font><b> esopian left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(05:04:33 PM)</font> <b>robdubya:</b></font> bah, wtf is that npm module…<br/>
+<font color="#A82F2F"><font size="2">(05:04:49 PM)</font> <b>robdubya:</b></font> https://github.com/visionmedia/commander.js/<br/>
+<font color="#A82F2F"><font size="2">(05:04:50 PM)</font> <b>robdubya:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(05:04:53 PM)</font> <b>robdubya:</b></font> nownot go<br/>
+<font color="#A82F2F"><font size="2">(05:05:46 PM)</font> <b>robdubya:</b></font> ps nownot when you add an npm package<br/>
+<font color="#A82F2F"><font size="2">(05:05:50 PM)</font> <b>robdubya:</b></font> do npm install whatever --save<br/>
+<font color="#A82F2F"><font size="2">(05:05:55 PM)</font> <b>dweaver06:</b></font> I’m a bit confused by some of the conventions in sails.  As far as routing for restful services I keep seeing things like: “POST http://:1337/user/create”.  Traditionally wouldn’t this just be POST “http://:1337/user/“, forgoing the redundant “create”?<br/>
+<font color="#A82F2F"><font size="2">(05:06:01 PM)</font> <b>nownot:</b></font> so, partials/auth/index.html -&gt; $scope.newUser = function in authController.js -&gt; create: function(req, res) in UserController.js<br/>
+<font color="#A82F2F"><font size="2">(05:06:13 PM)</font> <b>robdubya:</b></font> dweaver06 those are *shortcuts*<br/>
+<font color="#A82F2F"><font size="2">(05:06:16 PM)</font> <b>robdubya:</b></font> not for production<br/>
+<font color="#A82F2F"><font size="2">(05:06:18 PM)</font> <b>dweaver06:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:06:24 PM)</font> <b>robdubya:</b></font> the *blueprints* are as you expect<br/>
+<font color="#A82F2F"><font size="2">(05:06:27 PM)</font> <b>dweaver06:</b></font> is a shortcut the same as a “blueprint”<br/>
+<font color="#A82F2F"><font size="2">(05:06:34 PM)</font> <b>robdubya:</b></font> no - 2 different things<br/>
+<font color="#A82F2F"><font size="2">(05:06:38 PM)</font> <b>robdubya:</b></font> blueprints = REST<br/>
+<font color="#A82F2F"><font size="2">(05:06:42 PM)</font> <b>dweaver06:</b></font> gotcha<br/>
+<font color="#A82F2F"><font size="2">(05:06:47 PM)</font> <b>robdubya:</b></font> they are production ready<br/>
+<font color="#A82F2F"><font size="2">(05:06:49 PM)</font> <b>nownot:</b></font> shti wait, nvm, wrong path<br/>
+<font color="#A82F2F"><font size="2">(05:07:00 PM)</font> <b>nownot:</b></font> here we go, User service in angular<br/>
+<font color="#A82F2F"><font size="2">(05:07:44 PM)</font> <b>dweaver06:</b></font> are blueprints auto generated as well?<br/>
+<font color="#A82F2F"><font size="2">(05:08:01 PM)</font> <b>robdubya:</b></font> dweaver06 yep<br/>
+<font color="#A82F2F"><font size="2">(05:08:29 PM)</font> <b>nownot:</b></font> damnit rough day for me. User.js service when a user registers it calls var _register = function(newUser) and posts to UserController:create,<br/>
+<font color="#A82F2F"><font size="2">(05:08:54 PM)</font> <b>nownot:</b></font> I want UserController:create to return json success bollean<br/>
+<font color="#A82F2F"><font size="2">(05:09:23 PM)</font> <b>nownot:</b></font> if register in User service returns true redirect to success<br/>
+<font color="#A82F2F"><font size="2">(05:09:39 PM)</font> <b>robdubya:</b></font> nownot i would do the $location stuff on the cotrnoller<br/>
+<font color="#A82F2F"><font size="2">(05:09:51 PM)</font> <b>robdubya:</b></font> keep it out of the User service<br/>
+<font color="#A82F2F"><font size="2">(05:10:06 PM)</font> <b>nownot:</b></font> in the angluar controller or sails<br/>
+<font color="#A82F2F"><font size="2">(05:10:10 PM)</font> <b>robdubya:</b></font> angular<br/>
+<font color="#A82F2F"><font size="2">(05:10:17 PM)</font> <b>nownot:</b></font> ok, just making sure<br/>
+<font color="#A82F2F"><font size="2">(05:10:30 PM)</font> <b>robdubya:</b></font> this is gonna get fun with lots of angular developers<br/>
+<font color="#A82F2F"><font size="2">(05:10:43 PM)</font> <b>nownot:</b></font> ok, does the res.json look correct in the sails Controller?<br/>
+<font color="#A82F2F"><font size="2">(05:10:44 PM)</font> <b>mikermcneil:</b></font> dweaver06, blueprints are included in core<br/>
+<font size="2">(05:10:49 PM)</font><b> IrishGringo left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(05:11:00 PM)</font> <b>mikermcneil:</b></font> there are blueprint routes and blueprint actions<br/>
+<font color="#A82F2F"><font size="2">(05:11:04 PM)</font> <b>nownot:</b></font> mikermcneil: hope you’re feeling better!! :)<br/>
+<font color="#A82F2F"><font size="2">(05:11:11 PM)</font> <b>mikermcneil:</b></font> just rewrote the docs on that<br/>
+<font size="2">(05:11:22 PM)</font><b> hugeaim [<em>~hugeaim@p57d691.tokynt01.ap.so-net.ne.jp</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(05:11:22 PM)</font> <b>mikermcneil:</b></font> nownot, thanks!  getting there- we&apos;ve had something bouncing around everyone at the office<br/>
+<font color="#A82F2F"><font size="2">(05:11:24 PM)</font> <b>mikermcneil:</b></font> rachael is sick today<br/>
+<font size="2">(05:11:26 PM)</font><b> Drako left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font color="#A82F2F"><font size="2">(05:11:30 PM)</font> <b>nownot:</b></font> ewwww<br/>
+<font color="#A82F2F"><font size="2">(05:11:38 PM)</font> <b>nownot:</b></font> I believe it has to do with Austin itself :P<br/>
+<font color="#A82F2F"><font size="2">(05:11:41 PM)</font> <b>mikermcneil:</b></font> seriously<br/>
+<font color="#A82F2F"><font size="2">(05:11:44 PM)</font> <b>mikermcneil:</b></font> haha hope not<br/>
+<font color="#A82F2F"><font size="2">(05:11:46 PM)</font> <b>mikermcneil:</b></font> dweaver06, https://github.com/balderdashy/sails-docs/blob/master/reference/Blueprints.md<br/>
+<font color="#A82F2F"><font size="2">(05:11:48 PM)</font> <b>robdubya:</b></font> yeah, fuck meeting up with you guys<br/>
+<font color="#A82F2F"><font size="2">(05:11:53 PM)</font> <b>mikermcneil:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(05:12:11 PM)</font> <b>dweaver06:</b></font> yes I’m sorry I seem to find the correct docs immediately after asking<br/>
+<font color="#A82F2F"><font size="2">(05:12:26 PM)</font> <b>mikermcneil:</b></font> oh I was going to fling some scarlet fever blankets at you<br/>
+<font color="#A82F2F"><font size="2">(05:12:38 PM)</font> <b>mikermcneil:</b></font> dweaver06, no problem- they&apos;re hard to find<br/>
+<font color="#A82F2F"><font size="2">(05:12:42 PM)</font> <b>mikermcneil:</b></font> working on it!!!<br/>
+<font color="#A82F2F"><font size="2">(05:12:52 PM)</font> <b>robdubya:</b></font> @mikermcneil much better<br/>
+<font color="#A82F2F"><font size="2">(05:13:11 PM)</font> <b>robdubya:</b></font> you might throw a sample on each line &quot;The current version of Sails ships with the following blueprint actions:&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:13:24 PM)</font> <b>robdubya:</b></font>  - find `GET /user`<br/>
+<font color="#A82F2F"><font size="2">(05:13:25 PM)</font> <b>robdubya:</b></font> etc<br/>
+<font size="2">(05:14:03 PM)</font><b> makenai [<em>~Adium@ip70-170-9-45.lv.lv.cox.net</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(05:14:26 PM)</font> <b>robdubya:</b></font> @nownot suggestion - instead of overriding the create<br/>
+<font color="#A82F2F"><font size="2">(05:14:29 PM)</font> <b>robdubya:</b></font> on that ctrl<br/>
+<font color="#A82F2F"><font size="2">(05:14:39 PM)</font> <b>robdubya:</b></font> make a distinct action called register<br/>
+<font color="#A82F2F"><font size="2">(05:14:44 PM)</font> <b>robdubya:</b></font> (sials ctrl)<br/>
+<font color="#A82F2F"><font size="2">(05:14:50 PM)</font> <b>nownot:</b></font> ok<br/>
+<font size="2">(05:15:37 PM)</font><b> hugeaim left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(05:16:18 PM)</font> <b>robdubya:</b></font> nownot that controller works fine from postman<br/>
+<font color="#A82F2F"><font size="2">(05:16:32 PM)</font> <b>nownot:</b></font> meaing you get the json response back?<br/>
+<font color="#A82F2F"><font size="2">(05:16:51 PM)</font> <b>robdubya:</b></font> http://imgur.com/fcKO6k0<br/>
+<font color="#A82F2F"><font size="2">(05:17:37 PM)</font> <b>dweaver06:</b></font> hmmm blueprints make me nervous.  Isn’t it possible to have endpoints that you have forgotten about?<br/>
+<font color="#A82F2F"><font size="2">(05:17:55 PM)</font> <b>dweaver06:</b></font> i’m probably missing something<br/>
+<font color="#A82F2F"><font size="2">(05:18:01 PM)</font> <b>robdubya:</b></font> dweaver06 just deny them all in your policies<br/>
+<font color="#A82F2F"><font size="2">(05:18:04 PM)</font> <b>robdubya:</b></font> and selectively enable<br/>
+<font color="#A82F2F"><font size="2">(05:18:11 PM)</font> <b>dweaver06:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:18:19 PM)</font> <b>robdubya:</b></font> if you&apos;re chicken, that is<br/>
+<font color="#A82F2F"><font size="2">(05:18:22 PM)</font> <b>dweaver06:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(05:20:48 PM)</font> <b>nownot:</b></font> yeah, so eff ...<br/>
+<font color="#A82F2F"><font size="2">(05:21:21 PM)</font> <b>nownot:</b></font> computers are dumb<br/>
+<font color="#A82F2F"><font size="2">(05:21:24 PM)</font> <b>robdubya:</b></font> nownot poking around the ngside<br/>
+<font size="2">(05:22:24 PM)</font><b> desmondmorris [<em>~desmondmo@cpe-67-247-51-251.nyc.res.rr.com</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(05:22:55 PM)</font> <b>mikermcneil:</b></font> robdubya, thanks<br/>
+<font color="#A82F2F"><font size="2">(05:23:07 PM)</font> <b>mikermcneil:</b></font> robdubya, I did views and models as well<br/>
+<font color="#A82F2F"><font size="2">(05:23:10 PM)</font> <b>mikermcneil:</b></font> started on routes<br/>
+<font color="#A82F2F"><font size="2">(05:23:30 PM)</font> <b>mikermcneil:</b></font> section on the socket client SDK still needs help<br/>
+<font color="#A82F2F"><font size="2">(05:23:30 PM)</font> <b>robdubya:</b></font> i know i volunteered for controllers but i&apos;m like, anti sails controllers<br/>
+<font color="#A82F2F"><font size="2">(05:23:31 PM)</font> <b>robdubya:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(05:23:44 PM)</font> <b>robdubya:</b></font> i can do the socket thing, np<br/>
+<font size="2">(05:23:46 PM)</font><b> feelfine [<em>~feelfine@187.65.28.205</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(05:23:48 PM)</font> <b>robdubya:</b></font> trade ya<br/>
+<font color="#A82F2F"><font size="2">(05:23:48 PM)</font> <b>mikermcneil:</b></font> awesome<br/>
+<font color="#A82F2F"><font size="2">(05:23:52 PM)</font> <b>desmondmorris:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(05:23:53 PM)</font> <b>mikermcneil:</b></font> sounds good<br/>
+<font color="#A82F2F"><font size="2">(05:23:55 PM)</font> <b>mikermcneil:</b></font> ohai<br/>
+<font color="#A82F2F"><font size="2">(05:24:17 PM)</font> <b>desmondmorris:</b></font> I&apos;m having an issue that is driving me crazy.  https://gist.github.com/desmondmorris/ba138a26b721790b6653<br/>
+<font color="#A82F2F"><font size="2">(05:24:22 PM)</font> <b>robdubya:</b></font> nownot looks like when the request is sent, its only got the email<br/>
+<font color="#A82F2F"><font size="2">(05:24:27 PM)</font> <b>robdubya:</b></font> oohhhhhhh<br/>
+<font color="#A82F2F"><font size="2">(05:24:35 PM)</font> <b>desmondmorris:</b></font> Things are executing after return statements<br/>
+<font color="#A82F2F"><font size="2">(05:24:44 PM)</font> <b>desmondmorris:</b></font> that sample is from a controller<br/>
+<font color="#A82F2F"><font size="2">(05:24:46 PM)</font> <b>mikermcneil:</b></font> desmondmorris, are you calling that controller action twice?<br/>
+<font color="#A82F2F"><font size="2">(05:24:49 PM)</font> <b>robdubya:</b></font> nownot stupid fucking angular bug.<br/>
+<font color="#A82F2F"><font size="2">(05:24:54 PM)</font> <b>nownot:</b></font> noooo<br/>
+<font color="#A82F2F"><font size="2">(05:24:57 PM)</font> <b>robdubya:</b></font> i bet you have autocomplete working<br/>
+<font color="#A82F2F"><font size="2">(05:25:10 PM)</font> <b>nownot:</b></font> yeah, in browser, yeah<br/>
+<font size="2">(05:32:15 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

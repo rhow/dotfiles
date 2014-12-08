@@ -1,0 +1,52 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 08 Apr 2014 05:18:17 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 08 Apr 2014 05:18:17 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(05:18:17 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(05:25:07 PM)</font> <b>nickeddy:</b></font> hello<br/>
+<font color="#A82F2F"><font size="2">(05:25:58 PM)</font> <b>lenswipe:</b></font> delaman, is that what the kids calll it these days?<br/>
+<font color="#A82F2F"><font size="2">(05:26:07 PM)</font> <b>lenswipe:</b></font> delight, even<br/>
+<font color="#A82F2F"><font size="2">(05:27:17 PM)</font> <b>robdubya:</b></font> yhelothar nickeddy<br/>
+<font color="#A82F2F"><font size="2">(05:27:21 PM)</font> <b>nickeddy:</b></font> I&apos;m guessing this is normal for .10-rc5? Fatal error: Maximum call stack size exceeded<br/>
+<font color="#A82F2F"><font size="2">(05:27:31 PM)</font> <b>nickeddy:</b></font> robdubya: oh hi<br/>
+<font color="#A82F2F"><font size="2">(05:27:51 PM)</font> <b>robdubya:</b></font> that looks like… a bigger issue<br/>
+<font color="#A82F2F"><font size="2">(05:28:16 PM)</font> <b>nickeddy:</b></font> normal sails works, after installing sails beta git it dies tragically<br/>
+<font color="#A82F2F"><font size="2">(05:29:01 PM)</font> <b>robdubya:</b></font> maybe got a out of date dependency hanging around?<br/>
+<font color="#A82F2F"><font size="2">(05:30:09 PM)</font> <b>lenswipe:</b></font> you have referenced a callback inside a ballback<br/>
+<font color="#A82F2F"><font size="2">(05:30:13 PM)</font> <b>lenswipe:</b></font> callback*<br/>
+<font color="#A82F2F"><font size="2">(05:30:21 PM)</font> <b>lenswipe:</b></font> ive done that once or twice<br/>
+<font color="#A82F2F"><font size="2">(05:31:21 PM)</font> <b>nickeddy:</b></font> no, I literally started from scratch and did &apos;sails new project&apos; and sails lift in that<br/>
+<font color="#A82F2F"><font size="2">(05:31:24 PM)</font> <b>nickeddy:</b></font> and it did it<br/>
+<font color="#A82F2F"><font size="2">(05:31:34 PM)</font> <b>robdubya:</b></font> right but if you have previously installed / used sails<br/>
+<font color="#A82F2F"><font size="2">(05:31:39 PM)</font> <b>nickeddy:</b></font> updating node and whatnot right now<br/>
+<font color="#A82F2F"><font size="2">(05:31:43 PM)</font> <b>robdubya:</b></font> you probably have an old module in the npm cahce<br/>
+<font color="#A82F2F"><font size="2">(05:35:25 PM)</font> <b>nickeddy:</b></font> errrrrrr where does node stuff normally install, non globally?<br/>
+<font color="#A82F2F"><font size="2">(05:37:02 PM)</font> <b>lenswipe:</b></font> node_modules<br/>
+<font color="#A82F2F"><font size="2">(05:37:37 PM)</font> <b>nickeddy:</b></font> i&apos;m doing everything locally now using NVM and did npm install sails@git://github.com/balderdashy/sails.git#beta but still don&apos;t have access to the sails command. i see the sails.js though<br/>
+<font color="#A82F2F"><font size="2">(05:37:44 PM)</font> <b>nickeddy:</b></font> blaaaaaaah<br/>
+<font color="#A82F2F"><font size="2">(05:42:24 PM)</font> <b>nickeddy:</b></font> yeah still getting that error. hmm<br/>
+<font color="#A82F2F"><font size="2">(05:43:26 PM)</font> <b>lenswipe:</b></font> if you install locally you wont have access to the sails command<br/>
+<font color="#A82F2F"><font size="2">(05:43:35 PM)</font> <b>lenswipe:</b></font> if you&apos;re running on a local install you&apos;ll need to do node app.js<br/>
+<font color="#A82F2F"><font size="2">(05:43:59 PM)</font> <b>nickeddy:</b></font> i&apos;m trying to figure out how in the heck i even got node installed in the first place<br/>
+<font color="#A82F2F"><font size="2">(05:52:41 PM)</font> <b>nickeddy:</b></font> yeah my node install was trashed<br/>
+<font color="#A82F2F"><font size="2">(05:52:41 PM)</font> <b>nickeddy:</b></font> :P<br/>
+<font color="#A82F2F"><font size="2">(05:53:38 PM)</font> <b>nickeddy:</b></font> aaaaaaaaaaand it&apos;s still happening<br/>
+<font color="#A82F2F"><font size="2">(05:53:41 PM)</font> <b>nickeddy:</b></font> :|<br/>
+<font color="#A82F2F"><font size="2">(05:53:46 PM)</font> <b>nickeddy:</b></font> well fuck sails i guess<br/>
+<font color="#A82F2F"><font size="2">(05:54:06 PM)</font> <b>robdubya:</b></font> npm cache clean<br/>
+<font color="#A82F2F"><font size="2">(05:54:09 PM)</font> <b>robdubya:</b></font> npm cache clear<br/>
+<font color="#A82F2F"><font size="2">(05:54:17 PM)</font> <b>nickeddy:</b></font> i completely removed node<br/>
+<font color="#A82F2F"><font size="2">(05:54:22 PM)</font> <b>robdubya:</b></font> doesn&apos;t matter<br/>
+<font color="#A82F2F"><font size="2">(05:54:25 PM)</font> <b>robdubya:</b></font> its not node<br/>
+<font color="#A82F2F"><font size="2">(05:54:31 PM)</font> <b>robdubya:</b></font> its your npm cache<br/>
+<font color="#A82F2F"><font size="2">(05:54:55 PM)</font> <b>nickeddy:</b></font> after doing those, still happens<br/>
+<font color="#A82F2F"><font size="2">(05:56:37 PM)</font> <b>robdubya:</b></font> can you paste the stack trace?<br/>
+<font color="#A82F2F"><font size="2">(05:57:11 PM)</font> <b>nickeddy:</b></font> http://pastebin.com/wxEdGhLh<br/>
+<font color="#A82F2F"><font size="2">(05:58:21 PM)</font> <b>nickeddy:</b></font> grunt is installed<br/>
+<font color="#A82F2F"><font size="2">(05:58:25 PM)</font> <b>nickeddy:</b></font> i have access to that .tmp folder<br/>
+<font color="#A82F2F"><font size="2">(05:58:44 PM)</font> <b>nickeddy:</b></font> this is after `sails new kumaranApp` and `sails generate api user`<br/>
+<font color="#A82F2F"><font size="2">(05:59:04 PM)</font> <b>cramrod:</b></font> nickeddy, you can get access to the sails command by running &apos;node node_modules/sails/bin/sails&apos; from your projects root directory<br/>
+<font color="#A82F2F"><font size="2">(05:59:17 PM)</font> <b>nickeddy:</b></font> cramrod: i&apos;ve got it working globally now, thanks though<br/>
+<font color="#A82F2F"><font size="2">(05:59:26 PM)</font> <b>cramrod:</b></font> no problem<br/>
+<font color="#A82F2F"><font size="2">(06:01:20 PM)</font> <b>nickeddy:</b></font> oddly enough, doing `sails lift --prod` seems to fix it?<br/>
+<font size="2">(06:04:17 PM)</font><b> cramrod left the room (quit: Ping timeout: 250 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(06:30:46 PM)</font> <b>jdcauley:</b></font> anyone have a guide to flash messages in sails.js?<br/>
+<font size="2">(06:32:00 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

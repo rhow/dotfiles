@@ -1,0 +1,384 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 30 Apr 2014 09:25:39 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 30 Apr 2014 09:25:39 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:25:39 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:33:43 AM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(09:34:04 AM)</font> <b>da_wunder:</b></font> anyone done socket response error handling/parsing for 0.10?<br/>
+<font color="#A82F2F"><font size="2">(09:34:20 AM)</font> <b>da_wunder:</b></font> on client side<br/>
+<font color="#A82F2F"><font size="2">(10:23:05 AM)</font> <b>Brim:</b></font> Sup fellas!<br/>
+<font color="#A82F2F"><font size="2">(10:23:55 AM)</font> <b>sethetter:</b></font> Brim: yo!<br/>
+<font color="#A82F2F"><font size="2">(10:38:18 AM)</font> <b>Brim:</b></font> I am having a bit of trouble lifting sails. It says the port (still defaulted to 1337) is in use, anyone had a similar issue? Didn&apos;t find any documentation online<br/>
+<font color="#A82F2F"><font size="2">(10:38:55 AM)</font> <b>da_wunder:</b></font> ps aux | grep node<br/>
+<font color="#A82F2F"><font size="2">(10:39:05 AM)</font> <b>da_wunder:</b></font> and then kill another process<br/>
+<font color="#A82F2F"><font size="2">(10:39:20 AM)</font> <b>da_wunder:</b></font> or ps aux | grep sails<br/>
+<font color="#A82F2F"><font size="2">(10:40:16 AM)</font> <b>da_wunder:</b></font> https://gist.github.com/tarlepp/8e9dc2fe0e213fbb0d3a<br/>
+<font color="#A82F2F"><font size="2">(10:40:18 AM)</font> <b>da_wunder:</b></font> like that<br/>
+<font color="#A82F2F"><font size="2">(10:40:31 AM)</font> <b>da_wunder:</b></font> you should see multiple lines<br/>
+<font color="#A82F2F"><font size="2">(10:41:45 AM)</font> <b>Brim:</b></font> thanks, will give that a try<br/>
+<font color="#A82F2F"><font size="2">(10:43:23 AM)</font> <b>da_wunder:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(10:43:24 AM)</font> <b>Brim:</b></font> i am not near the comp, so i will try tonight (it is a Raspberry Pi)<br/>
+<font color="#A82F2F"><font size="2">(10:43:55 AM)</font> <b>da_wunder:</b></font> ssh it&apos;s solution<br/>
+<font color="#A82F2F"><font size="2">(10:47:48 AM)</font> <b>Drako:</b></font> Brim: avoid server side rendering on the pi its really slow<br/>
+<font color="#A82F2F"><font size="2">(10:48:18 AM)</font> <b>Brim:</b></font> Drako, like page rendering?<br/>
+<font color="#A82F2F"><font size="2">(10:48:24 AM)</font> <b>Drako:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(10:48:30 AM)</font> <b>Brim:</b></font> got it<br/>
+<font color="#A82F2F"><font size="2">(10:48:34 AM)</font> <b>Brim:</b></font> will try to SSH instead<br/>
+<font color="#A82F2F"><font size="2">(10:48:46 AM)</font> <b>Brim:</b></font> it doesnt even lift for me to see any pages :\<br/>
+<font color="#A82F2F"><font size="2">(10:48:55 AM)</font> <b>Drako:</b></font> Did a little  Sqlite /node  app last year and it was  really slow on rendering the page with al lot of data<br/>
+<font color="#A82F2F"><font size="2">(10:49:09 AM)</font> <b>da_wunder:</b></font> ssh doesn&apos;t got anything to do with sails...<br/>
+<font color="#A82F2F"><font size="2">(10:50:05 AM)</font> <b>da_wunder:</b></font> i&apos;m always expected that people has own server at home, and through that access to everything at home<br/>
+<font color="#A82F2F"><font size="2">(10:50:29 AM)</font> <b>da_wunder:</b></font> because i have setup like that<br/>
+<font color="#A82F2F"><font size="2">(10:50:29 AM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(10:50:59 AM)</font> <b>Drako:</b></font> while  fetching data from the database via http was fast  :)<br/>
+<font color="#A82F2F"><font size="2">(10:51:09 AM)</font> <b>da_wunder:</b></font> weird<br/>
+<font color="#A82F2F"><font size="2">(10:51:36 AM)</font> <b>Drako:</b></font> hehe  not everybody has ah home server  :D<br/>
+<font color="#A82F2F"><font size="2">(10:52:29 AM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(10:53:09 AM)</font> <b>Brim:</b></font> no i mean i will work with the PI through SSh<br/>
+<font color="#A82F2F"><font size="2">(10:53:11 AM)</font> <b>Brim:</b></font> makes it easier<br/>
+<font color="#A82F2F"><font size="2">(10:53:25 AM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(10:53:46 AM)</font> <b>da_wunder:</b></font> and then just devel with your main machine and set deployment settings to sync data with pi<br/>
+<font color="#A82F2F"><font size="2">(10:54:02 AM)</font> <b>da_wunder:</b></font> which can also done via ssh<br/>
+<font color="#A82F2F"><font size="2">(10:54:32 AM)</font> <b>da_wunder:</b></font> with web/phpstorm you can do that easily, and also get ssh connection to pi<br/>
+<font color="#A82F2F"><font size="2">(10:56:10 AM)</font> <b>Brim:</b></font> very nice<br/>
+<font color="#A82F2F"><font size="2">(10:56:11 AM)</font> <b>Brim:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(11:07:48 AM)</font> <b>da_wunder:</b></font> for that error parsing... i made simple implementation http://wunder.sytes.net/sailserror.png<br/>
+<font color="#A82F2F"><font size="2">(11:09:44 AM)</font> <b>da_wunder:</b></font> actual code here https://github.com/tarlepp/Taskboard/blob/0.10/assets/js/services/TaskboardSocketInterceptor.js<br/>
+<font color="#A82F2F"><font size="2">(11:11:54 AM)</font> <b>Brim:</b></font> nice<br/>
+<font color="#A82F2F"><font size="2">(11:12:01 AM)</font> <b>Brim:</b></font> i could actually use this<br/>
+<font color="#A82F2F"><font size="2">(11:18:35 AM)</font> <b>da_wunder:</b></font> robdubya: you around?<br/>
+<font color="#A82F2F"><font size="2">(11:35:07 AM)</font> <b>RWOverdijk:</b></font> I wish to fetch a certain hierarchy for my model. So, they can have a parent within the same model. I only want the top records with their children populated. Any ideas?<br/>
+<font color="#A82F2F"><font size="2">(11:35:28 AM)</font> <b>RWOverdijk:</b></font> It&apos;s recursive, too.<br/>
+<font color="#A82F2F"><font size="2">(11:42:04 AM)</font> <b>RWOverdijk:</b></font> The charming quiet of this channel :)<br/>
+<font color="#A82F2F"><font size="2">(11:56:46 AM)</font> <b>da_wunder:</b></font> RWOverdijk: in 0.9 branch i did service for that<br/>
+<font color="#A82F2F"><font size="2">(11:57:29 AM)</font> <b>da_wunder:</b></font> like that https://github.com/tarlepp/Taskboard/blob/master/api/services/DataService.js#L653<br/>
+<font color="#A82F2F"><font size="2">(12:00:26 PM)</font> <b>RWOverdijk:</b></font> da_wunder, I&apos;ve done it before, too<br/>
+<font color="#A82F2F"><font size="2">(12:00:33 PM)</font> <b>RWOverdijk:</b></font> I just wondered if I can use associations for that.<br/>
+<font color="#A82F2F"><font size="2">(12:01:09 PM)</font> <b>da_wunder:</b></font> have you tried that yet?<br/>
+<font color="#A82F2F"><font size="2">(12:01:22 PM)</font> <b>RWOverdijk:</b></font> I&apos;m trying.<br/>
+<font color="#A82F2F"><font size="2">(12:01:37 PM)</font> <b>RWOverdijk:</b></font> The furthest I&apos;ve gotten, is fetching where parent is empty.<br/>
+<font color="#A82F2F"><font size="2">(12:01:47 PM)</font> <b>RWOverdijk:</b></font> But it can&apos;t create the query for it<br/>
+<font color="#A82F2F"><font size="2">(12:01:50 PM)</font> <b>RWOverdijk:</b></font> Which sucks.<br/>
+<font color="#A82F2F"><font size="2">(12:02:03 PM)</font> <b>RWOverdijk:</b></font> Because no, it does a query for all elements and all of their children.<br/>
+<font color="#A82F2F"><font size="2">(12:02:06 PM)</font> <b>RWOverdijk:</b></font> now*<br/>
+<font color="#A82F2F"><font size="2">(12:02:11 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(12:02:22 PM)</font> <b>RWOverdijk:</b></font> While I&apos;ve made the prettiest query known to mankind.<br/>
+<font color="#A82F2F"><font size="2">(12:02:25 PM)</font> <b>RWOverdijk:</b></font> lemme get it<br/>
+<font color="#A82F2F"><font size="2">(12:03:11 PM)</font> <b>da_wunder:</b></font> i think you have to restrict query like socket.get(&quot;/foo&quot;, {parent: 0});<br/>
+<font color="#A82F2F"><font size="2">(12:05:22 PM)</font> <b>RWOverdijk:</b></font> Do you know that feeling...<br/>
+<font color="#A82F2F"><font size="2">(12:05:31 PM)</font> <b>RWOverdijk:</b></font> When looking at old code of a never finished project...<br/>
+<font color="#A82F2F"><font size="2">(12:05:42 PM)</font> <b>RWOverdijk:</b></font> And you just love the way you wrote it, given the time?<br/>
+<font color="#A82F2F"><font size="2">(12:06:25 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:07:08 PM)</font> <b>RWOverdijk:</b></font> I hate that feeling.<br/>
+<font color="#A82F2F"><font size="2">(12:07:11 PM)</font> <b>RWOverdijk:</b></font> It makes me sad :p<br/>
+<font color="#A82F2F"><font size="2">(12:07:30 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:07:41 PM)</font> <b>RWOverdijk:</b></font> I really want to open source my CMS<br/>
+<font color="#A82F2F"><font size="2">(12:07:45 PM)</font> <b>RWOverdijk:</b></font> But it&apos;s my company.<br/>
+<font color="#A82F2F"><font size="2">(12:09:15 PM)</font> <b>da_wunder:</b></font> just add license that is free for non-commercial usage<br/>
+<font color="#A82F2F"><font size="2">(12:10:11 PM)</font> <b>da_wunder:</b></font> like http://creativecommons.org/licenses/by-nc/3.0/<br/>
+<font color="#A82F2F"><font size="2">(12:10:13 PM)</font> <b>RWOverdijk:</b></font> Nobody does that<br/>
+<font color="#A82F2F"><font size="2">(12:10:14 PM)</font> <b>RWOverdijk:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(12:10:31 PM)</font> <b>RWOverdijk:</b></font> They just ignore the license.<br/>
+<font color="#A82F2F"><font size="2">(12:10:49 PM)</font> <b>RWOverdijk:</b></font> And there&apos;s not way to sue them based on an open-source license, without registering it legally.<br/>
+<font color="#A82F2F"><font size="2">(12:10:58 PM)</font> <b>da_wunder:</b></font> just hide some statistic data send to your system on any installs...<br/>
+<font color="#A82F2F"><font size="2">(12:11:26 PM)</font> <b>RWOverdijk:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(12:11:32 PM)</font> <b>RWOverdijk:</b></font> Oh by the way<br/>
+<font color="#A82F2F"><font size="2">(12:11:33 PM)</font> <b>da_wunder:</b></font> seen that<br/>
+<font color="#A82F2F"><font size="2">(12:11:35 PM)</font> <b>RWOverdijk:</b></font> https://www.npmjs.org/package/html-object<br/>
+<font color="#A82F2F"><font size="2">(12:11:40 PM)</font> <b>RWOverdijk:</b></font> I jsut published this.<br/>
+<font color="#A82F2F"><font size="2">(12:11:43 PM)</font> <b>RWOverdijk:</b></font> Just*<br/>
+<font color="#A82F2F"><font size="2">(12:11:58 PM)</font> <b>RWOverdijk:</b></font> I needed it to generate lists.<br/>
+<font color="#A82F2F"><font size="2">(12:12:41 PM)</font> <b>da_wunder:</b></font> nice<br/>
+<font color="#A82F2F"><font size="2">(12:12:54 PM)</font> <b>RWOverdijk:</b></font> Yeah<br/>
+<font color="#A82F2F"><font size="2">(12:13:05 PM)</font> <b>RWOverdijk:</b></font> Thinking about extending it to accept ZenCoding :p<br/>
+<font color="#A82F2F"><font size="2">(12:13:20 PM)</font> <b>RWOverdijk:</b></font> Emmet<br/>
+<font color="#A82F2F"><font size="2">(12:17:34 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:19:29 PM)</font> <b>RWOverdijk:</b></font> da_wunder, Do you think it would be weird to have a &quot;lib&quot; besides api?<br/>
+<font color="#A82F2F"><font size="2">(12:19:35 PM)</font> <b>RWOverdijk:</b></font> directory that is<br/>
+<font color="#A82F2F"><font size="2">(12:19:45 PM)</font> <b>RWOverdijk:</b></font> I have some stuff that&apos;s not really a service<br/>
+<font color="#A82F2F"><font size="2">(12:20:06 PM)</font> <b>RWOverdijk:</b></font> Or should be in a dir because it consists out of multiple files<br/>
+<font color="#A82F2F"><font size="2">(12:20:15 PM)</font> <b>RWOverdijk:</b></font> But they&apos;re not generic enough to make modules<br/>
+<font color="#A82F2F"><font size="2">(12:22:13 PM)</font> <b>da_wunder:</b></font> sounds good<br/>
+<font color="#A82F2F"><font size="2">(12:22:28 PM)</font> <b>da_wunder:</b></font> have been wondering that also<br/>
+<font color="#A82F2F"><font size="2">(12:25:01 PM)</font> <b>da_wunder:</b></font> RWOverdijk: hmm your website doesn&apos;t work http://www.spoonx.nl<br/>
+<font color="#A82F2F"><font size="2">(12:25:07 PM)</font> <b>da_wunder:</b></font> spotted that at github<br/>
+<font color="#A82F2F"><font size="2">(12:28:08 PM)</font> <b>RWOverdijk:</b></font> da_wunder, I know<br/>
+<font color="#A82F2F"><font size="2">(12:28:12 PM)</font> <b>RWOverdijk:</b></font> It&apos;s in the making as we speak<br/>
+<font color="#A82F2F"><font size="2">(12:29:26 PM)</font> <b>da_wunder:</b></font> aah<br/>
+<font color="#A82F2F"><font size="2">(12:29:53 PM)</font> <b>da_wunder:</b></font> damn, i&apos;m hungry<br/>
+<font color="#A82F2F"><font size="2">(12:30:24 PM)</font> <b>da_wunder:</b></font> wait for 20-25mins<br/>
+<font color="#A82F2F"><font size="2">(12:30:50 PM)</font> <b>da_wunder:</b></font> and then some steaks!<br/>
+<font color="#A82F2F"><font size="2">(12:31:56 PM)</font> <b>da_wunder:</b></font> steaks themself are already ready, have to wait for side dish...<br/>
+<font color="#A82F2F"><font size="2">(12:33:05 PM)</font> <b>RWOverdijk:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(12:33:07 PM)</font> <b>RWOverdijk:</b></font> poor guy<br/>
+<font color="#A82F2F"><font size="2">(12:35:53 PM)</font> <b>da_wunder:</b></font> beef tenderloin...<br/>
+<font color="#A82F2F"><font size="2">(12:36:35 PM)</font> <b>da_wunder:</b></font> made 3.5cm steaks from a piece of 1kg<br/>
+<font color="#A82F2F"><font size="2">(12:36:39 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:37:31 PM)</font> <b>da_wunder:</b></font> a bit bigger than those https://twitter.com/tarlepp/media<br/>
+<font color="#A82F2F"><font size="2">(12:37:35 PM)</font> <b>da_wunder:</b></font> damn<br/>
+<font color="#A82F2F"><font size="2">(12:37:42 PM)</font> <b>da_wunder:</b></font> https://twitter.com/tarlepp/status/444523866720063488/photo/1<br/>
+<font color="#A82F2F"><font size="2">(12:37:42 PM)</font> <b>da_wunder:</b></font> those<br/>
+<font color="#A82F2F"><font size="2">(12:44:20 PM)</font> <b>RWOverdijk:</b></font> A LOT OF PEPPER<br/>
+<font color="#A82F2F"><font size="2">(12:48:35 PM)</font> <b>da_wunder:</b></font> not really<br/>
+<font color="#A82F2F"><font size="2">(12:48:48 PM)</font> <b>da_wunder:</b></font> just a right amount :<br/>
+<font color="#A82F2F"><font size="2">(01:43:32 PM)</font> <b>RWOverdijk:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(01:44:41 PM)</font> <b>robdubya:</b></font> mmm steak<br/>
+<font color="#A82F2F"><font size="2">(01:46:14 PM)</font> <b>RWOverdijk:</b></font> I&apos;m eating something else<br/>
+<font color="#A82F2F"><font size="2">(01:46:19 PM)</font> <b>RWOverdijk:</b></font> No idea what it is<br/>
+<font color="#A82F2F"><font size="2">(02:01:37 PM)</font> <b>rawtaz:</b></font> RWOverdijk: thats the first sign of a divorce coming up<br/>
+<font color="#A82F2F"><font size="2">(02:01:43 PM)</font> <b>rawtaz:</b></font> it always is<br/>
+<font color="#A82F2F"><font size="2">(02:02:28 PM)</font> <b>rawtaz:</b></font> robdubya: when you use our beloved pgsql with sails, do you let sails/waterline create/modify the schema, or do you keep control of that yourself?<br/>
+<font color="#A82F2F"><font size="2">(02:03:28 PM)</font> <b>RWOverdijk:</b></font> rawtaz, how is it?<br/>
+<font color="#A82F2F"><font size="2">(02:03:33 PM)</font> <b>RWOverdijk:</b></font> I&apos;m not even married<br/>
+<font color="#A82F2F"><font size="2">(02:03:36 PM)</font> <b>rawtaz:</b></font> RWOverdijk: i never came that far :P<br/>
+<font color="#A82F2F"><font size="2">(02:03:44 PM)</font> <b>RWOverdijk:</b></font> Haha<br/>
+<font color="#A82F2F"><font size="2">(02:03:53 PM)</font> <b>RWOverdijk:</b></font> Well, I had to eat otherwise I wouldn&apos;t get my beer<br/>
+<font color="#A82F2F"><font size="2">(02:03:58 PM)</font> <b>rawtaz:</b></font> hehe<br/>
+<font color="#A82F2F"><font size="2">(02:07:33 PM)</font> <b>RWOverdijk:</b></font> &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/about-us&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;<br/>
+<font color="#A82F2F"><font size="2">(02:07:39 PM)</font> <b>rawtaz:</b></font> absolutely not<br/>
+<font color="#A82F2F"><font size="2">(02:07:41 PM)</font> <b>rawtaz:</b></font> i digress<br/>
+<font color="#A82F2F"><font size="2">(02:07:44 PM)</font> <b>RWOverdijk:</b></font> My navigation module is on its way<br/>
+<font color="#A82F2F"><font size="2">(02:07:49 PM)</font> <b>rawtaz:</b></font> up yours<br/>
+<font color="#A82F2F"><font size="2">(02:07:55 PM)</font> <b>RWOverdijk:</b></font> Gladly<br/>
+<font color="#A82F2F"><font size="2">(02:07:58 PM)</font> <b>RWOverdijk:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(02:08:00 PM)</font> <b>rawtaz:</b></font> my benefit<br/>
+<font color="#A82F2F"><font size="2">(02:08:02 PM)</font> <b>rawtaz:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(02:08:08 PM)</font> <b>RWOverdijk:</b></font> You&apos;re out of order!<br/>
+<font color="#A82F2F"><font size="2">(02:08:26 PM)</font> <b>rawtaz:</b></font> im on backorder<br/>
+<font color="#A82F2F"><font size="2">(02:08:41 PM)</font> <b>RWOverdijk:</b></font> But fo realz<br/>
+<font color="#062585"><font size="2">(02:08:44 PM)</font> <b>***RWOverdijk</b></font> Using this: https://www.npmjs.org/package/html-object<br/>
+<font color="#A82F2F"><font size="2">(02:08:47 PM)</font> <b>RWOverdijk:</b></font> Using this: https://www.npmjs.org/package/html-object<br/>
+<font color="#A82F2F"><font size="2">(02:08:48 PM)</font> <b>RWOverdijk:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:08:59 PM)</font> <b>RWOverdijk:</b></font> And a small config to generate navigation based on routes<br/>
+<font color="#A82F2F"><font size="2">(02:09:10 PM)</font> <b>RWOverdijk:</b></font> Only downside is you&apos;&apos;ll have to specify routes<br/>
+<font color="#A82F2F"><font size="2">(02:11:52 PM)</font> <b>da_wunder:</b></font> damn<br/>
+<font color="#A82F2F"><font size="2">(02:12:06 PM)</font> <b>da_wunder:</b></font> next $http interceptor<br/>
+<font color="#A82F2F"><font size="2">(02:12:19 PM)</font> <b>da_wunder:</b></font> and some fancy logic for that<br/>
+<font color="#A82F2F"><font size="2">(02:12:30 PM)</font> <b>da_wunder:</b></font> and i&apos;m drunk - again<br/>
+<font color="#A82F2F"><font size="2">(02:12:39 PM)</font> <b>da_wunder:</b></font> and sauna is ready<br/>
+<font color="#A82F2F"><font size="2">(02:12:45 PM)</font> <b>rawtaz:</b></font> finnish ppl :P<br/>
+<font color="#A82F2F"><font size="2">(02:12:53 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(02:14:05 PM)</font> <b>rawtaz:</b></font> RWOverdijk: niice<br/>
+<font color="#A82F2F"><font size="2">(02:16:17 PM)</font> <b>robdubya:</b></font> rawtaz during dev i let sails handle it. production i do it.<br/>
+<font color="#A82F2F"><font size="2">(02:16:30 PM)</font> <b>RWOverdijk:</b></font> yah<br/>
+<font color="#A82F2F"><font size="2">(02:18:02 PM)</font> <b>rawtaz:</b></font> robdubya: ok. doing it yourself is just turning off schema management in waterline/sails, and making sure to have a schema matching the models?<br/>
+<font color="#A82F2F"><font size="2">(02:18:02 PM)</font> <b>delight__:</b></font> so next step is intergrting famo.us into sails as frontend tech ;)<br/>
+<font color="#A82F2F"><font size="2">(02:18:54 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(02:19:00 PM)</font> <b>da_wunder:</b></font> have anyone used this https://github.com/BlueHotDog/sails-migrations<br/>
+<font color="#A82F2F"><font size="2">(02:19:36 PM)</font> <b>robdubya:</b></font> rawtaz yep. i generally build the schema on my local machine, and then use a tool to build / copy that schema<br/>
+<font color="#A82F2F"><font size="2">(02:19:40 PM)</font> <b>rawtaz:</b></font> weird. why isnt the Demo link on famo.us active?<br/>
+<font color="#A82F2F"><font size="2">(02:20:05 PM)</font> <b>delight__:</b></font> rawtaz the framework will be available on 16. Mai<br/>
+<font color="#A82F2F"><font size="2">(02:20:19 PM)</font> <b>delight__:</b></font> don’t know … just came across this .. spacy animations thou<br/>
+<font color="#A82F2F"><font size="2">(02:20:30 PM)</font> <b>robdubya:</b></font> famous is cool, but its shit at everything except UI<br/>
+<font color="#A82F2F"><font size="2">(02:20:47 PM)</font> <b>rawtaz:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(02:21:19 PM)</font> <b>delight__:</b></font> robdubya https://www.youtube.com/watch?v=nRY8f_aZUVk &lt;&lt;&lt; they are integrating it with angular<br/>
+<font color="#A82F2F"><font size="2">(02:21:23 PM)</font> <b>delight__:</b></font> ;)<br/>
+<font color="#A82F2F"><font size="2">(02:21:52 PM)</font> <b>robdubya:</b></font> delight__ i know, i&apos;ve been talking with him<br/>
+<font color="#A82F2F"><font size="2">(02:21:59 PM)</font> <b>delight__:</b></font> i see<br/>
+<font color="#062585"><font size="2">(02:22:10 PM)</font> <b>***rawtaz</b></font> runs for the gun<br/>
+<font color="#A82F2F"><font size="2">(02:22:40 PM)</font> <b>morenoh152:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(02:41:08 PM)</font> <b>rawtaz:</b></font> http://game.notch.net/drowning/<br/>
+<font color="#A82F2F"><font size="2">(02:41:18 PM)</font> <b>rawtaz:</b></font> give it a few rounds<br/>
+<font size="2">(02:41:41 PM)</font><b> _Dan_E is now known as Danny_</b><br/>
+<font color="#A82F2F"><font size="2">(02:49:03 PM)</font> <b>rawtaz:</b></font> pretty fucking ace<br/>
+<font color="#A82F2F"><font size="2">(02:55:35 PM)</font> <b>robdubya:</b></font> rawtaz this game sucks<br/>
+<font color="#A82F2F"><font size="2">(02:56:04 PM)</font> <b>rawtaz:</b></font> i think it has some value :)<br/>
+<font color="#A82F2F"><font size="2">(02:56:09 PM)</font> <b>rawtaz:</b></font> why do you thikn it sucks?<br/>
+<font color="#A82F2F"><font size="2">(02:56:13 PM)</font> <b>rawtaz:</b></font> brb<br/>
+<font color="#A82F2F"><font size="2">(02:57:03 PM)</font> <b>da_wunder:</b></font> http://olen.pro/Shoot-R/<br/>
+<font color="#A82F2F"><font size="2">(02:57:26 PM)</font> <b>da_wunder:</b></font> first game of friend<br/>
+<font color="#A82F2F"><font size="2">(02:57:39 PM)</font> <b>robdubya:</b></font> rawtaz not enoguh explosions<br/>
+<font size="2">(02:58:29 PM)</font><b> delight__ is now known as delight</b><br/>
+<font color="#A82F2F"><font size="2">(03:01:05 PM)</font> <b>rawtaz:</b></font> mhm<br/>
+<font color="#A82F2F"><font size="2">(03:03:14 PM)</font> <b>rawtaz:</b></font> thats a lot of enemies for one little fighter jet<br/>
+<font color="#A82F2F"><font size="2">(03:03:59 PM)</font> <b>da_wunder:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(03:04:10 PM)</font> <b>da_wunder:</b></font> imho fairly good game<br/>
+<font color="#A82F2F"><font size="2">(03:28:39 PM)</font> <b>da_wunder:</b></font> damn, it&apos;s hard to change font of app<br/>
+<font color="#A82F2F"><font size="2">(03:41:36 PM)</font> <b>da_wunder:</b></font> just now doing some experiments with that http://comicneue.com/<br/>
+<font color="#A82F2F"><font size="2">(03:45:26 PM)</font> <b>morenoh152:</b></font> anyone know if there&apos;s a copy of this tut with fixed audio? https://www.youtube.com/watch?v=abro43s04Yk<br/>
+<font color="#A82F2F"><font size="2">(03:46:41 PM)</font> <b>da_wunder:</b></font> hmm, where is the problem with audio?<br/>
+<font color="#A82F2F"><font size="2">(03:48:40 PM)</font> <b>morenoh152:</b></font> da_wunder: if you watch it long enough you&apos;ll see the audio is out of sync<br/>
+<font color="#A82F2F"><font size="2">(03:49:51 PM)</font> <b>da_wunder:</b></font> hmm at the end, yes but you should follow that just for audio<br/>
+<font color="#A82F2F"><font size="2">(04:32:24 PM)</font> <b>nickeddy:</b></font> anyone have a good way to deal with passwords in sails?<br/>
+<font color="#A82F2F"><font size="2">(04:32:52 PM)</font> <b>da_wunder:</b></font> yep bcrypt<br/>
+<font color="#A82F2F"><font size="2">(04:33:09 PM)</font> <b>da_wunder:</b></font> and use passport<br/>
+<font color="#A82F2F"><font size="2">(04:33:19 PM)</font> <b>nickeddy:</b></font> errrrrr<br/>
+<font color="#A82F2F"><font size="2">(04:33:23 PM)</font> <b>nickeddy:</b></font> i&apos;m really, really new to sails so<br/>
+<font color="#A82F2F"><font size="2">(04:33:31 PM)</font> <b>nickeddy:</b></font> that doesn&apos;t really tell me anything :P<br/>
+<font color="#A82F2F"><font size="2">(04:33:48 PM)</font> <b>robdubya:</b></font> nickeddy define &quot;deal with&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:34:08 PM)</font> <b>nickeddy:</b></font> robdubya: create a model with username/password, and not have the password go out to the normal crud blueprint<br/>
+<font color="#A82F2F"><font size="2">(04:34:17 PM)</font> <b>nickeddy:</b></font> and have that password be encrypted :P<br/>
+<font color="#A82F2F"><font size="2">(04:34:30 PM)</font> <b>da_wunder:</b></font> http://passportjs.org/<br/>
+<font color="#A82F2F"><font size="2">(04:34:38 PM)</font> <b>da_wunder:</b></font> there is fairly good examples of usage<br/>
+<font color="#A82F2F"><font size="2">(04:35:15 PM)</font> <b>robdubya:</b></font> nickeddy you encrypt it with bcrypt before you save it. and you strip it on the way out<br/>
+<font color="#A82F2F"><font size="2">(04:35:43 PM)</font> <b>nickeddy:</b></font> heh<br/>
+<font color="#A82F2F"><font size="2">(04:35:52 PM)</font> <b>robdubya:</b></font> nickeddy kasperisager put this together https://github.com/kasperisager/sails-generate-auth<br/>
+<font color="#A82F2F"><font size="2">(04:35:53 PM)</font> <b>nickeddy:</b></font> yeah, i&apos;m not really sure how to do that<br/>
+<font color="#A82F2F"><font size="2">(04:35:55 PM)</font> <b>da_wunder:</b></font> yep, that is the basic principle<br/>
+<font color="#A82F2F"><font size="2">(04:36:00 PM)</font> <b>nickeddy:</b></font> new to node as well<br/>
+<font color="#A82F2F"><font size="2">(04:36:19 PM)</font> <b>da_wunder:</b></font> just start to code and make some experiments<br/>
+<font color="#A82F2F"><font size="2">(04:36:30 PM)</font> <b>da_wunder:</b></font> that&apos;s how i start with node<br/>
+<font color="#A82F2F"><font size="2">(04:36:40 PM)</font> <b>da_wunder:</b></font> + lots of googling, etc.<br/>
+<font color="#A82F2F"><font size="2">(04:36:54 PM)</font> <b>nickeddy:</b></font> so integrating passport into sails would just be npm install passport in my sails directory?<br/>
+<font color="#A82F2F"><font size="2">(04:37:05 PM)</font> <b>da_wunder:</b></font> not quite<br/>
+<font color="#A82F2F"><font size="2">(04:37:17 PM)</font> <b>nickeddy:</b></font> well no i mean installing it at least<br/>
+<font color="#A82F2F"><font size="2">(04:37:24 PM)</font> <b>robdubya:</b></font> installing it yes<br/>
+<font color="#A82F2F"><font size="2">(04:37:34 PM)</font> <b>robdubya:</b></font> but you&apos;d have to then integrate it. which is what i just linked.<br/>
+<font color="#A82F2F"><font size="2">(04:37:43 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(04:38:01 PM)</font> <b>nickeddy:</b></font> robdubya: thanks<br/>
+<font color="#A82F2F"><font size="2">(04:38:30 PM)</font> <b>nickeddy:</b></font> errr<br/>
+<font color="#A82F2F"><font size="2">(04:40:32 PM)</font> <b>nickeddy:</b></font> this is so god damn complex<br/>
+<font color="#A82F2F"><font size="2">(04:40:36 PM)</font> <b>nickeddy:</b></font> and have of the commands aren&apos;t working<br/>
+<font color="#A82F2F"><font size="2">(04:40:38 PM)</font> <b>robdubya:</b></font> nickeddy read through the source of that repo, its got lots of docs<br/>
+<font color="#A82F2F"><font size="2">(04:40:49 PM)</font> <b>nickeddy:</b></font> i&apos;m trying to go through their guide<br/>
+<font color="#A82F2F"><font size="2">(04:40:59 PM)</font> <b>robdubya:</b></font> who&apos;s guide<br/>
+<font color="#A82F2F"><font size="2">(04:41:02 PM)</font> <b>robdubya:</b></font> *whose<br/>
+<font color="#A82F2F"><font size="2">(04:41:06 PM)</font> <b>nickeddy:</b></font> and `sails generate auth` doesn&apos;t work<br/>
+<font color="#A82F2F"><font size="2">(04:41:08 PM)</font> <b>nickeddy:</b></font> the one you linked<br/>
+<font color="#A82F2F"><font size="2">(04:42:46 PM)</font> <b>da_wunder:</b></font> are you running 0.10?<br/>
+<font color="#A82F2F"><font size="2">(04:42:56 PM)</font> <b>nickeddy:</b></font> sails -v<br/>
+<font color="#A82F2F"><font size="2">(04:42:56 PM)</font> <b>nickeddy:</b></font> 0.10.0-rc5<br/>
+<font color="#A82F2F"><font size="2">(04:43:36 PM)</font> <b>nickeddy:</b></font> i&apos;m so confused :(<br/>
+<font color="#A82F2F"><font size="2">(04:43:45 PM)</font> <b>nickeddy:</b></font> and stupid<br/>
+<font color="#A82F2F"><font size="2">(04:43:46 PM)</font> <b>nickeddy:</b></font> DAMNNIT<br/>
+<font color="#A82F2F"><font size="2">(04:45:19 PM)</font> <b>nickeddy:</b></font> wtf<br/>
+<font color="#A82F2F"><font size="2">(04:45:25 PM)</font> <b>nickeddy:</b></font> Running generator (sails-generate-auth) @ `/home/neddy/kumaranApp`...<br/>
+<font color="#A82F2F"><font size="2">(04:45:26 PM)</font> <b>nickeddy:</b></font> info: Generated a new auth `undefined` at undefinedundefined.js!<br/>
+<font color="#A82F2F"><font size="2">(04:45:49 PM)</font> <b>nickeddy:</b></font> i guess i have to give it a name?<br/>
+<font color="#A82F2F"><font size="2">(04:45:50 PM)</font> <b>nickeddy:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(04:49:40 PM)</font> <b>nickeddy:</b></font> well it looks like it made me a Passport.js in my models<br/>
+<font color="#A82F2F"><font size="2">(04:49:54 PM)</font> <b>robdubya:</b></font> passport model = a &quot;credential&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:50:05 PM)</font> <b>robdubya:</b></font> so a user -&gt; hasMany -&gt; credentials<br/>
+<font color="#A82F2F"><font size="2">(04:50:15 PM)</font> <b>robdubya:</b></font> eg password, twitter oauth, etc<br/>
+<font color="#A82F2F"><font size="2">(04:50:49 PM)</font> <b>nickeddy:</b></font> so the user attributes example they have then with passports: {collection: &quot;Passport&quot;, via: &quot;user&quot;}<br/>
+<font color="#A82F2F"><font size="2">(04:50:58 PM)</font> <b>robdubya:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(04:50:58 PM)</font> <b>nickeddy:</b></font> is there a way to restrict it to local only?<br/>
+<font color="#A82F2F"><font size="2">(04:51:07 PM)</font> <b>nickeddy:</b></font> i don&apos;t want people logging in via anything but local :p<br/>
+<font color="#A82F2F"><font size="2">(04:51:18 PM)</font> <b>robdubya:</b></font> iirc there&apos;s a config / passport.js file that configs that stuff<br/>
+<font color="#A82F2F"><font size="2">(04:51:39 PM)</font> <b>nickeddy:</b></font> yep, yay<br/>
+<font color="#A82F2F"><font size="2">(04:52:18 PM)</font> <b>nickeddy:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(04:52:36 PM)</font> <b>nickeddy:</b></font> it says i have to config my routes.json but i&apos;m not seeing that file in config/<br/>
+<font color="#A82F2F"><font size="2">(04:52:49 PM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(04:52:52 PM)</font> <b>robdubya:</b></font> routes.js<br/>
+<font color="#A82F2F"><font size="2">(04:53:12 PM)</font> <b>lenswipe:</b></font> is there any condition under which angular.copy wouldn&apos;t...y&apos;know copy something<br/>
+<font size="2">(04:54:49 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(04:54:51 PM)</font> <b>nickeddy:</b></font> robdubya: when i sails lift: Error: Cannot find module &apos;passport-local&apos;<br/>
+<font color="#A82F2F"><font size="2">(04:54:59 PM)</font> <b>nickeddy:</b></font> that something i have to npm install?<br/>
+<font color="#A82F2F"><font size="2">(04:55:04 PM)</font> <b>lenswipe:</b></font> nickeddy, npm install passport-local<br/>
+<font color="#A82F2F"><font size="2">(04:55:07 PM)</font> <b>robdubya:</b></font> --save<br/>
+<font color="#A82F2F"><font size="2">(04:55:09 PM)</font> <b>nickeddy:</b></font> figured<br/>
+<font color="#A82F2F"><font size="2">(04:55:19 PM)</font> <b>robdubya:</b></font> (so it gets added to your package.json)<br/>
+<font color="#A82F2F"><font size="2">(04:55:20 PM)</font> <b>lenswipe:</b></font> yeah, also ^ that<br/>
+<font color="#A82F2F"><font size="2">(04:55:33 PM)</font> <b>cramrod:</b></font> robdubya, I finally figured out that redis problem.  The host hadn&apos;t made it clear that I needed to use a proxy.  I finally found the information buried in an autogenerated email instead of their support site.<br/>
+<font color="#A82F2F"><font size="2">(04:56:10 PM)</font> <b>robdubya:</b></font> cramrod wonderful. thats weird though… i use rediscloud and its pretty no-bullshit<br/>
+<font color="#062585"><font size="2">(04:56:21 PM)</font> <b>***lenswipe</b></font> uses openshift<br/>
+<font color="#A82F2F"><font size="2">(04:56:26 PM)</font> <b>lenswipe:</b></font> &lt;£ OpenShift<br/>
+<font color="#A82F2F"><font size="2">(04:56:35 PM)</font> <b>nickeddy:</b></font> node is so unfamiliar with me but i like it so far<br/>
+<font color="#A82F2F"><font size="2">(04:56:40 PM)</font> <b>nickeddy:</b></font> to me*<br/>
+<font color="#A82F2F"><font size="2">(04:56:42 PM)</font> <b>nickeddy:</b></font> with me too<br/>
+<font color="#A82F2F"><font size="2">(04:56:44 PM)</font> <b>nickeddy:</b></font> but to me*<br/>
+<font color="#A82F2F"><font size="2">(04:56:45 PM)</font> <b>nickeddy:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(04:57:13 PM)</font> <b>robdubya:</b></font> nickeddy you should definitely wrap your brain around node&apos;s async / single-thread world<br/>
+<font color="#A82F2F"><font size="2">(04:57:21 PM)</font> <b>robdubya:</b></font> because it will bite you in the ass if you dont<br/>
+<font color="#A82F2F"><font size="2">(04:57:26 PM)</font> <b>robdubya:</b></font> sails or no sails<br/>
+<font color="#A82F2F"><font size="2">(04:57:27 PM)</font> <b>cramrod:</b></font> Afterwards though, I ran into that same problem you had.  I couldn&apos;t figure out why Model.find() returned records but my hosted Mongo said the DB was empty.  Turns out, a typo in the mongo url caused sails to use my local mongo install.  Annoying.<br/>
+<font color="#A82F2F"><font size="2">(04:57:34 PM)</font> <b>nickeddy:</b></font> robdubya: any good way to do that?<br/>
+<font color="#A82F2F"><font size="2">(04:58:11 PM)</font> <b>cramrod:</b></font> If you hadnt mentioned it earlier, it would have taken me hours to debug<br/>
+<font color="#A82F2F"><font size="2">(04:58:13 PM)</font> <b>robdubya:</b></font> cramrod ha. i think it really should fail/throw in that situation, not really sure what the reasoning is there<br/>
+<font color="#A82F2F"><font size="2">(04:58:29 PM)</font> <b>cramrod:</b></font> Is there even a warning?<br/>
+<font color="#A82F2F"><font size="2">(04:58:32 PM)</font> <b>robdubya:</b></font> nope<br/>
+<font color="#A82F2F"><font size="2">(04:58:36 PM)</font> <b>robdubya:</b></font> silent<br/>
+<font color="#A82F2F"><font size="2">(04:58:39 PM)</font> <b>robdubya:</b></font> awesome<br/>
+<font color="#A82F2F"><font size="2">(04:59:27 PM)</font> <b>cramrod:</b></font> Thats stupid.  Im going to get that fixed.<br/>
+<font color="#A82F2F"><font size="2">(04:59:27 PM)</font> <b>robdubya:</b></font> its great from &quot;let me just get working&quot; perspective, but fuck, it has ruined my day more than once<br/>
+<font color="#A82F2F"><font size="2">(05:01:04 PM)</font> <b>nickeddy:</b></font> ahhhhhhhhhhhh passport has a CAS auth too<br/>
+<font color="#A82F2F"><font size="2">(05:01:08 PM)</font> <b>nickeddy:</b></font> this is so nice<br/>
+<font color="#A82F2F"><font size="2">(05:01:18 PM)</font> <b>robdubya:</b></font> CAS?<br/>
+<font color="#A82F2F"><font size="2">(05:01:28 PM)</font> <b>nickeddy:</b></font> http://en.wikipedia.org/wiki/Central_Authentication_Service<br/>
+<font color="#A82F2F"><font size="2">(05:01:59 PM)</font> <b>robdubya:</b></font> interesting (if obscure)<br/>
+<font color="#A82F2F"><font size="2">(05:02:13 PM)</font> <b>nickeddy:</b></font> i work at a university so yeah<br/>
+<font color="#A82F2F"><font size="2">(05:02:16 PM)</font> <b>nickeddy:</b></font> kind of needed :p<br/>
+<font color="#A82F2F"><font size="2">(05:02:55 PM)</font> <b>nickeddy:</b></font> robdubya: so i&apos;ve got the routes set up... and the routes just send back json<br/>
+<font color="#A82F2F"><font size="2">(05:03:11 PM)</font> <b>robdubya:</b></font> wut<br/>
+<font color="#A82F2F"><font size="2">(05:03:21 PM)</font> <b>jahrichie:</b></font> extremely pleased with this framework so far<br/>
+<font color="#A82F2F"><font size="2">(05:03:30 PM)</font> <b>jahrichie:</b></font> amazing job!<br/>
+<font color="#A82F2F"><font size="2">(05:03:57 PM)</font> <b>nickeddy:</b></font> robdubya: when i go to /register, well, there&apos;s no view. it gives me JSON back lol<br/>
+<font color="#A82F2F"><font size="2">(05:05:22 PM)</font> <b>da_wunder:</b></font> nickeddy: basically you should not render pages via sails<br/>
+<font color="#A82F2F"><font size="2">(05:05:24 PM)</font> <b>da_wunder:</b></font> imho<br/>
+<font color="#A82F2F"><font size="2">(05:05:25 PM)</font> <b>robdubya:</b></font> what does the json say (you are going to have to make views.. obviously)<br/>
+<font color="#A82F2F"><font size="2">(05:05:32 PM)</font> <b>nickeddy:</b></font> i guess i don&apos;t understand Express<br/>
+<font color="#A82F2F"><font size="2">(05:05:33 PM)</font> <b>nickeddy:</b></font> um<br/>
+<font color="#A82F2F"><font size="2">(05:05:58 PM)</font> <b>nickeddy:</b></font> { &quot;view&quot;: { &quot;name&quot;: &quot;auth/register&quot;. &quot;<br/>
+<font color="#A82F2F"><font size="2">(05:05:58 PM)</font> <b>nickeddy:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:06:06 PM)</font> <b>da_wunder:</b></font> just use sails.js as server side and make angular app that uses that<br/>
+<font color="#A82F2F"><font size="2">(05:06:11 PM)</font> <b>nickeddy:</b></font> so in views i need an auth folder with a register.ejs?<br/>
+<font color="#A82F2F"><font size="2">(05:06:12 PM)</font> <b>robdubya:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(05:06:15 PM)</font> <b>robdubya:</b></font> well<br/>
+<font color="#A82F2F"><font size="2">(05:06:18 PM)</font> <b>nickeddy:</b></font> oh<br/>
+<font color="#A82F2F"><font size="2">(05:06:18 PM)</font> <b>robdubya:</b></font> hold on a sec<br/>
+<font color="#A82F2F"><font size="2">(05:06:25 PM)</font> <b>robdubya:</b></font> you&apos;re not going to use anything but local?<br/>
+<font color="#A82F2F"><font size="2">(05:06:31 PM)</font> <b>nickeddy:</b></font> google and local<br/>
+<font color="#A82F2F"><font size="2">(05:06:46 PM)</font> <b>robdubya:</b></font> deal with local first (assuming you&apos;re usnig angular)<br/>
+<font color="#A82F2F"><font size="2">(05:07:00 PM)</font> <b>robdubya:</b></font> you should just be able to POST to the appropriate register route<br/>
+<font color="#A82F2F"><font size="2">(05:07:03 PM)</font> <b>nickeddy:</b></font> so, assets?<br/>
+<font color="#A82F2F"><font size="2">(05:07:08 PM)</font> <b>nickeddy:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:07:18 PM)</font> <b>robdubya:</b></font> yeah - for angular:<br/>
+<font color="#A82F2F"><font size="2">(05:07:33 PM)</font> <b>robdubya:</b></font> - delete the home route<br/>
+<font color="#A82F2F"><font size="2">(05:07:42 PM)</font> <b>robdubya:</b></font> put an index.html in assets<br/>
+<font color="#A82F2F"><font size="2">(05:07:46 PM)</font> <b>robdubya:</b></font> ???<br/>
+<font color="#A82F2F"><font size="2">(05:07:47 PM)</font> <b>robdubya:</b></font> profit<br/>
+<font color="#A82F2F"><font size="2">(05:08:12 PM)</font> <b>nickeddy:</b></font> so delete the &apos;/&apos;: { view: &apos;homepage&apos; }<br/>
+<font color="#A82F2F"><font size="2">(05:08:29 PM)</font> <b>da_wunder:</b></font> robdubya: hmm, i&apos;m just rendering layout via sails.js with all css / js assets<br/>
+<font color="#A82F2F"><font size="2">(05:08:31 PM)</font> <b>nickeddy:</b></font> how does sails know to serve up index.html then?<br/>
+<font color="#A82F2F"><font size="2">(05:08:41 PM)</font> <b>da_wunder:</b></font> demo there http://wunder.sytes.net:1338/<br/>
+<font color="#A82F2F"><font size="2">(05:08:51 PM)</font> <b>nickeddy:</b></font> automagically?<br/>
+<font color="#A82F2F"><font size="2">(05:09:05 PM)</font> <b>robdubya:</b></font> da_wunder DEATH TO EJS VIEWS AND THEIR ALLIES<br/>
+<font color="#A82F2F"><font size="2">(05:09:15 PM)</font> <b>da_wunder:</b></font> and sources there https://github.com/tarlepp/Taskboard/tree/0.10<br/>
+<font color="#A82F2F"><font size="2">(05:09:29 PM)</font> <b>da_wunder:</b></font> robdubya: i don&apos;t want to use any require.js and that stuff<br/>
+<font color="#A82F2F"><font size="2">(05:09:42 PM)</font> <b>robdubya:</b></font> da_wunder … nor do i. fuck that noise<br/>
+<font color="#A82F2F"><font size="2">(05:10:07 PM)</font> <b>da_wunder:</b></font> robdubya: so how do you handle your js / css files ?<br/>
+<font color="#A82F2F"><font size="2">(05:10:07 PM)</font> <b>nickeddy:</b></font> why does sails use ejs then?<br/>
+<font color="#A82F2F"><font size="2">(05:10:35 PM)</font> <b>robdubya:</b></font> da_wunder grunt, generally<br/>
+<font color="#A82F2F"><font size="2">(05:10:50 PM)</font> <b>nickeddy:</b></font> no love for gulp? :P<br/>
+<font color="#A82F2F"><font size="2">(05:10:54 PM)</font> <b>robdubya:</b></font> tbh i generlaly build my client apps entirely seperated from sails<br/>
+<font color="#A82F2F"><font size="2">(05:11:12 PM)</font> <b>da_wunder:</b></font> yes, and how do you inject those to your /assets/index.html<br/>
+<font color="#A82F2F"><font size="2">(05:11:25 PM)</font> <b>robdubya:</b></font> da_wunder grunt<br/>
+<font color="#A82F2F"><font size="2">(05:11:39 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(05:11:42 PM)</font> <b>robdubya:</b></font> it minifies / concats / etc everything ito a single file<br/>
+<font color="#A82F2F"><font size="2">(05:11:42 PM)</font> <b>nickeddy:</b></font> probably minifies all of his stuff to 2 files<br/>
+<font color="#A82F2F"><font size="2">(05:11:44 PM)</font> <b>da_wunder:</b></font> like to see example of that<br/>
+<font color="#A82F2F"><font size="2">(05:12:13 PM)</font> <b>robdubya:</b></font> da_wunder i&apos;ll put one up at some point this evenig<br/>
+<font color="#A82F2F"><font size="2">(05:12:23 PM)</font> <b>da_wunder:</b></font> nice<br/>
+<font color="#A82F2F"><font size="2">(05:12:50 PM)</font> <b>robdubya:</b></font> actually da_wunder if you look at the ngsails repo it does it<br/>
+<font color="#A82F2F"><font size="2">(05:13:03 PM)</font> <b>robdubya:</b></font> (not the inject into html bit, but the concat bit)<br/>
+<font color="#A82F2F"><font size="2">(05:13:46 PM)</font> <b>robdubya:</b></font> and for ng specifically you can add this to the pipeline https://www.npmjs.org/package/grunt-angular-templates<br/>
+<font color="#A82F2F"><font size="2">(05:13:54 PM)</font> <b>robdubya:</b></font> which bundles your templates too<br/>
+<font color="#A82F2F"><font size="2">(05:14:02 PM)</font> <b>da_wunder:</b></font> the html inject is what i want to see<br/>
+<font color="#A82F2F"><font size="2">(05:14:25 PM)</font> <b>robdubya:</b></font> da_wunder its not really a big deal when you only have to inject 1 file...<br/>
+<font color="#A82F2F"><font size="2">(05:14:44 PM)</font> <b>robdubya:</b></font> that said https://www.npmjs.org/package/grunt-script-inject<br/>
+<font color="#A82F2F"><font size="2">(05:16:10 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(05:16:12 PM)</font> <b>da_wunder:</b></font> seems simple<br/>
+<font color="#A82F2F"><font size="2">(05:16:43 PM)</font> <b>robdubya:</b></font> indeed. grunt seems a little scary, but once you grok it its like wooaaahhhh<br/>
+<font color="#A82F2F"><font size="2">(05:16:57 PM)</font> <b>robdubya:</b></font> (plus i cheat and use webstorm&apos;s grunt GUI) :D<br/>
+<font color="#A82F2F"><font size="2">(05:17:15 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(05:17:58 PM)</font> <b>robdubya:</b></font> http://i.imgur.com/3yuBmpP.png :D<br/>
+<font color="#A82F2F"><font size="2">(05:18:43 PM)</font> <b>robdubya:</b></font> my brain works better with pretty pictures, what can i say<br/>
+<font color="#A82F2F"><font size="2">(05:19:05 PM)</font> <b>da_wunder:</b></font> so anyone competing on hwo?<br/>
+<font color="#A82F2F"><font size="2">(05:19:30 PM)</font> <b>robdubya:</b></font> hmm?<br/>
+<font color="#A82F2F"><font size="2">(05:19:42 PM)</font> <b>da_wunder:</b></font> https://helloworldopen.com/<br/>
+<font color="#A82F2F"><font size="2">(05:20:28 PM)</font> <b>robdubya:</b></font> neato<br/>
+<font color="#A82F2F"><font size="2">(05:24:15 PM)</font> <b>nickeddy:</b></font> robdubya: so for dev do you just put stuff in assets for angular?<br/>
+<font color="#A82F2F"><font size="2">(05:24:30 PM)</font> <b>robdubya:</b></font> that or in a separate repo entirely<br/>
+<font color="#A82F2F"><font size="2">(05:24:34 PM)</font> <b>robdubya:</b></font> depending on the app<br/>
+<font color="#A82F2F"><font size="2">(05:24:35 PM)</font> <b>nickeddy:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:24:45 PM)</font> <b>nickeddy:</b></font> yeah for now i&apos;ll just bundle it in assets<br/>
+<font color="#A82F2F"><font size="2">(05:24:48 PM)</font> <b>nickeddy:</b></font> and gulp the shit later<br/>
+<font color="#A82F2F"><font size="2">(05:25:24 PM)</font> <b>nickeddy:</b></font> how does sails actually serve up assets? like what&apos;s the src url?<br/>
+<font color="#A82F2F"><font size="2">(05:27:59 PM)</font> <b>robdubya:</b></font> everything in /assets gets grunted and moved to a .tmp directou<br/>
+<font color="#A82F2F"><font size="2">(05:28:01 PM)</font> <b>robdubya:</b></font> *directory<br/>
+<font color="#A82F2F"><font size="2">(05:28:06 PM)</font> <b>robdubya:</b></font> which becomes /<br/>
+<font color="#A82F2F"><font size="2">(05:28:31 PM)</font> <b>nickeddy:</b></font> so /js/modules.js then<br/>
+<font color="#A82F2F"><font size="2">(05:28:32 PM)</font> <b>nickeddy:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(05:30:27 PM)</font> <b>nickeddy:</b></font> yay<br/>
+<font color="#A82F2F"><font size="2">(05:30:30 PM)</font> <b>nickeddy:</b></font> thanks a bunch robdubya<br/>
+<font color="#A82F2F"><font size="2">(05:30:38 PM)</font> <b>nickeddy:</b></font> can&apos;t wait to move away from django<br/>
+<font color="#A82F2F"><font size="2">(05:30:41 PM)</font> <b>nickeddy:</b></font> i love python but...<br/>
+<font color="#A82F2F"><font size="2">(05:31:33 PM)</font> <b>rawtaz:</b></font> what dont you like with it?<br/>
+</body></html>

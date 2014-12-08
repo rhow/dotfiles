@@ -1,0 +1,18 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 20 Apr 2014 11:16:02 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 20 Apr 2014 11:16:02 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(11:16:02 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(11:19:05 AM)</font> <b>Henry_:</b></font> is there a way to do .where({ id: arraOfIds }) where when there is duplicated ids in that array it pulls the information again?<br/>
+<font color="#A82F2F"><font size="2">(11:46:45 AM)</font> <b>Henry_:</b></font> any ideas?<br/>
+<font color="#A82F2F"><font size="2">(11:48:28 AM)</font> <b>Jules`1:</b></font> could you just iterate through your original Array and pull in the matching record that was returned?<br/>
+<font color="#A82F2F"><font size="2">(11:48:50 AM)</font> <b>Jules`1:</b></font> I&apos;d use lodash and do a _.find()<br/>
+<font color="#A82F2F"><font size="2">(11:49:09 AM)</font> <b>Jules`1:</b></font> http://lodash.com/docs#find<br/>
+<font color="#A82F2F"><font size="2">(11:59:37 AM)</font> <b>da_wunder:</b></font> yep, use lodash to remove duplicate ids<br/>
+<font color="#A82F2F"><font size="2">(12:00:09 PM)</font> <b>da_wunder:</b></font> Henry_: use http://lodash.com/docs#uniq first<br/>
+<font color="#A82F2F"><font size="2">(12:00:28 PM)</font> <b>da_wunder:</b></font> if i remember right that you have those ids as an array<br/>
+<font color="#A82F2F"><font size="2">(12:01:01 PM)</font> <b>Henry_:</b></font> Jules`1 da_wunder yes i think thats perfect<br/>
+<font color="#A82F2F"><font size="2">(12:01:20 PM)</font> <b>Henry_:</b></font> wasn&apos;t aware of the power of lodash<br/>
+<font color="#A82F2F"><font size="2">(12:01:20 PM)</font> <b>da_wunder:</b></font> var where = _.map(_.uniq(idArray), function(item) { return {id: item}; }));<br/>
+<font color="#A82F2F"><font size="2">(12:01:26 PM)</font> <b>da_wunder:</b></font> something like that<br/>
+<font color="#A82F2F"><font size="2">(12:01:59 PM)</font> <b>Henry_:</b></font> da_wunder the return array of all of the user info has no duplicates, so i think i can skip that<br/>
+<font color="#A82F2F"><font size="2">(12:02:20 PM)</font> <b>Henry_:</b></font> i actually wanted duplicates but i think this could work better with the _.find()<br/>
+<font size="2">(12:03:11 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

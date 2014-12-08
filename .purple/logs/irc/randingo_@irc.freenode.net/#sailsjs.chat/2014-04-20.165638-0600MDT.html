@@ -1,0 +1,307 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 20 Apr 2014 04:56:38 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 20 Apr 2014 04:56:38 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(04:56:39 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(06:51:47 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(06:51:49 PM)</font> <b>da_wunder:</b></font> weird<br/>
+<font color="#A82F2F"><font size="2">(06:51:55 PM)</font> <b>da_wunder:</b></font> http://wunder.sytes.net:1338/user/1<br/>
+<font color="#A82F2F"><font size="2">(06:52:07 PM)</font> <b>da_wunder:</b></font> doesn&apos;t show any created/updated sprints<br/>
+<font color="#A82F2F"><font size="2">(06:52:39 PM)</font> <b>da_wunder:</b></font> but eg. http://wunder.sytes.net:1338/sprint/1 shows that user with id 1 has created that<br/>
+<font color="#A82F2F"><font size="2">(08:11:32 PM)</font> <b>delight:</b></font> when i create a controller + function it generates automatically the route to http://hostname/controllername/functionname … by default this routes are accessible for all methods (GET, PUT, POST … )<br/>
+<font color="#A82F2F"><font size="2">(08:11:48 PM)</font> <b>robdubya:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(08:11:52 PM)</font> <b>robdubya:</b></font> (called actions, but yes)<br/>
+<font color="#A82F2F"><font size="2">(08:12:00 PM)</font> <b>delight:</b></font> What would be the correct way to limit it to certain methods ?<br/>
+<font color="#A82F2F"><font size="2">(08:12:11 PM)</font> <b>delight:</b></font> route.js or in code ?<br/>
+<font color="#A82F2F"><font size="2">(08:12:19 PM)</font> <b>robdubya:</b></font> policies normally<br/>
+<font color="#A82F2F"><font size="2">(08:12:22 PM)</font> <b>delight:</b></font> like the recommended<br/>
+<font color="#A82F2F"><font size="2">(08:12:49 PM)</font> <b>robdubya:</b></font> generally you&apos;d want to disable everything, and then enable the ones you want, with or without policies to check<br/>
+<font color="#A82F2F"><font size="2">(08:13:08 PM)</font> <b>robdubya:</b></font> (see config/policies.js)<br/>
+<font color="#A82F2F"><font size="2">(08:13:17 PM)</font> <b>orbsio:</b></font> does anyone know if it is possible to use the mongo $inc operator from waterline?<br/>
+<font color="#A82F2F"><font size="2">(08:13:26 PM)</font> <b>delight:</b></font> by disable everything you mean the autogenerating of routes ?<br/>
+<font color="#A82F2F"><font size="2">(08:13:31 PM)</font> <b>robdubya:</b></font> orbsio yes, but you&apos;d need to drop down to the native query interface<br/>
+<font color="#A82F2F"><font size="2">(08:13:40 PM)</font> <b>robdubya:</b></font> delight no, i mean disable *access* to everything<br/>
+<font color="#A82F2F"><font size="2">(08:14:16 PM)</font> <b>delight:</b></font> I’ll have a look at config/policies.js … maybe I’ll get the idea :)<br/>
+<font color="#A82F2F"><font size="2">(08:14:21 PM)</font> <b>orbsio:</b></font> robdubya: So that&apos;s doing MyModel.native(function(err, collection) {}), right?<br/>
+<font color="#A82F2F"><font size="2">(08:14:25 PM)</font> <b>robdubya:</b></font> orbsio yea<br/>
+<font color="#A82F2F"><font size="2">(08:15:12 PM)</font> <b>orbsio:</b></font> robdubya: I&apos;m trying to figure out if I really need to do that, or if there is another way to model my data.<br/>
+<font color="#A82F2F"><font size="2">(08:15:57 PM)</font> <b>robdubya:</b></font> usually there is, but ask away<br/>
+<font color="#A82F2F"><font size="2">(08:16:14 PM)</font> <b>orbsio:</b></font> Kind of hard to explain, but here goes...<br/>
+<font color="#A82F2F"><font size="2">(08:16:36 PM)</font> <b>orbsio:</b></font> Basically, I need to track the frequency in which items occur in collections.<br/>
+<font color="#A82F2F"><font size="2">(08:16:48 PM)</font> <b>orbsio:</b></font> So I have a bunch of counters.<br/>
+<font color="#A82F2F"><font size="2">(08:17:00 PM)</font> <b>orbsio:</b></font> Let me give something concrete...<br/>
+<font color="#A82F2F"><font size="2">(08:17:37 PM)</font> <b>orbsio:</b></font> There is a Project model that contains a collection of Items.<br/>
+<font color="#A82F2F"><font size="2">(08:17:52 PM)</font> <b>orbsio:</b></font> However, those Items can be grouped into groups of Items.<br/>
+<font color="#A82F2F"><font size="2">(08:18:19 PM)</font> <b>orbsio:</b></font> I need to keep track of the number of times each item is in all of the groups.<br/>
+<font color="#A82F2F"><font size="2">(08:18:38 PM)</font> <b>orbsio:</b></font> Querying the database and populating is way too slow.<br/>
+<font color="#A82F2F"><font size="2">(08:18:58 PM)</font> <b>orbsio:</b></font> So I&apos;m thinking about having a JSON object stored in the Project model.<br/>
+<font color="#A82F2F"><font size="2">(08:19:06 PM)</font> <b>robdubya:</b></font> bad idea<br/>
+<font color="#A82F2F"><font size="2">(08:19:19 PM)</font> <b>orbsio:</b></font> And that object would have keys with each Item ID and value of a count.<br/>
+<font color="#A82F2F"><font size="2">(08:19:42 PM)</font> <b>robdubya:</b></font> so a project -&gt; hasMany -&gt; items, yes?<br/>
+<font color="#A82F2F"><font size="2">(08:19:48 PM)</font> <b>orbsio:</b></font> But I don&apos;t think $inc would work on a JSON object in a model, only on direct fields.<br/>
+<font color="#A82F2F"><font size="2">(08:19:51 PM)</font> <b>orbsio:</b></font> Yes.<br/>
+<font color="#A82F2F"><font size="2">(08:20:00 PM)</font> <b>orbsio:</b></font> project -&gt; hasMany -&gt; Groups<br/>
+<font color="#A82F2F"><font size="2">(08:20:04 PM)</font> <b>robdubya:</b></font> so can i ask why you&apos;re using mongo? if you have a relational data set?<br/>
+<font color="#A82F2F"><font size="2">(08:20:06 PM)</font> <b>orbsio:</b></font> project -&gt; hasMany -&gt; Items<br/>
+<font color="#A82F2F"><font size="2">(08:20:14 PM)</font> <b>orbsio:</b></font> Group -&gt; hasMany -&gt; Items<br/>
+<font color="#A82F2F"><font size="2">(08:20:34 PM)</font> <b>orbsio:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(08:20:41 PM)</font> <b>robdubya:</b></font> serious question<br/>
+<font color="#A82F2F"><font size="2">(08:21:04 PM)</font> <b>robdubya:</b></font> &quot;Querying the database and populating is way too slow&quot; -&gt; because you&apos;re using a non-relational database to fake relational behavior<br/>
+<font color="#A82F2F"><font size="2">(08:21:09 PM)</font> <b>orbsio:</b></font> i know it is serious.  most of the data is not relational, its just this one aspect.<br/>
+<font color="#A82F2F"><font size="2">(08:21:41 PM)</font> <b>orbsio:</b></font> So rather than maintaining two databases, I was trying to retrofit it into mongo.<br/>
+<font color="#A82F2F"><font size="2">(08:22:00 PM)</font> <b>robdubya:</b></font> i dont mean to piss on your cheerios, but that&apos;s backwards, IMO<br/>
+<font color="#A82F2F"><font size="2">(08:22:37 PM)</font> <b>robdubya:</b></font> that said<br/>
+<font color="#A82F2F"><font size="2">(08:22:41 PM)</font> <b>orbsio:</b></font> how stable is waterline with mysql or postgresql?<br/>
+<font color="#A82F2F"><font size="2">(08:22:52 PM)</font> <b>robdubya:</b></font> i use it with postgres, its gret<br/>
+<font color="#A82F2F"><font size="2">(08:22:54 PM)</font> <b>robdubya:</b></font> *great<br/>
+<font color="#A82F2F"><font size="2">(08:23:13 PM)</font> <b>robdubya:</b></font> and PS - postgres can do everything mongo can (hstore == json) AND doesn&apos;t suck at being relational<br/>
+<font color="#A82F2F"><font size="2">(08:23:28 PM)</font> <b>orbsio:</b></font> hmm, ok, great points.<br/>
+<font color="#A82F2F"><font size="2">(08:23:40 PM)</font> <b>robdubya:</b></font> worht thinking about<br/>
+<font color="#A82F2F"><font size="2">(08:23:40 PM)</font> <b>robdubya:</b></font> in any case<br/>
+<font color="#A82F2F"><font size="2">(08:23:51 PM)</font> <b>robdubya:</b></font> Things.count({project : 123})<br/>
+<font color="#A82F2F"><font size="2">(08:24:02 PM)</font> <b>robdubya:</b></font> wouldn&apos;t that give you the same effect?<br/>
+<font color="#A82F2F"><font size="2">(08:24:26 PM)</font> <b>robdubya:</b></font> vs Project.findOne(123).populate(&apos;things&apos;)<br/>
+<font color="#A82F2F"><font size="2">(08:25:47 PM)</font> <b>robdubya:</b></font> (and one more vote for SQL - if you can&apos;t do it with waterline, get your friendly neighborhood DBA to write a proper join query)<br/>
+<font color="#A82F2F"><font size="2">(08:26:07 PM)</font> <b>robdubya:</b></font> (you can do native SQL like you can do native mongo )<br/>
+<font color="#A82F2F"><font size="2">(08:26:29 PM)</font> <b>orbsio:</b></font> I&apos;m having to do Project.findOne(123).populate(&apos;groups&apos;).exec( function(err, project) { async.eachSeries(project.groups, function(group, callback) { Group.findOne(group.id).populate(&apos;items&apos;)...<br/>
+<font color="#A82F2F"><font size="2">(08:26:55 PM)</font> <b>orbsio:</b></font> Project contains ALL possible items.<br/>
+<font color="#A82F2F"><font size="2">(08:27:03 PM)</font> <b>orbsio:</b></font> But Group contains a subset of those items.<br/>
+<font color="#A82F2F"><font size="2">(08:27:15 PM)</font> <b>orbsio:</b></font> And I need to count how many times each item has been used in a group.<br/>
+<font color="#A82F2F"><font size="2">(08:27:19 PM)</font> <b>orbsio:</b></font> in all groups.<br/>
+<font color="#A82F2F"><font size="2">(08:28:19 PM)</font> <b>robdubya:</b></font> that query is gonna be slow as dirt in any language :D<br/>
+<font color="#A82F2F"><font size="2">(08:28:29 PM)</font> <b>orbsio:</b></font> ya, exactly.<br/>
+<font color="#A82F2F"><font size="2">(08:28:50 PM)</font> <b>orbsio:</b></font> Which is why I want to calculate and store the count in the object.<br/>
+<font color="#A82F2F"><font size="2">(08:29:08 PM)</font> <b>robdubya:</b></font> walk me through that query, in plain english<br/>
+<font color="#A82F2F"><font size="2">(08:29:08 PM)</font> <b>orbsio:</b></font> instead of dynamically calculating it every time I need it.<br/>
+<font color="#A82F2F"><font size="2">(08:30:19 PM)</font> <b>orbsio:</b></font> I&apos;ve actually tried to simplify it for our conversation.<br/>
+<font color="#A82F2F"><font size="2">(08:30:29 PM)</font> <b>orbsio:</b></font> Maybe I should describe the actual data model.<br/>
+<font color="#A82F2F"><font size="2">(08:30:41 PM)</font> <b>robdubya:</b></font> orbsio paste it somewehre<br/>
+<font color="#A82F2F"><font size="2">(08:30:47 PM)</font> <b>robdubya:</b></font> hard to grok line by line<br/>
+<font color="#A82F2F"><font size="2">(08:31:13 PM)</font> <b>orbsio:</b></font> Not sure pasting it would help, its quite convoluted already.<br/>
+<font color="#A82F2F"><font size="2">(08:31:28 PM)</font> <b>robdubya:</b></font> paste the models then<br/>
+<font color="#A82F2F"><font size="2">(08:31:36 PM)</font> <b>orbsio:</b></font> Tell you what, I&apos;ll extract the important bits and paste it.<br/>
+<font color="#A82F2F"><font size="2">(08:31:43 PM)</font> <b>orbsio:</b></font> Ok, give me a couple minutes.<br/>
+<font color="#A82F2F"><font size="2">(08:43:02 PM)</font> <b>orbsio:</b></font> robdubya: https://gist.github.com/tauren/11130847<br/>
+<font color="#A82F2F"><font size="2">(08:43:48 PM)</font> <b>orbsio:</b></font> User enters a Contest, and a Participation object is created.<br/>
+<font color="#A82F2F"><font size="2">(08:44:13 PM)</font> <b>orbsio:</b></font> User submits and Entry, and the Participation object is updated to reference the Entry.<br/>
+<font color="#A82F2F"><font size="2">(08:44:24 PM)</font> <b>orbsio:</b></font> The Entry is also added to the Contest&apos;s collection of Entries.<br/>
+<font color="#A82F2F"><font size="2">(08:45:04 PM)</font> <b>orbsio:</b></font> Each Contest consists of multiple rounds, so a new Round is created and added to Contest.rounds.<br/>
+<font color="#A82F2F"><font size="2">(08:45:33 PM)</font> <b>orbsio:</b></font> In the first round, all of the entries in the contest are added to Round.entries.<br/>
+<font color="#A82F2F"><font size="2">(08:46:46 PM)</font> <b>orbsio:</b></font> Each participant gets to see a Group of other user&apos;s entries, but not all of them.<br/>
+<font color="#A82F2F"><font size="2">(08:47:45 PM)</font> <b>orbsio:</b></font> A group is created for each Participant and random Entries from other users are added to it.<br/>
+<font color="#A82F2F"><font size="2">(08:48:42 PM)</font> <b>orbsio:</b></font> In order to make sure each Entry is included an even number of times across all groups, I need to keep track of how many times it has already been included in Groups within a Round.<br/>
+<font color="#A82F2F"><font size="2">(08:49:37 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(08:49:53 PM)</font> <b>da_wunder:</b></font> any ideas why my model doesn&apos;t populate certain data?<br/>
+<font color="#A82F2F"><font size="2">(08:50:05 PM)</font> <b>orbsio:</b></font> Complex data model. Perhaps I should be using a relational database...<br/>
+<font color="#A82F2F"><font size="2">(08:50:15 PM)</font> <b>da_wunder:</b></font> http://wunder.sytes.net:1338/user/1<br/>
+<font color="#A82F2F"><font size="2">(08:50:30 PM)</font> <b>da_wunder:</b></font> createdSprints and updatedSprint are empty<br/>
+<font color="#A82F2F"><font size="2">(08:50:59 PM)</font> <b>da_wunder:</b></font> although http://wunder.sytes.net:1338/sprint/1 shows that data correctly<br/>
+<font color="#A82F2F"><font size="2">(08:51:43 PM)</font> <b>robdubya:</b></font> orbsio definetely<br/>
+<font color="#A82F2F"><font size="2">(08:51:46 PM)</font> <b>da_wunder:</b></font> user model: https://github.com/tarlepp/Taskboard/blob/0.10/api/models/User.js<br/>
+<font color="#A82F2F"><font size="2">(08:51:47 PM)</font> <b>robdubya:</b></font> *definitely even<br/>
+<font color="#A82F2F"><font size="2">(08:53:16 PM)</font> <b>orbsio:</b></font> robdubya: so you&apos;re suggestion is to use RDBMS?<br/>
+<font color="#A82F2F"><font size="2">(08:54:51 PM)</font> <b>robdubya:</b></font> it wont solve the query issue, not immediately at least<br/>
+<font color="#A82F2F"><font size="2">(08:54:57 PM)</font> <b>robdubya:</b></font> but i reckon there&apos;s a better way to do it<br/>
+<font color="#A82F2F"><font size="2">(08:55:17 PM)</font> <b>robdubya:</b></font> orbsio have you ever used one of those graphical schema tools?<br/>
+<font color="#A82F2F"><font size="2">(08:55:42 PM)</font> <b>orbsio:</b></font> robdubya: No, but I&apos;m tempted to find one. Its getting big enough it is hard to visualize.<br/>
+<font color="#A82F2F"><font size="2">(08:56:02 PM)</font> <b>orbsio:</b></font> Well, years ago I used some when I was doing Java/Hibernate stuff.<br/>
+<font color="#A82F2F"><font size="2">(08:56:02 PM)</font> <b>da_wunder:</b></font> orbsio: try mysql workbench<br/>
+<font color="#A82F2F"><font size="2">(08:56:15 PM)</font> <b>robdubya:</b></font> i highly recommend - i use navicat w/ postgres<br/>
+<font color="#A82F2F"><font size="2">(08:56:48 PM)</font> <b>orbsio:</b></font> ok, i&apos;ll check those out da_wunder &amp; robdubya .<br/>
+<font color="#A82F2F"><font size="2">(08:58:06 PM)</font> <b>orbsio:</b></font> robdubya: it just seems like I don&apos;t really need all those relations.<br/>
+<font color="#A82F2F"><font size="2">(08:58:18 PM)</font> <b>robdubya:</b></font> orbsio if it wasnt sunday night i might have a more coherent answer<br/>
+<font color="#A82F2F"><font size="2">(08:58:58 PM)</font> <b>orbsio:</b></font> instead of groups being a relation, I could just store raw type &apos;array&apos; of entry ids.<br/>
+<font color="#A82F2F"><font size="2">(08:59:11 PM)</font> <b>orbsio:</b></font> A group will only have 5 or 6 entries in it.<br/>
+<font color="#A82F2F"><font size="2">(08:59:57 PM)</font> <b>orbsio:</b></font> Well, I appreciate your help.<br/>
+<font color="#A82F2F"><font size="2">(09:00:07 PM)</font> <b>orbsio:</b></font> I mainly wanted to find out if $inc can be used.<br/>
+<font color="#A82F2F"><font size="2">(09:00:22 PM)</font> <b>orbsio:</b></font> Wasn&apos;t expecting anyone to solve my data model problems. :)<br/>
+<font color="#A82F2F"><font size="2">(09:00:45 PM)</font> <b>robdubya:</b></font> orbsio doing that strips information<br/>
+<font color="#A82F2F"><font size="2">(09:00:50 PM)</font> <b>robdubya:</b></font> which is generally not the right thing<br/>
+<font color="#A82F2F"><font size="2">(09:01:28 PM)</font> <b>robdubya:</b></font> ditto for manual counting. too much potential for failure. the information you want already exists, you just need to derive it (efficiently)<br/>
+<font color="#A82F2F"><font size="2">(09:04:10 PM)</font> <b>orbsio:</b></font> Yep, and do it in a way that if I cluster, I don&apos;t have possible race conditions or data loss.<br/>
+<font color="#A82F2F"><font size="2">(09:04:30 PM)</font> <b>orbsio:</b></font> robdubya: you ever heard of FoundationDB?<br/>
+<font color="#A82F2F"><font size="2">(09:04:49 PM)</font> <b>robdubya:</b></font> sighhhhhh<br/>
+<font color="#A82F2F"><font size="2">(09:04:56 PM)</font> <b>robdubya:</b></font> lol yes<br/>
+<font color="#062585"><font size="2">(09:05:00 PM)</font> <b>***orbsio</b></font> Claims true ACID like traditional SQL databases: https://foundationdb.com/acid-claims<br/>
+<font color="#A82F2F"><font size="2">(09:05:09 PM)</font> <b>orbsio:</b></font> Not sure if I should believe them.<br/>
+<font color="#A82F2F"><font size="2">(09:05:21 PM)</font> <b>robdubya:</b></font> why bother?<br/>
+<font color="#A82F2F"><font size="2">(09:05:29 PM)</font> <b>robdubya:</b></font> ha<br/>
+<font color="#A82F2F"><font size="2">(09:05:31 PM)</font> <b>robdubya:</b></font> imo<br/>
+<font color="#A82F2F"><font size="2">(09:05:40 PM)</font> <b>robdubya:</b></font> redis is better and faster at key/value<br/>
+<font color="#A82F2F"><font size="2">(09:05:42 PM)</font> <b>orbsio:</b></font> Not planning to... just something I just came across.<br/>
+<font color="#A82F2F"><font size="2">(09:06:20 PM)</font> <b>orbsio:</b></font> I&apos;m using redis for pub/sub already. Is key/value all that Foundation does?<br/>
+<font color="#A82F2F"><font size="2">(09:06:26 PM)</font> <b>robdubya:</b></font> so if you *must* - store your volatile counts in redis<br/>
+<font color="#A82F2F"><font size="2">(09:06:39 PM)</font> <b>robdubya:</b></font> and back it with postgrse<br/>
+<font color="#A82F2F"><font size="2">(09:07:07 PM)</font> <b>robdubya:</b></font> and if it ends up you have to write an uberquery, write a prepared statement and optimize<br/>
+<font color="#A82F2F"><font size="2">(09:08:41 PM)</font> <b>orbsio:</b></font> how much better is postgres than mysql? I&apos;ve been using mysql for years, written stored procs, etc in it.<br/>
+<font color="#A82F2F"><font size="2">(09:08:48 PM)</font> <b>orbsio:</b></font> But very little experience with postgres.<br/>
+<font color="#A82F2F"><font size="2">(09:09:05 PM)</font> <b>robdubya:</b></font> i&apos;m not a mysql expert by any means<br/>
+<font color="#A82F2F"><font size="2">(09:09:10 PM)</font> <b>robdubya:</b></font> they are pretty similar<br/>
+<font color="#A82F2F"><font size="2">(09:09:11 PM)</font> <b>orbsio:</b></font> Have been meaning to switch to it for a long time now, just not had the right incentive.<br/>
+<font color="#A82F2F"><font size="2">(09:09:26 PM)</font> <b>robdubya:</b></font> but postgres has cool stuff on top of the regular sqly things<br/>
+<font color="#A82F2F"><font size="2">(09:09:35 PM)</font> <b>robdubya:</b></font> like, did you know, it has a pub sub function like redis?<br/>
+<font color="#A82F2F"><font size="2">(09:09:37 PM)</font> <b>orbsio:</b></font> I&apos;ll have to check into how similar stored procs are between them.<br/>
+<font color="#A82F2F"><font size="2">(09:09:46 PM)</font> <b>orbsio:</b></font> i did not know that.<br/>
+<font color="#A82F2F"><font size="2">(09:09:58 PM)</font> <b>orbsio:</b></font> nor did i know it could store document-style objects.<br/>
+<font color="#A82F2F"><font size="2">(09:10:08 PM)</font> <b>orbsio:</b></font> but I did know it has GEO capabilities.<br/>
+<font color="#A82F2F"><font size="2">(09:10:19 PM)</font> <b>orbsio:</b></font> which has been the main reason I wanted to switch to it.<br/>
+<font color="#A82F2F"><font size="2">(09:10:32 PM)</font> <b>robdubya:</b></font> http://postgres-bits.herokuapp.com/<br/>
+<font color="#A82F2F"><font size="2">(09:12:01 PM)</font> <b>robdubya:</b></font> http://www.craigkerstiens.com/2013/07/03/hstore-vs-json/<br/>
+<font color="#A82F2F"><font size="2">(09:13:04 PM)</font> <b>orbsio:</b></font> hmm, interesting. so WITH gives you an easier way to do subqueries then<br/>
+<font color="#A82F2F"><font size="2">(09:13:19 PM)</font> <b>orbsio:</b></font> does waterline support these &apos;fancy&apos; features?<br/>
+<font color="#A82F2F"><font size="2">(09:13:29 PM)</font> <b>robdubya:</b></font> nope, but then nothing does really :D<br/>
+<font color="#A82F2F"><font size="2">(09:13:46 PM)</font> <b>robdubya:</b></font> but like mongo, you can always drop down to the query interface<br/>
+<font color="#A82F2F"><font size="2">(09:14:17 PM)</font> <b>orbsio:</b></font> every time I go down the path of using an ORM, I ultimately feel like I spend just as much time fighting it to get things working as if I had just not used one to begin with.<br/>
+<font color="#A82F2F"><font size="2">(09:14:47 PM)</font> <b>robdubya:</b></font> i sort of agree with you, but nowadays i tend to do most of my computation on the client side<br/>
+<font color="#A82F2F"><font size="2">(09:15:07 PM)</font> <b>orbsio:</b></font> i&apos;m the same.<br/>
+<font color="#A82F2F"><font size="2">(09:15:20 PM)</font> <b>robdubya:</b></font> and since its node, its often better to do a bunch of small fast queries than one uber<br/>
+<font color="#A82F2F"><font size="2">(09:15:34 PM)</font> <b>robdubya:</b></font> (even more so over socket.io, when you dont have the http overhead)<br/>
+<font color="#A82F2F"><font size="2">(09:16:05 PM)</font> <b>orbsio:</b></font> I definitely prefer to add logic on the frontend. but when implementing a contest, its important to not give the end user the abiltiy to affect the contest outcome.<br/>
+<font color="#A82F2F"><font size="2">(09:16:17 PM)</font> <b>robdubya:</b></font> sure. the other thing might be using views<br/>
+<font color="#A82F2F"><font size="2">(09:16:57 PM)</font> <b>robdubya:</b></font> to flatten things out a bit<br/>
+<font color="#A82F2F"><font size="2">(09:17:13 PM)</font> <b>orbsio:</b></font> so postgres has good view support?<br/>
+<font color="#A82F2F"><font size="2">(09:17:28 PM)</font> <b>orbsio:</b></font> mysql didn&apos;t when I was looking into using them.<br/>
+<font color="#A82F2F"><font size="2">(09:17:48 PM)</font> <b>robdubya:</b></font> http://wiki.postgresql.org/wiki/Materialized_Views<br/>
+<font color="#A82F2F"><font size="2">(09:18:08 PM)</font> <b>robdubya:</b></font> thats the kind of thing you could use for your totals<br/>
+<font color="#A82F2F"><font size="2">(09:18:43 PM)</font> <b>orbsio:</b></font> Hmm, I&apos;ll check that out. I&apos;ve queried views on Oracle databases before, but I didn&apos;t actually configure the views. Something new to learn.<br/>
+<font color="#A82F2F"><font size="2">(09:18:54 PM)</font> <b>robdubya:</b></font> http://www.pgcon.org/2008/schedule/attachments/63_BSDCan2008-MaterializedViews.pdf<br/>
+<font color="#A82F2F"><font size="2">(09:19:09 PM)</font> <b>robdubya:</b></font> bit dense, but good info, and probably relevant<br/>
+<font color="#A82F2F"><font size="2">(09:19:09 PM)</font> <b>paulmorn:</b></font> Hello everyone, I am trying to create an Object A that contains an array of Object C instances and another array of Object B instances. How is this possible using Sails.js?<br/>
+<font color="#A82F2F"><font size="2">(09:19:43 PM)</font> <b>orbsio:</b></font> robdubya: great info, thanks!<br/>
+<font color="#A82F2F"><font size="2">(09:20:52 PM)</font> <b>robdubya:</b></font> yw. this is what relational db&apos;s are built for… so while you might have to get a bit hands on, you can do powerful stuff (™)<br/>
+<font color="#A82F2F"><font size="2">(09:21:15 PM)</font> <b>robdubya:</b></font> at some point this summer i&apos;m gonna look at integrating sails-postgres a bit deeper<br/>
+<font color="#A82F2F"><font size="2">(09:21:52 PM)</font> <b>robdubya:</b></font> and def check out a decent GUI tool. it feels like cheating :D<br/>
+<font color="#A82F2F"><font size="2">(09:22:16 PM)</font> <b>orbsio:</b></font> ok, i will.<br/>
+<font color="#A82F2F"><font size="2">(09:23:37 PM)</font> <b>robdubya:</b></font> see also http://postgresguide.com/sexy/hstore.html<br/>
+<font color="#A82F2F"><font size="2">(09:24:21 PM)</font> <b>robdubya:</b></font> (note that hstore and json are 2 different types, with different use cases, so read up on em)<br/>
+<font color="#A82F2F"><font size="2">(09:25:06 PM)</font> <b>robdubya:</b></font> this one blew my mind a bit http://clarkdave.net/2013/06/what-can-you-do-with-postgresql-and-json/<br/>
+<font color="#A82F2F"><font size="2">(09:25:18 PM)</font> <b>orbsio:</b></font> robdubya: navcat looks good, a bit spendy for Premium, not to bad for just one DB. Strange that the OSX version is cheaper. Lucky me I guess.<br/>
+<font color="#A82F2F"><font size="2">(09:25:24 PM)</font> <b>robdubya:</b></font> heh<br/>
+<font color="#A82F2F"><font size="2">(09:25:31 PM)</font> <b>robdubya:</b></font> i think they have a 30 day trial, so try it out<br/>
+<font color="#A82F2F"><font size="2">(09:25:56 PM)</font> <b>robdubya:</b></font> its saved my ass enough time i reckon it would be cheap at twice the price<br/>
+<font color="#A82F2F"><font size="2">(09:26:37 PM)</font> <b>robdubya:</b></font> and easy button for postgres since you&apos;re on os x http://postgresapp.com/<br/>
+<font color="#A82F2F"><font size="2">(09:28:28 PM)</font> <b>orbsio:</b></font> I just installed it with brew.<br/>
+<font color="#A82F2F"><font size="2">(09:28:41 PM)</font> <b>orbsio:</b></font> Is postgresapp better?<br/>
+<font color="#A82F2F"><font size="2">(09:29:07 PM)</font> <b>robdubya:</b></font> nah. just has all the extensions and stuff bundled (GIS)<br/>
+<font color="#A82F2F"><font size="2">(09:29:08 PM)</font> <b>orbsio:</b></font> Oh, I see. It includes extensions like hstore, etc.<br/>
+<font color="#A82F2F"><font size="2">(10:10:46 PM)</font> <b>orbsio:</b></font> robdubya: npm install sails-postgresql --save gives an error about pg_config not found.<br/>
+<font color="#A82F2F"><font size="2">(10:10:49 PM)</font> <b>orbsio:</b></font> You seen that?<br/>
+<font color="#A82F2F"><font size="2">(10:11:41 PM)</font> <b>robdubya:</b></font> https://github.com/brianc/node-postgres/issues/466 ?<br/>
+<font color="#A82F2F"><font size="2">(10:11:55 PM)</font> <b>orbsio:</b></font> Looks like it still installed though: https://gist.github.com/tauren/11132008<br/>
+<font color="#A82F2F"><font size="2">(10:12:24 PM)</font> <b>orbsio:</b></font> thanks, that issue looks helpful<br/>
+<font color="#A82F2F"><font size="2">(10:13:55 PM)</font> <b>robdubya:</b></font> that&apos;s not the pg lib that sails uses, but i reckon its a path config thing<br/>
+<font color="#A82F2F"><font size="2">(10:15:01 PM)</font> <b>robdubya:</b></font> (this is why i use postgres.app)<br/>
+<font color="#A82F2F"><font size="2">(10:15:15 PM)</font> <b>orbsio:</b></font> I am using postgres.app...<br/>
+<font color="#A82F2F"><font size="2">(10:15:27 PM)</font> <b>orbsio:</b></font> brew uninstal postgresql<br/>
+<font color="#A82F2F"><font size="2">(10:15:36 PM)</font> <b>orbsio:</b></font> then i installed postgres.app.<br/>
+<font color="#A82F2F"><font size="2">(10:15:51 PM)</font> <b>orbsio:</b></font> navicat is connecting to it fine.<br/>
+<font color="#A82F2F"><font size="2">(10:25:03 PM)</font> <b>robdubya:</b></font> can you run pg_config from the command line?<br/>
+<font color="#A82F2F"><font size="2">(10:25:45 PM)</font> <b>robdubya:</b></font> http://stackoverflow.com/questions/19813266/difficulty-bundling-pg-using-mac-postgres-app<br/>
+<font color="#A82F2F"><font size="2">(10:25:53 PM)</font> <b>robdubya:</b></font> (accepted answer)<br/>
+<font color="#A82F2F"><font size="2">(10:41:22 PM)</font> <b>orbsio:</b></font> that was it.<br/>
+<font color="#A82F2F"><font size="2">(10:41:38 PM)</font> <b>orbsio:</b></font> But got it working with a different path.<br/>
+<font color="#A82F2F"><font size="2">(10:41:40 PM)</font> <b>orbsio:</b></font> PATH=&quot;/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH&quot;<br/>
+<font color="#A82F2F"><font size="2">(11:35:21 PM)</font> <b>orbsio:</b></font> robdubya: I&apos;ve switched to postgres now, but it seems like some fields in my models aren&apos;t being created when waterline creates the tables.<br/>
+<font color="#A82F2F"><font size="2">(11:37:37 PM)</font> <b>orbsio:</b></font> well, i think i figured it out. My model attribute didn&apos;t have a type, only a defaultsTo. It worked fine when using mongo, but type is required with postgres i guess.<br/>
+<font size="2">(03:08:25 AM)</font><b> yhsiang_ is now known as yhsiang</b><br/>
+<font size="2">(03:35:19 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font size="2">(03:56:46 AM)</font><b> zz_Brocken is now known as Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(04:15:59 AM)</font> <b>luc__:</b></font> hi !!!<br/>
+<font color="#A82F2F"><font size="2">(04:16:19 AM)</font> <b>luc__:</b></font> anyone familiar with oauth2orize ?<br/>
+<font color="#A82F2F"><font size="2">(04:18:39 AM)</font> <b>luc__:</b></font> I&apos;m working on a project to use sails concept (policies, ...) to protect API with oauth2 but I still miss a couple of thing<br/>
+<font color="#A82F2F"><font size="2">(04:18:54 AM)</font> <b>luc__:</b></font> https://github.com/lucj/sails-oauth2-api<br/>
+<font color="#A82F2F"><font size="2">(04:24:31 AM)</font> <b>rawtaz:</b></font> weird name<br/>
+<font color="#A82F2F"><font size="2">(04:24:41 AM)</font> <b>rawtaz:</b></font> o-auth-two/to-orize<br/>
+<font color="#A82F2F"><font size="2">(04:24:41 AM)</font> <b>rawtaz:</b></font> wtf<br/>
+<font color="#A82F2F"><font size="2">(04:27:13 AM)</font> <b>HoangNam:</b></font> Hi everyone<br/>
+<font color="#A82F2F"><font size="2">(04:27:49 AM)</font> <b>HoangNam:</b></font> I have a problem with associates. can you help me<br/>
+<font color="#A82F2F"><font size="2">(04:28:28 AM)</font> <b>rawtaz:</b></font> how can anyone know the answer to that question at a time when you havent described the problem?<br/>
+<font color="#A82F2F"><font size="2">(04:29:05 AM)</font> <b>HoangNam:</b></font> I had post my question on stackoverflow but it had something wrong<br/>
+<font color="#A82F2F"><font size="2">(04:29:14 AM)</font> <b>HoangNam:</b></font> http://stackoverflow.com/questions/23190988/sails-js-how-to-populate-array-using-model-associations/23193826?noredirect=1#23193826<br/>
+<font color="#A82F2F"><font size="2">(04:32:14 AM)</font> <b>kavuri:</b></font> HoangNam: think you might need to use &apos;collections&apos; instead of just a single item of model (I have not used collections though)<br/>
+<font color="#A82F2F"><font size="2">(04:32:49 AM)</font> <b>HoangNam:</b></font> Hi kavuri<br/>
+<font color="#A82F2F"><font size="2">(04:34:11 AM)</font> <b>kavuri:</b></font> HoangNam: you don&apos;t have to say hi/hello over irc. Just go ahead directly with the questions and conversations<br/>
+<font color="#A82F2F"><font size="2">(04:34:33 AM)</font> <b>HoangNam:</b></font> ya<br/>
+<font color="#A82F2F"><font size="2">(04:34:38 AM)</font> <b>RWOverdijk:</b></font> How does this JST stuff work?<br/>
+<font color="#A82F2F"><font size="2">(04:34:47 AM)</font> <b>RWOverdijk:</b></font> Is it just a global object or something?<br/>
+<font color="#A82F2F"><font size="2">(04:35:03 AM)</font> <b>HoangNam:</b></font> i had invoice model and item model<br/>
+<font color="#A82F2F"><font size="2">(04:35:09 AM)</font> <b>analphabet:</b></font> hey, is it possible to define a model that acts as a kind of proxy for a many to many relationship?<br/>
+<font color="#A82F2F"><font size="2">(04:35:45 AM)</font> <b>RWOverdijk:</b></font> analphabet, Lol I got to type anal. Best day this week.<br/>
+<font color="#A82F2F"><font size="2">(04:35:57 AM)</font> <b>HoangNam:</b></font> may be 50 record for item in my db<br/>
+<font color="#A82F2F"><font size="2">(04:36:03 AM)</font> <b>RWOverdijk:</b></font> analphabet, What&apos;s &quot;kind of proxy&quot;. Is it a proxy? If so what does it do?<br/>
+<font color="#A82F2F"><font size="2">(04:36:15 AM)</font> <b>analphabet:</b></font> e.g. Users and documents are related via the Edit model<br/>
+<font color="#A82F2F"><font size="2">(04:36:16 AM)</font> <b>RWOverdijk:</b></font> analphabet, You can set up many to many relationships in 0.10<br/>
+<font color="#A82F2F"><font size="2">(04:36:25 AM)</font> <b>HoangNam:</b></font> and invoice created from frond-end<br/>
+<font color="#A82F2F"><font size="2">(04:36:49 AM)</font> <b>HoangNam:</b></font> so when a invoice created, i need populate some of item into invoice<br/>
+<font color="#A82F2F"><font size="2">(04:36:55 AM)</font> <b>analphabet:</b></font> RWOverdijk: yea, I&apos;m getting my hands dirty with the 0.10 rcs<br/>
+<font color="#A82F2F"><font size="2">(04:37:14 AM)</font> <b>analphabet:</b></font> RWOverdijk: my use case is as follows<br/>
+<font color="#A82F2F"><font size="2">(04:37:17 AM)</font> <b>RWOverdijk:</b></font> analphabet, So multiple users can be attached to an edit record, and a single edit record can belong to multiple documents, too?<br/>
+<font color="#A82F2F"><font size="2">(04:37:43 AM)</font> <b>analphabet:</b></font> RWOverdijk: nope. An edit belongs to a user and a document.<br/>
+<font color="#A82F2F"><font size="2">(04:38:00 AM)</font> <b>RWOverdijk:</b></font> So oneToOne<br/>
+<font color="#A82F2F"><font size="2">(04:38:19 AM)</font> <b>HoangNam:</b></font> one to many<br/>
+<font color="#A82F2F"><font size="2">(04:38:22 AM)</font> <b>RWOverdijk:</b></font> Or manyToOne because a user could have multiple edit records<br/>
+<font color="#A82F2F"><font size="2">(04:38:23 AM)</font> <b>analphabet:</b></font> RWOverdijk: so, since I&apos;d also like to list the authors of a document and the documents a user has edited, that&apos;d be a manyToMany relationship<br/>
+<font size="2">(04:38:24 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(04:38:45 AM)</font> <b>RWOverdijk:</b></font> I see<br/>
+<font color="#A82F2F"><font size="2">(04:39:28 AM)</font> <b>analphabet:</b></font> RWOverdijk: but since the edit is already a manifestation of this relationship, I was wondering if I can use it as a my manyToMany table somehow<br/>
+<font color="#A82F2F"><font size="2">(04:39:32 AM)</font> <b>RWOverdijk:</b></font> If you&apos;ve edited a document, are you not one of the authors?<br/>
+<font color="#A82F2F"><font size="2">(04:39:43 AM)</font> <b>analphabet:</b></font> RWOverdijk: yep.<br/>
+<font color="#A82F2F"><font size="2">(04:39:51 AM)</font> <b>RWOverdijk:</b></font> So perhaps just make a manyToMany on the document and user<br/>
+<font color="#A82F2F"><font size="2">(04:40:04 AM)</font> <b>RWOverdijk:</b></font> And just forget about edit, which would then just be something else<br/>
+<font color="#A82F2F"><font size="2">(04:40:27 AM)</font> <b>analphabet:</b></font> RWOverdijk: yea, I was going to do that, but then I&apos;d have a redundancy in my model<br/>
+<font color="#A82F2F"><font size="2">(04:40:30 AM)</font> <b>RWOverdijk:</b></font> A link, which has little to nothing to do with the actual authors. It&apos;s just a link.<br/>
+<font color="#A82F2F"><font size="2">(04:40:44 AM)</font> <b>RWOverdijk:</b></font> I don&apos;t think you can re-use the edit model that way<br/>
+<font color="#A82F2F"><font size="2">(04:40:48 AM)</font> <b>RWOverdijk:</b></font> Not yet anyway<br/>
+<font color="#A82F2F"><font size="2">(04:41:11 AM)</font> <b>RWOverdijk:</b></font> Sails just creates the link table (or document, donno which adapter you&apos;re using) for you.<br/>
+<font color="#A82F2F"><font size="2">(04:41:27 AM)</font> <b>RWOverdijk:</b></font> Unless that has changed during my absence.<br/>
+<font color="#A82F2F"><font size="2">(04:41:41 AM)</font> <b>analphabet:</b></font> ok, thank you<br/>
+<font size="2">(04:46:33 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(04:46:42 AM)</font> <b>delight:</b></font> is there an option to compress the generated html for ejs templates ? jade does it by default ..<br/>
+<font size="2">(04:47:30 AM)</font><b> HoangNam left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(04:52:30 AM)</font> <b>luc__:</b></font> hi all, can anybody help for the oauth2orize integration in sails ?<br/>
+<font color="#A82F2F"><font size="2">(04:57:50 AM)</font> <b>luc__:</b></font> I do not understand how the oauth2orize middleware can be called from a sails policy<br/>
+<font color="#A82F2F"><font size="2">(04:57:56 AM)</font> <b>luc__:</b></font> any pointers ?<br/>
+<font color="#A82F2F"><font size="2">(04:59:04 AM)</font> <b>rawtaz:</b></font> wait and see :)<br/>
+<font color="#A82F2F"><font size="2">(05:01:30 AM)</font> <b>luc__:</b></font> @rawtaz, do you mean wait for a next sails release ?<br/>
+<font color="#A82F2F"><font size="2">(05:02:16 AM)</font> <b>rawtaz:</b></font> of course not<br/>
+<font color="#A82F2F"><font size="2">(05:02:23 AM)</font> <b>RWOverdijk:</b></font> How do you guys handle client side templates with i18n?<br/>
+<font color="#A82F2F"><font size="2">(05:02:27 AM)</font> <b>rawtaz:</b></font> i mean wait and see. if anyone can help you and want to, they probably will<br/>
+<font color="#A82F2F"><font size="2">(05:02:39 AM)</font> <b>RWOverdijk:</b></font> I could set up a route and dynamically load the templates, but that seems a bit overkill-ish<br/>
+<font color="#A82F2F"><font size="2">(05:02:48 AM)</font> <b>rawtaz:</b></font> on the irc one must have patience :)<br/>
+<font color="#A82F2F"><font size="2">(05:03:11 AM)</font> <b>luc__:</b></font> @rawtaz, totally agree ;)<br/>
+<font color="#A82F2F"><font size="2">(05:03:46 AM)</font> <b>RWOverdijk:</b></font> I could use handlebars I guess<br/>
+<font color="#A82F2F"><font size="2">(05:04:15 AM)</font> <b>luc__:</b></font> @rawtaz, I&apos;ve been looking at several examples and searched the web but could not find the happiness :)<br/>
+<font color="#A82F2F"><font size="2">(05:04:24 AM)</font> <b>rawtaz:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(05:07:28 AM)</font> <b>luc__:</b></font> Basically, my problem is to know how to call oauth2orize middleware from sails policies (mainly the &apos;resource owner password&apos; and &apos;authorization code&apos; flows)<br/>
+<font color="#A82F2F"><font size="2">(05:09:05 AM)</font> <b>luc__:</b></font> I&apos;m not new to node but I find oauth2orize quite hard to understand (or maybe I&apos;m just dumb) and did not find a lot of examples<br/>
+<font color="#A82F2F"><font size="2">(05:09:51 AM)</font> <b>luc__:</b></font> I&apos;m trying to setup a project to protect my sails api with oauth2 https://github.com/lucj/sails-oauth2-api<br/>
+<font size="2">(05:23:45 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(05:24:38 AM)</font> <b>RWOverdijk:</b></font> https://github.com/SlexAxton/require-handlebars-plugin<br/>
+<font color="#A82F2F"><font size="2">(05:24:46 AM)</font> <b>RWOverdijk:</b></font> This makes life really easy.<br/>
+<font color="#A82F2F"><font size="2">(05:25:04 AM)</font> <b>RWOverdijk:</b></font> Templating and locales. It works really well.<br/>
+<font size="2">(05:29:53 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(05:40:04 AM)</font> <b>RWOverdijk:</b></font> How would I go about loading routes from the DB?<br/>
+<font color="#A82F2F"><font size="2">(05:40:13 AM)</font> <b>RWOverdijk:</b></font> For let&apos;s say... A CMS<br/>
+<font color="#A82F2F"><font size="2">(05:40:25 AM)</font> <b>RWOverdijk:</b></font> I could use the notFound.js response, but it feels a bit icky<br/>
+<font color="#A82F2F"><font size="2">(06:40:40 AM)</font> <b>Luc___:</b></font> hi, any oauth2orize guru out there ?<br/>
+<font color="#A82F2F"><font size="2">(06:46:03 AM)</font> <b>jdcauley:</b></font> Luc__ are you using passport?<br/>
+<font color="#A82F2F"><font size="2">(06:46:54 AM)</font> <b>jdcauley:</b></font> Anyone have guidance on leaving blank form fields blank in the db?<br/>
+<font color="#A82F2F"><font size="2">(06:47:04 AM)</font> <b>jdcauley:</b></font> vs null/undefined?<br/>
+<font color="#A82F2F"><font size="2">(06:53:31 AM)</font> <b>Luc___:</b></font> @jdcauley I&apos;m using passport and oauth2orize (well... I tried to...)<br/>
+<font color="#A82F2F"><font size="2">(06:53:46 AM)</font> <b>jdcauley:</b></font> i&apos;m not sure you need or want both<br/>
+<font color="#A82F2F"><font size="2">(06:54:12 AM)</font> <b>jdcauley:</b></font> you probably want to use passport-oauth2<br/>
+<font color="#A82F2F"><font size="2">(06:54:31 AM)</font> <b>jdcauley:</b></font> looks like the same guy<br/>
+<font color="#A82F2F"><font size="2">(06:54:46 AM)</font> <b>jdcauley:</b></font> but the passport vs might work more nicely<br/>
+<font color="#A82F2F"><font size="2">(06:55:53 AM)</font> <b>Luc___:</b></font> @jdcauley, in fact I need my API to be consume by oauth2 client<br/>
+<font color="#A82F2F"><font size="2">(06:56:37 AM)</font> <b>Luc___:</b></font> @jdcauley, jaredhanson has developed oauth2orize for that purpose but I&apos;m kind of lost in the usage :)<br/>
+<font color="#A82F2F"><font size="2">(06:57:22 AM)</font> <b>jdcauley:</b></font> maybe this one? https://github.com/jaredhanson/passport-http-bearer<br/>
+<font color="#A82F2F"><font size="2">(06:57:41 AM)</font> <b>Luc___:</b></font> @jdcauley, I came up with https://github.com/lucj/sails-oauth2-api in order to try making things clearer...but still some pieces of the puzzle are missing (in my head as well)<br/>
+<font color="#A82F2F"><font size="2">(06:58:13 AM)</font> <b>jdcauley:</b></font> you have wandered beyond my expertise for now I haven&apos;t built anything to auth to my api yet<br/>
+<font color="#A82F2F"><font size="2">(06:58:42 AM)</font> <b>Luc___:</b></font> passport-http-bearer will be used to check the bearer accessToken but this phase is after the resource owner password flow I try to put in place<br/>
+<font color="#A82F2F"><font size="2">(06:59:08 AM)</font> <b>Luc___:</b></font> it&apos;s the first time I try... :( kind of complicated<br/>
+<font size="2">(07:09:15 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(07:18:36 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(07:57:22 AM)</font> <b>Luc___:</b></font> @rawtaz, ok, I wait and see :)<br/>
+<font color="#A82F2F"><font size="2">(07:59:39 AM)</font> <b>rawtaz:</b></font> @nick is twitter syntax<br/>
+<font color="#A82F2F"><font size="2">(08:00:00 AM)</font> <b>rawtaz:</b></font> here on the irc addressing people by  nick:  is more conventional<br/>
+<font color="#A82F2F"><font size="2">(08:00:06 AM)</font> <b>rawtaz:</b></font> or possibly  nick,<br/>
+<font color="#A82F2F"><font size="2">(08:00:14 AM)</font> <b>rawtaz:</b></font> although the former is more original<br/>
+<font size="2">(08:27:41 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

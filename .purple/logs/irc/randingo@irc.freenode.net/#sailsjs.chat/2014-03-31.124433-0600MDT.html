@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 31 Mar 2014 12:44:33 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 31 Mar 2014 12:44:33 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(12:44:33 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(01:32:16 PM)</font> <b>zinigor1:</b></font> Hey, everybody! Can someone please help me? I have a problem with a lifecycle callback of a model - the beforeCreate callback doesn&apos;t get called for some reason on my model. I can tell that because the breakpoint in the function doesn&apos;t work on .create call<br/>
+<font color="#A82F2F"><font size="2">(01:34:48 PM)</font> <b>robdubya:</b></font> paste the code zinigor1<br/>
+<font color="#A82F2F"><font size="2">(01:35:56 PM)</font> <b>zinigor1:</b></font> Sure, here it is: http://pastebin.com/GUcQYyXn<br/>
+<font color="#A82F2F"><font size="2">(01:36:49 PM)</font> <b>zinigor1:</b></font> robdubya: You&apos;re a regular here, aren&apos;t you? :)<br/>
+<font color="#A82F2F"><font size="2">(01:36:59 PM)</font> <b>robdubya:</b></font> you could say that<br/>
+<font color="#A82F2F"><font size="2">(01:37:42 PM)</font> <b>da_wunder:</b></font> zinigor1: have tryied to console.log(values); in that?<br/>
+<font color="#A82F2F"><font size="2">(01:38:04 PM)</font> <b>da_wunder:</b></font> just to make sure that you get all necessary data<br/>
+<font color="#A82F2F"><font size="2">(01:38:17 PM)</font> <b>zinigor1:</b></font> da_wunder: no, I have only tried to set breakpoints in webstorm, but I will try now just for the laughs<br/>
+<font color="#A82F2F"><font size="2">(01:39:11 PM)</font> <b>da_wunder:</b></font> hmm and storm is breaking there just right?<br/>
+<font color="#A82F2F"><font size="2">(01:40:45 PM)</font> <b>zinigor1:</b></font> No, webstorm is not pausing at the breakpoint in beforeCreate, while it does pause when I set a breakpoint around the .create call<br/>
+<font color="#A82F2F"><font size="2">(01:41:22 PM)</font> <b>zinigor1:</b></font> ...and there&apos;s nothing in the console<br/>
+<font color="#A82F2F"><font size="2">(01:41:23 PM)</font> <b>robdubya:</b></font> zinigor1 you dont need to call done(values)<br/>
+<font color="#A82F2F"><font size="2">(01:41:26 PM)</font> <b>robdubya:</b></font> just done()<br/>
+<font color="#A82F2F"><font size="2">(01:41:32 PM)</font> <b>zinigor1:</b></font> OK, noted<br/>
+<font color="#A82F2F"><font size="2">(01:42:21 PM)</font> <b>robdubya:</b></font> it may be treating that as an error<br/>
+<font color="#A82F2F"><font size="2">(01:42:38 PM)</font> <b>da_wunder:</b></font> that&apos;s true<br/>
+<font color="#A82F2F"><font size="2">(01:43:22 PM)</font> <b>zinigor1:</b></font> Hmm, let me try that<br/>
+<font color="#A82F2F"><font size="2">(01:44:55 PM)</font> <b>da_wunder:</b></font> hmm, but still that console.log() stuff should be seen at shell<br/>
+<font color="#A82F2F"><font size="2">(01:45:43 PM)</font> <b>zinigor1:</b></font> No, nothing<br/>
+<font color="#A82F2F"><font size="2">(01:46:06 PM)</font> <b>zinigor1:</b></font> I&apos;m currently trying other callbacks just to see if they work at all<br/>
+<font color="#A82F2F"><font size="2">(01:46:23 PM)</font> <b>robdubya:</b></font> i wonder...<br/>
+<font color="#A82F2F"><font size="2">(01:46:51 PM)</font> <b>robdubya:</b></font> line 31 - if(!values.account) - that might actually be a getter/setter and therefore not falsey<br/>
+<font color="#A82F2F"><font size="2">(01:46:59 PM)</font> <b>zinigor1:</b></font> beforeValidate worked<br/>
+<font color="#A82F2F"><font size="2">(01:47:32 PM)</font> <b>zinigor1:</b></font> Yes, it might, but the breakpoint on that line doesn&apos;t get activated, so the problem isn&apos;t in that line<br/>
+<font color="#A82F2F"><font size="2">(01:48:04 PM)</font> <b>robdubya:</b></font> mmmmm you&apos;ve got account as required<br/>
+<font color="#A82F2F"><font size="2">(01:48:11 PM)</font> <b>robdubya:</b></font> so its probably not even getting to the create<br/>
+<font color="#A82F2F"><font size="2">(01:48:26 PM)</font> <b>robdubya:</b></font> not sure on the ordering there<br/>
+<font color="#A82F2F"><font size="2">(01:50:03 PM)</font> <b>zinigor1:</b></font> Hmm, maybe it is a problem with the callback order. Would you say that using the beforeValidate for this purpose is valid?<br/>
+<font color="#A82F2F"><font size="2">(01:50:14 PM)</font> <b>zinigor1:</b></font> I mean instead of beforeCreate<br/>
+<font color="#A82F2F"><font size="2">(01:51:06 PM)</font> <b>robdubya:</b></font> i dont see why not<br/>
+<font color="#A82F2F"><font size="2">(01:51:17 PM)</font> <b>robdubya:</b></font> though it seems like &quot;account&quot; is the dominant model here<br/>
+<font color="#A82F2F"><font size="2">(01:52:05 PM)</font> <b>zinigor1:</b></font> You mean it should be handled in the Account class?<br/>
+<font color="#A82F2F"><font size="2">(01:53:37 PM)</font> <b>robdubya:</b></font> yeah - seems a bit weird to create an external profile on its own<br/>
+<font color="#A82F2F"><font size="2">(01:53:51 PM)</font> <b>robdubya:</b></font> assuming accounts -&gt; havemany -&gt; profiles<br/>
+<font color="#A82F2F"><font size="2">(01:54:21 PM)</font> <b>robdubya:</b></font> thats a philosophical q tho… so<br/>
+<font color="#A82F2F"><font size="2">(01:54:27 PM)</font> <b>Asianweb:</b></font> da_wunder still online?<br/>
+<font color="#A82F2F"><font size="2">(01:55:02 PM)</font> <b>da_wunder:</b></font> just a bit<br/>
+<font color="#A82F2F"><font size="2">(01:55:16 PM)</font> <b>zinigor1:</b></font> robdubya: OK, point taken, thanks<br/>
+<font color="#A82F2F"><font size="2">(01:55:20 PM)</font> <b>Asianweb:</b></font> Can you take a look here: http://pastebin.com/nVGtJbKE<br/>
+<font color="#A82F2F"><font size="2">(01:55:23 PM)</font> <b>da_wunder:</b></font> i have to get some sleep, though<br/>
+<font size="2">(01:55:24 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>

@@ -1,0 +1,186 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 07 Jul 2014 09:05:18 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 07 Jul 2014 09:05:18 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:05:18 AM)</font><b> The topic for #sailsjs is: Documentation for v0.10 can be found at <a href="http://beta.sailsjs.org">http://beta.sailsjs.org</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:12:31 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: Expanded &apos;find&apos; blueprint API reference. Moved everything to &apos;Blueprint API&apos; for display in menu on www.sailsjs.org<br/>
+<font color="#A82F2F"><font size="2">(09:21:20 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: Move expected response up<br/>
+<font color="#A82F2F"><font size="2">(09:24:46 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: Rearrange, add colons<br/>
+<font color="#A82F2F"><font size="2">(09:26:08 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: Use newline before .then() for readability<br/>
+<font color="#A82F2F"><font size="2">(09:27:16 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: use :model, not :modelIdentity (for simplicity)<br/>
+<font color="#A82F2F"><font size="2">(09:57:56 AM)</font> <b>da_wunde1:</b></font> damn, my internet is broken :(<br/>
+<font color="#A82F2F"><font size="2">(10:08:26 AM)</font> <b>the-anconia:</b></font> Okay so parallel in async works unless one of the functions passes an error as its callback.<br/>
+<font color="#A82F2F"><font size="2">(10:08:41 AM)</font> <b>the-anconia:</b></font> I need all of my functions to run with or without an error<br/>
+<font color="#A82F2F"><font size="2">(10:08:51 AM)</font> <b>robdubya:</b></font> promises ftw<br/>
+<font color="#A82F2F"><font size="2">(10:13:33 AM)</font> <b>robdubya:</b></font> Promise.all(anArrayOfAsyncOperations).then(allSuccess,allFailure)<br/>
+<font size="2">(10:14:12 AM)</font><b> mode (+o ichabod__) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(10:15:23 AM)</font> <b>ziarek:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(10:15:28 AM)</font> <b>ichabod__:</b></font> hi ziarek<br/>
+<font color="#A82F2F"><font size="2">(10:15:41 AM)</font> <b>ziarek:</b></font> anyone know where I can get a nice tut which show me Angular + Sails work together ?<br/>
+<font color="#A82F2F"><font size="2">(10:16:41 AM)</font> <b>the-anconia:</b></font> @robdubya where do I learn more about promises?<br/>
+<font color="#A82F2F"><font size="2">(10:17:08 AM)</font> <b>da_wunde1:</b></font> ziarek: there is one https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(10:17:43 AM)</font> <b>robdubya:</b></font> the-anconia http://strongloop.com/strongblog/promises-in-node-js-with-q-an-alternative-to-callbacks/<br/>
+<font color="#A82F2F"><font size="2">(10:17:54 AM)</font> <b>robdubya:</b></font> good start (though i prefer bluebird over q )<br/>
+<font size="2">(10:21:44 AM)</font><b> ziarek left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(10:23:37 AM)</font> <b>robdubya:</b></font> the-anconia promises are going to be standard in JS pretty soon too, and for my money make a lot more sense for complex things than callbacks<br/>
+<font color="#A82F2F"><font size="2">(10:23:46 AM)</font> <b>robdubya:</b></font> angualr, ember, etc are all promise based<br/>
+<font color="#A82F2F"><font size="2">(10:24:06 AM)</font> <b>the-anconia:</b></font> That&apos;s nice to hear. I&apos;m just having a hard time implementing it into my code right now.<br/>
+<font color="#A82F2F"><font size="2">(10:24:49 AM)</font> <b>robdubya:</b></font> the-anconia throw up your code if you want, i can see if i can grok it<br/>
+<font color="#A82F2F"><font size="2">(10:25:46 AM)</font> <b>the-anconia:</b></font> robdubya It&apos;s written with async.auto at the moment. I&apos;d have to make some changes first.<br/>
+<font color="#A82F2F"><font size="2">(11:11:56 AM)</font> <b>JemiloII:</b></font> is there a way in sails to console log the routes visited?<br/>
+<font color="#A82F2F"><font size="2">(11:12:21 AM)</font> <b>duhruh:</b></font> sails lift --silly<br/>
+<font color="#A82F2F"><font size="2">(11:12:25 AM)</font> <b>duhruh:</b></font> that might work ?<br/>
+<font color="#A82F2F"><font size="2">(11:12:46 AM)</font> <b>JemiloII:</b></font> whoa...<br/>
+<font color="#A82F2F"><font size="2">(11:13:16 AM)</font> <b>JemiloII:</b></font> i thought you were joking so i humored you<br/>
+<font color="#A82F2F"><font size="2">(11:13:24 AM)</font> <b>duhruh:</b></font> nope!<br/>
+<font color="#A82F2F"><font size="2">(11:13:30 AM)</font> <b>duhruh:</b></font> =)<br/>
+<font color="#A82F2F"><font size="2">(11:13:55 AM)</font> <b>JemiloII:</b></font> so can i um hide the heartbeats?<br/>
+<font color="#A82F2F"><font size="2">(11:14:05 AM)</font> <b>duhruh:</b></font> silly&apos;s the log level above verbose<br/>
+<font color="#A82F2F"><font size="2">(11:14:13 AM)</font> <b>JemiloII:</b></font> oh<br/>
+<font color="#A82F2F"><font size="2">(11:14:14 AM)</font> <b>duhruh:</b></font> it shows a silly amount of information<br/>
+<font color="#A82F2F"><font size="2">(11:14:25 AM)</font> <b>JemiloII:</b></font> so its a node thing?<br/>
+<font color="#A82F2F"><font size="2">(11:14:31 AM)</font> <b>duhruh:</b></font> nope<br/>
+<font color="#A82F2F"><font size="2">(11:14:35 AM)</font> <b>duhruh:</b></font> a sails thing<br/>
+<font color="#A82F2F"><font size="2">(11:14:50 AM)</font> <b>JemiloII:</b></font> this is cool<br/>
+<font color="#A82F2F"><font size="2">(11:15:12 AM)</font> <b>duhruh:</b></font> i suspect it&apos;s just the developers being cheeky<br/>
+<font color="#A82F2F"><font size="2">(11:15:19 AM)</font> <b>da_wunder:</b></font> http://beta.sailsjs.org/#/documentation/reference/cli/sailslift.html<br/>
+<font color="#A82F2F"><font size="2">(11:15:37 AM)</font> <b>da_wunder:</b></font> and http://beta.sailsjs.org/#/documentation/reference/sails.config/sails.config.log.html<br/>
+<font color="#A82F2F"><font size="2">(11:17:42 AM)</font> <b>JemiloII:</b></font> i wish i could just see the silly information xD<br/>
+<font color="#A82F2F"><font size="2">(11:18:30 AM)</font> <b>da_wunder:</b></font> make logs to write file and then just tail -f | grep silly yourlog.file<br/>
+<font color="#A82F2F"><font size="2">(11:19:31 AM)</font> <b>JemiloII:</b></font> whoa the docs changed<br/>
+<font color="#A82F2F"><font size="2">(11:19:42 AM)</font> <b>JemiloII:</b></font> i guess this is what mike&apos;s been doing<br/>
+<font color="#A82F2F"><font size="2">(11:26:46 AM)</font> <b>ICCULUSC:</b></font> anyone know if you can disable auto increment in your models?<br/>
+<font color="#A82F2F"><font size="2">(11:28:26 AM)</font> <b>robdubya:</b></font> autoPk : false iirc<br/>
+<font color="#A82F2F"><font size="2">(11:28:30 AM)</font> <b>robdubya:</b></font> or autoPK<br/>
+<font color="#A82F2F"><font size="2">(11:29:58 AM)</font> <b>ICCULUSC:</b></font> autoPK false removes that key but i need a primary key for associations<br/>
+<font color="#A82F2F"><font size="2">(11:30:28 AM)</font> <b>ICCULUSC:</b></font> and if i specify a primary key it auto increments it haha<br/>
+<font color="#A82F2F"><font size="2">(11:30:53 AM)</font> <b>da_wunder:</b></font> and why is that a problem?<br/>
+<font color="#A82F2F"><font size="2">(11:31:08 AM)</font> <b>robdubya:</b></font> soooooooo set a primary key?<br/>
+<font color="#A82F2F"><font size="2">(11:31:16 AM)</font> <b>robdubya:</b></font> iirc i do it on beforeCreate<br/>
+<font color="#A82F2F"><font size="2">(11:32:04 AM)</font> <b>ICCULUSC:</b></font> it&apos;s hard to explain, if i specify a primary key on the existing data point that represents the key of the data set it auto increments it<br/>
+<font color="#A82F2F"><font size="2">(11:33:33 AM)</font> <b>ICCULUSC:</b></font> and if i do&apos;nt and i make the existing data point unique it just bitches like crazy about it already existing, which i find odd since it&apos;s a relation in waterline<br/>
+<font color="#A82F2F"><font size="2">(11:33:41 AM)</font> <b>ICCULUSC:</b></font> so it existing is kinda the point<br/>
+<font color="#A82F2F"><font size="2">(11:34:53 AM)</font> <b>ICCULUSC:</b></font> so the record to which it relates already exists = error lol<br/>
+<font color="#A82F2F"><font size="2">(11:43:54 AM)</font> <b>sailsTroll:</b></font> mikermcneil just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(11:44:00 AM)</font> <b>JemiloII:</b></font> i don&apos;t like it when people use fixture data for a tutorial, it doesn&apos;t teach a thing about connecting to a server le sigh<br/>
+<font color="#A82F2F"><font size="2">(11:46:09 AM)</font> <b>robdubya:</b></font> ICCULUSC did you just email the sails mailing list about this?<br/>
+<font color="#A82F2F"><font size="2">(11:46:22 AM)</font> <b>ICCULUSC:</b></font> lol what<br/>
+<font color="#A82F2F"><font size="2">(11:46:34 AM)</font> <b>robdubya:</b></font> ha, just checking somebody just asked a simialr q<br/>
+<font color="#A82F2F"><font size="2">(11:46:35 AM)</font> <b>ICCULUSC:</b></font> I DON&apos;T EVEN KNOW WHAT THAT IS.<br/>
+<font color="#A82F2F"><font size="2">(11:46:41 AM)</font> <b>ICCULUSC:</b></font> lol nah i didn&apos;t<br/>
+<font color="#A82F2F"><font size="2">(11:46:47 AM)</font> <b>ICCULUSC:</b></font> i&apos;m just watching my putty scream at me about existing records<br/>
+<font color="#A82F2F"><font size="2">(11:46:58 AM)</font> <b>ICCULUSC:</b></font> and wondering why that matters with a normalized DB<br/>
+<font color="#A82F2F"><font size="2">(11:52:19 AM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of www.sailsjs.org: More separation between sections in documentation<br/>
+<font color="#A82F2F"><font size="2">(11:57:32 AM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of www.sailsjs.org: Make current reference section more obvious<br/>
+<font color="#A82F2F"><font size="2">(12:01:03 PM)</font> <b>ICCULUSC:</b></font> waterline y u do dis<br/>
+<font color="#A82F2F"><font size="2">(12:01:52 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(12:14:59 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(12:14:59 PM)</font> <b>sailsTroll:</b></font> All the things.<br/>
+<font color="#A82F2F"><font size="2">(12:19:16 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#062585"><font size="2">(12:26:11 PM)</font> <b>***ICCULUSC</b></font> cries<br/>
+<font color="#A82F2F"><font size="2">(12:31:43 PM)</font> <b>ICCULUSC:</b></font>  why does waterline hate me<br/>
+<font color="#A82F2F"><font size="2">(12:50:59 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(12:51:00 PM)</font> <b>sailsTroll:</b></font> Reference!<br/>
+<font color="#A82F2F"><font size="2">(12:53:42 PM)</font> <b>ICCULUSC:</b></font> seriously folks, i&apos;m trying to set up a one to one association between two models where the associated record may be used by many of the associating records, but when the next record comes along that associates to an existed associated record it errors out, any thoughts?<br/>
+<font color="#A82F2F"><font size="2">(12:55:23 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(12:55:24 PM)</font> <b>sailsTroll:</b></font> Get that reference outta there<br/>
+<font color="#A82F2F"><font size="2">(12:55:50 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of sails-docs: Update 0home.md<br/>
+<font color="#A82F2F"><font size="2">(12:56:12 PM)</font> <b>sailsTroll:</b></font> particlebanana just pushed to the master branch of waterline: Merge pull request #515 from clarkorz/fix-populate-3more<br/>
+<font color="#A82F2F"><font size="2">(12:56:12 PM)</font> <b>sailsTroll:</b></font> Fix populating more than 2 associations with criteria<br/>
+<font color="#A82F2F"><font size="2">(01:19:03 PM)</font> <b>the-anconia:</b></font> Is there anything like async parallel that won&apos;t immediately stop running on an error?<br/>
+<font color="#A82F2F"><font size="2">(01:29:30 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of www.sailsjs.org: Started adding transitions to docs pages<br/>
+<font color="#A82F2F"><font size="2">(01:58:41 PM)</font> <b>the-anconia:</b></font> Does anybody have an example project where they used promises with Waterline? I&apos;m really struggling with this right now.<br/>
+<font color="#A82F2F"><font size="2">(02:03:11 PM)</font> <b>ICCULUSC:</b></font> you getting the error with no info?<br/>
+<font color="#A82F2F"><font size="2">(02:03:34 PM)</font> <b>ICCULUSC:</b></font> i have been getting &quot;Error:&quot; from Q lol<br/>
+<font color="#A82F2F"><font size="2">(02:03:48 PM)</font> <b>ICCULUSC:</b></font> can&apos;t find a way to catch anything useful from it<br/>
+<font color="#A82F2F"><font size="2">(02:04:07 PM)</font> <b>the-anconia:</b></font> No, I&apos;m just having trouble with one of my views where I&apos;m performing multiple Waterline queries. The view renders before the queries finish.<br/>
+<font color="#A82F2F"><font size="2">(02:05:13 PM)</font> <b>ICCULUSC:</b></font> sorry got nothing for ya, using waterline for data aggregation myself<br/>
+<font color="#A82F2F"><font size="2">(02:06:41 PM)</font> <b>ICCULUSC:</b></font> trying to at least<br/>
+<font color="#A82F2F"><font size="2">(02:11:57 PM)</font> <b>echoplexion:</b></font> anyone know why I&apos;d experience 404s when creating imgs into /assets/images/somefolder/file.jpg?<br/>
+<font color="#A82F2F"><font size="2">(02:12:05 PM)</font> <b>echoplexion:</b></font> seems that when I request it some time later, it will eventually resolve<br/>
+<font color="#A82F2F"><font size="2">(02:14:05 PM)</font> <b>ICCULUSC:</b></font> when you add stuff to the assets it runs the grunt tasks and it takes time to copy the files<br/>
+<font color="#A82F2F"><font size="2">(02:14:21 PM)</font> <b>ICCULUSC:</b></font> if you do sails lift --verbose you can watch the process so you know when it&apos;s done<br/>
+<font color="#A82F2F"><font size="2">(02:25:10 PM)</font> <b>JemiloII:</b></font> think i&apos;m going to drop ember and go back to canjs<br/>
+<font size="2">(02:25:42 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(02:25:47 PM)</font> <b>JemiloII:</b></font> the framework removed doing Model.store.find(), pretty access your promises from anywhere<br/>
+<font color="#A82F2F"><font size="2">(02:26:19 PM)</font> <b>ICCULUSC:</b></font> think i&apos;m going to punch a hole in my monitor<br/>
+<font color="#A82F2F"><font size="2">(02:26:21 PM)</font> <b>JemiloII:</b></font> they want everything in controllers with cluttered style naming conventions, le sigh<br/>
+<font color="#A82F2F"><font size="2">(02:26:49 PM)</font> <b>JemiloII:</b></font> icculusc, what are you trying to do?<br/>
+<font color="#A82F2F"><font size="2">(02:27:21 PM)</font> <b>ICCULUSC:</b></font> trying to aggregate data, but the associations require a primary key, which is always an integer with AI<br/>
+<font color="#A82F2F"><font size="2">(02:27:34 PM)</font> <b>ICCULUSC:</b></font> unfortunately the data i&apos;m aggregating uses various data types as keys and the IDs are already defined<br/>
+<font color="#A82F2F"><font size="2">(02:27:40 PM)</font> <b>ICCULUSC:</b></font> but i can&apos;t use associations without the primary key<br/>
+<font color="#A82F2F"><font size="2">(02:27:45 PM)</font> <b>ICCULUSC:</b></font> and i can&apos;t disable autoincrement<br/>
+<font color="#A82F2F"><font size="2">(02:28:04 PM)</font> <b>ICCULUSC:</b></font> and if i use autoPK but unique on the existing identifier it errors out when it reaches the duplicate record<br/>
+<font color="#A82F2F"><font size="2">(02:28:14 PM)</font> <b>ICCULUSC:</b></font> rather than associating with the existing record<br/>
+<font color="#A82F2F"><font size="2">(02:28:28 PM)</font> <b>JemiloII:</b></font> have you tried using primaryKey: true?<br/>
+<font color="#A82F2F"><font size="2">(02:28:37 PM)</font> <b>ICCULUSC:</b></font> yes, but that forces auto increment/integer type<br/>
+<font color="#A82F2F"><font size="2">(02:28:52 PM)</font> <b>ICCULUSC:</b></font> and there are things like country codes, region codes, etc that aren&apos;t integers<br/>
+<font color="#A82F2F"><font size="2">(02:28:52 PM)</font> <b>JemiloII:</b></font> autoIncrement: false didn&apos;t work?<br/>
+<font color="#A82F2F"><font size="2">(02:28:55 PM)</font> <b>ICCULUSC:</b></font> nope<br/>
+<font color="#A82F2F"><font size="2">(02:29:07 PM)</font> <b>ICCULUSC:</b></font> plus when it auto increments it overflows to something like a 90 bit number<br/>
+<font color="#A82F2F"><font size="2">(02:29:10 PM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:29:12 PM)</font> <b>JemiloII:</b></font> why would you have that as a primaryKey?<br/>
+<font color="#A82F2F"><font size="2">(02:29:17 PM)</font> <b>ICCULUSC:</b></font> because the records have existing data<br/>
+<font color="#A82F2F"><font size="2">(02:29:30 PM)</font> <b>ICCULUSC:</b></font> because i&apos;m aggregating data from an existing saas product we use here<br/>
+<font color="#A82F2F"><font size="2">(02:29:32 PM)</font> <b>HackerOfDreams:</b></font> hello everyone<br/>
+<font color="#A82F2F"><font size="2">(02:29:53 PM)</font> <b>HackerOfDreams:</b></font> I was looking for the documentation of Models associations that was in here http://beta.sailsjs.org/#/documentation/reference<br/>
+<font color="#A82F2F"><font size="2">(02:29:54 PM)</font> <b>ICCULUSC:</b></font> creating data visualization tools but i need to have the data stored locally<br/>
+<font color="#A82F2F"><font size="2">(02:29:57 PM)</font> <b>JemiloII:</b></font> sounds like you should make a custom adapter but i could look into it<br/>
+<font color="#A82F2F"><font size="2">(02:30:19 PM)</font> <b>ICCULUSC:</b></font> the issue really is that waterline wants to throw an error rather than associate with the existing record<br/>
+<font color="#A82F2F"><font size="2">(02:30:26 PM)</font> <b>HackerOfDreams:</b></font> I think they&apos;re updating the docs and I couldn&apos;t find this information in the usual place. Can someone point me at a place where to find it?<br/>
+<font color="#A82F2F"><font size="2">(02:30:36 PM)</font> <b>the-anconia:</b></font> What do people use for promises when dealing with async queries? I&apos;ve looked into Q but it&apos;s the most confusing thing ever imo.<br/>
+<font color="#A82F2F"><font size="2">(02:30:46 PM)</font> <b>ICCULUSC:</b></font> which is like... ya know... completely contrary to the point of relations<br/>
+<font color="#A82F2F"><font size="2">(02:31:16 PM)</font> <b>ICCULUSC:</b></font> i can easily enter a new record for each but that makes my 18 mb day of aggregation into a 75 mb day of aggregation<br/>
+<font color="#A82F2F"><font size="2">(02:34:59 PM)</font> <b>JemiloII:</b></font> what kind of database are you working with that does not have int id or uuid for it&apos;s primarykeys? a redis?<br/>
+<font color="#A82F2F"><font size="2">(02:37:25 PM)</font> <b>ICCULUSC:</b></font> not sure<br/>
+<font color="#A82F2F"><font size="2">(02:37:32 PM)</font> <b>ICCULUSC:</b></font> it seems like they use mysql just very poorly<br/>
+<font color="#A82F2F"><font size="2">(02:38:01 PM)</font> <b>ICCULUSC:</b></font> i&apos;m exportring the data with an API(which returns XML lol) and converting it to JSON, parsing it from there and inserting it into my own MySQL database<br/>
+<font color="#A82F2F"><font size="2">(02:38:04 PM)</font> <b>JemiloII:</b></font> not sure how you got a mysql db without int ids<br/>
+<font color="#A82F2F"><font size="2">(02:38:12 PM)</font> <b>ICCULUSC:</b></font> me either but<br/>
+<font color="#A82F2F"><font size="2">(02:38:23 PM)</font> <b>ICCULUSC:</b></font> the big issue is that i can&apos;t turn autoIncrement off for the primary key<br/>
+<font color="#A82F2F"><font size="2">(02:38:39 PM)</font> <b>ICCULUSC:</b></font> and it wants to try to insert records over the top of other records rather than set the association to the exisiting record<br/>
+<font color="#A82F2F"><font size="2">(02:40:41 PM)</font> <b>ICCULUSC:</b></font> and i&apos;d assume the reason it doesn&apos;t always use integers as they key is because some of it is static data<br/>
+<font size="2">(02:41:03 PM)</font><b> tusam is now known as palmertech</b><br/>
+<font color="#A82F2F"><font size="2">(02:41:05 PM)</font> <b>ICCULUSC:</b></font> so they just use the country code for example as the identifier for the countries<br/>
+<font size="2">(02:41:41 PM)</font><b> palmertech is now known as tusam</b><br/>
+<font color="#A82F2F"><font size="2">(02:42:55 PM)</font> <b>ICCULUSC:</b></font> so if for example i do this http://pastebin.com/9BRt5AV5<br/>
+<font color="#A82F2F"><font size="2">(02:42:59 PM)</font> <b>ICCULUSC:</b></font> still AI<br/>
+<font size="2">(02:43:43 PM)</font><b> HackerOfDreams is now known as ElHacker</b><br/>
+<font color="#A82F2F"><font size="2">(02:44:35 PM)</font> <b>the-anconia:</b></font> Are you getting the advertiser_id from somewhere else?<br/>
+<font color="#A82F2F"><font size="2">(02:45:42 PM)</font> <b>ICCULUSC:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(02:45:48 PM)</font> <b>ICCULUSC:</b></font> that&apos;s the whole issue<br/>
+<font color="#A82F2F"><font size="2">(02:45:50 PM)</font> <b>ICCULUSC:</b></font> im aggregating existing data<br/>
+<font color="#A82F2F"><font size="2">(02:46:16 PM)</font> <b>the-anconia:</b></font> Why are you making that a PK then? Why not just make it unique and store the existing key?<br/>
+<font color="#A82F2F"><font size="2">(02:46:33 PM)</font> <b>ICCULUSC:</b></font> because the associations require a primary key<br/>
+<font color="#A82F2F"><font size="2">(02:46:50 PM)</font> <b>ICCULUSC:</b></font> and if you make it unique, and allow autoPK it fails when it reaches a record with a duplicate unique value<br/>
+<font color="#A82F2F"><font size="2">(02:46:55 PM)</font> <b>ICCULUSC:</b></font> rather than setting that association<br/>
+<font color="#A82F2F"><font size="2">(02:47:19 PM)</font> <b>ICCULUSC:</b></font> so if i have an advertiser with advertiser_id = 5<br/>
+<font color="#A82F2F"><font size="2">(02:47:34 PM)</font> <b>ICCULUSC:</b></font> next time it hits that advertiser it fails to insert the record<br/>
+<font color="#A82F2F"><font size="2">(02:47:52 PM)</font> <b>ICCULUSC:</b></font> and therefore fails to insert the top level record tracking the trafic<br/>
+<font color="#A82F2F"><font size="2">(02:49:38 PM)</font> <b>the-anconia:</b></font> So you&apos;re using the new built-in associations?<br/>
+<font color="#A82F2F"><font size="2">(02:50:11 PM)</font> <b>ICCULUSC:</b></font> yeah, and waterline standalone<br/>
+<font color="#A82F2F"><font size="2">(02:51:09 PM)</font> <b>da_wunder:</b></font> the-anconia: async.js is fairly simple to use<br/>
+<font color="#A82F2F"><font size="2">(02:51:22 PM)</font> <b>da_wunder:</b></font> not so fancy as promises, but it works<br/>
+<font color="#A82F2F"><font size="2">(02:51:32 PM)</font> <b>ICCULUSC:</b></font> i&apos;m currently using it in conjunction with promises lol<br/>
+<font color="#A82F2F"><font size="2">(02:51:50 PM)</font> <b>ICCULUSC:</b></font> but i wouldn&apos;t recommend that if you don&apos;t follow Q really well because it&apos;s rough<br/>
+<font color="#A82F2F"><font size="2">(02:51:56 PM)</font> <b>the-anconia:</b></font> da_wunder Yeah, but if any of my queries pass an error to the callback all other queries don&apos;t run.<br/>
+<font color="#A82F2F"><font size="2">(02:52:11 PM)</font> <b>da_wunder:</b></font> the-anconia: that&apos;s the workflow<br/>
+<font color="#A82F2F"><font size="2">(02:52:22 PM)</font> <b>the-anconia:</b></font> And I want them all to run and then make a decision based off of that.<br/>
+<font color="#A82F2F"><font size="2">(02:52:27 PM)</font> <b>da_wunder:</b></font> why you want to run another query if one fails?<br/>
+<font color="#A82F2F"><font size="2">(02:52:47 PM)</font> <b>the-anconia:</b></font> Because the view is dependent on one to two models<br/>
+<font color="#A82F2F"><font size="2">(02:52:49 PM)</font> <b>ICCULUSC:</b></font> regardless why not just track the success of the queries yourself<br/>
+<font color="#A82F2F"><font size="2">(02:52:57 PM)</font> <b>da_wunder:</b></font> ok, then you could use callback(null, record|error);<br/>
+<font color="#A82F2F"><font size="2">(02:52:57 PM)</font> <b>ICCULUSC:</b></font> and then make the decision in the callback<br/>
+<font color="#A82F2F"><font size="2">(02:53:31 PM)</font> <b>the-anconia:</b></font> Okay, I don&apos;t really understand callbacks well enough then. So I can just add another callback to a Waterline query method?<br/>
+<font color="#A82F2F"><font size="2">(02:53:52 PM)</font> <b>da_wunder:</b></font> the-anconia: just paste some code somewhere so we can take a look<br/>
+<font color="#A82F2F"><font size="2">(02:54:01 PM)</font> <b>the-anconia:</b></font> Okay, one minute<br/>
+<font color="#A82F2F"><font size="2">(02:54:33 PM)</font> <b>da_wunder:</b></font> meanwhile i&apos;m going to drink more beer, eat some, and etc.<br/>
+<font color="#A82F2F"><font size="2">(02:54:33 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font size="2">(03:03:02 PM)</font><b> montanvi is now known as bambam1</b><br/>
+<font color="#A82F2F"><font size="2">(03:08:06 PM)</font> <b>Loch:</b></font> Can anyone answer my issue here: https://github.com/balderdashy/sails-postgresql/issues/75<br/>
+<font color="#A82F2F"><font size="2">(03:23:14 PM)</font> <b>Loch:</b></font> Has anyone had any success using criteria with associations with the postgres adapter?<br/>
+<font color="#A82F2F"><font size="2">(03:25:17 PM)</font> <b>da_wunder:</b></font> YourModel.find().populate(&apos;anotherModel&apos;, {where: {foo: &apos;bar&apos;}}).exec(function(error, data) { .... });<br/>
+<font color="#A82F2F"><font size="2">(03:25:39 PM)</font> <b>da_wunder:</b></font> and remember that populate where will NOT limit &apos;YourModel&apos; records<br/>
+<font color="#A82F2F"><font size="2">(03:30:08 PM)</font> <b>Loch:</b></font> This is what I expected, however I seem to run into an error when using the postgresql adapter.<br/>
+<font color="#A82F2F"><font size="2">(03:30:56 PM)</font> <b>Loch:</b></font> I haven&apos;t tested to ensure that it is in fact the adapter that&apos;s the problem, but you can see my issue here - everything seems to be ok: https://github.com/balderdashy/sails-postgresql/issues/75<br/>
+<font color="#A82F2F"><font size="2">(03:31:40 PM)</font> <b>Loch:</b></font> Oh I see, I need to include the &quot;where&quot;?<br/>
+<font color="#A82F2F"><font size="2">(03:32:16 PM)</font> <b>sailsTroll:</b></font> rachaelshaw just pushed to the master branch of www.sailsjs.org: Docs animation sort of<br/>
+<font size="2">(03:38:26 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

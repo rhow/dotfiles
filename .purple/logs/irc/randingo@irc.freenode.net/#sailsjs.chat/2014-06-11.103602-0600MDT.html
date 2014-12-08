@@ -1,0 +1,132 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 11 Jun 2014 10:36:02 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 11 Jun 2014 10:36:02 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(10:36:02 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:36:06 AM)</font> <b>nunojsferreira:</b></font> da_wunder: so it seems that grunt should be copying the files already<br/>
+<font color="#A82F2F"><font size="2">(10:36:12 AM)</font> <b>nunojsferreira:</b></font> but it isn&apos;t<br/>
+<font color="#A82F2F"><font size="2">(10:37:05 AM)</font> <b>nunojsferreira:</b></font> i think i will create an action just for that<br/>
+<font color="#A82F2F"><font size="2">(10:37:38 AM)</font> <b>da_wunder:</b></font> but remembere that all images all twice on your server if you add those to .tmp<br/>
+<font color="#A82F2F"><font size="2">(10:37:51 AM)</font> <b>da_wunder:</b></font> lots of image =&gt; lots of diskspace<br/>
+<font color="#A82F2F"><font size="2">(10:38:16 AM)</font> <b>nunojsferreira:</b></font> da_wunder: you&apos;re right<br/>
+<font color="#A82F2F"><font size="2">(10:38:30 AM)</font> <b>nunojsferreira:</b></font> i think i will create my own public image folder<br/>
+<font color="#A82F2F"><font size="2">(10:38:37 AM)</font> <b>nunojsferreira:</b></font> and a routing to get those images<br/>
+<font color="#A82F2F"><font size="2">(10:38:53 AM)</font> <b>da_wunder:</b></font> or just controller which serves those files<br/>
+<font color="#A82F2F"><font size="2">(10:39:03 AM)</font> <b>da_wunder:</b></font> so no public folder<br/>
+<font color="#A82F2F"><font size="2">(10:44:25 AM)</font> <b>nunojsferreira:</b></font> da_wunder: yep, that what i meant<br/>
+<font color="#A82F2F"><font size="2">(10:45:09 AM)</font> <b>da_wunder:</b></font> oh, ok<br/>
+<font color="#A82F2F"><font size="2">(10:45:57 AM)</font> <b>nunojsferreira:</b></font> da_wunder: thanks for the help<br/>
+<font color="#A82F2F"><font size="2">(10:46:12 AM)</font> <b>lulzmachine:</b></font> what&apos;s the easiest way to disable socket.io support?<br/>
+<font color="#A82F2F"><font size="2">(10:46:21 AM)</font> <b>lulzmachine:</b></font> just empty transports array?<br/>
+<font color="#A82F2F"><font size="2">(10:46:35 AM)</font> <b>da_wunder:</b></font> remove that js file<br/>
+<font color="#A82F2F"><font size="2">(10:46:55 AM)</font> <b>lulzmachine:</b></font> alright... nothing will break?<br/>
+<font color="#A82F2F"><font size="2">(10:47:30 AM)</font> <b>da_wunder:</b></font> it&apos;s just js file which is shown to browsers<br/>
+<font color="#A82F2F"><font size="2">(10:48:09 AM)</font> <b>lulzmachine:</b></font> oh you mean the assets/js/dependencies/sails.io.js-file?<br/>
+<font color="#A82F2F"><font size="2">(10:48:30 AM)</font> <b>lulzmachine:</b></font> but that would only remove it from the client side<br/>
+<font color="#A82F2F"><font size="2">(10:48:35 AM)</font> <b>lulzmachine:</b></font> how do I remove it from server side?<br/>
+<font color="#A82F2F"><font size="2">(10:48:55 AM)</font> <b>da_wunder:</b></font> why would you do that?<br/>
+<font color="#A82F2F"><font size="2">(10:49:09 AM)</font> <b>lulzmachine:</b></font> because I&apos;m not going to use it, so I wanna disable it<br/>
+<font color="#A82F2F"><font size="2">(10:49:36 AM)</font> <b>da_wunder:</b></font> those socket events are deep in sails, don&apos;t know how you can complish that easily<br/>
+<font color="#A82F2F"><font size="2">(10:49:58 AM)</font> <b>da_wunder:</b></font> but if there isn&apos;t client side to catch those events you should be just fine<br/>
+<font color="#A82F2F"><font size="2">(10:50:35 AM)</font> <b>lulzmachine:</b></font> hm alright... since I know I won&apos;t read up on its ins and outs i&apos;d like to remove it from production. right now it&apos;s just a big unknown security-wise to me<br/>
+<font color="#A82F2F"><font size="2">(10:52:19 AM)</font> <b>da_wunder:</b></font> and even if you left that js file to client side, you should handle end points authentications via policies<br/>
+<font color="#A82F2F"><font size="2">(10:54:20 AM)</font> <b>lulzmachine:</b></font> yeah i&apos;ll have to cover authorization on the server side for everything i know<br/>
+<font color="#A82F2F"><font size="2">(10:54:43 AM)</font> <b>lulzmachine:</b></font> but i&apos;m a lot better att http than web sockets, so I&apos;d prefer to put that on hold for this project<br/>
+<font color="#A82F2F"><font size="2">(10:56:09 AM)</font> <b>lulzmachine:</b></font> so i take it there&apos;s no setting for that?<br/>
+<font color="#A82F2F"><font size="2">(10:57:36 AM)</font> <b>leepers41:</b></font> what up sailsjs!<br/>
+<font color="#A82F2F"><font size="2">(11:49:06 AM)</font> <b>HackerOfDreams_:</b></font> hello<br/>
+<font color="#A82F2F"><font size="2">(11:49:37 AM)</font> <b>HackerOfDreams_:</b></font> is there any way to do a &quot;deep&quot; population between models?<br/>
+<font color="#A82F2F"><font size="2">(11:50:25 AM)</font> <b>HackerOfDreams_:</b></font> let&apos;s say I have 3 models: Law.js, Article.js and Annotation.js<br/>
+<font color="#A82F2F"><font size="2">(11:50:37 AM)</font> <b>HackerOfDreams_:</b></font> a Law has many Articles<br/>
+<font color="#A82F2F"><font size="2">(11:50:47 AM)</font> <b>HackerOfDreams_:</b></font> an Article has many Annotations<br/>
+<font color="#A82F2F"><font size="2">(11:51:18 AM)</font> <b>HackerOfDreams_:</b></font> I want to query all the Articles with their annotations related to an specific Law<br/>
+<font color="#A82F2F"><font size="2">(11:51:47 AM)</font> <b>da_wunder:</b></font> i think there is no way to populate deeper than just one level<br/>
+<font color="#A82F2F"><font size="2">(11:51:56 AM)</font> <b>da_wunder:</b></font> so custom action is the solution<br/>
+<font color="#A82F2F"><font size="2">(11:53:13 AM)</font> <b>HackerOfDreams_:</b></font> where can I find more about custom actions in the documentation??<br/>
+<font color="#A82F2F"><font size="2">(11:53:37 AM)</font> <b>robdubya_:</b></font> HackerOfDreams_ he just means a controller / model action<br/>
+<font color="#A82F2F"><font size="2">(11:54:01 AM)</font> <b>HackerOfDreams_:</b></font> robdubya_: oh I see, thanks! I&apos;ll dig into it<br/>
+<font color="#A82F2F"><font size="2">(11:57:31 AM)</font> <b>HackerOfDreams_:</b></font> da_wunder: thanks!<br/>
+<font color="#A82F2F"><font size="2">(11:57:58 AM)</font> <b>da_wunder:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(11:58:11 AM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(11:58:15 AM)</font> <b>lenswipe:</b></font> as a rough gude, what breakpoints should i have on my site/<br/>
+<font size="2">(12:20:41 PM)</font><b> proppy is now known as [kubot]</b><br/>
+<font size="2">(12:21:46 PM)</font><b> [kubot] is now known as proppy</b><br/>
+<font size="2">(12:48:26 PM)</font><b> Drako_ is now known as Drako</b><br/>
+<font size="2">(12:52:28 PM)</font><b> Drako is now known as Drako_</b><br/>
+<font color="#A82F2F"><font size="2">(01:05:12 PM)</font> <b>oskob:</b></font> ohoy!<br/>
+<font color="#A82F2F"><font size="2">(01:05:51 PM)</font> <b>oskob:</b></font> is there an easy way to debug routes? to see what it tries to do?<br/>
+<font color="#A82F2F"><font size="2">(01:06:13 PM)</font> <b>oskob:</b></font> i have a route that&apos;s not picket up<br/>
+<font color="#A82F2F"><font size="2">(01:26:47 PM)</font> <b>leepers41:</b></font> ohoy!<br/>
+<font color="#A82F2F"><font size="2">(01:27:20 PM)</font> <b>leepers41:</b></font> oskob: check you are using the right method (get, post, put, etc.) and path<br/>
+<font color="#A82F2F"><font size="2">(01:35:41 PM)</font> <b>oskob:</b></font> leepers41: foun it, i specified &quot;view&quot; instead of &quot;action&quot;<br/>
+<font color="#A82F2F"><font size="2">(01:35:50 PM)</font> <b>oskob:</b></font> but it&apos;s very hard to spot these things<br/>
+<font color="#A82F2F"><font size="2">(01:36:43 PM)</font> <b>oskob:</b></font> thanks though :)<br/>
+<font color="#A82F2F"><font size="2">(01:45:36 PM)</font> <b>FreefallGeek:</b></font> Afternoon all.<br/>
+<font color="#A82F2F"><font size="2">(01:45:55 PM)</font> <b>jdcauley:</b></font> afternoon<br/>
+<font color="#A82F2F"><font size="2">(01:47:30 PM)</font> <b>FreefallGeek:</b></font> Is there a way to submit form data to a controller and NOT have it render a view?<br/>
+<font color="#A82F2F"><font size="2">(01:48:55 PM)</font> <b>jdcauley:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(01:49:44 PM)</font> <b>jdcauley:</b></font> FreeFallGeek, what do you want it to do instead?<br/>
+<font color="#A82F2F"><font size="2">(01:51:56 PM)</font> <b>FreefallGeek:</b></font> jdcauley: I just need it accept the data and manipulate it prior to saving it to the database<br/>
+<font color="#A82F2F"><font size="2">(01:52:00 PM)</font> <b>FreefallGeek:</b></font> but I dont want to return a view<br/>
+<font color="#A82F2F"><font size="2">(01:54:04 PM)</font> <b>jdcauley:</b></font> FreefallGeek<br/>
+<font color="#A82F2F"><font size="2">(01:54:19 PM)</font> <b>Yannoooo:</b></font> res.send(200) after doing what you have to do doesn&apos;t work?<br/>
+<font color="#A82F2F"><font size="2">(01:54:22 PM)</font> <b>oskob:</b></font> FreefallGeek: res.redirect(&quot;/&quot;) or res.send(200) ?<br/>
+<font color="#A82F2F"><font size="2">(01:54:44 PM)</font> <b>jdcauley:</b></font> freefallgeek<br/>
+<font color="#A82F2F"><font size="2">(01:54:51 PM)</font> <b>jdcauley:</b></font> you would need to use ajax or something<br/>
+<font color="#A82F2F"><font size="2">(01:55:12 PM)</font> <b>jdcauley:</b></font> other wise you have to at least refresh back to the page<br/>
+<font color="#A82F2F"><font size="2">(01:55:28 PM)</font> <b>FreefallGeek:</b></font> understood. gracias.<br/>
+<font color="#A82F2F"><font size="2">(01:55:31 PM)</font> <b>jdcauley:</b></font> because other wise your user won&apos;t know the form succeeded<br/>
+<font color="#A82F2F"><font size="2">(01:55:49 PM)</font> <b>jdcauley:</b></font> at minimum i suggest using a refresh and flash message<br/>
+<font color="#A82F2F"><font size="2">(01:57:56 PM)</font> <b>da_wunder:</b></font> and if you talking with ajax, then i would send back something like  res.json(savedData);<br/>
+<font size="2">(02:01:43 PM)</font><b> _Dan_E is now known as Danny_</b><br/>
+<font color="#A82F2F"><font size="2">(02:17:38 PM)</font> <b>delerium_:</b></font> Hi ppl, new to Sails.  and new to JS in fact (but have some background in dev) .. I was wondering if there is a short tutorial that explains a small app (let say, a login page + plus like a add note, add user, wathehver) .  How the pieces interacts together..<br/>
+<font color="#A82F2F"><font size="2">(02:18:07 PM)</font> <b>delerium_:</b></font> (I saw a few ,.. but I like one proposed by you, the expert) :)<br/>
+<font color="#A82F2F"><font size="2">(02:22:21 PM)</font> <b>da_wunder:</b></font> there is some http://code.tutsplus.com/categories/sailsjs<br/>
+<font color="#A82F2F"><font size="2">(02:22:48 PM)</font> <b>delerium_:</b></font> Thanks Sir<br/>
+<font color="#A82F2F"><font size="2">(02:23:12 PM)</font> <b>da_wunder:</b></font> and that series https://www.youtube.com/watch?v=AcwlZQb-cmQ<br/>
+<font color="#A82F2F"><font size="2">(02:23:23 PM)</font> <b>delerium_:</b></font> Great!<br/>
+<font color="#A82F2F"><font size="2">(02:33:07 PM)</font> <b>oskob:</b></font> anyone here familiar with async.each? for fetching multiple layers of data from model?<br/>
+<font color="#A82F2F"><font size="2">(02:33:18 PM)</font> <b>oskob:</b></font> like, load all users, then load all blah for every user<br/>
+<font color="#A82F2F"><font size="2">(02:34:03 PM)</font> <b>da_wunder:</b></font> oskob: have used async quite a lot<br/>
+<font color="#A82F2F"><font size="2">(02:34:33 PM)</font> <b>oskob:</b></font> da_wunder: is it made for these kinds of things? or are there better ways?<br/>
+<font color="#A82F2F"><font size="2">(02:34:48 PM)</font> <b>da_wunder:</b></font> you can do those with async.js<br/>
+<font color="#A82F2F"><font size="2">(02:34:59 PM)</font> <b>oskob:</b></font> ok, nice<br/>
+<font color="#A82F2F"><font size="2">(02:35:08 PM)</font> <b>oskob:</b></font> im having trouble with the callback though<br/>
+<font color="#A82F2F"><font size="2">(02:35:20 PM)</font> <b>da_wunder:</b></font> paste some code somewhere<br/>
+<font color="#A82F2F"><font size="2">(02:35:26 PM)</font> <b>oskob:</b></font> i never get the final callback, even though every iteration calls the callback()<br/>
+<font color="#A82F2F"><font size="2">(02:36:11 PM)</font> <b>da_wunder:</b></font> i think you&apos;re calling those wrong<br/>
+<font color="#A82F2F"><font size="2">(02:36:24 PM)</font> <b>da_wunder:</b></font> but cannot say without seen your code<br/>
+<font color="#A82F2F"><font size="2">(02:37:02 PM)</font> <b>oskob:</b></font> da_wunder: http://pastebin.com/LviCqtD1<br/>
+<font color="#A82F2F"><font size="2">(02:37:26 PM)</font> <b>oskob:</b></font> in the console, there is one &quot;got pred&quot; for every &quot;req pred&quot;<br/>
+<font color="#A82F2F"><font size="2">(02:37:58 PM)</font> <b>oskob:</b></font> oh shit, i see i add stuff to users, while iterating it<br/>
+<font color="#A82F2F"><font size="2">(02:38:43 PM)</font> <b>da_wunder:</b></font> async.map is better for that job<br/>
+<font color="#A82F2F"><font size="2">(02:38:45 PM)</font> <b>robdubya_:</b></font> you can use promises too<br/>
+<font color="#A82F2F"><font size="2">(02:38:53 PM)</font> <b>robdubya_:</b></font> i reckon its much cleaner / easier than async<br/>
+<font color="#A82F2F"><font size="2">(02:39:04 PM)</font> <b>da_wunder:</b></font> imho just opposite :D<br/>
+<font color="#A82F2F"><font size="2">(02:39:44 PM)</font> <b>oskob:</b></font> da_wunder: ah yeah, will do that!<br/>
+<font color="#A82F2F"><font size="2">(02:39:45 PM)</font> <b>oskob:</b></font> thans<br/>
+<font color="#A82F2F"><font size="2">(02:39:49 PM)</font> <b>da_wunder:</b></font> oskob: see that https://gist.github.com/tarlepp/2c4f38273c49baa9cf0e<br/>
+<font color="#A82F2F"><font size="2">(02:39:49 PM)</font> <b>oskob:</b></font> thanks*<br/>
+<font color="#A82F2F"><font size="2">(02:40:05 PM)</font> <b>da_wunder:</b></font> that has same structure what you need i think<br/>
+<font color="#A82F2F"><font size="2">(02:40:39 PM)</font> <b>oskob:</b></font> da_wunder: very nice! thanks a bunch<br/>
+<font color="#A82F2F"><font size="2">(02:42:44 PM)</font> <b>robdubya_:</b></font> http://hastebin.com/poqaxalehu.lua<br/>
+<font color="#A82F2F"><font size="2">(02:42:53 PM)</font> <b>robdubya_:</b></font> promise style<br/>
+<font color="#A82F2F"><font size="2">(02:43:23 PM)</font> <b>da_wunder:</b></font> robdubya_: nice<br/>
+<font color="#A82F2F"><font size="2">(02:44:16 PM)</font> <b>robdubya_:</b></font> would be interesting to see the perf difference there<br/>
+<font color="#A82F2F"><font size="2">(02:44:39 PM)</font> <b>da_wunder:</b></font> is that q or what?<br/>
+<font color="#A82F2F"><font size="2">(02:44:52 PM)</font> <b>robdubya_:</b></font> yeah. WL returns Q promises<br/>
+<font color="#A82F2F"><font size="2">(02:45:13 PM)</font> <b>da_wunder:</b></font> http://thanpol.as/javascript/promises-a-performance-hits-you-should-be-aware-of/<br/>
+<font color="#A82F2F"><font size="2">(02:47:03 PM)</font> <b>robdubya_:</b></font> http://spion.github.io/posts/why-i-am-switching-to-promises.html<br/>
+<font color="#A82F2F"><font size="2">(02:47:11 PM)</font> <b>oskob:</b></font> promises, promises<br/>
+<font color="#A82F2F"><font size="2">(02:47:31 PM)</font> <b>robdubya_:</b></font> (i&apos;ve actually swapped Q out for bluebird in my stuff)<br/>
+<font color="#A82F2F"><font size="2">(03:09:42 PM)</font> <b>zinigor:</b></font> Hey, everyone! Please someone help me, this is driving me nuts. How do I render a certain view into a string from a controller?<br/>
+<font color="#A82F2F"><font size="2">(03:27:30 PM)</font> <b>delerium_:</b></font> da_wunder: Thank yo so much for the links of the videos.. Awesome!<br/>
+<font color="#A82F2F"><font size="2">(04:53:07 PM)</font> <b>Dchen:</b></font> I&apos;m having some socket issues causing chrome mobile to crash, I&apos;m trying to figure out the exact culprit.<br/>
+<font color="#A82F2F"><font size="2">(04:53:55 PM)</font> <b>Dchen:</b></font> this is the exact issue<br/>
+<font color="#A82F2F"><font size="2">(04:53:57 PM)</font> <b>Dchen:</b></font> https://github.com/Automattic/socket.io/issues/976<br/>
+<font color="#A82F2F"><font size="2">(04:54:39 PM)</font> <b>Dchen:</b></font> it has to do with chrome for iOS running in a web view<br/>
+<font color="#A82F2F"><font size="2">(04:55:08 PM)</font> <b>Dchen:</b></font> It&apos;s really random, anyone experience that before?<br/>
+<font color="#A82F2F"><font size="2">(04:56:57 PM)</font> <b>robdubya_:</b></font> interestng<br/>
+<font color="#A82F2F"><font size="2">(04:57:02 PM)</font> <b>Dchen:</b></font> Cloning this repo you can reporoduce the bug<br/>
+<font color="#A82F2F"><font size="2">(04:57:02 PM)</font> <b>Dchen:</b></font> https://github.com/ryancp/sailng<br/>
+<font color="#A82F2F"><font size="2">(04:57:48 PM)</font> <b>Dchen:</b></font> There&apos;s many moving parts, I&apos;m tyring to figure out if is a socket issue, a sails issue, or an agular issue<br/>
+<font size="2">(05:07:11 PM)</font><b> Dchen left the room (quit: Quit: Computer has gone to sleep.).</b><br/>
+<font size="2">(05:28:37 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

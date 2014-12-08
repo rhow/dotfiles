@@ -1,0 +1,148 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 06 Jun 2014 10:14:27 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 06 Jun 2014 10:14:27 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(10:14:27 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:14:38 AM)</font> <b>FreefallGeek:</b></font> the web filter is blocking Web socket<br/>
+<font color="#A82F2F"><font size="2">(10:14:42 AM)</font> <b>Aswebbb:</b></font> but most of the times, the socket is initialized<br/>
+<font color="#A82F2F"><font size="2">(10:15:45 AM)</font> <b>robdubya:</b></font> bingo<br/>
+<font color="#A82F2F"><font size="2">(10:44:21 AM)</font> <b>Aswebbb:</b></font> Does someone have troubles with upload files since rc-0.7 is released?<br/>
+<font color="#A82F2F"><font size="2">(10:44:31 AM)</font> <b>Aswebbb:</b></font> Looks like req.param(&quot;files&quot;) is not recognized anymore<br/>
+<font color="#A82F2F"><font size="2">(10:46:13 AM)</font> <b>Aswebbb:</b></font> Error: Unknow rule: onKey<br/>
+<font color="#A82F2F"><font size="2">(10:47:29 AM)</font> <b>da_wunder:</b></font> http://beta.sailsjs.org/#/documentation/reference/Request/req.file.html<br/>
+<font color="#A82F2F"><font size="2">(10:49:09 AM)</font> <b>cramrod:</b></font> Aswebbb, I ran into the onKey error but it was an associations bug in sails-mongo.  It had nothing to do with file uploads.<br/>
+<font color="#A82F2F"><font size="2">(10:51:30 AM)</font> <b>Aswebbb:</b></font> yes we resolved the file upload issue by downgrading to the rc4<br/>
+<font color="#A82F2F"><font size="2">(10:51:51 AM)</font> <b>Aswebbb:</b></font> onKey error is a bug in sails-mongo?<br/>
+<font color="#A82F2F"><font size="2">(10:52:07 AM)</font> <b>Aswebbb:</b></font> How did you solve it cramrod?<br/>
+<font color="#A82F2F"><font size="2">(10:52:25 AM)</font> <b>Aswebbb:</b></font> da_wunder: gonna take a look, thanks<br/>
+<font color="#A82F2F"><font size="2">(10:52:55 AM)</font> <b>Aswebbb:</b></font> this is the error: http://pastebin.com/axDQAU4h<br/>
+<font color="#A82F2F"><font size="2">(10:53:22 AM)</font> <b>Aswebbb:</b></font> We only upgraded from rc4 to rc7<br/>
+<font color="#A82F2F"><font size="2">(10:53:56 AM)</font> <b>cramrod:</b></font> Yes.  It was a tough one.  There is an issue about it somewhere in sails-mongo.  In order to solve it, I made the `sails` entry in package.json point to the github repo then did a &apos;rm -rf&apos; of node_modules followed by an &apos;npm install&apos;<br/>
+<font color="#A82F2F"><font size="2">(10:54:19 AM)</font> <b>cramrod:</b></font> actually the issue might be in waterline<br/>
+<font color="#A82F2F"><font size="2">(10:55:27 AM)</font> <b>cramrod:</b></font> The problem was actually in waterline but the version of sails on npm uses waterline rc12.  Sails on the github repo uses waterline rc13 which is where the fix was issued.<br/>
+<font color="#A82F2F"><font size="2">(10:56:28 AM)</font> <b>Aswebbb:</b></font> How can I exactly solve this issue? by upgrading to rc13 on waterline?<br/>
+<font color="#A82F2F"><font size="2">(10:57:25 AM)</font> <b>cramrod:</b></font> The easiest way is to make the &apos;sails&apos; key in package.json dependencies look like this     &quot;sails&quot;: &quot;git://github.com/balderdashy/sails.git&quot;<br/>
+<font color="#A82F2F"><font size="2">(10:57:50 AM)</font> <b>cramrod:</b></font> then &apos;rm -rf node_modules&apos; followed by &apos;npm install&apos;<br/>
+<font color="#A82F2F"><font size="2">(10:58:23 AM)</font> <b>Aswebbb:</b></font> thanks cramrod, gonna try<br/>
+<font color="#A82F2F"><font size="2">(10:58:33 AM)</font> <b>cramrod:</b></font> good luck<br/>
+<font size="2">(11:02:55 AM)</font><b> Aswebbb left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(11:20:24 AM)</font> <b>flaiks:</b></font> if I want to define custom model methods do i do it within the attributes section ?<br/>
+<font color="#A82F2F"><font size="2">(11:20:32 AM)</font> <b>flaiks:</b></font> and can i access other models within a model method ?<br/>
+<font color="#A82F2F"><font size="2">(11:21:11 AM)</font> <b>robdubya:</b></font> model *class* method or model *instance* method<br/>
+<font color="#A82F2F"><font size="2">(11:21:28 AM)</font> <b>robdubya:</b></font> and yes to your second question, though it would likely be better to do that in a controller or srevice<br/>
+<font color="#A82F2F"><font size="2">(11:22:45 AM)</font> <b>flaiks:</b></font> robdubya: yeah i suppose<br/>
+<font color="#A82F2F"><font size="2">(11:23:10 AM)</font> <b>robdubya:</b></font> flaiks keeps things seperated and clean<br/>
+<font color="#A82F2F"><font size="2">(11:24:27 AM)</font> <b>flaiks:</b></font> how can I extend the default blueprints ?<br/>
+<font color="#A82F2F"><font size="2">(11:25:38 AM)</font> <b>da_wunder:</b></font> flaiks: https://github.com/balderdashy/sails/issues/1653#issuecomment-43583019<br/>
+<font color="#A82F2F"><font size="2">(11:25:50 AM)</font> <b>da_wunder:</b></font> there is some info, but no actual answer about that<br/>
+<font color="#A82F2F"><font size="2">(11:26:29 AM)</font> <b>da_wunder:</b></font> which is frustrating<br/>
+<font color="#A82F2F"><font size="2">(11:26:33 AM)</font> <b>robdubya:</b></font> flaiks you just override them<br/>
+<font color="#A82F2F"><font size="2">(11:26:53 AM)</font> <b>robdubya:</b></font> make a new folder /api/blueprints, copy the ones you want to override from sails core<br/>
+<font color="#A82F2F"><font size="2">(11:27:04 AM)</font> <b>flaiks:</b></font> robdubya: yeah word<br/>
+<font color="#A82F2F"><font size="2">(11:27:36 AM)</font> <b>flaiks:</b></font> robdubya: im working on a loyalty program, where every 100$ a customer spends they get a credit, need to keep track of it, hence the model method<br/>
+<font color="#A82F2F"><font size="2">(11:30:31 AM)</font> <b>robdubya:</b></font> mmm<br/>
+<font color="#A82F2F"><font size="2">(11:30:50 AM)</font> <b>robdubya:</b></font> i&apos;d probably just track sales, and then redemptions of credits<br/>
+<font color="#A82F2F"><font size="2">(11:32:43 AM)</font> <b>flaiks:</b></font> robdubya: track with a controller ?<br/>
+<font color="#A82F2F"><font size="2">(11:33:08 AM)</font> <b>flaiks:</b></font> robdubya: i was thinking of just making a field that queries sales, and gets total that a customer has spent, and calculates credit based on that<br/>
+<font color="#A82F2F"><font size="2">(11:33:15 AM)</font> <b>flaiks:</b></font> robdubya: a method field.<br/>
+<font color="#A82F2F"><font size="2">(11:33:23 AM)</font> <b>flaiks:</b></font> robdubya: might be a little innefecient though<br/>
+<font color="#A82F2F"><font size="2">(11:33:24 AM)</font> <b>robdubya:</b></font> total sales / 100 = total points - redeemed points = remaining points<br/>
+<font color="#A82F2F"><font size="2">(11:33:42 AM)</font> <b>flaiks:</b></font> robdubya: yes, I would just have to query total sales<br/>
+<font color="#A82F2F"><font size="2">(11:34:17 AM)</font> <b>flaiks:</b></font> robdubya: would it be unwise to do so as a model attribute mfunction ?<br/>
+<font color="#A82F2F"><font size="2">(11:34:39 AM)</font> <b>robdubya:</b></font> well given there&apos;s at least 2 models in play, probably<br/>
+<font color="#A82F2F"><font size="2">(11:34:59 AM)</font> <b>flaiks:</b></font> hm<br/>
+<font color="#A82F2F"><font size="2">(11:35:12 AM)</font> <b>robdubya:</b></font> i dont like needing / using other models in my models<br/>
+<font color="#A82F2F"><font size="2">(11:35:26 AM)</font> <b>robdubya:</b></font> that&apos;s a controller / service type thing, IMO<br/>
+<font color="#A82F2F"><font size="2">(11:35:29 AM)</font> <b>flaiks:</b></font> robdubya: yeah<br/>
+<font color="#A82F2F"><font size="2">(11:35:47 AM)</font> <b>flaiks:</b></font> robdubya: the app is mostly done in backbone, so my controllers dont do a whole lot<br/>
+<font color="#A82F2F"><font size="2">(11:36:11 AM)</font> <b>flaiks:</b></font> robdubya: i could just write a controller that returns number of remaining credits though<br/>
+<font color="#A82F2F"><font size="2">(11:38:01 AM)</font> <b>flaiks:</b></font> and hit the controller when its relevent<br/>
+<font color="#A82F2F"><font size="2">(11:38:20 AM)</font> <b>flaiks:</b></font> any way to write utility methods that can be called from any controller ?<br/>
+<font color="#A82F2F"><font size="2">(11:39:46 AM)</font> <b>da_wunder:</b></font> service?<br/>
+<font color="#A82F2F"><font size="2">(11:39:53 AM)</font> <b>flaiks:</b></font> da_wunder: yes.<br/>
+<font color="#A82F2F"><font size="2">(11:48:14 AM)</font> <b>flaiks:</b></font> any docs on model migrations ?<br/>
+<font color="#A82F2F"><font size="2">(11:48:22 AM)</font> <b>flaiks:</b></font> or does sails generate them automatically ?<br/>
+<font size="2">(11:55:52 AM)</font><b> flaiks left the room (quit: Quit: flaiks).</b><br/>
+<font color="#A82F2F"><font size="2">(12:32:02 PM)</font> <b>phishy:</b></font> Curious about sails-mysql. Does it not automatically introspect the database?<br/>
+<font color="#A82F2F"><font size="2">(12:32:11 PM)</font> <b>phishy:</b></font> Blueprints merely return ids<br/>
+<font color="#A82F2F"><font size="2">(12:55:26 PM)</font> <b>Aswebbb:</b></font> Does someone here use Skipper?<br/>
+<font color="#A82F2F"><font size="2">(01:04:55 PM)</font> <b>JemiloII:</b></font> hey who here works with ejs?<br/>
+<font color="#A82F2F"><font size="2">(01:06:15 PM)</font> <b>JemiloII:</b></font> may sound like a silly question, but i&apos;m just trying to understand it as i&apos;m making a handlebars views generator<br/>
+<font color="#A82F2F"><font size="2">(01:07:18 PM)</font> <b>robdubya:</b></font> understand EJS?<br/>
+<font color="#A82F2F"><font size="2">(01:07:31 PM)</font> <b>JemiloII:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(01:08:19 PM)</font> <b>JemiloII:</b></font> &lt;%= __(&apos;Welcome&apos;) %&gt;  &lt;-- is all this is doing is printing out Welcome<br/>
+<font color="#A82F2F"><font size="2">(01:08:44 PM)</font> <b>JemiloII:</b></font> really makes no sense why we&apos;d have it like so in the default templates<br/>
+<font color="#A82F2F"><font size="2">(01:09:12 PM)</font> <b>JemiloII:</b></font> Should just be Welcome, unless it&apos;s calling some module named Welcome<br/>
+<font color="#A82F2F"><font size="2">(01:10:14 PM)</font> <b>robdubya:</b></font> seems a bit silly, yes<br/>
+<font color="#A82F2F"><font size="2">(01:10:34 PM)</font> <b>robdubya:</b></font> but then so does the whole concept of server rendered views to me, so i&apos;m probably not the right person to argue that :D<br/>
+<font color="#A82F2F"><font size="2">(01:11:06 PM)</font> <b>FreefallGeek:</b></font> so does req.body() not parse post submitted form data without middleware?<br/>
+<font color="#A82F2F"><font size="2">(01:12:44 PM)</font> <b>robdubya:</b></font> check req.param(s)<br/>
+<font color="#A82F2F"><font size="2">(01:12:48 PM)</font> <b>JemiloII:</b></font> it depends on the website / application. I think it is a waste to have a user load tons of data if it can be a simple web render. I&apos;m looking into mixed methods for another project. I never want a user to see a loading bar. So the page will send rendered and then update when socket data comes in. But for what i&apos;m doing now, i just want server rendered data<br/>
+<font color="#A82F2F"><font size="2">(01:15:27 PM)</font> <b>robdubya:</b></font> i wont go into that. seems like a nightmare. https://github.com/balderdashy/sails/pull/1075<br/>
+<font color="#A82F2F"><font size="2">(01:15:34 PM)</font> <b>robdubya:</b></font> ^ ref that for hbs<br/>
+<font color="#A82F2F"><font size="2">(01:17:02 PM)</font> <b>robdubya:</b></font> aaaaaaaactuallly<br/>
+<font color="#A82F2F"><font size="2">(01:17:50 PM)</font> <b>robdubya:</b></font> pretty sure if you just install handebars with npm, and set it in the template config, it&apos;ll wor<br/>
+<font color="#A82F2F"><font size="2">(01:17:51 PM)</font> <b>robdubya:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(01:17:57 PM)</font> <b>netors:</b></font> how do i hook up into the &apos;connect&apos; event of socket.io the sails way/&apos;<br/>
+<font color="#A82F2F"><font size="2">(01:18:15 PM)</font> <b>JemiloII:</b></font> i know haha, i just making a generator<br/>
+<font color="#A82F2F"><font size="2">(01:20:08 PM)</font> <b>JemiloII:</b></font> i want to just do sails new app --template=handlebars or sails new app --template=hbs<br/>
+<font color="#A82F2F"><font size="2">(01:20:32 PM)</font> <b>Freefall-ZBook:</b></font> Anyways. The problem I&apos;m having with req.param is that it isn&apos;t grabbing the form data Im sending over<br/>
+<font color="#A82F2F"><font size="2">(01:20:50 PM)</font> <b>JemiloII:</b></font> from there i&apos;ll build in an option to set the ext so i cause do ext=handbars, ext=hbs, ext=html<br/>
+<font color="#A82F2F"><font size="2">(01:21:02 PM)</font> <b>JemiloII:</b></font> as an extra parameter<br/>
+<font color="#A82F2F"><font size="2">(01:21:22 PM)</font> <b>robdubya:</b></font> JemiloII have fun with that ish.<br/>
+<font color="#A82F2F"><font size="2">(01:21:42 PM)</font> <b>JemiloII:</b></font> whatever front end code i use will most likely use handbars as well. not a fan of ejs, I&apos;d rather write javascript vs ejs<br/>
+<font color="#A82F2F"><font size="2">(01:22:15 PM)</font> <b>FreefallGeek:</b></font> I was going to post a paste bin but my laptop died. Hah.<br/>
+<font color="#A82F2F"><font size="2">(01:22:22 PM)</font> <b>JemiloII:</b></font> dang<br/>
+<font color="#A82F2F"><font size="2">(01:22:53 PM)</font> <b>JemiloII:</b></font> freefall, are you posting it to the right controller?<br/>
+<font color="#A82F2F"><font size="2">(01:23:20 PM)</font> <b>robdubya:</b></font> always a good question :D<br/>
+<font size="2">(01:24:38 PM)</font><b> Freefall-ZBook left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(01:24:42 PM)</font> <b>FreefallGeek:</b></font> hah! yes.<br/>
+<font color="#A82F2F"><font size="2">(01:26:18 PM)</font> <b>JemiloII:</b></font> i wish your laptop did die, i could have looked at the pastebin to help better xD<br/>
+<font color="#A82F2F"><font size="2">(01:26:59 PM)</font> <b>JemiloII:</b></font> i sorta can&apos;t wait for primus to be part of sailsjs<br/>
+<font color="#A82F2F"><font size="2">(01:27:36 PM)</font> <b>JemiloII:</b></font> i&apos;m loving the fact that it&apos;s choose you convention over configuration<br/>
+<font color="#A82F2F"><font size="2">(01:28:06 PM)</font> <b>JemiloII:</b></font> pick whatever templating engine, pick whatever database, chose to render frontend views or not<br/>
+<font color="#A82F2F"><font size="2">(01:28:13 PM)</font> <b>JemiloII:</b></font> pretty nice<br/>
+<font color="#A82F2F"><font size="2">(01:30:02 PM)</font> <b>robdubya:</b></font> wouldn&apos;t hold your breath on that one<br/>
+<font color="#A82F2F"><font size="2">(01:31:22 PM)</font> <b>JemiloII:</b></font> if it came down to not pulling it in I&apos;ll just make a fork, but since my project isn&apos;t demanding with sockets, i&apos;ll just continue with whatever socket version they use currently<br/>
+<font color="#A82F2F"><font size="2">(01:34:37 PM)</font> <b>robdubya:</b></font> think they&apos;re going to do the s.io 1.0 upgrade first<br/>
+<font color="#A82F2F"><font size="2">(01:37:15 PM)</font> <b>FreefallGeek:</b></font> pastebin.com/BB6U7KSD<br/>
+<font color="#A82F2F"><font size="2">(01:37:27 PM)</font> <b>JemiloII:</b></font> socket.io v1.0 is a bit eh to me, its just an engine.io abstraction<br/>
+<font color="#A82F2F"><font size="2">(01:39:16 PM)</font> <b>FreefallGeek:</b></font> When I log the loginname and loginpassword<br/>
+<font color="#A82F2F"><font size="2">(01:39:28 PM)</font> <b>FreefallGeek:</b></font> they are undefined<br/>
+<font color="#A82F2F"><font size="2">(01:41:35 PM)</font> <b>robdubya:</b></font> JemiloII s.io is a big change imo - its massively decoupled<br/>
+<font color="#A82F2F"><font size="2">(01:41:42 PM)</font> <b>JemiloII:</b></font> what version of sails are you on? im looking at it and it looks good so i&apos;ll just make a project and test it<br/>
+<font color="#A82F2F"><font size="2">(01:41:53 PM)</font> <b>robdubya:</b></font> .10.x<br/>
+<font color="#A82F2F"><font size="2">(01:42:07 PM)</font> <b>robdubya:</b></font> s.io 1.0 not plugged in, though i have an open fork<br/>
+<font color="#A82F2F"><font size="2">(01:42:12 PM)</font> <b>FreefallGeek:</b></font> most recent beta<br/>
+<font color="#A82F2F"><font size="2">(01:43:37 PM)</font> <b>robdubya:</b></font> FreefallGeek just log the whole req<br/>
+<font color="#A82F2F"><font size="2">(01:43:50 PM)</font> <b>robdubya:</b></font> its gotta be in there *somewhere* assuming you&apos;re hitting the right endpoint<br/>
+<font color="#A82F2F"><font size="2">(01:44:03 PM)</font> <b>robdubya:</b></font> req.query would be the other place<br/>
+<font color="#A82F2F"><font size="2">(01:44:35 PM)</font> <b>JemiloII:</b></font> i know<br/>
+<font color="#A82F2F"><font size="2">(01:44:43 PM)</font> <b>JemiloII:</b></font> you forgot the name attribute on the forms<br/>
+<font color="#A82F2F"><font size="2">(01:44:53 PM)</font> <b>JemiloII:</b></font> id doesn&apos;t send post data<br/>
+<font color="#A82F2F"><font size="2">(01:44:54 PM)</font> <b>JemiloII:</b></font> name does<br/>
+<font color="#A82F2F"><font size="2">(01:45:04 PM)</font> <b>FreefallGeek:</b></font> Oh shit<br/>
+<font color="#A82F2F"><font size="2">(01:45:12 PM)</font> <b>robdubya:</b></font> ha<br/>
+<font color="#A82F2F"><font size="2">(01:45:24 PM)</font> <b>FreefallGeek:</b></font> Rookie mistake<br/>
+<font color="#A82F2F"><font size="2">(01:45:37 PM)</font> <b>JemiloII:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(01:45:38 PM)</font> <b>robdubya:</b></font> nice catch JemiloII<br/>
+<font color="#A82F2F"><font size="2">(01:45:57 PM)</font> <b>FreefallGeek:</b></font> thank you very much<br/>
+<font color="#A82F2F"><font size="2">(01:46:20 PM)</font> <b>FreefallGeek:</b></font> I wait admit how long I&apos;ve been fighting that.<br/>
+<font color="#A82F2F"><font size="2">(01:46:30 PM)</font> <b>FreefallGeek:</b></font> * won&apos;t<br/>
+<font color="#A82F2F"><font size="2">(01:46:46 PM)</font> <b>JemiloII:</b></font> lol, its cool, we all over look things<br/>
+<font color="#A82F2F"><font size="2">(01:47:07 PM)</font> <b>JemiloII:</b></font> i remember one time i turned my jslinter off by mistake<br/>
+<font color="#A82F2F"><font size="2">(01:47:20 PM)</font> <b>JemiloII:</b></font> for a few days my code wasn&apos;t working due to a missing semicolon<br/>
+<font color="#A82F2F"><font size="2">(01:49:53 PM)</font> <b>FreefallGeek:</b></font> Thanks again.<br/>
+<font color="#A82F2F"><font size="2">(01:50:12 PM)</font> <b>FreefallGeek:</b></font> I appreciate it<br/>
+<font color="#A82F2F"><font size="2">(01:54:26 PM)</font> <b>JemiloII:</b></font> so what front end frameworks you guys work with, im in a little mix since sails has its own routing system.<br/>
+<font color="#A82F2F"><font size="2">(01:54:35 PM)</font> <b>JemiloII:</b></font> ember looks nice but it has it&apos;s own routes<br/>
+<font color="#A82F2F"><font size="2">(01:54:46 PM)</font> <b>JemiloII:</b></font> angular looks like hacked html<br/>
+<font color="#A82F2F"><font size="2">(01:55:02 PM)</font> <b>JemiloII:</b></font> backbone needs many plugins to get it to work right<br/>
+<font color="#A82F2F"><font size="2">(01:55:11 PM)</font> <b>JemiloII:</b></font> and i haven&apos;t checked out can.js yet<br/>
+<font color="#A82F2F"><font size="2">(01:55:30 PM)</font> <b>FreefallGeek:</b></font> Angular is the only one I have any experience with.<br/>
+<font color="#A82F2F"><font size="2">(01:56:12 PM)</font> <b>robdubya:</b></font> angular<br/>
+<font color="#A82F2F"><font size="2">(01:56:30 PM)</font> <b>JemiloII:</b></font> i&apos;m a bit so so with angular since html is suppose to be organizational code and it extends html beyond what it&apos;s meant to do<br/>
+<font color="#A82F2F"><font size="2">(01:57:03 PM)</font> <b>robdubya:</b></font> html is the least important bit of angular, imo<br/>
+<font color="#A82F2F"><font size="2">(01:57:34 PM)</font> <b>robdubya:</b></font> its way more about data than any other framework out there<br/>
+<font color="#A82F2F"><font size="2">(01:57:36 PM)</font> <b>FreefallGeek:</b></font> Do you have an example of what you mean?<br/>
+<font color="#A82F2F"><font size="2">(01:58:12 PM)</font> <b>robdubya:</b></font> and fwiw, angular is tracking much closer to the future - stuff like web components and shadow DOM<br/>
+<font color="#A82F2F"><font size="2">(01:59:24 PM)</font> <b>robdubya:</b></font> and i&apos;ll take &lt;button ng-click=&quot;doSomething()&quot;&gt; over some obfuscated bind like backbone<br/>
+<font size="2">(06:05:18 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

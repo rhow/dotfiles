@@ -1,0 +1,160 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Thu 08 May 2014 03:40:11 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Thu 08 May 2014 03:40:11 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(03:40:11 PM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font color="#16569E"><font size="2">(03:42:41 PM)</font> <b>Randy How:</b></font> Hey hey!  I'm looking for an example to manage Windose Users, add/edit/etc  I've been looking at this reference: http://docs.opscode.com/resource_user.html<br/>
+<font color="#16569E"><font size="2">(03:44:13 PM)</font> <b>Randy How:</b></font> But that reference doesn't have a Windows user example.  A co-worker attempted to add/edit and it apparently screwed up all the users on the instance.<br/>
+<font color="#A82F2F"><font size="2">(03:57:51 PM)</font> <b>esproul:</b></font> Hi, wondering if it&apos;s possible for a resource to subscribe only to a specific aspect of another resource, such as the :start action of a service<br/>
+<font color="#A82F2F"><font size="2">(03:58:28 PM)</font> <b>esproul:</b></font> so that I only fire if the service is starting for the first time, as opposed to a restart or a stop<br/>
+<font color="#A82F2F"><font size="2">(03:59:22 PM)</font> <b>coderanger:</b></font> esproul: No, notifications aren&apos;t triggered on actions specifically<br/>
+<font color="#A82F2F"><font size="2">(03:59:30 PM)</font> <b>coderanger:</b></font> they are most of an abstract &quot;something changed&quot;<br/>
+<font color="#A82F2F"><font size="2">(03:59:43 PM)</font> <b>coderanger:</b></font> this is a good example of why chef should only be used for convergent processes :)<br/>
+<font color="#A82F2F"><font size="2">(03:59:55 PM)</font> <b>esproul:</b></font> coderanger: that was my understanding, though I was hoping there was something I missed. :)<br/>
+<font color="#A82F2F"><font size="2">(03:59:57 PM)</font> <b>esproul:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(04:00:03 PM)</font> <b>coderanger:</b></font> If you need to do more complex service management, don&apos;t do that in Chef, use your service manager<br/>
+<font color="#A82F2F"><font size="2">(04:00:14 PM)</font> <b>esproul:</b></font> what if my service manager sucks?  ;)<br/>
+<font color="#A82F2F"><font size="2">(04:00:25 PM)</font> <b>gyoza:</b></font> zabbix!<br/>
+<font color="#062585"><font size="2">(04:00:31 PM)</font> <b>***esproul</b></font> resorts to init script hackery<br/>
+<font color="#A82F2F"><font size="2">(04:00:37 PM)</font> <b>gyoza:</b></font> zabbix!<br/>
+<font color="#A82F2F"><font size="2">(04:00:43 PM)</font> <b>esproul:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(04:00:45 PM)</font> <b>gyoza:</b></font> :(<br/>
+<font color="#A82F2F"><font size="2">(04:00:54 PM)</font> <b>coderanger:</b></font> esproul: Get a better one? :D<br/>
+<font color="#A82F2F"><font size="2">(04:01:19 PM)</font> <b>esproul:</b></font> I have a better one (SMF on illumos) but I have to support RHEL.<br/>
+<font color="#A82F2F"><font size="2">(04:01:27 PM)</font> <b>gyoza:</b></font> Doesnt spacewalk do that shit?<br/>
+<font color="#A82F2F"><font size="2">(04:03:27 PM)</font> <b>coderanger:</b></font> esproul: Wait for RHEL 7 and then ALLHAILSYSTEMD<br/>
+<font color="#A82F2F"><font size="2">(04:03:36 PM)</font> <b>gyoza:</b></font> 19 days until watch dogs guys.<br/>
+<font size="2">(04:03:41 PM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(04:03:54 PM)</font> <b>gyoza:</b></font> TIL: Markus pearson networth is 150million<br/>
+<font color="#A82F2F"><font size="2">(04:03:55 PM)</font> <b>coderanger:</b></font> gyoza: Just 6 months until it will be on sale and I&apos;ll care to buy it \o/<br/>
+<font color="#A82F2F"><font size="2">(04:03:58 PM)</font> <b>gyoza:</b></font> persson<br/>
+<font color="#A82F2F"><font size="2">(04:04:04 PM)</font> <b>esproul:</b></font> coderanger: yeah, but when you&apos;re a software vendor, you are bound by what your customers are actually running.<br/>
+<font color="#A82F2F"><font size="2">(04:04:08 PM)</font> <b>gyoza:</b></font> Codemonkey: bastard! wish i was able to wait for games hahaha<br/>
+<font color="#A82F2F"><font size="2">(04:04:14 PM)</font> <b>gyoza:</b></font> err ^^ ranger<br/>
+<font color="#A82F2F"><font size="2">(04:04:34 PM)</font> <b>coderanger:</b></font> esproul: Not really, look at how chef-server does it, it runs its own service layer internally<br/>
+<font color="#A82F2F"><font size="2">(04:04:38 PM)</font> <b>Neozonz|Disc:</b></font> a template of mine has the following,        Define::SetDefine(&apos;ENVIRONMENT&apos;, &apos;&lt;%= node[:environment][:name] %&gt;&apos;);<br/>
+<font color="#A82F2F"><font size="2">(04:04:40 PM)</font> <b>esproul:</b></font> coderanger: my chef stuff gets shipped to and run by customers to set up our stuff on their premises (i.e. hands-off to me)<br/>
+<font color="#A82F2F"><font size="2">(04:04:56 PM)</font> <b>esproul:</b></font> I also don&apos;t have chef-server.  this is strictly chef-solo.<br/>
+<font color="#A82F2F"><font size="2">(04:05:00 PM)</font> <b>esproul:</b></font> we&apos;re weird<br/>
+<font color="#A82F2F"><font size="2">(04:05:13 PM)</font> <b>Neozonz|Disc:</b></font> when I run chef it fails however due to Chef::Mixin::Template::TemplateError (no implicit conversion of Symbol into Integer) on line #20:<br/>
+<font color="#A82F2F"><font size="2">(04:05:19 PM)</font> <b>coderanger:</b></font> esproul: I just mean use chef-server as an example of doing service management in an appliace-y app :)<br/>
+<font color="#A82F2F"><font size="2">(04:05:28 PM)</font> <b>esproul:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(04:05:33 PM)</font> <b>coderanger:</b></font> gyoza: I have literally over 100 games in my steam queue I&apos;ve not played yet &gt;_&lt;<br/>
+<font color="#A82F2F"><font size="2">(04:05:39 PM)</font> <b>Neozonz|Disc:</b></font> any ideas?<br/>
+<font color="#A82F2F"><font size="2">(04:06:08 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: Usually means node[:environment] is an array<br/>
+<font color="#A82F2F"><font size="2">(04:06:38 PM)</font> <b>Neozonz|Disc:</b></font> it should still resolve tho?<br/>
+<font color="#A82F2F"><font size="2">(04:06:50 PM)</font> <b>Neozonz|Disc:</b></font> in attributes i have default[&apos;environment&apos;][&apos;name&apos;] = &quot;development&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:07:25 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: Add this to your recipe<br/>
+<font color="#A82F2F"><font size="2">(04:07:32 PM)</font> <b>coderanger:</b></font> log node[&apos;environment&apos;]<br/>
+<font color="#A82F2F"><font size="2">(04:07:55 PM)</font> <b>coderanger:</b></font> make sure nothing else is overwriting it<br/>
+<font color="#A82F2F"><font size="2">(04:08:06 PM)</font> <b>Neozonz|Disc:</b></font> well here is the thing<br/>
+<font size="2">(04:08:13 PM)</font><b> esproul left the room (quit: Quit: Leaving.).</b><br/>
+<font color="#A82F2F"><font size="2">(04:08:24 PM)</font> <b>Neozonz|Disc:</b></font> i have a json passing in as evironment<br/>
+<font color="#A82F2F"><font size="2">(04:08:42 PM)</font> <b>Neozonz|Disc:</b></font> then i wanna add the name to that<br/>
+<font color="#A82F2F"><font size="2">(04:09:20 PM)</font> <b>coderanger:</b></font> Do you mean a chef environment?<br/>
+<font color="#A82F2F"><font size="2">(04:09:40 PM)</font> <b>Neozonz|Disc:</b></font> no, this is just a custom json i&apos;m passing via opswork<br/>
+<font color="#A82F2F"><font size="2">(04:10:16 PM)</font> <b>Neozonz|Disc:</b></font> {   &quot;environment&quot;: &quot;development&quot; }<br/>
+<font color="#A82F2F"><font size="2">(04:10:28 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: How are you intending to load that into Chef?<br/>
+<font color="#A82F2F"><font size="2">(04:10:45 PM)</font> <b>Neozonz|Disc:</b></font> i think opswork already does that<br/>
+<font color="#A82F2F"><font size="2">(04:11:33 PM)</font> <b>Neozonz|Disc:</b></font> if node[:environment] == &quot;development&quot;                actually working code block              end<br/>
+<font color="#A82F2F"><font size="2">(04:11:53 PM)</font> <b>Neozonz|Disc:</b></font> that code block works fine, so i know the json is being passed<br/>
+<font color="#A82F2F"><font size="2">(04:12:45 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: You can&apos;t have it be both a string and a hash<br/>
+<font color="#A82F2F"><font size="2">(04:13:00 PM)</font> <b>BryanWB:</b></font> how does `knife ec2` supply the validation.pem to new AWS instances? i assume that it provides it via ec2 userdata. Is this correct?<br/>
+<font color="#A82F2F"><font size="2">(04:13:02 PM)</font> <b>coderanger:</b></font> Either node[&apos;environment&apos;] == &apos;foo&apos; or {&apos;name&apos; =&gt; &apos;foo&apos;}<br/>
+<font color="#A82F2F"><font size="2">(04:13:03 PM)</font> <b>Neozonz|Disc:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(04:13:06 PM)</font> <b>coderanger:</b></font> You need to pick one<br/>
+<font color="#A82F2F"><font size="2">(04:13:25 PM)</font> <b>coderanger:</b></font> You are indeed overwriting your attribute as I suspected :)<br/>
+<font color="#A82F2F"><font size="2">(04:13:35 PM)</font> <b>coderanger:</b></font> BryanWB: No, its copied via SSH<br/>
+<font color="#A82F2F"><font size="2">(04:13:44 PM)</font> <b>Neozonz|Disc:</b></font> sorry, looks like i&apos;m missing something fundamental<br/>
+<font color="#A82F2F"><font size="2">(04:13:47 PM)</font> <b>coderanger:</b></font> BryanWB: Thats not handled by knife ec2 though, its just knife bootstrap<br/>
+<font color="#A82F2F"><font size="2">(04:13:49 PM)</font> <b>BryanWB:</b></font> coderanger: and how does windows handle it?<br/>
+<font color="#A82F2F"><font size="2">(04:14:00 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: In your attributes you have default[&apos;env&apos;][&apos;name&apos;] = &apos;foo&apos;<br/>
+<font color="#A82F2F"><font size="2">(04:14:13 PM)</font> <b>Neozonz|Disc:</b></font> yup<br/>
+<font color="#A82F2F"><font size="2">(04:14:16 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: In your node JSON you have the equiv of override[&apos;env&apos;] = &apos;foo&apos;<br/>
+<font color="#A82F2F"><font size="2">(04:14:23 PM)</font> <b>coderanger:</b></font> You see those are shaped differently?<br/>
+<font color="#A82F2F"><font size="2">(04:14:31 PM)</font> <b>Neozonz|Disc:</b></font> ah i see<br/>
+<font color="#A82F2F"><font size="2">(04:14:41 PM)</font> <b>Neozonz|Disc:</b></font> how do i add on?<br/>
+<font color="#A82F2F"><font size="2">(04:14:51 PM)</font> <b>Neozonz|Disc:</b></font> or should i just use another variable<br/>
+<font color="#A82F2F"><font size="2">(04:14:54 PM)</font> <b>coderanger:</b></font> BryanWB: knife winrm bootstrap copies it or somesuch<br/>
+<font color="#A82F2F"><font size="2">(04:15:02 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: I don&apos;t know what this data means, so I can&apos;t say<br/>
+<font color="#A82F2F"><font size="2">(04:15:08 PM)</font> <b>coderanger:</b></font> Do envs have more than just a name?<br/>
+<font color="#A82F2F"><font size="2">(04:15:13 PM)</font> <b>Neozonz|Disc:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(04:15:17 PM)</font> <b>coderanger:</b></font> Either structure is fine, you just need to be consistent<br/>
+<font color="#A82F2F"><font size="2">(04:15:30 PM)</font> <b>Neozonz|Disc:</b></font> basically looking to have each evironment have its own config variables<br/>
+<font color="#A82F2F"><font size="2">(04:15:31 PM)</font> <b>coderanger:</b></font> Sounds like your node json should look like {&quot;env&quot;: {&quot;name&quot;: &quot;foo&quot;}}<br/>
+<font color="#A82F2F"><font size="2">(04:15:39 PM)</font> <b>BryanWB:</b></font> coderanger: tks<br/>
+<font color="#A82F2F"><font size="2">(04:15:57 PM)</font> <b>Neozonz|Disc:</b></font> but how would i add such a thing on attributes?<br/>
+<font color="#A82F2F"><font size="2">(04:16:27 PM)</font> <b>coderanger:</b></font> BryanWB: All the various cloud plugins just boot the machine and then hand off to the bootstrap commands<br/>
+<font color="#A82F2F"><font size="2">(04:16:57 PM)</font> <b>coderanger:</b></font> Neozonz|Disc: Not sure what you mean<br/>
+<font color="#A82F2F"><font size="2">(04:16:59 PM)</font> <b>coderanger:</b></font> which attributes<br/>
+<font color="#A82F2F"><font size="2">(04:17:41 PM)</font> <b>BryanWB:</b></font> coderanger: tks, i used to know this :/<br/>
+<font color="#A82F2F"><font size="2">(04:18:15 PM)</font> <b>coderanger:</b></font> BryanWB: Memory is overrated, thats what the internet is for! :D<br/>
+<font color="#A82F2F"><font size="2">(04:18:24 PM)</font> <b>Neozonz|Disc:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(04:18:28 PM)</font> <b>Neozonz|Disc:</b></font> i think i understand now<br/>
+<font color="#A82F2F"><font size="2">(04:18:29 PM)</font> <b>Neozonz|Disc:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(04:18:29 PM)</font> <b>coderanger:</b></font> BryanWB: Think you&apos;ll make it to the next community summit? We all missed you in SF :-(<br/>
+<font color="#A82F2F"><font size="2">(04:23:41 PM)</font> <b>neurogenesis:</b></font> hey guys... does someone have a quick minute to help me out with the proper use of the &quot;metadata&quot; line in Berksfile? i&apos;ve seen this pop up in the Berksfile more regularly.<br/>
+<font color="#A82F2F"><font size="2">(04:24:01 PM)</font> <b>coderanger:</b></font> neurogenesis: Same idea as &quot;gemspec&quot; in a Gemfile, if that helps<br/>
+<font color="#A82F2F"><font size="2">(04:24:22 PM)</font> <b>coderanger:</b></font> it just loads dependencies from the metadata.rb next to the berksfile and pretends there are listed in the berksfile<br/>
+<font color="#A82F2F"><font size="2">(04:24:56 PM)</font> <b>neurogenesis:</b></font> wish i could just define everything in metadata.rb, including source location/branch, and have berks pull that from the metadata. obviously the source/locations aren&apos;t supported by chef, so presently all source/location info still has to go into Berksfile.<br/>
+<font color="#A82F2F"><font size="2">(04:25:19 PM)</font> <b>coderanger:</b></font> neurogenesis: https://caremad.io/blog/setup-vs-requirement/ read that :)<br/>
+<font color="#A82F2F"><font size="2">(04:25:28 PM)</font> <b>coderanger:</b></font> metadata.rb is abstract deps, berksfile is concrete<br/>
+<font color="#A82F2F"><font size="2">(04:25:32 PM)</font> <b>neurogenesis:</b></font> ok, so basically it&apos;s helpful for simple cases where you don&apos;t specify source/branch info.<br/>
+<font color="#A82F2F"><font size="2">(04:26:05 PM)</font> <b>neurogenesis:</b></font> (otherwise you&apos;d have to maintain some in Berksfile, rest in metadata.rb (as opposed to listing in full in both and keeping in sync)<br/>
+<font color="#A82F2F"><font size="2">(04:26:23 PM)</font> <b>neurogenesis:</b></font> thx coderanger<br/>
+<font color="#A82F2F"><font size="2">(04:26:43 PM)</font> <b>coderanger:</b></font> neurogenesis: neurogenesis You should almost never be using a manual source specifier<br/>
+<font color="#A82F2F"><font size="2">(04:26:49 PM)</font> <b>coderanger:</b></font> I sometimes use a path one for local dev<br/>
+<font color="#A82F2F"><font size="2">(04:26:57 PM)</font> <b>coderanger:</b></font> but that never gets checked in<br/>
+<font color="#A82F2F"><font size="2">(04:28:28 PM)</font> <b>gyoza:</b></font> yo real quick, i cant find anything on the googs, now what i&apos;ve added a recipe to my node, how do i make those changes happen immediately?<br/>
+<font size="2">(04:30:01 PM)</font><b> paulczar is now known as zz_paulczar</b><br/>
+<font color="#A82F2F"><font size="2">(04:31:04 PM)</font> <b>coderanger:</b></font> re-run chef-client<br/>
+<font color="#A82F2F"><font size="2">(04:31:11 PM)</font> <b>gyoza:</b></font> hmmm<br/>
+<font color="#A82F2F"><font size="2">(04:31:22 PM)</font> <b>gyoza:</b></font> it doesnt come through on its own every so often to check to see if there are any changes?<br/>
+<font color="#A82F2F"><font size="2">(04:31:33 PM)</font> <b>neurogenesis:</b></font> ultimately i&apos;ll have to use sources for private repos, or improved versions of the tracked cookbooks (like https://github.com/fnichol/chef-ruby_build ). also is nice to pin production to specific branches/tags in some cases where things can get out of control.<br/>
+<font size="2">(04:33:01 PM)</font><b> cloudnull is now known as cloudnull_zzz</b><br/>
+<font color="#A82F2F"><font size="2">(04:33:32 PM)</font> <b>neurogenesis:</b></font> all of this started while trying to revisit how we&apos;re vendoring cookbooks and testing in travis with TDD. vendoring is working fine in dev, berks is doing funny things in travis.<br/>
+<font color="#A82F2F"><font size="2">(04:34:02 PM)</font> <b>neurogenesis:</b></font> anyway, thanks @coderanger for the info about Berksfile and meatadata directive.<br/>
+<font color="#A82F2F"><font size="2">(04:48:06 PM)</font> <b>bricker:</b></font> I have a provider which depends on another recipe being included, how should I ensure that dependency is met? `include_recipe` doesn&apos;t work in a provider file.<br/>
+<font color="#A82F2F"><font size="2">(04:55:04 PM)</font> <b>someara:</b></font> bricker https://github.com/opscode-cookbooks/mysql-chef_gem/blob/master/libraries/provider_mysql_chef_gem.rb#L12-L14<br/>
+<font color="#A82F2F"><font size="2">(04:55:32 PM)</font> <b>thatothermitch:</b></font> that&apos;s a neat trick.<br/>
+<font color="#A82F2F"><font size="2">(04:56:36 PM)</font> <b>bricker:</b></font> someara: thanks<br/>
+<font size="2">(05:02:06 PM)</font><b> cloudnull_zzz is now known as cloudnull</b><br/>
+<font color="#A82F2F"><font size="2">(05:06:39 PM)</font> <b>gyoza:</b></font> well guys, i got chef running today, my first bootstrap, my first berkshelf, my first alter config<br/>
+<font color="#062585"><font size="2">(05:06:44 PM)</font> <b>***gyoza</b></font> zang<br/>
+<font color="#A82F2F"><font size="2">(05:06:56 PM)</font> <b>gyoza:</b></font> very excite<br/>
+<font color="#A82F2F"><font size="2">(05:07:08 PM)</font> <b>gyoza:</b></font> now im elaving work! Coderanger: thanks for all the help buddy<br/>
+<font color="#062585"><font size="2">(05:07:24 PM)</font> <b>***gyoza</b></font> &amp;<br/>
+<font color="#A82F2F"><font size="2">(05:08:19 PM)</font> <b>thatothermitch:</b></font> It&apos;s nice when it works, but I&apos;m sure reality will set in soon : )<br/>
+<font color="#A82F2F"><font size="2">(05:14:13 PM)</font> <b>digitalc1ild:</b></font> whats the advantage of using berkshelf?<br/>
+<font color="#A82F2F"><font size="2">(05:15:21 PM)</font> <b>thatothermitch:</b></font> digitalc1ild: there are a number of advantages, like automatically figuring out which cookbooks you need, removing other people&apos;s code from your repository, encouraging maintainabilty by discouraging local modification for open source cookbooks...<br/>
+<font color="#A82F2F"><font size="2">(05:15:48 PM)</font> <b>thatothermitch:</b></font> providing a sane update path for open source cookbooks<br/>
+<font color="#A82F2F"><font size="2">(05:15:53 PM)</font> <b>digitalc1ild:</b></font> ok, just reading the website now<br/>
+<font color="#A82F2F"><font size="2">(05:16:12 PM)</font> <b>digitalc1ild:</b></font> atm when i grab a cookbook i haven&apos;t made, i just it as a dependency and write my own that references it<br/>
+<font color="#A82F2F"><font size="2">(05:16:17 PM)</font> <b>digitalc1ild:</b></font> is this the correct method?<br/>
+<font color="#A82F2F"><font size="2">(05:16:23 PM)</font> <b>thatothermitch:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(05:16:27 PM)</font> <b>digitalc1ild:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(05:16:30 PM)</font> <b>thatothermitch:</b></font> this is very much dependency management<br/>
+<font color="#A82F2F"><font size="2">(05:16:34 PM)</font> <b>thatothermitch:</b></font> see also bundler<br/>
+<font color="#A82F2F"><font size="2">(05:16:35 PM)</font> <b>thatothermitch:</b></font> : P<br/>
+<font color="#A82F2F"><font size="2">(05:16:51 PM)</font> <b>digitalc1ild:</b></font> ok, i&apos;m pretty new to this but ive managed to replicate my entire shell script mess in chef<br/>
+<font color="#A82F2F"><font size="2">(05:17:08 PM)</font> <b>digitalc1ild:</b></font> except for rvm/ruby system install<br/>
+<font color="#A82F2F"><font size="2">(05:17:15 PM)</font> <b>digitalc1ild:</b></font> that is very much broken as of last night, heh<br/>
+<font color="#A82F2F"><font size="2">(05:17:35 PM)</font> <b>digitalc1ild:</b></font> i want a newer version of ruby then what ships with centos and tried using the chef-rvm to do it<br/>
+<font color="#A82F2F"><font size="2">(05:17:42 PM)</font> <b>digitalc1ild:</b></font> and it broke chef<br/>
+<font color="#A82F2F"><font size="2">(05:17:48 PM)</font> <b>thatothermitch:</b></font> heh<br/>
+<font color="#A82F2F"><font size="2">(05:18:02 PM)</font> <b>digitalc1ild:</b></font> luckily its all in test env so i just rolled the snapshot back<br/>
+<font color="#A82F2F"><font size="2">(05:18:09 PM)</font> <b>jmickle:</b></font> does anyone use sympa?<br/>
+<font color="#A82F2F"><font size="2">(05:18:28 PM)</font> <b>thatothermitch:</b></font> rvm scares me on prod servers<br/>
+<font color="#A82F2F"><font size="2">(05:18:33 PM)</font> <b>digitalc1ild:</b></font> i would like to get ruby installed via rvm and have chef-client not break on the node if possible<br/>
+<font color="#A82F2F"><font size="2">(05:18:41 PM)</font> <b>digitalc1ild:</b></font> actually just the latest version of ruby would be fine<br/>
+<font color="#A82F2F"><font size="2">(05:18:52 PM)</font> <b>digitalc1ild:</b></font> thatothermitch: i use a ruby based backup script for my prod machines<br/>
+<font color="#A82F2F"><font size="2">(05:19:05 PM)</font> <b>digitalc1ild:</b></font> the backup gem<br/>
+<font color="#A82F2F"><font size="2">(05:19:12 PM)</font> <b>thatothermitch:</b></font> heh, i&apos;ve used this gem<br/>
+<font color="#A82F2F"><font size="2">(05:19:12 PM)</font> <b>digitalc1ild:</b></font> https://github.com/meskyanichi/backup &lt;-<br/>
+<font color="#A82F2F"><font size="2">(05:19:23 PM)</font> <b>digitalc1ild:</b></font> i used to write my own scripts<br/>
+<font color="#A82F2F"><font size="2">(05:19:24 PM)</font> <b>thatothermitch:</b></font> but yes, we manage rubies on servers via package management<br/>
+<font color="#A82F2F"><font size="2">(05:19:36 PM)</font> <b>digitalc1ild:</b></font> using the shipped ones?<br/>
+<font color="#A82F2F"><font size="2">(05:19:48 PM)</font> <b>thatothermitch:</b></font> no, building from source and packaging via FPM<br/>
+<font color="#A82F2F"><font size="2">(05:20:09 PM)</font> <b>thatothermitch:</b></font> if you need to you can sidecar the entire thing into /opt (ruby, gem-home and all)<br/>
+<font color="#A82F2F"><font size="2">(05:20:23 PM)</font> <b>thatothermitch:</b></font> anyway, that&apos;s a pretty huge topic and i need to get going<br/>
+<font color="#A82F2F"><font size="2">(05:20:30 PM)</font> <b>digitalc1ild:</b></font> ok thanks<br/>
+<font size="2">(05:24:12 PM)</font><b> dragory is now known as Dragory</b><br/>
+<font size="2">(05:26:05 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

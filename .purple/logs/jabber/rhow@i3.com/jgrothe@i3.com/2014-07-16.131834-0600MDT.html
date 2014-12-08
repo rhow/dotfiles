@@ -1,0 +1,22 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with jgrothe@i3.com at Wed 16 Jul 2014 01:18:34 PM MDT on rhow@i3.com/Gmail (jabber)</title></head><body><h3>Conversation with jgrothe@i3.com at Wed 16 Jul 2014 01:18:34 PM MDT on rhow@i3.com/Gmail (jabber)</h3>
+<font color="#A82F2F"><font size="2">(01:18:34 PM)</font> <b>Jakob Grothe:</b></font> ever heard of casacding a WFS ?<br/>
+<font color="#A82F2F"><font size="2">(01:18:52 PM)</font> <b>Jakob Grothe:</b></font> doesnt seem like something, at least interanlly we could do.<br/>
+<font color="#16569E"><font size="2">(01:20:13 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>now we don't</span><br/>
+<font color="#16569E"><font size="2">(01:20:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://mapserver.org/ogc/wfs_client.html">http://mapserver.org/ogc/wfs_client.html</a></span><br/>
+<font color="#A82F2F"><font size="2">(01:20:55 PM)</font> <b>Jakob Grothe:</b></font> i m reading &quot;geoserver&quot; has certiain capabiltiies......ya ok.   seems inherent that it couldnt by how it is consumed.  IMO<br/>
+<font color="#A82F2F"><font size="2">(01:23:27 PM)</font> <b>Jakob Grothe:</b></font> Interesting....<br/>
+<font color="#A82F2F"><font size="2">(01:23:28 PM)</font> <b>Jakob Grothe:</b></font> http://osgeo-org.1560.x6.nabble.com/cascading-WFS-1-1-in-MapServer-5-2-beta-4-td4262023.html<br/>
+<font color="#16569E"><font size="2">(01:24:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, that's what this is: <span style='font-size: medium;'><a href="http://mapserver.org/ogc/wfs_client.html">http://mapserver.org/ogc/wfs_client.html</a></span></span><br/>
+<font color="#16569E"><font size="2">(01:24:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm not sure if our MapServer has wfs_client enabled.</span><br/>
+<font color="#A82F2F"><font size="2">(01:26:32 PM)</font> <b>Jakob Grothe:</b></font> interesting, thanks.<br/>
+<font color="#16569E"><font size="2">(01:28:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ftc-ms02:~$ /var/www/cgi-bin/mapserv -v<br/>MapServer version 5.6.7 OUTPUT=GIF OUTPUT=PNG OUTPUT=JPEG OUTPUT=WBMP OUTPUT=SVG SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WCS_SERVER SUPPORTS=SPLITTER INPUT=EPPL7 INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE</span><br/>
+<font color="#16569E"><font size="2">(01:29:13 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>WMS_CLIENT is there, but WFS_CLIENT is not.</span><br/>
+<font color="#A82F2F"><font size="2">(01:30:13 PM)</font> <b>Jakob Grothe:</b></font> oh ok, as apposed to WFS_Server.  alright.<br/>
+<font color="#A82F2F"><font size="2">(01:30:27 PM)</font> <b>Jakob Grothe:</b></font> &quot;serve&quot; versus &quot;client&quot;<br/>
+<font color="#16569E"><font size="2">(01:30:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>That means that &quot;</span><span style='color: #000000;'><span style='font-family: Verdana, Geneva, Helvetica, Arial, sans-serif;'>CONNECTIONTYPE WFS</span></span>&quot; won't work.<br/>
+<font color="#16569E"><font size="2">(01:31:52 PM)</font> <b>Randy How:</b></font> right, Our MapServer can be a WFS_SERVER but not a client<br/>
+<font color="#16569E"><font size="2">(01:32:30 PM)</font> <b>Randy How:</b></font> know what i mean?<br/>
+<font color="#A82F2F"><font size="2">(01:32:40 PM)</font> <b>Jakob Grothe:</b></font> i get ya<br/>
+<font color="#A82F2F"><font size="2">(01:32:43 PM)</font> <b>Jakob Grothe:</b></font> i get ya<br/>
+<font color="#16569E"><font size="2">(01:33:13 PM)</font> <b>Randy How:</b></font> k (I went offline, i didn't know if those transmitted)<br/>
+</body></html>
