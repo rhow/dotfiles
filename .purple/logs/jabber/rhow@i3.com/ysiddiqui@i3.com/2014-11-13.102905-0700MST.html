@@ -1,0 +1,84 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with ysiddiqui@i3.com at Thu 13 Nov 2014 10:29:05 AM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with ysiddiqui@i3.com at Thu 13 Nov 2014 10:29:05 AM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#A82F2F"><font size="2">(10:29:05 AM)</font> <b>Yusuf Siddiqui:</b></font> How's the DIMAP stuff working?<br/>
+<font color="#16569E"><font size="2">(11:34:32 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cloudCover will be calculated for the whole scene, not for the parts; correct?</span><br/>
+<font color="#A82F2F"><font size="2">(11:35:24 AM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(11:35:32 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>makes sense.</span><br/>
+<font color="#A82F2F"><font size="2">(11:35:34 AM)</font> <b>Yusuf Siddiqui:</b></font> It's from their web service, not directly from the emtaeddata<br/>
+<font color="#A82F2F"><font size="2">(11:35:41 AM)</font> <b>Yusuf Siddiqui:</b></font> metadata<br/>
+<font color="#16569E"><font size="2">(11:36:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>interesting.</span><br/>
+<font color="#16569E"><font size="2">(12:21:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>So... It looks like SPOT6/7 ROI GML, is different than Pleiades ROI GML.</span><br/>
+<font color="#A82F2F"><font size="2">(02:34:33 PM)</font> <b>Yusuf Siddiqui:</b></font> oh yeah?<br/>
+<font color="#16569E"><font size="2">(02:34:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah.  A bit of a bummer.</span><br/>
+<font color="#16569E"><font size="2">(02:35:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I'm not sure what to do, maybe the WKT out of the GML.</span><br/>
+<font color="#16569E"><font size="2">(02:35:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>maybe extract the WKT out of the GML.</span><br/>
+<font color="#16569E"><font size="2">(02:36:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>So, it's normalized.</span><br/>
+<font color="#A82F2F"><font size="2">(02:36:42 PM)</font> <b>Yusuf Siddiqui:</b></font> Are you using the ogr library?<br/>
+<font color="#16569E"><font size="2">(02:37:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm not.</span><br/>
+<font color="#16569E"><font size="2">(02:37:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(i'd kinda rather not.)</span><br/>
+<font color="#16569E"><font size="2">(02:45:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>are you using it in the DIMAP extractor?</span><br/>
+<font color="#A82F2F"><font size="2">(02:45:20 PM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(02:45:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and to get the GML to WKT is rather easy?</span><br/>
+<font color="#A82F2F"><font size="2">(02:57:37 PM)</font> <b>Yusuf Siddiqui:</b></font> never really tried gml<br/>
+<font color="#A82F2F"><font size="2">(02:58:08 PM)</font> <b>Yusuf Siddiqui:</b></font> I've created polygons from scratch and had it export to wkt<br/>
+<font color="#16569E"><font size="2">(02:58:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the DIMAP extractor handles Pleiades and SPOT6/7 ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:58:57 PM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(02:59:05 PM)</font> <b>Yusuf Siddiqui:</b></font> and other DIMAP data<br/>
+<font color="#A82F2F"><font size="2">(02:59:18 PM)</font> <b>Yusuf Siddiqui:</b></font> but yes, those two are DIMAP v2<br/>
+<font color="#16569E"><font size="2">(03:00:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>This Pleiades one is different than the SPOT one:<br/></span><span style='color: #008000;'><span style='font-family: monospace;'><span style='font-size: medium;'>//data/2/dd/pops/spo2/nso/pleiades/20140919/FCGC600252726/IMG_PHR1A_P_001/MASKS/ROI_PHR1A_P_201409171051544_SEN_1017255101-001_MSK.GML</span></span></span><span style='color: #0a841a;'><br/></span><br/>
+<font color="#16569E"><font size="2">(03:02:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>vs the one that's here:<br/>//data/1/dd/streaming/astrium/20141107_PADAWAN/DS_SPOT6_201405161029221_FR1_FR1_FR1_FR1_E001N46_04875/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/DIM_SPOT6_PMS_201405161029221_ORT_1109441101.XML</span><br/>
+<font color="#16569E"><font size="2">(03:02:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>The pleiades one has some sort of weird URN stated for the Envelope.</span><br/>
+<font color="#A82F2F"><font size="2">(03:11:38 PM)</font> <b>Yusuf Siddiqui:</b></font> the points seem to be similar<br/>
+<font color="#A82F2F"><font size="2">(03:11:49 PM)</font> <b>Yusuf Siddiqui:</b></font> format wise<br/>
+<font color="#16569E"><font size="2">(03:12:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>In the pleiades one:<br/>&lt;gml:upperCorner&gt;3039 3065&lt;/gml:upperCorner&gt;</span><br/>
+<font color="#16569E"><font size="2">(03:12:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what kind of numbers are those?</span><br/>
+<font color="#16569E"><font size="2">(03:13:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&lt;gml:posList&gt;0.500000 -22.5 3037.5 148.5 3039.5 3065.5 4.5 2880.5 0.500000 -22.5 0.500000 -22.5&lt;/gml:posList&gt;</span><br/>
+<font color="#16569E"><font size="2">(03:13:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>The 3037 ?</span><br/>
+<font color="#A82F2F"><font size="2">(03:14:39 PM)</font> <b>Yusuf Siddiqui:</b></font> looks like pixel coordinates<br/>
+<font color="#A82F2F"><font size="2">(03:15:24 PM)</font> <b>Yusuf Siddiqui:</b></font> The Pleaides scene is not natively north up, i.e. it's path oriented<br/>
+<font color="#16569E"><font size="2">(03:17:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, likely it's not stream-able via MapServer anyway?</span><br/>
+<font color="#16569E"><font size="2">(03:19:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>It's not ortho-rectified is what you're saying ?</span><br/>
+<font color="#A82F2F"><font size="2">(03:20:29 PM)</font> <b>Yusuf Siddiqui:</b></font> most of them are not orthorectified, but some of them are processed to a level where they are map-oriented, while others like the one you see here is a more basic level of processing<br/>
+<font color="#16569E"><font size="2">(03:24:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ah!</span><br/>
+<font color="#16569E"><font size="2">(03:25:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://adm-m4-web.i3.local/client/">http://adm-m4-web.i3.local/client/</a></span><br/>
+<font color="#16569E"><font size="2">(03:25:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I was searching for Pleiades</span><br/>
+<font color="#16569E"><font size="2">(03:25:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Is there something in the metadata that indicates the level of processing ?</span><br/>
+<font color="#A82F2F"><font size="2">(03:25:59 PM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(03:26:28 PM)</font> <b>Yusuf Siddiqui:</b></font> REMOTE_SENSING.processingLevel<br/>
+<font color="#16569E"><font size="2">(03:27:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ProcessingLevel  Sensor  ?</span><br/>
+<font color="#16569E"><font size="2">(03:28:25 PM)</font> <b>Randy How:</b></font> processingLevel: &quot;Sensor&quot;,<br/>
+<font color="#16569E"><font size="2">(03:28:53 PM)</font> <b>Randy How:</b></font> VERSES<br/>processingLevel: &quot;Orthorectified&quot;,<br/>
+<font color="#16569E"><font size="2">(03:29:09 PM)</font> <b>Randy How:</b></font> Sweet!!<br/>
+<font color="#A82F2F"><font size="2">(03:32:36 PM)</font> <b>Yusuf Siddiqui:</b></font> I think there's something in-between<br/>
+<font color="#A82F2F"><font size="2">(03:32:45 PM)</font> <b>Yusuf Siddiqui:</b></font> you can also check the isPathOriented value<br/>
+<font color="#A82F2F"><font size="2">(03:33:05 PM)</font> <b>Yusuf Siddiqui:</b></font> (GEO_REFERENCING)<br/>
+<font color="#16569E"><font size="2">(03:34:23 PM)</font> <b>Randy How:</b></font> hmm, i'm not seeing that one.<br/>
+<font color="#A82F2F"><font size="2">(03:47:09 PM)</font> <b>Yusuf Siddiqui:</b></font> It only appears if tru<br/>
+<font color="#A82F2F"><font size="2">(03:47:23 PM)</font> <b>Yusuf Siddiqui:</b></font> You should see if on the Pleaides scene<br/>
+<font color="#A82F2F"><font size="2">(03:47:34 PM)</font> <b>Yusuf Siddiqui:</b></font> It's a fairly new key<br/>
+<font color="#16569E"><font size="2">(03:47:57 PM)</font> <b>Randy How:</b></font> I'm looking at these:<br/><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,1%20cloudCover,0">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,1%20cloudCover,0</a><br/>
+<font color="#A82F2F"><font size="2">(03:48:18 PM)</font> <b>Yusuf Siddiqui:</b></font> sorry, it's pathOriented<br/>
+<font color="#16569E"><font size="2">(03:48:58 PM)</font> <b>Randy How:</b></font> do you see it in those results, i don't.<br/>
+<font color="#A82F2F"><font size="2">(03:49:44 PM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(03:49:49 PM)</font> <b>Yusuf Siddiqui:</b></font> pathoriented<br/>
+<font color="#16569E"><font size="2">(04:48:38 PM)</font> <b>Randy How:</b></font> So what would be pathOriented?<br/>
+<font color="#A82F2F"><font size="2">(05:19:14 PM)</font> <b>Yusuf Siddiqui:</b></font> path-oriented is just a field indicating that the iamge is not aligned with north<br/>
+<font color="#A82F2F"><font size="2">(05:19:51 PM)</font> <b>Yusuf Siddiqui:</b></font> Sometimes the information to get it aligned is in the metadata or the GeoTIFF file, but regardless, it needs some processing to get there<br/>
+<font color="#16569E"><font size="2">(05:20:19 PM)</font> <b>Randy How:</b></font> what would the values of &quot;pathOriented&quot; be?<br/>
+<font color="#A82F2F"><font size="2">(05:20:33 PM)</font> <b>Yusuf Siddiqui:</b></font> 1 or 0<br/>
+<font color="#A82F2F"><font size="2">(05:20:54 PM)</font> <b>Yusuf Siddiqui:</b></font> if not present, assume 0<br/>
+<font color="#A82F2F"><font size="2">(05:21:33 PM)</font> <b>Yusuf Siddiqui:</b></font> 1 = true<br/>
+<font color="#A82F2F"><font size="2">(05:21:44 PM)</font> <b>Yusuf Siddiqui:</b></font> 0 = false<br/>
+<font color="#16569E"><font size="2">(05:22:12 PM)</font> <b>Randy How:</b></font> 0 is that it is not pathoriented and it's more streamable?<br/>
+<font color="#A82F2F"><font size="2">(05:22:17 PM)</font> <b>Yusuf Siddiqui:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(05:22:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what's the difference between that and processingLevel=orthorectified  ?</span><br/>
+<font color="#A82F2F"><font size="2">(05:22:57 PM)</font> <b>Yusuf Siddiqui:</b></font> It may be just rotated to north but not orthorectified<br/>
+<font color="#A82F2F"><font size="2">(05:23:37 PM)</font> <b>Yusuf Siddiqui:</b></font> i.e. it's not precise to the nearest pixel, it's just the best placement that can be done for that particular level of processing<br/>
+<font color="#16569E"><font size="2">(05:24:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i think i'm going to stick with processingLevel=orthorectified.</span><br/>
+<font color="#A82F2F"><font size="2">(05:24:56 PM)</font> <b>Yusuf Siddiqui:</b></font> sounds good to me<br/>
+<font color="#16569E"><font size="2">(05:25:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, very good.  Thanks.</span><br/>
+<font color="#A82F2F"><font size="2">(05:25:28 PM)</font> <b>Yusuf Siddiqui:</b></font> welcome<br/>
+<font color="#16569E"><font size="2">(05:44:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>as far as cloudCover...</span><br/>
+<font color="#16569E"><font size="2">(05:45:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the higher the number the more clouds?</span><br/>
+<font color="#A82F2F"><font size="2">(06:17:02 PM)</font> <b>Yusuf Siddiqui:</b></font> yes, it's a percentage<br/>
+<font color="#16569E"><font size="2">(06:17:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, swing by and see this.</span><br/>
+</body></html>

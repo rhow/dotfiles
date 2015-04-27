@@ -1,0 +1,107 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 27 Apr 2014 06:57:10 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 27 Apr 2014 06:57:10 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(06:57:10 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(06:57:10 AM)</font> <b>orwell.freenode.net:</b></font> (notice) [freenode-info] if you&apos;re at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp<br/>
+<font color="#A82F2F"><font size="2">(07:58:03 AM)</font> <b>Aswebbb:</b></font> Is there a way to get the req.headers.referer when the policy redirects the user?<br/>
+<font color="#A82F2F"><font size="2">(08:33:13 AM)</font> <b>delight:</b></font> is someone getting those grunt maximum stack size exceeded errors lateley in sails 0.10? I get this everytime I change something on my less files<br/>
+<font color="#A82F2F"><font size="2">(08:33:19 AM)</font> <b>delight:</b></font> Running &quot;watch&quot; task<br/>
+<font color="#A82F2F"><font size="2">(08:33:19 AM)</font> <b>delight:</b></font> Waiting...<br/>
+<font color="#A82F2F"><font size="2">(08:33:20 AM)</font> <b>delight:</b></font> Warning: Maximum call stack size exceeded<br/>
+<font color="#A82F2F"><font size="2">(08:33:21 AM)</font> <b>delight:</b></font> Fatal error: Maximum call stack size exceeded<br/>
+<font color="#A82F2F"><font size="2">(09:15:53 AM)</font> <b>da_wunder:</b></font> hmm is angularSails ready for usage?<br/>
+<font color="#A82F2F"><font size="2">(09:21:16 AM)</font> <b>da_wunder:</b></font> or is there a better one ?<br/>
+<font color="#A82F2F"><font size="2">(09:55:45 AM)</font> <b>braidn:</b></font> Hey all, I am wondering why when using postgresql that the table names come up as public.tableName over just tableName?<br/>
+<font color="#A82F2F"><font size="2">(09:56:32 AM)</font> <b>braidn:</b></font> da_wunder did you ever get an answer to your unit test question?<br/>
+<font color="#A82F2F"><font size="2">(10:08:53 AM)</font> <b>da_wunder:</b></font> braidn: not really<br/>
+<font color="#A82F2F"><font size="2">(10:13:25 AM)</font> <b>ezrios:</b></font> unit testing in sails is pretty bad<br/>
+<font color="#A82F2F"><font size="2">(10:14:32 AM)</font> <b>Aswebbb:</b></font> why is that ezrios?<br/>
+<font color="#A82F2F"><font size="2">(10:15:04 AM)</font> <b>ezrios:</b></font> Aswebbb: it&apos;s poorly documented<br/>
+<font color="#A82F2F"><font size="2">(10:15:12 AM)</font> <b>Aswebbb:</b></font> true<br/>
+<font color="#A82F2F"><font size="2">(10:15:22 AM)</font> <b>ezrios:</b></font> I had to dig through an hour long obscure screencast to discover that you had to lift sails before your models were even visible<br/>
+<font color="#A82F2F"><font size="2">(10:15:41 AM)</font> <b>ezrios:</b></font> plus the fact that you have to lift the entire server makes them less of an isolated unit test<br/>
+<font color="#A82F2F"><font size="2">(10:22:43 AM)</font> <b>braidn:</b></font> da_wunder here is what I am doing at the moment: https://gist.github.com/braidn/11349671<br/>
+<font color="#A82F2F"><font size="2">(10:23:29 AM)</font> <b>braidn:</b></font> I am using Mocha + Barrels(for fixtures)<br/>
+<font size="2">(11:33:56 AM)</font><b> Raspo is now known as Guest33423</b><br/>
+<font color="#A82F2F"><font size="2">(11:40:52 AM)</font> <b>Drako:</b></font> da_wunder: you  can use angular-sails or angularSails - i tested both and both worked<br/>
+<font color="#A82F2F"><font size="2">(11:42:08 AM)</font> <b>Drako:</b></font> robdubya  is maintaining angularSails so chances are good to find him here and ask  stuff about  angularSails<br/>
+<font color="#A82F2F"><font size="2">(11:42:25 AM)</font> <b>da_wunder:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:42:53 AM)</font> <b>da_wunder:</b></font> but seems that angularSails is buggy<br/>
+<font color="#A82F2F"><font size="2">(11:43:24 AM)</font> <b>da_wunder:</b></font> i&apos;m getting error from dist/ngsails.js<br/>
+<font color="#A82F2F"><font size="2">(11:43:40 AM)</font> <b>da_wunder:</b></font> line 836: callback(jwr.statusCode,body);<br/>
+<font color="#A82F2F"><font size="2">(11:46:55 AM)</font> <b>Drako:</b></font> hmm  it is working overhere<br/>
+<font color="#A82F2F"><font size="2">(11:47:42 AM)</font> <b>da_wunder:</b></font> TypeError: Cannot read property &apos;statusCode&apos; of undefined<br/>
+<font color="#A82F2F"><font size="2">(11:49:03 AM)</font> <b>Drako:</b></font> sry cannot help you there - may be robdubya can<br/>
+<font color="#A82F2F"><font size="2">(11:49:21 AM)</font> <b>da_wunder:</b></font> and another problem is that $sailsSocket.get(&quot;/user/1&quot;).success(function(data) { console.log(&quot;success&quot;); }).error(function() { console.log(&quot;error&quot;); });<br/>
+<font color="#A82F2F"><font size="2">(11:49:28 AM)</font> <b>da_wunder:</b></font> that will always hit on error<br/>
+<font color="#A82F2F"><font size="2">(11:50:53 AM)</font> <b>da_wunder:</b></font> but the data on .error(function(data) { ... }); is just rights<br/>
+<font color="#A82F2F"><font size="2">(11:50:56 AM)</font> <b>da_wunder:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(11:51:06 AM)</font> <b>da_wunder:</b></font> also no errors to sails log on that<br/>
+<font color="#A82F2F"><font size="2">(11:51:22 AM)</font> <b>da_wunder:</b></font> just regular socket get logs<br/>
+<font color="#A82F2F"><font size="2">(11:58:17 AM)</font> <b>robdubya:</b></font> if you find a bug, please submit an issue<br/>
+<font color="#A82F2F"><font size="2">(11:58:25 AM)</font> <b>robdubya:</b></font> thats why its marked NOT FOR PRODUCTION USE<br/>
+<font color="#A82F2F"><font size="2">(11:58:56 AM)</font> <b>robdubya:</b></font> i&apos;ll have a look wehn this shitty weekend is over<br/>
+<font color="#A82F2F"><font size="2">(12:01:57 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:02:10 PM)</font> <b>da_wunder:</b></font> i&apos;m just wondering if i should use another library<br/>
+<font color="#A82F2F"><font size="2">(12:03:13 PM)</font> <b>robdubya:</b></font> well, thats up to you, but i&apos;d appreciate the report either way.<br/>
+<font color="#A82F2F"><font size="2">(12:04:35 PM)</font> <b>HeN:</b></font> is it possible to use the request variable in a model?<br/>
+<font color="#A82F2F"><font size="2">(12:04:56 PM)</font> <b>HeN:</b></font> I want the get the current authed user info in my model<br/>
+<font color="#A82F2F"><font size="2">(12:05:11 PM)</font> <b>HeN:</b></font> I&apos;m using passport for the authentication<br/>
+<font color="#A82F2F"><font size="2">(12:05:25 PM)</font> <b>da_wunder:</b></font> HeN: make a policy<br/>
+<font color="#A82F2F"><font size="2">(12:05:42 PM)</font> <b>HeN:</b></font> for what?<br/>
+<font color="#A82F2F"><font size="2">(12:06:18 PM)</font> <b>da_wunder:</b></font> i think you want to add user id or something to your record<br/>
+<font color="#A82F2F"><font size="2">(12:07:17 PM)</font> <b>HeN:</b></font> I want to create a record in my model, with the user id inside<br/>
+<font color="#A82F2F"><font size="2">(12:08:08 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:08:12 PM)</font> <b>da_wunder:</b></font> i have done that<br/>
+<font color="#A82F2F"><font size="2">(12:08:19 PM)</font> <b>da_wunder:</b></font> with policies<br/>
+<font color="#A82F2F"><font size="2">(12:08:47 PM)</font> <b>HeN:</b></font> why should I use a policy instead of writing it in the controller?<br/>
+<font color="#A82F2F"><font size="2">(12:09:04 PM)</font> <b>robdubya:</b></font> because its the most reuseable way<br/>
+<font color="#A82F2F"><font size="2">(12:09:05 PM)</font> <b>HeN:</b></font> I want to remove the create() code from the controller and move it to the model<br/>
+<font color="#A82F2F"><font size="2">(12:09:19 PM)</font> <b>da_wunder:</b></font> then you have to override all blueprint actions in all of your controllers<br/>
+<font color="#A82F2F"><font size="2">(12:09:20 PM)</font> <b>robdubya:</b></font> and thats not reusable at all<br/>
+<font color="#A82F2F"><font size="2">(12:09:55 PM)</font> <b>HeN:</b></font> robdubya: I dont need that code reusable<br/>
+<font color="#A82F2F"><font size="2">(12:10:17 PM)</font> <b>robdubya:</b></font> make. a. policy.<br/>
+<font color="#A82F2F"><font size="2">(12:10:18 PM)</font> <b>HeN:</b></font> da_wunder: I didnt mean the blueprints actions, I meant when using Model.create() in a controller action<br/>
+<font color="#A82F2F"><font size="2">(12:11:05 PM)</font> <b>robdubya:</b></font> moving req into the model couples those tightly<br/>
+<font color="#A82F2F"><font size="2">(12:11:12 PM)</font> <b>robdubya:</b></font> and changes default behavior<br/>
+<font color="#A82F2F"><font size="2">(12:11:26 PM)</font> <b>robdubya:</b></font> whereas you can just use a policy to append the user id to the incoming data<br/>
+<font color="#A82F2F"><font size="2">(12:11:52 PM)</font> <b>HeN:</b></font> actually I&apos;m not using any data posted by user for this<br/>
+<font color="#A82F2F"><font size="2">(12:12:04 PM)</font> <b>robdubya:</b></font> ...<br/>
+<font color="#A82F2F"><font size="2">(12:13:11 PM)</font> <b>da_wunder:</b></font> robdubya: just made issue<br/>
+<font color="#A82F2F"><font size="2">(12:14:10 PM)</font> <b>robdubya:</b></font> da_wunder cheeres<br/>
+<font color="#A82F2F"><font size="2">(12:14:23 PM)</font> <b>robdubya:</b></font> i&apos;ll have a look<br/>
+<font color="#A82F2F"><font size="2">(12:15:05 PM)</font> <b>robdubya:</b></font> da_wunder is that endpoint open (eg can i use it to tset against?)<br/>
+<font color="#A82F2F"><font size="2">(12:15:24 PM)</font> <b>da_wunder:</b></font> robdubya: http://wunder.sytes.net:1338/<br/>
+<font color="#A82F2F"><font size="2">(12:15:44 PM)</font> <b>robdubya:</b></font> and da_wunder does it work OK if you .then it?<br/>
+<font color="#A82F2F"><font size="2">(12:15:46 PM)</font> <b>da_wunder:</b></font> use demo / demodemodemo and try to click demo account on right upper corner<br/>
+<font color="#A82F2F"><font size="2">(12:15:52 PM)</font> <b>da_wunder:</b></font> robdubya: no<br/>
+<font color="#A82F2F"><font size="2">(12:16:06 PM)</font> <b>da_wunder:</b></font> tryied that also<br/>
+<font color="#A82F2F"><font size="2">(12:16:23 PM)</font> <b>robdubya:</b></font> and you&apos;re on .10?<br/>
+<font color="#A82F2F"><font size="2">(12:16:30 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:21:12 PM)</font> <b>robdubya:</b></font> da_wunder creds?<br/>
+<font color="#A82F2F"><font size="2">(12:21:26 PM)</font> <b>da_wunder:</b></font> robdubya: demo / demodemodemo<br/>
+<font color="#A82F2F"><font size="2">(12:22:17 PM)</font> <b>delight_:</b></font> da_wunder: ever tryed deploying on heroku ?<br/>
+<font color="#A82F2F"><font size="2">(12:22:26 PM)</font> <b>da_wunder:</b></font> delight_: no<br/>
+<font color="#A82F2F"><font size="2">(12:22:34 PM)</font> <b>robdubya:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(12:22:36 PM)</font> <b>da_wunder:</b></font> not interested of hosting my app<br/>
+<font color="#A82F2F"><font size="2">(12:23:08 PM)</font> <b>delight_:</b></font> i guess would be nice to deploy a semi-stable version ever so often ... its very easy<br/>
+<font color="#A82F2F"><font size="2">(12:23:40 PM)</font> <b>da_wunder:</b></font> delight_: my devel environment is enough<br/>
+<font color="#A82F2F"><font size="2">(12:27:57 PM)</font> <b>atinder:</b></font> hi node lovers :D<br/>
+<font size="2">(12:28:59 PM)</font><b> atinder left the room (quit: Client Quit).</b><br/>
+<font size="2">(12:29:51 PM)</font><b> atinder [<em>73b97721@gateway/web/freenode/ip.115.185.119.33</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:30:00 PM)</font> <b>atinder:</b></font> hey people<br/>
+<font color="#A82F2F"><font size="2">(12:30:27 PM)</font> <b>atinder:</b></font> anyone done image upload with percetage<br/>
+<font color="#A82F2F"><font size="2">(12:31:36 PM)</font> <b>da_wunder:</b></font> sorry, no<br/>
+<font color="#A82F2F"><font size="2">(12:47:51 PM)</font> <b>friar:</b></font> Ok, any ideas on why one controller function&apos;s model.findOne({&quot;id&quot;:req.body.id}) would match something in the database, but another controllers exact same code would fail even though a console.out(req.body.id) right before shows the same value?!?<br/>
+<font color="#A82F2F"><font size="2">(12:59:45 PM)</font> <b>Aswebbb:</b></font> atinder: do you use any javascript library?<br/>
+<font color="#A82F2F"><font size="2">(01:00:12 PM)</font> <b>Aswebbb:</b></font> atinder: Im using jquery dropzone, if you want nice &quot;effects&quot; for uploads<br/>
+<font color="#A82F2F"><font size="2">(01:00:30 PM)</font> <b>atinder:</b></font> actually i am using angular file uploa<br/>
+<font color="#A82F2F"><font size="2">(01:00:33 PM)</font> <b>atinder:</b></font> upload<br/>
+<font color="#A82F2F"><font size="2">(01:00:39 PM)</font> <b>atinder:</b></font> i need server side code<br/>
+<font color="#A82F2F"><font size="2">(01:27:13 PM)</font> <b>delight_:</b></font> so funny .. res.view(&apos;templateName&apos;, dataObj) works as fine as res.view(dataObj, &apos;templateName&apos;);<br/>
+<font color="#A82F2F"><font size="2">(01:27:28 PM)</font> <b>delight_:</b></font> I would have thought it should be either the one or the other<br/>
+<font color="#A82F2F"><font size="2">(01:40:28 PM)</font> <b>Aswebbb:</b></font> is there a way to access to req.session in the app.js file<br/>
+<font color="#A82F2F"><font size="2">(01:40:30 PM)</font> <b>Aswebbb:</b></font> ?<br/>
+<font size="2">(01:44:29 PM)</font><b> alekibango is now known as alekibangotha</b><br/>
+<font size="2">(01:44:34 PM)</font><b> alekibangotha is now known as alekibango</b><br/>
+<font color="#A82F2F"><font size="2">(01:59:43 PM)</font> <b>phishy:</b></font> All 3 versions of sails are listed as failing here: https://github.com/balderdashy/sails/blob/master/CONTRIBUTING.md<br/>
+<font size="2">(02:03:11 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

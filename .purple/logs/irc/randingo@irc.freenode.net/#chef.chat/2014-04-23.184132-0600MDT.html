@@ -1,0 +1,56 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Wed 23 Apr 2014 06:41:32 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Wed 23 Apr 2014 06:41:32 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(06:41:32 PM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font size="2">(06:41:54 PM)</font><b> Neel is now known as Guest46695</b><br/>
+<font color="#A82F2F"><font size="2">(06:51:08 PM)</font> <b>gswallow:</b></font> Why is chef completely ignoring the attributes I set in my environment manifest?<br/>
+<font color="#A82F2F"><font size="2">(06:53:01 PM)</font> <b>scalp42:</b></font> gswallow should not, are you sure the namespace is correct for example? if you have override attributes also, they could take over your environment<br/>
+<font color="#A82F2F"><font size="2">(06:53:18 PM)</font> <b>gswallow:</b></font> I don&apos;t think so<br/>
+<font color="#A82F2F"><font size="2">(06:53:40 PM)</font> <b>scalp42:</b></font> (in case: http://docs.opscode.com/chef_overview_attributes.html#attribute-precedence)<br/>
+<font color="#A82F2F"><font size="2">(06:54:03 PM)</font> <b>scalp42:</b></font> might sound like stupid questions, but you sure the node is in the correct environment ?<br/>
+<font color="#A82F2F"><font size="2">(06:54:08 PM)</font> <b>gswallow:</b></font> Yeah, I&apos;ve read that.  A bazillion times.  And yes.<br/>
+<font color="#A82F2F"><font size="2">(06:54:23 PM)</font> <b>gswallow:</b></font> Stumped<br/>
+<font color="#A82F2F"><font size="2">(06:54:29 PM)</font> <b>scalp42:</b></font> did you push to Chef server?<br/>
+<font color="#A82F2F"><font size="2">(06:54:33 PM)</font> <b>gswallow:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(06:54:44 PM)</font> <b>gswallow:</b></font> in /var/chef/cache/cookbooks/nodejs/attributes/default.rb, I have:<br/>
+<font color="#A82F2F"><font size="2">(06:54:46 PM)</font> <b>gswallow:</b></font>   default_unless[&apos;nodejs&apos;][&apos;install_method&apos;] = &apos;binary&apos;<br/>
+<font color="#A82F2F"><font size="2">(06:55:03 PM)</font> <b>gswallow:</b></font> (I used default_unless.  It  was also just &quot;default&quot;)<br/>
+<font color="#A82F2F"><font size="2">(06:55:24 PM)</font> <b>coredump:</b></font> coderanger the &quot;protocol&quot; option is not working anymore on berks 3? It keeps trying to use git clone git:// on a private repo on github<br/>
+<font color="#A82F2F"><font size="2">(06:55:28 PM)</font> <b>scalp42:</b></font> well they&apos;re not the same right<br/>
+<font color="#A82F2F"><font size="2">(06:55:53 PM)</font> <b>coderanger:</b></font> coredump: Just put it in the URL?<br/>
+<font color="#A82F2F"><font size="2">(06:55:56 PM)</font> <b>gswallow:</b></font> They aren&apos;t.  I purposefully set it to default_unless because it&apos;s weaker.<br/>
+<font color="#A82F2F"><font size="2">(06:56:02 PM)</font> <b>scalp42:</b></font> so whats in your environment gswallow<br/>
+<font color="#A82F2F"><font size="2">(06:56:05 PM)</font> <b>scalp42:</b></font> for that attribute<br/>
+<font color="#A82F2F"><font size="2">(06:56:09 PM)</font> <b>gswallow:</b></font> In my environment file (and if I edit the environment), I have:<br/>
+<font color="#A82F2F"><font size="2">(06:56:12 PM)</font> <b>hailwood:</b></font> Hey guys, in a recipe I want to execute a command for every line in a file - https://gist.github.com/hailwood/dff845e62b86bf111341 basically we have a run.list file and for each line in the file we want to execute php artisan db:seed --class={line from file}. Can anyone give any tips?<br/>
+<font color="#A82F2F"><font size="2">(06:56:32 PM)</font> <b>gswallow:</b></font> default_attributes: { … &quot;nodejs&quot;: {<br/>
+<font color="#A82F2F"><font size="2">(06:56:32 PM)</font> <b>gswallow:</b></font>       &quot;install_method&quot;: &quot;binary&quot;,<br/>
+<font color="#A82F2F"><font size="2">(06:56:32 PM)</font> <b>gswallow:</b></font>       &quot;version&quot;: &quot;0.10.18&quot;<br/>
+<font color="#A82F2F"><font size="2">(06:56:32 PM)</font> <b>gswallow:</b></font>     }<br/>
+<font color="#A82F2F"><font size="2">(06:56:43 PM)</font> <b>coderanger:</b></font> hailwood: Where does that file live?<br/>
+<font color="#A82F2F"><font size="2">(06:57:01 PM)</font> <b>hailwood:</b></font> the run.list file, that&apos;s in the deployed code.<br/>
+<font color="#A82F2F"><font size="2">(06:57:10 PM)</font> <b>hailwood:</b></font> separate from the cookboo<br/>
+<font color="#A82F2F"><font size="2">(06:57:13 PM)</font> <b>hailwood:</b></font> *cookbook<br/>
+<font color="#A82F2F"><font size="2">(06:57:40 PM)</font> <b>scalp42:</b></font> right so its gonna be binary in every case<br/>
+<font color="#A82F2F"><font size="2">(06:57:47 PM)</font> <b>gswallow:</b></font> that&apos;s the intent, yeah<br/>
+<font color="#A82F2F"><font size="2">(06:58:01 PM)</font> <b>gswallow:</b></font> if I change it to &quot;package&quot; in the attributes file it changes.  Otherwise no.<br/>
+<font color="#A82F2F"><font size="2">(06:58:09 PM)</font> <b>hailwood:</b></font> coderanger: The only way I could see of doing this would be creating a bash script to do it, and then have the recipe simply call the script?<br/>
+<font color="#A82F2F"><font size="2">(06:58:09 PM)</font> <b>coderanger:</b></font> hailwood: You&apos;ll need to use a ruby_block resource to read it in or something similar<br/>
+<font color="#A82F2F"><font size="2">(06:58:12 PM)</font> <b>silk:</b></font> Is there a more appropriate place to ask questions about omnibus-software ?<br/>
+<font color="#A82F2F"><font size="2">(06:58:18 PM)</font> <b>coderanger:</b></font> hailwood: That works too, a bash resource<br/>
+<font color="#A82F2F"><font size="2">(06:58:53 PM)</font> <b>scalp42:</b></font> it works as intended because the environment sets it to binary<br/>
+<font color="#A82F2F"><font size="2">(06:59:00 PM)</font> <b>gswallow:</b></font> sorry — other way around<br/>
+<font color="#A82F2F"><font size="2">(06:59:04 PM)</font> <b>gswallow:</b></font> I *want* it to be binary<br/>
+<font color="#A82F2F"><font size="2">(06:59:27 PM)</font> <b>gswallow:</b></font> let me reset all the files in git and gist it<br/>
+<font color="#A82F2F"><font size="2">(06:59:33 PM)</font> <b>scalp42:</b></font> sounds good gswallow<br/>
+<font color="#A82F2F"><font size="2">(06:59:42 PM)</font> <b>scalp42:</b></font> I&apos;ll be able to pinpoint the issue I think this way<br/>
+<font size="2">(07:00:11 PM)</font><b> mode (+o ssd7) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(07:04:54 PM)</font> <b>gswallow:</b></font> https://gist.github.com/gswallow/11238007<br/>
+<font color="#A82F2F"><font size="2">(07:06:53 PM)</font> <b>scalp42:</b></font> so gswallow<br/>
+<font color="#A82F2F"><font size="2">(07:06:55 PM)</font> <b>scalp42:</b></font> to make sure<br/>
+<font color="#A82F2F"><font size="2">(07:07:19 PM)</font> <b>scalp42:</b></font> you want it to be binary, can you tell me what it&apos;s set to in the node attributes after lets say a run please<br/>
+<font color="#A82F2F"><font size="2">(07:07:31 PM)</font> <b>gswallow:</b></font> I want it to be binary<br/>
+<font color="#A82F2F"><font size="2">(07:07:45 PM)</font> <b>gswallow:</b></font> When I run chef, it gets set to &quot;package&quot;<br/>
+<font color="#A82F2F"><font size="2">(07:07:45 PM)</font> <b>scalp42:</b></font> do you know whats it&apos;s set to<br/>
+<font color="#A82F2F"><font size="2">(07:07:53 PM)</font> <b>scalp42:</b></font> kk<br/>
+<font color="#A82F2F"><font size="2">(07:09:10 PM)</font> <b>gswallow:</b></font> I updated the gist with the output from the chef run<br/>
+<font size="2">(07:09:49 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

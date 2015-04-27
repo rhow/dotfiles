@@ -1,0 +1,74 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 15 Apr 2014 10:02:11 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 15 Apr 2014 10:02:11 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(10:02:11 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:30:47 AM)</font> <b>rpnzl:</b></font> Hi Sailors, I&apos;ve got a questions regarding applying policies to REST blueprints, would anyone be able to shed some light?<br/>
+<font color="#A82F2F"><font size="2">(10:31:04 AM)</font> <b>robdubya:</b></font> ask away<br/>
+<font color="#A82F2F"><font size="2">(10:33:23 AM)</font> <b>rpnzl:</b></font> Thanks, I&apos;m looking at limiting access to the default REST blueprint methods, but I can&apos;t find any examples of how to do so, or if that&apos;s even possible.<br/>
+<font color="#A82F2F"><font size="2">(10:33:47 AM)</font> <b>rpnzl:</b></font> e.g. keeping the GET route available, while POST is disabled<br/>
+<font color="#A82F2F"><font size="2">(10:34:05 AM)</font> <b>rpnzl:</b></font> or applying different sets of policies to each one<br/>
+<font color="#A82F2F"><font size="2">(10:34:46 AM)</font> <b>da_wunder:</b></font> rpnzl: like that https://github.com/tarlepp/Taskboard/blob/master/config/policies.js<br/>
+<font color="#A82F2F"><font size="2">(10:35:39 AM)</font> <b>rpnzl:</b></font> yes, do those blueprint methods (create, destroy, etc.) apply to both REST and CRUD blueprints?<br/>
+<font color="#A82F2F"><font size="2">(10:36:32 AM)</font> <b>da_wunder:</b></font> what CRUD blueprints?<br/>
+<font color="#A82F2F"><font size="2">(10:38:13 AM)</font> <b>rpnzl:</b></font> apologies, &apos;shortcuts&apos; - it does look like it applies to both REST and shortcuts - thank you for the link!<br/>
+<font color="#A82F2F"><font size="2">(10:38:38 AM)</font> <b>da_wunder:</b></font> rpnzl: you should not use those shortcuts<br/>
+<font color="#A82F2F"><font size="2">(10:39:19 AM)</font> <b>brandom:</b></font> robdubya: I thought I bookmarked the angularSails docs but I did not. Could I bother you, or anyone for a link?<br/>
+<font color="#A82F2F"><font size="2">(10:39:52 AM)</font> <b>robdubya:</b></font> brandom balderdashy.github.io/angularSails<br/>
+<font color="#A82F2F"><font size="2">(10:40:00 AM)</font> <b>rpnzl:</b></font> yeah I want them to remain disabled, but I wasn&apos;t sure if I could apply policies to the REST blueprint in the same manner, or if there were a different set of methods<br/>
+<font color="#A82F2F"><font size="2">(10:40:01 AM)</font> <b>robdubya:</b></font> (i&apos;ll link em from the page)<br/>
+<font color="#A82F2F"><font size="2">(10:40:33 AM)</font> <b>darekzak:</b></font> Hi Guys, has anyone now any github repo with sails/websocket usage?<br/>
+<font color="#A82F2F"><font size="2">(10:40:45 AM)</font> <b>brandom:</b></font> robdubya: Thanks! I was going to PR your readme, but that seems more efficient, hah.<br/>
+<font color="#A82F2F"><font size="2">(10:40:52 AM)</font> <b>da_wunder:</b></font> rpnzl: https://github.com/balderdashy/sails-docs/blob/master/reference/Configuration.md#blueprints<br/>
+<font color="#A82F2F"><font size="2">(10:41:27 AM)</font> <b>da_wunder:</b></font> you can just simply disable shortcuts from every controller<br/>
+<font color="#A82F2F"><font size="2">(10:42:45 AM)</font> <b>darekzak:</b></font> *know<br/>
+<font color="#A82F2F"><font size="2">(10:43:05 AM)</font> <b>da_wunder:</b></font> darekzak: my app use those<br/>
+<font color="#A82F2F"><font size="2">(10:44:58 AM)</font> <b>rpnzl:</b></font> @da_wunder Yeah I&apos;ve done that, but it wasn&apos;t clear (in any documentation I could find) what methods I should be applying policies to *for REST routes only*, or if they both utilized the same &apos;find&apos;, &apos;create&apos;, &apos;update&apos;, and &apos;destroy&apos; method names. The Taskboard link helped, so thanks for that.<br/>
+<font color="#A82F2F"><font size="2">(10:47:32 AM)</font> <b>da_wunder:</b></font> rpnzl: https://github.com/balderdashy/sails-docs/blob/master/reference/Routes.md#6-shortcut-crud-blueprints<br/>
+<font color="#A82F2F"><font size="2">(11:27:09 AM)</font> <b>jdcauley:</b></font> can i disable CSRF requirement for just one route?<br/>
+<font color="#A82F2F"><font size="2">(11:32:34 AM)</font> <b>robdubya:</b></font> jdcauley i dont think so<br/>
+<font color="#A82F2F"><font size="2">(11:32:42 AM)</font> <b>robdubya:</b></font> seems a bit counterintuitive anyway<br/>
+<font color="#A82F2F"><font size="2">(11:32:53 AM)</font> <b>jdcauley:</b></font> I saw that it was in consideration for future release<br/>
+<font color="#A82F2F"><font size="2">(11:33:04 AM)</font> <b>jdcauley:</b></font> robdubya, not if you are using webhooks<br/>
+<font color="#A82F2F"><font size="2">(11:33:18 AM)</font> <b>jdcauley:</b></font> for example i&apos;m using a mandrill webhook<br/>
+<font color="#A82F2F"><font size="2">(11:33:34 AM)</font> <b>jdcauley:</b></font> its the only route that i can&apos;t put csrf on<br/>
+<font color="#A82F2F"><font size="2">(11:44:14 AM)</font> <b>delight:</b></font> https://www.youtube.com/watch?v=BKorP55Aqvg 1 Single Engineer in a Biz Meeting :-D<br/>
+<font color="#A82F2F"><font size="2">(12:17:51 PM)</font> <b>dv28:</b></font> Hello everyone!<br/>
+<font size="2">(12:30:41 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font size="2">(12:49:51 PM)</font><b> zz_Brocken is now known as Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(01:41:20 PM)</font> <b>samuelstiles:</b></font> I&apos;m confused by some syntax<br/>
+<font color="#A82F2F"><font size="2">(01:41:22 PM)</font> <b>samuelstiles:</b></font> And control flow<br/>
+<font color="#A82F2F"><font size="2">(01:41:35 PM)</font> <b>samuelstiles:</b></font> Namely:<br/>
+<font color="#A82F2F"><font size="2">(01:41:38 PM)</font> <b>samuelstiles:</b></font> User.destroy({name:&apos;Flynn&apos;}).exec(function deleteCB(err){<br/>
+<font color="#A82F2F"><font size="2">(01:41:39 PM)</font> <b>samuelstiles:</b></font>   console.log(&apos;The record has been deleted&apos;);});<br/>
+<font color="#A82F2F"><font size="2">(01:41:50 PM)</font> <b>samuelstiles:</b></font> User.destroy({name:&apos;Flynn&apos;}).exec(function deleteCB(err){<br/>
+<font color="#A82F2F"><font size="2">(01:41:51 PM)</font> <b>samuelstiles:</b></font>     console.log(&apos;The record has been deleted&apos;);<br/>
+<font color="#A82F2F"><font size="2">(01:41:51 PM)</font> <b>samuelstiles:</b></font> });<br/>
+<font color="#A82F2F"><font size="2">(01:41:55 PM)</font> <b>samuelstiles:</b></font> VS<br/>
+<font color="#A82F2F"><font size="2">(01:42:22 PM)</font> <b>samuelstiles:</b></font> User.destroy({name:&apos;Fylnn&apos;}, function(err, destroyedUsers){   });<br/>
+<font color="#A82F2F"><font size="2">(01:42:32 PM)</font> <b>samuelstiles:</b></font> is one sychronous and one asynchronous?<br/>
+<font color="#A82F2F"><font size="2">(01:43:05 PM)</font> <b>da_wunder:</b></font> i think, that both of those do just the same thing<br/>
+<font color="#A82F2F"><font size="2">(01:43:31 PM)</font> <b>da_wunder:</b></font> personally i use .exec(function(error) { .... });<br/>
+<font color="#A82F2F"><font size="2">(01:44:09 PM)</font> <b>samuelstiles:</b></font> basically, Model.action({object}).exec(function(){});     VS     Model.action({object}, function(){});<br/>
+<font color="#A82F2F"><font size="2">(01:44:22 PM)</font> <b>samuelstiles:</b></font> do they though?<br/>
+<font color="#A82F2F"><font size="2">(01:44:35 PM)</font> <b>da_wunder:</b></font> i think yes, but cannot be sure<br/>
+<font color="#A82F2F"><font size="2">(01:44:44 PM)</font> <b>da_wunder:</b></font> haven&apos;t seen any docs about that<br/>
+<font color="#A82F2F"><font size="2">(01:44:50 PM)</font> <b>samuelstiles:</b></font> and what about Model.action({object}).done(function(){}); ?<br/>
+<font color="#A82F2F"><font size="2">(01:45:11 PM)</font> <b>da_wunder:</b></font> .done() is going to deprecate<br/>
+<font color="#A82F2F"><font size="2">(01:45:25 PM)</font> <b>da_wunder:</b></font> or someone told me here that about 1-3months ago<br/>
+<font color="#A82F2F"><font size="2">(01:46:24 PM)</font> <b>robdubya:</b></font> the former is promise syntax<br/>
+<font color="#A82F2F"><font size="2">(01:46:30 PM)</font> <b>robdubya:</b></font> the latter is traditional callback<br/>
+<font color="#A82F2F"><font size="2">(01:47:46 PM)</font> <b>samuelstiles:</b></font> does the promise syntax change functionality?<br/>
+<font color="#A82F2F"><font size="2">(01:47:53 PM)</font> <b>samuelstiles:</b></font> I.E. treat it like a &quot;do this once the promise is completed&quot;?<br/>
+<font color="#A82F2F"><font size="2">(01:50:55 PM)</font> <b>da_wunder:</b></font> someone who really knows how those work should write some docs about that<br/>
+<font size="2">(01:51:46 PM)</font><b> samuelstiles left the room (quit: Quit: samuelstiles).</b><br/>
+<font color="#A82F2F"><font size="2">(02:56:43 PM)</font> <b>miqui:</b></font> newb: can anyone give me sample one liner of sails loggin?<br/>
+<font color="#A82F2F"><font size="2">(02:56:53 PM)</font> <b>miqui:</b></font> sails.log.wan ???<br/>
+<font color="#A82F2F"><font size="2">(02:57:01 PM)</font> <b>miqui:</b></font> sails.logger.warn ???<br/>
+<font color="#A82F2F"><font size="2">(02:57:18 PM)</font> <b>rawtaz:</b></font> no idea mate :o<br/>
+<font color="#A82F2F"><font size="2">(02:57:50 PM)</font> <b>miqui:</b></font> seems the sails logging is not well documented....just the log levels...<br/>
+<font color="#A82F2F"><font size="2">(02:59:16 PM)</font> <b>rawtaz:</b></font> have you checked if there&apos;s anything on beta.sailsjs.org , the documentation i mean<br/>
+<font size="2">(03:12:16 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:18:40 PM)</font> <b>miqui:</b></font> rawtaz: yes i have rtfm&apos;d whatever they have there..only mentions log levels....<br/>
+<font color="#A82F2F"><font size="2">(03:19:03 PM)</font> <b>miqui:</b></font> nothing like , &quot;oh btw, here is a tiny winneee example.....&quot;<br/>
+<font color="#A82F2F"><font size="2">(03:19:06 PM)</font> <b>rawtaz:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(03:19:19 PM)</font> <b>rawtaz:</b></font> well, stay tuned in here, ppl here usually helt a lot<br/>
+<font size="2">(03:28:07 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

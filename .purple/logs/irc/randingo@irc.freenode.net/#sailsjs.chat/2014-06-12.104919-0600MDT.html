@@ -1,0 +1,112 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Thu 12 Jun 2014 10:49:19 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Thu 12 Jun 2014 10:49:19 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(10:49:19 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(10:49:19 AM)</font> <b>asimov.freenode.net:</b></font> (notice) [freenode-info] channel trolls and no channel staff around to help? please check with freenode support: http://freenode.net/faq.shtml#gettinghelp<br/>
+<font color="#A82F2F"><font size="2">(10:57:59 AM)</font> <b>nunojsferreira:</b></font> dasilva333: which version are you using?<br/>
+<font color="#A82F2F"><font size="2">(10:58:22 AM)</font> <b>dasilva333:</b></font> rc8<br/>
+<font color="#A82F2F"><font size="2">(10:58:52 AM)</font> <b>dasilva333:</b></font> i see that skipper was added rc6 i must&apos;ve had an older version<br/>
+<font color="#A82F2F"><font size="2">(10:59:20 AM)</font> <b>nunojsferreira:</b></font> probably<br/>
+<font color="#A82F2F"><font size="2">(10:59:30 AM)</font> <b>nunojsferreira:</b></font> now it&apos;s req.file(filename)<br/>
+<font color="#A82F2F"><font size="2">(10:59:38 AM)</font> <b>nunojsferreira:</b></font> had the same problem yesterday<br/>
+<font color="#A82F2F"><font size="2">(10:59:46 AM)</font> <b>dasilva333:</b></font> its not filename<br/>
+<font color="#A82F2F"><font size="2">(10:59:52 AM)</font> <b>dasilva333:</b></font> its fieldname, the field name usd in the form submit<br/>
+<font color="#A82F2F"><font size="2">(10:59:53 AM)</font> <b>nunojsferreira:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(10:59:55 AM)</font> <b>nunojsferreira:</b></font> input name<br/>
+<font color="#A82F2F"><font size="2">(10:59:58 AM)</font> <b>dasilva333:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(11:00:31 AM)</font> <b>dasilva333:</b></font> i dont have any upload issues with filesize in the latest version so i&apos;m going to rewrite all my controllers to use the new bodyparser<br/>
+<font color="#A82F2F"><font size="2">(11:32:13 AM)</font> <b>dasilva333:</b></font> sails-v0.10-rc8 still has an issue with anchor<br/>
+<font color="#A82F2F"><font size="2">(11:32:41 AM)</font> <b>dasilva333:</b></font> https://github.com/balderdashy/anchor/issues/48 its been ignored for over 2 weeks now<br/>
+<font color="#A82F2F"><font size="2">(11:33:43 AM)</font> <b>sjester:</b></font> Is there a way to pass a variable to a function to serve as the model I want to update? User.update(), Post.update() but with one function that would do something like modelType.update()?<br/>
+<font color="#A82F2F"><font size="2">(11:55:10 AM)</font> <b>cramrod:</b></font> dasilva333, whats the issue with anchor?<br/>
+<font color="#A82F2F"><font size="2">(11:57:02 AM)</font> <b>da_wunder:</b></font> dasilva333: try to make pull request, maybe?<br/>
+<font color="#A82F2F"><font size="2">(11:57:34 AM)</font> <b>dasilva333:</b></font> im trying to develop a unit test right now to prove it&apos;s an issue actually<br/>
+<font color="#A82F2F"><font size="2">(11:58:08 AM)</font> <b>dasilva333:</b></font> i submit the issue here previously:  https://github.com/balderdashy/anchor/issues/48 i but it just got ignored so im hoping some solid proof of a bug will persuade u guys to fix it<br/>
+<font color="#A82F2F"><font size="2">(12:04:33 PM)</font> <b>duhruh:</b></font> sjester: of course!<br/>
+<font color="#A82F2F"><font size="2">(12:05:22 PM)</font> <b>dasilva333:</b></font> alright i can confirm it is indeed a bug<br/>
+<font color="#A82F2F"><font size="2">(12:07:16 PM)</font> <b>dasilva333:</b></font> should i resubmit the same bug under sails/issues or should I put the details of the test under the anchor issue?<br/>
+<font color="#A82F2F"><font size="2">(12:07:34 PM)</font> <b>da_wunder:</b></font> btw is that mediumtext new type of waterline?<br/>
+<font color="#A82F2F"><font size="2">(12:07:48 PM)</font> <b>dasilva333:</b></font> mediumtext is a column type in mysql<br/>
+<font color="#A82F2F"><font size="2">(12:08:03 PM)</font> <b>da_wunder:</b></font> yes, i know...<br/>
+<font color="#A82F2F"><font size="2">(12:08:12 PM)</font> <b>da_wunder:</b></font> but is there a waterline support for that?<br/>
+<font color="#A82F2F"><font size="2">(12:08:16 PM)</font> <b>da_wunder:</b></font> you need that also<br/>
+<font color="#A82F2F"><font size="2">(12:08:18 PM)</font> <b>dasilva333:</b></font> yeah there is<br/>
+<font color="#A82F2F"><font size="2">(12:08:25 PM)</font> <b>dasilva333:</b></font> this is my controller code:<br/>
+<font color="#A82F2F"><font size="2">(12:08:30 PM)</font> <b>dasilva333:</b></font> &apos;index&apos;: function(req, res){           User.create({ firstname: &quot;Richard&quot;, profile: &quot;test&quot; }, function(err, models){                res.send(err || 200);           });      }<br/>
+<font color="#A82F2F"><font size="2">(12:08:48 PM)</font> <b>da_wunder:</b></font> https://github.com/balderdashy/waterline#attributes<br/>
+<font color="#A82F2F"><font size="2">(12:08:48 PM)</font> <b>dasilva333:</b></font> the only other thing is i have my model set up:<br/>
+<font color="#A82F2F"><font size="2">(12:08:50 PM)</font> <b>dasilva333:</b></font> module.exports = {   connection: &apos;someMysqlServer&apos;,   tableName: &apos;test&apos;,   attributes: {      firstname: &quot;string&quot;,      profile: &quot;mediumtext&quot;   } };<br/>
+<font color="#A82F2F"><font size="2">(12:09:16 PM)</font> <b>dasilva333:</b></font> mediumtext is support as an attribute for sails-mysql<br/>
+<font color="#A82F2F"><font size="2">(12:09:47 PM)</font> <b>da_wunder:</b></font> seems like you&apos;re right<br/>
+<font color="#A82F2F"><font size="2">(12:10:03 PM)</font> <b>da_wunder:</b></font> that docs wasn&apos;t updated according to https://github.com/balderdashy/waterline/blob/32b4928d5b4bdd7022d5ea298fc9a805c950358c/lib/waterline/utils/types.js<br/>
+<font color="#A82F2F"><font size="2">(12:10:06 PM)</font> <b>dasilva333:</b></font> so should i post the unit test details uner the existing issue i reported or make a new issue under sails?<br/>
+<font color="#A82F2F"><font size="2">(12:10:25 PM)</font> <b>dasilva333:</b></font> yeah types.js has been updated accordingly but not rules.js<br/>
+<font color="#A82F2F"><font size="2">(12:10:26 PM)</font> <b>da_wunder:</b></font> or just add that to rules.js and make pull request<br/>
+<font color="#A82F2F"><font size="2">(12:10:43 PM)</font> <b>dasilva333:</b></font> https://github.com/balderdashy/anchor/issues/48 &lt;- can you do that for me here?<br/>
+<font color="#A82F2F"><font size="2">(12:11:13 PM)</font> <b>da_wunder:</b></font> not issue for me now, sorry<br/>
+<font color="#A82F2F"><font size="2">(12:14:51 PM)</font> <b>dasilva333:</b></font> https://github.com/balderdashy/anchor/pull/51 pull request complete<br/>
+<font color="#A82F2F"><font size="2">(12:30:39 PM)</font> <b>Dchen:</b></font> anyone know how to overwrite sails dependencies from the root package.json?<br/>
+<font color="#A82F2F"><font size="2">(12:31:33 PM)</font> <b>Dchen:</b></font> sails has its own package.json, but I want to change somehting in there, but an NPM install will overwrite it giving me the stock package.json<br/>
+<font color="#A82F2F"><font size="2">(12:31:42 PM)</font> <b>Dchen:</b></font> am i completly misunderstanding something?<br/>
+<font color="#A82F2F"><font size="2">(12:32:02 PM)</font> <b>dasilva333:</b></font> try looking up npm shrinkwrap<br/>
+<font color="#A82F2F"><font size="2">(12:32:12 PM)</font> <b>dasilva333:</b></font> i think you can override things if you shrinkwrap it<br/>
+<font color="#A82F2F"><font size="2">(12:36:07 PM)</font> <b>Dchen:</b></font> dasilva333: thanks I think that will do it<br/>
+<font color="#A82F2F"><font size="2">(01:07:12 PM)</font> <b>cramrod:</b></font> Dchen, I believe you can also &apos;npm install --save&apos; the package in your project&apos;s root directory.  iirc, when npm goes to install it as a Sails dependency, it will instead create a symlink to the previously required one.<br/>
+<font color="#A82F2F"><font size="2">(01:08:51 PM)</font> <b>Dchen:</b></font> cramrod: ahh that seems more straightforward, i&apos;ll give that a shot<br/>
+<font color="#A82F2F"><font size="2">(01:10:57 PM)</font> <b>cramrod:</b></font> Youll have to remember to run your app from the locally installed version of sails using `node node_modules/sails/bin/sails lift&apos;<br/>
+<font color="#A82F2F"><font size="2">(01:11:45 PM)</font> <b>cramrod:</b></font> `sails lift` will run the globally installed version and its normal dependencies<br/>
+<font color="#A82F2F"><font size="2">(01:34:55 PM)</font> <b>cramrod:</b></font> oh goodness<br/>
+<font color="#A82F2F"><font size="2">(01:37:52 PM)</font> <b>cramrod:</b></font> do that thing<br/>
+<font color="#A82F2F"><font size="2">(01:39:45 PM)</font> <b>cramrod:</b></font> hey cramrod, have you seen http://google.net ?  It&apos;s great.  true<br/>
+<font color="#A82F2F"><font size="2">(01:42:24 PM)</font> <b>cramrod:</b></font> hey cramrod, have you seen http://google.net ?  It&apos;s great.  nottrue<br/>
+<font color="#A82F2F"><font size="2">(01:46:30 PM)</font> <b>cramrod:</b></font> what about http://google.gov ?<br/>
+<font color="#A82F2F"><font size="2">(01:51:10 PM)</font> <b>lulzmachine:</b></font> how do i get access logs in sails?<br/>
+<font color="#A82F2F"><font size="2">(01:51:39 PM)</font> <b>lulzmachine:</b></font> like your standard apache access logs<br/>
+<font color="#A82F2F"><font size="2">(01:54:10 PM)</font> <b>lulzmachine:</b></font> or maybe i should just do that on the front-facing nginx instance?<br/>
+<font color="#A82F2F"><font size="2">(01:54:28 PM)</font> <b>da_wunder:</b></font> there is sails log if that is enough<br/>
+<font color="#A82F2F"><font size="2">(01:55:20 PM)</font> <b>lulzmachine:</b></font> well from the docs it doesn&apos;t really say what that does... i guess .info() isn&apos;t really on that level<br/>
+<font color="#A82F2F"><font size="2">(01:55:52 PM)</font> <b>da_wunder:</b></font> you can see that log on the shell window where you started sails<br/>
+<font color="#A82F2F"><font size="2">(01:56:39 PM)</font> <b>da_wunder:</b></font> maybe that is what you&apos;re looking for https://github.com/expressjs/morgan<br/>
+<font color="#A82F2F"><font size="2">(01:57:12 PM)</font> <b>lulzmachine:</b></font> yeah that looks better....<br/>
+<font color="#A82F2F"><font size="2">(01:57:20 PM)</font> <b>lulzmachine:</b></font> but how do I get at the express &quot;app&quot; object?<br/>
+<font color="#A82F2F"><font size="2">(01:57:56 PM)</font> <b>da_wunder:</b></font> something like https://github.com/tarlepp/Taskboard/blob/master/config/express.js<br/>
+<font color="#A82F2F"><font size="2">(02:00:58 PM)</font> <b>lulzmachine:</b></font> oh... u just made an express.js file in config and named a method &quot;customMiddleware&quot; and sails understands how to run that?<br/>
+<font color="#A82F2F"><font size="2">(02:01:06 PM)</font> <b>lulzmachine:</b></font> thx for the help... how did u find this out?<br/>
+<font color="#A82F2F"><font size="2">(02:01:18 PM)</font> <b>da_wunder:</b></font> just some googling<br/>
+<font color="#A82F2F"><font size="2">(02:02:33 PM)</font> <b>lulzmachine:</b></font> kk...<br/>
+<font color="#A82F2F"><font size="2">(02:02:40 PM)</font> <b>lulzmachine:</b></font> where on the middleware stack will that end up?<br/>
+<font color="#A82F2F"><font size="2">(02:02:42 PM)</font> <b>lulzmachine:</b></font> early?late?<br/>
+<font color="#A82F2F"><font size="2">(02:03:46 PM)</font> <b>robdubya_:</b></font> you can control it with config/http.js<br/>
+<font color="#A82F2F"><font size="2">(02:04:08 PM)</font> <b>robdubya_:</b></font> which afaik is a pretty new thing, so you may need to generate a new project to grab a copy of that file<br/>
+<font color="#A82F2F"><font size="2">(02:16:57 PM)</font> <b>lulzmachine:</b></font> oh cool<br/>
+<font color="#A82F2F"><font size="2">(02:16:59 PM)</font> <b>lulzmachine:</b></font> thx robdubya_<br/>
+<font size="2">(02:17:03 PM)</font><b> lulzmachine left the room (quit: Quit: This computer has gone to sleep).</b><br/>
+<font color="#A82F2F"><font size="2">(02:23:47 PM)</font> <b>Dchen:</b></font> robdubya_: remember that issue we talked about last night with mobile chrome and websockets?<br/>
+<font color="#A82F2F"><font size="2">(02:25:20 PM)</font> <b>Dchen:</b></font> robdubya_: turns out its not really a problem with anything at all, it was due to my dev setup. I was testing using a proxy over wifi<br/>
+<font color="#A82F2F"><font size="2">(02:25:23 PM)</font> <b>Dchen:</b></font> fml<br/>
+<font color="#A82F2F"><font size="2">(02:25:43 PM)</font> <b>duhruh:</b></font> noice!<br/>
+<font color="#A82F2F"><font size="2">(02:29:54 PM)</font> <b>zonetti:</b></font> is there a method to truncate the model&apos;s table?<br/>
+<font color="#A82F2F"><font size="2">(02:30:00 PM)</font> <b>zonetti:</b></font> can&apos;t find it in the docs<br/>
+<font color="#A82F2F"><font size="2">(02:31:13 PM)</font> <b>robdubya_:</b></font> Dchen thank goodness :D<br/>
+<font color="#A82F2F"><font size="2">(02:33:57 PM)</font> <b>duhruh:</b></font> zonetti i don&apos;t believe so, you can just run a raw query instead:<br/>
+<font color="#A82F2F"><font size="2">(02:34:01 PM)</font> <b>duhruh:</b></font> Model.query(&lt;sql query&gt;, &lt;optional data&gt;, callback);<br/>
+<font color="#A82F2F"><font size="2">(02:34:15 PM)</font> <b>duhruh:</b></font> that ~might~ work<br/>
+<font color="#A82F2F"><font size="2">(02:37:49 PM)</font> <b>dasilva333:</b></font> u could do Model.drop() and then sails.emit(&quot;hook:orm:reload&quot;)<br/>
+<font color="#A82F2F"><font size="2">(02:38:24 PM)</font> <b>duhruh:</b></font> truncate and drop are 2 different operations<br/>
+<font color="#A82F2F"><font size="2">(02:38:52 PM)</font> <b>duhruh:</b></font> don&apos;t run drop unless you really mean to lose all of your data<br/>
+<font color="#A82F2F"><font size="2">(02:39:30 PM)</font> <b>dasilva333:</b></font> ur essentially dropping the table and letting the ORM recreate it, effectively truncating it, as you said you could always do .query(&quot;truncate table x&quot;) but they should both have the same net effect<br/>
+<font color="#A82F2F"><font size="2">(03:12:18 PM)</font> <b>JemiloII:</b></font> hey<br/>
+<font color="#A82F2F"><font size="2">(03:12:47 PM)</font> <b>JemiloII:</b></font> so create lets me create in the browser via get, anyway to have the rest api only create via post?<br/>
+<font color="#A82F2F"><font size="2">(03:37:54 PM)</font> <b>leepers41:</b></font> JemiloII: come again<br/>
+<font color="#A82F2F"><font size="2">(03:39:35 PM)</font> <b>Dchen:</b></font> robdubya_: i lied before, turns out that was one of the reasons that could happen, but not the reason. I found the bug many places over the web. I think in this particular case, since its only happening on mobile chrome, its a memory issue<br/>
+<font color="#A82F2F"><font size="2">(03:40:54 PM)</font> <b>Dchen:</b></font> by doing my own socket io implementation, and setting the reconection attempt to 1, was the fix. That way when mobile chrome is in the background it doesn&apos;t keep trying to reconnect and take up more memory<br/>
+<font color="#A82F2F"><font size="2">(04:22:28 PM)</font> <b>michaeljcalkins:</b></font> Hello everyone!<br/>
+<font color="#A82F2F"><font size="2">(04:23:18 PM)</font> <b>robdubya_:</b></font> JemiloII the GET stuff are shortcuts, and should be turned off<br/>
+<font color="#A82F2F"><font size="2">(05:24:56 PM)</font> <b>JemiloII:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(05:25:18 PM)</font> <b>robdubya_:</b></font> JemiloII the blueprints are REST (eg create -&gt; POST /foo<br/>
+<font color="#A82F2F"><font size="2">(05:25:48 PM)</font> <b>JemiloII:</b></font> got another question, how does sails deal with multipart/form-data  uploading some images and trying to find them in the req.param<br/>
+<font color="#A82F2F"><font size="2">(05:34:39 PM)</font> <b>JemiloII:</b></font> i think i found it. req.file<br/>
+<font color="#A82F2F"><font size="2">(05:35:13 PM)</font> <b>robdubya_:</b></font> JemiloII this is changing, ref: https://github.com/balderdashy/skipper<br/>
+<font color="#A82F2F"><font size="2">(05:38:25 PM)</font> <b>JemiloII:</b></font> so req.file no works for sails 0.10<br/>
+<font color="#A82F2F"><font size="2">(05:39:46 PM)</font> <b>JemiloII:</b></font> oh its says its with 10 nice nice<br/>
+<font color="#A82F2F"><font size="2">(05:42:27 PM)</font> <b>JemiloII:</b></font> still a little confusing, i guess i have to give input typefile a name attribut<br/>
+<font size="2">(05:44:12 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

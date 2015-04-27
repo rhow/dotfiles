@@ -1,0 +1,129 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with abarton@i3.com at Tue 28 Oct 2014 07:18:51 AM MDT on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with abarton@i3.com at Tue 28 Oct 2014 07:18:51 AM MDT on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(08:56:10 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>morning Austin.  I'm looking into Python client capabilities for OpenSearch, not finding a lot.  Do you have any references for it?  Also is there an existing in-house OpenSearch api?</span><br/>
+<font color="#A82F2F"><font size="2">(09:06:18 AM)</font> <b>Austin Barton:</b></font> Good morning Randy.<br/>
+<font color="#A82F2F"><font size="2">(09:06:40 AM)</font> <b>Austin Barton:</b></font> OpenSearch is a REST API so I'm not sure there is a ton of value in a specific OS client?<br/>
+<font color="#A82F2F"><font size="2">(09:07:09 AM)</font> <b>Austin Barton:</b></font> It's been my opinion to this point that REST APIs are almost best using straight HTTP request libraries in Python.<br/>
+<font color="#A82F2F"><font size="2">(09:07:25 AM)</font> <b>Austin Barton:</b></font> I've worked with two rest apis providing client libraries and I've found very little value in those libraries.<br/>
+<font color="#A82F2F"><font size="2">(09:07:35 AM)</font> <b>Austin Barton:</b></font> And yes, we have some existing API.<br/>
+<font color="#A82F2F"><font size="2">(09:07:39 AM)</font> <b>Austin Barton:</b></font> ADM implements OpenSearch.<br/>
+<font color="#A82F2F"><font size="2">(09:07:49 AM)</font> <b>Austin Barton:</b></font> For DD4 we intend on having an extended version of OS.<br/>
+<font color="#A82F2F"><font size="2">(09:07:58 AM)</font> <b>Austin Barton:</b></font> ADM hasn't been tailored to that i3 specific flavor of the spec yet.<br/>
+<font color="#A82F2F"><font size="2">(09:08:04 AM)</font> <b>Austin Barton:</b></font> Mike would be most knowledgable on that.<br/>
+<font color="#A82F2F"><font size="2">(09:08:24 AM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm-m4-web/api">http://adm-m4-web/api</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(09:08:35 AM)</font> <b>Austin Barton:</b></font> I intend on changing that some day from /api to /os or something<br/>
+<font color="#A82F2F"><font size="2">(09:09:14 AM)</font> <b>Austin Barton:</b></font> What ADM implements is the part of the spec to make it queryable. It does not implement that stufff that allows the API itself to be discovered and used in a search client.<br/>
+<font color="#A82F2F"><font size="2">(09:10:01 AM)</font> <b>Austin Barton:</b></font> I'd suggest asking Darren. He implemented it.<br/>
+<font color="#A82F2F"><font size="2">(09:10:04 AM)</font> <b>Austin Barton:</b></font> I'm not super familiar<br/>
+<font color="#A82F2F"><font size="2">(09:11:49 AM)</font> <b>Austin Barton:</b></font> yep!<br/>
+<font color="#16569E"><font size="2">(03:42:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey!!  wanna see something kinda cool?</span><br/>
+<font color="#A82F2F"><font size="2">(07:41:15 AM)</font> <b>Austin Barton:</b></font> Sure<br/>
+<font color="#A82F2F"><font size="2">(07:41:56 AM)</font> <b>Austin Barton:</b></font> Good morning<br/>
+<font color="#A82F2F"><font size="2">(07:41:57 AM)</font> <b>Austin Barton:</b></font> How are you?<br/>
+<font color="#A82F2F"><font size="2">(07:43:07 AM)</font> <b>Austin Barton:</b></font> I'm doing all right. Still getting going!'<br/>
+<font color="#A82F2F"><font size="2">(07:43:48 AM)</font> <b>Austin Barton:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(10:01:01 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have a minute?</span><br/>
+<font color="#A82F2F"><font size="2">(10:01:07 AM)</font> <b>Austin Barton:</b></font> ya<br/>
+<font color="#16569E"><font size="2">(10:01:18 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Sweet!  Come on over!</span><br/>
+<font color="#16569E"><font size="2">(01:57:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>did the elasticSearch sync to the empty Virtuoso?</span><br/>
+<font color="#16569E"><font size="2">(01:57:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>It appears that it did.</span><br/>
+<font color="#A82F2F"><font size="2">(01:59:52 PM)</font> <b>Austin Barton:</b></font> ahhh<br/>
+<font color="#A82F2F"><font size="2">(01:59:54 PM)</font> <b>Austin Barton:</b></font> We're indexing now<br/>
+<font color="#A82F2F"><font size="2">(02:00:04 PM)</font> <b>Austin Barton:</b></font> You should have some content already<br/>
+<font color="#16569E"><font size="2">(02:11:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Sweet!</span><br/>
+<font color="#16569E"><font size="2">(02:13:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Hmm, <br/><a href="http://adm-m4-web.i3.local/api/?geometry=POLYGON((1.6479492187498%2043.52783203125,1.6479492187498%2043.538818359375,1.6589355468748%2043.538818359375,1.6589355468748">http://adm-m4-web.i3.local/api/?geometry=POLYGON((1.6479492187498%2043.52783203125,1.6479492187498%2043.538818359375,1.6589355468748%2043.538818359375,1.6589355468748</a></span><br/>
+<font color="#16569E"><font size="2">(02:13:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot;Query Error&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(02:14:31 PM)</font> <b>Austin Barton:</b></font> I passed it on to Darren<br/>
+<font color="#16569E"><font size="2">(02:15:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>shirked that one! </span><br/>
+<font color="#A82F2F"><font size="2">(02:15:16 PM)</font> <b>Austin Barton:</b></font> ;)<br/>
+<font color="#A82F2F"><font size="2">(02:15:31 PM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><span style='font-size: small;'><span style='color: #cc0000;'>(2:14:51 PM) </span></span><span style='color: #cc0000;'><span style='font-weight: bold;'><span style='font-size: medium;'>Darren Watts: </span></span></span><span style='font-size: medium;'/><span style='font-size: medium;'>yeah, probably when we deleted the resource, the elasticsearch index went away<br/></span><span style='font-size: small;'><span style='color: #cc0000;'>(2:15:04 PM) </span></span><span style='color: #cc0000;'><span style='font-weight: bold;'><span style='font-size: medium;'>Darren Watts: </span></span></span><span style='font-size: medium;'/><span style='font-size: medium;'>I had temporarily added a mapping to make that stuff work before<br/></span><span style='font-size: small;'><span style='color: #cc0000;'>(2:15:14 PM) </span></span><span style='color: #cc0000;'><span style='font-weight: bold;'><span style='font-size: medium;'>Darren Watts: </span></span></span><span style='font-size: medium;'/><span style='font-size: medium;'>I have a list of things that need to be fixed, but I haven&apos;t been working on ADM</span></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(02:15:48 PM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><span style='font-size: small;'><span style='color: #cc0000;'>(2:15:39 PM) </span></span><span style='color: #cc0000;'><span style='font-weight: bold;'><span style='font-size: medium;'>Darren Watts: </span></span></span><span style='font-size: medium;'/><span style='font-size: medium;'>so... it&apos;s all broken unless I spend some time fixing it</span></p></body></html><br/>
+<font color="#16569E"><font size="2">(02:16:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, good to know.</span><br/>
+<font color="#A82F2F"><font size="2">(02:17:26 PM)</font> <b>Austin Barton:</b></font> I'd suggest working with Darren as needed?<br/>
+<font color="#16569E"><font size="2">(02:18:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(04:34:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>We're going to have different content in ES now?</span><br/>
+<font color="#16569E"><font size="2">(03:43:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i thought maybe you went home.  Swing by before you head out.</span><br/>
+<font color="#A82F2F"><font size="2">(03:46:07 PM)</font> <b>Austin Barton:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(09:27:16 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey can you swing on over.</span><br/>
+<font color="#16569E"><font size="2">(09:27:20 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>DS and DW are here.</span><br/>
+<font color="#16569E"><font size="2">(08:00:13 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>morning austin!</span><br/>
+<font color="#A82F2F"><font size="2">(08:00:25 AM)</font> <b>Austin Barton:</b></font> Good morning Randy!<br/>
+<font color="#16569E"><font size="2">(08:00:38 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey i'm trying to install Shapely.</span><br/>
+<font color="#A82F2F"><font size="2">(08:00:46 AM)</font> <b>Austin Barton:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(08:02:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it says it installed but it appears that it could be better.</span><br/>
+<font color="#A82F2F"><font size="2">(08:02:10 AM)</font> <b>Austin Barton:</b></font> oh?<br/>
+<font color="#16569E"><font size="2">(08:02:45 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>here's the output, (sorry, big blob of stuff)</span><br/>
+<font color="#16569E"><font size="2">(08:02:51 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Downloading/unpacking Shapely (from -r requirements.txt (line 11))<br/>  Downloading Shapely-1.4.4.tar.gz (146kB): 146kB downloaded<br/>  Running setup.py (path:/home/likewise-open/I3/rhow/projects-django/padawan-ogc/virtualenv/build/Shapely/setup.py) egg_info for package Shapely<br/>    Numpy or Cython not available, shapely.vectorized submodule not being built.<br/>    <br/>Installing collected packages: Shapely<br/>  Running setup.py install for Shapely<br/>    Numpy or Cython not available, shapely.vectorized submodule not being built.<br/>    building 'shapely.speedups._speedups' extension<br/>    gcc -pthread -Wno-unused-result -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/likewise-open/I3/rhow/.pyenv/versions/3.3.5/include -I/home/likewise-open/I3/rhow/.pyenv/versions/3.3.5/include/python3.3m -c shapely/speedups/_speedups.c -o build/temp.linux-x86_64-3.3/shapely/speedups/_speedups.o<br/>    shapely/speedups/_speedups.c:229:20: fatal error: geos_c.h: No such file or directory<br/>    compilation terminated.<br/>    command 'gcc' failed with exit status 1<br/>    Warning: The C extension could not be compiled, speedups are not enabled.<br/>    Failure information, if any, is above.<br/>    I'm retrying the build without the C extension now.<br/>    <br/>    Warning: The C extension could not be compiled, speedups are not enabled.<br/>    Plain-Python installation succeeded.<br/>Successfully installed Shapely<br/>Cleaning up...<br/></span><br/>
+<font color="#A82F2F"><font size="2">(08:03:10 AM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><span style='color: #0a841a;'>Warning: The C extension could not be compiled, speedups are not enabled</span></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(08:03:12 AM)</font> <b>Austin Barton:</b></font> That stuff?<br/>
+<font color="#16569E"><font size="2">(08:03:14 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>What dependencies are needed?</span><br/>
+<font color="#16569E"><font size="2">(08:03:16 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Correct!</span><br/>
+<font color="#A82F2F"><font size="2">(08:03:48 AM)</font> <b>Austin Barton:</b></font> pypi says libgeos_c <br/>
+<font color="#A82F2F"><font size="2">(08:03:54 AM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="https://pypi.python.org/pypi/Shapely/1.4.4">https://pypi.python.org/pypi/Shapely/1.4.4</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(08:04:14 AM)</font> <b>Austin Barton:</b></font> Or are you asking about dependencies for building?<br/>
+<font color="#16569E"><font size="2">(08:04:28 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><span style='font-size: medium;'>geos_c.h: No such file or directory</span></span><br/>
+<font color="#A82F2F"><font size="2">(08:04:36 AM)</font> <b>Austin Barton:</b></font> I'm guessing that is the gdal-dev stuff<br/>
+<font color="#16569E"><font size="2">(08:05:03 AM)</font> <b>Randy How:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(08:05:40 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's a separate install?</span><br/>
+<font color="#16569E"><font size="2">(08:06:31 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/geolibs/">https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/geolibs/</a></span><br/>
+<font color="#A82F2F"><font size="2">(08:06:57 AM)</font> <b>Austin Barton:</b></font> I'm looking<br/>
+<font color="#A82F2F"><font size="2">(08:07:10 AM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><span style='font-weight: bold;'>yum whatprovides */geos_c.h</span></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(08:07:17 AM)</font> <b>Austin Barton:</b></font> looks like geos-devel<br/>
+<font color="#A82F2F"><font size="2">(08:07:41 AM)</font> <b>Austin Barton:</b></font> And I'd guess the gdal-devel wraps that in too<br/>
+<font color="#16569E"><font size="2">(08:08:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>did you see the django geospatial doc? </span><br/>
+<font color="#A82F2F"><font size="2">(08:08:19 AM)</font> <b>Austin Barton:</b></font> Yes. I didn't look at it in detail<br/>
+<font color="#A82F2F"><font size="2">(08:09:49 AM)</font> <b>Austin Barton:</b></font> Looks like django describes how to build geos from scratch<br/>
+<font color="#A82F2F"><font size="2">(08:09:54 AM)</font> <b>Austin Barton:</b></font> Which shapefly should have provided that for you<br/>
+<font color="#A82F2F"><font size="2">(08:10:14 AM)</font> <b>Austin Barton:</b></font> The GEOS_LIBRARY_PATH is interesting<br/>
+<font color="#A82F2F"><font size="2">(08:10:21 AM)</font> <b>Austin Barton:</b></font> That could be simple resolution for the optimization you seek<br/>
+<font color="#A82F2F"><font size="2">(08:10:36 AM)</font> <b>Austin Barton:</b></font> Actually... maybe not<br/>
+<font color="#16569E"><font size="2">(08:10:39 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(08:11:28 AM)</font> <b>Austin Barton:</b></font> I'm not a huge premature optimizer so I probably wouldn't do anything about the speedup stuff missing... If I were to go further I'd probably look at the geos-devel package through yum<br/>
+<font color="#16569E"><font size="2">(08:14:00 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'll add the geospatial libraries described on the geoDjango doc and reinstall Shapely and see what happens.</span><br/>
+<font color="#A82F2F"><font size="2">(08:17:45 AM)</font> <b>Austin Barton:</b></font> Good luck!<br/>
+<font color="#16569E"><font size="2">(08:30:12 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>This fixed it:<br/>sudo apt-get install binutils libproj-dev gdal-bin libgeos-dev<br/><br/>Most importantly it was the  libgeos-dev dependency</span> <br/>
+<font color="#A82F2F"><font size="2">(08:32:39 AM)</font> <b>Austin Barton:</b></font> cpp;<br/>
+<font color="#A82F2F"><font size="2">(08:32:41 AM)</font> <b>Austin Barton:</b></font> cool!<br/>
+<font color="#A82F2F"><font size="2">(08:32:43 AM)</font> <b>Austin Barton:</b></font> That's pretty easy<br/>
+<font color="#16569E"><font size="2">(08:33:43 AM)</font> <b>Randy How:</b></font> yeah, it took a few references but that's the combo that worked.  Now to play with Shapely<br/>
+<font color="#A82F2F"><font size="2">(08:33:54 AM)</font> <b>Austin Barton:</b></font> Nice<br/>
+<font color="#16569E"><font size="2">(08:54:59 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Hey hey Austin!</span><br/>
+<font color="#A82F2F"><font size="2">(08:55:14 AM)</font> <b>Austin Barton:</b></font> What's up Randy!?<br/>
+<font color="#A82F2F"><font size="2">(08:55:17 AM)</font> <b>Austin Barton:</b></font> Happy Thursday<br/>
+<font color="#16569E"><font size="2">(08:56:00 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it is Thursday!  Yeah!  Happy Happy!!</span><br/>
+<font color="#16569E"><font size="2">(08:56:33 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have a few minutes to swing by and chat?</span><br/>
+<font color="#A82F2F"><font size="2">(08:56:40 AM)</font> <b>Austin Barton:</b></font> sure thing<br/>
+<font color="#16569E"><font size="2">(08:56:59 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Excellent!</span><br/>
+<font color="#16569E"><font size="2">(09:36:54 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'> </span>\\data\2\dd\pops\spo2\nso\kiruna  FORMOSAT2 MS &amp; PAN<br/>\\data\2\dd\pops\spo2\nso\dmc_uk  DEMIOS &amp; DMC<br/>\\data\2\dd\pops\spo2\nso\pleiades - a few small AOI's<br/>\\data\2\dd\pops\spo2\nso\spot6<br/>(this data is Live - please be gentle)<br/>
+<font color="#A82F2F"><font size="2">(12:45:11 PM)</font> <b>Austin Barton:</b></font> SPOT and Pleiades data is available in ADM<br/>
+<font color="#16569E"><font size="2">(12:45:41 PM)</font> <b>Randy How:</b></font> Frickin' #AWESOME !<br/>
+<font color="#A82F2F"><font size="2">(12:45:47 PM)</font> <b>Austin Barton:</b></font> Lots of SPOT<br/>
+<font color="#A82F2F"><font size="2">(12:45:50 PM)</font> <b>Austin Barton:</b></font> very little Pleiades<br/>
+<font color="#16569E"><font size="2">(12:46:01 PM)</font> <b>Randy How:</b></font> that's fine.  Super, Thanks.<br/>
+<font color="#A82F2F"><font size="2">(12:46:19 PM)</font> <b>Austin Barton:</b></font> Do you want to hold off on the DMC/Formosat data?<br/>
+<font color="#A82F2F"><font size="2">(12:47:05 PM)</font> <b>Austin Barton:</b></font> I think I might go ahead with those to see how it works ;)<br/>
+<font color="#16569E"><font size="2">(12:47:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, go ahead with 'em</span><br/>
+<font color="#A82F2F"><font size="2">(01:19:28 PM)</font> <b>Austin Barton:</b></font> DMC is there. Formosat is partially there<br/>
+<font color="#16569E"><font size="2">(01:19:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Woot!!</span><br/>
+<font color="#A82F2F"><font size="2">(01:19:51 PM)</font> <b>Austin Barton:</b></font> Tons of DMC<br/><br/>
+<font color="#16569E"><font size="2">(01:20:36 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Double Woot!!</span><br/>
+<font color="#A82F2F"><font size="2">(01:21:00 PM)</font> <b>Austin Barton:</b></font> Let me know if you need more (such as the &quot;Owner&quot; field)<br/>
+<font color="#16569E"><font size="2">(01:21:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>an Owner field would be great.</span><br/>
+<font color="#A82F2F"><font size="2">(01:22:52 PM)</font> <b>Austin Barton:</b></font> You wish to filter by the owner field?<br/>
+<font color="#16569E"><font size="2">(01:23:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that would be great!</span><br/>
+<font color="#16569E"><font size="2">(01:27:06 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I have this string I want to write into a template:<br/>PROJ4_GEOGRAPHIC = '&quot;proj=longlat&quot; &quot;ellps=WGS84&quot; &quot;datum=WGS84&quot; &quot;no_defs&quot;'<br/><br/>But it's getting written into the file as:<br/>&amp;quot;proj=longlat&amp;quot; &amp;quot;ellps=WGS84&amp;quot; &amp;quot;datum=WGS84&amp;quot; &amp;quot;no_defs&amp;quot;</span><br/>
+<font color="#16569E"><font size="2">(01:27:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Do I need to escape all the quotes?  or use a prefix such as 'u' or 'r', for literal?</span><br/>
+<font color="#A82F2F"><font size="2">(01:31:46 PM)</font> <b>Austin Barton:</b></font> Oh<br/>
+<font color="#A82F2F"><font size="2">(01:31:48 PM)</font> <b>Austin Barton:</b></font> There is a function<br/>
+<font color="#A82F2F"><font size="2">(01:31:49 PM)</font> <b>Austin Barton:</b></font> hold on<br/>
+<font color="#A82F2F"><font size="2">(01:32:00 PM)</font> <b>Austin Barton:</b></font> A django template function<br/>
+<font color="#A82F2F"><font size="2">(01:32:03 PM)</font> <b>Austin Barton:</b></font> that says render this literally<br/>
+<font color="#16569E"><font size="2">(01:32:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, that would be #awesome !</span><br/>
+<font color="#A82F2F"><font size="2">(01:33:35 PM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>I don&apos;t know it offhand. But checkout <span style='font-weight: bold;'>String literals and automatic escaping </span>on <a href="https://docs.djangoproject.com/en/dev/topics/templates/#filters">https://docs.djangoproject.com/en/dev/topics/templates/#filters</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(01:34:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, thanks</span><br/>
+<font color="#16569E"><font size="2">(01:34:44 PM)</font> <b>Randy How:</b></font> <span style='font-weight: bold;'><span style='color: #999999;'>{{</span></span><span style='font-size: medium;'> <span style='color: #008080;'>data</span><span style='font-weight: bold;'>|<span style='color: #990000;'>safe</span></span> <span style='font-weight: bold;'><span style='color: #999999;'>}}</span></span></span><br/>
+<font color="#16569E"><font size="2">(01:35:35 PM)</font> <b>Randy How:</b></font> yep, that worked!  Thanks.<br/>
+<font color="#A82F2F"><font size="2">(01:37:54 PM)</font> <b>Austin Barton:</b></font> yep!<br/>
+<font color="#16569E"><font size="2">(01:59:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I'm seeing in ADM results features with this of data,</span><br/>dataType: &quot;Byte&quot;,<br/><span style='color: #0a841a;'><br/>I don't think it's rendering very well.  what would be other values for 'dataType'  ?</span><br/>
+<font color="#A82F2F"><font size="2">(01:59:51 PM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm.i3.com/ont/raster/#dataType">http://adm.i3.com/ont/raster/#dataType</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(02:00:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool</span><br/>
+<font color="#16569E"><font size="2">(03:29:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Hey gotta questions for ya!</span><br/>

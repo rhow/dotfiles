@@ -1,0 +1,441 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with dwatts@i3.com at Mon 10 Nov 2014 04:35:19 PM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with dwatts@i3.com at Mon 10 Nov 2014 04:35:19 PM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#A82F2F"><font size="2">(04:35:19 PM)</font> <b>Darren Watts:</b></font> I guess the reason that id= thing doesn't work is because it's currently set up to filter by the vendor's ID<br/>
+<font color="#A82F2F"><font size="2">(04:35:32 PM)</font> <b>Darren Watts:</b></font> so, other than q=, there's really just nothing set up for query by ADM ids at all<br/>
+<font color="#16569E"><font size="2">(04:35:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, thx!!</span><br/>
+<font color="#16569E"><font size="2">(05:08:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>is &quot;q=&quot; a very general query statement?  Hmm trying it out I'm not able to get &quot;q&quot; to work.</span><br/>
+<font color="#A82F2F"><font size="2">(05:09:11 PM)</font> <b>Darren Watts:</b></font> it's very general<br/>
+<font color="#A82F2F"><font size="2">(05:09:17 PM)</font> <b>Darren Watts:</b></font> what is an example where it doesn't work?<br/>
+<font color="#16569E"><font size="2">(05:09:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://adm-m4-web.i3.local/os/?q=file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-91-01_DS_SPOT6_201406161038401_FR1_FR1_FR1_FR1_E005N53_02602/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406161038401_SEN_958947101_R1C1.JP2">http://adm-m4-web.i3.local/os/?q=file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-91-01_DS_SPOT6_201406161038401_FR1_FR1_FR1_FR1_E005N53_02602/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406161038401_SEN_958947101_R1C1.JP2</a></span><br/>
+<font color="#A82F2F"><font size="2">(05:10:05 PM)</font> <b>Darren Watts:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(05:10:12 PM)</font> <b>Darren Watts:</b></font> must be the underscores screwing things up<br/>
+<font color="#16569E"><font size="2">(05:10:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>my thoughts exactly</span><br/>
+<font color="#16569E"><font size="2">(05:10:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>should it be encoded?</span><br/>
+<font color="#A82F2F"><font size="2">(05:11:21 PM)</font> <b>Darren Watts:</b></font> I don't think so, it's just something weird with the way elasticsearch does searches<br/>
+<font color="#16569E"><font size="2">(05:12:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, maybe we just need to skip the parent-child for the time being.</span><br/>
+<font color="#A82F2F"><font size="2">(05:12:22 PM)</font> <b>Darren Watts:</b></font> maybe<br/>
+<font color="#A82F2F"><font size="2">(05:12:23 PM)</font> <b>Darren Watts:</b></font> when is the demo?<br/>
+<font color="#16569E"><font size="2">(05:12:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>next week.</span><br/>
+<font color="#16569E"><font size="2">(05:12:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'll just have Yusuf put the </span>mask i want in each asset.<br/>
+<font color="#A82F2F"><font size="2">(05:13:56 PM)</font> <b>Darren Watts:</b></font> I don't know when exactly I'll get back to ADM.  Not sure if more tickets are coming my way or not, but I'll be done with what's on my plate tonight probably<br/>
+<font color="#16569E"><font size="2">(05:14:42 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, that would be good to get some more cycles around it.  It seems like a feature we need to nail down.</span><br/>
+<font color="#16569E"><font size="2">(05:15:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Not necessarily parent-child, but more importantly querying for a specific asset.</span><br/>
+<font color="#16569E"><font size="2">(05:15:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(know what i mean?)</span><br/>
+<font color="#A82F2F"><font size="2">(05:16:12 PM)</font> <b>Darren Watts:</b></font> well the UID stuff will work for that (assuming you found the UID in the first place)<br/>
+<font color="#A82F2F"><font size="2">(05:16:28 PM)</font> <b>Darren Watts:</b></font> there aren't any underscores or weird things in them that would break the search<br/>
+<font color="#16569E"><font size="2">(05:17:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, i could md5 the parentUri in the child asset, and query for the parent ?</span><br/>
+<font color="#A82F2F"><font size="2">(05:18:10 PM)</font> <b>Darren Watts:</b></font> ok, well we keep going back and forth on whether we're talking about the child URI<br/>
+<font color="#16569E"><font size="2">(05:18:20 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>do we?</span><br/>
+<font color="#A82F2F"><font size="2">(05:18:21 PM)</font> <b>Darren Watts:</b></font> ignoring the parent/child feature, the UID will work<br/>
+<font color="#A82F2F"><font size="2">(05:18:28 PM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><span style='font-weight: bold;'><span style='color: #cc0000;'>Randy How: </span></span><span style='font-size: medium;'><span style='color: #0a841a;'>so, maybe we just need to skip the parent-child for the time being.</span></span></p></body></html><br/>
+<font color="#16569E"><font size="2">(05:18:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(05:18:49 PM)</font> <b>Darren Watts:</b></font> depending on what you're going for<br/>
+<font color="#A82F2F"><font size="2">(05:19:19 PM)</font> <b>Darren Watts:</b></font> if we want parent/child, we need to fix the uri searches.  If you just want to query for a specific UID, say you got a page of 100, and want to drill down to just 1, you could use the UID<br/>
+<font color="#16569E"><font size="2">(05:20:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>brt</span><br/>
+<font color="#16569E"><font size="2">(02:07:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Question for ya, when querying the for parent assets in ADM, can the ID's/UID's be in a list?<br/>uid={1,2,3,4,...,n} </span><br/>
+<font color="#A82F2F"><font size="2">(02:08:23 PM)</font> <b>Darren Watts:</b></font> that should work<br/>
+<font color="#16569E"><font size="2">(02:08:40 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sweet!  </span><br/>
+<font color="#A82F2F"><font size="2">(02:19:58 PM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>this kind of stuff should work now:<br/><a href="http://adm-m4-web/os/?pretty=true&amp;assetId=file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2">http://adm-m4-web/os/?pretty=true&amp;assetId=file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(02:28:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool!!  that does work.</span><br/>
+<font color="#16569E"><font size="2">(02:29:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so it's assetId ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:29:19 PM)</font> <b>Darren Watts:</b></font> if you need to look something up the by URI, yes<br/>
+<font color="#A82F2F"><font size="2">(02:29:23 PM)</font> <b>Darren Watts:</b></font> uid= if you have the UID<br/>
+<font color="#A82F2F"><font size="2">(02:29:36 PM)</font> <b>Darren Watts:</b></font> which, I believe works in the API, but we don't have any data with UIDs yet<br/>
+<font color="#16569E"><font size="2">(02:30:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'll try it when Yusuf has the DIMAP extractor ready.</span><br/>
+<font color="#16569E"><font size="2">(02:33:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool!  This works:<br/><br/><a href="http://adm-m4-web.i3.local/os/?assetId={file://data/2/dd/pops/spo2/nso/spot6/20140719/nrSATDP12001_SO14003760-129-01_DS_SPOT6_201407191034414_FR1_FR1_FR1_FR1_E007N53_04713/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_P_001_A/IMG_SPOT6_P_201407191034414_SEN_967551101_R1C1.JP2,file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2}">http://adm-m4-web.i3.local/os/?assetId={file://data/2/dd/pops/spo2/nso/spot6/20140719/nrSATDP12001_SO14003760-129-01_DS_SPOT6_201407191034414_FR1_FR1_FR1_FR1_E007N53_04713/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_P_001_A/IMG_SPOT6_P_201407191034414_SEN_967551101_R1C1.JP2,file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2}</a></span><br/>
+<font color="#A82F2F"><font size="2">(02:33:31 PM)</font> <b>Darren Watts:</b></font> awesome.  I hadn't bothered testing, so that's good to know :P<br/>
+<font color="#16569E"><font size="2">(02:33:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]  is there a concern of a Url being too long?</span><br/>
+<font color="#A82F2F"><font size="2">(02:34:14 PM)</font> <b>Darren Watts:</b></font> probably.  Another thing I haven't tested, but should work is you can POST everything to the endpoint<br/>
+<font color="#A82F2F"><font size="2">(02:34:35 PM)</font> <b>Darren Watts:</b></font> which is what I would recommend for a real client<br/>
+<font color="#16569E"><font size="2">(02:35:34 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ah, true.  Ok, i'll try that.</span><br/>
+<font color="#A82F2F"><font size="2">(02:36:54 PM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>looks like it works:<br/>curl <a href="http://adm-m4-web/os/">http://adm-m4-web/os/</a> -d &quot;assetId={<a href="file://data/2/dd/pops/spo2/nso/spot6/20140719/nrSATDP12001_SO14003760-129-01_DS_SPOT6_201407191034414_FR1_FR1_FR1_FR1_E007N53_04713/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_P_001_A/IMG_SPOT6_P_201407191034414_SEN_967551101_R1C1.JP2,file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2}">file://data/2/dd/pops/spo2/nso/spot6/20140719/nrSATDP12001_SO14003760-129-01_DS_SPOT6_201407191034414_FR1_FR1_FR1_FR1_E007N53_04713/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_P_001_A/IMG_SPOT6_P_201407191034414_SEN_967551101_R1C1.JP2,file://data/2/dd/pops/spo2/nso/spot6/20140710/nrSATDP12001_SO14003760-87-01_DS_SPOT6_201406251019557_FR1_FR1_FR1_FR1_E004N52_04063/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_MS_001_A/IMG_SPOT6_MS_201406251019557_SEN_958943101_R1C1.JP2}</a>&quot;</p></body></html><br/>
+<font color="#16569E"><font size="2">(02:37:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's a POST ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:37:34 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(02:37:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool, good to know.</span><br/>
+<font color="#16569E"><font size="2">(04:38:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey do you know right off, in Python if a list/dict is passed into a function, is it byRef or byVal (a copy)?</span><br/>
+<font color="#A82F2F"><font size="2">(04:39:52 PM)</font> <b>Darren Watts:</b></font> guessing by reference, but not positive<br/>
+<font color="#A82F2F"><font size="2">(04:39:59 PM)</font> <b>Darren Watts:</b></font> I'm pretty sure you can modify the dictionary<br/>
+<font color="#A82F2F"><font size="2">(04:40:03 PM)</font> <b>Darren Watts:</b></font> not sure I've ever tried with a list<br/>
+<font color="#16569E"><font size="2">(04:40:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'll confirm it.  Sounds optimistic though.</span><br/>
+<font color="#16569E"><font size="2">(04:40:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thx</span><br/>
+<font color="#A82F2F"><font size="2">(04:40:31 PM)</font> <b>Darren Watts:</b></font> yeah, let me know when you find out<br/>
+<font color="#16569E"><font size="2">(04:41:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.  in IntelliJ have you used Cntl+F12  ?</span><br/>
+<font color="#A82F2F"><font size="2">(04:41:54 PM)</font> <b>Darren Watts:</b></font> i don't typically use keyboard shortcuts, what does it do?<br/>
+<font color="#16569E"><font size="2">(04:42:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]  it might be my new friend.</span><br/>
+<font color="#A82F2F"><font size="2">(04:42:27 PM)</font> <b>Darren Watts:</b></font> doesn't seem to be doing anything for me<br/>
+<font color="#16569E"><font size="2">(04:42:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>gives you a list of Class and their def's; then type and it'll narrow down the options; return to go to def.</span><br/>
+<font color="#16569E"><font size="2">(04:43:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(maybe that's why you don't use keyboard short cuts -] )</span><br/>
+<font color="#A82F2F"><font size="2">(04:44:41 PM)</font> <b>Darren Watts:</b></font> yeah, weird<br/>
+<font color="#16569E"><font size="2">(04:44:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>nothing ?</span><br/>
+<font color="#A82F2F"><font size="2">(04:45:02 PM)</font> <b>Darren Watts:</b></font> control and f12, right?<br/>
+<font color="#16569E"><font size="2">(04:45:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah.</span><br/>
+<font color="#A82F2F"><font size="2">(04:45:21 PM)</font> <b>Darren Watts:</b></font> yeah, doesn't do anything<br/>
+<font color="#A82F2F"><font size="2">(04:45:45 PM)</font> <b>Darren Watts:</b></font> I see it in the menu<br/>
+<font color="#16569E"><font size="2">(04:45:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>with that keyboard you may need to hit &quot;F Lock&quot; on the right side, next to &quot;Print&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(04:46:18 PM)</font> <b>Darren Watts:</b></font> i've tried it both ways<br/>
+<font color="#16569E"><font size="2">(04:46:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Should toggle the bottom green light in the middle.</span><br/>
+<font color="#16569E"><font size="2">(04:46:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm</span><br/>
+<font color="#16569E"><font size="2">(05:08:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i modified a dict in the list, and added a new key:value.  So, it's byRef... cool</span><br/>
+<font color="#A82F2F"><font size="2">(05:08:48 PM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(07:34:00 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Morning Darren.  I tried this last night and it seems to not work:<br/><a href="http://adm-m4-web.i3.local/os/?uid={25bf12852f7e26ee942b33846deb6517,25bf12852f7e26ee942b33846deb6517}">http://adm-m4-web.i3.local/os/?uid={25bf12852f7e26ee942b33846deb6517,25bf12852f7e26ee942b33846deb6517}</a><br/><br/><a href="http://adm-m4-web.i3.local/os/?uid={25bf12852f7e26ee942b33846deb6517,25bf12852f7e26ee942b33846deb6517}">http://adm-m4-web.i3.local/os/?uid=25bf12852f7e26ee942b33846deb6517</a></span><br/>
+<font color="#16569E"><font size="2">(07:34:11 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>The second one seems to work.</span><br/>
+<font color="#A82F2F"><font size="2">(09:25:16 AM)</font> <b>Darren Watts:</b></font> that's weird<br/>
+<font color="#16569E"><font size="2">(09:25:27 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>truly</span><br/>
+<font color="#A82F2F"><font size="2">(09:25:31 AM)</font> <b>Darren Watts:</b></font> dataFormat={GTiff,JP2000} seems to work, and that's exactly the same thing<br/>
+<font color="#16569E"><font size="2">(09:25:51 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right.  that's why I was optimistic</span><br/>
+<font color="#16569E"><font size="2">(09:27:04 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i've worked around it, but I thought you would like to know.  Also, as a cheat/hack I am hashing the parent ID's.</span><br/>
+<font color="#16569E"><font size="2">(09:27:23 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Seems to work alright.</span><br/>
+<font color="#A82F2F"><font size="2">(09:27:41 AM)</font> <b>Darren Watts:</b></font> why do you need to do that?<br/>
+<font color="#16569E"><font size="2">(09:32:57 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm the hash of parent_uri as the mask LAYER name, it's also used in each asset in the map file where appropriate.  At the moment to give the asset/featue a mask name, it was easier to hash and assign; rather than go look up the parent get the hash then go back and find the right asset and assign.</span><br/>
+<font color="#A82F2F"><font size="2">(09:34:03 AM)</font> <b>Darren Watts:</b></font> oh<br/>
+<font color="#A82F2F"><font size="2">(09:34:07 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(07:48:29 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Good Morning Darren!<br/>I'm looking at the sortKeys: </span><a href="http://adm-m4-web.i3.local/os/?sortKeys=resolution,0&amp;dataFormat=JP2000">http://adm-m4-web.i3.local/os/?</a><a href="http://adm-m4-web.i3.local/os/?sortKeys=resolution,0&amp;dataFormat=JP2000">dataFormat=JP2000</a>&amp;<a href="http://adm-m4-web.i3.local/os/?sortKeys=resolution,0&amp;dataFormat=JP2000">sortKeys=resolution,0</a><br/><br/><span style='color: #0a841a;'>Is there a means to have multiple sorts?  Something like this:<br/><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys={resolution,0,cloudCover,1}">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys={resolution,0,cloudCover,1}</a></span><br/>
+<font color="#16569E"><font size="2">(07:50:34 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Actually I don't see the sorting is enabled for cloudCover, is this correct? </span><br/>
+<font color="#A82F2F"><font size="2">(09:10:26 AM)</font> <b>Darren Watts:</b></font> should be<br/>
+<font color="#A82F2F"><font size="2">(09:10:30 AM)</font> <b>Darren Watts:</b></font> spaces separate different fields<br/>
+<font color="#A82F2F"><font size="2">(09:10:40 AM)</font> <b>Darren Watts:</b></font> sortKeys=resolution,0 cloudCover<br/>
+<font color="#16569E"><font size="2">(09:12:01 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.  <br/><span style='font-size: medium;'><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys={resolution,0,cloudCover,1}">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,0, cloudCover,1</a><br/>That seems to work.  The space separated is kinda of odd.</span></span><br/>
+<font color="#A82F2F"><font size="2">(09:12:28 AM)</font> <b>Darren Watts:</b></font> that worked for you?<br/>
+<font color="#A82F2F"><font size="2">(09:12:30 AM)</font> <b>Darren Watts:</b></font> i get an error<br/>
+<font color="#A82F2F"><font size="2">(09:12:52 AM)</font> <b>Darren Watts:</b></font> oh nvm<br/>
+<font color="#A82F2F"><font size="2">(09:12:56 AM)</font> <b>Darren Watts:</b></font> your link wasn't the same as the text<br/>
+<font color="#A82F2F"><font size="2">(09:13:26 AM)</font> <b>Darren Watts:</b></font> the UIDs thing should be fixed now too<br/>
+<font color="#16569E"><font size="2">(09:14:56 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><span style='font-size: medium;'>ah, ok.<br/>I'm switching cloudCover, and not seeing a difference<br/><br/><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,1%20cloudCover,0">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,1%20cloudCover,0</a></span></span><br/>
+<font color="#A82F2F"><font size="2">(09:16:22 AM)</font> <b>Darren Watts:</b></font> I'll take a look<br/>
+<font color="#16569E"><font size="2">(09:16:27 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><span style='font-size: medium;'>thanks.</span></span><br/>
+<font color="#A82F2F"><font size="2">(09:16:28 AM)</font> <b>Darren Watts:</b></font> there's something weird going on with cloud cover anyway<br/>
+<font color="#A82F2F"><font size="2">(09:16:40 AM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm-m4-web/os/?pretty=true&amp;sortKeys=cloudCover">http://adm-m4-web/os/?pretty=true&amp;sortKeys=cloudCover</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(09:17:24 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><span style='font-size: medium;'>yeah, that doesn't seem to be working.</span></span><br/>
+<font color="#16569E"><font size="2">(09:18:13 AM)</font> <b>Randy How:</b></font> <span style='font-weight: bold;'><span style='color: #cc0000;'>Darren Watts: </span></span><span style='font-size: medium;'>the UIDs thing should be fixed now too</span><br/><span style='color: #0a841a;'>Fantastic!!</span><br/>
+<font color="#A82F2F"><font size="2">(09:46:03 AM)</font> <b>Darren Watts:</b></font> I think the underlying problem with cloud cover is how the field is defined in ADM<br/>
+<font color="#A82F2F"><font size="2">(09:46:12 AM)</font> <b>Darren Watts:</b></font> the dimap extractor is setting it to an integer<br/>
+<font color="#A82F2F"><font size="2">(09:46:18 AM)</font> <b>Darren Watts:</b></font> so, we may have to re-index everything<br/>
+<font color="#16569E"><font size="2">(09:46:38 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ah, good find</span><br/>
+<font color="#16569E"><font size="2">(09:47:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.</span><br/>
+<font color="#16569E"><font size="2">(09:47:18 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>should it be an int?</span><br/>
+<font color="#A82F2F"><font size="2">(09:47:27 AM)</font> <b>Darren Watts:</b></font> I'd say it should be a double<br/>
+<font color="#16569E"><font size="2">(09:48:32 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right.  It's normalization with other extractors?</span><br/>
+<font color="#A82F2F"><font size="2">(09:49:34 AM)</font> <b>Darren Watts:</b></font> yeah, I still need to verify this is the problem.  Kind of seems like it though<br/>
+<font color="#16569E"><font size="2">(09:49:41 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in ADM should cloudCover be 0-100, and 100 being 100% clouds?</span><br/>
+<font color="#A82F2F"><font size="2">(09:49:51 AM)</font> <b>Darren Watts:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(09:49:57 AM)</font> <b>Darren Watts:</b></font> but I think you could have 3.5 or something<br/>
+<font color="#A82F2F"><font size="2">(09:50:20 AM)</font> <b>Darren Watts:</b></font> maybe there's something else going on though<br/>
+<font color="#16569E"><font size="2">(09:50:40 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>if you were going to be examining for clouds you'd like to say... &quot;there's 3.5% cloud cover&quot; ?</span><br/>
+<font color="#16569E"><font size="2">(09:51:16 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>if there's 10 pixels, 3.5 of them are clouds?</span><br/>
+<font color="#16569E"><font size="2">(09:51:23 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(09:52:09 AM)</font> <b>Darren Watts:</b></font> are you saying you've never seen cloud cover with a decimal<br/>
+<font color="#A82F2F"><font size="2">(09:52:13 AM)</font> <b>Darren Watts:</b></font> I guess I need to fire up datadoors<br/>
+<font color="#16569E"><font size="2">(09:53:33 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i don't really know.  I'm more just pokin' at ya than anything.  Yes, I'd get a second option.</span><br/>
+<font color="#A82F2F"><font size="2">(09:56:12 AM)</font> <b>Darren Watts:</b></font> what about an image with 3200 pixels, 112 have clouds<br/>
+<font color="#A82F2F"><font size="2">(09:56:34 AM)</font> <b>Darren Watts:</b></font> it starts to make sense with any image with more than 100 pixels, I think<br/>
+<font color="#A82F2F"><font size="2">(10:27:56 AM)</font> <b>Darren Watts:</b></font> will it mess you up if the API is unavailable for a little bit?<br/>
+<font color="#A82F2F"><font size="2">(10:28:22 AM)</font> <b>Darren Watts:</b></font> The new version of elasticsearch might help, and I'd like to upgrade it<br/>
+<font color="#16569E"><font size="2">(10:28:47 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, sounds good.</span><br/>
+<font color="#A82F2F"><font size="2">(10:28:53 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(10:38:05 AM)</font> <b>Darren Watts:</b></font> hmm, looks like the indexes are gone<br/>
+<font color="#16569E"><font size="2">(10:40:09 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>as in you broke it?  =]</span><br/>
+<font color="#A82F2F"><font size="2">(10:40:24 AM)</font> <b>Darren Watts:</b></font> maybe a little<br/>
+<font color="#A82F2F"><font size="2">(10:43:07 AM)</font> <b>Darren Watts:</b></font> well, it re-indexed the padawan stuff first, so that worked out OK<br/>
+<font color="#A82F2F"><font size="2">(10:43:11 AM)</font> <b>Darren Watts:</b></font> your stuff should still be there<br/>
+<font color="#16569E"><font size="2">(10:43:46 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Excellent!!</span><br/>
+<font color="#16569E"><font size="2">(10:44:06 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>is this fixing the cloudCover sorting?</span><br/>
+<font color="#A82F2F"><font size="2">(10:49:16 AM)</font> <b>Darren Watts:</b></font> possibly<br/>
+<font color="#A82F2F"><font size="2">(10:49:29 AM)</font> <b>Darren Watts:</b></font> there should be a decent amount of data now, maybe we can try it<br/>
+<font color="#A82F2F"><font size="2">(10:49:37 AM)</font> <b>Darren Watts:</b></font> actually, no, not yet<br/>
+<font color="#A82F2F"><font size="2">(10:49:40 AM)</font> <b>Darren Watts:</b></font> I need to change the code too<br/>
+<font color="#A82F2F"><font size="2">(10:49:47 AM)</font> <b>Darren Watts:</b></font> I'll test it locally<br/>
+<font color="#16569E"><font size="2">(10:51:40 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool, thx</span><br/>
+<font color="#16569E"><font size="2">(11:25:59 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i started the indexing for:<br/></span><a href="http://adm-m4-web.i3.local/admin/resources/edit/urn%3Aadm%3Asystem%3Aresource%3Afilesystemresource%3A13ff51fa-af48-4956-90a2-c86887ba67de">\\data\2\dd\pops\spo2\nso\pleiades</a><br/><span style='color: #0a841a;'>Is that alright?</span><br/>
+<font color="#A82F2F"><font size="2">(11:37:37 AM)</font> <b>Darren Watts:</b></font> yeah, I guess the problem is it's going to take a while for elasticsearch to catch up<br/>
+<font color="#A82F2F"><font size="2">(11:37:44 AM)</font> <b>Darren Watts:</b></font> because of that giant imagery resource<br/>
+<font color="#16569E"><font size="2">(11:38:18 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, good to know.</span><br/>
+<font color="#A82F2F"><font size="2">(11:38:32 AM)</font> <b>Darren Watts:</b></font> if you need it today, we might be able to come up with something<br/>
+<font color="#16569E"><font size="2">(11:38:56 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>just needed a bit more data to test the sorting keys.</span><br/>
+<font color="#16569E"><font size="2">(11:39:44 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>two samples it difficult to test double sorting.  cloudCover and Resolution</span><br/>
+<font color="#A82F2F"><font size="2">(11:40:27 AM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:40:45 AM)</font> <b>Darren Watts:</b></font> I'll see if I can manually run a sync against just that resource on my machine<br/>
+<font color="#16569E"><font size="2">(11:40:57 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, thanks</span><br/>
+<font color="#A82F2F"><font size="2">(11:53:17 AM)</font> <b>Darren Watts:</b></font> OK, I think that resource is there now<br/>
+<font color="#A82F2F"><font size="2">(11:53:21 AM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm-m4-web/os/?path=file://data/2/dd/pops/spo2/nso/pleiades">http://adm-m4-web/os/?path=file://data/2/dd/pops/spo2/nso/pleiades</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(11:54:13 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>fantastic!</span><br/>
+<font color="#A82F2F"><font size="2">(11:54:14 AM)</font> <b>Darren Watts:</b></font> that'd be interesting if the cloudCover sort was fixed just from the version update<br/>
+<font color="#A82F2F"><font size="2">(11:54:19 AM)</font> <b>Darren Watts:</b></font> maybe I don't need to change code<br/>
+<font color="#16569E"><font size="2">(11:54:34 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]  that's wishful thinking</span><br/>
+<font color="#A82F2F"><font size="2">(11:54:37 AM)</font> <b>Darren Watts:</b></font> ha<br/>
+<font color="#A82F2F"><font size="2">(11:57:18 AM)</font> <b>Darren Watts:</b></font> hmm, still doesn't seem like it works well<br/>
+<font color="#A82F2F"><font size="2">(11:58:47 AM)</font> <b>Darren Watts:</b></font> actually nevermind, it's working with the data we have so far.  My search was looping back around and I didn't realize it :P<br/>
+<font color="#16569E"><font size="2">(12:00:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i think it is working:<br/><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,0%20cloudCover,0">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,0%20cloudCover,0</a><br/><br/>searching for resolutionMeters: 1.5; it seems to go from 3 to 2;<br/><a href="http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,0%20cloudCover,1">http://adm-m4-web.i3.local/os/?dataFormat=JP2000&amp;sortKeys=resolution,0%20cloudCover,1</a><br/>goes from 2 to 3</span><br/>
+<font color="#A82F2F"><font size="2">(12:00:51 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(12:00:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>bitchin'</span><br/>
+<font color="#A82F2F"><font size="2">(12:01:07 PM)</font> <b>Darren Watts:</b></font> I may try manually indexing some of the other resources as well<br/>
+<font color="#A82F2F"><font size="2">(12:01:13 PM)</font> <b>Darren Watts:</b></font> it could take hours for it to sync that giant resource<br/>
+<font color="#16569E"><font size="2">(12:04:52 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>when i go here: <a href="http://adm-m4-web.i3.local/client/">http://adm-m4-web.i3.local/client/</a><br/><br/>And search for &quot;pleiades&quot;, the result with &quot;dimap&quot; don't display in the map.</span><br/>
+<font color="#16569E"><font size="2">(12:05:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>those are parents.</span><br/>
+<font color="#A82F2F"><font size="2">(12:05:35 PM)</font> <b>Darren Watts:</b></font> doesn't look like there's any geometry associated with those assets<br/>
+<font color="#A82F2F"><font size="2">(12:05:41 PM)</font> <b>Darren Watts:</b></font> so, makes sense<br/>
+<font color="#16569E"><font size="2">(12:05:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>but there's only 2 parents</span><br/>
+<font color="#16569E"><font size="2">(12:06:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>nevermind</span><br/>
+<font color="#A82F2F"><font size="2">(12:07:10 PM)</font> <b>Darren Watts:</b></font> it probably should clear off the old footprint when you click on it though<br/>
+<font color="#16569E"><font size="2">(12:07:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>tru</span><br/>
+<font color="#A82F2F"><font size="2">(12:07:22 PM)</font> <b>Darren Watts:</b></font> oh well<br/>
+<font color="#16569E"><font size="2">(12:07:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>true</span><br/>
+<font color="#16569E"><font size="2">(12:33:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ugh, my mask idea may need to be reworked.  Pleiade has different GML than the SPOT6/7; and MapServer doesn't like it.</span><br/>
+<font color="#16569E"><font size="2">(12:34:18 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>May have to get Yusuf to extract the WKT.</span><br/>
+<font color="#A82F2F"><font size="2">(01:04:31 PM)</font> <b>Darren Watts:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(01:04:35 PM)</font> <b>Darren Watts:</b></font> bummer<br/>
+<font color="#16569E"><font size="2">(01:04:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yes it is.</span><br/>
+<font color="#16569E"><font size="2">(04:51:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey I'd like to query using:<br/>&amp;processingLevel=Orthorectified</span><br/>
+<font color="#A82F2F"><font size="2">(04:52:02 PM)</font> <b>Darren Watts:</b></font> it's not working?<br/>
+<font color="#16569E"><font size="2">(04:52:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://adm-m4-web.i3.local/os/?dataFormat={JP2000}&amp;sortKeys=resolution,1%20cloudCover,0&amp;processingLevel=Orthorectified">http://adm-m4-web.i3.local/os/?dataFormat={JP2000}&amp;sortKeys=resolution,1%20cloudCover,0&amp;processingLevel=Orthorectified</a></span><br/>
+<font color="#16569E"><font size="2">(04:52:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>No</span><br/>
+<font color="#16569E"><font size="2">(04:53:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>is it really &quot;processingLevel&quot; ?</span><br/>
+<font color="#A82F2F"><font size="2">(04:53:49 PM)</font> <b>Darren Watts:</b></font> seems to be case sensitive on &quot;orthorectified&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:53:50 PM)</font> <b>Darren Watts:</b></font> who knows why<br/>
+<font color="#A82F2F"><font size="2">(04:54:17 PM)</font> <b>Darren Watts:</b></font> especially since that's not what the underlying data is<br/>
+<font color="#16569E"><font size="2">(04:55:01 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so yeah, this seems to work:<br/><a href="http://adm-m4-web.i3.local/os/?dataFormat={JP2000}&amp;sortKeys=resolution,1%20cloudCover,0&amp;processingLevel=orthorectified">http://adm-m4-web.i3.local/os/?dataFormat={JP2000}&amp;sortKeys=resolution,1%20cloudCover,0&amp;processingLevel=orthorectified</a></span><br/>
+<font color="#16569E"><font size="2">(04:55:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Ok, thanks</span><br/>
+<font color="#A82F2F"><font size="2">(01:42:10 PM)</font> <b>Darren Watts:</b></font> hey randy<br/>
+<font color="#16569E"><font size="2">(01:42:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hello Darren!!</span><br/>
+<font color="#A82F2F"><font size="2">(01:42:51 PM)</font> <b>Darren Watts:</b></font> mike just stopped by, wanted me to make sure you're aware of that &quot;bad data&quot; bug.  You know how sometimes it'll say the path is 2039672306927 or something<br/>
+<font color="#A82F2F"><font size="2">(01:42:58 PM)</font> <b>Darren Watts:</b></font> has that been affecting your data at all?<br/>
+<font color="#16569E"><font size="2">(01:45:18 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>he just swung by.  i think i'm good, I haven't tripped over it yet.  I&quot;m comfortable with it, unless you tell me otherwise.</span><br/>
+<font color="#A82F2F"><font size="2">(01:45:31 PM)</font> <b>Darren Watts:</b></font> are you going to be adding new data during the demo?<br/>
+<font color="#16569E"><font size="2">(01:46:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>no, not during the demo.  we have some slated to ingest maybe this evening.  I didn't want to do that until after this demo.</span><br/>
+<font color="#A82F2F"><font size="2">(01:46:25 PM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(01:46:34 PM)</font> <b>Darren Watts:</b></font> well if the data is already there and good, there should be no problem<br/>
+<font color="#16569E"><font size="2">(01:46:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, great.  that's comforting, Thanks. =]</span><br/>
+<font color="#A82F2F"><font size="2">(10:18:22 AM)</font> <b>Darren Watts:</b></font> hey randy<br/>
+<font color="#16569E"><font size="2">(10:19:07 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>good morning Darren!</span><br/>
+<font color="#A82F2F"><font size="2">(10:19:15 AM)</font> <b>Darren Watts:</b></font> good morning<br/>
+<font color="#A82F2F"><font size="2">(10:19:23 AM)</font> <b>Darren Watts:</b></font> I'm wondering if you guys still need adm-m4 to be stable?<br/>
+<font color="#A82F2F"><font size="2">(10:19:26 AM)</font> <b>Darren Watts:</b></font> are you doing any more demos?<br/>
+<font color="#16569E"><font size="2">(10:20:37 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, i'm doing some development.  You're wondering about upgrading V. ?</span><br/>
+<font color="#A82F2F"><font size="2">(10:21:17 AM)</font> <b>Darren Watts:</b></font> yeah, and we may want to do more stuff.  Austin is working on replacing virtuoso, but I'm guessing we won't do anything with that today<br/>
+<font color="#16569E"><font size="2">(10:22:07 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>how long do you think it'll be unavailable/not stable ?</span><br/>
+<font color="#16569E"><font size="2">(10:22:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>if you started now it would how long?  before lunch?</span><br/>
+<font color="#A82F2F"><font size="2">(10:22:45 AM)</font> <b>Darren Watts:</b></font> depends on if I run into problems<br/>
+<font color="#16569E"><font size="2">(10:22:50 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(10:22:59 AM)</font> <b>Darren Watts:</b></font> I'm also working on something else at the same time, so it would depend on how much time I can dedicate to it<br/>
+<font color="#A82F2F"><font size="2">(10:23:28 AM)</font> <b>Darren Watts:</b></font> overall we can't really keep it stable if we want to make progress with ADM<br/>
+<font color="#A82F2F"><font size="2">(10:23:38 AM)</font> <b>Darren Watts:</b></font> so that's why I'm wondering if we're done with the demos<br/>
+<font color="#A82F2F"><font size="2">(10:24:08 AM)</font> <b>Darren Watts:</b></font> ideally, it would only be down for 30 minutes or something and then we'd start a scan of a huge amount of data<br/>
+<font color="#A82F2F"><font size="2">(10:24:23 AM)</font> <b>Darren Watts:</b></font> but part of me wants to start with a fresh database too<br/>
+<font color="#16569E"><font size="2">(10:29:23 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm...</span><br/>
+<font color="#16569E"><font size="2">(10:30:43 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>at a minimum, i want to get an ADM response so I can move forward on a unit test.  As far as demos, i may have one more.</span><br/>
+<font color="#A82F2F"><font size="2">(10:31:27 AM)</font> <b>Darren Watts:</b></font> do you know when it will be?<br/>
+<font color="#16569E"><font size="2">(10:32:00 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>these guys want to wrap up at 2.</span><br/>
+<font color="#16569E"><font size="2">(10:32:11 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it'll before that.</span><br/>
+<font color="#A82F2F"><font size="2">(10:32:15 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(10:32:18 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it'll be before that.</span><br/>
+<font color="#16569E"><font size="2">(10:32:41 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#A82F2F"><font size="2">(02:05:09 PM)</font> <b>Darren Watts:</b></font> Heeeey Randy!<br/>
+<font color="#A82F2F"><font size="2">(02:05:29 PM)</font> <b>Darren Watts:</b></font> it's after 2!<br/>
+<font color="#16569E"><font size="2">(02:09:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it is, we're done.  I've got what i need.  Thanks.  Keep me posted how your procedures go.</span><br/>
+<font color="#A82F2F"><font size="2">(02:09:18 PM)</font> <b>Darren Watts:</b></font> ok will do<br/>
+<font color="#A82F2F"><font size="2">(03:17:13 PM)</font> <b>Darren Watts:</b></font> hey, what was the path to that padawan stuff?<br/>
+<font color="#16569E"><font size="2">(03:21:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot;path&quot; ?</span><br/>
+<font color="#A82F2F"><font size="2">(03:22:02 PM)</font> <b>Darren Watts:</b></font> yeah, I want to set up the resource in ADM<br/>
+<font color="#16569E"><font size="2">(03:22:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>for the resource?</span><br/>
+<font color="#16569E"><font size="2">(03:22:06 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(03:22:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>just a sec</span><br/>
+<font color="#16569E"><font size="2">(03:22:58 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>X:\1\dd\streaming\airbus\imagery</span><br/>
+<font color="#A82F2F"><font size="2">(03:23:48 PM)</font> <b>Darren Watts:</b></font> thanks<br/>
+<font color="#16569E"><font size="2">(03:24:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and this one:<br/>X:\1\dd\streaming\astrium\20141107_PADAWAN</span><br/>
+<font color="#16569E"><font size="2">(03:24:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thank you.</span><br/>
+<font color="#16569E"><font size="2">(05:02:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>how did your &quot;upgrade&quot; go?</span><br/>
+<font color="#A82F2F"><font size="2">(05:02:38 PM)</font> <b>Darren Watts:</b></font> seems OK<br/>
+<font color="#A82F2F"><font size="2">(05:02:46 PM)</font> <b>Darren Watts:</b></font> running a huge index again, we'll see if the speed is any better<br/>
+<font color="#A82F2F"><font size="2">(05:03:01 PM)</font> <b>Darren Watts:</b></font> also, we'll see if the elasticsearch sync tool runs into any &quot;bad&quot; data<br/>
+<font color="#A82F2F"><font size="2">(05:03:07 PM)</font> <b>Darren Watts:</b></font> but, probably won't find out until monday<br/>
+<font color="#16569E"><font size="2">(05:03:31 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Ok, good to here?</span><br/>
+<font color="#A82F2F"><font size="2">(05:03:40 PM)</font> <b>Darren Watts:</b></font> seems like it<br/>
+<font color="#A82F2F"><font size="2">(05:03:50 PM)</font> <b>Darren Watts:</b></font> it took 5 minutes to index that PADAWAN folder, which is pretty questionable<br/>
+<font color="#A82F2F"><font size="2">(05:04:08 PM)</font> <b>Darren Watts:</b></font> but that was using the DIMAP extractor, and I'm using GDAL on this other huge resource<br/>
+<font color="#16569E"><font size="2">(05:04:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sorry, i didn't really mean for that to be a question.</span><br/>
+<font color="#A82F2F"><font size="2">(05:04:20 PM)</font> <b>Darren Watts:</b></font> GDAL seems to be doing a lot better<br/>
+<font color="#16569E"><font size="2">(05:05:01 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>how about the &quot;airbus&quot; folder?  that one was bigger, how long did that one take?</span><br/>
+<font color="#A82F2F"><font size="2">(05:05:27 PM)</font> <b>Darren Watts:</b></font> hmm, didn't do that one.  I just now saw you listed 2 different paths :P<br/>
+<font color="#16569E"><font size="2">(05:06:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#16569E"><font size="2">(05:06:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the &quot;PADAWAN&quot; is only a few scenes.  The airbus is a few hundred gig's.</span><br/>
+<font color="#A82F2F"><font size="2">(05:07:07 PM)</font> <b>Darren Watts:</b></font> same kind of data?<br/>
+<font color="#16569E"><font size="2">(05:07:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, DIMAP.</span><br/>
+<font color="#A82F2F"><font size="2">(05:07:44 PM)</font> <b>Darren Watts:</b></font> ok, yeah not sure how long that one would have taken<br/>
+<font color="#16569E"><font size="2">(05:08:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>if you can index that one please that would be great!</span><br/>
+<font color="#A82F2F"><font size="2">(05:08:28 PM)</font> <b>Darren Watts:</b></font> can it wait till monday?<br/>
+<font color="#A82F2F"><font size="2">(05:08:48 PM)</font> <b>Darren Watts:</b></font> honestly, I'm not sure how available adm-m4 is going to be next week<br/>
+<font color="#A82F2F"><font size="2">(05:08:53 PM)</font> <b>Darren Watts:</b></font> we should figure something else out, probably<br/>
+<font color="#16569E"><font size="2">(11:24:27 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>do we need to chat about ADM availability?</span><br/>
+<font color="#A82F2F"><font size="2">(11:25:39 AM)</font> <b>Darren Watts:</b></font> don't know.  Basiclaly we only have one dev system right now, shared between me and austin, QA and you<br/>
+<font color="#A82F2F"><font size="2">(11:26:14 AM)</font> <b>Darren Watts:</b></font> Austin's working on re-writing a good chunk of the internal code, so we're going to want to test that when he's ready (not sure when that will be)<br/>
+<font color="#A82F2F"><font size="2">(11:26:26 AM)</font> <b>Darren Watts:</b></font> but, during that time, I wouldn't count on it being very available<br/>
+<font color="#16569E"><font size="2">(11:26:27 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#16569E"><font size="2">(11:28:13 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hello Darren!!</span><br/>
+<font color="#A82F2F"><font size="2">(11:28:28 AM)</font> <b>Darren Watts:</b></font> hey Randy<br/>
+<font color="#16569E"><font size="2">(11:29:00 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can i swing by and chat with ya, regarding ADM demands and stability</span><br/>
+<font color="#A82F2F"><font size="2">(11:29:18 AM)</font> <b>Darren Watts:</b></font> sure<br/>
+<font color="#16569E"><font size="2">(12:58:52 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>question about he bbox query into ADM.  the results are assets where the query_bbox intersects the bbox of the asset?  As oppose to the actual geometry intersection?<br/>Therefore, I may have results that don't actually touch the geometry, correct?</span><br/>
+<font color="#A82F2F"><font size="2">(12:59:15 PM)</font> <b>Darren Watts:</b></font> correct<br/>
+<font color="#16569E"><font size="2">(12:59:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, thanks</span><br/>
+<font color="#A82F2F"><font size="2">(12:59:41 PM)</font> <b>Darren Watts:</b></font> did yusuf's changes work?<br/>
+<font color="#16569E"><font size="2">(01:00:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it looks like it.</span><br/>
+<font color="#A82F2F"><font size="2">(01:00:20 PM)</font> <b>Darren Watts:</b></font> cool<br/>
+<font color="#16569E"><font size="2">(02:40:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>there's only 3 ADM works?  </span><br/>
+<font color="#A82F2F"><font size="2">(02:40:44 PM)</font> <b>Darren Watts:</b></font> workers, yes<br/>
+<font color="#A82F2F"><font size="2">(02:40:47 PM)</font> <b>Darren Watts:</b></font> on adm-m4<br/>
+<font color="#16569E"><font size="2">(02:41:20 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(02:41:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://adm-m4-web.i3.local/os/?&amp;bbox=0.3405761718748,45.626220703125,0.3460693359373,45.631713867187&amp;sortKeys=date,1%20resolution,0%20cloudCover,0&amp;dataFormat={JP2000,GTiff}&amp;processingLevel=orthorectified">http://adm-m4-web.i3.local/os/?&amp;bbox=0.3405761718748,45.626220703125,0.3460693359373,45.631713867187&amp;sortKeys=date,1%20resolution,0%20cloudCover,0&amp;dataFormat={JP2000,GTiff}&amp;processingLevel=orthorectified</a></span><br/>
+<font color="#16569E"><font size="2">(02:41:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>we're seeing indexDate's from last week.</span><br/>
+<font color="#A82F2F"><font size="2">(02:42:19 PM)</font> <b>Darren Watts:</b></font> most of the data was indexed last week<br/>
+<font color="#16569E"><font size="2">(02:42:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right.  from the update this morning this should of been re-indexed?</span><br/>
+<font color="#A82F2F"><font size="2">(02:43:28 PM)</font> <b>Darren Watts:</b></font> probably, yeah<br/>
+<font color="#16569E"><font size="2">(02:43:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>would that indexDate value be updated if during the &quot;re-indexing&quot; ?</span><br/>
+<font color="#16569E"><font size="2">(02:44:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>looking for a recommendation.<br/>should i re-run?  or delete and re-add the Resource, run it again?</span><br/>
+<font color="#A82F2F"><font size="2">(02:44:57 PM)</font> <b>Darren Watts:</b></font> not sure, I'd think it should have worked<br/>
+<font color="#A82F2F"><font size="2">(02:45:02 PM)</font> <b>Darren Watts:</b></font> apparently not<br/>
+<font color="#16569E"><font size="2">(02:45:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(02:45:13 PM)</font> <b>Darren Watts:</b></font> you can delete and re-run<br/>
+<font color="#16569E"><font size="2">(02:45:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, will do.  thx  =]</span><br/>
+<font color="#16569E"><font size="2">(02:47:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>then does it have to re-sync after that?</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:20 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(02:47:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k.</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:30 PM)</font> <b>Darren Watts:</b></font> that should happen within a minute<br/>
+<font color="#16569E"><font size="2">(02:48:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right, very good. it's running.</span><br/>
+<font color="#16569E"><font size="2">(02:57:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, should have the same UID right?</span><br/>
+<font color="#A82F2F"><font size="2">(02:57:44 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(02:58:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>as long as the file is the same.</span><br/>
+<font color="#A82F2F"><font size="2">(02:58:43 PM)</font> <b>Darren Watts:</b></font> I think there's just something broken with the latest code<br/>
+<font color="#16569E"><font size="2">(02:58:52 PM)</font> <b>Randy How:</b></font> <span style='font-size: medium;'><span style='font-family: monospace;'><span style='color: #008000;'><a href="http://adm-m4-web.i3.local/os/?uid=7b88b4de42eafe847e181b50cf48b11f">http://adm-m4-web.i3.local/os/?uid=7b88b4de42eafe847e181b50cf48b11f</a></span></span></span><br/>
+<font color="#16569E"><font size="2">(02:59:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>latest code?  who's code?  Yusuf's?</span><br/>
+<font color="#A82F2F"><font size="2">(02:59:24 PM)</font> <b>Darren Watts:</b></font> I think so<br/>
+<font color="#A82F2F"><font size="2">(02:59:28 PM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm-m4-web/kibana/index.html#/dashboard/elasticsearch/index?query=02df4230-4afd-45cc-82b3-f371729fc7a5">http://adm-m4-web/kibana/index.html#/dashboard/elasticsearch/index?query=02df4230-4afd-45cc-82b3-f371729fc7a5</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(02:59:39 PM)</font> <b>Darren Watts:</b></font> doesn't look so good<br/>
+<font color="#16569E"><font size="2">(03:00:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'll pass it on to him.  THanks.</span><br/>
+<font color="#16569E"><font size="2">(03:39:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it ran really fast, but there's no results; and the Log Messages aren't showing anything.</span><br/>
+<font color="#A82F2F"><font size="2">(11:33:09 AM)</font> <b>Darren Watts:</b></font> Hey Randy, we need to do gather some data about virtuoso, because we're in contact with a consultant.  Long story short, I think for the next day or so, there's not going to be any useful data in adm-m4 for you<br/>
+<font color="#16569E"><font size="2">(11:43:17 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh my.</span><br/>
+<font color="#16569E"><font size="2">(11:45:42 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, ok.  I guess we should be able to get it running else where (?).</span><br/>
+<font color="#A82F2F"><font size="2">(11:47:03 AM)</font> <b>Darren Watts:</b></font> not real easily<br/>
+<font color="#16569E"><font size="2">(12:05:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>but it's do-able i suspect.  I'm enlisting John, and maybe he can work on it tomorrow.</span><br/>
+<font color="#A82F2F"><font size="2">(12:06:29 PM)</font> <b>Darren Watts:</b></font> the existing recipes he has probably need to be updated in some way. You'll end up with the broken gdal<br/>
+<font color="#16569E"><font size="2">(12:06:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.</span><br/>
+<font color="#A82F2F"><font size="2">(12:06:47 PM)</font> <b>Darren Watts:</b></font> but yeah, it's all possible<br/>
+<font color="#16569E"><font size="2">(12:07:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i think he has recipes for the worker, not the server/elasticSearch/openSearch, etc.</span><br/>
+<font color="#A82F2F"><font size="2">(12:08:16 PM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(12:08:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and the server would include Virtuoso, correct?</span><br/>
+<font color="#A82F2F"><font size="2">(12:09:33 PM)</font> <b>Darren Watts:</b></font> if you mean the web server with apache, no, that's usually a different machine<br/>
+<font color="#A82F2F"><font size="2">(12:10:16 PM)</font> <b>Darren Watts:</b></font> in an ideal world there'd be a recipe for web server, worker, windows worker, database machine, elasticsearch machine, redis/rabbit machine<br/>
+<font color="#16569E"><font size="2">(12:10:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#A82F2F"><font size="2">(12:10:32 PM)</font> <b>Darren Watts:</b></font> or some combination of database/elasticsearch/redis/rabbit<br/>
+<font color="#16569E"><font size="2">(12:11:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>is this documented on the dev wiki?</span><br/>
+<font color="#A82F2F"><font size="2">(12:11:20 PM)</font> <b>Darren Watts:</b></font> sort of<br/>
+<font color="#A82F2F"><font size="2">(12:11:26 PM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://utility2:8084/mediawiki/ADM_Milestone5_Configuration">http://utility2:8084/mediawiki/ADM_Milestone5_Configuration</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(12:11:32 PM)</font> <b>Darren Watts:</b></font> that's the latest configuration notes<br/>
+<font color="#A82F2F"><font size="2">(12:11:37 PM)</font> <b>Darren Watts:</b></font> it hasn't been updated with redis and stuff though<br/>
+<font color="#A82F2F"><font size="2">(12:11:42 PM)</font> <b>Darren Watts:</b></font> and doesn't really map to a recipe<br/>
+<font color="#16569E"><font size="2">(12:15:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>for padawan/dimap extractor it's true that the Windows worker isn't required?</span><br/>
+<font color="#A82F2F"><font size="2">(12:15:16 PM)</font> <b>Darren Watts:</b></font> that's true<br/>
+<font color="#16569E"><font size="2">(12:15:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(12:15:25 PM)</font> <b>Darren Watts:</b></font> assuming we get a linux machine with a fixed gdal<br/>
+<font color="#A82F2F"><font size="2">(12:15:51 PM)</font> <b>Darren Watts:</b></font> I have the docker notes for how to set gdal up, if that will help anything<br/>
+<font color="#16569E"><font size="2">(12:16:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i'm sure they would.  It's the Dockerfile?</span><br/>
+<font color="#A82F2F"><font size="2">(12:17:28 PM)</font> <b>Darren Watts:</b></font> yeah, it can probably be converted to a chef recipe easily enough<br/>
+<font color="#A82F2F"><font size="2">(12:17:40 PM)</font> <b>Darren Watts:</b></font> I can email you the snippet related to gdal<br/>
+<font color="#16569E"><font size="2">(12:18:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>are you going to commit the Dockerfile somewhere ?</span><br/>
+<font color="#A82F2F"><font size="2">(12:18:38 PM)</font> <b>Darren Watts:</b></font> at some point, probably.  I still don't really know where all this stuff is going to live<br/>
+<font color="#A82F2F"><font size="2">(12:19:17 PM)</font> <b>Darren Watts:</b></font> I wouldn't call any of my dockerfiles complete yet, and I still don't know how I'm going to get all the machines working together at this point.  So I haven't committed anything yet<br/>
+<font color="#16569E"><font size="2">(12:19:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right</span><br/>
+<font color="#A82F2F"><font size="2">(11:13:38 AM)</font> <b>Darren Watts:</b></font> We've got 6 machines on the dev-cluster: (adm-m5-db, adm-m5-es, adm-m5-services, adm-m5-web, adm-m5-worker, adm-m5-worker2)<br/><br/>adm-m5-worker already has an IP assigned to it (10.200.120.24).  The rest of them are currently just using DHCP, and will need to have some IP addresses assigned to them.<br/><br/>All of the machines will need DNS aliases set up.  The alias names should match the names listed above.<br/>
+<font color="#16569E"><font size="2">(11:28:05 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sent</span><br/>
+<font color="#A82F2F"><font size="2">(11:28:17 AM)</font> <b>Darren Watts:</b></font> cool, thanks<br/>
+<font color="#16569E"><font size="2">(11:28:38 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you probably won't be included in the replies, i'll keep you posted.</span><br/>
+<font color="#16569E"><font size="2">(11:28:42 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(thank you)</span><br/>
+<font color="#A82F2F"><font size="2">(11:30:50 AM)</font> <b>Darren Watts:</b></font> hmm, I forgot to mention to John that the virtuoso instructions aren't really that great<br/>
+<font color="#16569E"><font size="2">(11:31:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(11:31:03 AM)</font> <b>Darren Watts:</b></font> we need the latest development version of virtuoso<br/>
+<font color="#A82F2F"><font size="2">(11:31:17 AM)</font> <b>Darren Watts:</b></font> which isn't really easily available<br/>
+<font color="#16569E"><font size="2">(11:32:01 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>do you have instructions or info on how to get it?</span><br/>
+<font color="#A82F2F"><font size="2">(11:32:16 AM)</font> <b>Darren Watts:</b></font> i mean, I guess I did update the instructions to note that<br/>
+<font color="#A82F2F"><font size="2">(11:32:22 AM)</font> <b>Darren Watts:</b></font> but they aren't step-by-step<br/>
+<font color="#A82F2F"><font size="2">(11:32:36 AM)</font> <b>Darren Watts:</b></font> I just go to github and download the zip with a browser, and transfer the file over<br/>
+<font color="#16569E"><font size="2">(11:32:45 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.  I'll let John know, he'll probably ping about it.</span><br/>
+<font color="#A82F2F"><font size="2">(11:32:47 AM)</font> <b>Darren Watts:</b></font> possibly he could install git and clone it or something, I haven't tried that<br/>
+<font color="#16569E"><font size="2">(02:47:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey hey Darren!!</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:10 PM)</font> <b>Darren Watts:</b></font> hey<br/>
+<font color="#16569E"><font size="2">(02:47:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>how's things?</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:37 PM)</font> <b>Darren Watts:</b></font> still trying to figure out how to get gdal working<br/>
+<font color="#A82F2F"><font size="2">(02:47:58 PM)</font> <b>Darren Watts:</b></font> i'm trying to go back to 1.9 now<br/>
+<font color="#16569E"><font size="2">(02:48:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>this is looking reasonable!!<br/><a href="http://adm-m5-web.i3.local/">http://adm-m5-web.i3.local/</a></span><br/>
+<font color="#16569E"><font size="2">(02:48:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>1.9 version of gdal?</span><br/>
+<font color="#A82F2F"><font size="2">(02:48:27 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(02:55:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i see you the airbus resource in, but it's not &quot;progressing&quot;.  Is that due to GDAL on the worker or the server?</span><br/>
+<font color="#A82F2F"><font size="2">(02:56:06 PM)</font> <b>Darren Watts:</b></font> worker<br/>
+<font color="#A82F2F"><font size="2">(02:56:17 PM)</font> <b>Darren Watts:</b></font> although I'll have to probably rebuild the server if I can figure out which version of gdal actually works<br/>
+<font color="#16569E"><font size="2">(02:57:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so the install of GDAL on the worker was successful, but then fails attempting to do &quot;work&quot; ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:57:34 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(02:57:42 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>drag</span><br/>
+<font color="#A82F2F"><font size="2">(02:57:46 PM)</font> <b>Darren Watts:</b></font> pretty much<br/>
+<font color="#16569E"><font size="2">(05:35:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>any progress with ADM?</span><br/>
+<font color="#A82F2F"><font size="2">(05:35:15 PM)</font> <b>Darren Watts:</b></font> no<br/>
+<font color="#16569E"><font size="2">(05:35:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]  bummer!</span><br/>
+<font color="#16569E"><font size="2">(05:35:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what are you going to do?</span><br/>
+<font color="#A82F2F"><font size="2">(05:35:41 PM)</font> <b>Darren Watts:</b></font> I might just try the repos tomorrow, don't know if that has what we need<br/>
+<font color="#A82F2F"><font size="2">(05:36:02 PM)</font> <b>Darren Watts:</b></font> other than that, I'm about out of things to try<br/>
+<font color="#16569E"><font size="2">(05:36:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i got to take off, i'll hit you up in the morning.</span><br/>
+<font color="#16569E"><font size="2">(05:37:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>still GDAL, the bastard child?</span><br/>
+<font color="#A82F2F"><font size="2">(05:38:02 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(05:38:36 PM)</font> <b>Darren Watts:</b></font> using a repo may get us what we need for padawan<br/>
+<font color="#A82F2F"><font size="2">(05:38:38 PM)</font> <b>Darren Watts:</b></font> who knows<br/>
+<font color="#16569E"><font size="2">(05:38:59 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, well... good luck.  See ya tomorrow.</span><br/>
+<font color="#A82F2F"><font size="2">(05:39:04 PM)</font> <b>Darren Watts:</b></font> see you<br/>
+<font color="#16569E"><font size="2">(10:59:18 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have the Dockerfile file, i can start working on the Ubuntu version.</span><br/>
+<font color="#A82F2F"><font size="2">(10:59:41 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(11:26:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what's the GDAL test?</span><br/>
+<font color="#16569E"><font size="2">(11:26:43 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm at the python command prompt.</span><br/>
+<font color="#A82F2F"><font size="2">(11:26:45 AM)</font> <b>Darren Watts:</b></font> check your email<br/>
+<font color="#16569E"><font size="2">(11:27:59 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thx</span><br/>
+<font color="#16569E"><font size="2">(03:52:34 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what version of gdal did you settle on ?</span><br/>
+<font color="#A82F2F"><font size="2">(03:52:55 PM)</font> <b>Darren Watts:</b></font> for now, 1.9.2 is what the repos have<br/>
+<font color="#16569E"><font size="2">(03:53:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#A82F2F"><font size="2">(03:53:06 PM)</font> <b>Darren Watts:</b></font> it all might change again whenever we have time to figure out MrSID<br/>
+<font color="#A82F2F"><font size="2">(03:53:56 PM)</font> <b>Darren Watts:</b></font> I'm currently working on rebuilding the web machine<br/>
+<font color="#A82F2F"><font size="2">(03:54:08 PM)</font> <b>Darren Watts:</b></font> I'm hopeful the workers are ready to go<br/>
+<font color="#16569E"><font size="2">(03:54:34 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, very good.  i'm working on the recipe for the web machine as well.</span><br/>
+<font color="#A82F2F"><font size="2">(03:54:59 PM)</font> <b>Darren Watts:</b></font> centos or ubuntu?<br/>
+<font color="#A82F2F"><font size="2">(03:55:15 PM)</font> <b>Darren Watts:</b></font> The instructions on adm m5 config are still out of date<br/>
+<font color="#16569E"><font size="2">(03:55:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>centos</span><br/>
+<font color="#A82F2F"><font size="2">(03:55:29 PM)</font> <b>Darren Watts:</b></font> I'm going to go through the steps and update as I go<br/>
+<font color="#A82F2F"><font size="2">(03:56:23 PM)</font> <b>Darren Watts:</b></font> the instructions for the workers are ready<br/>
+<font color="#16569E"><font size="2">(03:56:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok,  I'm referring to it; but i have some general stuff to do anyway.</span><br/>
+<font color="#A82F2F"><font size="2">(03:56:37 PM)</font> <b>Darren Watts:</b></font> cool<br/>
+<font color="#16569E"><font size="2">(10:07:07 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey you have a minute?  Trying to get the syntax for a POST to adm.</span><br/>
+<font color="#16569E"><font size="2">(10:07:17 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Something like this:<br/><a href="http://adm-m5-web.i3.local/os/?&amp;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}">http://adm-m5-web.i3.local/os/?&amp;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}</a></span><br/>
+<font color="#A82F2F"><font size="2">(10:08:15 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(10:08:57 AM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>you&apos;d just post form urlencoded uid=<span style='color: #0a841a;'><a href="http://adm-m5-web.i3.local/os/?&amp;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}">{6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}</a></span> to the endpoint <span style='color: #0a841a;'><a href="http://adm-m5-web.i3.local/os/?&amp;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}">http://adm-m5-web.i3.local/os/</a></span></p></body></html><br/>
+<font color="#16569E"><font size="2">(10:10:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's easier said than done.</span><br/>
+<font color="#A82F2F"><font size="2">(10:11:24 AM)</font> <b>Darren Watts:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(10:11:57 AM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>curl <a href="http://adm-m5-web/os/">http://adm-m5-web/os/</a> -d &quot;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}&quot;</p></body></html><br/>
+<font color="#16569E"><font size="2">(10:12:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, let me try something.</span><br/>
+<font color="#A82F2F"><font size="2">(10:12:44 AM)</font> <b>Darren Watts:</b></font> are you doing this from python?<br/>
+<font color="#16569E"><font size="2">(10:12:49 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah</span><br/>
+<font color="#A82F2F"><font size="2">(10:13:39 AM)</font> <b>Darren Watts:</b></font> I typically use requests.post()<br/>
+<font color="#16569E"><font size="2">(10:13:48 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, same.</span><br/>
+<font color="#A82F2F"><font size="2">(10:13:59 AM)</font> <b>Darren Watts:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>you&apos;d have a dictionary with dict[&apos;uid&apos;] = <span style='color: #0a841a;'><a href="http://adm-m5-web.i3.local/os/?&amp;uid={6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}">{6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5}</a></span></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(10:14:15 AM)</font> <b>Darren Watts:</b></font> and post that dictionary as your data<br/>
+<font color="#16569E"><font size="2">(10:16:17 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, that makes more sense.</span><br/>
+<font color="#16569E"><font size="2">(10:18:14 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cause i have this right now:<br/>{'uid': '6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5'}</span><br/>
+<font color="#16569E"><font size="2">(10:18:41 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and it needs to be this, correct?<br/>{'uid':{ '6770d2e3cfd6ef645cb61456235e4c2a,e7586024da7c8b5e80b3f82011fda2f5'}}<br/></span><br/>
+<font color="#A82F2F"><font size="2">(10:19:44 AM)</font> <b>Darren Watts:</b></font> it probably has to be {'uid': '{67...,e75...}'}<br/>
+<font color="#16569E"><font size="2">(10:20:47 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, really?</span><br/>
+<font color="#A82F2F"><font size="2">(10:21:01 AM)</font> <b>Darren Watts:</b></font> I think so<br/>
+<font color="#A82F2F"><font size="2">(10:21:05 AM)</font> <b>Darren Watts:</b></font> let me know if it doesn't work<br/>
+<font color="#16569E"><font size="2">(10:21:16 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#16569E"><font size="2">(10:28:19 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can you swing by?</span><br/>
+<font color="#A82F2F"><font size="2">(10:28:27 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(10:28:29 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thx</span><br/>
+<font color="#16569E"><font size="2">(05:22:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Yo Darren!!</span><br/>
+<font color="#A82F2F"><font size="2">(05:22:59 PM)</font> <b>Darren Watts:</b></font> yo yo yo<br/>
+<font color="#16569E"><font size="2">(05:23:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can you swing by?</span><br/>
+<font color="#A82F2F"><font size="2">(05:23:22 PM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(05:23:36 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thx</span><br/>
+<font color="#16569E"><font size="2">(04:07:18 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey Darren, you have a few minutes?  I'm working on the PADAWAN ui.</span><br/>
+<font color="#A82F2F"><font size="2">(04:07:27 PM)</font> <b>Darren Watts:</b></font> sure<br/>
+<font color="#16569E"><font size="2">(04:07:31 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool!</span><br/>

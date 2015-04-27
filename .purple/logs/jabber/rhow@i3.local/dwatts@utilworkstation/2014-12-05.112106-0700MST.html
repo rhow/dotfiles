@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with dwatts@utilworkstation at Fri 05 Dec 2014 11:21:06 AM MST on rhow@i3.local/utilworkstation (jabber)</title></head><body><h3>Conversation with dwatts@utilworkstation at Fri 05 Dec 2014 11:21:06 AM MST on rhow@i3.local/utilworkstation (jabber)</h3>
+<font color="#A82F2F"><font size="2">(11:21:06 AM)</font> <b>Darren Watts:</b></font> hey randy, do you mind if I delete that airbus/imagery resource and reindex?<br/>
+<font color="#A82F2F"><font size="2">(11:21:23 AM)</font> <b>Darren Watts:</b></font> trying to figure out if there's a bug related to indexing<br/>
+<font color="#16569E"><font size="2">(11:22:42 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, you can.  i'm working on the adm_web recipe.</span><br/>
+<font color="#A82F2F"><font size="2">(11:22:47 AM)</font> <b>Darren Watts:</b></font> ok cool<br/>
+<font color="#16569E"><font size="2">(11:30:25 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>btw - cntl-d on Linux is the way to exit the python interpreter; cntl-z is on windows </span><br/>
+<font color="#A82F2F"><font size="2">(11:30:44 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#16569E"><font size="2">(11:49:40 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so... the admuser, it doesn't exist on the web machine?</span><br/>
+<font color="#A82F2F"><font size="2">(11:49:57 AM)</font> <b>Darren Watts:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(11:50:00 AM)</font> <b>Darren Watts:</b></font> it should<br/>
+<font color="#A82F2F"><font size="2">(11:50:03 AM)</font> <b>Darren Watts:</b></font> all machines<br/>
+<font color="#16569E"><font size="2">(11:50:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it should ok, good.</span><br/>
+<font color="#A82F2F"><font size="2">(10:20:59 AM)</font> <b>Darren Watts:</b></font> hey randy, for this padawan thing due on the 19th, are we expected to pull files from the FTP by then, or are they just going to drop in some data manually?<br/>
+<font color="#16569E"><font size="2">(10:33:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>pull files from FTP will be simulated.</span><br/>
+<font color="#A82F2F"><font size="2">(10:33:22 AM)</font> <b>Darren Watts:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(11:29:01 AM)</font> <b>Darren Watts:</b></font> we may have to redo the GDAL notes for the workers again<br/>
+<font color="#A82F2F"><font size="2">(11:29:21 AM)</font> <b>Darren Watts:</b></font> right now it works, but it takes something like 300-500 seconds for the dimap extractor to do its thing<br/>
+<font color="#A82F2F"><font size="2">(11:29:32 AM)</font> <b>Darren Watts:</b></font> this new version I just tried did it in 1-3 seconds<br/>
+<font color="#16569E"><font size="2">(11:33:28 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Oooo!  Ok!</span><br/>
+<font color="#16569E"><font size="2">(11:35:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and will this GDAL mod work for virtuoso and the web?</span><br/>
+<font color="#A82F2F"><font size="2">(11:36:17 AM)</font> <b>Darren Watts:</b></font> workers and web?  I've tested it on one worker so far<br/>
+<font color="#A82F2F"><font size="2">(11:36:25 AM)</font> <b>Darren Watts:</b></font> probably would be best to have the web match<br/>
+<font color="#16569E"><font size="2">(11:36:44 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot;work&quot; as in not negatively impact them.</span><br/>
+<font color="#A82F2F"><font size="2">(11:37:20 AM)</font> <b>Darren Watts:</b></font> not sure what you mean<br/>
+<font color="#16569E"><font size="2">(11:39:08 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>let me know when you have the documentation updated, i'll update the chef recipe.  I got GDAL working.  It's the same recipe that's applied to each: web, worker, and virtuoso.</span><br/>
+<font color="#A82F2F"><font size="2">(11:39:41 AM)</font> <b>Darren Watts:</b></font> GDAL doesn't need to be installed on the virtuoso machine, I don't think?<br/>
+<font color="#A82F2F"><font size="2">(11:40:12 AM)</font> <b>Darren Watts:</b></font> it may be a little while before I have documentation.  Trying to build some RPMs that we can just install<br/>
+<font color="#16569E"><font size="2">(11:42:03 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, can you confirm virtuoso is needed we have it installing/setting up.</span><br/>
+<font color="#A82F2F"><font size="2">(11:42:16 AM)</font> <b>Darren Watts:</b></font> virtuoso is needed<br/>
+<font color="#A82F2F"><font size="2">(11:42:20 AM)</font> <b>Darren Watts:</b></font> it just doesn't need GDAL<br/>
+<font color="#16569E"><font size="2">(11:42:51 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's what i was trying to say.  Virtuoso, yes; GDAL no.  Ok</span><br/>
+<font color="#A82F2F"><font size="2">(11:43:07 AM)</font> <b>Darren Watts:</b></font> yeah, I think we had it set up so that virtuoso would have its own machine<br/>
+<font color="#A82F2F"><font size="2">(11:43:30 AM)</font> <b>Darren Watts:</b></font> which means it'll have almost nothing but virtuoso (and the preinstall steps, like setting up admuser)<br/>
+<font color="#16569E"><font size="2">(11:44:23 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, that's all done.  We'll pull the GDAL install out of the virtuoso recipe.</span><br/>
+<font color="#A82F2F"><font size="2">(11:44:31 AM)</font> <b>Darren Watts:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(11:44:42 AM)</font> <b>Darren Watts:</b></font> how many recipes are done?<br/>
+<font color="#A82F2F"><font size="2">(11:44:50 AM)</font> <b>Darren Watts:</b></font> ignoring the change coming to gdal<br/>
+<font color="#16569E"><font size="2">(11:45:50 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>worker, and virtuoso are done; web is 95%.</span><br/>
+<font color="#A82F2F"><font size="2">(11:46:01 AM)</font> <b>Darren Watts:</b></font> cool<br/>
+<font color="#16569E"><font size="2">(03:48:58 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I'm looking at:<br/><a href="http://utility2:8084/mediawiki/ADM_Milestone5_Configuration#Install_website">http://utility2:8084/mediawiki/ADM_Milestone5_Configuration#Install_website</a><br/></span><span style='color: #000000;'><span style='font-family: sans-serif;'>Configure various things for the </span></span><br/>
+<font color="#16569E"><font size="2">(03:49:25 PM)</font> <b>Randy How:</b></font> cd ~/adm/www/configuration  <br/>python3.3 configure.py<br/><br/><span style='color: #0a841a;'>Is this only required for the virtuoso machine?</span><br/>
+<font color="#A82F2F"><font size="2">(03:49:50 PM)</font> <b>Darren Watts:</b></font> no that install_website section refers to the web machine<br/>
+<font color="#A82F2F"><font size="2">(03:50:13 PM)</font> <b>Darren Watts:</b></font> the virtuoso machine won't have ~/adm/www<br/>
+<font color="#16569E"><font size="2">(03:51:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(03:55:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I'm running this on the adm-web machine:<br/>python3.3 /home/admuser/adm/www/configuration/configure.py<br/>And it throws:  ConnectionRefusedError: [Errno 111] Connection refused</span><br/>
+<font color="#A82F2F"><font size="2">(03:55:54 PM)</font> <b>Darren Watts:</b></font> the website needs to be running, and adm.config needs to be configured correctly<br/>
+<font color="#A82F2F"><font size="2">(03:55:55 PM)</font> <b>Darren Watts:</b></font> and config.py<br/>
+<font color="#16569E"><font size="2">(03:59:34 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>there's a bunch of variables in adm and config.py</span><br/>
+<font color="#16569E"><font size="2">(04:03:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have a minute?</span><br/>
+<font color="#A82F2F"><font size="2">(04:05:21 PM)</font> <b>Darren Watts:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(04:05:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can you swing by?</span><br/>
+<font color="#A82F2F"><font size="2">(04:05:34 PM)</font> <b>Darren Watts:</b></font> yep<br/>
+<font color="#16569E"><font size="2">(04:05:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thx</span><br/>
+<font color="#16569E"><font size="2">(04:33:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>/farm02.i3.local/budd-environment-runtime/ssd-on-bswitch/adm-code/</span><br/>
+<font color="#A82F2F"><font size="2">(05:29:04 PM)</font> <b>Darren Watts:</b></font> the worker instructions have been updated<br/>
+<font color="#16569E"><font size="2">(10:16:57 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I thought this was up: <a href="http://adm-m5-web.i3.local/admin/">http://adm-m5-web.i3.local/admin/</a></span><br/>
+<font color="#A82F2F"><font size="2">(10:21:05 AM)</font> <b>Darren Watts:</b></font> it isn't at the moment<br/>
+<font color="#16569E"><font size="2">(11:50:38 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>any word of it coming back up?</span><br/>
+<font color="#A82F2F"><font size="2">(11:50:50 AM)</font> <b>Darren Watts:</b></font> yeah, i'm able to do that<br/>
+<font color="#A82F2F"><font size="2">(11:50:53 AM)</font> <b>Darren Watts:</b></font> I just turned the machines back on now<br/>
+<font color="#A82F2F"><font size="2">(11:51:02 AM)</font> <b>Darren Watts:</b></font> going to have to configure them<br/>
+<font color="#A82F2F"><font size="2">(12:19:02 PM)</font> <b>Darren Watts:</b></font> adm-m5 is back up and working<br/>
+<font color="#16569E"><font size="2">(12:31:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>excellent!  thanks a bunch!</span><br/>
+<font color="#16569E"><font size="2">(10:08:10 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you around?</span><br/>

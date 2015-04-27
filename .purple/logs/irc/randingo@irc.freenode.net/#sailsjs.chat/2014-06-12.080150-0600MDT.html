@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Thu 12 Jun 2014 08:01:50 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Thu 12 Jun 2014 08:01:50 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(08:01:51 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(08:11:37 AM)</font> <b>jdcauley:</b></font> namchester<br/>
+<font color="#A82F2F"><font size="2">(08:11:51 AM)</font> <b>jdcauley:</b></font> if you want to see how to do it the longer way check out sailscasts<br/>
+<font color="#A82F2F"><font size="2">(08:11:59 AM)</font> <b>jdcauley:</b></font> it will walk you through the process<br/>
+<font size="2">(08:12:05 AM)</font><b> delight_ is now known as delight</b><br/>
+<font color="#A82F2F"><font size="2">(08:12:15 AM)</font> <b>jdcauley:</b></font> I&apos;m partial to passport but sailscasts was a valuable set of videos for getting started<br/>
+<font color="#A82F2F"><font size="2">(08:13:10 AM)</font> <b>namchester:</b></font> Thanks a lot.<br/>
+<font color="#A82F2F"><font size="2">(08:13:23 AM)</font> <b>namchester:</b></font> It&apos;s so cool. Just like railscast<br/>
+<font color="#A82F2F"><font size="2">(08:37:40 AM)</font> <b>zonetti:</b></font> anyone using associations with sails-mysql@0.10?<br/>
+<font color="#A82F2F"><font size="2">(08:43:43 AM)</font> <b>Bucs:</b></font> having a hard time trying to map native mongo queries to work right with sails-mongo.  Is there a decent set of examples out there for the basic crud operations?  I only see a could find operations on the Sails and Waterline sites.<br/>
+<font color="#A82F2F"><font size="2">(08:53:16 AM)</font> <b>Bucs:</b></font> Are people even using the sails-mongo adapter, or using the native mongo adapter directly?  I&apos;m heading in that direction pretty quick due to the lack of examples and documentation<br/>
+<font color="#A82F2F"><font size="2">(08:58:39 AM)</font> <b>leepers41:</b></font> yes people are using the waterline mongo adapter<br/>
+<font color="#A82F2F"><font size="2">(08:59:53 AM)</font> <b>leepers41:</b></font> Bucs, how complex are your queries?<br/>
+<font color="#A82F2F"><font size="2">(09:00:59 AM)</font> <b>Bucs:</b></font> Not that complex...yet.  Right now, I am simply trying to update all documents in a node collection for one field.<br/>
+<font color="#A82F2F"><font size="2">(09:01:28 AM)</font> <b>Bucs:</b></font> from with the beforeUpdate event of a model<br/>
+<font color="#A82F2F"><font size="2">(09:01:43 AM)</font> <b>Bucs:</b></font> something like this...<br/>
+<font color="#A82F2F"><font size="2">(09:01:48 AM)</font> <b>Bucs:</b></font> model.waterline.models[&apos;snapshot&apos;].update({&apos;client_id&apos;: data.client_id, site_key: data.site_key},{&apos;active_staging&apos;: &apos;&apos;},function(error, model) {...}<br/>
+<font color="#A82F2F"><font size="2">(09:02:43 AM)</font> <b>leepers41:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(09:02:49 AM)</font> <b>Bucs:</b></font> problem is...I have logic that needs access to the other attributes in each document as it&apos;s being updated....but the only attr available is the one I am passing in to be updated.<br/>
+<font color="#A82F2F"><font size="2">(09:03:15 AM)</font> <b>Bucs:</b></font> what am I missing here?<br/>
+<font color="#A82F2F"><font size="2">(09:04:04 AM)</font> <b>leepers41:</b></font> I am still unclear<br/>
+<font color="#A82F2F"><font size="2">(09:04:04 AM)</font> <b>Bucs:</b></font> In mongo, this is simple<br/>
+<font color="#A82F2F"><font size="2">(09:04:13 AM)</font> <b>leepers41:</b></font> as to what you are trying to accomplish<br/>
+<font color="#A82F2F"><font size="2">(09:04:24 AM)</font> <b>Bucs:</b></font> sorry...<br/>
+<font color="#A82F2F"><font size="2">(09:04:45 AM)</font> <b>leepers41:</b></font> you are updating a snap shot model, with a certain client and site key, and setting active staging to nil<br/>
+<font color="#A82F2F"><font size="2">(09:04:56 AM)</font> <b>Bucs:</b></font> I am simply trying to update one field to a certain value in each document in the snapshot collection<br/>
+<font color="#A82F2F"><font size="2">(09:05:07 AM)</font> <b>leepers41:</b></font> and it doesnt work?<br/>
+<font color="#A82F2F"><font size="2">(09:05:49 AM)</font> <b>leepers41:</b></font> btw, that function returns an array, so it should read &apos;models&apos; not &apos;model&apos;<br/>
+<font color="#A82F2F"><font size="2">(09:06:02 AM)</font> <b>leepers41:</b></font> when you update, you dont know how many rows will be returned<br/>
+<font color="#A82F2F"><font size="2">(09:06:25 AM)</font> <b>Bucs:</b></font> however, when the update operation is occuring...I have a beforeUpdate function in the model that fires....and I need to look at the attributes of the record that is being updated to perform some logic<br/>
+<font color="#A82F2F"><font size="2">(09:06:45 AM)</font> <b>leepers41:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(09:06:51 AM)</font> <b>Bucs:</b></font> understood on the models...typo...my bad<br/>
+<font color="#A82F2F"><font size="2">(09:06:57 AM)</font> <b>leepers41:</b></font> and?<br/>
+<font color="#A82F2F"><font size="2">(09:07:17 AM)</font> <b>leepers41:</b></font> you want all the attributes in the beforeUpdate<br/>
+<font color="#A82F2F"><font size="2">(09:07:23 AM)</font> <b>leepers41:</b></font> instead of just the ones being updated<br/>
+<font color="#A82F2F"><font size="2">(09:07:42 AM)</font> <b>leepers41:</b></font> am I correct now?<br/>
+<font color="#A82F2F"><font size="2">(09:09:02 AM)</font> <b>Bucs:</b></font> the way I have the query, the attrs collection only shows the one param I am passing in to change.  I was under the impression that I would have access to all the attrs in the record that is getting updated.<br/>
+<font color="#A82F2F"><font size="2">(09:09:24 AM)</font> <b>leepers41:</b></font> Well, that impression is incorrect.<br/>
+<font color="#A82F2F"><font size="2">(09:09:24 AM)</font> <b>Bucs:</b></font> yes, you are correct<br/>
+<font color="#A82F2F"><font size="2">(09:09:34 AM)</font> <b>Bucs:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(09:09:39 AM)</font> <b>leepers41:</b></font> beforeUpdate is defined as, fn(valuesToUpdate, cb)<br/>
+<font color="#A82F2F"><font size="2">(09:09:46 AM)</font> <b>leepers41:</b></font> it only gets the values being updated<br/>
+<font color="#A82F2F"><font size="2">(09:10:30 AM)</font> <b>Bucs:</b></font> hmmm, so there is no way to gain access to the document that is being updated?<br/>
+<font color="#A82F2F"><font size="2">(09:10:37 AM)</font> <b>Bucs:</b></font> that seems limited<br/>
+<font color="#A82F2F"><font size="2">(09:11:02 AM)</font> <b>leepers41:</b></font> think about how that would work.<br/>
+<font color="#A82F2F"><font size="2">(09:11:26 AM)</font> <b>leepers41:</b></font> it would have to first do a select, and then iterate over every row, and then do a per row update, that seems more in-efficient<br/>
+<font color="#A82F2F"><font size="2">(09:13:25 AM)</font> <b>leepers41:</b></font> you could do another update inside afterUpdate<br/>
+<font color="#A82F2F"><font size="2">(09:13:30 AM)</font> <b>Bucs:</b></font> but doesn&apos;t the criteria passed to the update create a cursor of the records that it found to perform the update on?<br/>
+<font color="#A82F2F"><font size="2">(09:13:48 AM)</font> <b>leepers41:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(09:13:59 AM)</font> <b>Bucs:</b></font> that is how I assumed it would work...which is obviously wrong<br/>
+<font color="#A82F2F"><font size="2">(09:14:07 AM)</font> <b>leepers41:</b></font> sails isnt that complex at this point<br/>
+<font color="#A82F2F"><font size="2">(09:14:16 AM)</font> <b>Bucs:</b></font> ok, understood.<br/>
+<font color="#A82F2F"><font size="2">(09:14:21 AM)</font> <b>leepers41:</b></font> afterUpdate is defined as fn(updatedRecord, cb)<br/>
+<font color="#A82F2F"><font size="2">(09:14:43 AM)</font> <b>Bucs:</b></font> need to adjust my logic then I guess...thanks for the &quot;schooling&quot;<br/>
+<font color="#A82F2F"><font size="2">(09:14:46 AM)</font> <b>leepers41:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(09:15:02 AM)</font> <b>leepers41:</b></font> that might trigger an afterUpdate loop, if you update inside the afterupdate, lol<br/>
+<font color="#A82F2F"><font size="2">(09:15:16 AM)</font> <b>leepers41:</b></font> yeah, you will have to modify your logic a bit<br/>
+<font color="#A82F2F"><font size="2">(09:15:18 AM)</font> <b>Bucs:</b></font> yes...already been there :)<br/>
+<font color="#A82F2F"><font size="2">(09:16:11 AM)</font> <b>leepers41:</b></font> this will be really useful: https://github.com/balderdashy/waterline-docs/blob/master/models.md<br/>
+<font color="#A82F2F"><font size="2">(09:17:17 AM)</font> <b>leepers41:</b></font> good luck!<br/>
+<font color="#A82F2F"><font size="2">(09:31:36 AM)</font> <b>Bucs:</b></font> @leepers41...thanks, that looks pretty helpful.<br/>
+<font color="#A82F2F"><font size="2">(09:33:53 AM)</font> <b>Bucs:</b></font> I have other questions about the available scope inside of the waterline models. Since Waterline is pretty much going to be a singleton upon app startup, having a hard time getting access to the request scope in each model operation.  Wondering if we have to create our own model wrappers to get access to the current request inside waterline.<br/>
+<font color="#A82F2F"><font size="2">(09:34:24 AM)</font> <b>Bucs:</b></font> Do you ever have this issue?<br/>
+<font color="#A82F2F"><font size="2">(09:44:34 AM)</font> <b>da_wunde1:</b></font> imho model is model, and it doesn&apos;t need request or response<br/>
+<font color="#A82F2F"><font size="2">(09:44:51 AM)</font> <b>da_wunde1:</b></font> if you need those, then you should use controller<br/>
+<font size="2">(09:44:57 AM)</font><b> da_wunde1 is now known as da_wunder</b><br/>
+<font size="2">(10:10:40 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

@@ -1,0 +1,95 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with mdillon@i3.com at Wed 10 Dec 2014 01:24:17 PM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with mdillon@i3.com at Wed 10 Dec 2014 01:24:17 PM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#A82F2F"><font size="2">(01:24:17 PM)</font> <b>Michael Dillon:</b></font> Hey - are you still using your IDEA license?<br/>
+<font color="#16569E"><font size="2">(01:34:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, diava asked as well.</span><br/>
+<font color="#16569E"><font size="2">(01:35:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i updated to version 14 because the &quot;Chef Integration&quot; plugin is dependent on it.</span><br/>
+<font color="#A82F2F"><font size="2">(01:35:23 PM)</font> <b>Michael Dillon:</b></font> k<br/>
+<font color="#16569E"><font size="2">(01:36:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the only repo in wicked i can see is: </span><a href="http://utility2:8081/wicked/bridgeapi">wicked/bridgeapi</a><br/>
+<font color="#A82F2F"><font size="2">(01:37:57 PM)</font> <b>Michael Dillon:</b></font> :-/<br/>
+<font color="#A82F2F"><font size="2">(01:38:02 PM)</font> <b>Michael Dillon:</b></font> stupid gitorious<br/>
+<font color="#A82F2F"><font size="2">(01:38:13 PM)</font> <b>Michael Dillon:</b></font> there's a bug in their UI<br/>
+<font color="#16569E"><font size="2">(01:38:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>drag.  it seems to work better by assigning a team?</span><br/>
+<font color="#A82F2F"><font size="2">(01:39:05 PM)</font> <b>Michael Dillon:</b></font> that's what's broken<br/>
+<font color="#A82F2F"><font size="2">(01:39:19 PM)</font> <b>Michael Dillon:</b></font> there are at least three places to grant access<br/>
+<font color="#A82F2F"><font size="2">(01:39:36 PM)</font> <b>Michael Dillon:</b></font> and it simply does nothing in some cases<br/>
+<font color="#16569E"><font size="2">(01:39:40 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, John and i went around on this as well.</span><br/>
+<font color="#16569E"><font size="2">(01:39:59 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot;stupid gitorious&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(01:40:00 PM)</font> <b>Michael Dillon:</b></font> you're already in a team that should have access<br/>
+<font color="#16569E"><font size="2">(01:40:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>did you just make that change?</span><br/>
+<font color="#A82F2F"><font size="2">(01:40:35 PM)</font> <b>Michael Dillon:</b></font> no<br/>
+<font color="#16569E"><font size="2">(01:40:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, looking again.</span><br/>
+<font color="#A82F2F"><font size="2">(01:41:01 PM)</font> <b>Michael Dillon:</b></font> but, I tried to add a different team as a 'collaborator'<br/>
+<font color="#A82F2F"><font size="2">(01:41:33 PM)</font> <b>Michael Dillon:</b></font> in the project you can see - the permissions are totally different -  but you're in a team that's a 'collaborator'<br/>
+<font color="#A82F2F"><font size="2">(01:41:52 PM)</font> <b>Michael Dillon:</b></font> try again<br/>
+<font color="#A82F2F"><font size="2">(01:42:11 PM)</font> <b>Michael Dillon:</b></font> I gave the 'localdev' team commit rights on the repos<br/>
+<font color="#16569E"><font size="2">(01:42:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(01:43:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>$git clone git@utility2:wicked/client.git wicked-client<br/><br/>== Gitorious: ==========================================================<br/>Access denied or wrong repository path<br/></span><br/>
+<font color="#16569E"><font size="2">(01:44:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Same with </span><span style='color: #000000;'><span style='font-family: arial, sans-serif;'>git@utility2:mdd-sandbox/<span style='font-size: medium;'>opensearch-client-hack.git</span></span></span><br/>
+<font color="#A82F2F"><font size="2">(01:45:28 PM)</font> <b>Michael Dillon:</b></font> let me try to fix it there first - safer<br/>
+<font color="#16569E"><font size="2">(01:46:03 PM)</font> <b>Randy How:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(01:46:47 PM)</font> <b>Michael Dillon:</b></font> try git@utility2:mdd-sandbox/opensearch-client-hack.git<br/>
+<font color="#16569E"><font size="2">(01:47:48 PM)</font> <b>Randy How:</b></font> k, just a sec<br/>
+<font color="#A82F2F"><font size="2">(01:48:18 PM)</font> <b>Michael Dillon:</b></font> If it works - i might be cranky<br/>
+<font color="#16569E"><font size="2">(01:48:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>nope, doesn't work... are you happy?</span><br/>
+<font color="#A82F2F"><font size="2">(01:48:57 PM)</font> <b>Michael Dillon:</b></font> ok - that at least matches the settings<br/>
+<font color="#A82F2F"><font size="2">(01:49:18 PM)</font> <b>Michael Dillon:</b></font> I changed the project settings first<br/>
+<font color="#16569E"><font size="2">(01:49:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(01:49:51 PM)</font> <b>Michael Dillon:</b></font> ok - try again<br/>
+<font color="#16569E"><font size="2">(01:50:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k, just a sec</span><br/>
+<font color="#16569E"><font size="2">(01:51:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Yippie!!  it worked!</span><br/>
+<font color="#A82F2F"><font size="2">(01:51:49 PM)</font> <b>Michael Dillon:</b></font> ok - I haven't tried the console interface in gitorious (where you use the ruby classes to update the db) - but I'm convinced their GUI is broken when you work with teams...<br/>
+<font color="#16569E"><font size="2">(01:51:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>and i can see it in the UI.</span><br/>
+<font color="#16569E"><font size="2">(01:52:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, good to know</span><br/>
+<font color="#A82F2F"><font size="2">(01:53:26 PM)</font> <b>Michael Dillon:</b></font> https://plus.google.com/photos/albums/pliqg4va866egs75tn8ppo45idgk7dts9?pid=6091315060161553666&amp;oid=115283053014673495556<br/>
+<font color="#A82F2F"><font size="2">(01:54:26 PM)</font> <b>Michael Dillon:</b></font> try git@utility2:wicked/client.git again<br/>
+<font color="#16569E"><font size="2">(01:54:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, so you have to add perms by member and not a team? </span><br/>
+<font color="#A82F2F"><font size="2">(01:55:09 PM)</font> <b>Michael Dillon:</b></font> Yeah.  When I try to add a team in that UI, it doesn't 'take'<br/>
+<font color="#16569E"><font size="2">(01:55:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that worked.</span><br/>
+<font color="#A82F2F"><font size="2">(01:55:31 PM)</font> <b>Michael Dillon:</b></font> it just ignores what I do when I try to add a new team<br/>
+<font color="#A82F2F"><font size="2">(01:55:47 PM)</font> <b>Michael Dillon:</b></font> but - it works in some odd cases that I don't fully understand<br/>
+<font color="#16569E"><font size="2">(01:55:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot; 'eff off Mike&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(01:56:03 PM)</font> <b>Michael Dillon:</b></font> yep<br/>
+<font color="#16569E"><font size="2">(01:56:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>alright then.</span><br/>
+<font color="#16569E"><font size="2">(02:30:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i have padawan-ogc in QGis as a WMS layer</span><br/>
+<font color="#A82F2F"><font size="2">(02:30:10 PM)</font> <b>Michael Dillon:</b></font> w00t!<br/>
+<font color="#16569E"><font size="2">(02:30:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, it's pretty cool!</span><br/>
+<font color="#A82F2F"><font size="2">(02:43:02 PM)</font> <b>Michael Dillon:</b></font> jason fixed my ssl problem (for future reference) - something needed changed in stringray<br/>
+<font color="#16569E"><font size="2">(02:43:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool, yeah as you thought.</span><br/>
+<font color="#A82F2F"><font size="2">(02:45:07 PM)</font> <b>Michael Dillon:</b></font> I may still have CA problems though..  on my phone, I get a warning...  :-/<br/>
+<font color="#A82F2F"><font size="2">(02:45:13 PM)</font> <b>Michael Dillon:</b></font> but not in the browser<br/>
+<font color="#16569E"><font size="2">(04:47:13 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have a minute?  (before heading out)</span><br/>
+<font color="#A82F2F"><font size="2">(04:47:29 PM)</font> <b>Michael Dillon:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(04:47:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cool</span><br/>
+<font color="#16569E"><font size="2">(03:39:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ideally something like this would be added to ADM to support CORS:<br/><a href="http://stackoverflow.com/questions/5251689/cross-domain-post-query-using-cross-origin-resource-sharing-getting-no-data-back">http://stackoverflow.com/questions/5251689/cross-domain-post-query-using-cross-origin-resource-sharing-getting-no-data-back</a></span><br/>
+<font color="#A82F2F"><font size="2">(03:40:05 PM)</font> <b>Michael Dillon:</b></font> correct<br/>
+<font color="#A82F2F"><font size="2">(03:40:59 PM)</font> <b>Michael Dillon:</b></font> http://utility6/redmine/issues/10028<br/>
+<font color="#16569E"><font size="2">(03:40:59 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it would be nice to have to do development on it, but not required for the deployed system.</span><br/>
+<font color="#16569E"><font size="2">(03:41:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Can I up this:<br/></span>Priority:High<br/>
+<font color="#A82F2F"><font size="2">(03:41:37 PM)</font> <b>Michael Dillon:</b></font> sure<br/>
+<font color="#A82F2F"><font size="2">(03:41:54 PM)</font> <b>Michael Dillon:</b></font> maybe add your notes on what's you've found.  be sure to mention the opensearch api<br/>
+<font color="#16569E"><font size="2">(03:42:05 PM)</font> <b>Randy How:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(03:43:18 PM)</font> <b>Michael Dillon:</b></font> notice the gist I referenced.  each framework (django, flask, etc) has slightly different methods.<br/>
+<font color="#16569E"><font size="2">(03:43:31 PM)</font> <b>Randy How:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(03:44:01 PM)</font> <b>Michael Dillon:</b></font> the easiest thing is always include the 'accept' headers and just exit early if they use OPTIONS<br/>
+<font color="#A82F2F"><font size="2">(03:44:19 PM)</font> <b>Michael Dillon:</b></font> *Access <br/>
+<font color="#A82F2F"><font size="2">(04:24:58 PM)</font> <b>Michael Dillon:</b></font> is the web 'bad' for you right now?  I'm even seeing timeouts to gisservices<br/>
+<font color="#16569E"><font size="2">(04:25:45 PM)</font> <b>Randy How:</b></font> dunno, haven't noticed it... maybe.<br/>
+<font color="#16569E"><font size="2">(04:26:07 PM)</font> <b>Randy How:</b></font> seems alright.<br/>
+<font color="#A82F2F"><font size="2">(04:26:10 PM)</font> <b>Michael Dillon:</b></font> My getcapabilities says to call you<br/>
+<font color="#16569E"><font size="2">(04:26:20 PM)</font> <b>Randy How:</b></font> =]<br/>
+<font color="#16569E"><font size="2">(04:26:28 PM)</font> <b>Randy How:</b></font> i need to find that ticket.<br/>
+<font color="#A82F2F"><font size="2">(04:27:33 PM)</font> <b>Michael Dillon:</b></font> GET http://gisservices.datadoors.net/i3_ArcGIS/wmts/8ffe0d83-8cde-473c-9449-97f…GetTile&amp;Version=1.0.0&amp;Format=image%2Fpng&amp;TileMatrix=5&amp;TileCol=6&amp;TileRow=12 404 (Not Found)<br/><br/>GET http://gisservices.datadoors.net/i3_ArcGIS/wmts/8ffe0d83-8cde-473c-9449-97f…GetTile&amp;Version=1.0.0&amp;Format=image%2Fpng&amp;TileMatrix=5&amp;TileCol=6&amp;TileRow=13 404 (Not Found)<br/>
+<font color="#A82F2F"><font size="2">(04:27:40 PM)</font> <b>Michael Dillon:</b></font> ack<br/>
+<font color="#A82F2F"><font size="2">(04:27:57 PM)</font> <b>Michael Dillon:</b></font> http://gisservices.datadoors.net/i3_ArcGIS/wmts/8ffe0d83-8cde-473c-9449-97f01630962b?Layer=osm&amp;style=default&amp;Style=default&amp;TileMatrixSet=EPSG%3A3857&amp;Service=WMTS&amp;Request=GetTile&amp;Version=1.0.0&amp;Format=image%2Fpng&amp;TileMatrix=5&amp;TileCol=6&amp;TileRow=12<br/>
+<font color="#A82F2F"><font size="2">(04:28:21 PM)</font> <b>Michael Dillon:</b></font> http://gisservices.datadoors.net/i3_ArcGIS/wmts/8ffe0d83-8cde-473c-9449-97f01630962b?Layer=osm&amp;style=default&amp;Style=default&amp;TileMatrixSet=EPSG%3A3857&amp;Service=WMTS&amp;Request=GetTile&amp;Version=1.0.0&amp;Format=image%2Fpng&amp;TileMatrix=5&amp;TileCol=6&amp;TileRow=13<br/>
+<font color="#A82F2F"><font size="2">(04:28:26 PM)</font> <b>Michael Dillon:</b></font> good for you?<br/>
+<font color="#16569E"><font size="2">(04:28:40 PM)</font> <b>Randy How:</b></font> yes and yes for the last 2<br/>
+<font color="#A82F2F"><font size="2">(04:28:46 PM)</font> <b>Michael Dillon:</b></font> :-/<br/>
+<font color="#A82F2F"><font size="2">(04:28:54 PM)</font> <b>Michael Dillon:</b></font> boo<br/>
+<font color="#16569E"><font size="2">(04:28:58 PM)</font> <b>Randy How:</b></font> Darren says you have a virus<br/>
+<font color="#A82F2F"><font size="2">(04:29:06 PM)</font> <b>Michael Dillon:</b></font> guh<br/>
+<font color="#16569E"><font size="2">(04:36:21 PM)</font> <b>Randy How:</b></font> i got the node proxy working in front of ADM.<br/>
+<font color="#A82F2F"><font size="2">(04:36:33 PM)</font> <b>Michael Dillon:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(04:36:40 PM)</font> <b>Michael Dillon:</b></font> now leave Darren alone<br/>
+<font color="#16569E"><font size="2">(04:36:51 PM)</font> <b>Randy How:</b></font> =]<br/>
+<font color="#16569E"><font size="2">(04:45:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>David will be back tomorrow, and we're have a conf call with Laurant in the AM.  So, I guess we'll get a game plan on what we need after that.</span><br/>
+<font color="#A82F2F"><font size="2">(04:45:44 PM)</font> <b>Michael Dillon:</b></font> cool<br/>

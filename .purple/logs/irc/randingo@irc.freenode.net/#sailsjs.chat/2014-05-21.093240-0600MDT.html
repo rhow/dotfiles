@@ -1,0 +1,123 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 21 May 2014 09:32:40 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 21 May 2014 09:32:40 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:32:40 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font size="2">(10:59:21 AM)</font><b> sz0 is now known as sz0`</b><br/>
+<font size="2">(11:01:43 AM)</font><b> sz0` is now known as sz0</b><br/>
+<font color="#A82F2F"><font size="2">(11:29:54 AM)</font> <b>da_wunder:</b></font> weird<br/>
+<font color="#A82F2F"><font size="2">(11:30:13 AM)</font> <b>da_wunder:</b></font> there seems to be something wrong with populate and limit<br/>
+<font color="#A82F2F"><font size="2">(11:33:58 AM)</font> <b>da_wunder:</b></font> it seems like it doesn&apos;t care about set limit value at all<br/>
+<font color="#A82F2F"><font size="2">(11:34:33 AM)</font> <b>Foxandxss:</b></font> welcome to the weird day :P<br/>
+<font color="#A82F2F"><font size="2">(11:34:57 AM)</font> <b>Foxandxss:</b></font> I am having weird behavior today too<br/>
+<font color="#A82F2F"><font size="2">(11:41:48 AM)</font> <b>da_wunder:</b></font> https://gist.github.com/tarlepp/6c76bc9d29185af1044e<br/>
+<font color="#A82F2F"><font size="2">(11:41:50 AM)</font> <b>da_wunder:</b></font> like that<br/>
+<font color="#A82F2F"><font size="2">(11:42:51 AM)</font> <b>da_wunder:</b></font> basically i can&apos;t make any GET /User/:Id =&gt; because processing those relations just takes too long<br/>
+<font color="#A82F2F"><font size="2">(11:42:58 AM)</font> <b>da_wunder:</b></font> and i&apos;m speaking minuts<br/>
+<font color="#A82F2F"><font size="2">(11:43:01 AM)</font> <b>da_wunder:</b></font> minutes<br/>
+<font color="#A82F2F"><font size="2">(11:43:45 AM)</font> <b>da_wunder:</b></font> also node.js takes all available the cpu time<br/>
+<font color="#A82F2F"><font size="2">(11:43:53 AM)</font> <b>da_wunder:</b></font> for minutes<br/>
+<font color="#A82F2F"><font size="2">(11:45:05 AM)</font> <b>da_wunder:</b></font> that is not nice<br/>
+<font color="#A82F2F"><font size="2">(11:45:11 AM)</font> <b>Foxandxss:</b></font> it is not<br/>
+<font color="#A82F2F"><font size="2">(11:47:14 AM)</font> <b>robdubya:</b></font> da_wunder if you&apos;ve got minutes of churn, something aint right<br/>
+<font color="#A82F2F"><font size="2">(11:48:11 AM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(11:48:18 AM)</font> <b>da_wunder:</b></font> but what<br/>
+<font color="#A82F2F"><font size="2">(11:49:08 AM)</font> <b>da_wunder:</b></font> and if i just remove that relation between user and history table everything works<br/>
+<font color="#A82F2F"><font size="2">(11:49:17 AM)</font> <b>da_wunder:</b></font> that history table has alot of data...<br/>
+<font color="#A82F2F"><font size="2">(11:49:38 AM)</font> <b>robdubya:</b></font> da_wunder are you doing user/1/history<br/>
+<font color="#A82F2F"><font size="2">(11:49:51 AM)</font> <b>da_wunder:</b></font> no just GET /user/1<br/>
+<font color="#A82F2F"><font size="2">(11:50:02 AM)</font> <b>robdubya:</b></font> ohhhh with autoPopulate turned on?<br/>
+<font color="#A82F2F"><font size="2">(11:50:12 AM)</font> <b>robdubya:</b></font> yeah, i turned that right the fuck off :D<br/>
+<font color="#A82F2F"><font size="2">(11:50:29 AM)</font> <b>da_wunder:</b></font> but should those limits affect to those also?<br/>
+<font color="#A82F2F"><font size="2">(11:50:50 AM)</font> <b>robdubya:</b></font> in theory, yes<br/>
+<font color="#A82F2F"><font size="2">(11:50:54 AM)</font> <b>robdubya:</b></font> iirc the default is like, 30<br/>
+<font color="#A82F2F"><font size="2">(11:51:10 AM)</font> <b>Foxandxss:</b></font> da_wunder: that history table is going to make history here<br/>
+<font color="#A82F2F"><font size="2">(11:51:11 AM)</font> <b>da_wunder:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(11:51:19 AM)</font> <b>da_wunder:</b></font> robdubya: https://gist.github.com/tarlepp/6c76bc9d29185af1044e#file-sails-log<br/>
+<font color="#A82F2F"><font size="2">(11:51:32 AM)</font> <b>da_wunder:</b></font> so in actionUtil.js those are right<br/>
+<font color="#A82F2F"><font size="2">(11:51:42 AM)</font> <b>da_wunder:</b></font> BUT still it populates everything....<br/>
+<font color="#A82F2F"><font size="2">(11:52:20 AM)</font> <b>da_wunder:</b></font> in that case GET /user/6 =&gt; is done by seconds, but all history rows are populated....<br/>
+<font color="#A82F2F"><font size="2">(11:52:48 AM)</font> <b>robdubya:</b></font> da_wunder so you think its ignoring the limit?<br/>
+<font color="#A82F2F"><font size="2">(11:53:05 AM)</font> <b>da_wunder:</b></font> it seems so<br/>
+<font color="#A82F2F"><font size="2">(11:53:58 AM)</font> <b>robdubya:</b></font> if you do<br/>
+<font color="#A82F2F"><font size="2">(11:54:10 AM)</font> <b>robdubya:</b></font>  GET /users -&gt; is it autopop&apos;ing everything too?<br/>
+<font size="2">(11:55:07 AM)</font><b> opem is now known as acies</b><br/>
+<font color="#A82F2F"><font size="2">(11:55:10 AM)</font> <b>da_wunder:</b></font> it seems it&apos;s doing that...<br/>
+<font color="#A82F2F"><font size="2">(11:55:29 AM)</font> <b>da_wunder:</b></font> just crashed my virtual machine with that<br/>
+<font color="#A82F2F"><font size="2">(11:55:37 AM)</font> <b>robdubya:</b></font> awesome<br/>
+<font color="#A82F2F"><font size="2">(11:56:08 AM)</font> <b>robdubya:</b></font> i pretty much turned it off as soon as they gave us the option (iirc i was the person who bitched about it the most)<br/>
+<font color="#A82F2F"><font size="2">(11:59:28 AM)</font> <b>da_wunder:</b></font> and weird is also that it doesn&apos;t populate all of the relations<br/>
+<font color="#A82F2F"><font size="2">(12:00:27 PM)</font> <b>da_wunder:</b></font> eg. user 10 is in manager in project 1 and project 2 but GET /user/10 shows {projectManager: []}<br/>
+<font color="#A82F2F"><font size="2">(12:01:02 PM)</font> <b>da_wunder:</b></font> BUT if i do GET /project/1 it shows {projectManager: {id: 10, name: &quot;foo&quot;}<br/>
+<font color="#A82F2F"><font size="2">(12:12:31 PM)</font> <b>da_wunder:</b></font> hmm, what was the sails new option for no linker<br/>
+<font color="#A82F2F"><font size="2">(12:12:32 PM)</font> <b>robdubya:</b></font> da_wunder this is why i never autopop and just reconstruct in ng<br/>
+<font color="#A82F2F"><font size="2">(12:20:41 PM)</font> <b>Aswebbb:</b></font> robdubya: Hi rob, have you already done some benchmark on your own sails application?<br/>
+<font color="#A82F2F"><font size="2">(12:21:45 PM)</font> <b>Aswebbb:</b></font> like simulate 100, 200, 1000 requests in parallel<br/>
+<font color="#A82F2F"><font size="2">(12:23:42 PM)</font> <b>robdubya:</b></font> Aswebbb not to any real degree, tho i was ging to at some point this weke<br/>
+<font size="2">(12:24:50 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font color="#A82F2F"><font size="2">(12:27:15 PM)</font> <b>da_wunder:</b></font> so --no-linker doesn&apos;t work anymore<br/>
+<font color="#A82F2F"><font size="2">(12:33:32 PM)</font> <b>Aswebbb:</b></font> robdubya: Are you going to use something like apache jmeter ? or apache benchmark?<br/>
+<font size="2">(12:37:04 PM)</font><b> sz0` is now known as sz0</b><br/>
+<font size="2">(12:58:43 PM)</font><b> natebunnyfield_ is now known as natebunnyfield</b><br/>
+<font size="2">(01:06:43 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font size="2">(01:08:21 PM)</font><b> sz0` is now known as sz0</b><br/>
+<font size="2">(01:28:55 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font size="2">(01:48:48 PM)</font><b> sz0` is now known as sz0</b><br/>
+<font color="#A82F2F"><font size="2">(01:53:49 PM)</font> <b>brandom:</b></font> Is anyone using res.forbidden(err,pathToView)?  I am on rc-7 and it doesn&apos;t redirect.<br/>
+<font color="#A82F2F"><font size="2">(02:03:34 PM)</font> <b>Foxandxss:</b></font> forbidden is right on a directory<br/>
+<font color="#A82F2F"><font size="2">(02:03:39 PM)</font> <b>Foxandxss:</b></font> check it and debug it  if needed<br/>
+<font color="#A82F2F"><font size="2">(02:58:14 PM)</font> <b>brandom:</b></font> Foxandxss: What do you mean by right on a directory?<br/>
+<font color="#A82F2F"><font size="2">(02:59:10 PM)</font> <b>Foxandxss:</b></font> brandom: forbidden is a response<br/>
+<font color="#A82F2F"><font size="2">(02:59:16 PM)</font> <b>Foxandxss:</b></font> check on /api/responses/forbidden.js<br/>
+<font color="#A82F2F"><font size="2">(02:59:19 PM)</font> <b>Foxandxss:</b></font> there is the logic<br/>
+<font color="#A82F2F"><font size="2">(03:03:17 PM)</font> <b>brandom:</b></font> Oh, I see. This is one of those gotchas b/c of rc updates.<br/>
+<font color="#A82F2F"><font size="2">(03:03:33 PM)</font> <b>brandom:</b></font> I was looking at http://beta.sailsjs.org/#!documentation/reference/Response/res.forbidden.html and assumed I could use to new API.<br/>
+<font color="#A82F2F"><font size="2">(03:03:53 PM)</font> <b>brandom:</b></font> Is there a generator for responses only that I could run again?<br/>
+<font color="#A82F2F"><font size="2">(03:04:23 PM)</font> <b>robdubya:</b></font> brandom nope, but if you gen a new app, you can just copy them over<br/>
+<font color="#A82F2F"><font size="2">(03:05:24 PM)</font> <b>brandom:</b></font> Yeah, I am being exceptionally lazy today :)<br/>
+<font size="2">(03:09:21 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:39:21 PM)</font> <b>beardtree:</b></font> User.create({email: email}).done(fn); // TypeError: Object [object Object] has no method &apos;done&apos;<br/>
+<font color="#A82F2F"><font size="2">(03:39:24 PM)</font> <b>beardtree:</b></font> Any thoughts?<br/>
+<font color="#A82F2F"><font size="2">(03:41:56 PM)</font> <b>Foxandxss:</b></font> beardtree: s/done/exec<br/>
+<font color="#A82F2F"><font size="2">(03:41:59 PM)</font> <b>Aswebbb:</b></font> .exec<br/>
+<font color="#A82F2F"><font size="2">(03:42:05 PM)</font> <b>Aswebbb:</b></font> done has been depreciated<br/>
+<font color="#A82F2F"><font size="2">(03:42:11 PM)</font> <b>robdubya:</b></font> ffs<br/>
+<font color="#A82F2F"><font size="2">(03:42:22 PM)</font> <b>Foxandxss:</b></font> depreciated? lol<br/>
+<font color="#A82F2F"><font size="2">(03:43:11 PM)</font> <b>beardtree:</b></font> That works<br/>
+<font color="#A82F2F"><font size="2">(03:43:13 PM)</font> <b>beardtree:</b></font> Thanks<br/>
+<font color="#A82F2F"><font size="2">(03:43:16 PM)</font> <b>beardtree:</b></font> Any docs relating to deprecation?<br/>
+<font color="#A82F2F"><font size="2">(03:43:22 PM)</font> <b>Aswebbb:</b></font> Whats the right word?<br/>
+<font color="#A82F2F"><font size="2">(03:43:36 PM)</font> <b>Foxandxss:</b></font> deprecated<br/>
+<font color="#A82F2F"><font size="2">(03:43:43 PM)</font> <b>Aswebbb:</b></font> Ah yeah right :P , Sorry.<br/>
+<font color="#A82F2F"><font size="2">(03:44:16 PM)</font> <b>robdubya:</b></font> Aswebbb depreciation = an asset losing value over time<br/>
+<font color="#A82F2F"><font size="2">(03:45:17 PM)</font> <b>DarwinIsGod:</b></font> anyone have a favorite plugin for integrating a sails app with active directory?<br/>
+<font color="#A82F2F"><font size="2">(03:45:25 PM)</font> <b>Aswebbb:</b></font> Ah ok, apologies for my retard english haha<br/>
+<font color="#A82F2F"><font size="2">(03:46:11 PM)</font> <b>robdubya:</b></font> DarwinIsGod yeesh<br/>
+<font color="#A82F2F"><font size="2">(03:46:24 PM)</font> <b>robdubya:</b></font> Aswebbb your english &gt; my french<br/>
+<font color="#A82F2F"><font size="2">(03:46:33 PM)</font> <b>robdubya:</b></font> DarwinIsGod i&apos;m sure there&apos;s a passport hook for it<br/>
+<font color="#A82F2F"><font size="2">(03:46:41 PM)</font> <b>robdubya:</b></font> depends what you want to do with ti<br/>
+<font color="#A82F2F"><font size="2">(03:48:29 PM)</font> <b>DarwinIsGod:</b></font> robdubya Good call. imma scope it out. thanks<br/>
+<font color="#A82F2F"><font size="2">(03:51:35 PM)</font> <b>Aswebbb:</b></font> rob: Did you learn French before?<br/>
+<font color="#A82F2F"><font size="2">(03:52:10 PM)</font> <b>robdubya:</b></font> Aswebbb nope, french doesn&apos;t do me much good here in texas :D<br/>
+<font color="#A82F2F"><font size="2">(03:52:34 PM)</font> <b>Aswebbb:</b></font> Really? why not, French accent is romantic :p<br/>
+<font color="#A82F2F"><font size="2">(03:52:52 PM)</font> <b>Aswebbb:</b></font> All the girls would approve that<br/>
+<font color="#A82F2F"><font size="2">(03:53:09 PM)</font> <b>robdubya:</b></font> Aswebbb thing is, the texas accent works better on french girls<br/>
+<font color="#A82F2F"><font size="2">(03:53:29 PM)</font> <b>robdubya:</b></font> my girlfriend is from southern california anyway, doesn&apos;t help much there either<br/>
+<font color="#A82F2F"><font size="2">(03:53:41 PM)</font> <b>Foxandxss:</b></font> I hate french<br/>
+<font color="#A82F2F"><font size="2">(03:53:50 PM)</font> <b>robdubya:</b></font> also - i&apos;m american. i might be able to speak french, but not with a french accent<br/>
+<font color="#A82F2F"><font size="2">(03:54:13 PM)</font> <b>Aswebbb:</b></font> Fox: You are also American?<br/>
+<font color="#A82F2F"><font size="2">(03:54:18 PM)</font> <b>Foxandxss:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(03:54:25 PM)</font> <b>Foxandxss:</b></font> spanish<br/>
+<font color="#A82F2F"><font size="2">(03:54:54 PM)</font> <b>robdubya:</b></font> its ok, only a few weeks to the world cup, and then we can all talk shit<br/>
+<font color="#A82F2F"><font size="2">(03:55:44 PM)</font> <b>Foxandxss:</b></font> we are gonna win anyway<br/>
+<font color="#A82F2F"><font size="2">(03:56:04 PM)</font> <b>Aswebbb:</b></font> Ahahahahah<br/>
+<font color="#A82F2F"><font size="2">(03:56:42 PM)</font> <b>Foxandxss:</b></font> pff francia<br/>
+<font color="#062585"><font size="2">(03:56:48 PM)</font> <b>***robdubya</b></font> calmly walks away after dropping a grenade into this conversation<br/>
+<font color="#A82F2F"><font size="2">(03:58:40 PM)</font> <b>Aswebbb:</b></font> Americans always run away.<br/>
+<font color="#A82F2F"><font size="2">(03:59:45 PM)</font> <b>robdubya:</b></font> well, except when saving *your* country from germans, but yeah.<br/>
+<font color="#A82F2F"><font size="2">(04:00:38 PM)</font> <b>Foxandxss:</b></font> I visited france once, nobody speaks english there, terrible (as terrible as spain tbh)<br/>
+<font color="#A82F2F"><font size="2">(04:02:29 PM)</font> <b>Aswebbb:</b></font> That is very true.<br/>
+<font color="#A82F2F"><font size="2">(04:03:35 PM)</font> <b>Aswebbb:</b></font> Has someone encountered an issue like this ? error: Error: EMFILE, too many open files &apos;/home/guillaume/Desktop/educloud/views/auth&apos;<br/>
+<font color="#A82F2F"><font size="2">(04:03:35 PM)</font> <b>Aswebbb:</b></font>     at Object.fs.readdirSync (fs.js:654:18)<br/>
+<font size="2">(04:38:09 PM)</font><b> spaceplu- is now known as spacepluk</b><br/>
+<font size="2">(04:38:10 PM)</font><b> nervetattoo__ is now known as nervetattoo_</b><br/>
+<font size="2">(04:39:01 PM)</font><b> proppy_ is now known as proppy</b><br/>
+<font size="2">(04:48:06 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

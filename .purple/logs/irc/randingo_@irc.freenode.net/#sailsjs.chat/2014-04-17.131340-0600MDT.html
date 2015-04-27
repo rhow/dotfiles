@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Thu 17 Apr 2014 01:13:40 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Thu 17 Apr 2014 01:13:40 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(01:13:40 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font size="2">(01:18:11 PM)</font><b> koell is now known as archfanboy</b><br/>
+<font color="#A82F2F"><font size="2">(01:19:48 PM)</font> <b>IJNX:</b></font> Drako: I solved it by using io.socket on connected methods. works like a charm.<br/>
+<font color="#A82F2F"><font size="2">(01:20:09 PM)</font> <b>IJNX:</b></font> How can I make sessions last over server restarts?<br/>
+<font color="#A82F2F"><font size="2">(01:20:20 PM)</font> <b>IJNX:</b></font> I&apos;m using passport<br/>
+<font size="2">(01:20:55 PM)</font><b> archfanboy is now known as koell</b><br/>
+<font color="#A82F2F"><font size="2">(01:22:01 PM)</font> <b>IJNX:</b></font> I guess that&apos;s more passport question than sails, but I guess many have done it already in here..<br/>
+<font color="#A82F2F"><font size="2">(01:31:42 PM)</font> <b>goldengamer:</b></font> sessions are stored in memory by default<br/>
+<font color="#A82F2F"><font size="2">(01:32:10 PM)</font> <b>goldengamer:</b></font> I don’t remember off-hand where the config is for that, but basically you can use mongo as your session store<br/>
+<font color="#A82F2F"><font size="2">(01:32:24 PM)</font> <b>goldengamer:</b></font> That way you can have synced sessions across nodes or after restart<br/>
+<font color="#A82F2F"><font size="2">(01:33:12 PM)</font> <b>goldengamer:</b></font> Actually sorry I meant redis<br/>
+<font color="#A82F2F"><font size="2">(01:33:14 PM)</font> <b>goldengamer:</b></font> Not mongo<br/>
+<font color="#A82F2F"><font size="2">(01:33:23 PM)</font> <b>goldengamer:</b></font> You can use redis to store the session<br/>
+<font color="#A82F2F"><font size="2">(01:34:10 PM)</font> <b>goldengamer:</b></font> Actually I’m stupid, I think you can use either mongo or redis as your session store<br/>
+<font color="#A82F2F"><font size="2">(01:37:33 PM)</font> <b>IJNX:</b></font> why not waterline at start?<br/>
+<font color="#A82F2F"><font size="2">(02:10:07 PM)</font> <b>goldengamer:</b></font> What do you mean?<br/>
+<font color="#A82F2F"><font size="2">(02:10:20 PM)</font> <b>goldengamer:</b></font> It uses waterline to interface to the database you’re using<br/>
+<font color="#A82F2F"><font size="2">(02:10:25 PM)</font> <b>goldengamer:</b></font> I think<br/>
+<font color="#A82F2F"><font size="2">(02:11:44 PM)</font> <b>goldengamer:</b></font> But it only allows you to use the mongo or redis adapters for connecting to the session store<br/>
+<font color="#A82F2F"><font size="2">(02:11:47 PM)</font> <b>goldengamer:</b></font> (no mysql)<br/>
+<font size="2">(02:20:26 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(02:22:40 PM)</font> <b>adamayres:</b></font> hello, im using sails 0.9.x and im trying to find a place to subscribe to all socket events on the server<br/>
+<font color="#A82F2F"><font size="2">(02:24:04 PM)</font> <b>adamayres:</b></font> i tried both /message and /firehose but neither seem to be working for me<br/>
+<font color="#A82F2F"><font size="2">(03:19:16 PM)</font> <b>delight:</b></font> how can I send a array with postman ? is it possible ?<br/>
+<font color="#A82F2F"><font size="2">(03:19:32 PM)</font> <b>robdubya:</b></font> delight post one you mean?<br/>
+<font color="#A82F2F"><font size="2">(03:19:42 PM)</font> <b>delight:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(03:19:47 PM)</font> <b>delight:</b></font> post request<br/>
+<font color="#A82F2F"><font size="2">(03:19:55 PM)</font> <b>robdubya:</b></font> yeah - send JSON<br/>
+<font color="#A82F2F"><font size="2">(03:20:39 PM)</font> <b>delight:</b></font> thnx … found it .. raw and then json … i’ll try that :)<br/>
+<font color="#A82F2F"><font size="2">(03:21:22 PM)</font> <b>robdubya:</b></font> delight defo check out the new Postman too<br/>
+<font color="#A82F2F"><font size="2">(03:21:25 PM)</font> <b>robdubya:</b></font> (package app version)<br/>
+<font color="#A82F2F"><font size="2">(03:21:41 PM)</font> <b>delight:</b></font> i have the package app version<br/>
+<font color="#A82F2F"><font size="2">(03:21:54 PM)</font> <b>delight:</b></font> to be honest i have both ;)<br/>
+<font color="#A82F2F"><font size="2">(03:22:07 PM)</font> <b>delight:</b></font> but right now i was on the packaged app one<br/>
+<font color="#A82F2F"><font size="2">(03:22:13 PM)</font> <b>robdubya:</b></font> i paid the 8 bucks or whatever for the test runner<br/>
+<font color="#A82F2F"><font size="2">(03:22:18 PM)</font> <b>robdubya:</b></font> its awesome<br/>
+<font color="#A82F2F"><font size="2">(03:26:03 PM)</font> <b>delight:</b></font> jetpack for postman ? 9,99$<br/>
+<font color="#A82F2F"><font size="2">(03:26:13 PM)</font> <b>robdubya:</b></font> yeah, that<br/>
+<font color="#A82F2F"><font size="2">(03:28:40 PM)</font> <b>delight:</b></font> hmmm … json sending won’t work somehow .. must be doing something wrong<br/>
+<font color="#A82F2F"><font size="2">(03:28:58 PM)</font> <b>robdubya:</b></font> delight make sure you send actual json<br/>
+<font color="#A82F2F"><font size="2">(03:29:08 PM)</font> <b>delight:</b></font> that is my json {‚timeout&apos;: 1000,  &apos;timeoutVar&apos;: 1000,  &apos;data&apos;: [&apos;ABC&apos;,&apos;DEF&apos;]}<br/>
+<font color="#A82F2F"><font size="2">(03:29:12 PM)</font> <b>robdubya:</b></font> [{&quot;id&quot; : 1, &quot;name&quot; : &quot;foo&quot;}]<br/>
+<font color="#A82F2F"><font size="2">(03:29:17 PM)</font> <b>robdubya:</b></font> thats not JSON :D<br/>
+<font color="#A82F2F"><font size="2">(03:29:23 PM)</font> <b>delight:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(03:30:42 PM)</font> <b>delight:</b></font> my irc client messed with the quotes {’timeout&apos;: 1000,  &apos;timeoutVar&apos;: 1000,  &apos;data&apos;: [&apos;ABC&apos;,&apos;DEF&apos;]}<br/>
+<font color="#A82F2F"><font size="2">(03:30:54 PM)</font> <b>robdubya:</b></font> still not JSON<br/>
+<font color="#A82F2F"><font size="2">(03:30:58 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(03:30:59 PM)</font> <b>delight:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(03:31:00 PM)</font> <b>robdubya:</b></font> needs double quotes<br/>
+<font color="#A82F2F"><font size="2">(03:31:05 PM)</font> <b>da_wunder:</b></font> JSON escapes with &quot;<br/>
+<font color="#A82F2F"><font size="2">(03:31:19 PM)</font> <b>delight:</b></font> oh … good to know<br/>
+<font color="#A82F2F"><font size="2">(03:31:35 PM)</font> <b>delight:</b></font> learned something … thnx<br/>
+<font color="#A82F2F"><font size="2">(03:33:19 PM)</font> <b>delight:</b></font> nice it worked :)<br/>
+<font color="#A82F2F"><font size="2">(03:37:52 PM)</font> <b>da_wunder:</b></font> i&apos;m wondering if people read any spec no more...<br/>
+<font color="#A82F2F"><font size="2">(03:38:22 PM)</font> <b>robdubya:</b></font> da_wunder we dont need no stinkin specs<br/>
+<font color="#A82F2F"><font size="2">(03:39:06 PM)</font> <b>da_wunder:</b></font> i do not agree<br/>
+<font size="2">(03:40:40 PM)</font><b> sz0 is now known as sz0`</b><br/>
+<font color="#A82F2F"><font size="2">(03:41:15 PM)</font> <b>delight:</b></font> da_wunder: well JSON allways looked so simple and intuitive to me that I didn’t think of needing to lookup a spec for it<br/>
+<font color="#A82F2F"><font size="2">(03:41:35 PM)</font> <b>delight:</b></font> and if so I might have slipped over the fact that it uses double quotes<br/>
+<font color="#A82F2F"><font size="2">(03:43:07 PM)</font> <b>delight:</b></font> in general I’m used to use single quotes in my code … possibly because of my groovy influence<br/>
+<font color="#A82F2F"><font size="2">(03:43:24 PM)</font> <b>delight:</b></font> at least if the language supports it<br/>
+<font color="#A82F2F"><font size="2">(03:46:56 PM)</font> <b>robdubya:</b></font> delight i am too. but JS != JSON<br/>
+<font color="#A82F2F"><font size="2">(03:47:12 PM)</font> <b>delight:</b></font> yes I just realized it :)<br/>
+<font color="#A82F2F"><font size="2">(03:49:42 PM)</font> <b>delight:</b></font> btw. what is yout opinion on that specification ? I mean is there a real reason why it is limited to double quotes ?<br/>
+<font color="#A82F2F"><font size="2">(03:51:01 PM)</font> <b>robdubya:</b></font> smarter men than i invented it<br/>
+<font color="#A82F2F"><font size="2">(03:51:09 PM)</font> <b>delight:</b></font> hehe<br/>
+<font size="2">(04:56:02 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

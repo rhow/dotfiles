@@ -1,0 +1,64 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 08 Jul 2014 07:46:40 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 08 Jul 2014 07:46:40 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(07:46:40 AM)</font><b> The topic for #sailsjs is: Documentation for v0.10 can be found at <a href="http://beta.sailsjs.org">http://beta.sailsjs.org</a></b><br/>
+<font color="#A82F2F"><font size="2">(07:46:47 AM)</font> <b>da_wunder:</b></font> RWOverdijk: sorry i was somewhere else, just got back to computer<br/>
+<font color="#A82F2F"><font size="2">(07:46:57 AM)</font> <b>da_wunder:</b></font> imho i&apos;m not so smart :D<br/>
+<font color="#A82F2F"><font size="2">(07:47:13 AM)</font> <b>niall_obrien:</b></font> same da_wunder from #angularjs? Hi dude!<br/>
+<font color="#A82F2F"><font size="2">(07:47:26 AM)</font> <b>da_wunder:</b></font> hmm, is there groupBy on waterline?<br/>
+<font color="#A82F2F"><font size="2">(07:47:46 AM)</font> <b>da_wunder:</b></font> or do I have to fetch all records and then make grouping myself?<br/>
+<font color="#A82F2F"><font size="2">(07:48:02 AM)</font> <b>da_wunder:</b></font> niall_obrien: same dude<br/>
+<font color="#A82F2F"><font size="2">(07:48:37 AM)</font> <b>niall_obrien:</b></font> da_wunder: Cool. :)<br/>
+<font color="#A82F2F"><font size="2">(07:48:54 AM)</font> <b>veenutanwar:</b></font> really  Cool :)<br/>
+<font color="#A82F2F"><font size="2">(07:49:11 AM)</font> <b>niall_obrien:</b></font> da_wunder: Man, I tried my Ionic app on an Android device today and because I&apos;m binding so much data to the view - it&apos;s sloooooow.<br/>
+<font color="#A82F2F"><font size="2">(07:49:30 AM)</font> <b>veenutanwar:</b></font> are you using angularjs ?<br/>
+<font color="#A82F2F"><font size="2">(07:49:39 AM)</font> <b>da_wunder:</b></font> i am<br/>
+<font color="#A82F2F"><font size="2">(07:50:19 AM)</font> <b>veenutanwar:</b></font> are you ?<br/>
+<font color="#A82F2F"><font size="2">(07:50:34 AM)</font> <b>niall_obrien:</b></font> veenutanwar: yup<br/>
+<font color="#A82F2F"><font size="2">(07:51:17 AM)</font> <b>veenutanwar:</b></font> because of angularjs slow in repeat element binding may be it work slow<br/>
+<font color="#A82F2F"><font size="2">(07:52:46 AM)</font> <b>niall_obrien:</b></font> veenutanwar: Yeah, ng-repeat is killing it<br/>
+<font color="#A82F2F"><font size="2">(07:53:07 AM)</font> <b>niall_obrien:</b></font> Any suggestions for a good strategy?<br/>
+<font color="#A82F2F"><font size="2">(07:54:21 AM)</font> <b>RWOverdijk:</b></font> bleg?<br/>
+<font color="#A82F2F"><font size="2">(07:54:42 AM)</font> <b>RWOverdijk:</b></font> da_wunder, groupBy is possible<br/>
+<font color="#A82F2F"><font size="2">(07:54:56 AM)</font> <b>RWOverdijk:</b></font> da_wunder, But only in combination with sum, max etc.<br/>
+<font color="#A82F2F"><font size="2">(07:55:26 AM)</font> <b>da_wunder:</b></font> niall_obrien: you could use angular + react for faster rendering<br/>
+<font color="#A82F2F"><font size="2">(07:55:30 AM)</font> <b>da_wunder:</b></font> niall_obrien: http://www.williambrownstreet.net/blog/2014/04/faster-angularjs-rendering-angularjs-and-reactjs/<br/>
+<font color="#A82F2F"><font size="2">(07:57:04 AM)</font> <b>niall_obrien:</b></font> da_wunder: Interesting approach.<br/>
+<font color="#A82F2F"><font size="2">(07:57:50 AM)</font> <b>RWOverdijk:</b></font> react sucks<br/>
+<font color="#A82F2F"><font size="2">(07:57:53 AM)</font> <b>RWOverdijk:</b></font> Really<br/>
+<font color="#A82F2F"><font size="2">(07:57:58 AM)</font> <b>RWOverdijk:</b></font> It&apos;s entire approach is shit.<br/>
+<font color="#A82F2F"><font size="2">(07:58:03 AM)</font> <b>RWOverdijk:</b></font> its*<br/>
+<font color="#A82F2F"><font size="2">(07:58:28 AM)</font> <b>RWOverdijk:</b></font> It diffs a &quot;shadow DOM&quot; to the current DOM<br/>
+<font color="#A82F2F"><font size="2">(07:58:32 AM)</font> <b>RWOverdijk:</b></font> And applies the changes.<br/>
+<font color="#A82F2F"><font size="2">(07:58:34 AM)</font> <b>da_wunder:</b></font> RWOverdijk: hmm, have you used groupBy with count()?<br/>
+<font color="#A82F2F"><font size="2">(07:59:01 AM)</font> <b>RWOverdijk:</b></font> http://stackoverflow.com/questions/19863815/waterline-count-and-group-by<br/>
+<font color="#A82F2F"><font size="2">(07:59:10 AM)</font> <b>RWOverdijk:</b></font> da_wunder, that&apos;s the thing<br/>
+<font color="#A82F2F"><font size="2">(07:59:15 AM)</font> <b>RWOverdijk:</b></font> Something.find({ groupBy: [ &apos;keyfield&apos; ], sum: [ &apos;totalAmt&apos; ] })<br/>
+<font color="#A82F2F"><font size="2">(07:59:35 AM)</font> <b>RWOverdijk:</b></font> da_wunder, If you need a count, use .length. :p<br/>
+<font color="#A82F2F"><font size="2">(07:59:44 AM)</font> <b>RWOverdijk:</b></font> I don&apos;t think count works otherwise<br/>
+<font color="#A82F2F"><font size="2">(07:59:49 AM)</font> <b>da_wunder:</b></font> RWOverdijk: yep<br/>
+<font color="#A82F2F"><font size="2">(07:59:54 AM)</font> <b>RWOverdijk:</b></font> Because group by isn&apos;t that flexible<br/>
+<font color="#A82F2F"><font size="2">(07:59:56 AM)</font> <b>RWOverdijk:</b></font> JESUS<br/>
+<font color="#A82F2F"><font size="2">(07:59:58 AM)</font> <b>da_wunder:</b></font> seems like that<br/>
+<font color="#A82F2F"><font size="2">(08:00:04 AM)</font> <b>RWOverdijk:</b></font> I need to disable notification sounds<br/>
+<font color="#A82F2F"><font size="2">(08:00:11 AM)</font> <b>RWOverdijk:</b></font> You scared the living shit out of me<br/>
+<font color="#A82F2F"><font size="2">(08:00:39 AM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(08:00:49 AM)</font> <b>da_wunder:</b></font> damn is it hot here<br/>
+<font color="#A82F2F"><font size="2">(08:01:41 AM)</font> <b>RWOverdijk:</b></font> http://critterbabies.com/wp-content/gallery/kittens/happy-kitten-kittens-5890512-1600-1200.jpg<br/>
+<font color="#A82F2F"><font size="2">(08:01:43 AM)</font> <b>niall_obrien:</b></font> Thanks for that killer link da_wunder<br/>
+<font color="#A82F2F"><font size="2">(08:01:44 AM)</font> <b>RWOverdijk:</b></font> YAY<br/>
+<font color="#A82F2F"><font size="2">(08:01:46 AM)</font> <b>RWOverdijk:</b></font> it works<br/>
+<font color="#A82F2F"><font size="2">(08:01:54 AM)</font> <b>mink:</b></font> Guys, do we have any backup of docs from beta.sailsjs.org? :D<br/>
+<font color="#A82F2F"><font size="2">(08:02:01 AM)</font> <b>RWOverdijk:</b></font> textual renders it inline. That&apos;s cool<br/>
+<font color="#A82F2F"><font size="2">(08:02:03 AM)</font> <b>RWOverdijk:</b></font> mink, yes<br/>
+<font color="#A82F2F"><font size="2">(08:02:06 AM)</font> <b>RWOverdijk:</b></font> It&apos;s called github.<br/>
+<font color="#A82F2F"><font size="2">(08:02:18 AM)</font> <b>RWOverdijk:</b></font> https://github.com/balderdashy/sails-docs<br/>
+<font color="#A82F2F"><font size="2">(08:02:33 AM)</font> <b>RWOverdijk:</b></font> https://www.dropbox.com/s/ph3r30cyy7e6zdd/Screenshot%202014-07-08%2016.02.32.png<br/>
+<font color="#A82F2F"><font size="2">(08:03:32 AM)</font> <b>da_wunder:</b></font> RWOverdijk: there isn&apos;t any other irc client that irssi :D<br/>
+<font color="#A82F2F"><font size="2">(08:12:02 AM)</font> <b>RWOverdijk:</b></font> da_wunder, There clearly is.<br/>
+<font color="#A82F2F"><font size="2">(08:12:05 AM)</font> <b>RWOverdijk:</b></font> Textual.<br/>
+<font color="#A82F2F"><font size="2">(08:12:17 AM)</font> <b>RWOverdijk:</b></font> But not if you&apos;re not on mac os X<br/>
+<font color="#A82F2F"><font size="2">(08:12:32 AM)</font> <b>RWOverdijk:</b></font> Then your dev life is bound more to the terminal I&apos;m afraid :p<br/>
+<font color="#A82F2F"><font size="2">(08:25:43 AM)</font> <b>da_wunder:</b></font> damn, $sailsSocket doesn&apos;t support groupBy<br/>
+<font color="#A82F2F"><font size="2">(08:26:01 AM)</font> <b>da_wunder:</b></font> so I have to made &quot;stupid&quot; actions for controller<br/>
+<font color="#A82F2F"><font size="2">(08:26:04 AM)</font> <b>da_wunder:</b></font> damn<br/>
+<font size="2">(09:46:35 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

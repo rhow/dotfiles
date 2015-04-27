@@ -1,0 +1,107 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 16 Apr 2014 07:20:52 AM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 16 Apr 2014 07:20:52 AM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(07:20:52 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(07:26:45 AM)</font> <b>miqui:</b></font> brandom: thanks...<br/>
+<font size="2">(07:49:58 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(07:55:02 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(08:16:32 AM)</font> <b>miqui:</b></font> so this seems silly, but  code that references sails.log.warn() in local.js explodes with &quot;sails is not defined&quot;<br/>
+<font color="#A82F2F"><font size="2">(08:16:42 AM)</font> <b>miqui:</b></font> is sails.xxx not global?<br/>
+<font color="#A82F2F"><font size="2">(08:20:42 AM)</font> <b>luc_:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(08:20:51 AM)</font> <b>brandom:</b></font> miqui: It is, but /config files are loaded first, before so sails isn&apos;t technically &quot;lifted&quot; yet.<br/>
+<font color="#A82F2F"><font size="2">(08:21:35 AM)</font> <b>luc_:</b></font> I&apos;m trying to integrate OAuth2 into sails (I&apos;d like to use policies for the OAUth endpoints) but still have no success<br/>
+<font color="#A82F2F"><font size="2">(08:21:51 AM)</font> <b>luc_:</b></font> any attempts already made ?<br/>
+<font color="#A82F2F"><font size="2">(08:22:04 AM)</font> <b>miqui:</b></font> brandom: yeah..ok  thanks...<br/>
+<font color="#A82F2F"><font size="2">(08:22:18 AM)</font> <b>miqui:</b></font> brandom: need to research on sails bootstraping...<br/>
+<font color="#A82F2F"><font size="2">(08:23:10 AM)</font> <b>luc_:</b></font> I find oauth2orize quite hard to understand (and to integrate in sails)<br/>
+<font color="#A82F2F"><font size="2">(08:23:59 AM)</font> <b>luc_:</b></font> I&apos;ve set up a project here: https://github.com/lucj/sails-oauth2-api   but this puzzle still misses some pieces<br/>
+<font color="#A82F2F"><font size="2">(08:25:31 AM)</font> <b>brandom:</b></font> miqui: In a nutshell all of the following hooks are loaded to bootstrap sails: https://github.com/balderdashy/sails/tree/master/lib/hooks<br/>
+<font color="#A82F2F"><font size="2">(08:25:50 AM)</font> <b>miqui:</b></font> brandom: cool... thanks..<br/>
+<font color="#A82F2F"><font size="2">(08:26:32 AM)</font> <b>sfb:</b></font> da_wunder: Heya<br/>
+<font color="#A82F2F"><font size="2">(08:26:48 AM)</font> <b>sfb:</b></font> da_wunder: The first time I log into your demo site I get spammed with &quot;you tried to render a view over sockets&quot; errors<br/>
+<font color="#A82F2F"><font size="2">(08:27:02 AM)</font> <b>sfb:</b></font> da_wunder: And bounced back to the login. The next time I log in it seems to be fine.<br/>
+<font color="#A82F2F"><font size="2">(08:29:14 AM)</font> <b>IJNX:</b></font> how do I enter default form object when enterin register.ejs the first time? e.g. { user: {username: &apos;&apos;,…}<br/>
+<font color="#A82F2F"><font size="2">(08:29:53 AM)</font> <b>IJNX:</b></font> I&apos;m trying to build form that remembers state after validation error...<br/>
+<font color="#A82F2F"><font size="2">(08:31:35 AM)</font> <b>brandom:</b></font> IJNX: Are you avoiding a client side strategy? Would be much easier to implement there IMO.<br/>
+<font color="#A82F2F"><font size="2">(08:32:16 AM)</font> <b>IJNX:</b></font> brandom: No, just the easiest for now.<br/>
+<font color="#A82F2F"><font size="2">(08:34:17 AM)</font> <b>IJNX:</b></font> I thought sails could convey the posted object back to the redirected form.<br/>
+<font color="#A82F2F"><font size="2">(08:34:44 AM)</font> <b>brandom:</b></font> IJNX: Well, if you aren&apos;t used to doing things client side it may not be the easiest b/c of learning curve, so I guess its subjective. Have you looked at angularjs.org?<br/>
+<font color="#A82F2F"><font size="2">(08:34:54 AM)</font> <b>IJNX:</b></font> problem is that at first entry to /register url, there is no object defined, so I need to add a lot of if (user) code to template.<br/>
+<font color="#A82F2F"><font size="2">(08:35:38 AM)</font> <b>IJNX:</b></font> brandom. using angular constantly, but I would like to write validation twice.<br/>
+<font color="#A82F2F"><font size="2">(08:36:03 AM)</font> <b>IJNX:</b></font> wouldn&apos;t<br/>
+<font color="#A82F2F"><font size="2">(08:36:29 AM)</font> <b>brandom:</b></font> Well, you are kind of supposed to.. but maybe not the way you think.<br/>
+<font color="#A82F2F"><font size="2">(08:37:14 AM)</font> <b>brandom:</b></font> Validation server side should be handled by your model. Client side validation is pretty much baked in to ng-submit if you use HTML5 forms.<br/>
+<font color="#A82F2F"><font size="2">(08:37:16 AM)</font> <b>IJNX:</b></font> frameworks like meteor allows you to share validation code in both ends.<br/>
+<font color="#A82F2F"><font size="2">(08:38:42 AM)</font> <b>jkdev:</b></font> luc_: are you trying to setup oauth2 server or oauth2 client?<br/>
+<font color="#A82F2F"><font size="2">(08:38:45 AM)</font> <b>IJNX:</b></font> I need to rethink this. I was going to do registration/login without angular and then go into the app once logged in.<br/>
+<font color="#A82F2F"><font size="2">(08:39:07 AM)</font> <b>luc_:</b></font> jkdev: I&apos;m try to setup the server<br/>
+<font color="#A82F2F"><font size="2">(08:39:09 AM)</font> <b>IJNX:</b></font> maybe I do all from the single-page-app then…<br/>
+<font size="2">(08:39:27 AM)</font><b> IJNX left the room (quit: Quit: IJNX).</b><br/>
+<font color="#A82F2F"><font size="2">(08:39:32 AM)</font> <b>brandom:</b></font> IJNX: That is what I do, but I use angular in my templates as well.<br/>
+<font color="#A82F2F"><font size="2">(08:39:55 AM)</font> <b>luc_:</b></font> jkdev: I found several examples and build my own here: https://github.com/lucj/sails-oauth2-api<br/>
+<font color="#A82F2F"><font size="2">(08:41:17 AM)</font> <b>luc_:</b></font> jkdev: I&apos;ve added some details in the README, the missing pieces is the glue between the endPoint (/authorize, /token) and the call to the passport and oauth2orize (still some kind of black box to me)<br/>
+<font color="#A82F2F"><font size="2">(08:41:36 AM)</font> <b>brandom:</b></font> I have my main SPA, but I provide login routes that serve something like this: http://pastebin.com/sSFfc9Yi<br/>
+<font color="#A82F2F"><font size="2">(08:41:42 AM)</font> <b>jkdev:</b></font> I am trying to same thing. I am using based on example for github - *trying to find the link*<br/>
+<font color="#A82F2F"><font size="2">(08:41:48 AM)</font> <b>jdcauley:</b></font> anyone done dynamic routes?<br/>
+<font color="#A82F2F"><font size="2">(08:44:43 AM)</font> <b>jkdev:</b></font> luc_: I think I built mine based on this : https://github.com/aaron524/sails-oauth2-provider-example<br/>
+<font color="#A82F2F"><font size="2">(08:45:46 AM)</font> <b>jkdev:</b></font> luc_: I changed the project to use mongodb instead of disk<br/>
+<font color="#A82F2F"><font size="2">(08:49:02 AM)</font> <b>jkdev:</b></font> luc_: just quick look at your code, it looks like you have similar setup. I am interested to learn more about your project progeress<br/>
+<font color="#A82F2F"><font size="2">(08:50:22 AM)</font> <b>jkdev:</b></font> jdcauley: what do you “dynamic routes”? do you mean like /:partone/:parttwo  ?<br/>
+<font color="#A82F2F"><font size="2">(08:50:59 AM)</font> <b>jdcauley:</b></font> I need to pass from data to a route, but i need the user id hardwired to the url and not part of the form data<br/>
+<font color="#A82F2F"><font size="2">(08:51:00 AM)</font> <b>jkdev:</b></font> what do you *mean “dynamic routes”?<br/>
+<font color="#A82F2F"><font size="2">(08:51:14 AM)</font> <b>jdcauley:</b></font> but jkdev yes with :id<br/>
+<font color="#A82F2F"><font size="2">(08:51:16 AM)</font> <b>jdcauley:</b></font> so like<br/>
+<font color="#A82F2F"><font size="2">(08:51:50 AM)</font> <b>jdcauley:</b></font> user/:id/chekckout/?moredata=data<br/>
+<font size="2">(08:51:58 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(08:52:22 AM)</font> <b>jkdev:</b></font> jdcauley: btw, my last message to correct my own typo from the message before , it wasn;t meant to reply to your message ( you replyed so quick :))<br/>
+<font color="#A82F2F"><font size="2">(08:53:31 AM)</font> <b>jkdev:</b></font> I use dynamic route<br/>
+<font color="#A82F2F"><font size="2">(08:53:58 AM)</font> <b>jkdev:</b></font> it is same as static route in term of setting route<br/>
+<font color="#A82F2F"><font size="2">(08:55:02 AM)</font> <b>jkdev:</b></font> in config/routes.js , you just need to set ‘/user’<br/>
+<font color="#A82F2F"><font size="2">(08:56:48 AM)</font> <b>jkdev:</b></font> wait better yet, just set up as ‘/user/:id/checkout’<br/>
+<font color="#A82F2F"><font size="2">(08:57:32 AM)</font> <b>mit:</b></font> hi everyone<br/>
+<font color="#A82F2F"><font size="2">(08:57:55 AM)</font> <b>jkdev:</b></font> the querystring values, you can get from controller like req.params.moredata<br/>
+<font color="#A82F2F"><font size="2">(08:58:09 AM)</font> <b>mit:</b></font> i have a question about sails unique model attributes?<br/>
+<font color="#A82F2F"><font size="2">(08:58:49 AM)</font> <b>luc_:</b></font> jkdev: I also used https://github.com/aaron524/sails-oauth2-provider-example, but tried to adapt it<br/>
+<font color="#A82F2F"><font size="2">(08:59:40 AM)</font> <b>luc_:</b></font> jkdev: did you implement both resource owner password and authorization code grant ?<br/>
+<font color="#A82F2F"><font size="2">(09:00:44 AM)</font> <b>mit:</b></font> in the ofiicial documentation for the model, unique is not listend as validator<br/>
+<font color="#A82F2F"><font size="2">(09:01:07 AM)</font> <b>mit:</b></font> and as i tried to implement it it is not working with mysql<br/>
+<font color="#A82F2F"><font size="2">(09:01:26 AM)</font> <b>jkdev:</b></font> luc_: yeah.. I can’t say too much about aaron524’s oauth2 example, b/c literally I forked the project couple days ago. havn’t had chance to dive deep<br/>
+<font color="#A82F2F"><font size="2">(09:02:25 AM)</font> <b>jkdev:</b></font> luc_: what is resource owner password / authorization code ?<br/>
+<font size="2">(09:02:41 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(09:03:08 AM)</font> <b>luc_:</b></font> jkdev: it&apos;s the possibility to get an access token directly using the user&apos;s username/password and the client&apos;s id and secret.<br/>
+<font color="#A82F2F"><font size="2">(09:03:41 AM)</font> <b>jkdev:</b></font> luc_:where is the setting in the code ?<br/>
+<font color="#A82F2F"><font size="2">(09:03:43 AM)</font> <b>luc_:</b></font> jkdev: this flow is less secure but quite commom when you have trusted clients<br/>
+<font color="#A82F2F"><font size="2">(09:04:47 AM)</font> <b>jkdev:</b></font> luc_: i haven;t chance much form the original code except switch the database to mongodb and passport validation logic<br/>
+<font color="#A82F2F"><font size="2">(09:05:15 AM)</font> <b>luc_:</b></font> jkdev: in api/Services/OAuthService, I&apos;ve added several exchange, one of them is used for this purpose (// Exchange username &amp; password for access token)<br/>
+<font color="#A82F2F"><font size="2">(09:05:30 AM)</font> <b>luc_:</b></font> jkdev: but I do not really understand how to integrate it<br/>
+<font color="#A82F2F"><font size="2">(09:05:41 AM)</font> <b>luc_:</b></font> jkdev: ok no problem<br/>
+<font color="#A82F2F"><font size="2">(09:06:40 AM)</font> <b>luc_:</b></font> jkdev: I&apos;ve had no reply form aaron524 yet<br/>
+<font color="#A82F2F"><font size="2">(09:07:00 AM)</font> <b>jkdev:</b></font> luc_: i see you added more in policies and services<br/>
+<font color="#A82F2F"><font size="2">(09:07:23 AM)</font> <b>jkdev:</b></font> luc_: I am going to look at your code this afternoon.<br/>
+<font color="#A82F2F"><font size="2">(09:07:40 AM)</font> <b>luc_:</b></font> jkdev: great :)<br/>
+<font color="#A82F2F"><font size="2">(09:08:29 AM)</font> <b>jkdev:</b></font> luc_: curious, what are these codes are for? the aaron524 example is incomplated by itself ?<br/>
+<font color="#A82F2F"><font size="2">(09:08:37 AM)</font> <b>luc_:</b></font> jkdev: I&apos;ll be disconnected from the channel in less than 30min, so if you have any comments, do not hesitate to had them in stackoverflow<br/>
+<font color="#A82F2F"><font size="2">(09:09:41 AM)</font> <b>luc_:</b></font> jkdev: aaron524 implemented the Authorization code, but not the user&apos;s resource password<br/>
+<font color="#A82F2F"><font size="2">(09:10:00 AM)</font> <b>jkdev:</b></font> luc_: I added your git porject in my watch list<br/>
+<font color="#A82F2F"><font size="2">(09:10:30 AM)</font> <b>jkdev:</b></font> project<br/>
+<font color="#A82F2F"><font size="2">(09:11:52 AM)</font> <b>rawtaz:</b></font> im pondering going sails+orient :)<br/>
+<font color="#A82F2F"><font size="2">(09:12:10 AM)</font> <b>luc_:</b></font> jkdev: ok, I tried to explain the problem I have in the README<br/>
+<font color="#A82F2F"><font size="2">(09:12:10 AM)</font> <b>jkdev:</b></font> luc_: ok thank you for sharing your code, I will look into your code later today, if I have question, I will ask you directly github<br/>
+<font color="#A82F2F"><font size="2">(09:12:32 AM)</font> <b>luc_:</b></font> jkdev: no problem, thank you !!!<br/>
+<font color="#A82F2F"><font size="2">(09:12:40 AM)</font> <b>jkdev:</b></font> luc_:cool thanks!<br/>
+<font color="#A82F2F"><font size="2">(09:17:57 AM)</font> <b>mit:</b></font> can somebody help?<br/>
+<font color="#A82F2F"><font size="2">(09:21:01 AM)</font> <b>jkdev:</b></font> mit: I don’t use mysql but I will try to help you if I can<br/>
+<font color="#A82F2F"><font size="2">(09:21:46 AM)</font> <b>jkdev:</b></font> mit: first of all, (i know this is obvious) did you install sails-mysql ?<br/>
+<font color="#A82F2F"><font size="2">(09:22:55 AM)</font> <b>mit:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(09:22:58 AM)</font> <b>mit:</b></font> and it works<br/>
+<font color="#A82F2F"><font size="2">(09:23:09 AM)</font> <b>mit:</b></font> i insert records through sails<br/>
+<font color="#A82F2F"><font size="2">(09:23:42 AM)</font> <b>jkdev:</b></font> ok.. so what is your question?<br/>
+<font color="#A82F2F"><font size="2">(09:24:24 AM)</font> <b>mit:</b></font> i set the unique property of my user model attribute to true<br/>
+<font color="#A82F2F"><font size="2">(09:24:44 AM)</font> <b>mit:</b></font> but as i try to create duplicating record<br/>
+<font color="#A82F2F"><font size="2">(09:24:49 AM)</font> <b>mit:</b></font> the validation is not workig<br/>
+<font color="#A82F2F"><font size="2">(09:25:33 AM)</font> <b>mit:</b></font> and it trys to insert duplicate record in the db, closing the sails server with error<br/>
+<font color="#A82F2F"><font size="2">(09:26:04 AM)</font> <b>mit:</b></font> because in mysql database the field is marked as unique<br/>
+<font color="#A82F2F"><font size="2">(09:26:53 AM)</font> <b>jkdev:</b></font> ok i see, I will look at my code and the model doc .. I remember I had similar issue too<br/>
+<font color="#A82F2F"><font size="2">(09:27:09 AM)</font> <b>mit:</b></font> jkdev: 10x<br/>
+<font color="#A82F2F"><font size="2">(09:29:13 AM)</font> <b>jkdev:</b></font> does anyone know the link to new sailsjs site? I had it once but I forgot - it had better explanation about model<br/>
+<font color="#A82F2F"><font size="2">(09:30:13 AM)</font> <b>mit:</b></font> http://sailsjs.org/#!documentation/models this one?<br/>
+<font size="2">(09:30:56 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

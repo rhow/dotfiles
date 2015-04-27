@@ -1,0 +1,54 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Thu 22 May 2014 12:23:21 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Thu 22 May 2014 12:23:21 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(12:23:21 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(12:23:41 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(12:23:58 PM)</font> <b>da_wunder:</b></font> is there examples of api/blueprints/someaction.js ?<br/>
+<font color="#A82F2F"><font size="2">(12:24:10 PM)</font> <b>Foxandxss:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(12:24:18 PM)</font> <b>Foxandxss:</b></font> https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints/actions<br/>
+<font color="#A82F2F"><font size="2">(12:24:20 PM)</font> <b>Foxandxss:</b></font> there are all of them<br/>
+<font color="#A82F2F"><font size="2">(12:24:49 PM)</font> <b>da_wunder:</b></font> aah<br/>
+<font color="#A82F2F"><font size="2">(12:24:53 PM)</font> <b>da_wunder:</b></font> those are that simple<br/>
+<font color="#A82F2F"><font size="2">(12:25:18 PM)</font> <b>Foxandxss:</b></font> they are overly complex because they are generic<br/>
+<font color="#A82F2F"><font size="2">(12:25:24 PM)</font> <b>Foxandxss:</b></font> AKA retrieve the correct model based on the params<br/>
+<font color="#A82F2F"><font size="2">(12:25:33 PM)</font> <b>Foxandxss:</b></font> instad of you giving directly what model to use<br/>
+<font color="#A82F2F"><font size="2">(12:25:35 PM)</font> <b>da_wunder:</b></font> and how do those custom actions are attached to url?<br/>
+<font color="#A82F2F"><font size="2">(12:26:00 PM)</font> <b>Foxandxss:</b></font> by routes?<br/>
+<font color="#A82F2F"><font size="2">(12:26:06 PM)</font> <b>Foxandxss:</b></font> look at the comments<br/>
+<font color="#A82F2F"><font size="2">(12:26:13 PM)</font> <b>da_wunder:</b></font> so you have to add routes for all of those<br/>
+<font color="#A82F2F"><font size="2">(12:26:34 PM)</font> <b>Foxandxss:</b></font> routes are added for you<br/>
+<font color="#A82F2F"><font size="2">(12:26:52 PM)</font> <b>Foxandxss:</b></font> if you need to replace &quot;create&quot; just create an action called &quot;create&quot; on your controller<br/>
+<font color="#A82F2F"><font size="2">(12:26:56 PM)</font> <b>Foxandxss:</b></font> and that will replace that one<br/>
+<font color="#A82F2F"><font size="2">(12:27:05 PM)</font> <b>da_wunder:</b></font> i will create new one<br/>
+<font color="#A82F2F"><font size="2">(12:27:57 PM)</font> <b>Foxandxss:</b></font> ah, custom one<br/>
+<font color="#A82F2F"><font size="2">(12:27:59 PM)</font> <b>da_wunder:</b></font> basically same as this https://github.com/balderdashy/sails/issues/1653<br/>
+<font color="#A82F2F"><font size="2">(12:28:19 PM)</font> <b>Foxandxss:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(12:28:31 PM)</font> <b>Foxandxss:</b></font> any action added to a controller is automagically routed<br/>
+<font color="#A82F2F"><font size="2">(12:28:39 PM)</font> <b>Foxandxss:</b></font> and responds to GET / POST / PUT / DELETE<br/>
+<font color="#A82F2F"><font size="2">(12:28:53 PM)</font> <b>Foxandxss:</b></font> you probably want to disable that on production (config/blueprints.js)<br/>
+<font color="#A82F2F"><font size="2">(12:28:56 PM)</font> <b>Foxandxss:</b></font> action: yes<br/>
+<font color="#A82F2F"><font size="2">(12:28:59 PM)</font> <b>Foxandxss:</b></font> there is more doc<br/>
+<font color="#A82F2F"><font size="2">(12:52:15 PM)</font> <b>joshstrange:</b></font> Is there a way to access sails.config when a service is created? (more specifically to check if dev/prod)<br/>
+<font color="#A82F2F"><font size="2">(12:52:55 PM)</font> <b>joshstrange:</b></font> I need to export something different if I am in dev but “sails” is undefined at that point<br/>
+<font color="#A82F2F"><font size="2">(12:56:20 PM)</font> <b>joshstrange:</b></font> Hmm, this seems to indicate I can’t access it in the “root” https://gist.github.com/mikermcneil/8513795<br/>
+<font color="#A82F2F"><font size="2">(01:01:57 PM)</font> <b>beardtree:</b></font> Hi, does anyone know why my policies aren&apos;t working on straight views? Just working on controllers<br/>
+<font size="2">(01:22:32 PM)</font><b> proppy_ is now known as proppy</b><br/>
+<font color="#A82F2F"><font size="2">(01:26:21 PM)</font> <b>beardtree:</b></font> robdubya: you around by any chance?<br/>
+<font size="2">(01:38:01 PM)</font><b> proppy_ is now known as proppy</b><br/>
+<font size="2">(02:03:44 PM)</font><b> gorelative is now known as mikedevita</b><br/>
+<font color="#A82F2F"><font size="2">(02:32:45 PM)</font> <b>learner:</b></font> How can I connect to mongohq server using sails-mongo ?<br/>
+<font color="#A82F2F"><font size="2">(02:33:15 PM)</font> <b>learner:</b></font> Anyone to help ?<br/>
+<font color="#A82F2F"><font size="2">(02:35:29 PM)</font> <b>Foxandxss:</b></font> maybe on the connection string on config/connection.js (0.10) or config/models.js (0.9 but not sure about this one)<br/>
+<font color="#A82F2F"><font size="2">(02:36:41 PM)</font> <b>learner:</b></font> I&apos;m giving connection string at config/adapter.js<br/>
+<font color="#A82F2F"><font size="2">(02:38:14 PM)</font> <b>JKnife:</b></font> is there an easy way to prepopulate a database with sails?<br/>
+<font color="#A82F2F"><font size="2">(02:38:39 PM)</font> <b>Foxandxss:</b></font> by hand<br/>
+<font color="#A82F2F"><font size="2">(02:38:44 PM)</font> <b>Foxandxss:</b></font> on bootstrap.js<br/>
+<font color="#A82F2F"><font size="2">(02:38:51 PM)</font> <b>Foxandxss:</b></font> there you can create a loop or something<br/>
+<font color="#A82F2F"><font size="2">(02:38:57 PM)</font> <b>Foxandxss:</b></font> populate the bd<br/>
+<font color="#A82F2F"><font size="2">(02:39:02 PM)</font> <b>Foxandxss:</b></font> and on the finish callback, call cb()<br/>
+<font color="#A82F2F"><font size="2">(02:42:44 PM)</font> <b>JKnife:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(02:45:14 PM)</font> <b>Aswebbb:</b></font> DTfagus: Have you already deployed your app?<br/>
+<font color="#A82F2F"><font size="2">(02:54:01 PM)</font> <b>nickeddy:</b></font> hey all<br/>
+<font color="#A82F2F"><font size="2">(02:54:08 PM)</font> <b>nickeddy:</b></font> how do I override a blueprint action?<br/>
+<font color="#A82F2F"><font size="2">(02:55:08 PM)</font> <b>nickeddy:</b></font> or rather, how should I go about assigning a value to a model that&apos;s in request.session?<br/>
+<font color="#A82F2F"><font size="2">(02:59:45 PM)</font> <b>beardtree:</b></font> Does anyone know why my policies aren&apos;t working on straight views? Just working on controllers<br/>
+<font size="2">(03:10:39 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

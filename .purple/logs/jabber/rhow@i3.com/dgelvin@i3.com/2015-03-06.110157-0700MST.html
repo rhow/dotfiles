@@ -1,0 +1,15 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with dgelvin@i3.com at Fri 06 Mar 2015 11:01:57 AM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with dgelvin@i3.com at Fri 06 Mar 2015 11:01:57 AM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(11:06:34 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey what's the best/simplest way to get a parameter from a dict that could have mixed case?<br/>self._width = params.get('WIDTH') or params.get('width')<br/><br/>when the key is &quot;Width&quot;</span><br/>
+<font color="#16569E"><font size="2">(11:09:04 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you think just forcing the case:<br/>theset = set(k.lower() for k in thedict)</span><br/>
+<font color="#16569E"><font size="2">(11:10:55 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://stackoverflow.com/questions/3296499/case-insensitive-dictionary-search-with-python">http://stackoverflow.com/questions/3296499/case-insensitive-dictionary-search-with-python</a></span><br/>
+<font color="#16569E"><font size="2">(11:43:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Got it.  <br/>self._params = dict((k.lower(), v) for k, v in params.items())</span><br/>
+<font color="#A82F2F"><font size="2">(11:45:47 AM)</font> <b>dgelvin@i3.com:</b></font> Yup, that's the approach I would use.  You could also use a dictionary comprehensive since you are using a modern version of python:<br/><br/>params = {key.lower(): value for key, value in params.items()}<br/>
+<font color="#16569E"><font size="2">(11:46:54 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's very contemporary.</span><br/>
+<font color="#A82F2F"><font size="2">(11:47:38 AM)</font> <b>dgelvin@i3.com:</b></font> Sometimes sarcasm can be hard to recognize over chat.  That wasn't...<br/>
+<font color="#16569E"><font size="2">(11:48:30 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, &quot;unresolved references&quot; <br/>self._params = {key.lower(): value for key, value in params.items()}</span><br/>
+<font color="#16569E"><font size="2">(11:48:52 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>under  key and value</span><br/>
+<font color="#A82F2F"><font size="2">(11:49:25 AM)</font> <b>dgelvin@i3.com:</b></font> Hmm..<br/>
+<font color="#16569E"><font size="2">(11:50:59 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, seems right to me.</span><br/>
+<font color="#A82F2F"><font size="2">(11:51:12 AM)</font> <b>dgelvin@i3.com:</b></font> May I come look?<br/>
+<font color="#16569E"><font size="2">(11:51:16 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sure.</span><br/>
+</body></html>

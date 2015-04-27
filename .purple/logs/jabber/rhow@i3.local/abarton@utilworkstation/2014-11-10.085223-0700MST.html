@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with abarton@utilworkstation at Mon 10 Nov 2014 08:52:23 AM MST on rhow@i3.local/utilworkstation (jabber)</title></head><body><h3>Conversation with abarton@utilworkstation at Mon 10 Nov 2014 08:52:23 AM MST on rhow@i3.local/utilworkstation (jabber)</h3>
+<font color="#16569E"><font size="2">(10:37:54 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/">https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/</a></span><br/>
+<font color="#16569E"><font size="2">(02:25:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>looks like the masks can be WKT.</span><br/>
+<font color="#A82F2F"><font size="2">(02:25:06 PM)</font> <b>Austin Barton:</b></font> yea?<br/>
+<font color="#16569E"><font size="2">(02:25:21 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, that's kinda cool.</span><br/>
+<font color="#A82F2F"><font size="2">(02:26:01 PM)</font> <b>Austin Barton:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(02:26:04 PM)</font> <b>Austin Barton:</b></font> Easier<br/>
+<font color="#16569E"><font size="2">(02:26:20 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>POLYGON or MULTIPOLYGON<br/><br/>    LAYER<br/>        NAME 'spot6_sample_mask2'<br/>        TYPE POLYGON<br/>        STATUS OFF<br/>        FEATURE<br/>            WKT &quot;MULTIPOLYGON(((0.339566051959991 44.0269622802734, ....<br/>            0.339566051959991 44.0269622802734)))&quot;<br/>        END<br/>        CLASS<br/>            STYLE<br/>                COLOR 0 0 255<br/>            END<br/>        END<br/>    END<br/></span><br/>
+<font color="#A82F2F"><font size="2">(02:26:29 PM)</font> <b>Austin Barton:</b></font> nice<br/>
+<font color="#16569E"><font size="2">(02:26:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>muy nice!</span><br/>
+<font color="#16569E"><font size="2">(02:47:03 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>How about even better?<br/><br/>    LAYER<br/>        NAME 'spot6_sample_mask3'<br/>        TYPE POLYGON<br/>        STATUS OFF<br/>        UNITS DD<br/>        PROJECTION<br/>            &quot;init=epsg:4326&quot;<br/>        END<br/>        CONNECTIONTYPE OGR<br/>        CONNECTION &quot;/data/1/dd/streaming/MASKS/ROI_SPOT6_PMS_201403111037036_ORT_1109440101_MSK.GML&quot;<br/>        CLASS<br/>            STYLE<br/>                COLOR 0 0 255<br/>            END<br/>        END<br/>    END</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:14 PM)</font> <b>Austin Barton:</b></font> Ooo<br/>
+<font color="#16569E"><font size="2">(02:47:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Using the GML directly.</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:17 PM)</font> <b>Austin Barton:</b></font> That's so much easier<br/>
+<font color="#A82F2F"><font size="2">(02:47:21 PM)</font> <b>Austin Barton:</b></font> Makes it quick to develop<br/>
+<font color="#16569E"><font size="2">(02:47:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right!</span><br/>
+<font color="#A82F2F"><font size="2">(02:47:39 PM)</font> <b>Austin Barton:</b></font> So just a point to the GML file is good?<br/>
+<font color="#16569E"><font size="2">(10:22:42 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i got the selenium (headless browser testing) working in python.</span><br/>
+<font color="#A82F2F"><font size="2">(10:22:55 AM)</font> <b>Austin Barton:</b></font> Cool<br/>
+<font color="#A82F2F"><font size="2">(10:23:04 AM)</font> <b>Austin Barton:</b></font> I'm a bit surprised you went down that road.<br/>
+<font color="#A82F2F"><font size="2">(10:23:45 AM)</font> <b>Austin Barton:</b></font> Although you have tackled a well rounded suite of tests.<br/>
+<font color="#16569E"><font size="2">(10:25:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Yeah, i found myself testing the view by grabbing or holding a Url in a tab and hitting &quot;Refresh&quot;.... &quot;Ok, there's got to be a better way, it's time to set this up selenium&quot;. </span><br/>
+<font color="#16569E"><font size="2">(11:26:45 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://utility2:8081/padawan/padawan-ogc">http://utility2:8081/padawan/padawan-ogc</a></span><br/>
+<font color="#A82F2F"><font size="2">(11:59:45 AM)</font> <b>Austin Barton:</b></font> Yusuf committed his DIMAP work and I deployed it to adm-m4<br/>
+<font color="#16569E"><font size="2">(12:04:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>frickin' Awesome!!!</span><br/>
+<font color="#16569E"><font size="2">(01:05:19 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey!  Reading a bit more on Testing here:<br/><a href="https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/">https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/</a><br/>And specifically this section:  </span><span style='font-weight: bold;'><span style='color: #222222;'><span style='font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;'>Testing the API</span></span></span><br/><span style='color: #0a841a;'>Using tastypie.test would probably be better than having to run the selenium headless browser tests.  Or for Django's REST Framework:<br/><a href="http://www.django-rest-framework.org/api-guide/testing">http://www.django-rest-framework.org/api-guide/testing</a><br/></span><br/>
+<font color="#16569E"><font size="2">(01:06:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I don't think you need to go with selenium.</span><br/>
+<font color="#A82F2F"><font size="2">(01:06:57 PM)</font> <b>Austin Barton:</b></font> Okay. I'll check it out later.<br/>
+<font color="#16569E"><font size="2">(01:07:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, just FYI</span><br/>
+<font color="#16569E"><font size="2">(01:16:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>To add the DIMAP stuff into adm-m4?  I go here:<br/><a href="http://adm-m4-web.i3.local/admin/resources/">http://adm-m4-web.i3.local/admin/resources/</a><br/>And &quot;Add resource&quot; ?  As easy as that?</span><br/>
+<font color="#16569E"><font size="2">(02:41:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Hey!  Python string formating question:<br/>&quot;{0}?{1}&amp;{2}&amp;dataFormat={{3}}&quot;.format(config.ADM_URL, test_file, geometry, config.DATA_FORMAT)<br/><br/>And I'm getting:<br/>'<a href="http://adm-m4-web.i3.local/os/?&amp;bbox=2.109375,44.296875,2.8125,45&amp;dataFormat={3}'">http://adm-m4-web.i3.local/os/?&amp;bbox=2.109375,44.296875,2.8125,45&amp;dataFormat={3}'</a></span><br/>
+<font color="#A82F2F"><font size="2">(02:43:04 PM)</font> <b>Austin Barton:</b></font> Double curly braces is the escape for curly braces<br/>
+<font color="#16569E"><font size="2">(02:43:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>I don't want: &amp;dataFormat={3};<br/>I want: &amp;dataFormat={'JP2000,GTiff'}</span><br/>
+<font color="#A82F2F"><font size="2">(02:43:14 PM)</font> <b>Austin Barton:</b></font> so you need triple curle braces to get the literal and the sub<br/>
+<font color="#16569E"><font size="2">(02:43:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]  ok</span><br/>
+<font color="#A82F2F"><font size="2">(02:43:26 PM)</font> <b>Austin Barton:</b></font> :)<br/>
+<font color="#16569E"><font size="2">(02:43:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sure enough.</span><br/>
+<font color="#16569E"><font size="2">(02:43:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Thanks!</span><br/>
+<font color="#A82F2F"><font size="2">(02:43:53 PM)</font> <b>Austin Barton:</b></font> yep!<br/>
+<font color="#16569E"><font size="2">(03:34:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you still here?  Yusuf says he's committing now.</span><br/>
+<font color="#A82F2F"><font size="2">(03:35:09 PM)</font> <b>Austin Barton:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(03:35:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Super!!</span><br/>
+</body></html>

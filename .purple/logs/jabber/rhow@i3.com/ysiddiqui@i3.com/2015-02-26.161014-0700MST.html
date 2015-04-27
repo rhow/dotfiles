@@ -1,0 +1,15 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with ysiddiqui@i3.com at Thu 26 Feb 2015 04:10:14 PM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with ysiddiqui@i3.com at Thu 26 Feb 2015 04:10:14 PM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(04:10:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey, i've got a sql query i'm trying to get to work.</span><br/>
+<font color="#16569E"><font size="2">(04:11:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i have a list of guids (guid1, guid2, guid3)<br/>in the database they are uppercase, so this works<br/>select * from table where uid ilike 'guid1</span>'<br/>
+<font color="#16569E"><font size="2">(04:12:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>but i have a list, this doesn't seem to work:<br/>select * from table where uid ilike in ('guid1', 'guid2', 'guid3')</span><br/>
+<font color="#A82F2F"><font size="2">(04:12:57 PM)</font> <b>Yusuf Siddiqui:</b></font> you can't do ilike in<br/>
+<font color="#16569E"><font size="2">(04:13:08 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right!  i got that much</span><br/>
+<font color="#16569E"><font size="2">(04:13:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(04:13:32 PM)</font> <b>Yusuf Siddiqui:</b></font> Is the ilike just for lower/upper case?<br/>
+<font color="#16569E"><font size="2">(04:13:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah</span><br/>
+<font color="#16569E"><font size="2">(04:14:08 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i could lowercase uid ?</span><br/>
+<font color="#A82F2F"><font size="2">(04:14:21 PM)</font> <b>Yusuf Siddiqui:</b></font> so you could do ... where lower(uid) in ('guid1', 'guid2', ...)<br/>if you just make sure 'guid*' is all lowercase<br/>
+<font color="#16569E"><font size="2">(04:14:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>excellent!</span><br/>
+<font color="#16569E"><font size="2">(04:14:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep that worked!  thx</span><br/>
+<font color="#A82F2F"><font size="2">(04:17:52 PM)</font> <b>Yusuf Siddiqui:</b></font> welcome<br/>
+</body></html>

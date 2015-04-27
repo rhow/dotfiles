@@ -1,0 +1,73 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with abarton@i3.com at Wed 14 Jan 2015 12:44:50 PM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with abarton@i3.com at Wed 14 Jan 2015 12:44:50 PM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(02:01:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what's the machine name for the worker associated with adm-m5 ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:01:58 PM)</font> <b>Austin Barton:</b></font> adm-m5-worker and adm-m5-worker2<br/>
+<font color="#A82F2F"><font size="2">(02:02:15 PM)</font> <b>Austin Barton:</b></font> Oh you don't have worker2<br/>
+<font color="#A82F2F"><font size="2">(02:02:19 PM)</font> <b>Austin Barton:</b></font> Just worker<br/>
+<font color="#16569E"><font size="2">(02:02:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, i tried to ping ad-m5-worker.</span><br/>
+<font color="#16569E"><font size="2">(02:03:04 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>weird, now it's working.</span><br/>
+<font color="#A82F2F"><font size="2">(02:03:13 PM)</font> <b>Austin Barton:</b></font> I'm not sure what effort was put into those new machines but =/<br/>
+<font color="#16569E"><font size="2">(02:04:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, so there's only one worker on adm-m5 ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:04:50 PM)</font> <b>Austin Barton:</b></font> Yes<br/>
+<font color="#16569E"><font size="2">(02:04:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(02:04:58 PM)</font> <b>Austin Barton:</b></font> As far as I see. You can confirm by inspecting the broker.<br/>
+<font color="#16569E"><font size="2">(02:05:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh yea ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:05:32 PM)</font> <b>Austin Barton:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://adm-m5-services:15672/#/queues">http://adm-m5-services:15672/#/queues</a></p></body></html><br/>
+<font color="#A82F2F"><font size="2">(02:05:41 PM)</font> <b>Austin Barton:</b></font> A new queue is created for each worker host machine.<br/>
+<font color="#A82F2F"><font size="2">(02:05:46 PM)</font> <b>Austin Barton:</b></font> So it's not a perfect way to tell, but pretty decent.<br/>
+<font color="#A82F2F"><font size="2">(02:05:57 PM)</font> <b>Austin Barton:</b></font> Looks like once there was a worker2. <br/>
+<font color="#A82F2F"><font size="2">(02:06:18 PM)</font> <b>Austin Barton:</b></font> Not sure where it went. I don't see a machine named that within VMWare.<br/>
+<font color="#16569E"><font size="2">(02:06:48 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#A82F2F"><font size="2">(02:07:18 PM)</font> <b>Austin Barton:</b></font> I'm sure Darren has a better idea.<br/>
+<font color="#A82F2F"><font size="2">(02:07:21 PM)</font> <b>Austin Barton:</b></font> Didn't he set it up<br/>
+<font color="#A82F2F"><font size="2">(02:07:21 PM)</font> <b>Austin Barton:</b></font> ?<br/>
+<font color="#16569E"><font size="2">(02:07:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>likely.</span><br/>
+<font color="#A82F2F"><font size="2">(02:07:45 PM)</font> <b>Austin Barton:</b></font> It'd be easy to clone another worker if necessary.<br/>
+<font color="#A82F2F"><font size="2">(02:07:58 PM)</font> <b>Austin Barton:</b></font> And it appears DNS is working for adm-m5-worker2<br/>
+<font color="#16569E"><font size="2">(02:09:36 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i need to make a change to the the worker's DIMAP extractor, i should just need to make the change on adm-m5-worker, correct ?</span><br/>
+<font color="#16569E"><font size="2">(02:09:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(or should i ask Darren?)</span><br/>
+<font color="#A82F2F"><font size="2">(02:10:13 PM)</font> <b>Austin Barton:</b></font> Yes. It is backed by SVN so if it something permanent it should go in source.<br/>
+<font color="#A82F2F"><font size="2">(02:10:35 PM)</font> <b>Austin Barton:</b></font> Darren is going to know way more about that environment than myself. But as the only worker updating that codebase then restarting celeryd should do it.<br/>
+<font color="#16569E"><font size="2">(02:11:10 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ysid may have put it in configuration, not sure.</span><br/>
+<font color="#A82F2F"><font size="2">(02:11:19 PM)</font> <b>Austin Barton:</b></font> well config would be on the web machine<br/>
+<font color="#A82F2F"><font size="2">(02:11:27 PM)</font> <b>Austin Barton:</b></font> /home/admuser/adm/www/adm.config<br/>
+<font color="#A82F2F"><font size="2">(02:11:42 PM)</font> <b>Austin Barton:</b></font> And I see one item for dimap<br/>
+<font color="#A82F2F"><font size="2">(02:11:43 PM)</font> <b>Austin Barton:</b></font> dimap2:<br/>    # Inward buffer, in pixels, to apply to the ROI mask for DIMAP v2 data (SPOT6/7 and Pleaides)<br/>    buffer_pixels: 75<br/>
+<font color="#16569E"><font size="2">(02:11:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's it!!</span><br/>
+<font color="#A82F2F"><font size="2">(02:12:23 PM)</font> <b>Austin Barton:</b></font> Modify that on web then restart httpd. You should probably restart the worker just in case it caches that info.<br/>
+<font color="#16569E"><font size="2">(02:12:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i need to change that a few times and see what value it needs to be.</span><br/>
+<font color="#A82F2F"><font size="2">(02:12:57 PM)</font> <b>Austin Barton:</b></font> I'd kind of guess it won't cache that info...<br/>
+<font color="#16569E"><font size="2">(02:13:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>mod/restart web; restart worker; then rerun resource ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:13:32 PM)</font> <b>Austin Barton:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(02:13:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(02:14:03 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>cred's to get on to web &amp; work ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:14:18 PM)</font> <b>Austin Barton:</b></font> always admuser<br/>
+<font color="#A82F2F"><font size="2">(02:14:25 PM)</font> <b>Austin Barton:</b></font> for all adm machines and often for the various services<br/>
+<font color="#16569E"><font size="2">(02:14:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Always!!</span><br/>
+<font color="#A82F2F"><font size="2">(02:14:29 PM)</font> <b>Austin Barton:</b></font> we use the dino password<br/>
+<font color="#A82F2F"><font size="2">(02:14:35 PM)</font> <b>Austin Barton:</b></font> Are you familiar with that one?<br/>
+<font color="#16569E"><font size="2">(02:14:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(02:14:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'll give it whirl!</span><br/>
+<font color="#A82F2F"><font size="2">(02:15:08 PM)</font> <b>Austin Barton:</b></font> cool!<br/>
+<font color="#16569E"><font size="2">(02:19:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'm in.</span><br/>
+<font color="#A82F2F"><font size="2">(02:19:30 PM)</font> <b>Austin Barton:</b></font> cool<br/>
+<font color="#16569E"><font size="2">(02:21:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>&quot;buffer_pixels&quot; is not on adm-m5-web </span><br/>
+<font color="#A82F2F"><font size="2">(02:55:01 PM)</font> <b>Austin Barton:</b></font> sec<br/>
+<font color="#16569E"><font size="2">(02:56:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i went into the worker and found the value and changing it.</span><br/>
+<font color="#16569E"><font size="2">(02:56:45 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>how do you &quot;restart&quot; the worker ?</span><br/>
+<font color="#16569E"><font size="2">(02:57:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Something like this?<br/>/home/admuser/adm/bin/python3.3 -m celery worker --loglevel=INFO --workdir=/home/admuser --concurrency=2 --time-limit=300 -n <a href="mailto:worker1@adm-m5-worker">worker1@adm-m5-worker</a> --app=adm_tasking.worker --logfile=/var/log/celery/worker1.log --pidfile=/var/run/celery/worker1.pid</span><br/>
+<font color="#A82F2F"><font size="2">(02:57:49 PM)</font> <b>Austin Barton:</b></font> sudo service celeryd restart<br/>
+<font color="#16569E"><font size="2">(02:58:00 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok</span><br/>
+<font color="#16569E"><font size="2">(03:19:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, my test didn't change.</span><br/>
+<font color="#A82F2F"><font size="2">(03:22:57 PM)</font> <b>Austin Barton:</b></font> =/<br/>
+<font color="#A82F2F"><font size="2">(03:23:44 PM)</font> <b>Austin Barton:</b></font> Maybe it'd be good to validate the dimap code as deployed pulls from a setting?<br/>
+<font color="#16569E"><font size="2">(03:24:18 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, probably so.</span><br/>
+<font color="#A82F2F"><font size="2">(03:25:07 PM)</font> <b>Austin Barton:</b></font> dimap_doc2.py located at ~/adm/worker/root/libs/adm_tasking/extractors/dimap_types<br/>
+<font color="#16569E"><font size="2">(03:25:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right i've found that</span><br/>
+<font color="#16569E"><font size="2">(04:36:34 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i shouldn't need to restart the web, correct? if the change is solely on the worker.</span><br/>
+<font color="#A82F2F"><font size="2">(04:36:38 PM)</font> <b>Austin Barton:</b></font> correct<br/>
+<font color="#A82F2F"><font size="2">(04:36:55 PM)</font> <b>Austin Barton:</b></font> I'm heading out. <br/>
+<font color="#A82F2F"><font size="2">(04:37:04 PM)</font> <b>Austin Barton:</b></font> Darren should be around for awhile if you have further questions.<br/>
+<font color="#A82F2F"><font size="2">(04:37:08 PM)</font> <b>Austin Barton:</b></font> Or we can talk tomorrow! ;)<br/>
+<font color="#A82F2F"><font size="2">(04:37:11 PM)</font> <b>Austin Barton:</b></font> G'night.<br/>
+<font color="#16569E"><font size="2">(04:40:01 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>later!</span><br/>
+</body></html>

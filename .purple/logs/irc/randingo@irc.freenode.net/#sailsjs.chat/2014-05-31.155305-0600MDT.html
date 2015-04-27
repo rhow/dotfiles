@@ -1,0 +1,68 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sat 31 May 2014 03:53:05 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sat 31 May 2014 03:53:05 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(03:53:05 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(04:18:10 PM)</font> <b>nkman:</b></font> Is there any function or feature in sailsJs which logs all incoming and outgoing HTTP requests ?<br/>
+<font color="#A82F2F"><font size="2">(04:19:32 PM)</font> <b>da_wunder:</b></font> incoming request you can easily log with policies<br/>
+<font color="#A82F2F"><font size="2">(04:19:33 PM)</font> <b>robdubya:</b></font> you could either use a policy, or a custom reposonse<br/>
+<font color="#A82F2F"><font size="2">(04:19:44 PM)</font> <b>da_wunder:</b></font> outcoming messages is harder<br/>
+<font color="#A82F2F"><font size="2">(04:20:49 PM)</font> <b>da_wunder:</b></font> i&apos;m interested that too, if someone has some code examples<br/>
+<font color="#A82F2F"><font size="2">(04:21:33 PM)</font> <b>nkman:</b></font> Yeah I am logging incoming requests in a policy.<br/>
+<font color="#A82F2F"><font size="2">(04:21:50 PM)</font> <b>nkman:</b></font> just wondering if sails already had this feature.<br/>
+<font color="#A82F2F"><font size="2">(04:22:03 PM)</font> <b>robdubya:</b></font> not sure what you mean about &quot;outgoing http request&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:23:02 PM)</font> <b>da_wunder:</b></font> i think that is to log everything that sails sends to client<br/>
+<font color="#A82F2F"><font size="2">(04:23:18 PM)</font> <b>da_wunder:</b></font> like res.json(data);<br/>
+<font color="#A82F2F"><font size="2">(04:23:30 PM)</font> <b>nkman:</b></font> Exactly.<br/>
+<font color="#A82F2F"><font size="2">(04:24:45 PM)</font> <b>robdubya:</b></font> custom response fo sho<br/>
+<font color="#A82F2F"><font size="2">(04:24:55 PM)</font> <b>robdubya:</b></font> iirc, .10 sends everything in the blueprint with res.ok<br/>
+<font color="#A82F2F"><font size="2">(04:25:36 PM)</font> <b>robdubya:</b></font> so if you make your own res.ok (just copy the one from src), you can throw your log in there, and it&apos;ll use yours instead<br/>
+<font color="#A82F2F"><font size="2">(04:25:47 PM)</font> <b>robdubya:</b></font> http://stackoverflow.com/questions/23528352/how-can-i-wrap-each-api-response-into-a-standard-reply-object-in-sailsjs<br/>
+<font color="#A82F2F"><font size="2">(04:26:34 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(04:26:53 PM)</font> <b>da_wunder:</b></font> that sounds awesome<br/>
+<font color="#A82F2F"><font size="2">(04:28:45 PM)</font> <b>robdubya:</b></font> easy peasy<br/>
+<font size="2">(04:30:18 PM)</font><b> nkman left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(04:31:00 PM)</font> <b>robdubya:</b></font> stuff like this is why i want angular&apos;s DI in sails so bad :D<br/>
+<font color="#A82F2F"><font size="2">(04:39:16 PM)</font> <b>robdubya:</b></font> visitor it depends on:<br/>
+<font color="#A82F2F"><font size="2">(04:39:20 PM)</font> <b>robdubya:</b></font> how long you want to keep them<br/>
+<font color="#A82F2F"><font size="2">(04:39:25 PM)</font> <b>robdubya:</b></font> how many there are going to be<br/>
+<font color="#A82F2F"><font size="2">(04:39:26 PM)</font> <b>robdubya:</b></font> etc<br/>
+<font color="#A82F2F"><font size="2">(04:39:47 PM)</font> <b>robdubya:</b></font> i&apos;d likely use redis for something like this, set up with a maximum limit<br/>
+<font color="#A82F2F"><font size="2">(04:41:20 PM)</font> <b>visitor:</b></font> You mean whole log in one string ?<br/>
+<font color="#A82F2F"><font size="2">(04:41:31 PM)</font> <b>visitor:</b></font> like set &quot;log&quot; whole-log<br/>
+<font color="#A82F2F"><font size="2">(04:41:45 PM)</font> <b>robdubya:</b></font> no… as a normal model<br/>
+<font color="#A82F2F"><font size="2">(04:41:51 PM)</font> <b>robdubya:</b></font> just backed by redis<br/>
+<font size="2">(04:47:10 PM)</font><b> visitor left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(07:00:43 PM)</font> <b>beardtree:</b></font> Is it possible to do GIS queries using Sails?<br/>
+<font color="#A82F2F"><font size="2">(07:56:01 PM)</font> <b>JemiloII:</b></font> so question<br/>
+<font color="#A82F2F"><font size="2">(07:56:46 PM)</font> <b>JemiloII:</b></font> hold on<br/>
+<font color="#A82F2F"><font size="2">(08:03:14 PM)</font> <b>robdubya:</b></font> beardtree not out of the box, but you could do them with raw pg queries pretty easily<br/>
+<font color="#A82F2F"><font size="2">(08:04:03 PM)</font> <b>beardtree:</b></font> robdubya: thanks<br/>
+<font color="#A82F2F"><font size="2">(08:05:15 PM)</font> <b>robdubya:</b></font> beardtree Model.query(&apos;your sql here&apos;)<br/>
+<font color="#A82F2F"><font size="2">(08:17:54 PM)</font> <b>Axyl:</b></font> Remove all records should be something like...  name.destroy({}).exec(function(err)  etc etc ?<br/>
+<font color="#A82F2F"><font size="2">(08:18:48 PM)</font> <b>Axyl:</b></font> If I try to delete all records from a few models in one controller, then no errors are returned, but the sails seems to hang afterwards for any future request affecting those records.  And they&apos;re not removed from the DB either.  MySQL with .10rc7<br/>
+<font color="#A82F2F"><font size="2">(08:19:39 PM)</font> <b>Axyl:</b></font> Is there a better way to remove all records from a set list of models or should it work the way I&apos;m trying to do it?<br/>
+<font color="#A82F2F"><font size="2">(08:38:55 PM)</font> <b>dino82:</b></font> Hello all o/ I&apos;m following along with the video tutorials for sails and I don&apos;t seem to see where the information is being saved to.  in adapters.js it says I am using &apos;disk&apos; and sails-disk, but where does the actual data reside?<br/>
+<font color="#A82F2F"><font size="2">(08:40:19 PM)</font> <b>beardtree:</b></font> dino82: .tmp/localDiskDb.db<br/>
+<font color="#A82F2F"><font size="2">(08:40:57 PM)</font> <b>dino82:</b></font> Ah ha, thanks!<br/>
+<font color="#A82F2F"><font size="2">(08:43:59 PM)</font> <b>dino82:</b></font> Since I&apos;m here, figured I&apos;d ask... I&apos;m inserting user input into a model called &apos;word&apos; in /word/new, which posts to /word/create just fine, but when I go straight to /word/create, I get [object Object] instead of it returning all of the values I&apos;ve inputted<br/>
+<font color="#A82F2F"><font size="2">(08:45:46 PM)</font> <b>Axyl:</b></font> All the values or all the records?  For the records just do /word<br/>
+<font color="#A82F2F"><font size="2">(08:46:59 PM)</font> <b>dino82:</b></font> I get a 404 if I go to /word ..hmm<br/>
+<font color="#A82F2F"><font size="2">(08:47:04 PM)</font> <b>dino82:</b></font> All of the records<br/>
+<font color="#A82F2F"><font size="2">(08:47:28 PM)</font> <b>Axyl:</b></font> Do you have a word controller?<br/>
+<font color="#A82F2F"><font size="2">(08:47:58 PM)</font> <b>dino82:</b></font> I have a &apos;new&apos; and a &apos;create&apos; in WordController.js<br/>
+<font color="#A82F2F"><font size="2">(08:49:07 PM)</font> <b>Axyl:</b></font> Did you have to create a new and create?  Either way, as long as you have an empty controller, then it normally should work.<br/>
+<font color="#A82F2F"><font size="2">(08:49:12 PM)</font> <b>Axyl:</b></font> i.e. sails generate api test<br/>
+<font color="#A82F2F"><font size="2">(08:49:40 PM)</font> <b>Axyl:</b></font> and then /test will return the test records, after defining  the model attributes for test...along with /test/create?blah=blah<br/>
+<font color="#A82F2F"><font size="2">(08:49:41 PM)</font> <b>Axyl:</b></font> type thing.<br/>
+<font color="#A82F2F"><font size="2">(08:51:04 PM)</font> <b>dino82:</b></font> I had to create new and create, yes.  /word/new brings up the proper view, /word/create inserts data, but /word brings a 404<br/>
+<font color="#A82F2F"><font size="2">(08:51:39 PM)</font> <b>Axyl:</b></font> You shouldn&apos;t needed to have created new or create, unless you needed to add extra behaviour.<br/>
+<font color="#A82F2F"><font size="2">(08:52:21 PM)</font> <b>Axyl:</b></font> Note that in my generate line above, the keyword api<br/>
+<font color="#A82F2F"><font size="2">(08:52:37 PM)</font> <b>Axyl:</b></font> As a test, try it with another model name, as per my example?<br/>
+<font color="#A82F2F"><font size="2">(08:52:53 PM)</font> <b>Axyl:</b></font> Needless to say, make sure you&apos;re restarting sails lift after your changes?<br/>
+<font color="#A82F2F"><font size="2">(08:53:10 PM)</font> <b>dino82:</b></font> Yes, I&apos;m killing it every time I make a change<br/>
+<font color="#A82F2F"><font size="2">(08:53:16 PM)</font> <b>dino82:</b></font> Going to try your example, one moment<br/>
+<font color="#A82F2F"><font size="2">(08:57:19 PM)</font> <b>dino82:</b></font> Something really broke, I&apos;m not sure what<br/>
+<font color="#A82F2F"><font size="2">(08:57:45 PM)</font> <b>Axyl:</b></font> So test was okay?<br/>
+<font color="#A82F2F"><font size="2">(08:58:27 PM)</font> <b>Axyl:</b></font> Perhaps you have a fault in your word controller?  Revert the wordcontroller to the empty template and see if it works too, if so.  That&apos;ll prove that it&apos;s your changes...then look for what you did wrong.<br/>
+<font color="#A82F2F"><font size="2">(08:58:30 PM)</font> <b>dino82:</b></font> I get an error 500 failed to lookup view<br/>
+<font color="#A82F2F"><font size="2">(08:59:02 PM)</font> <b>Axyl:</b></font> Sorry, out of my league now.<br/>
+<font size="2">(08:59:40 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with jgrothe@i3.com at Tue 17 Feb 2015 01:27:55 PM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with jgrothe@i3.com at Tue 17 Feb 2015 01:27:55 PM MST on rhow@i3.com/Google (jabber)</h3>
+<font size="2">(01:31:07 PM)</font><b> jgrothe@i3.com is now known as Jakob Grothe.
+</b><br/>
+<font color="#16569E"><font size="2">(02:06:57 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what's the resolution of NWP? 1 meter ?</span><br/>
+<font color="#A82F2F"><font size="2">(02:10:00 PM)</font> <b>Jakob Grothe:</b></font> 1 M always, and resampled if not.<br/>
+<font color="#A82F2F"><font size="2">(02:10:11 PM)</font> <b>Jakob Grothe:</b></font> We do have AHR which varries tho.<br/>
+<font color="#16569E"><font size="2">(02:11:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, very good.</span><br/>
+<font color="#A82F2F"><font size="2">(02:13:08 PM)</font> <b>Jakob Grothe:</b></font> ((Theres some hideous backfill on NWP of 15 meter data))<br/>
+<font color="#16569E"><font size="2">(02:15:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.</span><br/>
+<font color="#16569E"><font size="2">(11:00:36 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i fixed the NWP WFS Metadata; it had a warning in this that it couldn't find the field in the shapefile for &quot;MET_ID&quot;.  I took a look in the Shapefile and the attribute is &quot;METID&quot;.</span><br/>
+<font color="#A82F2F"><font size="2">(11:00:58 AM)</font> <b>Jakob Grothe:</b></font> ok thanks.<br/>
+<font color="#A82F2F"><font size="2">(11:01:10 AM)</font> <b>Jakob Grothe:</b></font> i tried to standardize that<br/>
+<font color="#A82F2F"><font size="2">(12:36:13 PM)</font> <b>Jakob Grothe:</b></font> This is normally how I would hand crank...... and get a MESSAGE error.<br/>
+<font color="#A82F2F"><font size="2">(12:36:14 PM)</font> <b>Jakob Grothe:</b></font> http://ftc-ms03.i3.local/cgi-bin/mapserv?map=//ftc-web01/wms_map/TomTom_28022_55557149-e828-4786-a9bf-09ecc7d1d37a.map.map&amp;mode=map<br/>
+<font color="#16569E"><font size="2">(12:40:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you have &quot;.map.map&quot; on the end of it. This gets you further:<br/><a href="http://ftc-ms03.i3.local/cgi-bin/mapserv?map=//ftc-web01/wms_map/TomTom_28022_55557149-e828-4786-a9bf-09ecc7d1d37a.map&amp;mode=map">http://ftc-ms03.i3.local/cgi-bin/mapserv?map=//ftc-web01/wms_map/TomTom_28022_55557149-e828-4786-a9bf-09ecc7d1d37a.map&amp;mode=map</a><br/></span><span style='color: #000000;'><span style='font-family: 'Times New Roman';'><span style='font-size: medium;'>msFontsetLookupFonts(): TrueType Font error. Requested font (arial) not found.</span></span></span><br/>Is the FONTSET(?) in the file ?<br/>
+<font color="#A82F2F"><font size="2">(12:42:15 PM)</font> <b>Jakob Grothe:</b></font> I GOT IT....ya i messed with the DEBUG statement and got the same hting.<br/>
+<font color="#16569E"><font size="2">(12:42:36 PM)</font> <b>Randy How:</b></font> ok, very good<br/>
+<font color="#A82F2F"><font size="2">(12:54:23 PM)</font> <b>Jakob Grothe:</b></font> sweet<br/>
+<font color="#A82F2F"><font size="2">(09:39:14 AM)</font> <b>Jakob Grothe:</b></font> should &quot;Here OS Uk&quot; WMS Service be active?<br/>
+<font color="#A82F2F"><font size="2">(09:41:43 AM)</font> <b>Jakob Grothe:</b></font> the logo doesnt exist, if it should.<br/>
+<font color="#A82F2F"><font size="2">(02:24:25 PM)</font> <b>Jakob Grothe:</b></font> I think this BUG is in our code currently.  I cant change the sizes.<br/>
+<font color="#A82F2F"><font size="2">(02:24:26 PM)</font> <b>Jakob Grothe:</b></font> https://github.com/mapserver/mapserver/commit/cc62353d3c446a18e1a69d684feea1745ab34b69<br/>
+<font color="#16569E"><font size="2">(02:27:41 PM)</font> <b>Randy How:</b></font> that's just providing the ability to give a decimal value for size, such as 8.6<br/>
+<font color="#16569E"><font size="2">(02:27:47 PM)</font> <b>Randy How:</b></font> what are you seeing?<br/>
+<font color="#A82F2F"><font size="2">(02:27:58 PM)</font> <b>Jakob Grothe:</b></font> oh.<br/>
+<font color="#A82F2F"><font size="2">(02:28:19 PM)</font> <b>Jakob Grothe:</b></font> i guess im just seeing this for Lines.<br/>
+<font color="#A82F2F"><font size="2">(02:28:46 PM)</font> <b>Jakob Grothe:</b></font> for POLYGONs is working now that I look at them.<br/>
+<font color="#16569E"><font size="2">(02:29:09 PM)</font> <b>Randy How:</b></font> ok very good.<br/>
+<font color="#A82F2F"><font size="2">(02:29:18 PM)</font> <b>Jakob Grothe:</b></font> ill keep messing with it.<br/>
+<font color="#A82F2F"><font size="2">(02:29:23 PM)</font> <b>Jakob Grothe:</b></font> maybe i just got soemthign wrong.<br/>
+<font color="#16569E"><font size="2">(02:29:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.  thanks for giving JA the mapserver file tests</span><br/>
+<font color="#A82F2F"><font size="2">(02:30:05 PM)</font> <b>Jakob Grothe:</b></font> yes. hopefully they re helpful....<br/>
+<font color="#16569E"><font size="2">(02:49:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so... i spoke jason; all we're testing on Sunday is the following on each new MS's (av-ms[7-10]):<br/>+ read from webserver wms_map<br/>+ read from GPFS<br/>+ write to webserver wms_img<br/><br/><br/></span><br/>
+<font color="#16569E"><font size="2">(02:49:24 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>we're not going to be testing MS new features.</span><br/>
+<font color="#A82F2F"><font size="2">(02:49:40 PM)</font> <b>Jakob Grothe:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(02:49:56 PM)</font> <b>Jakob Grothe:</b></font> wrong version?<br/>
+<font color="#16569E"><font size="2">(02:50:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>no version 6 is good.</span><br/>
+<font color="#16569E"><font size="2">(02:50:36 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so is one of tests span </span>a &quot;wide&quot; breath on GPFS ?<br/>
+<font color="#16569E"><font size="2">(03:11:27 PM)</font> <b>Randy How:</b></font> <a href="http://gisservices.datadoors.net/i3_ArcGIS/wms/bbbd7a9e-f4f8-409c-adc0-130c717e116e?version=1.1.1&amp;service=wms&amp;request=getcapabilities">http://gisservices.datadoors.net/i3_ArcGIS/wms/bbbd7a9e-f4f8-409c-adc0-130c717e116e?version=1.1.1&amp;service=wms&amp;request=getcapabilities</a><br/>
+<font color="#A82F2F"><font size="2">(05:24:30 PM)</font> <b>Jakob Grothe:</b></font> SPOT:   WMS service exceptions:Service Error Description: A data error occurred.; MapRequest: 19183d3b-2d61-4033-8d98-c3c4d27cac9a<br/>
+<font color="#16569E"><font size="2">(06:03:23 PM)</font> <b>Randy How:</b></font> <a href="http://test123.datadoors.net/streaming/__streaminguid.3c3e58a0-2db4-4026-ad4e-48e9fdd8bd02/wms.ashx?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:32012&amp;BBOX=579106.121777898,385336.61071224,580556.121777898,386689.388490018&amp;WIDTH=1044&amp;HEIGHT=974&amp;LAYERS=faae98f6-b3a3-4889-b909-fda7bc81acdc&amp;STYLES=&amp;EXCEPTIONS=application/vnd.ogc.se_xml&amp;FORMAT=image/jpeg&amp;BGCOLOR=0xFEFFFF&amp;TRANSPARENT=TRUE">http://test123.datadoors.net/streaming/__streaminguid.3c3e58a0-2db4-4026-ad4e-48e9fdd8bd02/wms.ashx?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:32012&amp;BBOX=579106.121777898,385336.61071224,580556.121777898,386689.388490018&amp;WIDTH=1044&amp;HEIGHT=974&amp;LAYERS=faae98f6-b3a3-4889-b909-fda7bc81acdc&amp;STYLES=&amp;EXCEPTIONS=application/vnd.ogc.se_xml&amp;FORMAT=image/jpeg&amp;BGCOLOR=0xFEFFFF&amp;TRANSPARENT=TRUE</a><br/>
+<font color="#16569E"><font size="2">(06:11:38 PM)</font> <b>Randy How:</b></font> <span style='color: #3E4349;'><span style='font-family: Arial, sans-serif;'>ON_MISSING_DATA [FAIL|LOG|IGNORE]</span></span><br/>
+<font color="#16569E"><font size="2">(06:11:57 PM)</font> <b>Randy How:</b></font> <span style='color: #3E4349;'><span style='font-family: Arial, sans-serif;'>CONFIG &quot;ON_MISSING_DATA&quot;  &quot;FAIL&quot;   #  [FAIL|LOG|IGNORE]</span></span><br/>
+<font color="#A82F2F"><font size="2">(10:28:07 AM)</font> <b>Jakob Grothe:</b></font> HI Can you refresh them now?<br/>
+<font color="#16569E"><font size="2">(10:28:44 AM)</font> <b>Randy How:</b></font> <span style='color: #3E4349;'><span style='font-family: Arial, sans-serif;'>yeah, just asec</span></span><br/>
+<font color="#16569E"><font size="2">(10:29:23 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>there ya go, should be reset</span><br/>
+<font color="#A82F2F"><font size="2">(11:06:05 AM)</font> <b>Jakob Grothe:</b></font> The servers are being very finicky.<br/>
+<font color="#A82F2F"><font size="2">(11:10:07 AM)</font> <b>Jakob Grothe:</b></font> http://av-ms622.i3.com/av-web04_map/AGC_Buckeye_31547_252e679c-28ea-44b1-a043-bdfb353dedd0.map<br/>
+<font color="#16569E"><font size="2">(03:37:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://test123.datadoors.net//streaming/__streaminguid.bd6d50c9-799a-4acb-83d9-e036af1500e5/wms.ashx?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4269&amp;BBOX=-81.075534497695955,40.188764556591515,-80.418346403573665,40.845952650713791&amp;WIDTH=3945&amp;HEIGHT=3945&amp;LAYERS=8cde68a3-df52-4122-9f33-057bc3177872&amp;STYLES=&amp;EXCEPTIONS=application/vnd.ogc.se_xml&amp;FORMAT=image/jpeg&amp;BGCOLOR=0xFEFFFF&amp;TRANSPARENT=TRUE">http://test123.datadoors.net//streaming/__streaminguid.bd6d50c9-799a-4acb-83d9-e036af1500e5/wms.ashx?VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4269&amp;BBOX=-81.075534497695955,40.188764556591515,-80.418346403573665,40.845952650713791&amp;WIDTH=3945&amp;HEIGHT=3945&amp;LAYERS=8cde68a3-df52-4122-9f33-057bc3177872&amp;STYLES=&amp;EXCEPTIONS=application/vnd.ogc.se_xml&amp;FORMAT=image/jpeg&amp;BGCOLOR=0xFEFFFF&amp;TRANSPARENT=TRUE</a></span><br/>
+<font color="#16569E"><font size="2">(01:40:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>can you take a look at map:  EOG_NAD27 </span><br/>
+<font color="#16569E"><font size="2">(01:49:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'># ESRI Topo Service</span><br/>
+<font color="#A82F2F"><font size="2">(01:58:22 PM)</font> <b>Jakob Grothe:</b></font> gotta be something else.<br/>
+<font color="#A82F2F"><font size="2">(03:09:14 PM)</font> <b>Jakob Grothe:</b></font> http://av-mslive.i3.com/av-web02_map/EOG_2519_4aada849-9053-4447-bc53-55e900a90cfc.map<br/>
+<font color="#A82F2F"><font size="2">(03:13:21 PM)</font> <b>Jakob Grothe:</b></font> http://av-mslive.i3.com/av-web01_map/HilCorp_Production_2015_42587_73653e4c-c8a1-412e-bdb0-c0ef8113d8a1.map<br/>
+<font color="#A82F2F"><font size="2">(03:14:00 PM)</font> <b>Jakob Grothe:</b></font> http://av-mslive.i3.com/av-web01_map/HilCorp_Production_2015_42587_8e3ea632-44e9-401c-892c-4d6f68ceb3ec.map<br/>
+<font color="#A82F2F"><font size="2">(03:31:23 PM)</font> <b>Jakob Grothe:</b></font> HilCorp Production 2015:   WMS service exceptions:Service Error Description: Map Generation; MapRequest: 892ace74-ff2d-47d9-9376-aac2546f41e4<br/>
+<font color="#A82F2F"><font size="2">(03:32:36 PM)</font> <b>Jakob Grothe:</b></font> [Sun Mar  1 15:32:09 2015].653220 msFreeMap(): freeing map at 0x130f00a0.<br/>[Sun Mar  1 15:32:22 2015].51846 loadSymbolSet(): Unable to access file. (symbol.sym)<br/>[Sun Mar  1 15:32:22 2015].51907 msFreeMap(): freeing map at 0x1e7390a0.<br/>
+<font color="#A82F2F"><font size="2">(10:44:20 AM)</font> <b>Jakob Grothe:</b></font> http://ftc-ms03.i3.local/cgi-bin/mapserv?map=//ftc-web01/wms_map/testing/4326_JTG_test.map&amp;mode=map<br/>
+<font color="#A82F2F"><font size="2">(03:38:55 PM)</font> <b>Jakob Grothe:</b></font> The query to give i3 access to all Whitelists?<br/>
+<font color="#A82F2F"><font size="2">(03:39:00 PM)</font> <b>Jakob Grothe:</b></font> ...was that run on Live?<br/>
+<font color="#A82F2F"><font size="2">(03:48:57 PM)</font> <b>Jakob Grothe:</b></font> seems like it already was applied.<br/>
+<font color="#A82F2F"><font size="2">(03:49:10 PM)</font> <b>Jakob Grothe:</b></font> Based on what im seeing.<br/>
+<font color="#16569E"><font size="2">(04:04:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it's only been applied to one service</span><br/>
+<font color="#16569E"><font size="2">(04:05:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Shell Canada</span><br/>
+<font color="#A82F2F"><font size="2">(04:09:22 PM)</font> <b>Jakob Grothe:</b></font> is our IP something like this....<br/>
+<font color="#A82F2F"><font size="2">(04:09:23 PM)</font> <b>Jakob Grothe:</b></font> 10.200.40.0<br/>
+<font color="#A82F2F"><font size="2">(04:09:24 PM)</font> <b>Jakob Grothe:</b></font> ?<br/>
+<font color="#16569E"><font size="2">(04:10:28 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i put in LIVE the IP:  10.0.0.0  mask: 0.255.255.255</span><br/>
+<font color="#A82F2F"><font size="2">(11:36:34 AM)</font> <b>Jakob Grothe:</b></font> Is it correct to say, we dont have the capability to publish an OL3 HTML file at Av next the the OL2 files?<br/>

@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 11 Jul 2014 09:13:50 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 11 Jul 2014 09:13:50 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:13:51 AM)</font><b> The topic for #sailsjs is: Documentation for v0.10 can be found at <a href="http://beta.sailsjs.org">http://beta.sailsjs.org</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:24:54 AM)</font> <b>Tobius:</b></font> Does anyone here have experience with sailsjs + backbone + backgrid + socket.io?<br/>
+<font size="2">(10:33:30 AM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font size="2">(10:43:23 AM)</font><b> zz_Brocken is now known as Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(10:55:23 AM)</font> <b>Chubbs:</b></font> What are best practices for writing policies where you need an OR operator instead of an AND operator (ie, &apos;isAdmin&apos; policy OR &apos;ownsContent&apos;)<br/>
+<font color="#A82F2F"><font size="2">(11:55:42 AM)</font> <b>Chubbs:</b></font> What are best practices for writing policies where you need an OR operator instead of an AND operator? (ie, &apos;isAdmin&apos; policy OR &apos;ownsContent&apos;)  Trying to get some insight onto this before I hack together something cludgy<br/>
+<font color="#A82F2F"><font size="2">(01:40:19 PM)</font> <b>netameta:</b></font> hey all 2 question when i do sails generate something, will that create a module,view controller ?<br/>
+<font color="#A82F2F"><font size="2">(01:40:27 PM)</font> <b>da_wunder:</b></font> Chubbs: three policies in your case<br/>
+<font color="#A82F2F"><font size="2">(01:40:54 PM)</font> <b>da_wunder:</b></font> netameta: read docs<br/>
+<font color="#A82F2F"><font size="2">(01:41:25 PM)</font> <b>da_wunder:</b></font> sails generate api will create model and controller<br/>
+<font color="#A82F2F"><font size="2">(01:42:12 PM)</font> <b>netameta:</b></font> so it shoulndt matter if i create them manually<br/>
+<font color="#A82F2F"><font size="2">(01:43:44 PM)</font> <b>netameta:</b></font> is there a way to set one of the attributes in a module - lets say id to auto increase ?<br/>
+<font color="#A82F2F"><font size="2">(01:43:53 PM)</font> <b>da_wunder:</b></font> all of those are just files<br/>
+<font color="#A82F2F"><font size="2">(01:44:15 PM)</font> <b>da_wunder:</b></font> id is automatic autoinc<br/>
+<font color="#A82F2F"><font size="2">(01:45:30 PM)</font> <b>da_wunder:</b></font> netameta: http://beta.sailsjs.org/#/documentation/concepts/<br/>
+<font color="#A82F2F"><font size="2">(01:47:27 PM)</font> <b>netameta:</b></font> i see<br/>
+<font color="#A82F2F"><font size="2">(01:49:13 PM)</font> <b>netameta:</b></font> Can i search module from another module or possibly from module.exports.bootstrap<br/>
+<font color="#A82F2F"><font size="2">(01:50:08 PM)</font> <b>netameta:</b></font> da_wunder that was my last question<br/>
+<font color="#A82F2F"><font size="2">(01:50:47 PM)</font> <b>Chubbs:</b></font> da_wunder: Can you clarify a little more, how would you structure the three policies?<br/>
+<font color="#A82F2F"><font size="2">(01:52:03 PM)</font> <b>da_wunder:</b></font> Chubbs: one for or and two for those single ones<br/>
+<font color="#A82F2F"><font size="2">(01:53:32 PM)</font> <b>Chubbs:</b></font> da_wunder: couldnt I just get away with one then? Sails says that each policy should only check one case, thats why I asked the original question<br/>
+<font color="#A82F2F"><font size="2">(01:54:27 PM)</font> <b>da_wunder:</b></font> Chubbs: and if one of those fails, controller will not executed<br/>
+<font color="#A82F2F"><font size="2">(02:00:10 PM)</font> <b>netameta:</b></font> ah wow from another module is simply doing something like model.find()...<br/>
+<font color="#A82F2F"><font size="2">(02:00:29 PM)</font> <b>netameta:</b></font> will model.find also work within bootstrap ?<br/>
+<font color="#A82F2F"><font size="2">(02:01:58 PM)</font> <b>da_wunder:</b></font> meaning what<br/>
+<font color="#A82F2F"><font size="2">(02:04:19 PM)</font> <b>netameta:</b></font> well i want to create a little cronjob<br/>
+<font color="#A82F2F"><font size="2">(02:04:44 PM)</font> <b>netameta:</b></font> and as i understood best place to place cronjob is when bootstrapping the server<br/>
+<font color="#A82F2F"><font size="2">(02:05:06 PM)</font> <b>netameta:</b></font> that cronjob will have to retrieve data either from DB or from modle<br/>
+<font color="#A82F2F"><font size="2">(02:05:13 PM)</font> <b>netameta:</b></font> to perform other tasks<br/>
+<font color="#A82F2F"><font size="2">(02:05:38 PM)</font> <b>netameta:</b></font> sails has a function that runs when server bootstrap http://sailsjs.org/#!documentation/config.bootstrap<br/>
+<font color="#A82F2F"><font size="2">(02:06:02 PM)</font> <b>netameta:</b></font> so ..will module.fine() ... work within it&apos;s scope or will it be to early at this stage ?<br/>
+<font color="#A82F2F"><font size="2">(02:07:17 PM)</font> <b>da_wunder:</b></font> it works<br/>
+<font color="#A82F2F"><font size="2">(02:09:21 PM)</font> <b>netameta:</b></font> da wunder if you&apos;re part of sails you guys should know you&apos;re doing a great job i got interduce to it this morning and it seems very simple/ straight forward<br/>
+<font color="#A82F2F"><font size="2">(02:09:31 PM)</font> <b>netameta:</b></font> Either way thanks for help<br/>
+<font color="#A82F2F"><font size="2">(02:10:20 PM)</font> <b>da_wunder:</b></font> no i am not part of that team<br/>
+<font color="#A82F2F"><font size="2">(03:01:17 PM)</font> <b>newz2000:</b></font> Hey, anyone have recent success with sails-generate-auth?<br/>
+<font color="#A82F2F"><font size="2">(03:03:56 PM)</font> <b>newz2000:</b></font> Is that a good tool to use for adding social media authentication to a web app?<br/>
+<font color="#A82F2F"><font size="2">(03:25:51 PM)</font> <b>mikaeldice:</b></font> It worked for me<br/>
+<font color="#A82F2F"><font size="2">(03:27:03 PM)</font> <b>newz2000:</b></font> mikaeldice: did you end up using it on a real deployed app?<br/>
+<font color="#A82F2F"><font size="2">(03:27:18 PM)</font> <b>newz2000:</b></font> I have it working, just tryng to decide if it’s less work than manually integrating passport.<br/>
+<font color="#A82F2F"><font size="2">(03:27:42 PM)</font> <b>mikaeldice:</b></font> Nope..  probably a bad idea to do that since it requires 0.10 I think<br/>
+<font color="#A82F2F"><font size="2">(03:27:48 PM)</font> <b>mikaeldice:</b></font> Which is still beta<br/>
+<font color="#A82F2F"><font size="2">(03:27:55 PM)</font> <b>newz2000:</b></font> ah, good point<br/>
+<font color="#A82F2F"><font size="2">(03:28:39 PM)</font> <b>newz2000:</b></font> I have an issue where, every time I chagne my code and the local dev server restarts I have to log in again.<br/>
+<font color="#A82F2F"><font size="2">(03:28:53 PM)</font> <b>newz2000:</b></font> Do you think that is me, not having sessions configured, or is there some code needed for serailzing login?<br/>
+<font color="#A82F2F"><font size="2">(03:28:56 PM)</font> <b>mikaeldice:</b></font> Are you using a session store like redis?<br/>
+<font color="#A82F2F"><font size="2">(03:29:13 PM)</font> <b>newz2000:</b></font> I haven’t configured anything for sessions yet. As a matter of fact, never used sessions with sails.js<br/>
+<font color="#A82F2F"><font size="2">(03:29:13 PM)</font> <b>mikaeldice:</b></font> Ah, probably<br/>
+<font color="#A82F2F"><font size="2">(03:34:15 PM)</font> <b>mikaeldice:</b></font> It looks like it just uses memory without anything configured..  At least, I checked the .tmp folder that is created and don&apos;t see anything that looks like session identifiers in the locaDiskDb.db<br/>
+<font color="#A82F2F"><font size="2">(03:34:47 PM)</font> <b>newz2000:</b></font> Yeah, it has to be in memory.<br/>
+<font color="#A82F2F"><font size="2">(03:35:00 PM)</font> <b>newz2000:</b></font> A user group I help run is doing a code dojo Monday night with Sails.js<br/>
+<font color="#A82F2F"><font size="2">(03:35:21 PM)</font> <b>newz2000:</b></font> So I’m working through the setup. The goal is to make it as easy as possible to get past the “getting started hump&quot;<br/>
+<font color="#A82F2F"><font size="2">(03:35:41 PM)</font> <b>newz2000:</b></font> So we’ll have to get by with in memory storage. Not everyone will be able to install Redis or Mongo.<br/>
+<font color="#A82F2F"><font size="2">(03:36:11 PM)</font> <b>newz2000:</b></font> Those that can will be able to avoid the frustration. :-)<br/>
+<font color="#A82F2F"><font size="2">(03:37:09 PM)</font> <b>mikaeldice:</b></font> It looks like it accepts an adapter, maybe creating a config for sails-disk would work<br/>
+<font color="#A82F2F"><font size="2">(03:38:50 PM)</font> <b>newz2000:</b></font> Good idea. Sails-disk is one of the best parts of using Sails for experimenting.<br/>
+<font color="#A82F2F"><font size="2">(03:40:50 PM)</font> <b>newz2000:</b></font> I don’t think I’ll be able to pull that off by Monday though. I think I’ll have a good authentication workflow put together, which will be enough.<br/>
+<font color="#A82F2F"><font size="2">(03:41:29 PM)</font> <b>newz2000:</b></font> mikaeldice: your app that used this, was it a one-page app? I’m trying to decide the best way to allow the app to discern if the user is authenticated.<br/>
+<font color="#A82F2F"><font size="2">(03:41:44 PM)</font> <b>newz2000:</b></font> I have exposed a isLoggedIn api that returns false or a username.<br/>
+<font color="#A82F2F"><font size="2">(03:43:22 PM)</font> <b>mikaeldice:</b></font> No, I just setup the default site with a couple of the 3rd party sites to see how it worked<br/>
+<font color="#A82F2F"><font size="2">(03:46:13 PM)</font> <b>newz2000:</b></font> This will work. Someone clever at the dojo will come up with something better, I suspect.<br/>
+<font color="#A82F2F"><font size="2">(03:46:20 PM)</font> <b>newz2000:</b></font> Thanks a lot for your help!<br/>
+<font color="#A82F2F"><font size="2">(04:55:44 PM)</font> <b>diablo:</b></font> hey guy, a newer version (Version 0.5.0) of guake was pushed out last night and can someone tell me how it can be packaged for rawhide<br/>
+<font color="#A82F2F"><font size="2">(04:55:48 PM)</font> <b>diablo:</b></font> guys*<br/>
+<font color="#A82F2F"><font size="2">(04:55:51 PM)</font> <b>diablo:</b></font> ;)<br/>
+<font color="#A82F2F"><font size="2">(04:56:08 PM)</font> <b>diablo:</b></font> damn, wrong channel<br/>
+<font size="2">(05:17:33 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

@@ -38,6 +38,18 @@
 (autoload 'json-mode "json-mode" "Json Mode." t)
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
+; ============================================================
+; Added by Randy - 2015-04-26
+; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+
+(menu-bar-mode -1)
+
+; (require 'multiple-cursors)
+; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+; (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+; (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+; (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+; ============================================================
 
 ; Example of how to specify control key:
 ; to redefine control-y to go to the start of the line (like control-a)
@@ -47,6 +59,7 @@
 ; (global-unset-key "\C-y)
 
 ; UPDATING EMACS
+
 
 ; After writing a function in your .emacs file, you can send the 
 ; changed information to the rest of emacs by entering meta-control-x .
@@ -58,3 +71,4 @@
 ;        '(c-mode-common-hook tcl-mode-hook emacs-lisp-mode-hook
 ;          ruby-mode-hook java-mode-hook haskell-mode-hook
 ;          ess-mode-hook python-mode-hook sh-mode-hook js2-mode-hook))
+

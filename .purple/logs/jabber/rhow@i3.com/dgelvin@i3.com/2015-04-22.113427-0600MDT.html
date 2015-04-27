@@ -1,0 +1,18 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with dgelvin@i3.com at Wed 22 Apr 2015 11:34:27 AM MDT on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with dgelvin@i3.com at Wed 22 Apr 2015 11:34:27 AM MDT on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(11:36:35 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hey hey!  (not super important...) I'm hitting ADM nginx (&quot;nginx error!&quot;) and it fails with a fully qualified path.<br/><a href="http://adm-qa.i3.local/admin">http://adm-qa.i3.local/admin</a></span><br/>
+<font color="#16569E"><font size="2">(11:37:20 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Works for this:<br/><a href="http://adm-qa/admin">http://adm-qa/admin</a></span><br/>
+<font color="#A82F2F"><font size="2">(11:42:08 AM)</font> <b>David Gelvin:</b></font> Fixed.<br/>
+<font color="#A82F2F"><font size="2">(11:42:09 AM)</font> <b>David Gelvin:</b></font> Thank<br/>
+<font color="#A82F2F"><font size="2">(11:42:23 AM)</font> <b>David Gelvin:</b></font> you<br/>
+<font color="#A82F2F"><font size="2">(11:42:26 AM)</font> <b>David Gelvin:</b></font> very<br/>
+<font color="#A82F2F"><font size="2">(11:42:27 AM)</font> <b>David Gelvin:</b></font> much<br/>
+<font color="#16569E"><font size="2">(11:42:32 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>anytime!</span><br/>
+<font color="#16569E"><font size="2">(11:42:42 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what was the fix?  in nginx?</span><br/>
+<font color="#16569E"><font size="2">(11:42:57 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>does it work both ways still ?</span><br/>
+<font color="#A82F2F"><font size="2">(11:43:26 AM)</font> <b>David Gelvin:</b></font> Hadn't made the newest changes to the nginx.conf (delete server block) then ensure that the adm.conf server block serves to all server_names <br/>
+<font color="#16569E"><font size="2">(11:43:46 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh, that's right.  Nice!</span><br/>
+<font color="#A82F2F"><font size="2">(11:43:57 AM)</font> <b>David Gelvin:</b></font> So known issue- just hadn't given adm-qa much attention recently.<br/>
+<font color="#16569E"><font size="2">(11:44:34 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>it's always the last one to get updated.</span><br/>
+<font color="#16569E"><font size="2">(11:44:39 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>thanks!</span><br/>
+<font color="#A82F2F"><font size="2">(11:44:50 AM)</font> <b>David Gelvin:</b></font> Yeah, well the first born never gets as much attention as the newborn.<br/>
+<font color="#16569E"><font size="2">(11:45:25 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>well said.</span><br/>

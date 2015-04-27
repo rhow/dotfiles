@@ -1,0 +1,99 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 04 Apr 2014 09:50:28 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 04 Apr 2014 09:50:28 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:50:28 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:50:42 PM)</font> <b>aitiba:</b></font> and sailsjs is so good! So similiar to laravel on php<br/>
+<font color="#A82F2F"><font size="2">(09:50:57 PM)</font> <b>robdubya:</b></font> lenswipe ok<br/>
+<font color="#A82F2F"><font size="2">(09:51:17 PM)</font> <b>robdubya:</b></font> so the absolute most basic use case of JWT is this<br/>
+<font color="#A82F2F"><font size="2">(09:51:33 PM)</font> <b>robdubya:</b></font> var anyPayload = &quot;foobar&quot;<br/>
+<font color="#A82F2F"><font size="2">(09:52:10 PM)</font> <b>robdubya:</b></font> var token = jwt.sign(foobar,&apos;secret&apos;)<br/>
+<font color="#A82F2F"><font size="2">(09:52:13 PM)</font> <b>lenswipe:</b></font> right, okay<br/>
+<font color="#A82F2F"><font size="2">(09:52:20 PM)</font> <b>robdubya:</b></font> err<br/>
+<font color="#A82F2F"><font size="2">(09:52:30 PM)</font> <b>robdubya:</b></font> var token = jwt.sign(anyPayload,&apos;secret&apos;)<br/>
+<font color="#A82F2F"><font size="2">(09:52:32 PM)</font> <b>robdubya:</b></font> apologies.<br/>
+<font color="#A82F2F"><font size="2">(09:53:05 PM)</font> <b>robdubya:</b></font> the inverse of that is : jwt.verify(token,&apos;secret&apos;,function(anyPayload){})<br/>
+<font color="#A82F2F"><font size="2">(09:53:37 PM)</font> <b>lenswipe:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(09:53:50 PM)</font> <b>robdubya:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(09:54:02 PM)</font> <b>robdubya:</b></font> jwt.verify(token,&apos;secret&apos;,function(anyPayload){}) -&gt; &quot;foobar&quot;<br/>
+<font color="#A82F2F"><font size="2">(09:54:31 PM)</font> <b>robdubya:</b></font> bah<br/>
+<font color="#A82F2F"><font size="2">(09:54:41 PM)</font> <b>robdubya:</b></font> hold on, i&apos;m switching between languages.<br/>
+<font color="#A82F2F"><font size="2">(09:54:48 PM)</font> <b>robdubya:</b></font> lemme just write it out properly<br/>
+<font color="#A82F2F"><font size="2">(09:54:54 PM)</font> <b>robdubya:</b></font> fucking dart -&gt; node -&gt; js -&gt; dart<br/>
+<font color="#A82F2F"><font size="2">(09:55:00 PM)</font> <b>lenswipe:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(09:59:03 PM)</font> <b>robdubya:</b></font> https://gist.github.com/robwormald/9987338<br/>
+<font color="#A82F2F"><font size="2">(10:00:06 PM)</font> <b>lenswipe:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(10:00:48 PM)</font> <b>robdubya:</b></font> so that always always happens<br/>
+<font color="#A82F2F"><font size="2">(10:00:55 PM)</font> <b>robdubya:</b></font> regardless of what else you do<br/>
+<font color="#A82F2F"><font size="2">(10:01:22 PM)</font> <b>robdubya:</b></font> that token effectively has an infinite lifespan (or until you change the secret)<br/>
+<font color="#A82F2F"><font size="2">(10:01:57 PM)</font> <b>lenswipe:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(10:03:38 PM)</font> <b>robdubya:</b></font> refresh the plunk<br/>
+<font color="#A82F2F"><font size="2">(10:04:04 PM)</font> <b>lenswipe:</b></font> done<br/>
+<font color="#A82F2F"><font size="2">(10:04:19 PM)</font> <b>robdubya:</b></font> so expiration is checked automatically<br/>
+<font color="#A82F2F"><font size="2">(10:04:26 PM)</font> <b>lenswipe:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(10:08:02 PM)</font> <b>robdubya:</b></font> refresh<br/>
+<font color="#A82F2F"><font size="2">(10:08:19 PM)</font> <b>lenswipe:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(10:08:56 PM)</font> <b>robdubya:</b></font> oops, refresh that<br/>
+<font color="#A82F2F"><font size="2">(10:09:49 PM)</font> <b>robdubya:</b></font> this is the most important bit<br/>
+<font color="#A82F2F"><font size="2">(10:10:14 PM)</font> <b>robdubya:</b></font> you can encode *whatever* you want in the payload<br/>
+<font color="#A82F2F"><font size="2">(10:10:56 PM)</font> <b>robdubya:</b></font> the &quot;special&quot; options - audience / subject/ issuer<br/>
+<font color="#A82F2F"><font size="2">(10:11:13 PM)</font> <b>robdubya:</b></font> you can not only verify a token is valid, but also *assert* things<br/>
+<font color="#A82F2F"><font size="2">(10:11:42 PM)</font> <b>robdubya:</b></font> but you don&apos;t *have* to<br/>
+<font color="#A82F2F"><font size="2">(10:11:42 PM)</font> <b>lenswipe:</b></font> okay so the payload is both the thing i want to encode + assertions?<br/>
+<font color="#A82F2F"><font size="2">(10:11:47 PM)</font> <b>lenswipe:</b></font> or rather it can nbe<br/>
+<font color="#A82F2F"><font size="2">(10:12:02 PM)</font> <b>robdubya:</b></font> look at line 8 of assertions.js<br/>
+<font color="#A82F2F"><font size="2">(10:12:22 PM)</font> <b>lenswipe:</b></font> aha<br/>
+<font color="#A82F2F"><font size="2">(10:12:46 PM)</font> <b>robdubya:</b></font> so i&apos;m signing a token with an issuer option<br/>
+<font color="#A82F2F"><font size="2">(10:12:48 PM)</font> <b>lenswipe:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(10:13:04 PM)</font> <b>robdubya:</b></font> BUT - look how line 11 and line 19 differ<br/>
+<font color="#A82F2F"><font size="2">(10:13:34 PM)</font> <b>robdubya:</b></font> the first - just checks the token is valid (eg, it hasn&apos;t expired, and the secret matches)<br/>
+<font color="#A82F2F"><font size="2">(10:14:00 PM)</font> <b>robdubya:</b></font> the second - checks validity, and ALSO checks that the issuer = &apos;hipster.io&apos;<br/>
+<font color="#A82F2F"><font size="2">(10:14:20 PM)</font> <b>robdubya:</b></font> if the token doesn&apos;t meet BOTH of those conditions, it&apos;s invalid<br/>
+<font color="#A82F2F"><font size="2">(10:17:48 PM)</font> <b>lenswipe:</b></font> oh, okay<br/>
+<font color="#A82F2F"><font size="2">(10:17:49 PM)</font> <b>lenswipe:</b></font> i see<br/>
+<font color="#A82F2F"><font size="2">(10:17:58 PM)</font> <b>lenswipe:</b></font> so when you verify you can have it only check the payload<br/>
+<font color="#A82F2F"><font size="2">(10:18:07 PM)</font> <b>robdubya:</b></font> it never checks the payload<br/>
+<font color="#A82F2F"><font size="2">(10:18:07 PM)</font> <b>lenswipe:</b></font> or you can pass an object in of things to verify too<br/>
+<font color="#A82F2F"><font size="2">(10:18:14 PM)</font> <b>robdubya:</b></font> the payload is just data<br/>
+<font color="#A82F2F"><font size="2">(10:18:18 PM)</font> <b>lenswipe:</b></font> err the token even<br/>
+<font color="#A82F2F"><font size="2">(10:18:46 PM)</font> <b>robdubya:</b></font> so those 3 options are &quot;special&quot;<br/>
+<font color="#A82F2F"><font size="2">(10:18:56 PM)</font> <b>robdubya:</b></font> how you use them is up to you.<br/>
+<font color="#A82F2F"><font size="2">(10:19:14 PM)</font> <b>robdubya:</b></font> the payload is a seperate issue entirely<br/>
+<font color="#A82F2F"><font size="2">(10:21:20 PM)</font> <b>lenswipe:</b></font> okay<br/>
+<font color="#A82F2F"><font size="2">(10:24:27 PM)</font> <b>aitiba:</b></font> ?is there a way to use sailsjs with cordoba?<br/>
+<font color="#A82F2F"><font size="2">(10:28:41 PM)</font> <b>lenswipe:</b></font> aitiba, you mean cordova?<br/>
+<font color="#A82F2F"><font size="2">(10:29:06 PM)</font> <b>aitiba:</b></font> yes sorry<br/>
+<font color="#A82F2F"><font size="2">(10:29:25 PM)</font> <b>lenswipe:</b></font> not sure - my gut instinct would be to say &quot;yes and no&quot;<br/>
+<font color="#A82F2F"><font size="2">(10:29:34 PM)</font> <b>lenswipe:</b></font> cordova is for building client apps<br/>
+<font color="#A82F2F"><font size="2">(10:29:38 PM)</font> <b>lenswipe:</b></font> sailsJS is a server side framework<br/>
+<font color="#A82F2F"><font size="2">(10:29:53 PM)</font> <b>lenswipe:</b></font> so you could build a SOA type data app with sails and then connect to it with cordova<br/>
+<font color="#A82F2F"><font size="2">(10:30:39 PM)</font> <b>aitiba:</b></font> https://www.npmjs.org/package/cordova<br/>
+<font color="#A82F2F"><font size="2">(10:31:08 PM)</font> <b>lenswipe:</b></font> ...<br/>
+<font color="#A82F2F"><font size="2">(10:31:30 PM)</font> <b>aitiba:</b></font> whats up?<br/>
+<font color="#A82F2F"><font size="2">(10:31:41 PM)</font> <b>lenswipe:</b></font> I&apos;m not sure why you&apos;re linking me to that<br/>
+<font color="#A82F2F"><font size="2">(10:31:46 PM)</font> <b>robdubya:</b></font> yes. absolutely 100%<br/>
+<font color="#A82F2F"><font size="2">(10:32:36 PM)</font> <b>lenswipe:</b></font> robdubya, so you can bake sails into a cordova app?<br/>
+<font color="#A82F2F"><font size="2">(10:33:02 PM)</font> <b>robdubya:</b></font> no. you just use sails the API<br/>
+<font color="#A82F2F"><font size="2">(10:33:06 PM)</font> <b>robdubya:</b></font> *as<br/>
+<font color="#A82F2F"><font size="2">(10:33:08 PM)</font> <b>lenswipe:</b></font> so what I suggested then<br/>
+<font color="#A82F2F"><font size="2">(10:33:24 PM)</font> <b>lenswipe:</b></font> build a data API and connect your cordova app to it<br/>
+<font color="#A82F2F"><font size="2">(10:34:10 PM)</font> <b>robdubya:</b></font> indeed. that&apos;s how all client apps should be built, imo<br/>
+<font color="#A82F2F"><font size="2">(10:34:29 PM)</font> <b>aitiba:</b></font> but I need to implement realtime on my cordova app too right?<br/>
+<font color="#A82F2F"><font size="2">(10:34:42 PM)</font> <b>robdubya:</b></font> you dont have to<br/>
+<font color="#A82F2F"><font size="2">(10:34:47 PM)</font> <b>robdubya:</b></font> you can just use $http<br/>
+<font color="#A82F2F"><font size="2">(10:34:49 PM)</font> <b>robdubya:</b></font> err http<br/>
+<font color="#A82F2F"><font size="2">(10:34:59 PM)</font> <b>robdubya:</b></font> but you certainly can use socket.io<br/>
+<font color="#A82F2F"><font size="2">(10:36:26 PM)</font> <b>aitiba:</b></font> socket.io on a cordova app? t?is this posible?<br/>
+<font color="#A82F2F"><font size="2">(10:37:44 PM)</font> <b>aitiba:</b></font> i&apos;m confused<br/>
+<font color="#A82F2F"><font size="2">(10:37:52 PM)</font> <b>robdubya:</b></font> sure<br/>
+<font color="#A82F2F"><font size="2">(10:38:55 PM)</font> <b>aitiba:</b></font> so I need to create the client using socket.io and http pettions?<br/>
+<font color="#A82F2F"><font size="2">(10:46:27 PM)</font> <b>aitiba:</b></font> robdubya:<br/>
+<font color="#A82F2F"><font size="2">(10:46:50 PM)</font> <b>robdubya:</b></font> your cordova app can make either http or socket requests for the same data over the same routes<br/>
+<font color="#A82F2F"><font size="2">(10:48:21 PM)</font> <b>aitiba:</b></font> thanks robdubya i will try<br/>
+<font color="#A82F2F"><font size="2">(10:49:49 PM)</font> <b>robdubya:</b></font> aitiba cool. i&apos;m actually building a demo this week with the ionic peeps, so if you dont figure it out by then, we&apos;ll have a nice example<br/>
+<font color="#A82F2F"><font size="2">(10:50:48 PM)</font> <b>aitiba:</b></font> great<br/>
+<font color="#A82F2F"><font size="2">(10:52:17 PM)</font> <b>aitiba:</b></font> robdubya: the last one. i need jquery,angular,backbone... to make the http pettions rright?<br/>
+<font color="#A82F2F"><font size="2">(10:52:49 PM)</font> <b>robdubya:</b></font> you dont *need* them, but it sure makes it a lot easier<br/>
+<font color="#A82F2F"><font size="2">(10:52:57 PM)</font> <b>robdubya:</b></font> ionicframework.com<br/>
+<font color="#A82F2F"><font size="2">(10:53:09 PM)</font> <b>robdubya:</b></font> that&apos;s what i&apos;m doing my demo in (angular powered)<br/>
+<font color="#A82F2F"><font size="2">(10:56:23 PM)</font> <b>aitiba:</b></font> i dont meet ionic<br/>
+<font color="#A82F2F"><font size="2">(10:56:27 PM)</font> <b>aitiba:</b></font> looks great<br/>
+<font size="2">(11:01:38 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

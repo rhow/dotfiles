@@ -1,0 +1,70 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 21 Apr 2014 12:32:35 PM MDT on randingo_@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 21 Apr 2014 12:32:35 PM MDT on randingo_@irc.freenode.net (irc)</h3>
+<font size="2">(12:32:35 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(01:17:14 PM)</font> <b>orbsio:</b></font> I&apos;m using waterline with postgres and have noticed that when it creates the DB tables, it doesn&apos;t configure any foreign keys. Is this expected behavior?<br/>
+<font color="#A82F2F"><font size="2">(01:17:32 PM)</font> <b>orbsio:</b></font> robdubya: ^^<br/>
+<font color="#A82F2F"><font size="2">(01:17:38 PM)</font> <b>lenswipe:</b></font> orbsio, define &quot;doesn&apos;t configure any foreign keys&quot;<br/>
+<font color="#A82F2F"><font size="2">(01:18:11 PM)</font> <b>orbsio:</b></font> lenswipe: tables for my models are created and primary keys are created.<br/>
+<font color="#A82F2F"><font size="2">(01:18:40 PM)</font> <b>orbsio:</b></font> but the db schema doesn&apos;t enforce relationships between tables with foreign keys.<br/>
+<font color="#A82F2F"><font size="2">(01:19:41 PM)</font> <b>lenswipe:</b></font> orbsio, interesting point, I notice mine is doing the same<br/>
+<font color="#A82F2F"><font size="2">(01:19:48 PM)</font> <b>lenswipe:</b></font> I can only assume that it is<br/>
+<font color="#A82F2F"><font size="2">(01:19:53 PM)</font> <b>lenswipe:</b></font> whether it should be however, is another matter]<br/>
+<font color="#A82F2F"><font size="2">(01:21:12 PM)</font> <b>orbsio:</b></font> yeah, i would have expected FK to have been included in the schema. i&apos;m sure that waterline and/or the postgres driver are just not yet mature enough to include this.<br/>
+<font color="#A82F2F"><font size="2">(01:27:08 PM)</font> <b>rawtaz:</b></font> orbsio: please make it a habit not to address specific people with general questions. doing so can &quot;wear them out&quot; so they in the end dont help when they can because they&apos;re constantly asked for help. let them help if and when they want to on their own<br/>
+<font color="#A82F2F"><font size="2">(01:27:29 PM)</font> <b>rawtaz:</b></font> noone in here is a personal support agent for anyone<br/>
+<font color="#A82F2F"><font size="2">(01:30:19 PM)</font> <b>orbsio:</b></font> rawtaz: good advice, I only referenced robdubya because he and I had a conversation last night about using postgres with sails.<br/>
+<font color="#A82F2F"><font size="2">(01:30:51 PM)</font> <b>rawtaz:</b></font> orbsio: fair enough :) thanks for understanding, sorry if i intervened in an existing convo :)<br/>
+<font color="#A82F2F"><font size="2">(01:31:35 PM)</font> <b>orbsio:</b></font> no problem. i&apos;ve done my fair share of support in other channels, and I totally understand that some people will abuse that.<br/>
+<font color="#A82F2F"><font size="2">(01:32:02 PM)</font> <b>rawtaz:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(01:39:07 PM)</font> <b>LHN:</b></font> i met the problem with embed document in sails<br/>
+<font color="#A82F2F"><font size="2">(01:39:11 PM)</font> <b>LHN:</b></font> any suggestion ?<br/>
+<font color="#A82F2F"><font size="2">(01:39:34 PM)</font> <b>LHN:</b></font> i using mongo-sails with version 0.10.x<br/>
+<font color="#A82F2F"><font size="2">(01:39:38 PM)</font> <b>rawtaz:</b></font> i suggest you explain what the problem is<br/>
+<font color="#A82F2F"><font size="2">(01:40:40 PM)</font> <b>LHN:</b></font> attributes: {     name: &apos;string&apos;,     age: &apos;integer&apos;,     address: {         model: &apos;address&apos;,         embedded: true     } }  // Address Model attributes: {     street: &apos;string&apos;,     zip: &apos;string&apos;,     city: &apos;string&apos;,     state: &apos;string&apos; }<br/>
+<font color="#A82F2F"><font size="2">(01:40:51 PM)</font> <b>rawtaz:</b></font> you should probably pastebin that :)<br/>
+<font color="#A82F2F"><font size="2">(01:41:03 PM)</font> <b>LHN:</b></font> Which would save something like this in a mongo document:<br/>
+<font color="#A82F2F"><font size="2">(01:41:13 PM)</font> <b>LHN:</b></font> {     &quot;name&quot;:&quot;foo&quot;,     &quot;age&quot;:30,     &quot;address&quot;: {         &quot;street&quot;: &quot;Pivet Dr&quot;,         &quot;zip&quot;: &quot;12345&quot;,         &quot;city&quot;: &quot;Azkaban&quot;,         &quot;state&quot;: &quot;foobar&quot;     } }<br/>
+<font color="#A82F2F"><font size="2">(01:41:19 PM)</font> <b>robdubya:</b></font> not gonna work<br/>
+<font color="#A82F2F"><font size="2">(01:41:37 PM)</font> <b>LHN:</b></font> so what i can do with this<br/>
+<font color="#A82F2F"><font size="2">(01:41:50 PM)</font> <b>jdcauley:</b></font> anyone have a text parsing, need to pull emails out of body text<br/>
+<font color="#A82F2F"><font size="2">(01:42:22 PM)</font> <b>robdubya:</b></font> store it as a related model, or store it as regular json<br/>
+<font color="#A82F2F"><font size="2">(01:42:29 PM)</font> <b>robdubya:</b></font> depends if you need validation or not<br/>
+<font color="#A82F2F"><font size="2">(01:43:18 PM)</font> <b>LHN:</b></font> i got it<br/>
+<font size="2">(01:48:59 PM)</font><b> LHN left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(02:11:59 PM)</font> <b>jdcauley:</b></font> parsing emails out of a text body<br/>
+<font color="#A82F2F"><font size="2">(02:12:02 PM)</font> <b>jdcauley:</b></font> anyone?<br/>
+<font color="#A82F2F"><font size="2">(02:12:14 PM)</font> <b>jdcauley:</b></font> I thought I had it but nope<br/>
+<font color="#A82F2F"><font size="2">(02:23:42 PM)</font> <b>rawtaz:</b></font> what about it?<br/>
+<font size="2">(02:33:57 PM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(02:34:05 PM)</font> <b>robdubya:</b></font> https://xkcd.com/208/<br/>
+<font color="#A82F2F"><font size="2">(02:42:18 PM)</font> <b>rawtaz:</b></font> never gets old or irrelevant :)<br/>
+<font size="2">(02:45:35 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:05:13 PM)</font> <b>Rubynaut:</b></font> how/where can i serve fonts in sails?<br/>
+<font color="#A82F2F"><font size="2">(03:19:04 PM)</font> <b>Rubynaut:</b></font> ah got it.<br/>
+<font color="#A82F2F"><font size="2">(03:52:09 PM)</font> <b>alucic:</b></font> Hey guys, I have seen in docs that &quot;Policies can be used for anything: HTTP BasicAuth&quot;, but I wasn&apos;t able to find any code related to http basic auth with sails.. is there some kind of http basic auth example code ? thanks<br/>
+<font color="#A82F2F"><font size="2">(03:54:33 PM)</font> <b>rawtaz:</b></font> i have no idea but wouldnt you do it similar to how you do it in express in general?<br/>
+<font color="#A82F2F"><font size="2">(03:54:50 PM)</font> <b>robdubya:</b></font> yup<br/>
+<font color="#A82F2F"><font size="2">(03:55:53 PM)</font> <b>rawtaz:</b></font> robdubya: this monday<br/>
+<font color="#A82F2F"><font size="2">(03:56:51 PM)</font> <b>robdubya:</b></font> rawtaz the internet has gone full retard today<br/>
+<font color="#A82F2F"><font size="2">(03:57:14 PM)</font> <b>robdubya:</b></font> literally every email i get is worse than the last<br/>
+<font color="#A82F2F"><font size="2">(03:58:38 PM)</font> <b>rawtaz:</b></font> yeah? cool<br/>
+<font color="#A82F2F"><font size="2">(03:58:43 PM)</font> <b>rawtaz:</b></font> give us some highlights :)<br/>
+<font color="#A82F2F"><font size="2">(03:59:30 PM)</font> <b>robdubya:</b></font> i also did perhaps the most frustrating airpair session EVER<br/>
+<font color="#A82F2F"><font size="2">(03:59:41 PM)</font> <b>rawtaz:</b></font> hah lel<br/>
+<font color="#A82F2F"><font size="2">(04:00:15 PM)</font> <b>robdubya:</b></font> i dont consider myself an &quot;expert&quot; at much<br/>
+<font color="#A82F2F"><font size="2">(04:00:26 PM)</font> <b>rawtaz:</b></font> me neither<br/>
+<font color="#A82F2F"><font size="2">(04:00:34 PM)</font> <b>robdubya:</b></font> but fucking a, if you&apos;re paying me $75 an hour, there&apos;s some expectation i know what i&apos;m doing<br/>
+<font color="#A82F2F"><font size="2">(04:01:10 PM)</font> <b>robdubya:</b></font> the guy literally paid me to argue with him for the first hour<br/>
+<font color="#A82F2F"><font size="2">(04:01:22 PM)</font> <b>rawtaz:</b></font> how did he do that?<br/>
+<font color="#A82F2F"><font size="2">(04:01:48 PM)</font> <b>robdubya:</b></font> paypal<br/>
+<font color="#A82F2F"><font size="2">(04:01:51 PM)</font> <b>rawtaz:</b></font> heh<br/>
+<font color="#A82F2F"><font size="2">(04:02:13 PM)</font> <b>rawtaz:</b></font> i guess he was wrong about something and wanted daddy to correct him<br/>
+<font color="#A82F2F"><font size="2">(04:03:56 PM)</font> <b>rawtaz:</b></font> i must do that too some day<br/>
+<font color="#A82F2F"><font size="2">(04:04:04 PM)</font> <b>rawtaz:</b></font> hog you for a few hours and be a somplete arse<br/>
+<font color="#A82F2F"><font size="2">(04:04:16 PM)</font> <b>rawtaz:</b></font> but in a very politically correct way so you cannot dismiss me<br/>
+<font color="#A82F2F"><font size="2">(04:05:06 PM)</font> <b>robdubya:</b></font> my issue i was trained by apple for years to be exceedingly polite<br/>
+<font color="#A82F2F"><font size="2">(04:05:17 PM)</font> <b>robdubya:</b></font> so even i want to say &quot;don&apos;t do that, you fucking moron&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:05:34 PM)</font> <b>robdubya:</b></font> its more like &quot;well, lets see if we can find a resolution that works &quot;<br/>
+<font color="#A82F2F"><font size="2">(04:07:33 PM)</font> <b>rawtaz:</b></font> such a wuzz<br/>
+<font color="#A82F2F"><font size="2">(04:07:52 PM)</font> <b>rawtaz:</b></font> :P<br/>
+<font size="2">(06:02:03 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

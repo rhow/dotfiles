@@ -1,0 +1,20 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with snelsen@i3.com at Mon 20 Apr 2015 09:54:27 AM MDT on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with snelsen@i3.com at Mon 20 Apr 2015 09:54:27 AM MDT on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(09:55:26 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>when you have a couple minutes, i need to figure out how to tackle the Oversampling Misalignment.</span><br/>
+<font color="#A82F2F"><font size="2">(09:55:45 AM)</font> <b>Shawn Nelsen:</b></font> ok, I'll be by in a few.<br/>
+<font color="#16569E"><font size="2">(09:56:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>fantastic</span><br/>
+<font color="#16569E"><font size="2">(10:05:02 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>going to talk with John for a bit, so we'll discuss the issue later.</span><br/>
+<font color="#A82F2F"><font size="2">(10:05:16 AM)</font> <b>Shawn Nelsen:</b></font> ok, works for me.<br/>
+<font color="#16569E"><font size="2">(11:09:06 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i've got some time now.</span><br/>
+<font color="#A82F2F"><font size="2">(11:28:55 AM)</font> <b>Shawn Nelsen:</b></font> k<br/>
+<font color="#16569E"><font size="2">(12:03:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://laughingsquid.com/a-wolf-puppet-makes-fun-of-the-avengers-age-of-ultron-trailer-in-a-comedy-sketch-by-barely-political/">http://laughingsquid.com/a-wolf-puppet-makes-fun-of-the-avengers-age-of-ultron-trailer-in-a-comedy-sketch-by-barely-political/</a></span><br/>
+<font color="#A82F2F"><font size="2">(12:05:20 PM)</font> <b>Shawn Nelsen:</b></font> trolled by a puppet<br/>
+<font color="#A82F2F"><font size="2">(12:31:48 PM)</font> <b>Shawn Nelsen:</b></font> so yeah, that didn't fix it. I need to draw this out and see what's happening<br/>
+<font color="#16569E"><font size="2">(12:32:08 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok.</span><br/>
+<font color="#A82F2F"><font size="2">(01:26:14 PM)</font> <b>Shawn Nelsen:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p><a href="http://en.wikipedia.org/wiki/JPEG#Sample_photographs">http://en.wikipedia.org/wiki/JPEG#Sample_photographs</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(01:27:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that is good.  I like the head stone for JPG</span><br/>
+<font color="#A82F2F"><font size="2">(01:29:52 PM)</font> <b>Shawn Nelsen:</b></font> ArcGIS defaults to quality 75<br/>
+<font color="#A82F2F"><font size="2">(01:32:09 PM)</font> <b>Shawn Nelsen:</b></font> Quality with native JPEG was probably bad because you’re doing a jpeg  compression/recompression inside mapcache which is going to be bad.  Without hacking into the source code, I would recommend that you request  your metatiles as png from mapserver, and compress them to jpeg in  mapcache (i.e. use image/png in your mapcache , and JPEG in your .  Mapcache’s JPEG format defaults to quality=90, you can override that  with your own jpeg format. You may also want to look into the PNG8  format instead of JPEG for mapcache, YMMV.<br/>cheers,<br/>thomas<br/>
+<font color="#16569E"><font size="2">(01:38:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's interesting.  hit the source with PNG, and have MC stuff as a JPEG (100)</span><br/>
+<font color="#A82F2F"><font size="2">(01:53:20 PM)</font> <b>Shawn Nelsen:</b></font> it did nothing, but you should look at something when you get a second.<br/>
+<font color="#16569E"><font size="2">(01:53:53 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh yeah!!?</span><br/>
+<font color="#16569E"><font size="2">(01:54:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k, brt</span><br/>

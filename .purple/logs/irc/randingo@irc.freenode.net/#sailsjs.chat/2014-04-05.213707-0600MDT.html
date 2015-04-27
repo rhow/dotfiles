@@ -1,0 +1,119 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sat 05 Apr 2014 09:37:07 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sat 05 Apr 2014 09:37:07 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:37:07 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:37:17 PM)</font> <b>lenswipe:</b></font> so like this<br/>
+<font color="#A82F2F"><font size="2">(09:37:18 PM)</font> <b>lenswipe:</b></font> http://pastebin.com/BwwiXCpa<br/>
+<font color="#A82F2F"><font size="2">(09:37:25 PM)</font> <b>lenswipe:</b></font> lines 15 and 16<br/>
+<font color="#A82F2F"><font size="2">(09:37:45 PM)</font> <b>lenswipe:</b></font> will find have validToken AND disableFindAll applied? or just the latter?<br/>
+<font color="#A82F2F"><font size="2">(09:38:14 PM)</font> <b>robdubya:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(09:38:22 PM)</font> <b>lenswipe:</b></font> ..<br/>
+<font color="#A82F2F"><font size="2">(09:38:25 PM)</font> <b>robdubya:</b></font> they overwrite in that case<br/>
+<font color="#A82F2F"><font size="2">(09:38:28 PM)</font> <b>robdubya:</b></font> what you want it<br/>
+<font color="#A82F2F"><font size="2">(09:38:30 PM)</font> <b>lenswipe:</b></font> oh, okay<br/>
+<font color="#A82F2F"><font size="2">(09:38:30 PM)</font> <b>robdubya:</b></font> *is<br/>
+<font color="#A82F2F"><font size="2">(09:38:39 PM)</font> <b>lenswipe:</b></font> i want an array, right?<br/>
+<font color="#A82F2F"><font size="2">(09:38:44 PM)</font> <b>robdubya:</b></font> find : [&apos;checkthing&apos;, &apos;checkOtherThing&apos;]<br/>
+<font color="#A82F2F"><font size="2">(09:38:48 PM)</font> <b>lenswipe:</b></font> [&apos;validToken&apos;, &apos;disableFi...yeah<br/>
+<font color="#A82F2F"><font size="2">(09:38:59 PM)</font> <b>lenswipe:</b></font> is what I have good so far?<br/>
+<font color="#A82F2F"><font size="2">(09:40:11 PM)</font> <b>robdubya:</b></font> should be. they get applied in order, in series<br/>
+<font color="#A82F2F"><font size="2">(09:40:39 PM)</font> <b>lenswipe:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(09:41:43 PM)</font> <b>lenswipe:</b></font> so yeah, am i gonna need a policy for each controller to check if you&apos;re allowed to access that message/conversation/agent/customer/whatever?<br/>
+<font color="#A82F2F"><font size="2">(09:44:51 PM)</font> <b>robdubya:</b></font> depends how different the logic is<br/>
+<font color="#A82F2F"><font size="2">(09:45:13 PM)</font> <b>lenswipe:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(09:45:32 PM)</font> <b>lenswipe:</b></font> well as things stand I would need to query each individual table to see if the customer presenting the token is listed against that model instance<br/>
+<font color="#A82F2F"><font size="2">(09:45:40 PM)</font> <b>lenswipe:</b></font> additionally, what about token decryption?<br/>
+<font color="#A82F2F"><font size="2">(09:45:56 PM)</font> <b>lenswipe:</b></font> as things stand right now each policy is decoding the token itself<br/>
+<font color="#A82F2F"><font size="2">(09:48:32 PM)</font> <b>robdubya:</b></font> have a token decoder policy<br/>
+<font color="#A82F2F"><font size="2">(09:48:39 PM)</font> <b>robdubya:</b></font> its the first one on any protected route<br/>
+<font color="#A82F2F"><font size="2">(09:48:47 PM)</font> <b>robdubya:</b></font> it decodes a token, and either<br/>
+<font color="#A82F2F"><font size="2">(09:48:54 PM)</font> <b>robdubya:</b></font> immediately rejects the request<br/>
+<font color="#A82F2F"><font size="2">(09:49:04 PM)</font> <b>robdubya:</b></font> or adds the decoded data onto the requset<br/>
+<font color="#A82F2F"><font size="2">(09:49:41 PM)</font> <b>lenswipe:</b></font> ..i see<br/>
+<font color="#A82F2F"><font size="2">(09:49:49 PM)</font> <b>lenswipe:</b></font> is that the same as a token validation policy?<br/>
+<font color="#A82F2F"><font size="2">(09:50:05 PM)</font> <b>lenswipe:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(09:50:36 PM)</font> <b>robdubya:</b></font> i imagine so<br/>
+<font color="#A82F2F"><font size="2">(09:59:40 PM)</font> <b>lenswipe:</b></font> im starting to wonder if i should just disable all access to all routes and go write the front end app and then open up routes as i need them<br/>
+<font color="#A82F2F"><font size="2">(10:00:29 PM)</font> <b>robdubya:</b></font> i&apos;d agree with that.<br/>
+<font color="#A82F2F"><font size="2">(10:00:44 PM)</font> <b>robdubya:</b></font> or just build your front end, and then handle the policies<br/>
+<font color="#A82F2F"><font size="2">(10:00:57 PM)</font> <b>robdubya:</b></font> this is like, 7 consecutuve days we&apos;ve talked about JWT&apos;s<br/>
+<font color="#A82F2F"><font size="2">(10:01:20 PM)</font> <b>lenswipe:</b></font> i know<br/>
+<font color="#A82F2F"><font size="2">(10:01:27 PM)</font> <b>lenswipe:</b></font> it&apos;s tying my mind in knots<br/>
+<font color="#A82F2F"><font size="2">(10:01:40 PM)</font> <b>robdubya:</b></font> then forget about it<br/>
+<font color="#A82F2F"><font size="2">(10:01:45 PM)</font> <b>robdubya:</b></font> make some progress<br/>
+<font color="#A82F2F"><font size="2">(10:01:47 PM)</font> <b>lenswipe:</b></font> well no, i have JWT figured now<br/>
+<font color="#A82F2F"><font size="2">(10:01:53 PM)</font> <b>lenswipe:</b></font> what&apos;s doing my head in now is policies<br/>
+<font color="#A82F2F"><font size="2">(10:02:02 PM)</font> <b>robdubya:</b></font> go build your front end<br/>
+<font color="#A82F2F"><font size="2">(10:02:06 PM)</font> <b>lenswipe:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(10:02:11 PM)</font> <b>robdubya:</b></font> then overcomplicate your life<br/>
+<font color="#A82F2F"><font size="2">(10:02:14 PM)</font> <b>lenswipe:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:02:19 PM)</font> <b>lenswipe:</b></font> that being said before I do that<br/>
+<font color="#A82F2F"><font size="2">(10:02:20 PM)</font> <b>robdubya:</b></font> but right now its just a lot of abstract questions<br/>
+<font color="#A82F2F"><font size="2">(10:02:22 PM)</font> <b>lenswipe:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(10:02:27 PM)</font> <b>robdubya:</b></font> things will become clear as you build<br/>
+<font color="#A82F2F"><font size="2">(10:02:44 PM)</font> <b>lenswipe:</b></font> I have a friend that i talk about this stuff with via hangout normally but for some reason he&apos;s decided he hates sails<br/>
+<font color="#A82F2F"><font size="2">(10:02:58 PM)</font> <b>robdubya:</b></font> some people do.<br/>
+<font color="#A82F2F"><font size="2">(10:03:07 PM)</font> <b>robdubya:</b></font> everybody hates something when it comes to dev<br/>
+<font color="#A82F2F"><font size="2">(10:03:11 PM)</font> <b>robdubya:</b></font> for me, its firebase<br/>
+<font color="#A82F2F"><font size="2">(10:03:18 PM)</font> <b>lenswipe:</b></font> my pet hate is .NET<br/>
+<font color="#A82F2F"><font size="2">(10:03:43 PM)</font> <b>robdubya:</b></font> my argument to hating sails would be if you do, you hate express.js, and node.js<br/>
+<font color="#A82F2F"><font size="2">(10:03:51 PM)</font> <b>robdubya:</b></font> which some people do.<br/>
+<font color="#A82F2F"><font size="2">(10:03:59 PM)</font> <b>lenswipe:</b></font> no he likes all of those<br/>
+<font color="#A82F2F"><font size="2">(10:04:01 PM)</font> <b>lenswipe:</b></font> he builds node apps<br/>
+<font color="#A82F2F"><font size="2">(10:04:25 PM)</font> <b>robdubya:</b></font> sails = express + models and websockets<br/>
+<font color="#A82F2F"><font size="2">(10:04:37 PM)</font> <b>lenswipe:</b></font> i think hes a bit butthurt because he looked at sails before asociations were supported and chose sequelize and sort of built his own version of sails with that but now that they are supported he kinda feels that it was a waste of time<br/>
+<font color="#A82F2F"><font size="2">(10:04:58 PM)</font> <b>robdubya:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(10:05:12 PM)</font> <b>lenswipe:</b></font> although, his argument against sails is &quot;what does it do that $theStuffYouJustListed can&apos;t do&quot; which I usually explain, that it&apos;s the stuff listed but put together neatly<br/>
+<font color="#A82F2F"><font size="2">(10:05:15 PM)</font> <b>robdubya:</b></font> i did literally the same thing. like, 6 times<br/>
+<font color="#A82F2F"><font size="2">(10:05:18 PM)</font> <b>lenswipe:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(10:05:19 PM)</font> <b>robdubya:</b></font> its why i use sails<br/>
+<font color="#A82F2F"><font size="2">(10:05:22 PM)</font> <b>robdubya:</b></font> so i dont do that anymore<br/>
+<font color="#A82F2F"><font size="2">(10:05:37 PM)</font> <b>lenswipe:</b></font> ..on a different tack...<br/>
+<font color="#A82F2F"><font size="2">(10:06:06 PM)</font> <b>lenswipe:</b></font> my sound system(stereo) crapped out a while back so I replaced it with a pioneer VS923 reciever<br/>
+<font color="#A82F2F"><font size="2">(10:06:28 PM)</font> <b>lenswipe:</b></font> then because I was used to the bass boost that the old crappy amp had I felt that the sound was somewhat lacking in bass, so I bought a sub to go with it<br/>
+<font color="#A82F2F"><font size="2">(10:06:31 PM)</font> <b>lenswipe:</b></font> holy shit...<br/>
+<font color="#A82F2F"><font size="2">(10:07:37 PM)</font> <b>lenswipe:</b></font> not my photo but this is it<br/>
+<font color="#A82F2F"><font size="2">(10:07:37 PM)</font> <b>lenswipe:</b></font> http://d2heru13qkbk4q.cloudfront.net/media/923274/scaled/DSCN3075.JPG<br/>
+<font color="#A82F2F"><font size="2">(10:08:14 PM)</font> <b>robdubya:</b></font> ugh. are you my neighbor?<br/>
+<font color="#A82F2F"><font size="2">(10:08:19 PM)</font> <b>lenswipe:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:08:24 PM)</font> <b>lenswipe:</b></font> you misunderstand me<br/>
+<font color="#A82F2F"><font size="2">(10:08:29 PM)</font> <b>lenswipe:</b></font> I don&apos;t use to blast obnoxious music<br/>
+<font color="#A82F2F"><font size="2">(10:08:36 PM)</font> <b>lenswipe:</b></font> I just enjoy a bit of extra lift on the lower frequencies<br/>
+<font color="#A82F2F"><font size="2">(10:09:42 PM)</font> <b>robdubya:</b></font> yeah yeah, whatever … chav<br/>
+<font color="#A82F2F"><font size="2">(10:09:50 PM)</font> <b>robdubya:</b></font> carry on<br/>
+<font color="#A82F2F"><font size="2">(10:09:54 PM)</font> <b>lenswipe:</b></font> u wot m8<br/>
+<font color="#A82F2F"><font size="2">(10:10:02 PM)</font> <b>lenswipe:</b></font> ill bash yer fookin ed in<br/>
+<font color="#A82F2F"><font size="2">(10:10:03 PM)</font> <b>lenswipe:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(10:10:18 PM)</font> <b>lenswipe:</b></font> nah, It&apos;s just for gaming and movies really<br/>
+<font color="#A82F2F"><font size="2">(10:10:28 PM)</font> <b>robdubya:</b></font> i lived on east london estates bruv<br/>
+<font color="#A82F2F"><font size="2">(10:10:37 PM)</font> <b>robdubya:</b></font> hackney, innit<br/>
+<font color="#A82F2F"><font size="2">(10:10:41 PM)</font> <b>lenswipe:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:10:45 PM)</font> <b>robdubya:</b></font> (my company name is innitapps … )<br/>
+<font color="#A82F2F"><font size="2">(10:10:58 PM)</font> <b>lenswipe:</b></font> micky flanagan much?<br/>
+<font color="#A82F2F"><font size="2">(10:12:29 PM)</font> <b>robdubya:</b></font> here in &apos;merka its a nonsense word<br/>
+<font color="#A82F2F"><font size="2">(10:12:37 PM)</font> <b>lenswipe:</b></font> innitapps?<br/>
+<font color="#A82F2F"><font size="2">(10:12:40 PM)</font> <b>lenswipe:</b></font> is that like initech?<br/>
+<font color="#A82F2F"><font size="2">(10:12:40 PM)</font> <b>robdubya:</b></font> innit<br/>
+<font color="#A82F2F"><font size="2">(10:13:11 PM)</font> <b>robdubya:</b></font> yeah - its a play on initech (filmed down the road) and innit (since i lived in hackney for years)<br/>
+<font color="#A82F2F"><font size="2">(10:13:16 PM)</font> <b>lenswipe:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:13:21 PM)</font> <b>lenswipe:</b></font> excuse me<br/>
+<font color="#A82F2F"><font size="2">(10:13:29 PM)</font> <b>lenswipe:</b></font> excuse me, i believe you have my stapler<br/>
+<font color="#A82F2F"><font size="2">(10:13:38 PM)</font> <b>lenswipe:</b></font> my red swingline<br/>
+<font color="#A82F2F"><font size="2">(10:14:23 PM)</font> <b>robdubya:</b></font> i also own innit.io …. saving that for something special<br/>
+<font color="#A82F2F"><font size="2">(10:15:04 PM)</font> <b>lenswipe:</b></font> just ran a whois<br/>
+<font color="#A82F2F"><font size="2">(10:15:06 PM)</font> <b>lenswipe:</b></font> you&apos;re not wrong<br/>
+<font color="#A82F2F"><font size="2">(10:17:27 PM)</font> <b>robdubya:</b></font> .io domains… what a pain<br/>
+<font color="#A82F2F"><font size="2">(10:17:32 PM)</font> <b>lenswipe:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(10:17:37 PM)</font> <b>robdubya:</b></font> some suuuuuper sketchy registrar<br/>
+<font color="#A82F2F"><font size="2">(10:17:39 PM)</font> <b>lenswipe:</b></font> no whois privacy?<br/>
+<font color="#A82F2F"><font size="2">(10:18:02 PM)</font> <b>robdubya:</b></font> http://nic.io/<br/>
+<font color="#A82F2F"><font size="2">(10:18:06 PM)</font> <b>robdubya:</b></font> sketch as fuck<br/>
+<font color="#A82F2F"><font size="2">(10:18:36 PM)</font> <b>lenswipe:</b></font> who is socket.io registered with?<br/>
+<font color="#A82F2F"><font size="2">(10:18:51 PM)</font> <b>lenswipe:</b></font> dyn.com apparently<br/>
+<font color="#A82F2F"><font size="2">(10:20:33 PM)</font> <b>robdubya:</b></font> dyn&apos;s doing the nameservres, but they dont register io domains<br/>
+<font color="#A82F2F"><font size="2">(10:20:38 PM)</font> <b>robdubya:</b></font> (i run dyn as well)<br/>
+<font color="#A82F2F"><font size="2">(10:20:50 PM)</font> <b>robdubya:</b></font> dyn is awesome<br/>
+<font color="#A82F2F"><font size="2">(10:21:18 PM)</font> <b>lenswipe:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(10:23:50 PM)</font> <b>lenswipe:</b></font> im off to bed anyway<br/>
+<font color="#A82F2F"><font size="2">(10:23:52 PM)</font> <b>lenswipe:</b></font> night<br/>
+<font size="2">(10:24:12 PM)</font><b> lenswipe left the room (quit: Quit: Leaving).</b><br/>
+<font size="2">(10:36:36 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

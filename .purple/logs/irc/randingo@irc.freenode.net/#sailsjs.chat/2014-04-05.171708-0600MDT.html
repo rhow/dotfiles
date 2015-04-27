@@ -1,0 +1,49 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sat 05 Apr 2014 05:17:08 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sat 05 Apr 2014 05:17:08 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(05:17:08 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(05:27:24 PM)</font> <b>lenswipe:</b></font> Asweb, i think jdcauley wants to populate multiple things not just &quot;files&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:27:31 PM)</font> <b>lenswipe:</b></font> jdcauley, tried passing in an array?<br/>
+<font color="#A82F2F"><font size="2">(05:29:19 PM)</font> <b>Asweb:</b></font> lenswipe, do you know if I can do something like : if(req.param(&quot;section&quot;) {    User.findOne({     req.param(&quot;section&quot;):  &quot;test&quot; }) ?<br/>
+<font color="#A82F2F"><font size="2">(05:29:43 PM)</font> <b>Asweb:</b></font> to create an object with a dynamic attribute (which is the req.param(&quot;section&quot;) here)<br/>
+<font color="#A82F2F"><font size="2">(05:29:52 PM)</font> <b>Asweb:</b></font> User.create * sorry<br/>
+<font color="#A82F2F"><font size="2">(05:30:06 PM)</font> <b>lenswipe:</b></font> should work<br/>
+<font color="#A82F2F"><font size="2">(05:30:08 PM)</font> <b>lenswipe:</b></font> try it<br/>
+<font color="#A82F2F"><font size="2">(05:30:10 PM)</font> <b>Asweb:</b></font> ok thanks:)<br/>
+<font color="#A82F2F"><font size="2">(05:30:18 PM)</font> <b>lenswipe:</b></font> oh but you need to call .done or .exec at the end<br/>
+<font color="#A82F2F"><font size="2">(05:31:09 PM)</font> <b>Asweb:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(05:31:09 PM)</font> <b>Asweb:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(05:31:21 PM)</font> <b>Asweb:</b></font> I&apos;ll give a try now<br/>
+<font color="#A82F2F"><font size="2">(05:38:27 PM)</font> <b>robdubya:</b></font> lenswipe you can attach whatever to the request<br/>
+<font color="#A82F2F"><font size="2">(05:39:01 PM)</font> <b>lenswipe:</b></font> oh hai<br/>
+<font color="#A82F2F"><font size="2">(05:39:17 PM)</font> <b>lenswipe:</b></font> yeah the problem i have is that i cant put params in req because if you recall it breaks the models<br/>
+<font color="#A82F2F"><font size="2">(05:39:31 PM)</font> <b>lenswipe:</b></font> I don&apos;t feel comfortable adding to the HTTP headers list because it feels hacky<br/>
+<font color="#A82F2F"><font size="2">(05:39:34 PM)</font> <b>robdubya:</b></font> so dont put it in params<br/>
+<font color="#A82F2F"><font size="2">(05:39:54 PM)</font> <b>robdubya:</b></font> and in the headers list is the standard way its done, fyi<br/>
+<font color="#A82F2F"><font size="2">(05:42:17 PM)</font> <b>lenswipe:</b></font> oh :/<br/>
+<font color="#A82F2F"><font size="2">(05:42:26 PM)</font> <b>lenswipe:</b></font> so i should just add it to req.headers.foo then?<br/>
+<font color="#A82F2F"><font size="2">(05:42:31 PM)</font> <b>lenswipe:</b></font> req.headers.token = asdkasmldawhatever<br/>
+<font color="#A82F2F"><font size="2">(05:42:37 PM)</font> <b>lenswipe:</b></font> okay.jpg<br/>
+<font color="#A82F2F"><font size="2">(05:45:51 PM)</font> <b>robdubya:</b></font> req is just an object<br/>
+<font color="#A82F2F"><font size="2">(05:45:57 PM)</font> <b>robdubya:</b></font> you can attach anything you want to it<br/>
+<font color="#A82F2F"><font size="2">(05:46:59 PM)</font> <b>lenswipe:</b></font> indeed<br/>
+<font color="#A82F2F"><font size="2">(05:47:03 PM)</font> <b>lenswipe:</b></font> ok then<br/>
+<font color="#A82F2F"><font size="2">(05:53:05 PM)</font> <b>lenswipe:</b></font> in other news fuck the MPAA and RIAA<br/>
+<font color="#A82F2F"><font size="2">(05:53:12 PM)</font> <b>lenswipe:</b></font> because this: http://www.videolan.org/developers/libdvdcss.html<br/>
+<font color="#A82F2F"><font size="2">(05:53:34 PM)</font> <b>robdubya:</b></font> what the fuck is a DVD?<br/>
+<font color="#A82F2F"><font size="2">(05:54:29 PM)</font> <b>lenswipe:</b></font> robdubya, it&apos;s an optical recording medium that contains my very own legal copy of &quot;Chronicle&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:54:34 PM)</font> <b>lenswipe:</b></font> that I&apos;m trying to play on my computer<br/>
+<font color="#A82F2F"><font size="2">(05:54:44 PM)</font> <b>lenswipe:</b></font> and because I live in the UK am allowed to RIP :)<br/>
+<font color="#A82F2F"><font size="2">(05:55:36 PM)</font> <b>robdubya:</b></font> i dont think i own anything i could even put a dvd in anymore heh<br/>
+<font color="#A82F2F"><font size="2">(05:56:56 PM)</font> <b>lenswipe:</b></font> PXE boot?<br/>
+<font color="#A82F2F"><font size="2">(05:57:19 PM)</font> <b>robdubya:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(06:01:40 PM)</font> <b>lenswipe:</b></font> you said you didn&apos;t have anything you could put a DVD in<br/>
+<font color="#A82F2F"><font size="2">(06:01:51 PM)</font> <b>lenswipe:</b></font> so I&apos;m assuming when you do a new OS install you have to PXE boot the machine to do the OS Install<br/>
+<font color="#A82F2F"><font size="2">(06:02:01 PM)</font> <b>lenswipe:</b></font> that or BOOTP<br/>
+<font color="#A82F2F"><font size="2">(06:02:06 PM)</font> <b>lenswipe:</b></font> or USB boot<br/>
+<font color="#A82F2F"><font size="2">(06:32:43 PM)</font> <b>lenswipe:</b></font> heh, my dvd drive just crapped it<br/>
+<font color="#A82F2F"><font size="2">(06:32:45 PM)</font> <b>lenswipe:</b></font> swapped it out<br/>
+<font color="#A82F2F"><font size="2">(06:32:47 PM)</font> <b>lenswipe:</b></font> works perfectly :D<br/>
+<font size="2">(06:53:01 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(07:35:16 PM)</font> <b>lenswipe:</b></font> robdubya, should i put the token in the headers do you think or the actual payload of the token?<br/>
+<font color="#A82F2F"><font size="2">(07:35:35 PM)</font> <b>lenswipe:</b></font> also - it&apos;s concerning me that issuer and iat and expires are appearing in the payload<br/>
+<font size="2">(07:38:35 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

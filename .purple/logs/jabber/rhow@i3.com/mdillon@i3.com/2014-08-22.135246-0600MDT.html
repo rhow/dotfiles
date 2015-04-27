@@ -1,0 +1,106 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with mdillon@i3.com at Fri 22 Aug 2014 01:52:46 PM MDT on rhow@i3.com/utilworkstation (jabber)</title></head><body><h3>Conversation with mdillon@i3.com at Fri 22 Aug 2014 01:52:46 PM MDT on rhow@i3.com/utilworkstation (jabber)</h3>
+<font color="#16569E"><font size="2">(01:53:03 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what internal Git repo should we be using?</span><br/>
+<font color="#A82F2F"><font size="2">(01:53:30 PM)</font> <b>Michael Dillon:</b></font> which project?<br/>
+<font color="#A82F2F"><font size="2">(01:53:46 PM)</font> <b>Michael Dillon:</b></font> or just 'in general'<br/>
+<font color="#16569E"><font size="2">(01:53:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>more &quot;in general&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(01:54:07 PM)</font> <b>Michael Dillon:</b></font> http://utility2:8081/<br/>
+<font color="#A82F2F"><font size="2">(01:54:16 PM)</font> <b>Michael Dillon:</b></font> you already have an account and a mugg project<br/>
+<font color="#A82F2F"><font size="2">(01:54:21 PM)</font> <b>Michael Dillon:</b></font> (that's prolly old)<br/>
+<font color="#A82F2F"><font size="2">(01:55:34 PM)</font> <b>Michael Dillon:</b></font> if you want something for experiments, just request a new project named 'rhow-work' or something<br/>
+<font color="#16569E"><font size="2">(01:56:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that Mugg project is old, yeah</span><br/>
+<font color="#16569E"><font size="2">(01:56:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'll use that one.  request?</span><br/>
+<font color="#16569E"><font size="2">(01:57:54 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>wonder why some of the top link don't work: <a href="http://utility2.i3.local:8081/about">http://utility2.i3.local:8081/about</a></span><br/>
+<font color="#16569E"><font size="2">(01:58:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>does that work for you?</span><br/>
+<font color="#A82F2F"><font size="2">(01:58:09 PM)</font> <b>Michael Dillon:</b></font> yes<br/>
+<font color="#16569E"><font size="2">(01:58:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm</span><br/>
+<font color="#A82F2F"><font size="2">(01:58:22 PM)</font> <b>Michael Dillon:</b></font> you should create some host file entries...<br/>
+<font color="#A82F2F"><font size="2">(01:58:33 PM)</font> <b>Michael Dillon:</b></font> your system has some dns issues right?<br/>
+<font color="#A82F2F"><font size="2">(01:58:46 PM)</font> <b>Michael Dillon:</b></font> machine.i3.local vs machine?<br/>
+<font color="#16569E"><font size="2">(01:59:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>right, it redirects without the i3.local</span><br/>
+<font color="#16569E"><font size="2">(01:59:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(annoying)</span><br/>
+<font color="#A82F2F"><font size="2">(02:00:17 PM)</font> <b>Michael Dillon:</b></font> utility2, utility6, and util-dev are all the same IP.  YOu should add those and their i3.local versions on a host file line<br/>
+<font color="#16569E"><font size="2">(02:01:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k</span><br/>
+<font color="#A82F2F"><font size="2">(02:01:35 PM)</font> <b>Michael Dillon:</b></font> I made it so not anyone could make projects...  (for some sanity)  maybe I'll change that this afternoon<br/>
+<font color="#16569E"><font size="2">(02:01:35 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(or upgrade to 14 and nix gnome-networking)</span><br/>
+<font color="#A82F2F"><font size="2">(02:01:47 PM)</font> <b>Michael Dillon:</b></font> Also struggling with making private repos...<br/>
+<font color="#A82F2F"><font size="2">(02:02:27 PM)</font> <b>Michael Dillon:</b></font> As near as I can tell, if you have the url, you can clone.  Pushes are locked down - but things are somewhat 'open' for some reason<br/>
+<font color="#16569E"><font size="2">(02:02:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so... is there going to be the concept of forking and pull requests?</span><br/>
+<font color="#A82F2F"><font size="2">(02:02:52 PM)</font> <b>Michael Dillon:</b></font> http://utility2:8084/mediawiki/Remote_Development_Guide_using_GIT<br/>
+<font color="#A82F2F"><font size="2">(02:02:59 PM)</font> <b>Michael Dillon:</b></font> For remote teams - yeah<br/>
+<font color="#A82F2F"><font size="2">(02:03:36 PM)</font> <b>Michael Dillon:</b></font> the terminology doesn't match githug. :-/<br/>
+<font color="#A82F2F"><font size="2">(02:03:42 PM)</font> <b>Michael Dillon:</b></font> makes it confusing<br/>
+<font color="#16569E"><font size="2">(02:05:14 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm setting up my host file, just sec can't get to the doc.</span><br/>
+<font color="#A82F2F"><font size="2">(02:05:52 PM)</font> <b>Michael Dillon:</b></font> ha<br/>
+<font color="#A82F2F"><font size="2">(03:47:32 PM)</font> <b>Michael Dillon:</b></font> do you see a project creation option now?  http://utility2:8081/projects<br/>
+<font color="#16569E"><font size="2">(03:49:16 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i see &quot;+ Add Project&quot; option in blue.  is that what you mean?</span><br/>
+<font color="#A82F2F"><font size="2">(03:51:59 PM)</font> <b>Michael Dillon:</b></font> does it work?<br/>
+<font color="#16569E"><font size="2">(03:54:41 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>let me try it!</span><br/>
+<font color="#16569E"><font size="2">(03:55:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>looks like it.  i get the entry options, haven't create one yet.</span><br/>
+<font color="#16569E"><font size="2">(03:57:39 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>is Projects/repos?  Or is it Repos/projects?</span><br/>
+<font color="#A82F2F"><font size="2">(04:10:51 PM)</font> <b>Michael Dillon:</b></font> projects contain repos<br/>
+<font color="#A82F2F"><font size="2">(04:11:06 PM)</font> <b>Michael Dillon:</b></font> all repos must belong to a project<br/>
+<font color="#16569E"><font size="2">(04:11:30 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k, makes sense</span><br/>
+<font color="#A82F2F"><font size="2">(04:11:43 PM)</font> <b>Michael Dillon:</b></font> and, you can assign permissions to both (which is highly confusing and somewhat annoying)<br/>
+<font color="#16569E"><font size="2">(04:12:17 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>k, good to know.</span><br/>
+<font color="#A82F2F"><font size="2">(04:12:25 PM)</font> <b>Michael Dillon:</b></font> what projects do you see in this list?  http://utility2:8081/projects<br/>
+<font color="#16569E"><font size="2">(04:13:33 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>just: </span><a href="http://utility2:8081/mapcache">MapCache</a> <br/>
+<font color="#16569E"><font size="2">(04:14:34 PM)</font> <b>Randy How:</b></font> Here (<a href="http://utility2:8081/activities">http://utility2:8081/activities</a>) I see latest projects also includes MUGG<br/>
+<font color="#A82F2F"><font size="2">(04:15:35 PM)</font> <b>Michael Dillon:</b></font> hrm - do a screenshot - everybody sees different stuff<br/>
+<font color="#A82F2F"><font size="2">(04:15:43 PM)</font> <b>Michael Dillon:</b></font> oh - I see<br/>
+<font color="#A82F2F"><font size="2">(04:15:48 PM)</font> <b>Michael Dillon:</b></font> you don't see mugg in your list?<br/>
+<font color="#A82F2F"><font size="2">(04:15:55 PM)</font> <b>Michael Dillon:</b></font> I thought you started that project<br/>
+<font color="#16569E"><font size="2">(04:16:06 PM)</font> <b>Randy How:</b></font> not in &quot;Projects&quot;<br/>
+<font color="#16569E"><font size="2">(04:18:31 PM)</font> <b>Randy How:</b></font> when i look at the admin/Manage Access for MUGG, there's no one in there.<br/>
+<font color="#16569E"><font size="2">(04:18:51 PM)</font> <b>Randy How:</b></font> in MapCache I see me.<br/>
+<font color="#16569E"><font size="2">(04:20:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in MUGG Project, I see: <br/></span>This project is public.<span style='color: #333333;'><span style='font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;'> </span></span><span style='font-size: medium;'>Anyone with access to i3 git server can browse this project and its public repositories.</span><br/>
+<font color="#16569E"><font size="2">(04:20:26 PM)</font> <b>Randy How:</b></font> MapCache is private.<br/>
+<font color="#16569E"><font size="2">(04:21:46 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>(know what i mean?)</span><br/>
+<font color="#A82F2F"><font size="2">(04:28:41 PM)</font> <b>Michael Dillon:</b></font> it's annoying<br/>
+<font color="#A82F2F"><font size="2">(04:29:22 PM)</font> <b>Michael Dillon:</b></font> They recently added something in 3.1 that supposedly allows an admin to manage permissions better<br/>
+<font color="#A82F2F"><font size="2">(04:30:00 PM)</font> <b>Michael Dillon:</b></font> And, admins don't have full 'superuser' abilities.  It's fucked.<br/>
+<font color="#16569E"><font size="2">(04:30:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you sure it's not just the &quot;Admin&quot;?</span><br/>
+<font color="#A82F2F"><font size="2">(04:30:08 PM)</font> <b>Michael Dillon:</b></font> phht<br/>
+<font color="#A82F2F"><font size="2">(04:30:59 PM)</font> <b>Michael Dillon:</b></font> I think I have to resort to their command line console for some things<br/>
+<font color="#16569E"><font size="2">(04:30:59 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, you're really happy with Gitorious?</span><br/>
+<font color="#A82F2F"><font size="2">(04:31:12 PM)</font> <b>Michael Dillon:</b></font> I'll blame JRS<br/>
+<font color="#16569E"><font size="2">(04:31:23 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ouch</span><br/>
+<font color="#16569E"><font size="2">(04:32:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you think there's a better internal Git repo software?</span><br/>
+<font color="#A82F2F"><font size="2">(04:32:16 PM)</font> <b>Michael Dillon:</b></font> We were having a lot of user problems last week...  If I (and admin) try to look at their page, this is what I get:  <br/><br/>Bad Michael Dillon, bad! You should not be snooping around in other people's stuff!<br/>
+<font color="#A82F2F"><font size="2">(04:32:21 PM)</font> <b>Michael Dillon:</b></font> :-/<br/>
+<font color="#16569E"><font size="2">(04:32:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>that's goofy.</span><br/>
+<font color="#A82F2F"><font size="2">(04:33:07 PM)</font> <b>Michael Dillon:</b></font> try it<br/>
+<font color="#A82F2F"><font size="2">(04:33:07 PM)</font> <b>Michael Dillon:</b></font> http://utility2:8081/~mdillon/edit<br/>
+<font color="#A82F2F"><font size="2">(04:34:10 PM)</font> <b>Michael Dillon:</b></font> and - a user can delete their own account from the gui, but I can't<br/>
+<font color="#A82F2F"><font size="2">(04:34:14 PM)</font> <b>Michael Dillon:</b></font> I have to use the console<br/>
+<font color="#A82F2F"><font size="2">(04:34:46 PM)</font> <b>Michael Dillon:</b></font> A lot of sites use it though... weird.<br/>
+<font color="#16569E"><font size="2">(04:35:02 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the termination process needs to include, &quot;delete your gitorious account&quot;</span><br/>
+<font color="#16569E"><font size="2">(04:35:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>a lot of companies have embraced it for internal github-ish.</span><br/>
+<font color="#16569E"><font size="2">(04:35:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>git-rubbish</span><br/>
+<font color="#16569E"><font size="2">(04:35:55 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(04:35:58 PM)</font> <b>Michael Dillon:</b></font> :p<br/>
+<font color="#A82F2F"><font size="2">(04:36:23 PM)</font> <b>Michael Dillon:</b></font> oh - you didn't get my pidging room invite?<br/>
+<font color="#16569E"><font size="2">(04:36:44 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>don't think so.</span><br/>
+<font color="#A82F2F"><font size="2">(04:36:50 PM)</font> <b>Michael Dillon:</b></font> says your offline<br/>
+<font color="#16569E"><font size="2">(04:37:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh, workutil... yeah.  back-n-forth from home that doesn't get turned.</span><br/>
+<font color="#16569E"><font size="2">(04:39:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, this is the Gmail/GTalk account we're using.</span><br/>
+<font color="#16569E"><font size="2">(04:39:40 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>?</span><br/>
+<font color="#A82F2F"><font size="2">(04:39:44 PM)</font> <b>Michael Dillon:</b></font> gmail<br/>
+<font color="#A82F2F"><font size="2">(04:39:47 PM)</font> <b>Michael Dillon:</b></font> googly<br/>
+<font color="#A82F2F"><font size="2">(04:39:48 PM)</font> <b>Michael Dillon:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(04:41:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>hmm, in Pidgin I conflict between the two accounts Gmail and the internal &quot;UtilWorkstation&quot;; it thinks it already exists.  I think because they both use the same account.  &quot;UtilWorkstation&quot; should use &quot;i3.local&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(04:45:38 PM)</font> <b>Michael Dillon:</b></font> no - bobby moved it and made it all different<br/>
+<font color="#A82F2F"><font size="2">(04:45:53 PM)</font> <b>Michael Dillon:</b></font> utilworkstation is the machine now<br/>
+<font color="#A82F2F"><font size="2">(04:46:11 PM)</font> <b>Michael Dillon:</b></font> I have...<br/>
+<font color="#A82F2F"><font size="2">(04:46:14 PM)</font> <b>Michael Dillon:</b></font> mdillon<br/>
+<font color="#A82F2F"><font size="2">(04:46:16 PM)</font> <b>Michael Dillon:</b></font> i3.com<br/>
+<font color="#A82F2F"><font size="2">(04:46:19 PM)</font> <b>Michael Dillon:</b></font> utilworkstation<br/>
+<font color="#A82F2F"><font size="2">(04:46:31 PM)</font> <b>Michael Dillon:</b></font> and a password...  (your username?)<br/>
+<font color="#16569E"><font size="2">(04:46:58 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>you don't use the Googly account in Pidgin?</span><br/>
+<font color="#16569E"><font size="2">(04:49:49 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i had both accounts in Pidgin, now only one exists - this one.  It states - Resource: utilworkstation.</span><br/>
+<font color="#A82F2F"><font size="2">(04:53:38 PM)</font> <b>Michael Dillon:</b></font> No - I don't use the googly in pidgin<br/>
+<font color="#16569E"><font size="2">(04:54:12 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, i can't stand the &quot;chat&quot; in the browser.  i turn that off.</span><br/>
+<font color="#16569E"><font size="2">(04:54:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, i'm back on UtilWS account (for the next little while)</span><br/>
+<font color="#16569E"><font size="2">(04:56:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in Pidgin I added a few IRC chat's; works alright.  Don't know if we can do that internally?</span><br/>
+<font color="#16569E"><font size="2">(04:56:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>or is it just more noise to the insanity.</span><br/>
+<font color="#A82F2F"><font size="2">(04:57:32 PM)</font> <b>Michael Dillon:</b></font> noise - yes<br/>
+</body></html>

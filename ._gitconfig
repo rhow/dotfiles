@@ -16,3 +16,5 @@
 
 [url "https://github"]
 	insteadOf = git://github
+[push]
+	default = simple

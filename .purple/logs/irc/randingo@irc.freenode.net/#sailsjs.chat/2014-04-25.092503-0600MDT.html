@@ -1,0 +1,94 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 25 Apr 2014 09:25:03 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 25 Apr 2014 09:25:03 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:25:03 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:26:38 AM)</font> <b>Sialagio:</b></font> Yo guys<br/>
+<font color="#A82F2F"><font size="2">(09:27:06 AM)</font> <b>Sialagio:</b></font> Thanks again for the work on Sails, it is really helping :)<br/>
+<font color="#A82F2F"><font size="2">(09:27:14 AM)</font> <b>Sialagio:</b></font> I have a question about abjoects ...<br/>
+<font color="#A82F2F"><font size="2">(09:27:55 AM)</font> <b>Sialagio:</b></font> I need to get status from objects in database.<br/>
+<font color="#A82F2F"><font size="2">(09:28:35 AM)</font> <b>Sialagio:</b></font> for that I tried to implent a service because this task can be performed in many different places<br/>
+<font color="#A82F2F"><font size="2">(09:28:46 AM)</font> <b>Sialagio:</b></font> the issue is that returned object is emlpty.<br/>
+<font color="#A82F2F"><font size="2">(09:28:53 AM)</font> <b>Sialagio:</b></font> how can I do that ?<br/>
+<font color="#A82F2F"><font size="2">(09:33:44 AM)</font> <b>Sialagio:</b></font> OK, more simple<br/>
+<font color="#A82F2F"><font size="2">(09:34:01 AM)</font> <b>Sialagio:</b></font> how can I call a function to return an object that calls model ?<br/>
+<font color="#A82F2F"><font size="2">(09:40:58 AM)</font> <b>Sialagio:</b></font> nobody ?<br/>
+<font color="#A82F2F"><font size="2">(09:53:20 AM)</font> <b>Sialagio:</b></font> anybody to help me ?<br/>
+<font color="#A82F2F"><font size="2">(09:54:05 AM)</font> <b>Sialagio:</b></font> I would like to implement a function to return data based on model, but returned object is empty ...<br/>
+<font color="#A82F2F"><font size="2">(09:54:12 AM)</font> <b>Aswebbb:</b></font> Sialagio, pastebin<br/>
+<font color="#A82F2F"><font size="2">(09:54:20 AM)</font> <b>Aswebbb:</b></font> Pastebin your function<br/>
+<font color="#A82F2F"><font size="2">(09:54:51 AM)</font> <b>Aswebbb:</b></font> What database are you using? Mongo?<br/>
+<font color="#A82F2F"><font size="2">(09:55:44 AM)</font> <b>Sialagio:</b></font> http://pastebin.com/MfFfnFBE<br/>
+<font color="#A82F2F"><font size="2">(09:55:46 AM)</font> <b>Sialagio:</b></font> mySQL<br/>
+<font color="#A82F2F"><font size="2">(09:56:25 AM)</font> <b>Sialagio:</b></font> and I want to call this method in many different Controllers (Session, BackEnd, ...<br/>
+<font color="#A82F2F"><font size="2">(09:57:54 AM)</font> <b>Aswebbb:</b></font> Can&apos;t get your code, console.log(cloudStatus);   What is your cloudStatus?<br/>
+<font color="#A82F2F"><font size="2">(09:58:21 AM)</font> <b>Aswebbb:</b></font> first check if the query returns the object you want, console.log(lastbackup)<br/>
+<font color="#A82F2F"><font size="2">(09:59:23 AM)</font> <b>Sialagio:</b></font> last console.log(cloudStatus); return the data I want.<br/>
+<font color="#A82F2F"><font size="2">(10:00:03 AM)</font> <b>Sialagio:</b></font> In the log, I can see that the function is executed after the view<br/>
+<font color="#A82F2F"><font size="2">(10:00:07 AM)</font> <b>Aswebbb:</b></font> cannot see where your cloudStatus is defined<br/>
+<font color="#A82F2F"><font size="2">(10:00:08 AM)</font> <b>Sialagio:</b></font> which cause a problem<br/>
+<font color="#A82F2F"><font size="2">(10:00:52 AM)</font> <b>Sialagio:</b></font> http://pastebin.com/S9w1Q24B<br/>
+<font color="#A82F2F"><font size="2">(10:01:06 AM)</font> <b>Sialagio:</b></font> updated version with proper teems<br/>
+<font color="#A82F2F"><font size="2">(10:01:08 AM)</font> <b>Sialagio:</b></font> terms<br/>
+<font color="#A82F2F"><font size="2">(10:01:27 AM)</font> <b>Aswebbb:</b></font> the problem is?<br/>
+<font color="#A82F2F"><font size="2">(10:01:28 AM)</font> <b>Sialagio:</b></font> I try to anonimize a lottle :)<br/>
+<font color="#A82F2F"><font size="2">(10:01:38 AM)</font> <b>Sialagio:</b></font> function is called after res.view<br/>
+<font color="#A82F2F"><font size="2">(10:02:03 AM)</font> <b>Aswebbb:</b></font> where did you put your res.view?<br/>
+<font color="#A82F2F"><font size="2">(10:02:25 AM)</font> <b>Sialagio:</b></font> http://pastebin.com/afYCu4EW<br/>
+<font color="#A82F2F"><font size="2">(10:02:29 AM)</font> <b>Aswebbb:</b></font> you want to return in your view, Status and Statuss<br/>
+<font color="#A82F2F"><font size="2">(10:02:31 AM)</font> <b>Aswebbb:</b></font> right?<br/>
+<font color="#A82F2F"><font size="2">(10:02:33 AM)</font> <b>Sialagio:</b></font> the whole version of the controller<br/>
+<font color="#A82F2F"><font size="2">(10:02:41 AM)</font> <b>Aswebbb:</b></font> both objects<br/>
+<font color="#A82F2F"><font size="2">(10:06:03 AM)</font> <b>Sialagio:</b></font> you get it ?<br/>
+<font color="#A82F2F"><font size="2">(10:09:08 AM)</font> <b>Sialagio:</b></font> it must be a simple typo issue :)<br/>
+<font color="#A82F2F"><font size="2">(10:09:13 AM)</font> <b>mit:</b></font> I need help with server-side socket.io client authentication. I want to simulate client connection from the server but it says &apos;there is no cookie transmited&apos;. Can somebody help?<br/>
+<font color="#A82F2F"><font size="2">(10:10:40 AM)</font> <b>Sialagio:</b></font> Aswebbb: any idea ?<br/>
+<font color="#A82F2F"><font size="2">(10:17:05 AM)</font> <b>Sialagio:</b></font> nobody has an idea ?<br/>
+<font size="2">(10:26:34 AM)</font><b> Sialagio left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(10:38:46 AM)</font> <b>robdubya:</b></font> RWOverdijk suo<br/>
+<font color="#A82F2F"><font size="2">(10:38:48 AM)</font> <b>robdubya:</b></font> *sup<br/>
+<font color="#A82F2F"><font size="2">(10:39:17 AM)</font> <b>RWOverdijk:</b></font> robdubya, Meh. I was trying to figure out how I can make a cms with sails.<br/>
+<font color="#A82F2F"><font size="2">(10:39:32 AM)</font> <b>RWOverdijk:</b></font> You know, load the pages from a db etc...<br/>
+<font color="#A82F2F"><font size="2">(10:39:55 AM)</font> <b>RWOverdijk:</b></font> So I figured might as well use the notFound response. But it&apos;s not even being used.<br/>
+<font color="#A82F2F"><font size="2">(10:42:01 AM)</font> <b>robdubya:</b></font> lots of people complaining about that<br/>
+<font color="#A82F2F"><font size="2">(10:45:45 AM)</font> <b>Aswebbb:</b></font> Does anyone have a running app using sails?<br/>
+<font color="#A82F2F"><font size="2">(10:45:59 AM)</font> <b>Aswebbb:</b></font> Would be interested to check some apps out<br/>
+<font color="#A82F2F"><font size="2">(12:02:07 PM)</font> <b>HN:</b></font> i had [{catid: 1},{catid:1, status:&apos;angry},{catid: 1, status: &apos;boring&apos;}, {catid: 1, status: &apos;happy&apos;}]<br/>
+<font color="#A82F2F"><font size="2">(12:03:57 PM)</font> <b>HN:</b></font> currently, In my mongodb had collections as: [{catid: 1, id:1 }, {catid:1, id:2 },{catid:1, id: 3},{catid:1, id:4},{catid:2}]<br/>
+<font color="#A82F2F"><font size="2">(12:04:26 PM)</font> <b>HN:</b></font> how to using update method as. Model.update({catid:1}, [{catid:1, status:&apos;sick&apos;},{catid:1, status:&apos;angry&apos;},{catid: 1, status: &apos;boring&apos;}, {catid: 1, status: &apos;happy&apos;}]).exec(function(Err, updated){})<br/>
+<font color="#A82F2F"><font size="2">(12:04:29 PM)</font> <b>HN:</b></font> pls help me<br/>
+<font color="#A82F2F"><font size="2">(12:09:48 PM)</font> <b>HN:</b></font> anybody here ?<br/>
+<font color="#A82F2F"><font size="2">(12:13:39 PM)</font> <b>HN_:</b></font> [01:01] &lt;HN&gt; i had [{catid: 1},{catid:1, status:&apos;angry},{catid: 1, status: &apos;boring&apos;}, {catid: 1, status: &apos;happy&apos;}] [01:03] &lt;HN&gt; currently, In my mongodb had collections as: [{catid: 1, id:1 }, {catid:1, id:2 },{catid:1, id: 3},{catid:1, id:4},{catid:2}] [01:04] &lt;HN&gt; how to using update method as. Model.update({catid:1}, [{catid:1, status:&apos;sick&apos;},{catid:1, status:&apos;angry&apos;},{catid: 1, status: &apos;boring&apos;}, {catid: 1, status: &apos;happy&apos;}]).exec(fun<br/>
+<font size="2">(12:15:48 PM)</font><b> HN left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font size="2">(12:19:58 PM)</font><b> HN_ left the room (quit: Quit: Page closed).</b><br/>
+<font color="#A82F2F"><font size="2">(12:25:33 PM)</font> <b>DarwinIsGod:</b></font> hey all. having a strange issue with elements existing in an xml that don’t exist in my model. there are: two &lt;parse&gt; and &lt;_typeCast&gt;. I’m trying to make an xml api for a client, but these two elements are being thrown into the xml. They are function declarations. I’m using https://www.npmjs.org/package/xml-object. Thoughts?<br/>
+<font color="#A82F2F"><font size="2">(12:32:34 PM)</font> <b>robdubya:</b></font> you&apos;re actually *building* an XML API?<br/>
+<font color="#A82F2F"><font size="2">(12:32:52 PM)</font> <b>robdubya:</b></font> good luck with that :/<br/>
+<font color="#A82F2F"><font size="2">(12:41:27 PM)</font> <b>rawtaz:</b></font> i might need that<br/>
+<font color="#A82F2F"><font size="2">(12:41:30 PM)</font> <b>rawtaz:</b></font> luck, i mean<br/>
+<font color="#A82F2F"><font size="2">(12:41:33 PM)</font> <b>rawtaz:</b></font> can i have it?<br/>
+<font color="#A82F2F"><font size="2">(12:41:51 PM)</font> <b>rawtaz:</b></font> if i persuade the other guy not to build an XML API<br/>
+<font color="#A82F2F"><font size="2">(12:43:44 PM)</font> <b>robdubya:</b></font> DarwinIsGod a - for the love of god, no.<br/>
+<font color="#A82F2F"><font size="2">(12:44:14 PM)</font> <b>robdubya:</b></font> but b - if you must, i&apos;ve used js2xml and straight up handlerbars templating with varying degrees of success<br/>
+<font color="#A82F2F"><font size="2">(12:46:44 PM)</font> <b>DarwinIsGod:</b></font> sadly at this place, the client is always right. a json response will not do. i’ll give js2xml a try.<br/>
+<font color="#A82F2F"><font size="2">(12:50:25 PM)</font> <b>robdubya:</b></font> given you have a data structure defined by sails, you could probably use templating here to good effect<br/>
+<font color="#A82F2F"><font size="2">(12:51:18 PM)</font> <b>robdubya:</b></font> i have no idea from a performance POV, but you could do it with handlebars pretty easily<br/>
+<font color="#A82F2F"><font size="2">(12:51:24 PM)</font> <b>robdubya:</b></font> (fucking xml)<br/>
+<font color="#A82F2F"><font size="2">(12:53:32 PM)</font> <b>hephaestus_rg:</b></font> is there anything built in to prettify timestamps<br/>
+<font color="#A82F2F"><font size="2">(12:53:42 PM)</font> <b>hephaestus_rg:</b></font> something like time_ago_in_words<br/>
+<font color="#A82F2F"><font size="2">(12:54:01 PM)</font> <b>robdubya:</b></font> just use moment<br/>
+<font color="#A82F2F"><font size="2">(01:02:40 PM)</font> <b>hephaestus_rg:</b></font> thanks i&apos;ll try it<br/>
+<font color="#A82F2F"><font size="2">(01:29:04 PM)</font> <b>DarwinIsGod:</b></font> robdubya: do you normally have to convert all null values to an empty string in order for that extension to produce an element? (vs just text…)<br/>
+<font color="#A82F2F"><font size="2">(01:31:57 PM)</font> <b>robdubya:</b></font> generally its a setting / option<br/>
+<font color="#A82F2F"><font size="2">(01:32:16 PM)</font> <b>robdubya:</b></font> stuff like this is why i rolled my own in the end.<br/>
+<font color="#A82F2F"><font size="2">(01:33:48 PM)</font> <b>DarwinIsGod:</b></font> makes sense.<br/>
+<font color="#A82F2F"><font size="2">(02:04:44 PM)</font> <b>DarwinIsGod:</b></font> done. i do hate me the xml… thanks for the help robdubya<br/>
+<font size="2">(03:44:54 PM)</font><b> dstarnes_ is now known as dstarnes</b><br/>
+<font color="#A82F2F"><font size="2">(04:32:11 PM)</font> <b>ArchMonkey:</b></font> New to sails and looking for some guidance… Does anyone know how I could serve static files from a dedicated directory that are protected by the passport.js &quot;isAuthenticated&quot; policy I&apos;m using for my more typical controllers?<br/>
+<font color="#A82F2F"><font size="2">(04:32:29 PM)</font> <b>ArchMonkey:</b></font> Ideally I&apos;d like to have them routed to at webroot the way the asset folder&apos;s contents ultimately are.<br/>
+<font color="#A82F2F"><font size="2">(04:40:41 PM)</font> <b>el-sonny:</b></font> hello, im deploying a sails app to Modulus is there anyone here that can help with an issue I have with minified scripts?<br/>
+<font color="#A82F2F"><font size="2">(04:41:45 PM)</font> <b>el-sonny:</b></font> its an open-source app to try to stop the draconian TELECOM laws they are trying to pass here in Mexico<br/>
+<font color="#A82F2F"><font size="2">(04:41:47 PM)</font> <b>el-sonny:</b></font> http://nomaspodermx-12598.onmodulus.net/<br/>
+<font color="#A82F2F"><font size="2">(05:10:45 PM)</font> <b>z3cka:</b></font> can sails load different sets of assets (CSS/JS) based on logic or route?<br/>
+<font color="#A82F2F"><font size="2">(05:13:23 PM)</font> <b>z3cka:</b></font> like for example different styles for an admin section of the site<br/>
+<font color="#A82F2F"><font size="2">(06:05:03 PM)</font> <b>z3cka:</b></font> never mind, found a solution by statically linking css files from custom layouts base on routes :-)<br/>
+<font size="2">(06:15:43 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font size="2">(06:19:00 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

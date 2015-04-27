@@ -1,0 +1,107 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 28 Mar 2014 04:36:27 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 28 Mar 2014 04:36:27 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(04:36:27 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(04:42:15 PM)</font> <b>dcrk:</b></font> Hi! Anyone knows how to redirect http -&gt; https in sails?<br/>
+<font color="#A82F2F"><font size="2">(04:43:15 PM)</font> <b>dcrk:</b></font> I can determine if a request came from http or https, but have no idea where to check and how to redirect<br/>
+<font color="#A82F2F"><font size="2">(04:44:59 PM)</font> <b>rawtaz:</b></font> a policy perhaps?<br/>
+<font color="#A82F2F"><font size="2">(04:45:18 PM)</font> <b>rawtaz:</b></font> just guessing :)<br/>
+<font color="#A82F2F"><font size="2">(04:48:25 PM)</font> <b>feelfine:</b></font> hi<br/>
+<font color="#A82F2F"><font size="2">(04:48:55 PM)</font> <b>feelfine:</b></font> anyone have an example of an app using sails mocha tests?<br/>
+<font color="#A82F2F"><font size="2">(04:49:36 PM)</font> <b>delight:</b></font> whats the best way to store images / pics in a sails / mongo stack ?<br/>
+<font color="#A82F2F"><font size="2">(04:49:52 PM)</font> <b>robdubya:</b></font> s3<br/>
+<font color="#A82F2F"><font size="2">(04:50:00 PM)</font> <b>delight:</b></font> yes I thought so ...<br/>
+<font color="#A82F2F"><font size="2">(04:50:08 PM)</font> <b>delight:</b></font> and then just store the url<br/>
+<font color="#A82F2F"><font size="2">(04:52:54 PM)</font> <b>rawtaz:</b></font> it would be very funny to watch how various companies deal with their problems if at some point they can no longer access the data that they store with third parties (and didnt save a copy of themselves) :-)<br/>
+<font color="#A82F2F"><font size="2">(04:53:35 PM)</font> <b>delight:</b></font> well i guess when s3 is down there would be quite some pages with problems on the web<br/>
+<font color="#A82F2F"><font size="2">(04:53:59 PM)</font> <b>delight:</b></font> be it either the provided downloads or just some images / css<br/>
+<font color="#A82F2F"><font size="2">(04:54:03 PM)</font> <b>delight:</b></font> etc.<br/>
+<font color="#A82F2F"><font size="2">(04:54:53 PM)</font> <b>da_wunder:</b></font> in our company apps we don&apos;t store anything to 3rd party apps<br/>
+<font color="#A82F2F"><font size="2">(04:55:02 PM)</font> <b>da_wunder:</b></font> just our own servers<br/>
+<font color="#A82F2F"><font size="2">(04:55:13 PM)</font> <b>delight:</b></font> but where do you store in db ?<br/>
+<font color="#A82F2F"><font size="2">(04:55:39 PM)</font> <b>da_wunder:</b></font> we have multiple dedicated db servers<br/>
+<font color="#A82F2F"><font size="2">(04:57:01 PM)</font> <b>delight:</b></font> at least of what I experienced in the java world … you have quite some performance issues when you let the app offer the images for you (from db  or fs) … handing them out as static content over a simple web server (apache etc.) is way more efficient<br/>
+<font color="#A82F2F"><font size="2">(04:57:31 PM)</font> <b>da_wunder:</b></font> basic files are stored to simple drive mount or blob column in db, that depends within the current use case<br/>
+<font color="#A82F2F"><font size="2">(04:57:59 PM)</font> <b>da_wunder:</b></font> delight: db and fs are most likely just same<br/>
+<font color="#A82F2F"><font size="2">(04:58:09 PM)</font> <b>robdubya:</b></font> blobs in dbs make me nervous<br/>
+<font color="#A82F2F"><font size="2">(04:58:26 PM)</font> <b>da_wunder:</b></font> robdubya: yep, i feel you there<br/>
+<font color="#A82F2F"><font size="2">(04:58:37 PM)</font> <b>da_wunder:</b></font> but there are use cases for those<br/>
+<font color="#A82F2F"><font size="2">(04:58:57 PM)</font> <b>delight:</b></font> yes ! … just wanted to distinguish between blobs served by the app stack and blobs served as static from the apache server<br/>
+<font color="#A82F2F"><font size="2">(04:59:15 PM)</font> <b>da_wunder:</b></font> basically &quot;the best&quot; solution is just store the file path to db and then file directly to fs<br/>
+<font color="#A82F2F"><font size="2">(04:59:41 PM)</font> <b>da_wunder:</b></font> and those files are stored outside of apache scope<br/>
+<font color="#A82F2F"><font size="2">(05:00:13 PM)</font> <b>delight:</b></font> robdubya: blobs in dbs has some advantages to … if you make a backup you are consistent with the rest of the data … and you don’t have to extra handle half streamed stored files …<br/>
+<font color="#A82F2F"><font size="2">(05:00:31 PM)</font> <b>da_wunder:</b></font> because we don&apos;t want to everyone has access to all files<br/>
+<font color="#A82F2F"><font size="2">(05:01:24 PM)</font> <b>delight:</b></font> da_wunder: what tech stack do you guys use at your company ?<br/>
+<font color="#A82F2F"><font size="2">(05:01:50 PM)</font> <b>da_wunder:</b></font> many<br/>
+<font color="#A82F2F"><font size="2">(05:02:10 PM)</font> <b>delight:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(05:02:30 PM)</font> <b>da_wunder:</b></font> basically m$ + open source<br/>
+<font color="#A82F2F"><font size="2">(05:02:48 PM)</font> <b>delight:</b></font> so pretty much everything :-D hahaha<br/>
+<font color="#A82F2F"><font size="2">(05:02:54 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(05:03:02 PM)</font> <b>da_wunder:</b></font> that depends on the project<br/>
+<font color="#A82F2F"><font size="2">(05:03:25 PM)</font> <b>dcrk:</b></font> should sails run in production behind a proxy?<br/>
+<font color="#A82F2F"><font size="2">(05:03:59 PM)</font> <b>dcrk:</b></font> something like nginx<br/>
+<font color="#A82F2F"><font size="2">(05:04:17 PM)</font> <b>delight:</b></font> well i don’t know but usually if you use the app stack esp in java to serv the binaries you would load the picture into memmory and then serve it … which is pretty bad … maybe some java.nio could help there didn’t try<br/>
+<font color="#A82F2F"><font size="2">(05:04:20 PM)</font> <b>rawtaz:</b></font> when i store files in the filesystem i just store them as &lt;primaryKey&gt;.whatever in a folder path that is evaluated by the application code. i dont store the file path in the database, because then im not free to move the files around in the storage layer<br/>
+<font color="#A82F2F"><font size="2">(05:05:55 PM)</font> <b>dcrk:</b></font> rawtaz: very interesting idea. I wonder why paths are more used (at least more talked about in the internet)<br/>
+<font color="#A82F2F"><font size="2">(05:06:04 PM)</font> <b>rawtaz:</b></font> what do you mean?<br/>
+<font color="#A82F2F"><font size="2">(05:06:10 PM)</font> <b>rawtaz:</b></font> i just try to build things so they&apos;re dynamic<br/>
+<font color="#A82F2F"><font size="2">(05:06:23 PM)</font> <b>rawtaz:</b></font> oh, i see what you mean<br/>
+<font color="#A82F2F"><font size="2">(05:06:43 PM)</font> <b>rawtaz:</b></font> im not aware that paths are more used. what makes you say that?<br/>
+<font color="#A82F2F"><font size="2">(05:07:11 PM)</font> <b>da_wunder:</b></font> rawtaz: we don&apos;t usually store the whole path, just some relative path like files/foo/var/asdfasdf.txt<br/>
+<font color="#A82F2F"><font size="2">(05:07:29 PM)</font> <b>rawtaz:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(05:07:30 PM)</font> <b>delight:</b></font> rawtaz: that was the same way we where doing things … even further … we were storing the id and the filename in the db and the blob was stored simply under the ids name<br/>
+<font color="#A82F2F"><font size="2">(05:07:38 PM)</font> <b>dcrk:</b></font> rawtaz: when I searched for questions about this a few months ago it most of what I read was what da_wunder is describing<br/>
+<font color="#A82F2F"><font size="2">(05:07:48 PM)</font> <b>rawtaz:</b></font> dcrk: i see<br/>
+<font color="#A82F2F"><font size="2">(05:07:49 PM)</font> <b>delight:</b></font> or to be exact … under blob.part and at the end it was renamed to blob<br/>
+<font color="#A82F2F"><font size="2">(05:07:51 PM)</font> <b>da_wunder:</b></font> and in 95% of those cases files are really located on fileserver<br/>
+<font color="#A82F2F"><font size="2">(05:08:28 PM)</font> <b>robdubya:</b></font> side note - this is how prety much all the apple ilife stuff works - db&apos;s and file paths<br/>
+<font color="#A82F2F"><font size="2">(05:08:36 PM)</font> <b>rawtaz:</b></font> delight: same thing, it seems. the path im talking about is just for separating the folders with blob files for different tables and/or fields<br/>
+<font color="#A82F2F"><font size="2">(05:08:41 PM)</font> <b>delight:</b></font> id.part -&gt; id &lt;&lt;&lt; that would be a better description<br/>
+<font color="#A82F2F"><font size="2">(05:08:51 PM)</font> <b>rawtaz:</b></font> who doesnt like blobs. slimey blobs.<br/>
+<font color="#A82F2F"><font size="2">(05:08:56 PM)</font> <b>delight:</b></font> rawtaz: exactly<br/>
+<font color="#A82F2F"><font size="2">(05:09:19 PM)</font> <b>rawtaz:</b></font> robdubya: right<br/>
+<font color="#A82F2F"><font size="2">(05:09:39 PM)</font> <b>rawtaz:</b></font> well it&apos;s not an issue sotring file paths as long as they are well structure and coherent, and one does migrations when needed<br/>
+<font color="#A82F2F"><font size="2">(05:09:46 PM)</font> <b>delight:</b></font> rawtaz: still how is the sails stack behaving in such situations … is it simply streaming the image or loading it first into memory and then serving it ?<br/>
+<font color="#A82F2F"><font size="2">(05:10:29 PM)</font> <b>rawtaz:</b></font> i have null idea about that, sorry<br/>
+<font color="#A82F2F"><font size="2">(05:10:32 PM)</font> <b>robdubya:</b></font> delight currently the latter<br/>
+<font color="#A82F2F"><font size="2">(05:10:42 PM)</font> <b>robdubya:</b></font> https://github.com/balderdashy/skipper &lt;- not yet in sails core<br/>
+<font color="#A82F2F"><font size="2">(05:10:46 PM)</font> <b>rawtaz:</b></font> you mean when the file is stored in the database?<br/>
+<font color="#A82F2F"><font size="2">(05:11:27 PM)</font> <b>delight:</b></font> this can be an issue if you have a ton of ppl accessing because it will raise the apps memmory consumtion<br/>
+<font color="#A82F2F"><font size="2">(05:12:14 PM)</font> <b>delight:</b></font> skipper sound interessting<br/>
+<font color="#A82F2F"><font size="2">(05:12:39 PM)</font> <b>delight:</b></font> but its more about the upload<br/>
+<font color="#A82F2F"><font size="2">(05:24:01 PM)</font> <b>delight:</b></font> da_wunder: someone took your name :)<br/>
+<font color="#A82F2F"><font size="2">(05:24:09 PM)</font> <b>delight:</b></font> http://tarlepp.github.io/Taskboard/<br/>
+<font color="#A82F2F"><font size="2">(05:25:44 PM)</font> <b>robdubya:</b></font> yeah, him<br/>
+<font color="#A82F2F"><font size="2">(05:26:35 PM)</font> <b>da_wunder:</b></font> yep, that&apos;s me<br/>
+<font size="2">(05:30:43 PM)</font><b> robdubya left the room (quit: Quit: Textual IRC Client: www.textualapp.com).</b><br/>
+<font color="#A82F2F"><font size="2">(05:31:36 PM)</font> <b>delight:</b></font> oh i see :)<br/>
+<font color="#A82F2F"><font size="2">(05:34:06 PM)</font> <b>da_wunder:</b></font> terve vaan<br/>
+<font color="#A82F2F"><font size="2">(05:34:30 PM)</font> <b>dasmonsta:</b></font> moi<br/>
+<font color="#A82F2F"><font size="2">(05:35:01 PM)</font> <b>da_wunder:</b></font> mä arvelinkin että sä oot suomesta<br/>
+<font color="#A82F2F"><font size="2">(05:35:13 PM)</font> <b>dasmonsta:</b></font> Ai kui? :D<br/>
+<font color="#A82F2F"><font size="2">(05:35:25 PM)</font> <b>da_wunder:</b></font> github linkkien perusteella<br/>
+<font color="#A82F2F"><font size="2">(05:35:35 PM)</font> <b>dasmonsta:</b></font> Nii<br/>
+<font color="#A82F2F"><font size="2">(05:35:55 PM)</font> <b>lenswipe:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(05:36:25 PM)</font> <b>da_wunder:</b></font> sorry about that weird language<br/>
+<font color="#A82F2F"><font size="2">(05:36:41 PM)</font> <b>lenswipe:</b></font> having issues with model associations<br/>
+<font color="#A82F2F"><font size="2">(05:38:11 PM)</font> <b>da_wunder:</b></font> tell me more<br/>
+<font color="#A82F2F"><font size="2">(05:38:41 PM)</font> <b>lenswipe:</b></font> http://pastebin.com/eNLiMU6H<br/>
+<font color="#A82F2F"><font size="2">(05:38:44 PM)</font> <b>lenswipe:</b></font> Agent model<br/>
+<font color="#A82F2F"><font size="2">(05:38:51 PM)</font> <b>lenswipe:</b></font> crap, no<br/>
+<font color="#A82F2F"><font size="2">(05:38:52 PM)</font> <b>lenswipe:</b></font> Customer model<br/>
+<font color="#A82F2F"><font size="2">(05:39:32 PM)</font> <b>lenswipe:</b></font> Agent model: http://pastebin.com/LT5Unnzc<br/>
+<font color="#A82F2F"><font size="2">(05:39:42 PM)</font> <b>lenswipe:</b></font> I want my customer model to own exactly 0 or 1 agent model<br/>
+<font color="#A82F2F"><font size="2">(05:40:33 PM)</font> <b>lenswipe:</b></font> the idea being that an agent is a customer(a user) with an agent object<br/>
+<font color="#A82F2F"><font size="2">(05:41:11 PM)</font> <b>lenswipe:</b></font> right now when I call user.customer in my agent model in my beforeCreate method it&apos;s not having any effect<br/>
+<font color="#A82F2F"><font size="2">(05:41:14 PM)</font> <b>lenswipe:</b></font> any thouhts about that?<br/>
+<font color="#A82F2F"><font size="2">(05:41:23 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(05:41:31 PM)</font> <b>da_wunder:</b></font> that relation should be just fine<br/>
+<font color="#A82F2F"><font size="2">(05:44:17 PM)</font> <b>lenswipe:</b></font> when I create an agent i want to first create a customer and then insert the customer&apos;s ID in the agent table<br/>
+<font color="#A82F2F"><font size="2">(05:44:56 PM)</font> <b>da_wunder:</b></font> async.waterfall(...) ?<br/>
+<font color="#A82F2F"><font size="2">(05:45:09 PM)</font> <b>lenswipe:</b></font> possibly...<br/>
+<font color="#A82F2F"><font size="2">(05:45:13 PM)</font> <b>lenswipe:</b></font> not sure it&apos;s an async problem thouguh<br/>
+<font color="#A82F2F"><font size="2">(05:45:42 PM)</font> <b>da_wunder:</b></font> i think it&apos;s<br/>
+<font color="#A82F2F"><font size="2">(05:46:39 PM)</font> <b>da_wunder:</b></font> check if customer exists =&gt; if not create, and after create next(); =&gt; if founded next();<br/>
+<font color="#A82F2F"><font size="2">(05:47:08 PM)</font> <b>da_wunder:</b></font> and after those add customer id to agent table<br/>
+<font color="#A82F2F"><font size="2">(05:49:07 PM)</font> <b>lenswipe:</b></font> huh?<br/>
+<font color="#A82F2F"><font size="2">(05:50:18 PM)</font> <b>da_wunder:</b></font> i assume that is what your doing on your previous comment<br/>
+<font size="2">(06:08:20 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

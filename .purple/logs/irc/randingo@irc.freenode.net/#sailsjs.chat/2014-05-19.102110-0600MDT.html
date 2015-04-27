@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Mon 19 May 2014 10:21:10 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Mon 19 May 2014 10:21:10 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(10:21:10 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(11:05:21 AM)</font> <b>CWSpear:</b></font> Is there a built-in way to do an &quot;OR&quot; with policies? Or do I just need to have my middleware handle that itself? I&apos;m on 0.10 beta (rc-7) and I have an action that people can use when authenticated OR with an API key and &quot;no user&quot;.<br/>
+<font color="#A82F2F"><font size="2">(11:07:44 AM)</font> <b>da_wunder:</b></font> CWSpear: haven&apos;t seen OR policies<br/>
+<font color="#A82F2F"><font size="2">(11:08:08 AM)</font> <b>CWSpear:</b></font> I think I&apos;ll just have to have my middleware handle it… but that could be tricky :-/<br/>
+<font color="#A82F2F"><font size="2">(11:08:49 AM)</font> <b>da_wunder:</b></font> what makes that tricky?<br/>
+<font color="#A82F2F"><font size="2">(11:10:22 AM)</font> <b>CWSpear:</b></font> because it creates a cross-dependency. so I have &quot;auth&quot; policy that checks if a user is authenticated based on session and an &quot;apiKey&quot; policy that checks for a valid API key in the request. If one is true, the other is irrelevant. But if one is false, it may not even try the other one (depending on order).<br/>
+<font color="#A82F2F"><font size="2">(11:10:53 AM)</font> <b>CWSpear:</b></font> So they kind of depend on knowing what the other one is going to do before doing what it&apos;s going to do.<br/>
+<font color="#A82F2F"><font size="2">(11:11:16 AM)</font> <b>CWSpear:</b></font> or I guess I can create a third policy...?<br/>
+<font color="#A82F2F"><font size="2">(11:11:32 AM)</font> <b>CWSpear:</b></font> &quot;authOrApiKey&quot;<br/>
+<font color="#A82F2F"><font size="2">(11:11:39 AM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(11:11:46 AM)</font> <b>CWSpear:</b></font> :-/<br/>
+<font color="#A82F2F"><font size="2">(11:12:00 AM)</font> <b>CWSpear:</b></font> doesn&apos;t seem DRY. but the policies are short, so I guess it&apos;s better than the alternative<br/>
+<font color="#A82F2F"><font size="2">(11:14:12 AM)</font> <b>da_wunder:</b></font> and with that use async.parallel({auth: function(callback) { ... do your magic here ... callback(err, result)}, apiKey: function(callback) { ... do your apikey magic here ... callback(err, result) }}, function(err, result) { .. here you can determine if result.auth OR result.apiKey is true and call next(); });<br/>
+<font color="#A82F2F"><font size="2">(11:14:19 AM)</font> <b>da_wunder:</b></font> something like that perhaps?<br/>
+<font color="#A82F2F"><font size="2">(11:14:22 AM)</font> <b>CWSpear:</b></font> Well, that worked. All tests passed<br/>
+<font color="#A82F2F"><font size="2">(11:15:03 AM)</font> <b>CWSpear:</b></font> I literally just pasted the code from auth, got rid of the fail case and replaced it with the code from apiKey<br/>
+<font color="#A82F2F"><font size="2">(11:15:16 AM)</font> <b>CWSpear:</b></font> basically &quot;on auth fail, test API key before sending a 403)<br/>
+<font color="#A82F2F"><font size="2">(11:15:19 AM)</font> <b>CWSpear:</b></font> &quot;*<br/>
+<font color="#A82F2F"><font size="2">(11:15:43 AM)</font> <b>da_wunder:</b></font> and then i would put those apikey and auth logic to service, which you could use on those policies<br/>
+<font color="#A82F2F"><font size="2">(11:16:16 AM)</font> <b>CWSpear:</b></font> good idea<br/>
+<font color="#A82F2F"><font size="2">(11:16:20 AM)</font> <b>da_wunder:</b></font> so no copy paste code<br/>
+<font color="#A82F2F"><font size="2">(11:16:33 AM)</font> <b>CWSpear:</b></font> can middleware return promises? or do they have to use done/next callback?<br/>
+<font color="#A82F2F"><font size="2">(11:16:47 AM)</font> <b>CWSpear:</b></font> can policy middleware, specifically*<br/>
+<font color="#A82F2F"><font size="2">(11:17:18 AM)</font> <b>da_wunder:</b></font> don&apos;t know for sure<br/>
+<font color="#A82F2F"><font size="2">(11:18:03 AM)</font> <b>da_wunder:</b></font> used just async.js and then next(err)/done(err) in main callback function<br/>
+<font size="2">(11:25:54 AM)</font><b> da_wunder left the room (quit: Ping timeout: 240 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(12:28:29 PM)</font> <b>myndzi:</b></font> i&apos;ve got a wonderful error from waterline that doesn&apos;t help me track it down at all :(<br/>
+<font color="#A82F2F"><font size="2">(12:28:36 PM)</font> <b>myndzi:</b></font> cannot call method &apos;replace&apos; of undefined<br/>
+<font color="#A82F2F"><font size="2">(12:28:57 PM)</font> <b>myndzi:</b></font> the stack trace seems to be a bunch of functions wrapping/creating the error stemming from async.js<br/>
+<font color="#A82F2F"><font size="2">(12:31:09 PM)</font> <b>CWSpear:</b></font> what&apos;s the first one? and if you go to the file and line, is there a replace function on that line?<br/>
+<font color="#A82F2F"><font size="2">(12:38:56 PM)</font> <b>myndzi:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(12:39:21 PM)</font> <b>myndzi:</b></font> http://pastebin.com/y7X3s5xQ<br/>
+<font color="#A82F2F"><font size="2">(12:39:29 PM)</font> <b>myndzi:</b></font> i imagine it&apos;s something to do with schema validation but i have on information to figure out what it is<br/>
+<font color="#A82F2F"><font size="2">(12:39:32 PM)</font> <b>myndzi:</b></font> i&apos;m  working on it<br/>
+<font color="#A82F2F"><font size="2">(12:40:13 PM)</font> <b>myndzi:</b></font> here we go, i have a couple failed validations (though i thought it would cast them from strings to numbers :\)<br/>
+<font color="#A82F2F"><font size="2">(12:40:27 PM)</font> <b>myndzi:</b></font> [ { rule: &apos;number&apos;,<br/>
+<font color="#A82F2F"><font size="2">(12:40:27 PM)</font> <b>myndzi:</b></font>        message: &apos;`undefined` should be a number (instead of &quot;78746&quot;, which is a string)&apos; } ],<br/>
+<font color="#A82F2F"><font size="2">(12:40:32 PM)</font> <b>myndzi:</b></font> presumably that&apos;s the &apos;undefined&apos; in question<br/>
+<font color="#A82F2F"><font size="2">(12:40:50 PM)</font> <b>CWSpear:</b></font> there&apos;s a replace when I go to WLError.js:36:34<br/>
+<font color="#A82F2F"><font size="2">(12:41:22 PM)</font> <b>CWSpear:</b></font> see line 36: http://glue.mavrx.io/#/s/45a5ab9<br/>
+<font color="#A82F2F"><font size="2">(12:42:05 PM)</font> <b>CWSpear:</b></font> my guess is, since that&apos;s what the stacktrace is saying, this._e.stack does not have a method replace. It&apos;s probably expecting it to be a string<br/>
+<font color="#A82F2F"><font size="2">(12:42:08 PM)</font> <b>CWSpear:</b></font> but for some reason it&apos;s not<br/>
+<font color="#A82F2F"><font size="2">(12:42:28 PM)</font> <b>CWSpear:</b></font> specifically, it&apos;s undefined<br/>
+<font color="#A82F2F"><font size="2">(12:43:09 PM)</font> <b>myndzi:</b></font> even more fun is it&apos;s failing the &apos;number&apos; validation<br/>
+<font color="#A82F2F"><font size="2">(12:44:27 PM)</font> <b>myndzi:</b></font> that is indeed the cause<br/>
+<font color="#A82F2F"><font size="2">(12:44:36 PM)</font> <b>myndzi:</b></font> i changed it to String(etc..).replace<br/>
+<font color="#A82F2F"><font size="2">(12:44:53 PM)</font> <b>myndzi:</b></font> but it&apos;s still saying undefined for the attributes i gave as numbers<br/>
+<font color="#A82F2F"><font size="2">(12:45:08 PM)</font> <b>myndzi:</b></font> i can&apos;t bother with this now, i&apos;ll just let em be strings<br/>
+<font color="#A82F2F"><font size="2">(12:45:34 PM)</font> <b>CWSpear:</b></font> numbers don&apos;t have a method replace<br/>
+<font color="#A82F2F"><font size="2">(12:46:14 PM)</font> <b>myndzi:</b></font> no, i mean<br/>
+<font color="#A82F2F"><font size="2">(12:46:35 PM)</font> <b>myndzi:</b></font> http://glue.mavrx.io/#/s/7e6490c<br/>
+<font color="#A82F2F"><font size="2">(12:46:47 PM)</font> <b>myndzi:</b></font> i verified that i was in fact passing numbers, not strings<br/>
+<font color="#A82F2F"><font size="2">(12:46:58 PM)</font> <b>myndzi:</b></font> also the orm doesn&apos;t seem to be converting the schema properly :|<br/>
+<font color="#A82F2F"><font size="2">(12:47:12 PM)</font> <b>CWSpear:</b></font> you definitely have a deeper issue<br/>
+<font color="#A82F2F"><font size="2">(12:47:38 PM)</font> <b>CWSpear:</b></font> what version or sails?<br/>
+<font color="#A82F2F"><font size="2">(12:50:29 PM)</font> <b>da_wunder:</b></font> myndzi: could you show your model?<br/>
+<font color="#A82F2F"><font size="2">(01:00:50 PM)</font> <b>myndzi:</b></font> 0.10<br/>
+<font color="#A82F2F"><font size="2">(01:01:04 PM)</font> <b>myndzi:</b></font> the field is literally just zip: { type: &apos;number&apos;, required: true }<br/>
+<font color="#A82F2F"><font size="2">(01:01:27 PM)</font> <b>myndzi:</b></font> rc7, i believe, too<br/>
+<font color="#A82F2F"><font size="2">(01:02:37 PM)</font> <b>myndzi:</b></font> i&apos;ve got an even more fun one though<br/>
+<font color="#A82F2F"><font size="2">(01:02:49 PM)</font> <b>myndzi:</b></font> msgpack: &quot;cowardly refusing to pack object with circular reference&quot; (there is none!)<br/>
+<font color="#A82F2F"><font size="2">(01:09:34 PM)</font> <b>myndzi:</b></font> hmm, guessing it has something to do with the custom(?) toJSON or something, i dunno<br/>
+<font color="#A82F2F"><font size="2">(01:09:42 PM)</font> <b>myndzi:</b></font> i&apos;ll need to clone it i guess<br/>
+<font color="#A82F2F"><font size="2">(01:42:45 PM)</font> <b>hephaestus_rg:</b></font> where is the sails disk stored?<br/>
+<font color="#A82F2F"><font size="2">(01:42:53 PM)</font> <b>hephaestus_rg:</b></font> i&apos;d like to delete it in my development environment<br/>
+<font color="#A82F2F"><font size="2">(01:43:00 PM)</font> <b>hephaestus_rg:</b></font> to restart the databse<br/>
+<font color="#A82F2F"><font size="2">(01:44:50 PM)</font> <b>Foxandxss:</b></font> hephaestus_rg: .tmp/something.db<br/>
+<font color="#A82F2F"><font size="2">(01:44:54 PM)</font> <b>Foxandxss:</b></font> I don&apos;t recall the name<br/>
+<font color="#A82F2F"><font size="2">(01:45:18 PM)</font> <b>Foxandxss:</b></font> you have to restart sails when you delete it<br/>
+<font color="#A82F2F"><font size="2">(01:45:33 PM)</font> <b>Foxandxss:</b></font> bbl<br/>
+<font color="#A82F2F"><font size="2">(01:46:24 PM)</font> <b>hephaestus_rg:</b></font> thanks Foxandxss<br/>
+<font color="#A82F2F"><font size="2">(01:48:25 PM)</font> <b>hephaestus_rg:</b></font> hmm all i see in the .tmp folder is a public folder containing assets<br/>
+<font color="#A82F2F"><font size="2">(02:04:47 PM)</font> <b>Foxandxss:</b></font> hephaestus_rg: not the db?<br/>
+<font color="#A82F2F"><font size="2">(02:06:28 PM)</font> <b>CWSpear:</b></font> if it&apos;s using localDiskDb, it should be in ./tmp/localDiskDb.db<br/>
+<font color="#A82F2F"><font size="2">(02:07:35 PM)</font> <b>CWSpear:</b></font> brand new install, after starting: http://glue.mavrx.io/#/s/4d6e74a<br/>
+<font color="#A82F2F"><font size="2">(02:07:46 PM)</font> <b>CWSpear:</b></font> well, maybe I created a model<br/>
+<font color="#A82F2F"><font size="2">(02:08:48 PM)</font> <b>CWSpear:</b></font> and I did lift<br/>
+<font color="#A82F2F"><font size="2">(02:08:59 PM)</font> <b>CWSpear:</b></font> I am sure it won&apos;t be there until after the first time you lift<br/>
+<font color="#A82F2F"><font size="2">(02:34:11 PM)</font> <b>harryharry:</b></font> quit<br/>
+<font size="2">(02:34:13 PM)</font><b> harryharry left the room (quit: Quit: leaving).</b><br/>
+<font color="#A82F2F"><font size="2">(02:34:26 PM)</font> <b>Fallout2man:</b></font> Hi, I have a strange problem. Sails is hanging when I try to print out debugging information with console.log(). The weird thing is that it freezes the entire server, I can&apos;t even use Ctrl+C to shut down sails.<br/>
+<font color="#A82F2F"><font size="2">(02:46:35 PM)</font> <b>hephaestus_rg:</b></font> i don&apos;t see it CWSpear Foxandxss http://i.imgur.com/se7WAS4.png<br/>
+<font color="#A82F2F"><font size="2">(02:46:54 PM)</font> <b>Foxandxss:</b></font> I have to trust you<br/>
+<font color="#A82F2F"><font size="2">(02:46:59 PM)</font> <b>Foxandxss:</b></font> I can&apos;t see images this days<br/>
+<font color="#A82F2F"><font size="2">(02:47:37 PM)</font> <b>CWSpear:</b></font> are you using local disk?<br/>
+<font color="#A82F2F"><font size="2">(02:47:45 PM)</font> <b>CWSpear:</b></font> have you change any settings surrounding it?<br/>
+<font color="#A82F2F"><font size="2">(02:48:48 PM)</font> <b>CWSpear:</b></font> in config/connections.js do you have:<br/>
+<font color="#A82F2F"><font size="2">(02:48:49 PM)</font> <b>CWSpear:</b></font>   localDiskDb: {<br/>
+<font color="#A82F2F"><font size="2">(02:48:49 PM)</font> <b>CWSpear:</b></font>     adapter: &apos;sails-disk&apos;<br/>
+<font color="#A82F2F"><font size="2">(02:48:49 PM)</font> <b>CWSpear:</b></font>   },<br/>
+<font color="#A82F2F"><font size="2">(02:49:17 PM)</font> <b>CWSpear:</b></font> and then in config/models.js: connection: &apos;localDiskDb&apos;<br/>
+<font color="#A82F2F"><font size="2">(02:49:24 PM)</font> <b>CWSpear:</b></font> and nothing overriding it in the specific models?<br/>
+<font color="#A82F2F"><font size="2">(03:14:13 PM)</font> <b>myndzi:</b></font> why does sails / waterline f* with errors<br/>
+<font color="#A82F2F"><font size="2">(03:14:18 PM)</font> <b>myndzi:</b></font> it just makes things bad<br/>
+<font color="#A82F2F"><font size="2">(03:16:41 PM)</font> <b>myndzi:</b></font> it&apos;s super impossible to  simply get something simple to describe the error programmattically<br/>
+<font size="2">(03:52:57 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(04:12:19 PM)</font> <b>myndzi:</b></font> does .save() return a promise that resolves to the model that was saved?<br/>
+<font size="2">(05:22:11 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

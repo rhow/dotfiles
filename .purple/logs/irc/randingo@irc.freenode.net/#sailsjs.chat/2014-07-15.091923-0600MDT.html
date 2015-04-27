@@ -1,0 +1,622 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Tue 15 Jul 2014 09:19:23 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Tue 15 Jul 2014 09:19:23 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:19:23 AM)</font><b> The topic for #sailsjs is: Documentation for v0.10 can be found at <a href="http://beta.sailsjs.org">http://beta.sailsjs.org</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:20:44 AM)</font> <b>netameta:</b></font> now i use their example find({date: new Date(&apos;07/11/2014&apos;) }); and nothing .. this is weird<br/>
+<font color="#A82F2F"><font size="2">(09:32:52 AM)</font> <b>netameta:</b></font> module.find({endDate : {&apos;&lt;=&apos;: &apos;07/11/2014&apos;}}) works.  module.find({endDate : {&apos;=&apos;: &apos;07/11/2014&apos;}}) or == doesnt work<br/>
+<font color="#A82F2F"><font size="2">(09:36:24 AM)</font> <b>netameta:</b></font> this model.find({endDate : { &apos;&gt;=&apos;: &apos;07/11/2014&apos;, &apos;&lt;=&apos;: &apos;07/11/2014&apos; }}) worked.. this is a joke there must be a way to do a equal to..<br/>
+<font color="#A82F2F"><font size="2">(09:37:40 AM)</font> <b>cramrod:</b></font> netameta, I would expect that because its a &apos;datetype&apos;, before it is saved, it is &apos;new Date&apos;ed<br/>
+<font color="#A82F2F"><font size="2">(09:38:11 AM)</font> <b>cramrod:</b></font> You are searching for an incomplete date.<br/>
+<font color="#A82F2F"><font size="2">(09:38:26 AM)</font> <b>cramrod:</b></font> Youve specified the month, day, and year but you havnt specified the second or millisecond<br/>
+<font color="#A82F2F"><font size="2">(09:38:43 AM)</font> <b>cramrod:</b></font> It is comparing all of its stored dates (which do have that info) to yours<br/>
+<font color="#A82F2F"><font size="2">(09:38:52 AM)</font> <b>cramrod:</b></font> so it doesnt find a match<br/>
+<font color="#A82F2F"><font size="2">(09:39:18 AM)</font> <b>AgtLucas:</b></font> ponzicoder, No joy with &lt;script&gt;alert(&lt;%-JSON.stringify(req.flash)%&gt;)&lt;/script&gt; and &lt;script&gt;alert(&lt;%-JSON.stringify(flash)%&gt;)&lt;/script&gt;<br/>
+<font color="#A82F2F"><font size="2">(09:40:26 AM)</font> <b>cramrod:</b></font> netameta, try  model.find({endDate: new Date(&apos;07/11/2014&apos;)}))<br/>
+<font color="#A82F2F"><font size="2">(09:40:37 AM)</font> <b>netameta:</b></font> cramrond I also tried new date(...) wont work<br/>
+<font color="#A82F2F"><font size="2">(09:42:02 AM)</font> <b>netameta:</b></font> weirder thing is if i try modle.find(({endDate : {&apos;&lt;=&apos;: new Date(&apos;07/11/2014&apos;)}}}); which is the way they describe it. it doesnt work but when i use just &apos;07/11/2014&apos; it works fine<br/>
+<font color="#A82F2F"><font size="2">(09:42:35 AM)</font> <b>netameta:</b></font> as if it perfer the string instead of the date object. weird!<br/>
+<font color="#A82F2F"><font size="2">(09:54:42 AM)</font> <b>ontologic:</b></font> ponzicoder I&apos;m about to try to attach social logins to ActivityOverlord using sails-generate-auth if anyone cares<br/>
+<font color="#A82F2F"><font size="2">(09:55:18 AM)</font> <b>robdubya:</b></font> nope<br/>
+<font color="#A82F2F"><font size="2">(09:55:22 AM)</font> <b>robdubya:</b></font> but keep us informed<br/>
+<font color="#A82F2F"><font size="2">(09:55:23 AM)</font> <b>robdubya:</b></font> ;-)<br/>
+<font color="#A82F2F"><font size="2">(09:55:36 AM)</font> <b>ontologic:</b></font> robdubya I was M____ yesterday<br/>
+<font color="#A82F2F"><font size="2">(09:55:47 AM)</font> <b>robdubya:</b></font> i know ;-)<br/>
+<font color="#A82F2F"><font size="2">(09:59:13 AM)</font> <b>netameta:</b></font> Ah!!<br/>
+<font color="#A82F2F"><font size="2">(09:59:44 AM)</font> <b>netameta:</b></font> apperently water... doesnt save dates as new Date() object automatically you need to do it or supply the object for saving<br/>
+<font color="#A82F2F"><font size="2">(10:00:33 AM)</font> <b>netameta:</b></font> right now in the collection i am working on datetimes are saved as formated string 01/01/1111<br/>
+<font color="#A82F2F"><font size="2">(10:00:39 AM)</font> <b>cramrod:</b></font> interesting.  I wouldnt have expected that<br/>
+<font color="#A82F2F"><font size="2">(10:01:17 AM)</font> <b>cramrod:</b></font> You should submit a PR to sails-docs clarifying that in case someone gets stuck in the future.<br/>
+<font color="#A82F2F"><font size="2">(10:01:42 AM)</font> <b>netameta:</b></font> however its weird it workd with &gt;= on that string and not with just =<br/>
+<font color="#A82F2F"><font size="2">(10:02:12 AM)</font> <b>netameta:</b></font> will do a little later<br/>
+<font color="#A82F2F"><font size="2">(10:36:02 AM)</font> <b>RWOverdijk:</b></font> I just saw the dark side of humans online<br/>
+<font color="#A82F2F"><font size="2">(10:36:41 AM)</font> <b>RWOverdijk:</b></font> There&apos;s no joke there. I finally found something that&apos;s too much for me<br/>
+<font color="#A82F2F"><font size="2">(10:38:58 AM)</font> <b>JemiloII:</b></font> wow? was it hacking and slashing, or some kind of verbal abuse?<br/>
+<font color="#A82F2F"><font size="2">(10:39:28 AM)</font> <b>RWOverdijk:</b></font> JemiloII, No.<br/>
+<font color="#A82F2F"><font size="2">(10:39:35 AM)</font> <b>RWOverdijk:</b></font> It was harming a cat.<br/>
+<font color="#A82F2F"><font size="2">(10:39:43 AM)</font> <b>RWOverdijk:</b></font> By setting it on fire.<br/>
+<font color="#A82F2F"><font size="2">(10:40:03 AM)</font> <b>RWOverdijk:</b></font> It was running for its life and couldn&apos;t do anything because it was gasoline<br/>
+<font color="#A82F2F"><font size="2">(10:40:16 AM)</font> <b>RWOverdijk:</b></font> There&apos;s sound, too, so you can hear it screaming the entire time.<br/>
+<font color="#A82F2F"><font size="2">(10:40:30 AM)</font> <b>RWOverdijk:</b></font> Apparently, there are a ton of those videos floating around.<br/>
+<font color="#A82F2F"><font size="2">(10:40:35 AM)</font> <b>RWOverdijk:</b></font> I&apos;m ashamed to be human.<br/>
+<font color="#A82F2F"><font size="2">(10:41:08 AM)</font> <b>JemiloII:</b></font> ahh i seen a video similar, but it was a kid, Colombian drug cartels were making a point.<br/>
+<font color="#A82F2F"><font size="2">(10:41:21 AM)</font> <b>RWOverdijk:</b></font> I don&apos;t care what their point was.<br/>
+<font color="#A82F2F"><font size="2">(10:41:27 AM)</font> <b>JemiloII:</b></font> me either<br/>
+<font color="#A82F2F"><font size="2">(10:41:34 AM)</font> <b>RWOverdijk:</b></font> If you&apos;re capable of doing that you&apos;re not right.<br/>
+<font color="#A82F2F"><font size="2">(10:41:43 AM)</font> <b>RWOverdijk:</b></font> They&apos;re laughing, throughout the entire video<br/>
+<font color="#A82F2F"><font size="2">(10:41:55 AM)</font> <b>JemiloII:</b></font> they&apos;re in a different mindset<br/>
+<font color="#A82F2F"><font size="2">(10:42:51 AM)</font> <b>RWOverdijk:</b></font> I&apos;ve seen a lot of sick shit<br/>
+<font color="#A82F2F"><font size="2">(10:42:51 AM)</font> <b>JemiloII:</b></font> im not sticking up for them, just saying its a different world<br/>
+<font color="#A82F2F"><font size="2">(10:43:00 AM)</font> <b>RWOverdijk:</b></font> No<br/>
+<font color="#A82F2F"><font size="2">(10:43:07 AM)</font> <b>RWOverdijk:</b></font> Eating dogs is a different mindset.<br/>
+<font color="#A82F2F"><font size="2">(10:43:09 AM)</font> <b>RWOverdijk:</b></font> This is torture.<br/>
+<font color="#A82F2F"><font size="2">(10:43:19 AM)</font> <b>RWOverdijk:</b></font> Murder, fine. Go for it.<br/>
+<font color="#A82F2F"><font size="2">(10:43:22 AM)</font> <b>RWOverdijk:</b></font> We do it all the time.<br/>
+<font color="#A82F2F"><font size="2">(10:43:23 AM)</font> <b>JemiloII:</b></font> to them its entertainment<br/>
+<font color="#A82F2F"><font size="2">(10:43:28 AM)</font> <b>JemiloII:</b></font> not torture<br/>
+<font color="#A82F2F"><font size="2">(10:43:44 AM)</font> <b>RWOverdijk:</b></font> I don&apos;t care what it is to them.<br/>
+<font color="#A82F2F"><font size="2">(10:43:52 AM)</font> <b>RWOverdijk:</b></font> They should be locked up.<br/>
+<font color="#A82F2F"><font size="2">(10:43:59 AM)</font> <b>JemiloII:</b></font> why should they?<br/>
+<font color="#A82F2F"><font size="2">(10:44:24 AM)</font> <b>RWOverdijk:</b></font> If you&apos;re capable of setting something innocent on fire, and have it suffer until dead<br/>
+<font color="#A82F2F"><font size="2">(10:44:28 AM)</font> <b>RWOverdijk:</b></font> You&apos;re sick.<br/>
+<font color="#A82F2F"><font size="2">(10:44:33 AM)</font> <b>RWOverdijk:</b></font> It&apos;s not a cultural thing<br/>
+<font color="#A82F2F"><font size="2">(10:44:36 AM)</font> <b>RWOverdijk:</b></font> I get cultural things<br/>
+<font color="#A82F2F"><font size="2">(10:44:56 AM)</font> <b>RWOverdijk:</b></font> Stoning someone to death, cutting off fingers for crimes, all fine.<br/>
+<font color="#A82F2F"><font size="2">(10:45:04 AM)</font> <b>JemiloII:</b></font> It&apos;s a cat, what about all the cows and other animals we feed and stuff into a cage where they can&apos;t walk?<br/>
+<font color="#A82F2F"><font size="2">(10:45:10 AM)</font> <b>RWOverdijk:</b></font> But being able to do such a thing for your own amusement is not human<br/>
+<font color="#A82F2F"><font size="2">(10:45:16 AM)</font> <b>JemiloII:</b></font> their stomachs are so bloated they would have wished to burn alive<br/>
+<font color="#A82F2F"><font size="2">(10:45:21 AM)</font> <b>JemiloII:</b></font> after than endure<br/>
+<font color="#A82F2F"><font size="2">(10:45:22 AM)</font> <b>RWOverdijk:</b></font> I don&apos;t know where you live<br/>
+<font color="#A82F2F"><font size="2">(10:45:28 AM)</font> <b>RWOverdijk:</b></font> But here that&apos;s not the case.<br/>
+<font color="#A82F2F"><font size="2">(10:45:30 AM)</font> <b>JemiloII:</b></font> im from the usa<br/>
+<font color="#A82F2F"><font size="2">(10:45:39 AM)</font> <b>RWOverdijk:</b></font> Here they walk around freely<br/>
+<font color="#A82F2F"><font size="2">(10:45:54 AM)</font> <b>JemiloII:</b></font> well not all animals get that luxury<br/>
+<font color="#A82F2F"><font size="2">(10:45:58 AM)</font> <b>RWOverdijk:</b></font> In a nice field. Eating as much or as little as they want.<br/>
+<font color="#A82F2F"><font size="2">(10:46:01 AM)</font> <b>RWOverdijk:</b></font> I get that.<br/>
+<font color="#A82F2F"><font size="2">(10:46:24 AM)</font> <b>RWOverdijk:</b></font> And I&apos;m accepting to different people and cultures<br/>
+<font color="#A82F2F"><font size="2">(10:46:36 AM)</font> <b>RWOverdijk:</b></font> I honestly almost never care<br/>
+<font color="#A82F2F"><font size="2">(10:46:41 AM)</font> <b>RWOverdijk:</b></font> But this is cruelty.<br/>
+<font color="#A82F2F"><font size="2">(10:47:01 AM)</font> <b>RWOverdijk:</b></font> And it&apos;s something I will never be able to understand or condone.<br/>
+<font color="#A82F2F"><font size="2">(10:47:11 AM)</font> <b>JemiloII:</b></font> well if you don&apos;t like it, gather your buds and some towns people and kick their ass. You have to conquer them if you want them to stop<br/>
+<font color="#A82F2F"><font size="2">(10:47:16 AM)</font> <b>JemiloII:</b></font> how history works<br/>
+<font color="#A82F2F"><font size="2">(10:47:24 AM)</font> <b>JemiloII:</b></font> victors rewrite it<br/>
+<font color="#A82F2F"><font size="2">(10:47:33 AM)</font> <b>RWOverdijk:</b></font> I know.<br/>
+<font color="#A82F2F"><font size="2">(10:47:44 AM)</font> <b>RWOverdijk:</b></font> It&apos;s just, I&apos;m shocked a bit.<br/>
+<font color="#A82F2F"><font size="2">(10:47:49 AM)</font> <b>RWOverdijk:</b></font> Doesn&apos;t happen to me easily.<br/>
+<font color="#A82F2F"><font size="2">(10:47:56 AM)</font> <b>JemiloII:</b></font> ahh<br/>
+<font color="#A82F2F"><font size="2">(10:48:15 AM)</font> <b>RWOverdijk:</b></font> I&apos;ve seen shit, and been through shit. But... this is sick on a whole new level.<br/>
+<font color="#A82F2F"><font size="2">(10:49:53 AM)</font> <b>JemiloII:</b></font> i seen this cartel video when it was on youtube for a bit before taken down. they tied this ladies hair up to a rope and cut her head off, then let little kids hit her like a pinyatta. It was mind blowing how the kids thought it was normal<br/>
+<font color="#A82F2F"><font size="2">(10:51:55 AM)</font> <b>JemiloII:</b></font> i used to work at a McDonalds when i was younger, its just what the mexicans i worked with would show me on their phones.<br/>
+<font color="#A82F2F"><font size="2">(10:52:04 AM)</font> <b>RWOverdijk:</b></font> Right<br/>
+<font size="2">(10:52:08 AM)</font><b> Leath is now known as ICCULUSC</b><br/>
+<font color="#A82F2F"><font size="2">(10:52:11 AM)</font> <b>ICCULUSC:</b></font> hai<br/>
+<font color="#A82F2F"><font size="2">(10:52:12 AM)</font> <b>RWOverdijk:</b></font> Well that&apos;s still less disturbing to me<br/>
+<font color="#A82F2F"><font size="2">(10:52:24 AM)</font> <b>RWOverdijk:</b></font> It&apos;s cutting, in stead of having you slowly die and suffer.<br/>
+<font color="#A82F2F"><font size="2">(10:52:36 AM)</font> <b>JemiloII:</b></font> well you should of watched her plea and get kicked before hand<br/>
+<font color="#A82F2F"><font size="2">(10:52:40 AM)</font> <b>JemiloII:</b></font> it was a good 10minutes<br/>
+<font color="#A82F2F"><font size="2">(10:52:50 AM)</font> <b>JemiloII:</b></font> worth of footage<br/>
+<font color="#A82F2F"><font size="2">(10:53:17 AM)</font> <b>robdubya:</b></font> people who fuck with animals are typically psychopathic<br/>
+<font color="#A82F2F"><font size="2">(10:53:18 AM)</font> <b>JemiloII:</b></font> apparently her son stole something so she was getting punished for it<br/>
+<font color="#A82F2F"><font size="2">(10:53:36 AM)</font> <b>ICCULUSC:</b></font> pretty sure my ex girlfriend intentionally hung a girls cat when she was 10<br/>
+<font color="#A82F2F"><font size="2">(10:53:43 AM)</font> <b>robdubya:</b></font> people killing other people is relatively ... normal. people who fuck with animals are a whole &apos;nother breed of evil<br/>
+<font color="#A82F2F"><font size="2">(10:53:50 AM)</font> <b>JemiloII:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(10:54:01 AM)</font> <b>JemiloII:</b></font> humans killing animals is normal<br/>
+<font color="#A82F2F"><font size="2">(10:54:06 AM)</font> <b>ICCULUSC:</b></font> can any of you guys help me with async.waterfall<br/>
+<font color="#A82F2F"><font size="2">(10:54:13 AM)</font> <b>RWOverdijk:</b></font> *sigh*<br/>
+<font color="#A82F2F"><font size="2">(10:54:24 AM)</font> <b>RWOverdijk:</b></font> I&apos;m opting out. I&apos;ve seen enough sick for one day.<br/>
+<font color="#A82F2F"><font size="2">(10:54:26 AM)</font> <b>robdubya:</b></font> JemiloII killing is one thing. that&apos;s the food chain. torturing is another.<br/>
+<font color="#A82F2F"><font size="2">(10:54:42 AM)</font> <b>ICCULUSC:</b></font> for some reason i don&apos;t feel like he&apos;s referring to slaughtering animals for food jemiloii<br/>
+<font color="#A82F2F"><font size="2">(10:54:49 AM)</font> <b>ontologic:</b></font> robdubya Unknown policy, &quot;true&quot;, referenced in `config.policies`. wierd<br/>
+<font color="#A82F2F"><font size="2">(10:54:51 AM)</font> <b>JemiloII:</b></font> i&apos;d rather have an animal tortured than a human.<br/>
+<font color="#A82F2F"><font size="2">(10:55:03 AM)</font> <b>ICCULUSC:</b></font> depends on the human<br/>
+<font color="#A82F2F"><font size="2">(10:55:08 AM)</font> <b>ontologic:</b></font> I&apos;m in a version conflict<br/>
+<font color="#A82F2F"><font size="2">(10:55:14 AM)</font> <b>JemiloII:</b></font> could we say depends on the animal<br/>
+<font color="#A82F2F"><font size="2">(10:55:17 AM)</font> <b>JemiloII:</b></font> couldn&apos;t*<br/>
+<font color="#A82F2F"><font size="2">(10:55:24 AM)</font> <b>ICCULUSC:</b></font> it does<br/>
+<font color="#A82F2F"><font size="2">(10:55:52 AM)</font> <b>JemiloII:</b></font> ICCULUSC i know what he is reffering too<br/>
+<font color="#A82F2F"><font size="2">(10:56:12 AM)</font> <b>ICCULUSC:</b></font> it depends on the circumstances human or animal<br/>
+<font color="#A82F2F"><font size="2">(10:56:16 AM)</font> <b>ICCULUSC:</b></font> torture my pet i&apos;ll fucking kill you<br/>
+<font color="#A82F2F"><font size="2">(10:56:37 AM)</font> <b>JemiloII:</b></font> idk if i&apos;d kill you but i&apos;d get you jail<br/>
+<font color="#A82F2F"><font size="2">(10:56:43 AM)</font> <b>JemiloII:</b></font> if you killed mine<br/>
+<font color="#A82F2F"><font size="2">(10:56:57 AM)</font> <b>ICCULUSC:</b></font> it depends on the level of fucking with my pet<br/>
+<font color="#A82F2F"><font size="2">(10:56:58 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:57:00 AM)</font> <b>JemiloII:</b></font> i don&apos;t think an animal&apos;s death is worth more than a human<br/>
+<font color="#A82F2F"><font size="2">(10:57:11 AM)</font> <b>robdubya:</b></font> one thing i like about texas<br/>
+<font color="#A82F2F"><font size="2">(10:57:24 AM)</font> <b>robdubya:</b></font> is that if you fuck with my animals, i&apos;m well within my legal rights to end you<br/>
+<font color="#A82F2F"><font size="2">(10:57:25 AM)</font> <b>ICCULUSC:</b></font> i mean the &quot;value&quot; of death is relative<br/>
+<font color="#A82F2F"><font size="2">(10:57:42 AM)</font> <b>ICCULUSC:</b></font> if my father dies i&apos;m going to care a lot more than you do<br/>
+<font color="#A82F2F"><font size="2">(10:57:55 AM)</font> <b>ICCULUSC:</b></font> you might be empathetic to the situation<br/>
+<font color="#A82F2F"><font size="2">(10:58:03 AM)</font> <b>ICCULUSC:</b></font> hopefully lol<br/>
+<font color="#A82F2F"><font size="2">(10:58:16 AM)</font> <b>JemiloII:</b></font> well if people are caring more about the death of a random cat than a random human, then something is fucked up<br/>
+<font color="#A82F2F"><font size="2">(10:58:38 AM)</font> <b>ICCULUSC:</b></font> it&apos;s odd, but i understand the psychology behind it<br/>
+<font color="#A82F2F"><font size="2">(10:58:49 AM)</font> <b>ontologic:</b></font> agreed, TX leads USA by example in that regard - new ideas people are still catching up to<br/>
+<font color="#A82F2F"><font size="2">(10:58:53 AM)</font> <b>ICCULUSC:</b></font> CAN SOMEONE HELP ME WITH ASYNC.WATERFALL ERROR? lol<br/>
+<font color="#A82F2F"><font size="2">(10:59:14 AM)</font> <b>ICCULUSC:</b></font> the right to shoot an intruder is not a new idea lol;<br/>
+<font color="#A82F2F"><font size="2">(10:59:36 AM)</font> <b>robdubya:</b></font> the right to defend one&apos;s property is. at least in a fair portion of the world.<br/>
+<font color="#A82F2F"><font size="2">(10:59:49 AM)</font> <b>robdubya:</b></font> also async waterfall sucks<br/>
+<font color="#A82F2F"><font size="2">(10:59:51 AM)</font> <b>ICCULUSC:</b></font> in what context?<br/>
+<font color="#A82F2F"><font size="2">(10:59:57 AM)</font> <b>ICCULUSC:</b></font> that is literally an ancient concept<br/>
+<font color="#A82F2F"><font size="2">(11:00:00 AM)</font> <b>ontologic:</b></font> relatively new idea folks<br/>
+<font color="#A82F2F"><font size="2">(11:00:07 AM)</font> <b>JemiloII:</b></font> whats so bad about async waterfall?<br/>
+<font color="#A82F2F"><font size="2">(11:00:07 AM)</font> <b>ICCULUSC:</b></font> relatively as in relative to prehistory?<br/>
+<font color="#A82F2F"><font size="2">(11:00:11 AM)</font> <b>ontologic:</b></font> ancient concept for nobles maybe<br/>
+<font color="#A82F2F"><font size="2">(11:00:24 AM)</font> <b>ontologic:</b></font> not for a free state of free individuals<br/>
+<font color="#A82F2F"><font size="2">(11:00:45 AM)</font> <b>robdubya:</b></font> there&apos;s a fair portion of the US, let alone the world, that says you have a duty to retreat<br/>
+<font color="#A82F2F"><font size="2">(11:00:54 AM)</font> <b>ICCULUSC:</b></font> the newer concept there is the free state of individuals<br/>
+<font color="#A82F2F"><font size="2">(11:00:55 AM)</font> <b>ICCULUSC:</b></font> just sayin&apos;<br/>
+<font color="#A82F2F"><font size="2">(11:01:16 AM)</font> <b>ontologic:</b></font> well that&apos;s all I meant, not sure what bone you&apos;re picking<br/>
+<font color="#A82F2F"><font size="2">(11:01:29 AM)</font> <b>robdubya:</b></font> dont care about the historical context really<br/>
+<font color="#A82F2F"><font size="2">(11:01:42 AM)</font> <b>ICCULUSC:</b></font> that people who own property have had that right on and off for the last 2000 years or so<br/>
+<font color="#A82F2F"><font size="2">(11:01:43 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:01:49 AM)</font> <b>JemiloII:</b></font> Texas is about as free as its going, everywhere else in the states your just a slave to some random bank that they poorly white out on your birth certificate<br/>
+<font color="#A82F2F"><font size="2">(11:01:56 AM)</font> <b>ICCULUSC:</b></font> you don&apos;t care about the historical context?<br/>
+<font color="#A82F2F"><font size="2">(11:02:04 AM)</font> <b>ICCULUSC:</b></font> nothing can be examined properly out of context<br/>
+<font color="#A82F2F"><font size="2">(11:02:45 AM)</font> <b>JemiloII:</b></font> in history, you needed military power/weapons to keep your land<br/>
+<font color="#A82F2F"><font size="2">(11:03:06 AM)</font> <b>ICCULUSC:</b></font> depends on how far back you go<br/>
+<font color="#A82F2F"><font size="2">(11:03:12 AM)</font> <b>JemiloII:</b></font> nope<br/>
+<font color="#A82F2F"><font size="2">(11:03:15 AM)</font> <b>JemiloII:</b></font> always<br/>
+<font color="#A82F2F"><font size="2">(11:03:34 AM)</font> <b>JemiloII:</b></font> taxes would pay for an army to protect your land<br/>
+<font color="#A82F2F"><font size="2">(11:03:34 AM)</font> <b>ontologic:</b></font> robdubya why am I getting<br/>
+<font color="#A82F2F"><font size="2">(11:03:37 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:03:39 AM)</font> <b>ontologic:</b></font> error: Unknown policy, &quot;true&quot;, referenced in `config.policies`.<br/>
+<font color="#A82F2F"><font size="2">(11:04:02 AM)</font> <b>ontologic:</b></font> &apos;*&apos; has prop boolean for public access<br/>
+<font color="#A82F2F"><font size="2">(11:04:07 AM)</font> <b>robdubya:</b></font> ontologic whats your config.policies look like<br/>
+<font color="#A82F2F"><font size="2">(11:04:08 AM)</font> <b>ICCULUSC:</b></font> if taxes paid for an army to protect my land i wouldn&apos;t have an issue with taxes<br/>
+<font color="#A82F2F"><font size="2">(11:04:16 AM)</font> <b>ICCULUSC:</b></font> but they don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(11:04:24 AM)</font> <b>JemiloII:</b></font> were do you live?<br/>
+<font color="#A82F2F"><font size="2">(11:04:26 AM)</font> <b>ICCULUSC:</b></font> oregon<br/>
+<font color="#A82F2F"><font size="2">(11:04:40 AM)</font> <b>JemiloII:</b></font> yeah the us government does that for us<br/>
+<font color="#A82F2F"><font size="2">(11:04:44 AM)</font> <b>ontologic:</b></font> I just reverted ActivityOverlord from &apos;flash&apos; to &apos;true&apos;<br/>
+<font color="#A82F2F"><font size="2">(11:04:51 AM)</font> <b>JemiloII:</b></font> what part of the taxes goes for<br/>
+<font color="#A82F2F"><font size="2">(11:04:54 AM)</font> <b>ontologic:</b></font> just thought that&apos;s a weird error<br/>
+<font color="#A82F2F"><font size="2">(11:05:03 AM)</font> <b>ICCULUSC:</b></font> yeah an absurdly large percentage of our taxes and the national budget<br/>
+<font color="#A82F2F"><font size="2">(11:05:08 AM)</font> <b>ICCULUSC:</b></font> to protect me from what exactly<br/>
+<font color="#A82F2F"><font size="2">(11:05:16 AM)</font> <b>ponzicoder:</b></font> oncologic what issue were you having?<br/>
+<font color="#A82F2F"><font size="2">(11:05:18 AM)</font> <b>JemiloII:</b></font> they are just blowing money hardcore<br/>
+<font color="#A82F2F"><font size="2">(11:05:19 AM)</font> <b>ICCULUSC:</b></font> anything that can reach me can&apos;t be stopped by a million man standing army<br/>
+<font color="#A82F2F"><font size="2">(11:05:24 AM)</font> <b>ICCULUSC:</b></font> at least we agree on that<br/>
+<font color="#A82F2F"><font size="2">(11:05:25 AM)</font> <b>ponzicoder:</b></font> err ontologic<br/>
+<font color="#A82F2F"><font size="2">(11:05:36 AM)</font> <b>ontologic:</b></font> no prob ponzicoder, one sec<br/>
+<font color="#A82F2F"><font size="2">(11:05:46 AM)</font> <b>ontologic:</b></font> http://sethetter.com/protected-resources-with-sails-js/<br/>
+<font color="#A82F2F"><font size="2">(11:05:54 AM)</font> <b>ICCULUSC:</b></font> admn you fucking async.waterfall<br/>
+<font color="#A82F2F"><font size="2">(11:05:56 AM)</font> <b>ICCULUSC:</b></font> WHAT ARE YOU TRYING TO TELL ME<br/>
+<font color="#A82F2F"><font size="2">(11:06:01 AM)</font> <b>ontologic:</b></font> I tried generating a new model, entry<br/>
+<font color="#A82F2F"><font size="2">(11:06:14 AM)</font> <b>ontologic:</b></font> ActivityO must hide the routes natively<br/>
+<font color="#A82F2F"><font size="2">(11:06:21 AM)</font> <b>ontologic:</b></font> native is not the word<br/>
+<font color="#A82F2F"><font size="2">(11:06:42 AM)</font> <b>ontologic:</b></font> and I thought it was wierd that &quot;*<br/>
+<font color="#A82F2F"><font size="2">(11:06:48 AM)</font> <b>JemiloII:</b></font> obama oddly is trying to get rid of social security at the end of his term, if they works out, it&apos;ll cut the budget by a third, but our government would probably dump it back into welfare and the military instead of everything else that&apos;s more useful<br/>
+<font color="#A82F2F"><font size="2">(11:06:59 AM)</font> <b>ontologic:</b></font> &quot;*&quot; : &apos;true&apos;<br/>
+<font color="#A82F2F"><font size="2">(11:07:05 AM)</font> <b>ontologic:</b></font> instead of &apos;flash&apos;<br/>
+<font color="#A82F2F"><font size="2">(11:07:13 AM)</font> <b>ontologic:</b></font> looks for &apos;true&apos; controller...?<br/>
+<font color="#A82F2F"><font size="2">(11:07:14 AM)</font> <b>ICCULUSC:</b></font> indeed<br/>
+<font color="#A82F2F"><font size="2">(11:07:18 AM)</font> <b>ICCULUSC:</b></font> social security is fucked beyond belief<br/>
+<font color="#A82F2F"><font size="2">(11:07:24 AM)</font> <b>ontologic:</b></font> error: Unknown policy, &quot;true&quot;, referenced in `config.policies`.<br/>
+<font color="#A82F2F"><font size="2">(11:07:31 AM)</font> <b>JemiloII:</b></font> welfare is too<br/>
+<font color="#A82F2F"><font size="2">(11:07:33 AM)</font> <b>ICCULUSC:</b></font> esp considering the amoutn i&apos;ve paid into it that i&apos;l never see again<br/>
+<font color="#A82F2F"><font size="2">(11:07:38 AM)</font> <b>ICCULUSC:</b></font> which is upwards of 200k<br/>
+<font color="#A82F2F"><font size="2">(11:07:41 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:07:48 AM)</font> <b>JemiloII:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:07:53 AM)</font> <b>ICCULUSC:</b></font> well that&apos;s my entire federal witholding as of now<br/>
+<font color="#A82F2F"><font size="2">(11:07:55 AM)</font> <b>ICCULUSC:</b></font> including taxes i guess<br/>
+<font color="#A82F2F"><font size="2">(11:08:31 AM)</font> <b>JemiloII:</b></font> i wonder if anyone did a tax add up<br/>
+<font color="#A82F2F"><font size="2">(11:08:38 AM)</font> <b>JemiloII:</b></font> they took all taxes<br/>
+<font color="#A82F2F"><font size="2">(11:08:41 AM)</font> <b>JemiloII:</b></font> and added them up<br/>
+<font color="#A82F2F"><font size="2">(11:08:56 AM)</font> <b>ICCULUSC:</b></font> you ever think it&apos;s funny how the government has a huge ROI<br/>
+<font color="#A82F2F"><font size="2">(11:09:06 AM)</font> <b>JemiloII:</b></font> like tax on ultities, tax on food, tax on good, tax on income, tax on cars, tax on homes<br/>
+<font color="#A82F2F"><font size="2">(11:09:13 AM)</font> <b>ICCULUSC:</b></font> no sales tax here!<br/>
+<font color="#A82F2F"><font size="2">(11:09:17 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:09:32 AM)</font> <b>JemiloII:</b></font> is there a state with no sales tax and no income tax?<br/>
+<font color="#A82F2F"><font size="2">(11:09:39 AM)</font> <b>ponzicoder:</b></font> ahh, &apos;*&apos;: &apos;true&apos;, is saying all routes in terms of policies are true and therefore pass through<br/>
+<font color="#A82F2F"><font size="2">(11:10:05 AM)</font> <b>ontologic:</b></font> ponzicoder did you get that? I&apos;m trying to add a new model/controller, and when I reset &apos;*&apos; : &apos;flash&apos; to true (to test the endpoint) it looks for a &apos;true&apos; policy instead of acting as boolean<br/>
+<font color="#A82F2F"><font size="2">(11:10:06 AM)</font> <b>ICCULUSC:</b></font> !!!<br/>
+<font color="#A82F2F"><font size="2">(11:10:22 AM)</font> <b>ponzicoder:</b></font> ahh<br/>
+<font color="#A82F2F"><font size="2">(11:10:25 AM)</font> <b>ICCULUSC:</b></font> no i don&apos;t think so jemilo<br/>
+<font color="#A82F2F"><font size="2">(11:10:30 AM)</font> <b>ICCULUSC:</b></font> oregon has no sales tax and moderate income tax<br/>
+<font color="#A82F2F"><font size="2">(11:10:32 AM)</font> <b>ponzicoder:</b></font> hmm…k one sec<br/>
+<font color="#A82F2F"><font size="2">(11:10:41 AM)</font> <b>ICCULUSC:</b></font> and suprirsingly low gas tax<br/>
+<font color="#A82F2F"><font size="2">(11:10:57 AM)</font> <b>JemiloII:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(11:11:00 AM)</font> <b>JemiloII:</b></font> new hamspire<br/>
+<font color="#A82F2F"><font size="2">(11:11:09 AM)</font> <b>JemiloII:</b></font> no income and sales tax<br/>
+<font color="#A82F2F"><font size="2">(11:11:18 AM)</font> <b>JemiloII:</b></font> stupid high property taxes<br/>
+<font color="#A82F2F"><font size="2">(11:11:18 AM)</font> <b>ICCULUSC:</b></font> really?<br/>
+<font color="#A82F2F"><font size="2">(11:11:20 AM)</font> <b>ICCULUSC:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:11:27 AM)</font> <b>ICCULUSC:</b></font> i live next to U of O so property taxes are asbsurd<br/>
+<font color="#A82F2F"><font size="2">(11:11:37 AM)</font> <b>ICCULUSC:</b></font> 2000 for a ~160k house<br/>
+<font size="2">(11:11:45 AM)</font><b> JemiloII left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font color="#A82F2F"><font size="2">(11:11:45 AM)</font> <b>ICCULUSC:</b></font> even more for other property types<br/>
+<font size="2">(11:11:59 AM)</font><b> JemiloII [<em>~Thunderbi@2601:d:2780:21c:f174:2c38:be7a:9a6a</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:12:12 AM)</font> <b>JemiloII:</b></font> thats cheaper then IL...<br/>
+<font color="#A82F2F"><font size="2">(11:12:16 AM)</font> <b>ponzicoder:</b></font> @ontologic try using true without quotes<br/>
+<font color="#A82F2F"><font size="2">(11:12:22 AM)</font> <b>ICCULUSC:</b></font> for the price of the house?<br/>
+<font color="#A82F2F"><font size="2">(11:12:22 AM)</font> <b>JemiloII:</b></font> fuck man I&apos;m moving to new hamspire<br/>
+<font color="#A82F2F"><font size="2">(11:12:25 AM)</font> <b>ontologic:</b></font> ponzicoder<br/>
+<font color="#A82F2F"><font size="2">(11:12:28 AM)</font> <b>ontologic:</b></font> duh<br/>
+<font color="#A82F2F"><font size="2">(11:12:33 AM)</font> <b>ICCULUSC:</b></font> if you leave eugene the taxes are 1/3rd that<br/>
+<font color="#A82F2F"><font size="2">(11:12:34 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:12:38 AM)</font> <b>ponzicoder:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(11:13:00 AM)</font> <b>ontologic:</b></font> ponzicoder I&apos;ll try and let you know how this goes<br/>
+<font color="#A82F2F"><font size="2">(11:13:01 AM)</font> <b>JemiloII:</b></font> a 33k home in IL could go up to 9k a year in some neighbrhoods<br/>
+<font color="#A82F2F"><font size="2">(11:13:09 AM)</font> <b>ICCULUSC:</b></font> in a city though?<br/>
+<font color="#A82F2F"><font size="2">(11:13:13 AM)</font> <b>ponzicoder:</b></font> sounds good<br/>
+<font color="#A82F2F"><font size="2">(11:13:14 AM)</font> <b>JemiloII:</b></font> and they aren&apos;t even good neighborhoods<br/>
+<font color="#A82F2F"><font size="2">(11:13:26 AM)</font> <b>ICCULUSC:</b></font> the taxes in the city here are higher because of the university and public transportation<br/>
+<font color="#A82F2F"><font size="2">(11:13:38 AM)</font> <b>JemiloII:</b></font> its not even a major city<br/>
+<font color="#A82F2F"><font size="2">(11:13:45 AM)</font> <b>JemiloII:</b></font> just a suburban home<br/>
+<font color="#A82F2F"><font size="2">(11:14:10 AM)</font> <b>JemiloII:</b></font> the towns here in IL are weird with property taxes<br/>
+<font color="#A82F2F"><font size="2">(11:14:23 AM)</font> <b>JemiloII:</b></font> no flat rate in a town, it fluxuates<br/>
+<font color="#A82F2F"><font size="2">(11:14:41 AM)</font> <b>JemiloII:</b></font> I wonder if we could haggle property taxes?<br/>
+<font color="#A82F2F"><font size="2">(11:14:44 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:14:45 AM)</font> <b>ICCULUSC:</b></font> i doubt it<br/>
+<font color="#A82F2F"><font size="2">(11:14:49 AM)</font> <b>ICCULUSC:</b></font> only if you can haggle on the valu eof your house<br/>
+<font color="#A82F2F"><font size="2">(11:14:50 AM)</font> <b>ICCULUSC:</b></font> :P<br/>
+<font color="#A82F2F"><font size="2">(11:15:01 AM)</font> <b>JemiloII:</b></font> worth a shot<br/>
+<font color="#A82F2F"><font size="2">(11:15:36 AM)</font> <b>JemiloII:</b></font> me and a friend were looking at homes and found out that if we pay an extra 10-15k we could save like 5k on property taxes a year<br/>
+<font color="#A82F2F"><font size="2">(11:15:39 AM)</font> <b>ICCULUSC:</b></font> by the way F U ASYNC.WATERFALL<br/>
+<font color="#A82F2F"><font size="2">(11:15:45 AM)</font> <b>ICCULUSC:</b></font> true<br/>
+<font color="#A82F2F"><font size="2">(11:15:53 AM)</font> <b>ICCULUSC:</b></font> i&apos;m trying to buy something in town here<br/>
+<font color="#A82F2F"><font size="2">(11:15:57 AM)</font> <b>ICCULUSC:</b></font> but i don&apos;t think i&apos;ll be able to afford it<br/>
+<font color="#A82F2F"><font size="2">(11:15:59 AM)</font> <b>ontologic:</b></font> ponzicoder are all endpoints restricted in policies (ActivityO)? Where is the policy the restricts &apos;all other&apos; (as in new) models/routes?<br/>
+<font color="#A82F2F"><font size="2">(11:16:27 AM)</font> <b>ICCULUSC:</b></font> not gonna buy something i don&apos;t like and everything i like is out of my price range :(<br/>
+<font color="#A82F2F"><font size="2">(11:16:44 AM)</font> <b>JemiloII:</b></font> well i have the opposite problem<br/>
+<font color="#A82F2F"><font size="2">(11:17:00 AM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(11:17:02 AM)</font> <b>JemiloII:</b></font> if i&apos;m going to be paying the same amount o money, including taxes, i want a nicer home<br/>
+<font color="#A82F2F"><font size="2">(11:17:24 AM)</font> <b>ICCULUSC:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:17:43 AM)</font> <b>ICCULUSC:</b></font> i guess i could cash out my investments and buy something but i&apos;d rather save them fro 10 more years and buy something bad ass<br/>
+<font color="#A82F2F"><font size="2">(11:17:47 AM)</font> <b>ponzicoder:</b></font> It depends, you set-up the policy in api/policies and then decide which routes you want that policy to be run against in config/policies.js<br/>
+<font color="#A82F2F"><font size="2">(11:18:00 AM)</font> <b>JemiloII:</b></font> i need to talk to my pops on how these taxes are made up, he is a real estate appraiser<br/>
+<font color="#A82F2F"><font size="2">(11:18:27 AM)</font> <b>ICCULUSC:</b></font> true<br/>
+<font color="#A82F2F"><font size="2">(11:18:32 AM)</font> <b>JemiloII:</b></font> probably has something to do with school districts and commercial in the areas as well.<br/>
+<font color="#A82F2F"><font size="2">(11:18:35 AM)</font> <b>ICCULUSC:</b></font> here it&apos;s based on value of the house but it fluctuates based on other shit<br/>
+<font color="#A82F2F"><font size="2">(11:18:37 AM)</font> <b>ICCULUSC:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:18:50 AM)</font> <b>ponzicoder:</b></font> that&apos;s why &apos;*&apos;: true, doesn&apos;t apply any policies it lets all routes through<br/>
+<font color="#A82F2F"><font size="2">(11:19:07 AM)</font> <b>JemiloII:</b></font> i saw this one home, 15k a year, on property taxes<br/>
+<font color="#A82F2F"><font size="2">(11:19:13 AM)</font> <b>ICCULUSC:</b></font> jeez<br/>
+<font color="#A82F2F"><font size="2">(11:19:14 AM)</font> <b>JemiloII:</b></font> for a piece of crap needs work home<br/>
+<font color="#A82F2F"><font size="2">(11:19:19 AM)</font> <b>ponzicoder:</b></font> however, I may be confused in what you&apos;re asking<br/>
+<font color="#A82F2F"><font size="2">(11:19:30 AM)</font> <b>JemiloII:</b></font> i see how people are getting forclosed<br/>
+<font color="#A82F2F"><font size="2">(11:19:36 AM)</font> <b>ICCULUSC:</b></font> although it&apos;s a terrible investment i&apos;m trying to buy an apartment atm<br/>
+<font color="#A82F2F"><font size="2">(11:19:49 AM)</font> <b>JemiloII:</b></font> they go in thinking home is 35k and hen get hit with a 10k yearly tax<br/>
+<font color="#A82F2F"><font size="2">(11:20:41 AM)</font> <b>ontologic:</b></font> ponzicoder as of now &apos;*&apos; : true does not expose my empty entry array, maybe I missed something. Gives a 404.<br/>
+<font color="#A82F2F"><font size="2">(11:20:52 AM)</font> <b>ontologic:</b></font> ponzicoder http://sethetter.com/protected-resources-with-sails-js/<br/>
+<font color="#A82F2F"><font size="2">(11:21:43 AM)</font> <b>ponzicoder:</b></font> would you mind sending me a link to your repo and I&apos;ll take a look<br/>
+<font color="#A82F2F"><font size="2">(11:22:11 AM)</font> <b>ontologic:</b></font> ponzicoder should be easy enough to implement the user policies you already have for this new model<br/>
+<font color="#A82F2F"><font size="2">(11:23:06 AM)</font> <b>JemiloII:</b></font> oh there area lotta ways to lower property taxes<br/>
+<font color="#A82F2F"><font size="2">(11:23:30 AM)</font> <b>JemiloII:</b></font> when they raise your taxes you can appeal it, its a 50% chance of lowering it<br/>
+<font color="#A82F2F"><font size="2">(11:23:45 AM)</font> <b>JemiloII:</b></font> having a new appraisal done on your home to say its worth less<br/>
+<font color="#A82F2F"><font size="2">(11:24:02 AM)</font> <b>JemiloII:</b></font> many states have tax returns on you living in your home<br/>
+<font color="#A82F2F"><font size="2">(11:24:53 AM)</font> <b>JemiloII:</b></font> actually having your records right, like if they say you have 4 baths when really its 3 and 1/2<br/>
+<font color="#A82F2F"><font size="2">(11:25:39 AM)</font> <b>JemiloII:</b></font> really? if your neighbors with similar homes pay less taxes your on grounds to get less taxes as well o.o<br/>
+<font color="#A82F2F"><font size="2">(11:26:40 AM)</font> <b>JemiloII:</b></font> oh if you have a crappy home, your property taxes aren&apos;t suppose to be high<br/>
+<font color="#A82F2F"><font size="2">(11:26:48 AM)</font> <b>JemiloII:</b></font> so you appeal it<br/>
+<font color="#A82F2F"><font size="2">(11:27:06 AM)</font> <b>ICCULUSC:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:27:18 AM)</font> <b>JemiloII:</b></font> if you make repairs, you can get it lowered<br/>
+<font color="#A82F2F"><font size="2">(11:27:23 AM)</font> <b>JemiloII:</b></font> wait whaaa<br/>
+<font color="#A82F2F"><font size="2">(11:27:29 AM)</font> <b>ICCULUSC:</b></font> it was really bad for us once because basically like<br/>
+<font color="#A82F2F"><font size="2">(11:27:33 AM)</font> <b>JemiloII:</b></font> so do an appeal because you house sucks<br/>
+<font color="#A82F2F"><font size="2">(11:27:37 AM)</font> <b>JemiloII:</b></font> and then repair and lower it more<br/>
+<font color="#A82F2F"><font size="2">(11:27:39 AM)</font> <b>JemiloII:</b></font> hahaha<br/>
+<font color="#A82F2F"><font size="2">(11:27:39 AM)</font> <b>ICCULUSC:</b></font> i lived with my girlfriends family at the time and their house was like 175k when they bought it<br/>
+<font color="#A82F2F"><font size="2">(11:27:43 AM)</font> <b>ICCULUSC:</b></font> 6500 sq ft house<br/>
+<font color="#A82F2F"><font size="2">(11:27:44 AM)</font> <b>ICCULUSC:</b></font> super nice<br/>
+<font color="#A82F2F"><font size="2">(11:27:49 AM)</font> <b>ICCULUSC:</b></font> (bought in 1992)<br/>
+<font color="#A82F2F"><font size="2">(11:27:58 AM)</font> <b>JemiloII:</b></font> wow<br/>
+<font color="#A82F2F"><font size="2">(11:28:00 AM)</font> <b>ICCULUSC:</b></font> so later on the neighbors sold their house (2005)<br/>
+<font color="#A82F2F"><font size="2">(11:28:05 AM)</font> <b>ICCULUSC:</b></font> 990k? i think<br/>
+<font color="#A82F2F"><font size="2">(11:28:09 AM)</font> <b>JemiloII:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(11:28:12 AM)</font> <b>ICCULUSC:</b></font> so the property values in the area skyrocketed<br/>
+<font color="#A82F2F"><font size="2">(11:28:17 AM)</font> <b>ICCULUSC:</b></font> and his taxes went through the roof<br/>
+<font color="#A82F2F"><font size="2">(11:29:44 AM)</font> <b>JemiloII:</b></font> i would complain<br/>
+<font color="#A82F2F"><font size="2">(11:29:56 AM)</font> <b>JemiloII:</b></font> and just show what i&apos;ve been paying since 92<br/>
+<font color="#A82F2F"><font size="2">(11:30:57 AM)</font> <b>robdubya:</b></font> we&apos;ve got sales tax but no state income tax<br/>
+<font color="#A82F2F"><font size="2">(11:31:16 AM)</font> <b>JemiloII:</b></font> alaska has no income or state tax either<br/>
+<font color="#A82F2F"><font size="2">(11:31:18 AM)</font> <b>JemiloII:</b></font> oooo<br/>
+<font color="#A82F2F"><font size="2">(11:31:21 AM)</font> <b>netameta:</b></font> I am trying to use nodeMailer in sails 0.9.16, opened 465 ports , did openssl s_client smtp.gmail.com:465 and got respond meaning no firewall issues. however i still get connect ECONNREFUSED] when trying to send a mail. anyone ?<br/>
+<font color="#A82F2F"><font size="2">(11:31:30 AM)</font> <b>JemiloII:</b></font> probably cheaper propety taxes<br/>
+<font color="#A82F2F"><font size="2">(11:31:51 AM)</font> <b>robdubya:</b></font> gmail wants TLS afaik<br/>
+<font color="#A82F2F"><font size="2">(11:32:37 AM)</font> <b>AgtLucas:</b></font> I&apos;m using nodemailer + sails 0.9.16 + gmail and works fine<br/>
+<font color="#A82F2F"><font size="2">(11:32:51 AM)</font> <b>JemiloII:</b></font> damn illinois is the 7th highest property taxed state<br/>
+<font color="#A82F2F"><font size="2">(11:32:59 AM)</font> <b>JemiloII:</b></font> and we have food tax and sales tax<br/>
+<font color="#A82F2F"><font size="2">(11:33:05 AM)</font> <b>JemiloII:</b></font> high income tax<br/>
+<font color="#A82F2F"><font size="2">(11:33:15 AM)</font> <b>robdubya:</b></font> awwww yeahhhhh http://www.engadget.com/2014/07/14/spacex-texas-spaceport/?ncid=rss_truncated&amp;utm_content=buffere9ce2&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer<br/>
+<font color="#A82F2F"><font size="2">(11:33:31 AM)</font> <b>JemiloII:</b></font> so lame<br/>
+<font color="#A82F2F"><font size="2">(11:34:27 AM)</font> <b>netameta:</b></font> AgLucas how is it set up ?<br/>
+<font color="#A82F2F"><font size="2">(11:35:08 AM)</font> <b>netameta:</b></font> did you have to change you&apos;re nginx or appache configuration ? or just opening ports ?<br/>
+<font color="#A82F2F"><font size="2">(11:35:10 AM)</font> <b>JemiloII:</b></font> where not to live, new jersey<br/>
+<font color="#A82F2F"><font size="2">(11:35:15 AM)</font> <b>JemiloII:</b></font> highest of everything<br/>
+<font color="#A82F2F"><font size="2">(11:36:16 AM)</font> <b>AgtLucas:</b></font> netameta, No need change anything, I mean, I still in dev mod<br/>
+<font color="#A82F2F"><font size="2">(11:36:48 AM)</font> <b>netameta:</b></font> Aglucas sorry for the idiot question but i am 2 days into sails, where can i see on which mod i am ?<br/>
+<font color="#A82F2F"><font size="2">(11:38:05 AM)</font> <b>JemiloII:</b></font> lol new jersey is jacked up<br/>
+<font color="#A82F2F"><font size="2">(11:38:19 AM)</font> <b>robdubya:</b></font> netameta if you see pretty colors, dev<br/>
+<font color="#A82F2F"><font size="2">(11:38:26 AM)</font> <b>robdubya:</b></font> if its black and white, prod<br/>
+<font color="#A82F2F"><font size="2">(11:38:27 AM)</font> <b>AgtLucas:</b></font> netameta, Sorry, I mean that I not deployed the app on production server yet<br/>
+<font color="#A82F2F"><font size="2">(11:38:30 AM)</font> <b>JemiloII:</b></font> parents kicked their daughter out and left her with paying her private highschool bills, so she sued them<br/>
+<font color="#A82F2F"><font size="2">(11:38:41 AM)</font> <b>JemiloII:</b></font> xD<br/>
+<font color="#A82F2F"><font size="2">(11:39:22 AM)</font> <b>netameta:</b></font> Ah.<br/>
+<font color="#A82F2F"><font size="2">(11:39:32 AM)</font> <b>netameta:</b></font> bah this aint fun. and wierd !<br/>
+<font color="#A82F2F"><font size="2">(11:40:20 AM)</font> <b>netameta:</b></font> robdubya, lots of colors :-)<br/>
+<font color="#A82F2F"><font size="2">(11:41:01 AM)</font> <b>AgtLucas:</b></font> pnzicoder, are u there?<br/>
+<font color="#A82F2F"><font size="2">(11:43:18 AM)</font> <b>netameta:</b></font> Nope the problem is not sails its seems<br/>
+<font color="#A82F2F"><font size="2">(11:43:55 AM)</font> <b>ICCULUSC:</b></font> sorry jemiloii went to smoke and ran into another node.js guy from portland<br/>
+<font color="#A82F2F"><font size="2">(11:43:56 AM)</font> <b>ICCULUSC:</b></font> haha<br/>
+<font size="2">(11:44:19 AM)</font><b> m8 is now known as Guest11304</b><br/>
+<font color="#A82F2F"><font size="2">(11:44:23 AM)</font> <b>ICCULUSC:</b></font> actually the person woh showed me sails<br/>
+<font color="#A82F2F"><font size="2">(11:44:33 AM)</font> <b>ontologic:</b></font> ponzicoder sorry for the delay, github GUI (why did I ever) is spinning wheel of death.<br/>
+<font color="#A82F2F"><font size="2">(11:44:41 AM)</font> <b>JemiloII:</b></font> another node.js guy in portland!? gasp<br/>
+<font color="#A82F2F"><font size="2">(11:44:43 AM)</font> <b>JemiloII:</b></font> jk :P<br/>
+<font color="#A82F2F"><font size="2">(11:44:55 AM)</font> <b>JemiloII:</b></font> most guys there i know are asp guys and a few rails<br/>
+<font size="2">(11:45:19 AM)</font><b> AgtLucas left the room (quit: Ping timeout: 246 seconds).</b><br/>
+<font size="2">(11:45:19 AM)</font><b> AgtLucas_ is now known as AgtLucas</b><br/>
+<font color="#A82F2F"><font size="2">(11:45:37 AM)</font> <b>robdubya:</b></font> the dream of the 90&apos;s is alive in portland<br/>
+<font color="#A82F2F"><font size="2">(11:46:28 AM)</font> <b>ICCULUSC:</b></font> this kid lives in an RV<br/>
+<font color="#A82F2F"><font size="2">(11:46:33 AM)</font> <b>ICCULUSC:</b></font> and drives all over the west coast<br/>
+<font color="#A82F2F"><font size="2">(11:46:49 AM)</font> <b>ICCULUSC:</b></font> he&apos;s cool, he&apos;s friends with larry page and all these other people<br/>
+<font color="#A82F2F"><font size="2">(11:47:11 AM)</font> <b>ICCULUSC:</b></font> but for some reason he lives in an RV and works for zeuss.com lol<br/>
+<font color="#A82F2F"><font size="2">(11:55:06 AM)</font> <b>m895c:</b></font> Just started using sails, looks pretty awesome.<br/>
+<font color="#A82F2F"><font size="2">(11:55:31 AM)</font> <b>ontologic:</b></font> m895c it is<br/>
+<font color="#A82F2F"><font size="2">(11:55:32 AM)</font> <b>robdubya:</b></font> it is<br/>
+<font color="#A82F2F"><font size="2">(11:55:34 AM)</font> <b>robdubya:</b></font> fuck<br/>
+<font color="#A82F2F"><font size="2">(11:55:37 AM)</font> <b>ontologic:</b></font> ha!<br/>
+<font color="#A82F2F"><font size="2">(11:57:02 AM)</font> <b>ontologic:</b></font> ponzicoder I just lost a bunch of time to the github GUI (I know guys) but all I changed from ActivityO is the * : true in policies and sails generate entry<br/>
+<font color="#A82F2F"><font size="2">(11:59:02 AM)</font> <b>m895c:</b></font>  Anybody point me to the new 0.10 migration docs, trying to figure out this socket io thing.  the links with answers on stackoverflow etc point  references--&gt;upgrading  it doesnt seem to be there<br/>
+<font color="#A82F2F"><font size="2">(11:59:10 AM)</font> <b>robdubya:</b></font> ontologic its okay i use the gh gui too<br/>
+<font color="#A82F2F"><font size="2">(11:59:20 AM)</font> <b>robdubya:</b></font> m895c two main changes<br/>
+<font color="#A82F2F"><font size="2">(11:59:26 AM)</font> <b>robdubya:</b></font> 1 - adapters -&gt; connections<br/>
+<font color="#A82F2F"><font size="2">(11:59:30 AM)</font> <b>ponzicoder:</b></font> Hiya @ontologic…helping someone else at the moment…be back with ya in a sec<br/>
+<font color="#A82F2F"><font size="2">(11:59:37 AM)</font> <b>robdubya:</b></font> 2 - w/ sockets, you should listen for the model name<br/>
+<font color="#A82F2F"><font size="2">(11:59:42 AM)</font> <b>robdubya:</b></font> instead of &quot;message&quot;<br/>
+<font color="#A82F2F"><font size="2">(11:59:46 AM)</font> <b>ontologic:</b></font> ponzicoder no worries<br/>
+<font color="#A82F2F"><font size="2">(12:00:32 PM)</font> <b>m895c:</b></font> Ah ok, going to try this out<br/>
+<font color="#A82F2F"><font size="2">(12:00:48 PM)</font> <b>robdubya:</b></font> m895c the model name in lower case<br/>
+<font color="#A82F2F"><font size="2">(12:00:54 PM)</font> <b>robdubya:</b></font> Foo.js -&gt; &quot;foo&quot; event<br/>
+<font color="#A82F2F"><font size="2">(12:01:30 PM)</font> <b>m895c:</b></font> thank you robdubya<br/>
+<font color="#A82F2F"><font size="2">(12:20:59 PM)</font> <b>ICCULUSC:</b></font> m895c sails is the shit<br/>
+<font color="#A82F2F"><font size="2">(12:21:07 PM)</font> <b>ICCULUSC:</b></font> you want to use sails<br/>
+<font color="#A82F2F"><font size="2">(12:25:07 PM)</font> <b>ontologic:</b></font> so robdubya, as I proceed here I&apos;m pretty sure I&apos;m going to nail adding these features to a sails boilerplate like ActivityO. Thus far Sails doesn&apos;t have the &apos;starter&apos; like MEAN (and for good reasons) but maybe I can make a generator or something<br/>
+<font color="#A82F2F"><font size="2">(12:26:34 PM)</font> <b>ontologic:</b></font> people have opened issues about HTML scaffolding and I&apos;m playing with crud-face, but something with enough documentation to get &apos;the kids&apos; on the right track would be nice<br/>
+<font color="#A82F2F"><font size="2">(12:27:28 PM)</font> <b>ontologic:</b></font> easy != better in every case, right, but the kids need to know the why and how as they go<br/>
+<font color="#A82F2F"><font size="2">(12:28:11 PM)</font> <b>robdubya:</b></font> ontologic my answer to that is &quot;do it the hard way&quot;<br/>
+<font color="#A82F2F"><font size="2">(12:28:20 PM)</font> <b>robdubya:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(12:28:29 PM)</font> <b>robdubya:</b></font> but really, treat them as 2 things<br/>
+<font color="#A82F2F"><font size="2">(12:28:31 PM)</font> <b>robdubya:</b></font> your backend<br/>
+<font color="#A82F2F"><font size="2">(12:28:33 PM)</font> <b>robdubya:</b></font> and your front end<br/>
+<font color="#A82F2F"><font size="2">(12:28:35 PM)</font> <b>ontologic:</b></font> totally<br/>
+<font color="#A82F2F"><font size="2">(12:28:38 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(12:28:46 PM)</font> <b>robdubya:</b></font> tons of great angular starters<br/>
+<font color="#A82F2F"><font size="2">(12:28:54 PM)</font> <b>da_wunder:</b></font> ontologic: there is one https://github.com/tarlepp/angular-sailsjs-boilerplate<br/>
+<font color="#A82F2F"><font size="2">(12:28:56 PM)</font> <b>robdubya:</b></font> just dump in your assets folder (or a seperate repo)<br/>
+<font color="#A82F2F"><font size="2">(12:28:59 PM)</font> <b>da_wunder:</b></font> that&apos;s mine<br/>
+<font color="#A82F2F"><font size="2">(12:29:01 PM)</font> <b>robdubya:</b></font> ???<br/>
+<font color="#A82F2F"><font size="2">(12:29:03 PM)</font> <b>robdubya:</b></font> profit<br/>
+<font color="#A82F2F"><font size="2">(12:29:43 PM)</font> <b>da_wunder:</b></font> me?<br/>
+<font color="#A82F2F"><font size="2">(12:29:54 PM)</font> <b>robdubya:</b></font> everybody<br/>
+<font color="#A82F2F"><font size="2">(12:29:56 PM)</font> <b>robdubya:</b></font> nobody<br/>
+<font color="#A82F2F"><font size="2">(12:30:17 PM)</font> <b>ontologic:</b></font> yes I&apos;ve seen da_wunder and angular stands on it&apos;s own (I&apos;m not using it at this point however)<br/>
+<font color="#A82F2F"><font size="2">(12:31:00 PM)</font> <b>da_wunder:</b></font> but the idea of completely separated back- / frontend gives you more benefits really<br/>
+<font color="#A82F2F"><font size="2">(12:31:11 PM)</font> <b>ontologic:</b></font> da_wunder nice work looking at this again today<br/>
+<font color="#A82F2F"><font size="2">(12:31:29 PM)</font> <b>da_wunder:</b></font> you can make different frontend apps<br/>
+<font color="#A82F2F"><font size="2">(12:32:02 PM)</font> <b>da_wunder:</b></font> and if sails is not for you, just change it to another one. all just works if you keep the API as the same<br/>
+<font color="#A82F2F"><font size="2">(12:32:21 PM)</font> <b>ontologic:</b></font> in terms of traction, adoption, what have you, telling people how and why &apos;the hard way&apos; is the better way would be good I think<br/>
+<font color="#A82F2F"><font size="2">(12:32:34 PM)</font> <b>da_wunder:</b></font> and frontend can be made via, angular, knockout, ember, etc.<br/>
+<font color="#A82F2F"><font size="2">(12:33:07 PM)</font> <b>robdubya:</b></font> ontologic not tryng to be difficult really<br/>
+<font color="#A82F2F"><font size="2">(12:33:18 PM)</font> <b>ontologic:</b></font> I know robdubya<br/>
+<font color="#A82F2F"><font size="2">(12:33:19 PM)</font> <b>robdubya:</b></font> its just there&apos;s sooo much variety on the front end<br/>
+<font color="#A82F2F"><font size="2">(12:33:31 PM)</font> <b>robdubya:</b></font> its hard to build a boilerplate that means anything<br/>
+<font color="#A82F2F"><font size="2">(12:34:09 PM)</font> <b>da_wunder:</b></font> also separation will help load balancing<br/>
+<font color="#A82F2F"><font size="2">(12:34:43 PM)</font> <b>da_wunder:</b></font> basically frontend side is much lighter to host than backend<br/>
+<font color="#A82F2F"><font size="2">(12:35:47 PM)</font> <b>ontologic:</b></font> You guys are way ahead of me, but I&apos;ve already learned a ton from using Sails rather than MEAN, and it extends my experience with vanilla Express<br/>
+<font color="#A82F2F"><font size="2">(12:36:10 PM)</font> <b>da_wunder:</b></font> ontologic: really, i am noob with sails/node :D<br/>
+<font color="#A82F2F"><font size="2">(12:37:38 PM)</font> <b>ontologic:</b></font> So, maybe I will invite noob questions, but at that point I can show them the Sails way<br/>
+<font color="#A82F2F"><font size="2">(12:38:11 PM)</font> <b>ontologic:</b></font> if they don&apos;t think they can get a scaffold up as quickly as MEAN.io they will drop the platform (their loss, but I want to affect this)<br/>
+<font color="#A82F2F"><font size="2">(12:38:14 PM)</font> <b>da_wunder:</b></font> ontologic: basically i just started to make my first node.js app with sails some time ago<br/>
+<font color="#A82F2F"><font size="2">(12:38:29 PM)</font> <b>da_wunder:</b></font> and it&apos;s quite ok already<br/>
+<font color="#A82F2F"><font size="2">(12:38:44 PM)</font> <b>da_wunder:</b></font> ontologic: that one http://tarlepp.github.io/Taskboard/<br/>
+<font color="#A82F2F"><font size="2">(12:38:54 PM)</font> <b>ontologic:</b></font> da_wunder surely you have previous experience outside of Node!<br/>
+<font color="#A82F2F"><font size="2">(12:39:09 PM)</font> <b>da_wunder:</b></font> and now i&apos;m writing that again with sails 0.10 and angular<br/>
+<font color="#A82F2F"><font size="2">(12:39:24 PM)</font> <b>da_wunder:</b></font> ontologic: some... more than 10 years experience at work :D<br/>
+<font color="#A82F2F"><font size="2">(12:39:35 PM)</font> <b>ontologic:</b></font> da_wunder that app helped understand a lot about Sails these last few days<br/>
+<font color="#A82F2F"><font size="2">(12:40:05 PM)</font> <b>da_wunder:</b></font> really?<br/>
+<font color="#A82F2F"><font size="2">(12:40:15 PM)</font> <b>ontologic:</b></font> why yes<br/>
+<font color="#A82F2F"><font size="2">(12:40:34 PM)</font> <b>da_wunder:</b></font> but now it&apos;s Sauna time &lt;3<br/>
+<font color="#A82F2F"><font size="2">(12:40:41 PM)</font> <b>da_wunder:</b></font> and some beer<br/>
+<font color="#A82F2F"><font size="2">(12:40:51 PM)</font> <b>ontologic:</b></font> my Apartment is like a sauna<br/>
+<font color="#A82F2F"><font size="2">(12:41:12 PM)</font> <b>da_wunder:</b></font> same here<br/>
+<font color="#A82F2F"><font size="2">(12:41:12 PM)</font> <b>ontologic:</b></font> gave myself heat exhaustion, didn&apos;t know what was wrong, looked up the symptoms<br/>
+<font color="#A82F2F"><font size="2">(12:41:22 PM)</font> <b>robdubya:</b></font> yeesh<br/>
+<font color="#A82F2F"><font size="2">(12:42:01 PM)</font> <b>da_wunder:</b></font> there is the Taskboard brach that i&apos;m working on now https://github.com/tarlepp/Taskboard/tree/angular<br/>
+<font color="#A82F2F"><font size="2">(12:42:14 PM)</font> <b>ontologic:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(12:42:22 PM)</font> <b>da_wunder:</b></font> nothing much yet, still learning node / sails and angular<br/>
+<font color="#A82F2F"><font size="2">(12:43:36 PM)</font> <b>da_wunder:</b></font> ui is going to change a lot, http://wunder.sytes.net/trying.png<br/>
+<font color="#A82F2F"><font size="2">(12:43:39 PM)</font> <b>da_wunder:</b></font> but now the sauna -&gt;<br/>
+<font color="#A82F2F"><font size="2">(12:43:58 PM)</font> <b>ontologic:</b></font> da_wunder you are famous<br/>
+<font color="#A82F2F"><font size="2">(12:44:00 PM)</font> <b>ontologic:</b></font> http://stackoverflow.com/questions/24743203/sails-js-policies-with-oauth-passport<br/>
+<font size="2">(01:14:10 PM)</font><b> _Dan_E is now known as Danny_</b><br/>
+<font color="#A82F2F"><font size="2">(01:20:50 PM)</font> <b>ponzicoder:</b></font> oncologic -- back what&apos;s up<br/>
+<font color="#A82F2F"><font size="2">(01:21:02 PM)</font> <b>ontologic:</b></font> hey<br/>
+<font color="#A82F2F"><font size="2">(01:21:04 PM)</font> <b>ponzicoder:</b></font> why can&apos;t I spell ontologic<br/>
+<font color="#A82F2F"><font size="2">(01:21:18 PM)</font> <b>the-anconia:</b></font> I’m having some issues with custom defined instance methods. I added a function to my model and I call that function in a model query. Is there anything I’m missing here?<br/>
+<font color="#A82F2F"><font size="2">(01:21:25 PM)</font> <b>Aswebb:</b></font> Anyone deploying sails using docker ?<br/>
+<font color="#A82F2F"><font size="2">(01:21:56 PM)</font> <b>ontologic:</b></font> https://github.com/mvincentmiller/activityoverlord#activityoverlord<br/>
+<font color="#A82F2F"><font size="2">(01:21:56 PM)</font> <b>da_wunder:</b></font> the-anconia: code examples would help alot<br/>
+<font color="#A82F2F"><font size="2">(01:22:23 PM)</font> <b>ontologic:</b></font> ponzicoder<br/>
+<font color="#A82F2F"><font size="2">(01:22:37 PM)</font> <b>ponzicoder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(01:22:44 PM)</font> <b>ontologic:</b></font> thus far all I have done is added a new model/controller and attempted to make all endpoints public<br/>
+<font size="2">(01:22:47 PM)</font><b> ponzicoder left the room.</b><br/>
+<font size="2">(01:23:10 PM)</font><b> ponzicoder [<em>~ponzicode@70.114.209.211</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(01:23:19 PM)</font> <b>ponzicoder:</b></font> back<br/>
+<font color="#A82F2F"><font size="2">(01:23:22 PM)</font> <b>the-anconia:</b></font> da_wunder one minute<br/>
+<font color="#A82F2F"><font size="2">(01:23:25 PM)</font> <b>ontologic:</b></font> thus far all I have done is added a new model/controller and attempted to make all endpoints public<br/>
+<font color="#A82F2F"><font size="2">(01:23:47 PM)</font> <b>ontologic:</b></font> so I should see an empty array at /entry<br/>
+<font color="#A82F2F"><font size="2">(01:24:16 PM)</font> <b>ponzicoder:</b></font> will clone….sec<br/>
+<font color="#A82F2F"><font size="2">(01:26:16 PM)</font> <b>the-anconia:</b></font> Here you go http://jsfiddle.net/atommorgan/TS22x/<br/>
+<font color="#A82F2F"><font size="2">(01:29:59 PM)</font> <b>da_wunder:</b></font> the-anconia: are you sure there is a record?<br/>
+<font color="#A82F2F"><font size="2">(01:30:06 PM)</font> <b>da_wunder:</b></font> and no err?<br/>
+<font color="#A82F2F"><font size="2">(01:30:07 PM)</font> <b>the-anconia:</b></font> Positive.<br/>
+<font color="#A82F2F"><font size="2">(01:30:36 PM)</font> <b>the-anconia:</b></font> It renders my view if I take out the function calls in that query.<br/>
+<font color="#A82F2F"><font size="2">(01:30:43 PM)</font> <b>da_wunder:</b></font> just humor me and console.log(err); and console.log(location);<br/>
+<font color="#A82F2F"><font size="2">(01:30:54 PM)</font> <b>the-anconia:</b></font> I get back “TypeError: Object [object Object],[object Object] has no method &apos;profileStreetLine’”<br/>
+<font color="#A82F2F"><font size="2">(01:32:18 PM)</font> <b>da_wunder:</b></font> the-anconia: and there is missing attributes also?<br/>
+<font color="#A82F2F"><font size="2">(01:32:27 PM)</font> <b>da_wunder:</b></font> city, province and postalCode<br/>
+<font color="#A82F2F"><font size="2">(01:33:19 PM)</font> <b>da_wunder:</b></font> and that location is an array of locations<br/>
+<font color="#A82F2F"><font size="2">(01:33:20 PM)</font> <b>the-anconia:</b></font> I just left those out to keep the fiddle short<br/>
+<font color="#A82F2F"><font size="2">(01:33:25 PM)</font> <b>da_wunder:</b></font> use findOne<br/>
+<font color="#A82F2F"><font size="2">(01:33:37 PM)</font> <b>da_wunder:</b></font> find() will always return array of objects<br/>
+<font color="#A82F2F"><font size="2">(01:33:42 PM)</font> <b>da_wunder:</b></font> findOne just one<br/>
+<font color="#A82F2F"><font size="2">(01:33:51 PM)</font> <b>the-anconia:</b></font> Ah<br/>
+<font color="#A82F2F"><font size="2">(01:34:17 PM)</font> <b>da_wunder:</b></font> that&apos;s why i wanted you to console.log(err) and console.log(location)<br/>
+<font color="#A82F2F"><font size="2">(01:34:34 PM)</font> <b>da_wunder:</b></font> that would say that directly<br/>
+<font color="#A82F2F"><font size="2">(01:34:55 PM)</font> <b>da_wunder:</b></font> the-anconia: and please don&apos;t shortup those pastes<br/>
+<font color="#A82F2F"><font size="2">(01:34:57 PM)</font> <b>the-anconia:</b></font> It hit the error with the method before it logged anything<br/>
+<font color="#A82F2F"><font size="2">(01:35:03 PM)</font> <b>the-anconia:</b></font> Sorry<br/>
+<font color="#A82F2F"><font size="2">(01:35:12 PM)</font> <b>da_wunder:</b></font> because then it&apos;s more confusing<br/>
+<font color="#A82F2F"><font size="2">(01:35:43 PM)</font> <b>the-anconia:</b></font> So can you only use custom instance methods when you’re finding one record in a query?<br/>
+<font color="#A82F2F"><font size="2">(01:36:05 PM)</font> <b>da_wunder:</b></font> console.log(location[0].profileStreetLine());<br/>
+<font color="#A82F2F"><font size="2">(01:36:23 PM)</font> <b>da_wunder:</b></font> in your case location is an array of objects, that contains that function<br/>
+<font color="#A82F2F"><font size="2">(01:38:19 PM)</font> <b>da_wunder:</b></font> http://beta.sailsjs.org/#/documentation/concepts/Models/Model-Methods/find.html vs http://beta.sailsjs.org/#/documentation/concepts/Models/Model-Methods/findOne.html<br/>
+<font color="#A82F2F"><font size="2">(01:39:18 PM)</font> <b>the-anconia:</b></font> This worked console.log(location[0].profileStreetLine());<br/>
+<font color="#A82F2F"><font size="2">(01:39:24 PM)</font> <b>the-anconia:</b></font> Thank you da_wunder<br/>
+<font color="#A82F2F"><font size="2">(01:39:47 PM)</font> <b>da_wunder:</b></font> the-anconia: if you&apos;re just fetching one record use findOne()<br/>
+<font color="#A82F2F"><font size="2">(01:39:59 PM)</font> <b>da_wunder:</b></font> and still make sure that you have that record...<br/>
+<font color="#A82F2F"><font size="2">(01:41:06 PM)</font> <b>the-anconia:</b></font> I’m fetching two records<br/>
+<font color="#A82F2F"><font size="2">(01:41:26 PM)</font> <b>da_wunder:</b></font> so there is also location[1].profileStreetLine() then<br/>
+<font color="#A82F2F"><font size="2">(01:41:52 PM)</font> <b>da_wunder:</b></font> i&apos;m just making sure that you understand what you&apos;re doing<br/>
+<font color="#A82F2F"><font size="2">(01:42:19 PM)</font> <b>da_wunder:</b></font> or location[some index here].profileStreetLine()<br/>
+<font color="#A82F2F"><font size="2">(01:42:57 PM)</font> <b>the-anconia:</b></font> Yes, I understand.<br/>
+<font color="#A82F2F"><font size="2">(01:43:02 PM)</font> <b>da_wunder:</b></font> good<br/>
+<font color="#A82F2F"><font size="2">(01:43:15 PM)</font> <b>the-anconia:</b></font> Once you mentioned that it made perfect sense. The methods work now :D<br/>
+<font color="#A82F2F"><font size="2">(01:43:27 PM)</font> <b>da_wunder:</b></font> nice<br/>
+<font color="#A82F2F"><font size="2">(01:47:45 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(01:48:01 PM)</font> <b>da_wunder:</b></font> btw, anyone done localization of texts here?<br/>
+<font color="#A82F2F"><font size="2">(01:48:11 PM)</font> <b>da_wunder:</b></font> and not in files, but in database<br/>
+<font color="#A82F2F"><font size="2">(01:48:36 PM)</font> <b>da_wunder:</b></font> initial data from fixture, but after that admin users can change texts on gui<br/>
+<font color="#A82F2F"><font size="2">(01:52:23 PM)</font> <b>da_wunder:</b></font> generator for that would be awesome<br/>
+<font color="#A82F2F"><font size="2">(01:52:33 PM)</font> <b>da_wunder:</b></font> basically two models: Language and Tag<br/>
+<font color="#A82F2F"><font size="2">(02:16:23 PM)</font> <b>the-anconia:</b></font> What is the recommended way to manipulate data before it’s displayed in a view?<br/>
+<font color="#A82F2F"><font size="2">(02:16:52 PM)</font> <b>da_wunder:</b></font> more info? use case maybe?<br/>
+<font color="#A82F2F"><font size="2">(02:29:15 PM)</font> <b>ICCULUSC:</b></font> holy shit you wouldn&apos;t think it would be that hard to find a 1br apartment in a college town<br/>
+<font color="#A82F2F"><font size="2">(02:38:04 PM)</font> <b>marc_v92:</b></font> ICCULUSC: Depends on the town, lol. 9/10 rental listings are for student housing here.<br/>
+<font color="#A82F2F"><font size="2">(02:38:12 PM)</font> <b>ICCULUSC:</b></font> bout 50% here<br/>
+<font color="#A82F2F"><font size="2">(02:38:35 PM)</font> <b>ICCULUSC:</b></font> and those are a bitch because it&apos;s like oh did yo uwant a 1 bedroom for 490?<br/>
+<font color="#A82F2F"><font size="2">(02:38:36 PM)</font> <b>ICCULUSC:</b></font> just kidding<br/>
+<font color="#A82F2F"><font size="2">(02:39:06 PM)</font> <b>JemiloII:</b></font> student loans inflate the housing probably<br/>
+<font color="#A82F2F"><font size="2">(02:39:17 PM)</font> <b>da_wunder:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(02:39:30 PM)</font> <b>da_wunder:</b></font> that&apos;s why students have to work nowadays<br/>
+<font color="#A82F2F"><font size="2">(02:39:32 PM)</font> <b>ICCULUSC:</b></font> well they are like 4 bedroom shared shit<br/>
+<font color="#A82F2F"><font size="2">(02:39:34 PM)</font> <b>JemiloII:</b></font> why i don&apos;t believe in the american school system<br/>
+<font color="#A82F2F"><font size="2">(02:39:37 PM)</font> <b>ICCULUSC:</b></font> yeah it&apos;s 495 for a 1 bedroom<br/>
+<font color="#A82F2F"><font size="2">(02:39:40 PM)</font> <b>ICCULUSC:</b></font> but you&apos;re sharing a bathroom with 3 people<br/>
+<font color="#A82F2F"><font size="2">(02:39:42 PM)</font> <b>ICCULUSC:</b></font> and a living room<br/>
+<font color="#A82F2F"><font size="2">(02:39:43 PM)</font> <b>ICCULUSC:</b></font> and a kitchen<br/>
+<font color="#A82F2F"><font size="2">(02:39:44 PM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:39:51 PM)</font> <b>marc_v92:</b></font> ICCULUSC: That’s pretty cheap compared to here actually, lol.<br/>
+<font color="#A82F2F"><font size="2">(02:40:01 PM)</font> <b>ICCULUSC:</b></font> well an actual 1br here is like 625-750<br/>
+<font color="#A82F2F"><font size="2">(02:40:11 PM)</font> <b>ICCULUSC:</b></font> and i can pretty much move wherever i want but all of the sweet places don&apos;t hit me up<br/>
+<font color="#A82F2F"><font size="2">(02:40:12 PM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:40:19 PM)</font> <b>marc_v92:</b></font> Lol.<br/>
+<font color="#A82F2F"><font size="2">(02:40:21 PM)</font> <b>da_wunder:</b></font> ICCULUSC: in here the prizes are about 250-350 on that kind of apartments<br/>
+<font color="#A82F2F"><font size="2">(02:40:27 PM)</font> <b>ICCULUSC:</b></font> like there&apos;s a big apartment buildling from the 60s like 1 block from here<br/>
+<font color="#A82F2F"><font size="2">(02:40:31 PM)</font> <b>ICCULUSC:</b></font> penthouse is available<br/>
+<font color="#A82F2F"><font size="2">(02:40:33 PM)</font> <b>da_wunder:</b></font> but those are euros :D<br/>
+<font color="#A82F2F"><font size="2">(02:40:35 PM)</font> <b>ICCULUSC:</b></font> nobody answers my fucking messages<br/>
+<font color="#A82F2F"><font size="2">(02:40:37 PM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:41:05 PM)</font> <b>da_wunder:</b></font> and now i&apos;m paying 1.1k€ of our apartment<br/>
+<font color="#A82F2F"><font size="2">(02:41:23 PM)</font> <b>da_wunder:</b></font> and it&apos;s rental<br/>
+<font color="#A82F2F"><font size="2">(02:41:25 PM)</font> <b>ICCULUSC:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(02:41:34 PM)</font> <b>ICCULUSC:</b></font> i just want this one studio that&apos;s a block from here but they don&apos;t answer their emails<br/>
+<font color="#A82F2F"><font size="2">(02:41:34 PM)</font> <b>ICCULUSC:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(02:42:14 PM)</font> <b>ICCULUSC:</b></font> where are you at marc_v92<br/>
+<font color="#A82F2F"><font size="2">(02:42:33 PM)</font> <b>marc_v92:</b></font> Waterloo, ON<br/>
+<font color="#A82F2F"><font size="2">(02:42:35 PM)</font> <b>da_wunder:</b></font> but still this is nice, own sauna, lake view from balcony<br/>
+<font color="#A82F2F"><font size="2">(02:42:43 PM)</font> <b>ICCULUSC:</b></font> word<br/>
+<font color="#A82F2F"><font size="2">(02:42:46 PM)</font> <b>ICCULUSC:</b></font> yeah that sounds nice<br/>
+<font color="#A82F2F"><font size="2">(02:42:52 PM)</font> <b>Chubbs1:</b></font> pfft, you think Waterloo is expensive, try living downtown Toronto :\<br/>
+<font color="#A82F2F"><font size="2">(02:42:55 PM)</font> <b>da_wunder:</b></font> distance to city center about 3km<br/>
+<font color="#A82F2F"><font size="2">(02:43:10 PM)</font> <b>marc_v92:</b></font> Chubbs1: Cost of living is one of many reasons I avoid Toronto, hahaha.<br/>
+<font size="2">(02:43:10 PM)</font><b> Chubbs1 is now known as Chubbs</b><br/>
+<font color="#A82F2F"><font size="2">(02:43:35 PM)</font> <b>ICCULUSC:</b></font> yeah it&apos;s cheap here<br/>
+<font color="#A82F2F"><font size="2">(02:43:38 PM)</font> <b>ICCULUSC:</b></font> but there&apos;s not a lot of nice shit<br/>
+<font color="#A82F2F"><font size="2">(02:43:44 PM)</font> <b>ICCULUSC:</b></font> i could pay like 1500 a month and live like a king<br/>
+<font color="#A82F2F"><font size="2">(02:43:47 PM)</font> <b>ICCULUSC:</b></font> but i&apos;d rather not... lol<br/>
+<font color="#A82F2F"><font size="2">(02:43:51 PM)</font> <b>Chubbs:</b></font> Its a cost I&apos;m willing to eat to live downtown, but I&apos;m lucky to have a good rental deal… I just pray that my landlord doesnt die anytime soon<br/>
+<font color="#A82F2F"><font size="2">(02:44:23 PM)</font> <b>marc_v92:</b></font> Chubbs: Haha, yeah. 1BDR apartments in downtown TO can be over $2K/mo…and that’s not even the higher end ones.<br/>
+<font color="#A82F2F"><font size="2">(02:44:41 PM)</font> <b>Chubbs:</b></font> Thats really high end<br/>
+<font color="#A82F2F"><font size="2">(02:44:43 PM)</font> <b>ICCULUSC:</b></font> how nice though<br/>
+<font color="#A82F2F"><font size="2">(02:44:45 PM)</font> <b>ICCULUSC:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(02:44:46 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(02:44:54 PM)</font> <b>Chubbs:</b></font> A typical 1BR is around 1200 where i am downtown<br/>
+<font color="#A82F2F"><font size="2">(02:45:02 PM)</font> <b>ICCULUSC:</b></font> i mean 1200 sq ft 2 br 2 full bath apartment on the top of this tower over here is like 1500<br/>
+<font color="#A82F2F"><font size="2">(02:45:06 PM)</font> <b>JemiloII:</b></font> powered by 100% wind energy makes me laugh<br/>
+<font color="#A82F2F"><font size="2">(02:45:14 PM)</font> <b>da_wunder:</b></font> we have 3 beedrooms, sauna, etc, about 85m2<br/>
+<font color="#A82F2F"><font size="2">(02:45:25 PM)</font> <b>JemiloII:</b></font> yeah bros so when there is no wind your server farm is shutting off<br/>
+<font color="#A82F2F"><font size="2">(02:45:32 PM)</font> <b>marc_v92:</b></font> Chubbs: Actually, that’s not too bad, then. I mean, compared to other regions it’s a lot, but for downtown TO that’s not too bad.<br/>
+<font color="#A82F2F"><font size="2">(02:45:36 PM)</font> <b>ICCULUSC:</b></font> lol sounds like my buddy&apos;s apartment in copenhagen<br/>
+<font color="#A82F2F"><font size="2">(02:45:40 PM)</font> <b>ICCULUSC:</b></font> except his was like 93m2<br/>
+<font color="#A82F2F"><font size="2">(02:45:41 PM)</font> <b>JemiloII:</b></font> https://www.ipage.com/ipage/index.html  &lt;-- to lol at hosting<br/>
+<font color="#A82F2F"><font size="2">(02:45:58 PM)</font> <b>da_wunder:</b></font> ICCULUSC: close, i&apos;m from Finland :D<br/>
+<font color="#A82F2F"><font size="2">(02:46:02 PM)</font> <b>ICCULUSC:</b></font> he owned the apartment so he got rid of the roomates<br/>
+<font color="#A82F2F"><font size="2">(02:46:05 PM)</font> <b>ICCULUSC:</b></font> eventually<br/>
+<font color="#A82F2F"><font size="2">(02:46:09 PM)</font> <b>ICCULUSC:</b></font> not like on purpose lol they just moved out<br/>
+<font color="#A82F2F"><font size="2">(02:46:11 PM)</font> <b>ICCULUSC:</b></font> and he turned it into a loft<br/>
+<font color="#A82F2F"><font size="2">(02:46:28 PM)</font> <b>ICCULUSC:</b></font> so he has like a 93m2 single room<br/>
+<font color="#A82F2F"><font size="2">(02:46:49 PM)</font> <b>da_wunder:</b></font> toilet with glass walls?<br/>
+<font color="#A82F2F"><font size="2">(02:46:56 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(02:46:57 PM)</font> <b>ICCULUSC:</b></font> lol it is actually separate<br/>
+<font color="#A82F2F"><font size="2">(02:53:58 PM)</font> <b>ICCULUSC:</b></font> thankfully so now that i think about it<br/>
+<font color="#A82F2F"><font size="2">(02:54:02 PM)</font> <b>ICCULUSC:</b></font> considering he video chats on skype and is like brb shit<br/>
+<font color="#A82F2F"><font size="2">(02:56:19 PM)</font> <b>marc_v92:</b></font> Well, it’s 4:56pm. About time to start logging off and heading home.<br/>
+<font color="#A82F2F"><font size="2">(02:56:25 PM)</font> <b>ICCULUSC:</b></font> lucky<br/>
+<font color="#A82F2F"><font size="2">(02:56:48 PM)</font> <b>marc_v92:</b></font> Good thing client services responded to my email at 11pm so that I could get their project out by their deadline…oh wait, no they didn’t. Guess they’ll just have to wait. :)<br/>
+<font color="#A82F2F"><font size="2">(02:56:56 PM)</font> <b>marc_v92:</b></font> 11am*<br/>
+<font color="#A82F2F"><font size="2">(02:57:08 PM)</font> <b>marc_v92:</b></font> Later, all.<br/>
+<font size="2">(02:57:39 PM)</font><b> marc_v92 left the room (quit: Quit: I should probably get back to work...).</b><br/>
+<font color="#A82F2F"><font size="2">(03:26:48 PM)</font> <b>Howard3:</b></font> Two part question: What version of socket.io does sails.io.js implement? And second what&apos;s the best way to compile it into a script with browserify (browserify makes require(), module.exports etc available, so sails.io.js thinks it&apos;s in a node environment)<br/>
+<font color="#A82F2F"><font size="2">(05:18:51 PM)</font> <b>netameta:</b></font> anyone knows  cron module ?<br/>
+<font color="#A82F2F"><font size="2">(05:22:24 PM)</font> <b>da_wunder:</b></font> netameta: https://github.com/ncb000gt/node-cron ?<br/>
+<font color="#A82F2F"><font size="2">(05:22:47 PM)</font> <b>netameta:</b></font> Read that already<br/>
+<font color="#A82F2F"><font size="2">(05:22:55 PM)</font> <b>netameta:</b></font> they dont have timezone list there<br/>
+<font color="#A82F2F"><font size="2">(05:23:11 PM)</font> <b>netameta:</b></font> They only have America/Los_Angeles<br/>
+<font color="#A82F2F"><font size="2">(05:23:15 PM)</font> <b>netameta:</b></font> as an example<br/>
+<font color="#A82F2F"><font size="2">(05:23:17 PM)</font> <b>da_wunder:</b></font> just manage those yourself?<br/>
+<font color="#A82F2F"><font size="2">(05:23:20 PM)</font> <b>netameta:</b></font> what about southern timzone<br/>
+<font color="#A82F2F"><font size="2">(05:23:27 PM)</font> <b>da_wunder:</b></font> moment.js is great for that<br/>
+<font color="#A82F2F"><font size="2">(05:23:28 PM)</font> <b>netameta:</b></font> I dont know what their are called<br/>
+<font color="#A82F2F"><font size="2">(05:23:54 PM)</font> <b>da_wunder:</b></font> first normalize all times to utc<br/>
+<font color="#A82F2F"><font size="2">(05:24:18 PM)</font> <b>da_wunder:</b></font> and then just convert those times (if needed) to some other timezone<br/>
+<font color="#A82F2F"><font size="2">(05:24:29 PM)</font> <b>da_wunder:</b></font> basic dn design<br/>
+<font color="#A82F2F"><font size="2">(05:24:37 PM)</font> <b>da_wunder:</b></font> dn == db<br/>
+<font color="#A82F2F"><font size="2">(05:25:16 PM)</font> <b>netameta:</b></font> i am missing something i think<br/>
+<font color="#A82F2F"><font size="2">(05:25:51 PM)</font> <b>da_wunder:</b></font> cron is running where ever your server is running<br/>
+<font color="#A82F2F"><font size="2">(05:25:59 PM)</font> <b>netameta:</b></font> yea<br/>
+<font color="#A82F2F"><font size="2">(05:26:00 PM)</font> <b>da_wunder:</b></font> and it will use it time<br/>
+<font color="#A82F2F"><font size="2">(05:26:05 PM)</font> <b>da_wunder:</b></font> and for that<br/>
+<font color="#A82F2F"><font size="2">(05:26:08 PM)</font> <b>netameta:</b></font> so far so good<br/>
+<font color="#A82F2F"><font size="2">(05:26:21 PM)</font> <b>da_wunder:</b></font> you need first normalize all times from users to utc<br/>
+<font color="#A82F2F"><font size="2">(05:26:34 PM)</font> <b>netameta:</b></font> but as i can see in cron module you can specify which time zone to run<br/>
+<font color="#A82F2F"><font size="2">(05:26:36 PM)</font> <b>da_wunder:</b></font> and then convert those to your server timezone<br/>
+<font color="#A82F2F"><font size="2">(05:26:55 PM)</font> <b>da_wunder:</b></font> netameta: it&apos;s running that timezone as the server is<br/>
+<font color="#A82F2F"><font size="2">(05:27:16 PM)</font> <b>netameta:</b></font> so whats the timezone attribute there for ?<br/>
+<font color="#A82F2F"><font size="2">(05:27:18 PM)</font> <b>da_wunder:</b></font> or whatever is it configured<br/>
+<font color="#A82F2F"><font size="2">(05:27:21 PM)</font> <b>netameta:</b></font> if that makes sense<br/>
+<font color="#A82F2F"><font size="2">(05:28:05 PM)</font> <b>da_wunder:</b></font> cat /etc/sysconfig/clock<br/>
+<font color="#A82F2F"><font size="2">(05:29:05 PM)</font> <b>netameta:</b></font> new CronJob(&apos;....&apos;, function(){}, function () {},true , &quot;America/Los_Angeles&quot;); you&apos;re able to specify which timezone to run the crons on<br/>
+<font color="#A82F2F"><font size="2">(05:29:44 PM)</font> <b>netameta:</b></font> they us america/Los_Angeles  in their example i believe there are other<br/>
+<font color="#A82F2F"><font size="2">(05:30:24 PM)</font> <b>da_wunder:</b></font> hmm, if that works that way just try it?<br/>
+<font color="#A82F2F"><font size="2">(05:30:55 PM)</font> <b>netameta:</b></font> But america/Los_Angeles  is a constant that they have defined i belive ther&apos;s a whole list of it where can i find it<br/>
+<font color="#A82F2F"><font size="2">(05:31:07 PM)</font> <b>da_wunder:</b></font> use moment<br/>
+<font color="#A82F2F"><font size="2">(05:31:26 PM)</font> <b>da_wunder:</b></font> http://momentjs.com/timezone/<br/>
+<font color="#A82F2F"><font size="2">(05:31:42 PM)</font> <b>da_wunder:</b></font> and yes there are many<br/>
+<font color="#A82F2F"><font size="2">(05:31:56 PM)</font> <b>netameta:</b></font> There we go!<br/>
+<font color="#A82F2F"><font size="2">(05:32:00 PM)</font> <b>da_wunder:</b></font> and those are always changing :D<br/>
+<font color="#A82F2F"><font size="2">(05:32:36 PM)</font> <b>da_wunder:</b></font> netameta: and you could use that https://github.com/tarlepp/Taskboard/blob/master/api/services/DateService.js#L46<br/>
+<font color="#A82F2F"><font size="2">(05:34:09 PM)</font> <b>netameta:</b></font> well right now my dates are being save in this format 07/25/2014 not as new Date object which sucks so for now i wont do any conversion until the clients want to normalize all dates<br/>
+<font color="#A82F2F"><font size="2">(05:34:39 PM)</font> <b>da_wunder:</b></font> netameta: why you dont use type: &apos;date&apos; ?<br/>
+<font color="#A82F2F"><font size="2">(05:35:21 PM)</font> <b>netameta:</b></font> well its an existing project i joined in, cant change everything they have there in a day - this is next on the list though<br/>
+<font color="#A82F2F"><font size="2">(05:35:26 PM)</font> <b>netameta:</b></font> fixing the way they save dates<br/>
+<font color="#A82F2F"><font size="2">(05:35:29 PM)</font> <b>da_wunder:</b></font> and that format: http://imagizer.imageshack.us/a/img843/3285/wallapers101.png<br/>
+<font color="#A82F2F"><font size="2">(05:35:38 PM)</font> <b>da_wunder:</b></font> :D<br/>
+<font color="#A82F2F"><font size="2">(05:36:32 PM)</font> <b>netameta:</b></font> new cronJob(&apos;00 00 1* * 0-6&apos;, function(){ by the documents this cron will run every day at 1:00 am<br/>
+<font color="#A82F2F"><font size="2">(05:36:35 PM)</font> <b>netameta:</b></font> right ?<br/>
+<font color="#A82F2F"><font size="2">(05:37:10 PM)</font> <b>netameta:</b></font> The above line is interesting show how americal logic is twisted :-)<br/>
+<font color="#A82F2F"><font size="2">(05:37:49 PM)</font> <b>da_wunder:</b></font> netameta: ype<br/>
+<font color="#A82F2F"><font size="2">(05:37:53 PM)</font> <b>da_wunder:</b></font> netameta: http://www.thesitewizard.com/general/set-cron-job.shtml<br/>
+<font color="#A82F2F"><font size="2">(05:38:04 PM)</font> <b>da_wunder:</b></font> that shows you the format<br/>
+<font color="#A82F2F"><font size="2">(05:39:41 PM)</font> <b>netameta:</b></font> Thanks man<br/>
+<font color="#A82F2F"><font size="2">(05:40:11 PM)</font> <b>netameta:</b></font> bah almost done with this task. gotta go to the pool though. be back later<br/>
+<font size="2">(05:58:11 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

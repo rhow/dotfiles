@@ -1,0 +1,124 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sun 06 Apr 2014 09:04:01 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sun 06 Apr 2014 09:04:01 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:04:01 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(09:04:29 AM)</font> <b>Asweb:</b></font> btw Mike, do you think I can do req.param(&quot;section&quot;).findOne<br/>
+<font color="#A82F2F"><font size="2">(09:04:31 AM)</font> <b>Asweb:</b></font> for example?<br/>
+<font color="#A82F2F"><font size="2">(09:04:36 AM)</font> <b>Asweb:</b></font> pass dynamic attribute<br/>
+<font color="#A82F2F"><font size="2">(09:05:01 AM)</font> <b>Asweb:</b></font> or User.create({    req.param(&quot;section&quot;): &quot;921891091&quot; })<br/>
+<font color="#A82F2F"><font size="2">(09:05:12 AM)</font> <b>mikermcneil:</b></font> User.create(values)…<br/>
+<font color="#A82F2F"><font size="2">(09:05:18 AM)</font> <b>mikermcneil:</b></font> oops sorry<br/>
+<font color="#A82F2F"><font size="2">(09:05:20 AM)</font> <b>mikermcneil:</b></font> didn’t do multiline<br/>
+<font color="#A82F2F"><font size="2">(09:05:38 AM)</font> <b>Asweb:</b></font> mhh well, I wanted to try to create an object passing a dynamic attribute field<br/>
+<font color="#A82F2F"><font size="2">(09:05:40 AM)</font> <b>Asweb:</b></font> not a static one<br/>
+<font color="#A82F2F"><font size="2">(09:05:53 AM)</font> <b>mikermcneil:</b></font> var values = {}; values[req.param(‘section’)] = 021891091; User.create(values).exec(....)<br/>
+<font color="#A82F2F"><font size="2">(09:06:00 AM)</font> <b>delight:</b></font> mikermcneil: last question on this …  so the best would be to add a sails.config.views.locals.modTitle = function() { do something } to bootstrap !? right … maybe in a sails.on(’lifted’) {} block … or is there a different place<br/>
+<font color="#A82F2F"><font size="2">(09:06:03 AM)</font> <b>delight:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(09:06:18 AM)</font> <b>mikermcneil:</b></font> you can just drop it in your `config/views..js` file<br/>
+<font color="#A82F2F"><font size="2">(09:06:20 AM)</font> <b>Asweb:</b></font> thanks mike<br/>
+<font color="#A82F2F"><font size="2">(09:06:34 AM)</font> <b>mikermcneil:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(09:06:34 AM)</font> <b>delight:</b></font> nice<br/>
+<font color="#A82F2F"><font size="2">(09:06:46 AM)</font> <b>mikermcneil:</b></font> just wrote this last night:<br/>
+<font color="#A82F2F"><font size="2">(09:06:47 AM)</font> <b>mikermcneil:</b></font> https://github.com/balderdashy/sails-docs/blob/master/reference/Globals.md#sailsconfig<br/>
+<font color="#A82F2F"><font size="2">(09:12:52 AM)</font> <b>krasnyPL:</b></font> if i install package globally than i can access in bash command line tool from that package. But for example if i install glabally package version 2.4 and the same package but version 1.2. locally in project directory, than from bash i have access to this global tool  from version 2.4. So if i want use command line tool from 1.2 local version i have to source it manually? Is there a way to install mutliple version of the same packag<br/>
+<font color="#A82F2F"><font size="2">(09:13:42 AM)</font> <b>lenswipe:</b></font> mikermcneil, theres also an issue with the badRequest response<br/>
+<font color="#A82F2F"><font size="2">(09:14:36 AM)</font> <b>lenswipe:</b></font> mikaeldice, 404, 403 and 500 all return HTML or JSON depending on the Accepts header. 400 only returns JSON.<br/>
+<font color="#A82F2F"><font size="2">(09:14:40 AM)</font> <b>lenswipe:</b></font> err mikermcneil even<br/>
+<font color="#A82F2F"><font size="2">(09:16:02 AM)</font> <b>mikermcneil:</b></font> correct- this is configurable of course<br/>
+<font color="#A82F2F"><font size="2">(09:16:13 AM)</font> <b>mikermcneil:</b></font> but the idea is that 400 often relates to a validation error<br/>
+<font color="#A82F2F"><font size="2">(09:16:22 AM)</font> <b>mikermcneil:</b></font> so in most cases you’ll want to rerender an existing view<br/>
+<font color="#A82F2F"><font size="2">(09:16:29 AM)</font> <b>mikermcneil:</b></font> or set a flash message in the session and redirect<br/>
+<font color="#A82F2F"><font size="2">(09:16:43 AM)</font> <b>mikermcneil:</b></font> not that there isn’t a valid use case to have a 400 page<br/>
+<font color="#A82F2F"><font size="2">(09:16:51 AM)</font> <b>lenswipe:</b></font> i see<br/>
+<font color="#A82F2F"><font size="2">(09:16:56 AM)</font> <b>mikermcneil:</b></font> just the validation use case is more common<br/>
+<font color="#A82F2F"><font size="2">(09:23:27 AM)</font> <b>delight:</b></font> mikermcneil: thnx for the tip something like http://chopapp.com/#58baxgtt works awesome … i guess to be able to call the i18n function from there i have to require it … maybe even npm install it … we’ll see :)<br/>
+<font color="#A82F2F"><font size="2">(09:23:52 AM)</font> <b>mikermcneil:</b></font> link didn’t work<br/>
+<font color="#A82F2F"><font size="2">(09:24:18 AM)</font> <b>delight:</b></font> yea i should have stayed with pastebin<br/>
+<font color="#A82F2F"><font size="2">(09:24:35 AM)</font> <b>delight:</b></font> oh wait … it just takes a long to to display … lol<br/>
+<font color="#A82F2F"><font size="2">(09:25:32 AM)</font> <b>delight:</b></font> http://pastebin.com/KxMvzsV0<br/>
+<font color="#A82F2F"><font size="2">(09:29:17 AM)</font> <b>mikermcneil:</b></font> looks good<br/>
+<font color="#A82F2F"><font size="2">(09:29:25 AM)</font> <b>mikermcneil:</b></font> we have built-in i18n support as well- not sure if that works for you or not<br/>
+<font color="#A82F2F"><font size="2">(09:34:13 AM)</font> <b>delight:</b></font> mikermcneil: yes i18n works in general … but I was not able to call i18n from my custom function in config/views.js … so i tried installing i18n with npm into my project and requiring it in there … so far so good … but it also needs the i18n.configure part …<br/>
+<font color="#A82F2F"><font size="2">(09:34:45 AM)</font> <b>delight:</b></font> well … I guess I will have double locales config if I want to use it like this<br/>
+<font color="#A82F2F"><font size="2">(09:35:33 AM)</font> <b>delight:</b></font> double i18n config is what i ment so say<br/>
+<font color="#A82F2F"><font size="2">(09:35:55 AM)</font> <b>mikermcneil:</b></font> you could prbably configure your new dep to use the existing locales<br/>
+<font color="#A82F2F"><font size="2">(09:36:04 AM)</font> <b>mikermcneil:</b></font> maybe back em up first to be safe :)<br/>
+<font color="#A82F2F"><font size="2">(09:36:12 AM)</font> <b>delight:</b></font> I’ll try …<br/>
+<font color="#A82F2F"><font size="2">(09:36:18 AM)</font> <b>delight:</b></font> no problem its all on git<br/>
+<font color="#A82F2F"><font size="2">(09:38:38 AM)</font> <b>mikermcneil:</b></font> good<br/>
+<font color="#A82F2F"><font size="2">(09:38:40 AM)</font> <b>mikermcneil:</b></font> (you never know)<br/>
+<font color="#A82F2F"><font size="2">(09:59:49 AM)</font> <b>delight:</b></font> semi functional … http://pastebin.com/JknmCsJc … it would grab the translation but not based on the browsers accept-language settings … oh well enought of fooling with that :-D but it is for sure nice to be able to implement some custom function in config/views.js<br/>
+<font color="#A82F2F"><font size="2">(09:59:57 AM)</font> <b>delight:</b></font> -t<br/>
+<font color="#A82F2F"><font size="2">(10:00:04 AM)</font> <b>mikermcneil:</b></font> sweet<br/>
+<font color="#A82F2F"><font size="2">(10:00:45 AM)</font> <b>delight:</b></font> well … semi-sweet … not really working<br/>
+<font color="#A82F2F"><font size="2">(10:01:51 AM)</font> <b>mikermcneil:</b></font> for it to be based on the accept language headers, it needs to be modified on a per-request basis<br/>
+<font color="#A82F2F"><font size="2">(10:02:04 AM)</font> <b>delight:</b></font> i guess its missing somewhat the app.use(i18n.init) or I would have to set the local everytime by the req.acceptLanguage<br/>
+<font color="#A82F2F"><font size="2">(10:02:39 AM)</font> <b>delight:</b></font> ^^^<br/>
+<font color="#A82F2F"><font size="2">(10:03:10 AM)</font> <b>mikermcneil:</b></font> so &lt;%= __(‘foo’) %&gt; isn’t working for you in your views currently<br/>
+<font color="#A82F2F"><font size="2">(10:03:11 AM)</font> <b>mikermcneil:</b></font> ?<br/>
+<font size="2">(10:03:18 AM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(10:04:09 AM)</font> <b>delight:</b></font> in most cases it does … just figured out a special case and wanted to see how far i can go with it … use case was:…<br/>
+<font color="#A82F2F"><font size="2">(10:06:48 AM)</font> <b>delight:</b></font> I used jade and had a block on title … which works fine so war .. and now the pages would paste in there title … Idea was to 1st 18n the title and second append a „| i18n.(’appName’)“ by default … but only if the title is specified … if not it would do only i18n(’appName’) … but basicaly I was fooling around with it and seeing how far I can go<br/>
+<font color="#A82F2F"><font size="2">(10:09:23 AM)</font> <b>mikermcneil:</b></font> gotcha- so you want to add an app-wide local<br/>
+<font color="#A82F2F"><font size="2">(10:09:35 AM)</font> <b>mikermcneil:</b></font> but you need access to the i18n instance in that function<br/>
+<font color="#A82F2F"><font size="2">(10:09:40 AM)</font> <b>delight:</b></font> hmmm … oh my I think it should be possible to solf this already from with in i18n by just using a smarter translation string<br/>
+<font color="#A82F2F"><font size="2">(10:10:13 AM)</font> <b>delight:</b></font> yes that was the Idea … but as I said in general I was basically fooling with it<br/>
+<font color="#A82F2F"><font size="2">(10:11:54 AM)</font> <b>delight:</b></font> I guess to get e.g. lodash in a custom global function it would be almost the same … with the difference that lo-dash is not depending on things like request accept-lang<br/>
+<font color="#A82F2F"><font size="2">(10:12:26 AM)</font> <b>mikermcneil:</b></font> right, lodash is just a stateless util<br/>
+<font color="#A82F2F"><font size="2">(10:12:32 AM)</font> <b>mikermcneil:</b></font> that’s how it can be available as a global by default<br/>
+<font color="#A82F2F"><font size="2">(10:12:43 AM)</font> <b>mikermcneil:</b></font> but request scope not so much<br/>
+<font color="#A82F2F"><font size="2">(10:13:00 AM)</font> <b>mikermcneil:</b></font> but we could always pass it in the context ( `this.req`)<br/>
+<font color="#A82F2F"><font size="2">(10:13:41 AM)</font> <b>mikermcneil:</b></font> for all _.functions(res.locals)<br/>
+<font color="#A82F2F"><font size="2">(10:13:51 AM)</font> <b>mikermcneil:</b></font> _.bind(x, { req: req })<br/>
+<font color="#A82F2F"><font size="2">(10:14:35 AM)</font> <b>mikermcneil:</b></font> something like _.mapValues(_.functions(res.locals), _.partialRight(_.bind))<br/>
+<font color="#A82F2F"><font size="2">(10:14:37 AM)</font> <b>delight:</b></font> i think in general this might be usefull … because such custom function would likely depend on the request<br/>
+<font color="#A82F2F"><font size="2">(10:14:45 AM)</font> <b>mikermcneil:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(10:15:03 AM)</font> <b>mikermcneil:</b></font> in general we could inject `this.sails` a few more places as well<br/>
+<font color="#A82F2F"><font size="2">(10:15:10 AM)</font> <b>mikermcneil:</b></font> to make it easier to not use globals if you want<br/>
+<font color="#A82F2F"><font size="2">(10:15:11 AM)</font> <b>delight:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(10:45:41 AM)</font> <b>jmcleod:</b></font> mikermcniel still around?<br/>
+<font color="#A82F2F"><font size="2">(10:46:06 AM)</font> <b>mikermcneil:</b></font> hiya<br/>
+<font size="2">(10:52:38 AM)</font><b> jmcleod left the room (quit: Quit: jmcleod).</b><br/>
+<font color="#A82F2F"><font size="2">(11:45:34 AM)</font> <b>delight:</b></font> snap ! i assumed i18n was available in controllers globally … like low-dash is .. hmmm … how would one i18n a drop-down-list in sails ? esp. one that is comming from db ?<br/>
+<font size="2">(12:11:13 PM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font size="2">(12:27:53 PM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font size="2">(12:44:21 PM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(12:53:47 PM)</font> <b>kern0:</b></font> Hi! How i can disable csrf only in one action?<br/>
+<font color="#A82F2F"><font size="2">(01:35:37 PM)</font> <b>pln:</b></font> Hmm.. I cant turn on csrf for some reason. I changed csrf.js to module.exports.csrf = true;   but it doesnt prevent me to do a POST without csrf token. Anything more needed to be configured?<br/>
+<font color="#A82F2F"><font size="2">(01:35:56 PM)</font> <b>pln:</b></font> Or is it only &quot;on&quot; in production mode ?<br/>
+<font color="#A82F2F"><font size="2">(01:36:27 PM)</font> <b>pln:</b></font> running 0.10 rc5<br/>
+<font size="2">(01:39:41 PM)</font><b> marionebl_ is now known as marionebl</b><br/>
+<font color="#A82F2F"><font size="2">(01:41:14 PM)</font> <b>robdubya:</b></font> pln http://stackoverflow.com/questions/21903965/sails-js-hook-for-csrf-protection-showing-strange-behaviour-when-calling-from-a<br/>
+<font color="#A82F2F"><font size="2">(01:45:08 PM)</font> <b>pln:</b></font> ok, thanks!<br/>
+<font color="#A82F2F"><font size="2">(01:48:06 PM)</font> <b>Henry_:</b></font> getting TypeError: Cannot call method &apos;sort&apos; of undefined with .sort(&apos;createdAt ASC&apos;);<br/>
+<font color="#A82F2F"><font size="2">(01:48:33 PM)</font> <b>Henry_:</b></font> any ideas? just trying to find in chronological order<br/>
+<font color="#A82F2F"><font size="2">(01:48:46 PM)</font> <b>rawtaz:</b></font> im guessing that means that whatever you are trying to call sort() on is undefined<br/>
+<font color="#A82F2F"><font size="2">(01:51:55 PM)</font> <b>da_wunder:</b></font> Henry_: paste some code to pastebin or somewhere else<br/>
+<font color="#A82F2F"><font size="2">(01:52:26 PM)</font> <b>da_wunder:</b></font> it&apos;s hard to guess what your code is<br/>
+<font color="#A82F2F"><font size="2">(01:53:03 PM)</font> <b>Henry_:</b></font> da_wunder http://pastebin.com/sNtW5HfN<br/>
+<font color="#A82F2F"><font size="2">(01:53:26 PM)</font> <b>da_wunder:</b></font> hmm<br/>
+<font color="#A82F2F"><font size="2">(01:53:30 PM)</font> <b>da_wunder:</b></font> that&apos;s wrong<br/>
+<font color="#A82F2F"><font size="2">(01:54:28 PM)</font> <b>da_wunder:</b></font> Hacks.find.().sort(&apos;createdAt ASC&apos;).exec(function(error, hack) { ... });<br/>
+<font color="#A82F2F"><font size="2">(01:54:32 PM)</font> <b>da_wunder:</b></font> something like that<br/>
+<font color="#A82F2F"><font size="2">(01:54:42 PM)</font> <b>da_wunder:</b></font> minus typos<br/>
+<font color="#A82F2F"><font size="2">(01:55:33 PM)</font> <b>da_wunder:</b></font> here is example how i have used that Link.find().where({ externalLinkId: linkId }).sort(&quot;objectName ASC&quot;).sort(&quot;objectId ASC&quot;).sort(&quot;link ASC&quot;).exec(function(error, links) { callback(error, links); });<br/>
+<font color="#A82F2F"><font size="2">(01:56:40 PM)</font> <b>Henry_:</b></font> da_wunder thanks! trying<br/>
+<font color="#A82F2F"><font size="2">(01:57:37 PM)</font> <b>da_wunder:</b></font> please tell if that helps<br/>
+<font color="#A82F2F"><font size="2">(02:02:20 PM)</font> <b>Henry_:</b></font> da_wunder i think its working.. having trouble lifting sails<br/>
+<font color="#A82F2F"><font size="2">(02:02:28 PM)</font> <b>Henry_:</b></font> i think it has to do with mongohq<br/>
+<font color="#A82F2F"><font size="2">(02:02:36 PM)</font> <b>Henry_:</b></font> in terms of lifting sails<br/>
+<font color="#A82F2F"><font size="2">(02:04:34 PM)</font> <b>Henry_:</b></font> da_wunder &quot;message&quot;: &quot;Error: Invalid sort criteria :: createdAt DES&quot;<br/>
+<font color="#A82F2F"><font size="2">(02:05:24 PM)</font> <b>da_wunder:</b></font> DESC<br/>
+<font color="#A82F2F"><font size="2">(02:05:31 PM)</font> <b>Henry_:</b></font> says in the docs DES for descending :/<br/>
+<font color="#A82F2F"><font size="2">(02:05:49 PM)</font> <b>Henry_:</b></font> https://github.com/balderdashy/sails-docs/blob/master/reference/ModelMethods.md<br/>
+<font color="#A82F2F"><font size="2">(02:06:13 PM)</font> <b>Henry_:</b></font> if that&apos;s wrong i&apos;d love to make a pull request :P<br/>
+<font color="#A82F2F"><font size="2">(02:08:00 PM)</font> <b>da_wunder:</b></font> DESC works in my cases<br/>
+<font color="#A82F2F"><font size="2">(02:08:50 PM)</font> <b>da_wunder:</b></font> and DESC is a &quot;standard&quot; in databases<br/>
+<font color="#A82F2F"><font size="2">(02:09:33 PM)</font> <b>Henry_:</b></font> yah, but it does say DES in the docs which is kinda odd<br/>
+<font color="#A82F2F"><font size="2">(02:09:48 PM)</font> <b>da_wunder:</b></font> yeah, that maybe wrond<br/>
+<font color="#A82F2F"><font size="2">(02:09:50 PM)</font> <b>da_wunder:</b></font> wrong<br/>
+<font color="#A82F2F"><font size="2">(02:09:56 PM)</font> <b>Henry_:</b></font> works with DESC and the structure you suggested<br/>
+<font color="#A82F2F"><font size="2">(02:10:00 PM)</font> <b>Henry_:</b></font> thanks for the help man!<br/>
+<font color="#A82F2F"><font size="2">(02:10:13 PM)</font> <b>da_wunder:</b></font> glad to be help<br/>
+<font size="2">(02:46:31 PM)</font><b> _Dan_E is now known as Danny_</b><br/>
+<font size="2">(02:48:28 PM)</font><b> X__ is now known as h_h</b><br/>
+<font size="2">(02:48:34 PM)</font><b> KellTainer_ is now known as KellTainer</b><br/>
+<font size="2">(02:48:34 PM)</font><b> DarwinIsGod_ is now known as DarwinIsGod</b><br/>

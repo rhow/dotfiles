@@ -1,0 +1,45 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Fri 30 May 2014 01:57:15 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Fri 30 May 2014 01:57:15 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(01:57:15 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(02:08:52 AM)</font> <b>RWOverdijk:</b></font> I have to fix a wordpress-plugin some guy from Ukraine made for out company years ago.<br/>
+<font color="#A82F2F"><font size="2">(02:09:05 AM)</font> <b>RWOverdijk:</b></font> Usually I get to do challenging stuff. Sometimes... This crap.<br/>
+<font color="#A82F2F"><font size="2">(02:09:08 AM)</font> <b>RWOverdijk:</b></font> Love life.<br/>
+<font color="#A82F2F"><font size="2">(02:30:07 AM)</font> <b>jojo-:</b></font> how do you guys do logging?<br/>
+<font color="#A82F2F"><font size="2">(02:30:23 AM)</font> <b>jojo-:</b></font> there is the sails builting logger, but i&apos;d like a completely separate logger only for my app logic<br/>
+<font color="#A82F2F"><font size="2">(02:30:36 AM)</font> <b>jojo-:</b></font> kind of audit trail with different levels, but wihtout any sails messages<br/>
+<font color="#A82F2F"><font size="2">(02:43:42 AM)</font> <b>illizian:</b></font> jojo-: Tried winston? https://github.com/flatiron/winston<br/>
+<font color="#A82F2F"><font size="2">(02:44:39 AM)</font> <b>jojo-:</b></font> illizian: yeah, i saw that the logging is based on winston. i could create a manual second winston logger instance, sure. i was just wondering whether sails supported that out-of-the-box<br/>
+<font color="#A82F2F"><font size="2">(02:44:58 AM)</font> <b>jojo-:</b></font> with these nodejs projects with lots of submodules i always have troubles figuring out what to put where ;)<br/>
+<font color="#A82F2F"><font size="2">(02:47:38 AM)</font> <b>jojo-:</b></font> a figured it out<br/>
+<font color="#A82F2F"><font size="2">(02:47:50 AM)</font> <b>jojo-:</b></font> but had to modifiy somethiung in node_modules, that does not seem right :/<br/>
+<font color="#A82F2F"><font size="2">(02:48:30 AM)</font> <b>illizian:</b></font> no, you should always avoid amending modules in node_modules - you should correct anything you need within the libraries repo instead<br/>
+<font size="2">(02:48:51 AM)</font><b> zz_Brocken is now known as Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(02:49:09 AM)</font> <b>jojo-:</b></font> illizian: what do you mean?<br/>
+<font color="#A82F2F"><font size="2">(02:52:51 AM)</font> <b>illizian:</b></font> jojo-: alternatively, I use my own function when I don&apos;t need anything too complicated = https://gist.github.com/Illizian/d633d7dd5f1d38549730<br/>
+<font color="#A82F2F"><font size="2">(03:15:35 AM)</font> <b>jojo-:</b></font> illizian: thanks. instantiated winston and put it in a helper<br/>
+<font color="#A82F2F"><font size="2">(03:58:07 AM)</font> <b>jojo-:</b></font> how do i prevent errors from being returned to the user? e.g., if the redis session store is gone, the user will see nothing except a plain error page with the whole exception<br/>
+<font color="#A82F2F"><font size="2">(03:59:10 AM)</font> <b>illizian:</b></font> in production those errors should be supressed, try launching sails in production<br/>
+<font color="#A82F2F"><font size="2">(03:59:51 AM)</font> <b>illizian:</b></font> http://sailsjs.org/#!documentation/deployment<br/>
+<font color="#A82F2F"><font size="2">(04:01:15 AM)</font> <b>jojo-:</b></font> sure, that works for my own errors, like res.serverError(&quot;msg&quot;)<br/>
+<font color="#A82F2F"><font size="2">(04:01:29 AM)</font> <b>jojo-:</b></font> but what if there is something in my code which i didn&apos;t try and catch explicitly?<br/>
+<font color="#A82F2F"><font size="2">(04:01:46 AM)</font> <b>jojo-:</b></font> simply put foo = bar in the first line of one of your actions<br/>
+<font color="#A82F2F"><font size="2">(04:02:24 AM)</font> <b>illizian:</b></font> use an uncaught exception listener? process.on(&apos;uncaughtException&apos;, function (err) { /* code here */ });<br/>
+<font color="#A82F2F"><font size="2">(04:03:21 AM)</font> <b>jojo-:</b></font> yeah, just found that. where should i put that? app.js?<br/>
+<font color="#A82F2F"><font size="2">(04:03:57 AM)</font> <b>illizian:</b></font> you can put it wherever you like.. so long as it gets executed it&apos;ll be fine whereever, but app.js or in the bootstrap function<br/>
+<font color="#A82F2F"><font size="2">(04:10:02 AM)</font> <b>jojo-:</b></font> hmmm, doesnt work. seems the exception is caught by something else<br/>
+<font color="#A82F2F"><font size="2">(04:11:45 AM)</font> <b>illizian:</b></font> can you create an example as a gist?<br/>
+<font color="#A82F2F"><font size="2">(04:17:55 AM)</font> <b>jojo-:</b></font> illizian: not really. just do what i said: put &quot;var foo = bar;&quot; as the first line for one of your controller actions and then call  that. what happens for you?<br/>
+<font color="#A82F2F"><font size="2">(04:50:44 AM)</font> <b>jojo-:</b></font> ok, i had to set it explicitly using sails.express.app.use<br/>
+<font color="#A82F2F"><font size="2">(06:00:46 AM)</font> <b>shadowsyntax:</b></font> hello!<br/>
+<font color="#A82F2F"><font size="2">(06:01:03 AM)</font> <b>shadowsyntax:</b></font> I have a quick question?<br/>
+<font color="#A82F2F"><font size="2">(06:01:22 AM)</font> <b>shadowsyntax:</b></font> hope someone can help out<br/>
+<font color="#A82F2F"><font size="2">(06:01:45 AM)</font> <b>shadowsyntax:</b></font> is it possible to deploy sails on Heroku?<br/>
+<font color="#A82F2F"><font size="2">(06:04:08 AM)</font> <b>Foxandxss:</b></font> of course, that shouldn&apos;t be a problem<br/>
+<font color="#A82F2F"><font size="2">(06:05:37 AM)</font> <b>shadowsyntax:</b></font> @Foxandxss thanks!<br/>
+<font size="2">(06:06:00 AM)</font><b> shadowsyntax left the room (&quot;Textual IRC Client: www.textualapp.com&quot;).</b><br/>
+<font color="#A82F2F"><font size="2">(06:06:03 AM)</font> <b>Foxandxss:</b></font> probably the right Procfile does the trick...<br/>
+<font size="2">(06:15:23 AM)</font><b> shadowsyntax [<em>~textual@41.190.16.37</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(06:59:48 AM)</font> <b>pbranco:</b></font> Hi<br/>
+<font color="#A82F2F"><font size="2">(07:00:33 AM)</font> <b>pbranco:</b></font> can someone recommend the best way of reloading the app without rebooting the server?<br/>
+<font color="#A82F2F"><font size="2">(07:00:47 AM)</font> <b>pbranco:</b></font> same thing that other frameworks do i.e. Grails<br/>
+<font size="2">(07:05:02 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

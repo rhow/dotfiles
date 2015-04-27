@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Fri 25 Apr 2014 07:46:07 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Fri 25 Apr 2014 07:46:07 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(07:46:07 AM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font color="#A82F2F"><font size="2">(07:50:04 AM)</font> <b>jmorales:</b></font> hey guys, is there a way to save a chef run generated password back into an encrypted data bag?<br/>
+<font color="#A82F2F"><font size="2">(07:52:03 AM)</font> <b>zeroXten:</b></font> jmorales: why are you doing that?<br/>
+<font color="#A82F2F"><font size="2">(07:52:42 AM)</font> <b>jmorales:</b></font> so the usecase is that the encrypted databag hold common passwords for a cluster of servers<br/>
+<font color="#A82F2F"><font size="2">(07:52:59 AM)</font> <b>jmorales:</b></font> right now after the chef run those passwords are stored in the node configuration<br/>
+<font color="#A82F2F"><font size="2">(07:53:10 AM)</font> <b>jmorales:</b></font> and I&apos;m manually putting them into the data bag.<br/>
+<font color="#A82F2F"><font size="2">(07:53:30 AM)</font> <b>jmorales:</b></font> ideally I would rather to put it in the data bag automatically<br/>
+<font color="#A82F2F"><font size="2">(07:53:59 AM)</font> <b>aberrios_:</b></font> Hi I have a private chef server, and for some unknown reason search hangs via /search. I&apos;m really struggling to find anything relevant in the logs<br/>
+<font color="#A82F2F"><font size="2">(07:56:32 AM)</font> <b>Maks3w:</b></font> Hi. I wonder if berkshelf 3 works with api.opscode.com for retrieve private cookbooks<br/>
+<font color="#A82F2F"><font size="2">(07:58:53 AM)</font> <b>jmorales:</b></font> it looks like chef 11.6+ added write support to encrypted data bags according to the docs.. I will try this and report back<br/>
+<font size="2">(08:02:47 AM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(08:07:21 AM)</font> <b>smithmb:</b></font> Is it possible to override node.name using chefspec? I know I can override the hostname using fauxhai, but node.name doesn&apos;t seem to change.<br/>
+<font size="2">(08:16:40 AM)</font><b> mode (+o mattray) by ChanServ</b><br/>
+<font size="2">(08:25:18 AM)</font><b> mode (+o jkeiser) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(08:38:55 AM)</font> <b>shlant1:</b></font> anyone know why I would be getting Permission Denied when using the mount resource?<br/>
+<font color="#A82F2F"><font size="2">(08:39:02 AM)</font> <b>shlant1:</b></font> can I specify a user/group?<br/>
+<font color="#A82F2F"><font size="2">(08:48:09 AM)</font> <b>dcparker:</b></font> hey all - i have chef managing a cassandra server. let&apos;s say i have chef upgrade java with the java recipe, is there a way to tell it to then restart cassandra (but obviously only when the java version changes)<br/>
+<font size="2">(08:49:09 AM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(08:54:51 AM)</font> <b>rayrod2030:</b></font> hola jefes de cocina<br/>
+<font color="#A82F2F"><font size="2">(08:56:20 AM)</font> <b>gleam:</b></font> either have the resource that upgrades java notify the cassandra service to restart, or have the service subscribe to the java upgrade<br/>
+<font color="#A82F2F"><font size="2">(08:56:36 AM)</font> <b>gleam:</b></font> as long as the java upgrade resource is idempotent you should be fine<br/>
+<font color="#A82F2F"><font size="2">(08:57:51 AM)</font> <b>is_null:</b></font> hello everybody, newbie question here: is there a distro-agnostic way to run `apt-get update` (or equivalent) before a package install action ?<br/>
+<font size="2">(08:58:49 AM)</font><b> mode (+o ssd7) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(09:00:50 AM)</font> <b>dcparker:</b></font> gleam: thanks. yeah i thought about the notification but i ideally didn&apos;t want to edit the community cookbook if i could avoid it. can you elaborate on subscribing to the upgrade? i&apos;m not sure if i follow that<br/>
+<font size="2">(09:02:35 AM)</font><b> storme_away is now known as stormerider</b><br/>
+<font color="#A82F2F"><font size="2">(09:04:23 AM)</font> <b>gleam:</b></font> http://docs.opscode.com/resource_common.html#notifications<br/>
+<font color="#A82F2F"><font size="2">(09:04:52 AM)</font> <b>gleam:</b></font> it&apos;s the inverse of notifies<br/>
+<font color="#A82F2F"><font size="2">(09:04:56 AM)</font> <b>gleam:</b></font> or reverse i guess<br/>
+<font size="2">(09:05:30 AM)</font><b> Don is now known as Guest19564</b><br/>
+<font color="#A82F2F"><font size="2">(09:05:54 AM)</font> <b>Guest19564:</b></font> Hi, I need to recompile nginx one time on a QA server.  Is it possible to set this flag for the run ov chef-clinet? nginx_force_recompile = node.run_state[&apos;nginx_force_recompile&apos;]<br/>
+<font color="#A82F2F"><font size="2">(09:07:04 AM)</font> <b>aberrios_:</b></font> getting      Errno::ECONNREFUSED:<br/>
+<font color="#A82F2F"><font size="2">(09:07:06 AM)</font> <b>aberrios_:</b></font>        Connection refused - connect(2)<br/>
+<font color="#A82F2F"><font size="2">(09:07:16 AM)</font> <b>aberrios_:</b></font> when attempting searches :&apos;(<br/>
+<font color="#A82F2F"><font size="2">(09:07:28 AM)</font> <b>dcparker:</b></font> gleam: thanks!<br/>
+<font color="#A82F2F"><font size="2">(09:08:16 AM)</font> <b>gyoza:</b></font> whaterver gleam<br/>
+<font color="#A82F2F"><font size="2">(09:08:27 AM)</font> <b>gyoza:</b></font> WHATEVER MAN<br/>
+<font color="#A82F2F"><font size="2">(09:08:29 AM)</font> <b>gyoza:</b></font> lol jk<br/>
+<font color="#A82F2F"><font size="2">(09:23:56 AM)</font> <b>bhckr:</b></font> we have around 40 nodes which run chef-client every 30 mins, but sometimes chef-client fails on some nodes (due to network issues or a broken recipe). Is there a way to fetch the status of the last chef-client run for a specific node?<br/>
+<font color="#A82F2F"><font size="2">(09:24:16 AM)</font> <b>rayrod2030:</b></font> bhckr: knife status<br/>
+<font size="2">(09:24:24 AM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

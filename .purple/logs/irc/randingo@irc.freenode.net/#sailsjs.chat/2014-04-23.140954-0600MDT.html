@@ -1,0 +1,188 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Wed 23 Apr 2014 02:09:54 PM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Wed 23 Apr 2014 02:09:54 PM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(02:09:54 PM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font color="#A82F2F"><font size="2">(02:16:05 PM)</font> <b>Asweb:</b></font> is there a way to load html content from a socket.get?<br/>
+<font color="#A82F2F"><font size="2">(02:18:34 PM)</font> <b>lenswipe:</b></font> Asweb, why are you loading html via ajax?<br/>
+<font color="#A82F2F"><font size="2">(02:19:01 PM)</font> <b>Asweb:</b></font> lenswipe: I have a live chat similar to the facebook one and to keep all the window active<br/>
+<font color="#A82F2F"><font size="2">(02:19:10 PM)</font> <b>Asweb:</b></font> I found the solution to load everything in AJAX<br/>
+<font color="#A82F2F"><font size="2">(02:19:16 PM)</font> <b>Asweb:</b></font> but now I think its a bad one<br/>
+<font color="#A82F2F"><font size="2">(02:19:43 PM)</font> <b>lenswipe:</b></font> ಠ_ಠ<br/>
+<font color="#A82F2F"><font size="2">(02:19:57 PM)</font> <b>lenswipe:</b></font> yeah, dont load HTML via AJAX<br/>
+<font color="#A82F2F"><font size="2">(02:20:00 PM)</font> <b>Asweb:</b></font> I always use jQuery.load so a xhr request to load HTML<br/>
+<font color="#A82F2F"><font size="2">(02:20:05 PM)</font> <b>Asweb:</b></font> but my app is slow like sh1t<br/>
+<font color="#A82F2F"><font size="2">(02:20:06 PM)</font> <b>Asweb:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(02:20:09 PM)</font> <b>lenswipe:</b></font> yeah...<br/>
+<font color="#A82F2F"><font size="2">(02:20:13 PM)</font> <b>Asweb:</b></font> Better to use the old way?<br/>
+<font color="#A82F2F"><font size="2">(02:20:19 PM)</font> <b>lenswipe:</b></font> define &quot;the old way&quot;<br/>
+<font color="#A82F2F"><font size="2">(02:20:31 PM)</font> <b>Asweb:</b></font> http://example.fr/getpage/1<br/>
+<font color="#A82F2F"><font size="2">(02:20:33 PM)</font> <b>Asweb:</b></font> for example<br/>
+<font color="#A82F2F"><font size="2">(02:20:38 PM)</font> <b>Asweb:</b></font> through GET<br/>
+<font color="#A82F2F"><font size="2">(02:20:42 PM)</font> <b>lenswipe:</b></font> i have no idea what you mean but...<br/>
+<font color="#A82F2F"><font size="2">(02:21:37 PM)</font> <b>lenswipe:</b></font> the way I would do it is write an angular app in /assets, load templates as/when you need to using ngRoute and/or ui-router and then send/recieve only JSON via AJAX<br/>
+<font color="#A82F2F"><font size="2">(02:21:44 PM)</font> <b>lenswipe:</b></font> well AJAX/Socket.io<br/>
+<font color="#A82F2F"><font size="2">(02:21:51 PM)</font> <b>Asweb:</b></font> do you use routes.js in sails?<br/>
+<font color="#A82F2F"><font size="2">(02:22:04 PM)</font> <b>lenswipe:</b></font> i dont know what routes.js is<br/>
+<font color="#A82F2F"><font size="2">(02:22:16 PM)</font> <b>lenswipe:</b></font> oh the config file?<br/>
+<font color="#A82F2F"><font size="2">(02:22:18 PM)</font> <b>lenswipe:</b></font> no, i dont<br/>
+<font color="#A82F2F"><font size="2">(02:22:21 PM)</font> <b>Asweb:</b></font> yeap<br/>
+<font color="#A82F2F"><font size="2">(02:22:29 PM)</font> <b>lenswipe:</b></font> why<br/>
+<font color="#A82F2F"><font size="2">(02:22:29 PM)</font> <b>Asweb:</b></font> only blueprints?<br/>
+<font color="#A82F2F"><font size="2">(02:22:33 PM)</font> <b>lenswipe:</b></font> so far, yes<br/>
+<font color="#A82F2F"><font size="2">(02:22:34 PM)</font> <b>Asweb:</b></font> because I use routes.js<br/>
+<font color="#A82F2F"><font size="2">(02:22:38 PM)</font> <b>lenswipe:</b></font> i seee<br/>
+<font color="#A82F2F"><font size="2">(02:22:41 PM)</font> <b>lenswipe:</b></font> how is that relevant?<br/>
+<font color="#A82F2F"><font size="2">(02:22:52 PM)</font> <b>Asweb:</b></font> I always hear about &quot;blueprints&quot;<br/>
+<font color="#A82F2F"><font size="2">(02:22:57 PM)</font> <b>Asweb:</b></font> never had the chance to look at it^^&apos;<br/>
+<font color="#A82F2F"><font size="2">(02:23:03 PM)</font> <b>Asweb:</b></font> and &quot;why&quot; its better<br/>
+<font color="#A82F2F"><font size="2">(02:23:32 PM)</font> <b>lenswipe:</b></font> pastebin your route.js<br/>
+<font color="#A82F2F"><font size="2">(02:23:34 PM)</font> <b>lenswipe:</b></font> routes.js<br/>
+<font color="#A82F2F"><font size="2">(02:30:43 PM)</font> <b>Asweb:</b></font> ok<br/>
+<font color="#A82F2F"><font size="2">(02:31:09 PM)</font> <b>Asweb:</b></font> http://pastebin.com/RUkuGpYX<br/>
+<font color="#A82F2F"><font size="2">(02:38:09 PM)</font> <b>lenswipe:</b></font> uh...yeah - you&apos;re doing REST wrong<br/>
+<font size="2">(02:38:19 PM)</font><b> lenswipe left the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:38:20 PM)</font> <b>Asweb:</b></font> ah?<br/>
+<font size="2">(02:38:22 PM)</font><b> lenswipe [<em>~lenswipe@unaffiliated/lenswipe</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(02:38:35 PM)</font> <b>Asweb:</b></font> You mean I shouldnt use this kind of config file?<br/>
+<font color="#A82F2F"><font size="2">(02:38:49 PM)</font> <b>lenswipe:</b></font> I mean you&apos;re defining routes in that config file that you don&apos;t need to<br/>
+<font color="#A82F2F"><font size="2">(02:38:51 PM)</font> <b>lenswipe:</b></font> Asweb, http://en.wikipedia.org/wiki/Representational_state_transfer<br/>
+<font color="#A82F2F"><font size="2">(02:39:46 PM)</font> <b>lenswipe:</b></font> Asweb, or to put it another way, most (if not all) of the stuff defined in that config file is already done for you via blueprints<br/>
+<font color="#A82F2F"><font size="2">(02:39:57 PM)</font> <b>lenswipe:</b></font> i would imagine you wrote CRUD methods in your controllers, yes?<br/>
+<font color="#A82F2F"><font size="2">(02:40:03 PM)</font> <b>Asweb:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(02:40:12 PM)</font> <b>Asweb:</b></font>  /user/create<br/>
+<font color="#A82F2F"><font size="2">(02:40:16 PM)</font> <b>Asweb:</b></font> for example<br/>
+<font color="#A82F2F"><font size="2">(02:40:29 PM)</font> <b>Asweb:</b></font> where I do my User.create({ }).exec blablabla<br/>
+<font color="#A82F2F"><font size="2">(02:40:58 PM)</font> <b>lenswipe:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(02:41:09 PM)</font> <b>lenswipe:</b></font> try sending a POST request to /user with a JSON object as the payload<br/>
+<font color="#A82F2F"><font size="2">(02:41:14 PM)</font> <b>lenswipe:</b></font> where the JSON object is your user<br/>
+<font color="#A82F2F"><font size="2">(02:41:20 PM)</font> <b>lenswipe:</b></font> seriously - RTFM :)<br/>
+<font color="#A82F2F"><font size="2">(02:41:34 PM)</font> <b>lenswipe:</b></font> also - /user/create is a shortcut, don&apos;t use it in production<br/>
+<font color="#A82F2F"><font size="2">(02:41:42 PM)</font> <b>Asweb:</b></font> thanks a lot lenswipe, I&apos;ll take a look yeah<br/>
+<font color="#A82F2F"><font size="2">(02:41:50 PM)</font> <b>lenswipe:</b></font> POST creates a resource<br/>
+<font color="#A82F2F"><font size="2">(02:41:53 PM)</font> <b>lenswipe:</b></font> PUT updates a resource<br/>
+<font color="#A82F2F"><font size="2">(02:41:58 PM)</font> <b>lenswipe:</b></font> GET fetches a resource<br/>
+<font color="#A82F2F"><font size="2">(02:42:02 PM)</font> <b>lenswipe:</b></font> DELETE deletes a resource<br/>
+<font color="#A82F2F"><font size="2">(02:42:04 PM)</font> <b>Asweb:</b></font> but if I make POST /user<br/>
+<font color="#A82F2F"><font size="2">(02:42:08 PM)</font> <b>Asweb:</b></font> in which action is he gonna hit?<br/>
+<font color="#A82F2F"><font size="2">(02:42:16 PM)</font> <b>lenswipe:</b></font> none of the ones you&apos;ve defined<br/>
+<font color="#A82F2F"><font size="2">(02:42:27 PM)</font> <b>Asweb:</b></font> Ahhh I understand now<br/>
+<font color="#A82F2F"><font size="2">(02:42:33 PM)</font> <b>lenswipe:</b></font> thats blueprints<br/>
+<font color="#A82F2F"><font size="2">(02:42:33 PM)</font> <b>Asweb:</b></font> so basically in my UserController<br/>
+<font color="#A82F2F"><font size="2">(02:42:43 PM)</font> <b>Asweb:</b></font> I can remove my add:function,delete,update etc..<br/>
+<font color="#A82F2F"><font size="2">(02:42:46 PM)</font> <b>lenswipe:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(02:42:48 PM)</font> <b>lenswipe:</b></font> delete it all<br/>
+<font color="#A82F2F"><font size="2">(02:42:51 PM)</font> <b>lenswipe:</b></font> unless you&apos;re doing something specific<br/>
+<font color="#A82F2F"><font size="2">(02:42:58 PM)</font> <b>Asweb:</b></font> I see now<br/>
+<font color="#A82F2F"><font size="2">(02:43:07 PM)</font> <b>lenswipe:</b></font> for example, i&apos;m overriding the find method in one of my controllers because i want to filter the results<br/>
+<font color="#A82F2F"><font size="2">(02:43:12 PM)</font> <b>lenswipe:</b></font> for access control reasons<br/>
+<font color="#A82F2F"><font size="2">(02:43:19 PM)</font> <b>Asweb:</b></font> so basically in my UserController<br/>
+<font color="#A82F2F"><font size="2">(02:43:36 PM)</font> <b>Asweb:</b></font> if I do User.create().exec alone, without being inside the &quot;add&quot; function I have currently<br/>
+<font color="#A82F2F"><font size="2">(02:43:41 PM)</font> <b>lenswipe:</b></font> no.<br/>
+<font color="#A82F2F"><font size="2">(02:43:43 PM)</font> <b>Asweb:</b></font> POST / user will automatically trigger<br/>
+<font color="#A82F2F"><font size="2">(02:43:46 PM)</font> <b>Asweb:</b></font> this .create ?<br/>
+<font color="#A82F2F"><font size="2">(02:43:49 PM)</font> <b>lenswipe:</b></font> no.<br/>
+<font color="#A82F2F"><font size="2">(02:43:53 PM)</font> <b>lenswipe:</b></font> don&apos;t do anyting in your user controller<br/>
+<font color="#A82F2F"><font size="2">(02:44:28 PM)</font> <b>lenswipe:</b></font> Asweb, this is my user controller: http://pastebin.com/aJpyPq8a<br/>
+<font color="#A82F2F"><font size="2">(02:45:04 PM)</font> <b>Asweb:</b></font> so to create an user, it&apos;s only from client side then?<br/>
+<font color="#A82F2F"><font size="2">(02:45:04 PM)</font> <b>lenswipe:</b></font> i suggest you go watch this: https://www.youtube.com/watch?v=GK-tFvpIR7c<br/>
+<font color="#A82F2F"><font size="2">(02:45:24 PM)</font> <b>Asweb:</b></font> POST /user, how would you make your tests on the input values submitted<br/>
+<font color="#A82F2F"><font size="2">(02:45:27 PM)</font> <b>Asweb:</b></font> Ok gonna take a look<br/>
+<font color="#A82F2F"><font size="2">(02:45:31 PM)</font> <b>Asweb:</b></font> thanks a lot lenswipe:)<br/>
+<font color="#A82F2F"><font size="2">(02:45:33 PM)</font> <b>lenswipe:</b></font> np<br/>
+<font color="#A82F2F"><font size="2">(02:45:36 PM)</font> <b>lenswipe:</b></font> you mean input validation?<br/>
+<font color="#A82F2F"><font size="2">(02:45:43 PM)</font> <b>lenswipe:</b></font> that goes in the model (also convered in that video I believe)<br/>
+<font color="#A82F2F"><font size="2">(02:46:02 PM)</font> <b>Asweb:</b></font> omfg<br/>
+<font color="#A82F2F"><font size="2">(02:46:06 PM)</font> <b>lenswipe:</b></font> ?<br/>
+<font color="#A82F2F"><font size="2">(02:46:12 PM)</font> <b>Asweb:</b></font> I used a node module for that<br/>
+<font color="#A82F2F"><font size="2">(02:46:14 PM)</font> <b>Asweb:</b></font> sanitizer<br/>
+<font color="#A82F2F"><font size="2">(02:46:15 PM)</font> <b>lenswipe:</b></font> no.<br/>
+<font color="#A82F2F"><font size="2">(02:46:18 PM)</font> <b>lenswipe:</b></font> documented here too: http://sailsjs.org/#!documentation/models<br/>
+<font color="#A82F2F"><font size="2">(02:46:24 PM)</font> <b>lenswipe:</b></font> go read that link<br/>
+<font color="#A82F2F"><font size="2">(02:46:30 PM)</font> <b>Asweb:</b></font> I feel like I didn&apos;t get anything from sails<br/>
+<font color="#A82F2F"><font size="2">(02:46:32 PM)</font> <b>Asweb:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(02:46:35 PM)</font> <b>lenswipe:</b></font> x]<br/>
+<font color="#A82F2F"><font size="2">(02:47:18 PM)</font> <b>lenswipe:</b></font> if you need to lock someone out of  a certain route then you use policies for that<br/>
+<font color="#A82F2F"><font size="2">(02:49:25 PM)</font> <b>Asweb:</b></font> yeah Im using it<br/>
+<font color="#A82F2F"><font size="2">(02:49:36 PM)</font> <b>lenswipe:</b></font> cool<br/>
+<font color="#A82F2F"><font size="2">(02:49:38 PM)</font> <b>lenswipe:</b></font> brb...dinnerr<br/>
+<font color="#A82F2F"><font size="2">(02:49:42 PM)</font> <b>Asweb:</b></font> but basically, Blueprints are useful for CRUD operations<br/>
+<font color="#A82F2F"><font size="2">(02:49:48 PM)</font> <b>Asweb:</b></font> good apetite.<br/>
+<font color="#A82F2F"><font size="2">(02:53:46 PM)</font> <b>kekee:</b></font> hi! Quick(bit offtopic though) queistion about waterline: How lessthan and greater than works. i have query object like this:                 .where({year:{&quot;&lt;&quot;:2012}})  BUT it never returns anything(and yes, i have objects with year less than 2012 in my database)<br/>
+<font color="#A82F2F"><font size="2">(02:56:56 PM)</font> <b>screamingbanshee:</b></font> kekee hastebin?<br/>
+<font color="#A82F2F"><font size="2">(02:57:12 PM)</font> <b>kekee:</b></font> hastebin?<br/>
+<font color="#A82F2F"><font size="2">(02:57:38 PM)</font> <b>screamingbanshee:</b></font> drop the code into hastebin.com<br/>
+<font color="#A82F2F"><font size="2">(02:59:35 PM)</font> <b>lenswipe:</b></font> back<br/>
+<font color="#A82F2F"><font size="2">(02:59:43 PM)</font> <b>lenswipe:</b></font> Asweb, yes, Blueprints are for CRUD<br/>
+<font color="#A82F2F"><font size="2">(02:59:53 PM)</font> <b>lenswipe:</b></font> policies restrict access to those CRUD operations<br/>
+<font color="#A82F2F"><font size="2">(03:00:01 PM)</font> <b>Asweb:</b></font> I see<br/>
+<font color="#A82F2F"><font size="2">(03:00:02 PM)</font> <b>lenswipe:</b></font> and controllers can be used to write non-crud stuff<br/>
+<font color="#A82F2F"><font size="2">(03:00:18 PM)</font> <b>lenswipe:</b></font> for example, I wrote an authentication controller because you wouldn&apos;t typically have an auth model<br/>
+<font color="#A82F2F"><font size="2">(03:00:48 PM)</font> <b>Asweb:</b></font> true<br/>
+<font color="#A82F2F"><font size="2">(03:03:01 PM)</font> <b>kekee:</b></font> where i do need pastebinwhe i pasted it here? It really is jsut that line of code. Everythin else works fine, but i can&apos;t find anything less than x.<br/>
+<font color="#A82F2F"><font size="2">(03:10:30 PM)</font> <b>Asweb:</b></font> Do you guys usually use AJAX with SAILS?<br/>
+<font color="#A82F2F"><font size="2">(03:14:15 PM)</font> <b>kekee:</b></font> oh, figured it out. number has to be represented as strings for waterline..<br/>
+<font color="#A82F2F"><font size="2">(03:37:16 PM)</font> <b>orbsio:</b></font> Is there an example of how to do a mongo groupBy query using waterline?<br/>
+<font color="#A82F2F"><font size="2">(03:37:30 PM)</font> <b>orbsio:</b></font> I&apos;ve tried a bunch of things and can&apos;t seem to get a working solution.<br/>
+<font color="#A82F2F"><font size="2">(03:37:45 PM)</font> <b>orbsio:</b></font> MyModel.find().groupBy( ... )<br/>
+<font color="#A82F2F"><font size="2">(03:38:05 PM)</font> <b>orbsio:</b></font> MyModel.find().where( { $groupBy: { ... } } )<br/>
+<font color="#A82F2F"><font size="2">(03:38:37 PM)</font> <b>orbsio:</b></font> I&apos;m unsure what the object structure should be, or if groupBy is even fully supported yet.<br/>
+<font color="#A82F2F"><font size="2">(03:39:42 PM)</font> <b>Drako:</b></font> robdubya : is  angularSails supposed to not have the sailsSocket.on() ?<br/>
+<font color="#A82F2F"><font size="2">(03:40:08 PM)</font> <b>robdubya:</b></font> Drako its &quot;subscribe&quot;<br/>
+<font color="#A82F2F"><font size="2">(03:40:31 PM)</font> <b>orbsio:</b></font> I&apos;ve tried objects like { key: &apos;xyz&apos;, cond: { foo: &apos;abcdef&apos; }, reduce: function(cur, result) { ... }, initial: {} }<br/>
+<font color="#A82F2F"><font size="2">(03:40:59 PM)</font> <b>Drako:</b></font> ok  ty - missunderstood it then - thought  subscribe  would be watch<br/>
+<font color="#A82F2F"><font size="2">(03:41:42 PM)</font> <b>orbsio:</b></font> I&apos;ve even tried using MyModel.native(), but can&apos;t get that working either.<br/>
+<font color="#A82F2F"><font size="2">(03:42:28 PM)</font> <b>orbsio:</b></font> I think I may be missing something basic and am hoping to look at some examples of how to do it.<br/>
+<font color="#A82F2F"><font size="2">(03:43:15 PM)</font> <b>Drako:</b></font> maybe this way: http://stackoverflow.com/questions/19863815/waterline-count-and-group-by<br/>
+<font color="#A82F2F"><font size="2">(03:45:28 PM)</font> <b>orbsio:</b></font> Drako: thanks. Looks like that may be an SQL solution though, not a mongo solution.<br/>
+<font color="#A82F2F"><font size="2">(03:49:44 PM)</font> <b>Drako:</b></font> orbsio: here is a n example by particlbanana how to use  native()  https://github.com/balderdashy/sails-mongo/issues/46<br/>
+<font color="#A82F2F"><font size="2">(03:49:51 PM)</font> <b>Drako:</b></font> maybe this helps you<br/>
+<font color="#A82F2F"><font size="2">(03:53:38 PM)</font> <b>Drako:</b></font> robdubya: just replaced angular-sails with angularSails in my app  and it works like  a charm with some minor adjustements<br/>
+<font color="#A82F2F"><font size="2">(03:54:01 PM)</font> <b>robdubya:</b></font> Drako good to hear. i just noticed teh dist version isnt wrapped<br/>
+<font color="#A82F2F"><font size="2">(03:54:52 PM)</font> <b>Drako:</b></font> yeah noticed  it too :D  but  i am still  in dev  for a while so you have time to fix it ;P<br/>
+<font color="#A82F2F"><font size="2">(03:55:19 PM)</font> <b>robdubya:</b></font> fucked up my gruntfile at some point<br/>
+<font color="#A82F2F"><font size="2">(03:56:47 PM)</font> <b>robdubya:</b></font> what minor changes btw?<br/>
+<font color="#A82F2F"><font size="2">(03:57:04 PM)</font> <b>Drako:</b></font> on --&gt; subscribe<br/>
+<font color="#A82F2F"><font size="2">(03:57:25 PM)</font> <b>robdubya:</b></font> i&apos;ll add on. i hate it, but probably makes sense to have t<br/>
+<font size="2">(03:57:33 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+<font color="#A82F2F"><font size="2">(03:58:19 PM)</font> <b>Drako:</b></font> its socket .io standard   so probably not to bad to have it<br/>
+<font color="#A82F2F"><font size="2">(03:58:56 PM)</font> <b>Drako:</b></font> at first  i thought  subscribe would be  autowatch  :D<br/>
+<font color="#A82F2F"><font size="2">(03:59:09 PM)</font> <b>robdubya:</b></font> word. the idea was that it should be transparent to the user, in the sense that it oculd be swapped for engine.io / pure websockets / whatever<br/>
+<font color="#A82F2F"><font size="2">(04:01:01 PM)</font> <b>Drako:</b></font> sounds  nice -  is sailsresource meant to be  replacement for ngresource ?<br/>
+<font color="#A82F2F"><font size="2">(04:01:34 PM)</font> <b>robdubya:</b></font> one day. maybe. i&apos;m sorta 50/50 on that whole thing right now<br/>
+<font color="#A82F2F"><font size="2">(04:01:59 PM)</font> <b>robdubya:</b></font> i have a fork of ngActiveResource that works with sails/sailsSocket, which i might move in<br/>
+<font color="#A82F2F"><font size="2">(04:02:28 PM)</font> <b>robdubya:</b></font> its all going to be replaced w/ angular 2.0, and i&apos;m writing a lot of ES6 code, so i&apos;m a little torn about investing too much time into it<br/>
+<font color="#A82F2F"><font size="2">(04:02:59 PM)</font> <b>Drako:</b></font> ah i need to look at that - currently searching for  something for my models  that works well with  sails<br/>
+<font color="#A82F2F"><font size="2">(04:05:18 PM)</font> <b>robdubya:</b></font> its sort of a lacking solution at the moment. but the reason i (re)wrote sails socket is so that it works == $http<br/>
+<font color="#A82F2F"><font size="2">(04:05:31 PM)</font> <b>robdubya:</b></font> so in theory you should be able to extend anything $http compatible<br/>
+<font color="#A82F2F"><font size="2">(04:07:25 PM)</font> <b>Drako:</b></font> ty  will have dive in to it - looking forward  to ES6 - looks a lot like typescript /c# :D<br/>
+<font color="#A82F2F"><font size="2">(04:08:13 PM)</font> <b>Drako:</b></font> time for bed :)<br/>
+<font size="2">(04:11:15 PM)</font><b> Drako left the room (quit: Read error: Connection reset by peer).</b><br/>
+<font color="#A82F2F"><font size="2">(04:24:05 PM)</font> <b>lenswipe:</b></font> robdubya, also - is it advisable for my app to spit out the JWT for a user along with the user object (couldn&apos;t it allow an attacker to compare the two and somehow extrapolate the private key?)<br/>
+<font color="#A82F2F"><font size="2">(04:40:59 PM)</font> <b>Jules`:</b></font> does findOrCreate only accept the primary key for criteria?<br/>
+<font color="#A82F2F"><font size="2">(04:41:16 PM)</font> <b>Jules`:</b></font> e.g. I wish to User.findOrCreate({email: inputtedEmailAddress})<br/>
+<font color="#A82F2F"><font size="2">(04:41:27 PM)</font> <b>Jules`:</b></font> but email isn&apos;t the primary key<br/>
+<font color="#A82F2F"><font size="2">(04:41:46 PM)</font> <b>Jules`:</b></font> when it creates this account, it doesn&apos;t populate the email field for the new record<br/>
+<font color="#A82F2F"><font size="2">(04:42:06 PM)</font> <b>Jules`:</b></font> and thus causes a validation error because I have email: { required: true }<br/>
+<font color="#A82F2F"><font size="2">(04:42:12 PM)</font> <b>Jules`:</b></font> I&apos;m using sails-mongo<br/>
+<font color="#A82F2F"><font size="2">(04:47:59 PM)</font> <b>brandom:</b></font> Jules`: I think you would have to pass {email:&apos;&apos;} twice, once for find, and again to create<br/>
+<font color="#A82F2F"><font size="2">(04:48:40 PM)</font> <b>brandom:</b></font> User.findOrCreate({email: inputtedEmailAddress}, {email: inputtedEmailAddress}) should work.<br/>
+<font color="#A82F2F"><font size="2">(04:48:49 PM)</font> <b>Jules`:</b></font> thank you<br/>
+<font color="#A82F2F"><font size="2">(04:49:07 PM)</font> <b>Jules`:</b></font> I just learned that - it&apos;s not that intuitive. Check out this Waterline issue: https://github.com/balderdashy/waterline/issues/48<br/>
+<font color="#A82F2F"><font size="2">(04:49:21 PM)</font> <b>Jules`:</b></font> I couldn&apos;t find the correct usage documented anywhere, so I&apos;m not surprised I made a mistake<br/>
+<font color="#A82F2F"><font size="2">(04:49:31 PM)</font> <b>brandom:</b></font> Jules`: http://beta.sailsjs.org/#!documentation/reference/ModelMethods/.findOrCreate.html<br/>
+<font color="#A82F2F"><font size="2">(04:49:48 PM)</font> <b>brandom:</b></font> If you are on .10<br/>
+<font color="#A82F2F"><font size="2">(04:49:52 PM)</font> <b>Jules`:</b></font> yeah I am<br/>
+<font color="#A82F2F"><font size="2">(04:50:26 PM)</font> <b>Jules`:</b></font> when I see &quot;User.findOrCreate({name:&apos;Walter&apos;},{name:&apos;Jessie&apos;})&quot;, it looks to me like it&apos;s trying to find or create 2 records<br/>
+<font color="#A82F2F"><font size="2">(04:50:39 PM)</font> <b>Jules`:</b></font> so it&apos;s confusing<br/>
+<font color="#A82F2F"><font size="2">(04:51:03 PM)</font> <b>Jules`:</b></font> glad I found an answer - thanks for your help<br/>
+<font color="#A82F2F"><font size="2">(04:51:42 PM)</font> <b>ransico:</b></font> brandom: are there any docs describing the exact format of the &apos;where&apos; criteria? Ie, which operators are allowed, how to use and/or, etc? (I had to go hunting in the source to find answers in the end)<br/>
+<font color="#A82F2F"><font size="2">(04:51:44 PM)</font> <b>brandom:</b></font> Yeah.. I agree. I think that issue was a proposal to make the change. mikermcneil is core dev.<br/>
+<font color="#A82F2F"><font size="2">(04:52:41 PM)</font> <b>Jules`:</b></font> I agree with that proposal because I got caught in the trap<br/>
+<font size="2">(04:53:10 PM)</font><b> ransico left the room (quit: Quit: Leaving.).</b><br/>
+<font color="#A82F2F"><font size="2">(04:54:36 PM)</font> <b>brandom:</b></font> I am currently working on a sails-mongoose hook b/c sails-mongo was driving me crazy.<br/>
+<font size="2">(04:55:08 PM)</font><b> ransico [<em>~Adium@1.150.186.97</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(04:58:02 PM)</font> <b>brandom:</b></font> ransico: I haven&apos;t seen any verbose docs on that front, no. https://github.com/balderdashy/waterline gives you a couple of examples. I am sure it will be fleshed out before .10 drops.<br/>
+<font color="#A82F2F"><font size="2">(05:00:20 PM)</font> <b>ransico:</b></font> hopefully :) thanks<br/>
+<font color="#A82F2F"><font size="2">(05:00:40 PM)</font> <b>brandom:</b></font> ransico: http://beta.sailsjs.org/#!documentation/guides/models - query modifiers gives more examples actually<br/>
+<font color="#A82F2F"><font size="2">(05:01:44 PM)</font> <b>ransico:</b></font> yah I&apos;d see that too<br/>
+<font color="#A82F2F"><font size="2">(05:10:02 PM)</font> <b>Joel:</b></font> is there a way to have sails write to /tmp, and not .tmp?<br/>
+<font size="2">(05:48:51 PM)</font><b> wedgwood is now known as Guest68564</b><br/>
+</body></html>

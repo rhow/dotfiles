@@ -1,0 +1,44 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with mdillon@i3.com at Tue 16 Dec 2014 10:48:23 AM MST on rhow@i3.com/Google (jabber)</title></head><body><h3>Conversation with mdillon@i3.com at Tue 16 Dec 2014 10:48:23 AM MST on rhow@i3.com/Google (jabber)</h3>
+<font color="#16569E"><font size="2">(10:51:13 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>wicked client is failing to load due to:<br/>GET <a href="http://localhost:9000/scripts/services/googleanalytics.js">http://localhost:9000/scripts/services/googleanalytics.js</a> net::ERR_BLOCKED_BY_CLIENT<br/>localhost/:219<br/>line 219:  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');</span><br/>
+<font color="#A82F2F"><font size="2">(10:51:47 AM)</font> <b>Michael Dillon:</b></font> ah - your issue....  :-/<br/>
+<font color="#16569E"><font size="2">(10:53:05 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i can agree with that, yes.  you don't have any idea?</span><br/>
+<font color="#A82F2F"><font size="2">(10:53:36 AM)</font> <b>Michael Dillon:</b></font> I don't recall having that particular issue<br/>
+<font color="#A82F2F"><font size="2">(10:53:43 AM)</font> <b>Michael Dillon:</b></font> do you have other browsers installed?<br/>
+<font color="#A82F2F"><font size="2">(10:53:50 AM)</font> <b>Michael Dillon:</b></font> can you try it there?<br/>
+<font color="#16569E"><font size="2">(10:53:52 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>FF</span><br/>
+<font color="#16569E"><font size="2">(10:54:53 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>interesting, it flashed looking the same; then it loaded and worked in FF.</span><br/>
+<font color="#A82F2F"><font size="2">(10:55:19 AM)</font> <b>Michael Dillon:</b></font> I was wondering if you had a plugin or extension to block something<br/>
+<font color="#16569E"><font size="2">(10:56:07 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>in  chrome, not that i know of... maybe.  thanks though.</span><br/>
+<font color="#16569E"><font size="2">(11:01:49 AM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yep, disabled Adblock Plus and it works in chrome</span><br/>
+<font size="2">(12:56:31 PM)</font><b> mdillon@i3.com is now known as Michael Dillon.
+</b><br/>
+<font color="#A82F2F"><font size="2">(01:25:41 PM)</font> <b>Michael Dillon:</b></font> any padawan map or search endpoints to play with yet?  <br/>
+<font color="#16569E"><font size="2">(01:26:38 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>we were trying to deploy it like we wanted on the machine.  let me see if i can just start it up as we did once before.  Just a minute.</span><br/>
+<font color="#16569E"><font size="2">(01:49:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ok, just have it running under Django ./manage on the server for now.</span><br/>
+<font color="#16569E"><font size="2">(01:49:36 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://192.168.251.180:8000/padawan/map">http://192.168.251.180:8000/padawan/map</a></span><br/>
+<font color="#16569E"><font size="2">(01:50:47 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>so, those two additional layers in the OL page:<br/>PADAWAN: Vintage<br/>PADAWAN: Vintage Desc<br/>Would be a good start.</span><br/>
+<font color="#A82F2F"><font size="2">(01:59:29 PM)</font> <b>Michael Dillon:</b></font> wms_endpoint = &quot;http://192.168.251.180:8000/padawan/ogc?&quot;;<br/>
+<font color="#16569E"><font size="2">(02:00:03 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>sort of.</span><br/>
+<font color="#16569E"><font size="2">(02:02:01 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Here's an example of the end game:<a href="http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a&amp;request=getcapabilities"><br/>http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a&amp;request=getcapabilities</a></span><br/>
+<font color="#16569E"><font size="2">(02:02:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>without the &quot;&amp;request=getcapabilities&quot;</span><br/>
+<font color="#A82F2F"><font size="2">(02:02:35 PM)</font> <b>Michael Dillon:</b></font> right<br/>
+<font color="#16569E"><font size="2">(02:02:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'><a href="http://192.168.251.180:8000/padawan/assets/?p_layers=">http://192.168.251.180:8000/padawan/assets/?p_layers=</a></span><br/>
+<font color="#16569E"><font size="2">(02:03:28 PM)</font> <b>Randy How:</b></font> wms_endpoint = &quot;<a href="http://192.168.251.180:8000/padawan/ogc?">http://192.168.251.180:8000/padawan/ogc?</a>&quot;;  This is the base for the global layers.<br/>
+<font color="#16569E"><font size="2">(02:04:05 PM)</font> <b>Randy How:</b></font> 'assets' is for the individual scenes and 'ogc' is for the global layers.<br/>
+<font color="#A82F2F"><font size="2">(02:04:56 PM)</font> <b>Michael Dillon:</b></font> adm endpoint ?<br/>
+<font color="#16569E"><font size="2">(02:06:12 PM)</font> <b>Randy How:</b></font> <a href="http://adm-m5-web.i3.local/os/?">http://adm-m5-web.i3.local/os/?</a><br/>
+<font color="#A82F2F"><font size="2">(02:06:13 PM)</font> <b>Michael Dillon:</b></font> erm.  This doesn't seem to work:  http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a&amp;request=getcapabilities<br/>
+<font color="#A82F2F"><font size="2">(02:06:47 PM)</font> <b>Michael Dillon:</b></font> looks like you killed it<br/>
+<font color="#16569E"><font size="2">(02:07:48 PM)</font> <b>Randy How:</b></font> looks like you broke it.<br/>
+<font color="#A82F2F"><font size="2">(02:07:55 PM)</font> <b>Michael Dillon:</b></font> 'testing'<br/>
+<font color="#16569E"><font size="2">(02:09:05 PM)</font> <b>Randy How:</b></font> it's back<br/>
+<font color="#A82F2F"><font size="2">(02:09:19 PM)</font> <b>Michael Dillon:</b></font> k<br/>
+<font color="#A82F2F"><font size="2">(02:09:36 PM)</font> <b>Michael Dillon:</b></font> are you just running it 'python app.py'?<br/>
+<font color="#16569E"><font size="2">(02:09:59 PM)</font> <b>Randy How:</b></font>  ./manage.py runserver 0.0.0.0:8000 &gt; run-logfile.txt 2&gt;&amp;1 &amp;<br/>
+<font color="#A82F2F"><font size="2">(02:11:08 PM)</font> <b>Michael Dillon:</b></font> ah<br/>
+<font color="#A82F2F"><font size="2">(02:11:29 PM)</font> <b>Michael Dillon:</b></font> I have a wsgi example config (if you need it)<br/>
+<font color="#16569E"><font size="2">(02:12:04 PM)</font> <b>Randy How:</b></font> dunno.<br/>
+<font color="#A82F2F"><font size="2">(02:12:10 PM)</font> <b>Michael Dillon:</b></font> ooo ' running as root I see.  :-P<br/>
+<font color="#A82F2F"><font size="2">(02:12:11 PM)</font> <b>Michael Dillon:</b></font> http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a<br/>
+<font color="#16569E"><font size="2">(02:12:51 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>oh yeah!</span><br/>
+<font color="#16569E"><font size="2">(02:37:32 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>Fixed:</span><a href="http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a"><br/>http://192.168.251.180:8000/padawan/assets/?p_layers=979201c93c83be5cdaf67fd8c47c8552,6770d2e3cfd6ef645cb61456235e4c2a</a><br/>

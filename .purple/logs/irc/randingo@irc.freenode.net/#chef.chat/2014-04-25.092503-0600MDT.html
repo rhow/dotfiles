@@ -1,0 +1,555 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #chef at Fri 25 Apr 2014 09:25:03 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #chef at Fri 25 Apr 2014 09:25:03 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(09:25:03 AM)</font><b> The topic for #chef is: Chef Client 11.12.2 bit.ly/1eYgKT7 | Chef Server 11.0.12 bit.ly/1hj0GFR | <a href="http://getchef.com/chef/install">http://getchef.com/chef/install</a> | <a href="http://docs.opscode.com">http://docs.opscode.com</a> | <a href="http://tickets.opscode.com">http://tickets.opscode.com</a> | <a href="http://lists.opscode.com">http://lists.opscode.com</a> | <a href="http://community.opscode.com">http://community.opscode.com</a> | <a href="http://status.opscode.com">http://status.opscode.com</a> | IRC Logs: <a href="http://bit.ly/chefirc">http://bit.ly/chefirc</a> Real-time: <a href="https://botbot.me/freenode/chef">https://botbot.me/freenode/chef</a> | Learning Chef? #learnchef</b><br/>
+<font color="#A82F2F"><font size="2">(09:25:03 AM)</font> <b>holmes.freenode.net:</b></font> (notice) [freenode-info] if you&apos;re at a conference and other people are having trouble connecting, please mention it to staff: http://freenode.net/faq.shtml#gettinghelp<br/>
+<font color="#A82F2F"><font size="2">(09:25:17 AM)</font> <b>rayrod2030:</b></font> bhckr: At my old place we ran a very simple service that kept track of this status by having chef nodes report their last status back to this service using a chef_handler.<br/>
+<font size="2">(09:25:31 AM)</font><b> Neel is now known as Guest35761</b><br/>
+<font color="#A82F2F"><font size="2">(09:25:50 AM)</font> <b>rayrod2030:</b></font> we found it was much easier to send many requests to this service for building the status checks into our provisioning portal.<br/>
+<font color="#A82F2F"><font size="2">(09:26:17 AM)</font> <b>rayrod2030:</b></font> another thing you can do is check log conditions for an error if you have log analytics in place and alert on that.<br/>
+<font color="#A82F2F"><font size="2">(09:30:16 AM)</font> <b>nfx_:</b></font> Hello, I would like to simply install the knife client utility from my workstation from which I&apos;ll be writting cookbooks. What&apos;s the best way to do so? Do I need to install the whole Windows chef-client installer?<br/>
+<font color="#A82F2F"><font size="2">(09:30:59 AM)</font> <b>gleam:</b></font> chefdk<br/>
+<font color="#A82F2F"><font size="2">(09:31:15 AM)</font> <b>gleam:</b></font> http://www.getchef.com/downloads/chef-dk/windows/<br/>
+<font color="#A82F2F"><font size="2">(09:31:46 AM)</font> <b>gleam:</b></font> that includes chef-client and lots of other cookbook-writing goodies<br/>
+<font color="#A82F2F"><font size="2">(09:31:53 AM)</font> <b>nfx_:</b></font> true, I guess that&apos;ll become the standard workflow now<br/>
+<font color="#A82F2F"><font size="2">(09:32:15 AM)</font> <b>Guest19564:</b></font> Hi, I need to recompile nginx one time on a QA server.  Is it possible to set this flag for the run of chef-clinet? node.run_state[&apos;nginx_force_recompile&apos;]<br/>
+<font color="#A82F2F"><font size="2">(09:33:14 AM)</font> <b>nfx_:</b></font> gleam: it&apos;s not available for windows yet<br/>
+<font color="#A82F2F"><font size="2">(09:33:21 AM)</font> <b>gleam:</b></font> oh, lame.<br/>
+<font color="#A82F2F"><font size="2">(09:33:26 AM)</font> <b>gleam:</b></font> sorry.<br/>
+<font color="#A82F2F"><font size="2">(09:33:28 AM)</font> <b>gleam:</b></font> then yeah, chef-client<br/>
+<font color="#A82F2F"><font size="2">(09:33:57 AM)</font> <b>nfx_:</b></font> ok thanks<br/>
+<font color="#A82F2F"><font size="2">(09:34:40 AM)</font> <b>Neozonz:</b></font> I&apos;m using remote_directory but how do I actually copy the folder rather then the contents?<br/>
+<font color="#A82F2F"><font size="2">(09:35:15 AM)</font> <b>gleam:</b></font> not sure i follow<br/>
+<font color="#A82F2F"><font size="2">(09:35:50 AM)</font> <b>Neozonz:</b></font> I have a ruby block set with the remote_directory directive, copying /folder/blah/<br/>
+<font color="#A82F2F"><font size="2">(09:36:02 AM)</font> <b>Neozonz:</b></font> but it seems to take the contents of blah rather then the folder blah<br/>
+<font color="#A82F2F"><font size="2">(09:36:52 AM)</font> <b>gleam:</b></font> so it&apos;s putting blah/* from teh cookbook into /folder?<br/>
+<font color="#A82F2F"><font size="2">(09:39:43 AM)</font> <b>Neozonz:</b></font> yeah<br/>
+<font color="#A82F2F"><font size="2">(09:39:53 AM)</font> <b>Neozonz:</b></font> rather then the folder blah with its contents<br/>
+<font color="#A82F2F"><font size="2">(09:40:00 AM)</font> <b>Neozonz:</b></font> i tried adding and removing a /<br/>
+<font size="2">(09:44:23 AM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(09:57:26 AM)</font> <b>tejaycar:</b></font> I want to use knife ssh to run a command on any ONE node in a given environment.  something like `search(chef_environment:myENV).first`  Is there any way to do that?<br/>
+<font size="2">(10:22:21 AM)</font><b> mwhite is now known as mwhite|away</b><br/>
+<font color="#A82F2F"><font size="2">(10:26:02 AM)</font> <b>vovans:</b></font> hi everyone<br/>
+<font color="#A82F2F"><font size="2">(10:26:06 AM)</font> <b>vovans:</b></font> i have a question<br/>
+<font color="#A82F2F"><font size="2">(10:26:21 AM)</font> <b>vovans:</b></font> i just upgraded from chef 10 to 11 open source<br/>
+<font color="#A82F2F"><font size="2">(10:26:42 AM)</font> <b>vovans:</b></font> following this<br/>
+<font color="#A82F2F"><font size="2">(10:26:42 AM)</font> <b>vovans:</b></font> http://www.getchef.com/blog/2013/03/12/5106/<br/>
+<font color="#A82F2F"><font size="2">(10:26:57 AM)</font> <b>vovans:</b></font> and everything is uploaded all nodes/clients/cookbooks<br/>
+<font color="#A82F2F"><font size="2">(10:27:19 AM)</font> <b>vovans:</b></font> when I use knife to see the cookbooks on the server it works<br/>
+<font color="#A82F2F"><font size="2">(10:27:34 AM)</font> <b>vovans:</b></font> but chef-client on a client machine says<br/>
+<font color="#A82F2F"><font size="2">(10:27:34 AM)</font> <b>vovans:</b></font> The following cookbooks are required by the client but don&apos;t exist on the server:<br/>
+<font color="#A82F2F"><font size="2">(10:27:42 AM)</font> <b>vovans:</b></font> anybody have any ideas ?<br/>
+<font color="#A82F2F"><font size="2">(10:32:10 AM)</font> <b>rayrod20_:</b></font> just to be sure the runit cookbook takes all attributes, flattens them and exposes them to templates via @options right?<br/>
+<font color="#A82F2F"><font size="2">(10:32:39 AM)</font> <b>rayrod20_:</b></font> so node[&apos;foo&apos;][&apos;bar&apos;] would be available as @options[&apos;foo_bar&apos;]<br/>
+<font color="#A82F2F"><font size="2">(10:38:24 AM)</font> <b>jmickle:</b></font> vovans: sounds like cookbook dependencies arent being specified properly<br/>
+<font color="#A82F2F"><font size="2">(10:38:27 AM)</font> <b>double_p:</b></font> here and there i get confused when i&apos;ve to prepend a &apos;variable&apos; with &apos;:&apos;? damnit.. time to get some real course on ruby *grumpy*<br/>
+<font color="#A82F2F"><font size="2">(10:39:11 AM)</font> <b>vovans:</b></font> jmickle: i haven’t changed any recipes or anything though. it worked fine on chef 10<br/>
+<font color="#A82F2F"><font size="2">(10:39:22 AM)</font> <b>jmickle:</b></font> vovans pastebin?<br/>
+<font color="#A82F2F"><font size="2">(10:40:35 AM)</font> <b>vovans:</b></font> jmickle: http://pastebin.com/67Htcyx3<br/>
+<font color="#A82F2F"><font size="2">(10:41:46 AM)</font> <b>vovans:</b></font> jmickle: and here: http://pastebin.com/LCyHVTEK<br/>
+<font color="#A82F2F"><font size="2">(10:41:49 AM)</font> <b>jmickle:</b></font> are you sure the yumrepo cookbook<br/>
+<font color="#A82F2F"><font size="2">(10:41:51 AM)</font> <b>jmickle:</b></font> is on the server?<br/>
+<font color="#A82F2F"><font size="2">(10:42:02 AM)</font> <b>vovans:</b></font> check the second pastebin<br/>
+<font color="#A82F2F"><font size="2">(10:42:07 AM)</font> <b>jmickle:</b></font> yeah just saw that<br/>
+<font color="#A82F2F"><font size="2">(10:42:09 AM)</font> <b>jmickle:</b></font> interesting<br/>
+<font color="#A82F2F"><font size="2">(10:42:14 AM)</font> <b>vovans:</b></font> yeah weird right<br/>
+<font color="#A82F2F"><font size="2">(10:42:16 AM)</font> <b>jmickle:</b></font> have you tried reuploading<br/>
+<font color="#A82F2F"><font size="2">(10:42:19 AM)</font> <b>jmickle:</b></font> the yumrepo cookbook?<br/>
+<font color="#A82F2F"><font size="2">(10:42:19 AM)</font> <b>vovans:</b></font> yup<br/>
+<font color="#A82F2F"><font size="2">(10:42:30 AM)</font> <b>jmickle:</b></font> did you try a knife cookbook delete --purge?<br/>
+<font color="#A82F2F"><font size="2">(10:42:39 AM)</font> <b>vovans:</b></font> no<br/>
+<font color="#A82F2F"><font size="2">(10:42:43 AM)</font> <b>jmickle:</b></font> knife cookbook delete yumrepo<br/>
+<font color="#A82F2F"><font size="2">(10:42:53 AM)</font> <b>jmickle:</b></font> then try and reupload<br/>
+<font color="#A82F2F"><font size="2">(10:42:57 AM)</font> <b>vovans:</b></font> ok let me try<br/>
+<font color="#A82F2F"><font size="2">(10:43:05 AM)</font> <b>jmickle:</b></font> i wonder if maybe it got corrupted or something<br/>
+<font color="#A82F2F"><font size="2">(10:43:06 AM)</font> <b>jmickle:</b></font> on upload<br/>
+<font color="#A82F2F"><font size="2">(10:43:26 AM)</font> <b>jmickle:</b></font> during my chef10-11 upgrade i hit some really funky corruption errors at first<br/>
+<font color="#A82F2F"><font size="2">(10:43:33 AM)</font> <b>jmickle:</b></font> mostly resolved by reuploading<br/>
+<font color="#A82F2F"><font size="2">(10:43:49 AM)</font> <b>vovans:</b></font> just tried and same thing<br/>
+<font color="#A82F2F"><font size="2">(10:44:20 AM)</font> <b>jmickle:</b></font> ok do you know which cookbook is requiring yumrepo?<br/>
+<font color="#A82F2F"><font size="2">(10:45:37 AM)</font> <b>jmickle:</b></font> also have you tried clearing the /var/chef/cache<br/>
+<font color="#A82F2F"><font size="2">(10:46:22 AM)</font> <b>atomic-penguin:</b></font> --purge can fuck shit up, a knife cookbook delete should be sufficient<br/>
+<font color="#A82F2F"><font size="2">(10:46:49 AM)</font> <b>jmickle:</b></font> atomic-penguin: true but the upgrade alone fucks alot of shit up :-P<br/>
+<font color="#A82F2F"><font size="2">(10:47:13 AM)</font> <b>atomic-penguin:</b></font> vovans, can you pastebin your run_list<br/>
+<font color="#A82F2F"><font size="2">(10:47:29 AM)</font> <b>vovans:</b></font> i have the yumrepo in my base role<br/>
+<font color="#A82F2F"><font size="2">(10:47:32 AM)</font> <b>atomic-penguin:</b></font> vovans, I might be able to eyeball it, and tell you what is dependent on yumrepo.<br/>
+<font color="#A82F2F"><font size="2">(10:48:08 AM)</font> <b>atomic-penguin:</b></font> vovans, um, it was deprecated a while back<br/>
+<font color="#A82F2F"><font size="2">(10:48:27 AM)</font> <b>vovans:</b></font> what was deprecated ?<br/>
+<font color="#A82F2F"><font size="2">(10:48:29 AM)</font> <b>jmickle:</b></font> atomic-penguin what was deprecated? yum_repo?<br/>
+<font color="#A82F2F"><font size="2">(10:48:35 AM)</font> <b>atomic-penguin:</b></font> yumrepo, yes<br/>
+<font color="#A82F2F"><font size="2">(10:48:53 AM)</font> <b>jmickle:</b></font> in favor of what<br/>
+<font color="#A82F2F"><font size="2">(10:49:05 AM)</font> <b>atomic-penguin:</b></font> http://community.opscode.com/cookbooks/yumrepo<br/>
+<font color="#A82F2F"><font size="2">(10:49:21 AM)</font> <b>jmickle:</b></font> ah yum-corporate<br/>
+<font color="#A82F2F"><font size="2">(10:49:23 AM)</font> <b>jmickle:</b></font> that makes sense<br/>
+<font color="#A82F2F"><font size="2">(10:49:32 AM)</font> <b>atomic-penguin:</b></font> Everything was broken out into yum-$thing<br/>
+<font color="#A82F2F"><font size="2">(10:49:40 AM)</font> <b>jmickle:</b></font> i avoid yum like the plague<br/>
+<font color="#A82F2F"><font size="2">(10:49:42 AM)</font> <b>jmickle:</b></font> so<br/>
+<font color="#A82F2F"><font size="2">(10:49:51 AM)</font> <b>jmickle:</b></font> which means i also avoid rhel based distros<br/>
+<font color="#A82F2F"><font size="2">(10:49:52 AM)</font> <b>jmickle:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(10:50:22 AM)</font> <b>vovans:</b></font> yeah well I really can’t get away with it for the moment. enterprise, we use rhel6 here, etc blah blah<br/>
+<font color="#A82F2F"><font size="2">(10:50:48 AM)</font> <b>atomic-penguin:</b></font> yum/rpm does have the advantage of recording transactions, unlike apt/dpkg<br/>
+<font color="#A82F2F"><font size="2">(10:51:16 AM)</font> <b>jmickle:</b></font> yeah but yum/rpm also has the disadvantage of using last year’s repo&apos;s<br/>
+<font color="#A82F2F"><font size="2">(10:51:17 AM)</font> <b>jmickle:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(10:51:30 AM)</font> <b>jmickle:</b></font> unless of course you go radical and use EPEL<br/>
+<font color="#A82F2F"><font size="2">(10:51:50 AM)</font> <b>jmickle:</b></font> which then that is a direct hypocracy against why most people choice “enterprise linux”<br/>
+<font color="#A82F2F"><font size="2">(10:52:17 AM)</font> <b>jmickle:</b></font> but linux is linux<br/>
+<font color="#A82F2F"><font size="2">(10:52:21 AM)</font> <b>hasues:</b></font> exactly<br/>
+<font color="#A82F2F"><font size="2">(10:52:21 AM)</font> <b>jmickle:</b></font> at the end of the day<br/>
+<font color="#A82F2F"><font size="2">(10:52:25 AM)</font> <b>jmickle:</b></font> its all 1’s and 0&apos;s<br/>
+<font color="#A82F2F"><font size="2">(10:52:26 AM)</font> <b>jmickle:</b></font> haha<br/>
+<font color="#A82F2F"><font size="2">(10:52:38 AM)</font> <b>hasues:</b></font> yum, apt, emerge,... I just grok it.<br/>
+<font color="#A82F2F"><font size="2">(10:52:42 AM)</font> <b>atomic-penguin:</b></font> jmickle, I don&apos;t know what you mean by that.  An Enterprise distro, never changes a packages major version, or API, for the life of a release which can be 5-7 years.  Bugfixes, security fixes, and features are still backported into those packages over the life of a release though<br/>
+<font color="#A82F2F"><font size="2">(10:52:49 AM)</font> <b>vovans:</b></font> :)<br/>
+<font color="#A82F2F"><font size="2">(10:53:09 AM)</font> <b>vovans:</b></font> hey guys so i looked if anything depends on my yumrepo and I don’t have anything. I only have it in my base role<br/>
+<font color="#A82F2F"><font size="2">(10:53:13 AM)</font> <b>vovans:</b></font> which all the boxes get<br/>
+<font color="#A82F2F"><font size="2">(10:53:56 AM)</font> <b>vovans:</b></font> I really don’t think that this is a dependency issue - I think something is wrong with the communication where chef-client just doesn’t see any cookbooks<br/>
+<font color="#A82F2F"><font size="2">(10:54:49 AM)</font> <b>jmreicha:</b></font> Hey guys, I have some questions about how to structure my repo.  I was watching a chef conf talk about using berkshelf to manage cookbooks and dependencies.  Is that the preffered method?<br/>
+<font color="#A82F2F"><font size="2">(10:56:51 AM)</font> <b>jmickle:</b></font> atomic-penguin: thats exactly the point, why would you want to stay on a major from 5 years ago :-P<br/>
+<font size="2">(10:57:21 AM)</font><b> mwhite|away is now known as mwhite</b><br/>
+<font color="#A82F2F"><font size="2">(11:03:18 AM)</font> <b>atomic-penguin:</b></font> jmickle, because they&apos;re running million(s) of dollars of enterprisey vendor supported shit built against that target platform.<br/>
+<font color="#A82F2F"><font size="2">(11:06:01 AM)</font> <b>atomic-penguin:</b></font> Also, nothing in EPEL has overlap with what is provided and supported by RHEL/CentOS.  EPEL is supplementary<br/>
+<font color="#A82F2F"><font size="2">(11:11:27 AM)</font> <b>vovans:</b></font> jmickle: i figured it out. damn it. i had this environment pinned to a specific yumrepo version that I did not upload<br/>
+<font color="#A82F2F"><font size="2">(11:11:30 AM)</font> <b>vovans:</b></font> damn it<br/>
+<font color="#A82F2F"><font size="2">(11:11:40 AM)</font> <b>jmickle:</b></font> :-)<br/>
+<font color="#A82F2F"><font size="2">(11:12:00 AM)</font> <b>vovans:</b></font> thanks :)<br/>
+<font color="#A82F2F"><font size="2">(11:12:05 AM)</font> <b>jmickle:</b></font> np dude<br/>
+<font color="#A82F2F"><font size="2">(11:12:29 AM)</font> <b>jmickle:</b></font> just cause something is deprecated doesnt mean you should jump to switch<br/>
+<font color="#A82F2F"><font size="2">(11:12:37 AM)</font> <b>jmickle:</b></font> though i would advise considering your options<br/>
+<font color="#A82F2F"><font size="2">(11:12:49 AM)</font> <b>jmickle:</b></font> then again lots of people with opinions these days so :-)<br/>
+<font color="#A82F2F"><font size="2">(11:12:54 AM)</font> <b>vovans:</b></font> yeah i know<br/>
+<font color="#A82F2F"><font size="2">(11:13:03 AM)</font> <b>vovans:</b></font> its just a matter of having time to do everything<br/>
+<font color="#A82F2F"><font size="2">(11:13:06 AM)</font> <b>vovans:</b></font> and I usually don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(11:13:11 AM)</font> <b>jmickle:</b></font> yep<br/>
+<font color="#A82F2F"><font size="2">(11:13:18 AM)</font> <b>vovans:</b></font> you know - work shit<br/>
+<font color="#A82F2F"><font size="2">(11:13:24 AM)</font> <b>jmickle:</b></font> always man<br/>
+<font color="#A82F2F"><font size="2">(11:13:29 AM)</font> <b>jmickle:</b></font> keeps the world spinning<br/>
+<font color="#A82F2F"><font size="2">(11:13:39 AM)</font> <b>vovans:</b></font> and this heartbleed thing didnt help lately<br/>
+<font color="#A82F2F"><font size="2">(11:17:32 AM)</font> <b>wilbur2:</b></font> can someone help explain to me why my cookbook_file resources fails (yet the file is actually getting distributed) - the permission settings are bot being obeyed though so im guessing it has to do with the inability to chmod or chown - though I am manually able to do so. Here is the error: http://fpaste.org/97008/98445733/ and here is the stacktrace: http://fpaste.org/97009/98445965/  Thanks :)<br/>
+<font size="2">(11:19:33 AM)</font><b> vovans left the room.</b><br/>
+<font color="#A82F2F"><font size="2">(11:22:34 AM)</font> <b>coderanger:</b></font> wilbur2: Its the chown failing, do you have a group called root?<br/>
+<font color="#A82F2F"><font size="2">(11:22:43 AM)</font> <b>wilbur2:</b></font> yes<br/>
+<font color="#A82F2F"><font size="2">(11:22:52 AM)</font> <b>coderanger:</b></font> wilbur2: Is SELinux active?<br/>
+<font size="2">(11:23:22 AM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(11:23:49 AM)</font> <b>wilbur2:</b></font> disabled.<br/>
+<font color="#A82F2F"><font size="2">(11:23:55 AM)</font> <b>jmreicha:</b></font> Is there a way to set a timeout on packages installing?<br/>
+<font color="#A82F2F"><font size="2">(11:24:32 AM)</font> <b>viszeral:</b></font> i&apos;m having a hard time accessing a hash that&apos;s defined at the environment level in a recipe.  anyone know of a good reference for this?<br/>
+<font color="#A82F2F"><font size="2">(11:24:54 AM)</font> <b>double_p:</b></font> jmreicha: how about fixing the root cause? :}<br/>
+<font color="#A82F2F"><font size="2">(11:25:09 AM)</font> <b>wilbur2:</b></font> root:x:0:<br/>
+<font color="#A82F2F"><font size="2">(11:25:10 AM)</font> <b>jmreicha:</b></font> uhh, crappy internet?<br/>
+<font color="#A82F2F"><font size="2">(11:25:16 AM)</font> <b>wilbur2:</b></font> is my /etc/group entry. coderanger<br/>
+<font color="#A82F2F"><font size="2">(11:25:22 AM)</font> <b>coderanger:</b></font> wilbur2: You might want to try updating to the current release of chef, and check for weird mount flags on /tmp<br/>
+<font color="#A82F2F"><font size="2">(11:25:26 AM)</font> <b>coderanger:</b></font> viszeral: Whats the issue?<br/>
+<font color="#A82F2F"><font size="2">(11:26:28 AM)</font> <b>wilbur2:</b></font> coderanger: using Chef Client, version 11.6.0<br/>
+<font color="#A82F2F"><font size="2">(11:26:49 AM)</font> <b>coderanger:</b></font> wilbur2: Yes, latest is 11.12.2<br/>
+<font color="#A82F2F"><font size="2">(11:26:53 AM)</font> <b>viszeral:</b></font> coderanger:  i have a structure that i put together to define repositories.  when i test my syntax to iterate through the structure in irb everything works fine, but when i run it in the recipe in a test kitchen the variables seem empty<br/>
+<font color="#A82F2F"><font size="2">(11:26:59 AM)</font> <b>jmreicha:</b></font> double_p:  I don&apos;t know what else I can do<br/>
+<font color="#A82F2F"><font size="2">(11:27:12 AM)</font> <b>double_p:</b></font> jmreicha: if you need that package, a timeout wont help a lot?<br/>
+<font color="#A82F2F"><font size="2">(11:27:29 AM)</font> <b>coderanger:</b></font> viszeral: That would be because TK doesn&apos;t load envs normally<br/>
+<font color="#A82F2F"><font size="2">(11:27:41 AM)</font> <b>wilbur2:</b></font> coderanger:  what determined which version of chef-client my node gets bootstrapped with?<br/>
+<font color="#A82F2F"><font size="2">(11:27:48 AM)</font> <b>wilbur2:</b></font> coderanger: i am using open source chef<br/>
+<font color="#A82F2F"><font size="2">(11:28:04 AM)</font> <b>coderanger:</b></font> wilbur2: knife bootstrap uses whatever version is installed on your workstation<br/>
+<font color="#A82F2F"><font size="2">(11:28:05 AM)</font> <b>viszeral:</b></font> coderanger:  i have it configured to load them and am able to pull values in another recipe, plus i verified in the kitchen logs that the envs are being deployed properly<br/>
+<font color="#A82F2F"><font size="2">(11:28:15 AM)</font> <b>jmreicha:</b></font> The issue only happens on slow/crap internet connections, I&apos;m wondering what other options I have<br/>
+<font color="#A82F2F"><font size="2">(11:28:23 AM)</font> <b>coderanger:</b></font> viszeral: pastebin the env and recipe code<br/>
+<font color="#A82F2F"><font size="2">(11:28:39 AM)</font> <b>jmreicha:</b></font> double_p: ^^<br/>
+<font color="#A82F2F"><font size="2">(11:28:43 AM)</font> <b>coderanger:</b></font> jmreicha: You can setup a local package mirror<br/>
+<font color="#A82F2F"><font size="2">(11:28:59 AM)</font> <b>double_p:</b></font> yeah..<br/>
+<font color="#A82F2F"><font size="2">(11:29:25 AM)</font> <b>double_p:</b></font> coderanger: and i&apos;d leverage an hierachry one, just dont have any insight on how to do that<br/>
+<font color="#A82F2F"><font size="2">(11:29:56 AM)</font> <b>jmreicha:</b></font> @coderanger: Ok, thanks<br/>
+<font color="#A82F2F"><font size="2">(11:34:11 AM)</font> <b>mhenrixon:</b></font> anyone know why I can&apos;t compile the nginx cookbook anymore? https://gist.github.com/mhenrixon/bbc6537cee936f16ab74<br/>
+<font color="#A82F2F"><font size="2">(11:35:33 AM)</font> <b>coderanger:</b></font> mhenrixon: You enabled a plugin for nginx that isn&apos;t working correctly<br/>
+<font color="#A82F2F"><font size="2">(11:36:14 AM)</font> <b>mhenrixon:</b></font> it doesn&apos;t matter what plugin I use they all fail with the same message. Only thing I did was update it with berkshelf and all of a sudden it isn&apos;t working anymore<br/>
+<font color="#A82F2F"><font size="2">(11:36:23 AM)</font> <b>viszeral:</b></font> coderanger: http://pastebin.com/uhEzyH63<br/>
+<font color="#A82F2F"><font size="2">(11:36:32 AM)</font> <b>mhenrixon:</b></font> all they changed in the cookbook was the default version of openssl coderanger<br/>
+<font color="#A82F2F"><font size="2">(11:37:42 AM)</font> <b>coderanger:</b></font> viszeral: Looks correct, I would log the value of node.chef_environment within TK and ensure it is set<br/>
+<font color="#A82F2F"><font size="2">(11:38:42 AM)</font> <b>mhenrixon:</b></font> also.. would this be a proper use of the Poise cookbook? https://gist.github.com/mhenrixon/7f1cd6aa01123babfd0e haven&apos;t been able to test it yet :)<br/>
+<font color="#A82F2F"><font size="2">(11:40:45 AM)</font> <b>coderanger:</b></font> mhenrixon: With the exception that you don&apos;t want to name it that, yes<br/>
+<font color="#A82F2F"><font size="2">(11:41:45 AM)</font> <b>coderanger:</b></font> mhenrixon: (it might collide if #run_state is ever exposed directly in recipes)<br/>
+<font color="#A82F2F"><font size="2">(11:41:54 AM)</font> <b>jchauncey:</b></font> might have a bad time<br/>
+<font color="#A82F2F"><font size="2">(11:42:02 AM)</font> <b>viszeral:</b></font> coderanger: yeah, the log returns INFO: qa<br/>
+<font color="#A82F2F"><font size="2">(11:42:17 AM)</font> <b>mhenrixon:</b></font> coderanger: yeah I figured as much but naming things.... jeez its hard<br/>
+<font color="#A82F2F"><font size="2">(11:42:38 AM)</font> <b>jchauncey:</b></font> why doesnt remote_file use the checksum attribute to determine if it already has the file on disk before downloading it?<br/>
+<font color="#A82F2F"><font size="2">(11:42:41 AM)</font> <b>coderanger:</b></font> mhenrixon: You also don&apos;t need the notifying_block because you aren&apos;t use the recipe DSL in there<br/>
+<font color="#A82F2F"><font size="2">(11:42:51 AM)</font> <b>jchauncey:</b></font> espeically if you are using hte create_if_missing action<br/>
+<font color="#A82F2F"><font size="2">(11:43:00 AM)</font> <b>coderanger:</b></font> jchauncey: It does<br/>
+<font color="#A82F2F"><font size="2">(11:43:31 AM)</font> <b>jchauncey:</b></font> coderanger: i may have to try it again but it didnt look like that was happening this morning<br/>
+<font color="#A82F2F"><font size="2">(11:43:48 AM)</font> <b>mhenrixon:</b></font> Thanks coderanger I have another couple of resources I&apos;ll post later soon as I am able to get nginx running. Noticed that 1.6.0 is released so might as well try and install that instead<br/>
+<font color="#A82F2F"><font size="2">(11:45:10 AM)</font> <b>coderanger:</b></font> mhenrixon: Also your only_ifs can be much faster in pure ruby<br/>
+<font color="#A82F2F"><font size="2">(11:45:30 AM)</font> <b>coderanger:</b></font> mhenrixon: only_if { Dir.directory?(…) }<br/>
+<font color="#A82F2F"><font size="2">(11:46:18 AM)</font> <b>mhenrixon:</b></font> How would using ruby be faster? In my experience ruby is always slower than a bash call is it the shell-out that makes it slower?<br/>
+<font color="#A82F2F"><font size="2">(11:46:41 AM)</font> <b>coderanger:</b></font> Yes, doing a single stat is much faster than starting all of bash<br/>
+<font color="#A82F2F"><font size="2">(11:48:00 AM)</font> <b>mhenrixon:</b></font> Nice I totally thought the opposite so when chef-client runs it doesn&apos;t have to leave ruby to set the terms of that condition? That it coderanger ?<br/>
+<font color="#A82F2F"><font size="2">(11:48:20 AM)</font> <b>coderanger:</b></font> Not sure what you mean, but probably yes<br/>
+<font color="#A82F2F"><font size="2">(11:49:43 AM)</font> <b>mhenrixon:</b></font> what I mean is the code runs in the current process instead of having to start a new one<br/>
+<font color="#A82F2F"><font size="2">(11:50:35 AM)</font> <b>coderanger:</b></font> Indeed<br/>
+<font color="#A82F2F"><font size="2">(11:51:17 AM)</font> <b>mhenrixon:</b></font> This can&apos;t be my fault<br/>
+<font color="#A82F2F"><font size="2">(11:51:54 AM)</font> <b>viszeral:</b></font> coderanger:  at what point in the execution would it expand those attributes from the environment?<br/>
+<font color="#A82F2F"><font size="2">(11:52:28 AM)</font> <b>coderanger:</b></font> viszeral: Very early, before cookbooks are loaded<br/>
+<font color="#A82F2F"><font size="2">(11:53:02 AM)</font> <b>jpr_:</b></font> is there a way to execute a resource defined with action :nothing without a notification/subscription from another resource?<br/>
+<font color="#A82F2F"><font size="2">(11:53:15 AM)</font> <b>viszeral:</b></font> coderanger:  that&apos;s strange then, because i just set a hard coded string for the line yum_repository &quot;test&quot; do and it expanded all teh subsequent entries<br/>
+<font color="#A82F2F"><font size="2">(11:55:40 AM)</font> <b>viszeral:</b></font> coderanger: since yum_repository is a resource from another cookbook, and it validates teh &quot;type of&quot; input, is it possible that those haven&apos;t been expanded yet when the resource is validating the input?<br/>
+<font color="#A82F2F"><font size="2">(12:03:45 PM)</font> <b>rayrod2030:</b></font> anybody converging on demand as opposed to having a constantly running chef-client daemon?<br/>
+<font color="#A82F2F"><font size="2">(12:06:31 PM)</font> <b>the_grunt:</b></font> Does anyone have experience with the &apos;postgresql&apos; cookbook?  It installs just fine but when I try to use the credentials with the &apos;database&apos; cookbook it keeps failing authentication.  Any thoughts?<br/>
+<font size="2">(12:07:21 PM)</font><b> rayrod2030 left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(12:07:55 PM)</font><b> rayrod2030 [<em>~rayrod203@208.82.12.18</em>] entered the room.</b><br/>
+<font color="#A82F2F"><font size="2">(12:10:07 PM)</font> <b>mhenrixon:</b></font> wtf<br/>
+<font color="#A82F2F"><font size="2">(12:10:23 PM)</font> <b>mhenrixon:</b></font> the missing config is now located in /tmp/kitchen/cache/headers_more/7e45d5cbe4ed6865b3bce4fcb6c05f13a52a315702335bcedf68691ad41d8294/openresty-headers-more-nginx-module-27bcbd2<br/>
+<font color="#A82F2F"><font size="2">(12:11:05 PM)</font> <b>double_p:</b></font> danit<br/>
+<font color="#A82F2F"><font size="2">(12:11:40 PM)</font> <b>double_p:</b></font> damn.. 16h work. LET&apos;S HUMPPA. (sorry)<br/>
+<font color="#A82F2F"><font size="2">(12:14:31 PM)</font> <b>mhenrixon:</b></font> coderanger how should I proceed on this? https://gist.github.com/mhenrixon/bbc6537cee936f16ab74 it seems the location of the remote_file of the nginx::source recipe has changed. No idea why to be honest.<br/>
+<font color="#A82F2F"><font size="2">(12:17:26 PM)</font> <b>viszeral:</b></font> can you pass a variable containing a string as the name for a resource?  in other words &quot; resource somevariable do &quot;<br/>
+<font color="#A82F2F"><font size="2">(12:18:36 PM)</font> <b>jkeiser:</b></font> voszeral: yep<br/>
+<font color="#A82F2F"><font size="2">(12:18:42 PM)</font> <b>jkeiser:</b></font> viszeral<br/>
+<font color="#A82F2F"><font size="2">(12:20:40 PM)</font> <b>viszeral:</b></font> jkeiser: at what point does that expand?  i can call this particular resource if i hard code a test string, but when i try to use the value of a variable in a .each block it returns an error prior to execution that a name has to be passed<br/>
+<font color="#A82F2F"><font size="2">(12:21:03 PM)</font> <b>jkeiser:</b></font> viszeral: it expands at the moment the resource is first defined<br/>
+<font color="#A82F2F"><font size="2">(12:21:20 PM)</font> <b>jkeiser:</b></font> you can say 1.upto(10) do |i|<br/>
+<font color="#A82F2F"><font size="2">(12:21:30 PM)</font> <b>jkeiser:</b></font>   resource &quot;blah#{i}&quot; do<br/>
+<font color="#A82F2F"><font size="2">(12:21:32 PM)</font> <b>jkeiser:</b></font>  ...<br/>
+<font color="#A82F2F"><font size="2">(12:21:34 PM)</font> <b>jkeiser:</b></font> and it works<br/>
+<font color="#A82F2F"><font size="2">(12:21:46 PM)</font> <b>viszeral:</b></font> http://pastebin.com/uhEzyH63<br/>
+<font color="#A82F2F"><font size="2">(12:21:56 PM)</font> <b>viszeral:</b></font> that&apos;s funky, because that doesn&apos;t work here, lol<br/>
+<font color="#A82F2F"><font size="2">(12:22:21 PM)</font> <b>sarkis:</b></font> jtimberman: you here?<br/>
+<font color="#A82F2F"><font size="2">(12:25:12 PM)</font> <b>nobody18188181:</b></font> is there a chef developer guide?<br/>
+<font size="2">(12:25:39 PM)</font><b> paulmooring_away is now known as paulmooring</b><br/>
+<font color="#A82F2F"><font size="2">(12:26:02 PM)</font> <b>zeroXten:</b></font> should node.set inside an LWRP provider work in solo?<br/>
+<font color="#A82F2F"><font size="2">(12:26:25 PM)</font> <b>cburroughs:</b></font> What&apos;s the best way to rename a role?  That is all nodes with the role foo should now have the role bar, but the order of the run_list should not change<br/>
+<font color="#A82F2F"><font size="2">(12:28:54 PM)</font> <b>zeroXten:</b></font> i&apos;m using it in the same run (in fact, in the same cookbook)<br/>
+<font color="#A82F2F"><font size="2">(12:29:22 PM)</font> <b>mayster:</b></font> was wondering if anyone knows any problems with centos6.5x64 running chef11  and the ruby-mode package...<br/>
+<font color="#A82F2F"><font size="2">(12:29:55 PM)</font> <b>mayster:</b></font> keep getting&quot;no version specified, and no candidate version available for ruby-mode&quot;...did some searching but could not find anything :(<br/>
+<font color="#A82F2F"><font size="2">(12:34:09 PM)</font> <b>bricker:</b></font> mayster: try updating yum<br/>
+<font color="#A82F2F"><font size="2">(12:35:09 PM)</font> <b>mayster:</b></font> cool, thx..will give it a try<br/>
+<font color="#A82F2F"><font size="2">(12:41:34 PM)</font> <b>mrj:</b></font> if i remove a runlist.. something like installing and setting up IIS, does it uninstall IIS and undo its changes?<br/>
+<font color="#A82F2F"><font size="2">(12:42:42 PM)</font> <b>doomviking:</b></font> no<br/>
+<font size="2">(12:54:01 PM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(12:56:35 PM)</font> <b>mhenrixon:</b></font> all I created a ticket for this problem https://tickets.opscode.com/browse/COOK-4592<br/>
+<font color="#A82F2F"><font size="2">(12:56:48 PM)</font> <b>mhenrixon:</b></font> If anyone care to try it out https://github.com/mhenrixon/nginx-problem<br/>
+<font color="#A82F2F"><font size="2">(01:13:47 PM)</font> <b>loki_97123:</b></font> hello my chefs<br/>
+<font color="#A82F2F"><font size="2">(01:13:58 PM)</font> <b>loki_97123:</b></font> getting out to the aws cloud<br/>
+<font color="#A82F2F"><font size="2">(01:14:11 PM)</font> <b>loki_97123:</b></font> using cloud formation and knife ec2 to get past a poc<br/>
+<font color="#A82F2F"><font size="2">(01:14:32 PM)</font> <b>loki_97123:</b></font> we add the nodes, run a base role, and end up in the _default environment<br/>
+<font color="#A82F2F"><font size="2">(01:14:56 PM)</font> <b>loki_97123:</b></font> now the ?&apos;s ... got a mongo recipe that needs to search and find all of it&apos;s selves<br/>
+<font color="#A82F2F"><font size="2">(01:15:05 PM)</font> <b>loki_97123:</b></font> replica set<br/>
+<font color="#A82F2F"><font size="2">(01:15:39 PM)</font> <b>loki_97123:</b></font> now the 3 nodes that were added aren&apos;t in the &quot;correct&quot; role yet, ok, you say no problem just bootstrap to the correct role<br/>
+<font color="#A82F2F"><font size="2">(01:15:59 PM)</font> <b>loki_97123:</b></font> well when you init the mongodb replicaset you need the members<br/>
+<font color="#A82F2F"><font size="2">(01:16:44 PM)</font> <b>loki_97123:</b></font> but the search won&apos;t find the members only itself<br/>
+<font color="#A82F2F"><font size="2">(01:16:54 PM)</font> <b>loki_97123:</b></font> it seems like a chicken and egg thing<br/>
+<font color="#A82F2F"><font size="2">(01:17:53 PM)</font> <b>viszeral:</b></font> is this a dynamic pool or could you create an attribute at the environment level to name the hosts?<br/>
+<font color="#A82F2F"><font size="2">(01:19:19 PM)</font> <b>loki_97123:</b></font> the cloud formation will create these members<br/>
+<font color="#A82F2F"><font size="2">(01:20:48 PM)</font> <b>loki_97123:</b></font> we could create attributes in environment bar trying to avoid that<br/>
+<font color="#A82F2F"><font size="2">(01:20:56 PM)</font> <b>loki_97123:</b></font> we want more dynamic<br/>
+<font color="#A82F2F"><font size="2">(01:21:08 PM)</font> <b>viszeral:</b></font> yeah, you&apos;d have to manage it then, not great<br/>
+<font size="2">(01:22:09 PM)</font><b> loki_97123 left the room (quit: Remote host closed the connection).</b><br/>
+<font color="#A82F2F"><font size="2">(01:22:23 PM)</font> <b>viszeral:</b></font> so i take it you can&apos;t run replicaset on them one at a time since it would need at least 2, right?<br/>
+<font size="2">(01:22:28 PM)</font><b> loki_97123 [<em>~scott.bri@1731ob.scansafe.net</em>] entered the room.</b><br/>
+<font size="2">(01:23:30 PM)</font><b> loki_97123 left the room (quit: Remote host closed the connection).</b><br/>
+<font size="2">(01:23:46 PM)</font><b> loki_97123 [<em>~scott.bri@1731ob.scansafe.net</em>] entered the room.</b><br/>
+<font size="2">(01:24:08 PM)</font><b> loki_97123 is now known as zz_loki_97123</b><br/>
+<font color="#A82F2F"><font size="2">(01:31:27 PM)</font> <b>geggam:</b></font> btw thanks again coderanger ... that lil snippet you provided is getting used over and over :)<br/>
+<font size="2">(01:33:27 PM)</font><b> thun_ is now known as thun</b><br/>
+<font color="#A82F2F"><font size="2">(01:34:11 PM)</font> <b>thun:</b></font> I am getting this error... ERROR: could not find recipe file /root/run<br/>
+<font color="#A82F2F"><font size="2">(01:34:47 PM)</font> <b>thun:</b></font> alont with this warning... SSL validation of HTTPS requests is disabled<br/>
+<font color="#A82F2F"><font size="2">(01:35:12 PM)</font> <b>coderanger:</b></font> thun: Please pastebin the full traceback<br/>
+<font color="#A82F2F"><font size="2">(01:35:31 PM)</font> <b>coderanger:</b></font> thun: And that warning means your systems are unsafe because you haven&apos;t enable TLS peer verification, just read the warning<br/>
+<font color="#A82F2F"><font size="2">(01:37:26 PM)</font> <b>thun:</b></font> http://pastebin.com/z5f1DYMx<br/>
+<font color="#A82F2F"><font size="2">(01:38:04 PM)</font> <b>coderanger:</b></font> thun: What does your run list look like?<br/>
+<font size="2">(01:39:02 PM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(01:39:07 PM)</font> <b>thun:</b></font> Nothing should have changed... I upgreaded OS knife broke and I reinstalled, after that I am getting all these errors<br/>
+<font color="#A82F2F"><font size="2">(01:39:25 PM)</font> <b>thun:</b></font> Could this all be cause by bad cert?<br/>
+<font color="#A82F2F"><font size="2">(01:40:06 PM)</font> <b>coderanger:</b></font> thun: No, the warning is saying certs aren&apos;t being checked :)<br/>
+<font color="#A82F2F"><font size="2">(01:40:32 PM)</font> <b>coderanger:</b></font> thun: That was added in a recent chef release to get people to notice if they have TLS verification disabled<br/>
+<font color="#A82F2F"><font size="2">(01:40:59 PM)</font> <b>thun:</b></font> Ok one sec<br/>
+<font size="2">(01:44:47 PM)</font><b> gchristensen is now known as GrumpyChristense</b><br/>
+<font size="2">(01:51:15 PM)</font><b> GrumpyChristense is now known as GCurmudgeon</b><br/>
+<font color="#A82F2F"><font size="2">(01:55:18 PM)</font> <b>thun:</b></font> coderanger: I created an instance and ran kept removing items from the roles run list until I just tried... chef-client run -orecipe[aws]<br/>
+<font color="#A82F2F"><font size="2">(01:55:21 PM)</font> <b>thun:</b></font> same errors<br/>
+<font color="#A82F2F"><font size="2">(01:55:28 PM)</font> <b>thun:</b></font> [2014-04-25T19:54:17+00:00] ERROR: could not find recipe file /root/run<br/>
+<font color="#A82F2F"><font size="2">(01:57:08 PM)</font> <b>coderanger:</b></font> thun: What is the &quot;run&quot; in there?<br/>
+<font color="#A82F2F"><font size="2">(01:58:12 PM)</font> <b>coderanger:</b></font> thun: That sounds like hte issue :)<br/>
+<font color="#A82F2F"><font size="2">(01:58:16 PM)</font> <b>thun:</b></font> Lol idk, how I always called it. I guess in this new version it does not work.<br/>
+<font color="#A82F2F"><font size="2">(01:58:20 PM)</font> <b>coderanger:</b></font> chef-client doesn&apos;t have subcommands<br/>
+<font color="#A82F2F"><font size="2">(01:58:23 PM)</font> <b>thun:</b></font> It worked in old versions, haha<br/>
+<font color="#A82F2F"><font size="2">(01:58:29 PM)</font> <b>thun:</b></font> It was it<br/>
+<font color="#A82F2F"><font size="2">(01:58:47 PM)</font> <b>coderanger:</b></font> Yeah, it was changed to allow using chef-client to run recipe code directly similar to chef-apply<br/>
+<font color="#A82F2F"><font size="2">(01:59:39 PM)</font> <b>thun:</b></font> ell ty<br/>
+<font color="#A82F2F"><font size="2">(01:59:41 PM)</font> <b>thun:</b></font> *Well<br/>
+<font size="2">(02:18:01 PM)</font><b> garnertb_ is now known as garnertb</b><br/>
+<font size="2">(02:20:05 PM)</font><b> alop_ is now known as alop</b><br/>
+<font size="2">(02:23:22 PM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(02:29:01 PM)</font> <b>jameson__:</b></font> mysql cookbook is wonky?<br/>
+<font color="#A82F2F"><font size="2">(02:29:43 PM)</font> <b>sarkis:</b></font> can i use node[:hostname] in my node.json?<br/>
+<font size="2">(02:31:41 PM)</font><b> mwhite is now known as mwhite|away</b><br/>
+<font color="#A82F2F"><font size="2">(02:52:54 PM)</font> <b>sarkis:</b></font> kinda confused on wheere i can use the ohai stuff like node[:hostname]<br/>
+<font size="2">(02:54:37 PM)</font><b> maplebed_ is now known as maplebed</b><br/>
+<font color="#A82F2F"><font size="2">(02:55:13 PM)</font> <b>coderanger:</b></font> sarkis: Only in Ruby code files<br/>
+<font color="#A82F2F"><font size="2">(02:55:37 PM)</font> <b>coderanger:</b></font> &quot;node&quot; in that is an actual ruby object :-)<br/>
+<font color="#A82F2F"><font size="2">(02:56:18 PM)</font> <b>sarkis:</b></font> i see<br/>
+<font color="#A82F2F"><font size="2">(02:56:44 PM)</font> <b>coderanger:</b></font> And even then, not all code files<br/>
+<font color="#A82F2F"><font size="2">(02:56:56 PM)</font> <b>coderanger:</b></font> attributes, recipes, and some places in resources/providers<br/>
+<font color="#A82F2F"><font size="2">(02:57:07 PM)</font> <b>doomviking:</b></font> I read that as not all code flies.<br/>
+<font color="#A82F2F"><font size="2">(02:57:18 PM)</font> <b>doomviking:</b></font> more coffee.<br/>
+<font color="#A82F2F"><font size="2">(02:58:40 PM)</font> <b>douglaswth:</b></font> got to watch out for those code flies<br/>
+<font color="#A82F2F"><font size="2">(02:59:00 PM)</font> <b>chip-:</b></font> In case you saw this at Chefconf and wanted your own Yak Shaving Expert t-shirt: http://teespring.com/maksesoftwarebetter2<br/>
+<font color="#A82F2F"><font size="2">(03:01:39 PM)</font> <b>doomviking:</b></font> nice<br/>
+<font size="2">(03:09:19 PM)</font><b> adnichols is now known as adnichols_</b><br/>
+<font color="#A82F2F"><font size="2">(03:09:49 PM)</font> <b>holms:</b></font> help =( http://pastebin.com/raw.php?i=ZtbkNXhE recipe: http://pastebin.com/raw.php?i=wenVFfBQ<br/>
+<font color="#A82F2F"><font size="2">(03:10:38 PM)</font> <b>mannyt:</b></font> chip- thanks for the tshirt link, I basically do this every day<br/>
+<font color="#A82F2F"><font size="2">(03:11:11 PM)</font> <b>holms:</b></font> mannyt: maybe you have time to take alook at my issue :)?<br/>
+<font color="#A82F2F"><font size="2">(03:12:05 PM)</font> <b>coderanger:</b></font> holms: run `/usr/bin/python -c &quot;import yum&quot;&apos;<br/>
+<font color="#A82F2F"><font size="2">(03:12:13 PM)</font> <b>coderanger:</b></font> holms: You might have corrupted your Python install<br/>
+<font color="#A82F2F"><font size="2">(03:12:21 PM)</font> <b>coderanger:</b></font> that module is part of RHEL internals<br/>
+<font color="#A82F2F"><font size="2">(03:12:23 PM)</font> <b>holms:</b></font> insteresting<br/>
+<font color="#A82F2F"><font size="2">(03:12:35 PM)</font> <b>holms:</b></font> used python cookbook to install python2.7 from source<br/>
+<font color="#A82F2F"><font size="2">(03:12:50 PM)</font> <b>holms:</b></font> coderanger: glad to see you btw<br/>
+<font color="#A82F2F"><font size="2">(03:13:19 PM)</font> <b>holms:</b></font> ImportError: No module named yum hmz<br/>
+<font color="#A82F2F"><font size="2">(03:13:36 PM)</font> <b>holms:</b></font> all i want is python 2.7 on centos 6.5<br/>
+<font color="#A82F2F"><font size="2">(03:13:53 PM)</font> <b>coderanger:</b></font> holms: Use software collections<br/>
+<font color="#A82F2F"><font size="2">(03:14:33 PM)</font> <b>holms:</b></font> this is one is no good? https://github.com/poise/python<br/>
+<font color="#A82F2F"><font size="2">(03:14:39 PM)</font> <b>holms:</b></font> it does virtualenv and stuff<br/>
+<font color="#A82F2F"><font size="2">(03:14:49 PM)</font> <b>mannyt:</b></font> Yea coderanger is right, holms that&apos;s what we had to do to get 2.7 and 2.6 running on the same system<br/>
+<font color="#A82F2F"><font size="2">(03:14:53 PM)</font> <b>coderanger:</b></font> holms: That one is fine, but software collections is 1) easier and 2) official<br/>
+<font color="#A82F2F"><font size="2">(03:15:02 PM)</font> <b>coderanger:</b></font> holms: (thats my cookbook)<br/>
+<font color="#A82F2F"><font size="2">(03:15:07 PM)</font> <b>holms:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(03:15:14 PM)</font> <b>holms:</b></font> coderanger: so use software collection in your cookbook :D<br/>
+<font color="#A82F2F"><font size="2">(03:15:23 PM)</font> <b>holms:</b></font> ok i need python2.7 only in virtualenv actually<br/>
+<font color="#A82F2F"><font size="2">(03:15:34 PM)</font> <b>holms:</b></font> i doesn&apos;t have to be system-wide<br/>
+<font color="#A82F2F"><font size="2">(03:15:36 PM)</font> <b>coderanger:</b></font> holms: Its on my todo list, but needs a major rewrite first<br/>
+<font color="#A82F2F"><font size="2">(03:16:10 PM)</font> <b>holms:</b></font> http://pastebin.com/raw.php?i=wenVFfBQ &lt;-- so<br/>
+<font color="#A82F2F"><font size="2">(03:16:14 PM)</font> <b>holms:</b></font> include_recipe &quot;python::source&quot; should be removed probably<br/>
+<font color="#A82F2F"><font size="2">(03:18:49 PM)</font> <b>holms:</b></font> coderanger: any samples how to setup virtualenv with python2.7 ? would be really thankfull<br/>
+<font color="#A82F2F"><font size="2">(03:19:35 PM)</font> <b>coderanger:</b></font> holms: https://access.redhat.com/site/documentation/en-US/Red_Hat_Developer_Toolset/1/html/Software_Collections_Guide/ has all the docs<br/>
+<font color="#A82F2F"><font size="2">(03:19:47 PM)</font> <b>zeroXten:</b></font> should node.set inside an LWRP provider work in solo?<br/>
+<font color="#A82F2F"><font size="2">(03:19:55 PM)</font> <b>zeroXten:</b></font> i&apos;m using it in the same run (in fact, in the same cookbook)<br/>
+<font color="#A82F2F"><font size="2">(03:20:10 PM)</font> <b>holms:</b></font> coderanger: doesn&apos;t sounds like 5min job<br/>
+<font color="#A82F2F"><font size="2">(03:20:18 PM)</font> <b>coderanger:</b></font> zeroXten: Yes, but remember that order of operations in LWRPs can get confusing<br/>
+<font color="#A82F2F"><font size="2">(03:20:21 PM)</font> <b>coderanger:</b></font> holms: It isn&apos;t<br/>
+<font color="#A82F2F"><font size="2">(03:20:30 PM)</font> <b>coderanger:</b></font> holms: But its a much more stable option<br/>
+<font color="#A82F2F"><font size="2">(03:20:33 PM)</font> <b>holms:</b></font> i need just py2.7 in virtual env :D<br/>
+<font color="#A82F2F"><font size="2">(03:20:44 PM)</font> <b>coderanger:</b></font> holms: Okay ...<br/>
+<font color="#A82F2F"><font size="2">(03:20:50 PM)</font> <b>coderanger:</b></font> holms: You keep saying that like its easy<br/>
+<font color="#A82F2F"><font size="2">(03:20:59 PM)</font> <b>holms:</b></font> i mean my client will be arguing why i&apos;m waasting hours on centos then<br/>
+<font color="#A82F2F"><font size="2">(03:21:13 PM)</font> <b>zeroXten:</b></font> coderanger: hmmm, i&apos;m setting it in the lwrp, then trying to use the attributes after the lwrp resource has been defined, slightly further down in the recipe.. sound ok?<br/>
+<font color="#A82F2F"><font size="2">(03:21:18 PM)</font> <b>coderanger:</b></font> holms: I would agree with your client, centos 6 isn&apos;t a viable server OS right now<br/>
+<font color="#A82F2F"><font size="2">(03:21:25 PM)</font> <b>holms:</b></font> m<br/>
+<font color="#A82F2F"><font size="2">(03:21:31 PM)</font> <b>coderanger:</b></font> zeroXten: Can you pastebin the code?<br/>
+<font color="#A82F2F"><font size="2">(03:21:33 PM)</font> <b>mannyt:</b></font> holms this may be inelegant but it worked for us http://hastebin.com/ikejihiqum.vbs<br/>
+<font color="#A82F2F"><font size="2">(03:21:46 PM)</font> <b>mannyt:</b></font> using SCL<br/>
+<font color="#A82F2F"><font size="2">(03:21:55 PM)</font> <b>coderanger:</b></font> mannyt: +1<br/>
+<font color="#A82F2F"><font size="2">(03:22:01 PM)</font> <b>holms:</b></font> m thanks<br/>
+<font size="2">(03:24:00 PM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(03:24:07 PM)</font> <b>holms:</b></font> this won&apos;t just work yeah..? http://pastebin.com/raw.php?i=nYsWkfTf<br/>
+<font color="#A82F2F"><font size="2">(03:24:48 PM)</font> <b>coderanger:</b></font> holms: No, since the problem you are having is that your system python install is corrupted in some way to make it lose the yum module, which is a problem since yum is written in Python and kind of needs that module<br/>
+<font color="#A82F2F"><font size="2">(03:24:55 PM)</font> <b>coderanger:</b></font> (as does chef for the cache dump)<br/>
+<font color="#A82F2F"><font size="2">(03:25:17 PM)</font> <b>zeroXten:</b></font> coderanger: https://github.com/zeroXten/sensu_spec/tree/server &lt; check the test.rb recipe and the default provider<br/>
+<font color="#A82F2F"><font size="2">(03:25:31 PM)</font> <b>holms:</b></font> coderanger: well recreating vm<br/>
+<font color="#A82F2F"><font size="2">(03:25:33 PM)</font> <b>holms:</b></font> let&apos;s see<br/>
+<font size="2">(03:25:37 PM)</font><b> mode (+o jkeiser) by ChanServ</b><br/>
+<font color="#A82F2F"><font size="2">(03:25:41 PM)</font> <b>zeroXten:</b></font> eh, test.rb is then calling server.rb recipe which expects to find the attributes set by the lwrp<br/>
+<font color="#A82F2F"><font size="2">(03:25:52 PM)</font> <b>holms:</b></font> i think its happened because of include_crecipe[python::source]<br/>
+<font color="#A82F2F"><font size="2">(03:26:23 PM)</font> <b>coderanger:</b></font> zeroXten: Okay, so here is where the order of operations bit comes in :)<br/>
+<font color="#A82F2F"><font size="2">(03:26:46 PM)</font> <b>coderanger:</b></font> zeroXten: the bit in the action method is only called when the resource is converged, which happens after all resources are compiled and loaded<br/>
+<font color="#A82F2F"><font size="2">(03:27:16 PM)</font> <b>holms:</b></font> okay... No such file or directory - pip install  virtualenv==1.11.4<br/>
+<font color="#A82F2F"><font size="2">(03:27:29 PM)</font> <b>coderanger:</b></font> zeroXten: So that node.set is running, but after the module-level code in server.rb is executed<br/>
+<font color="#A82F2F"><font size="2">(03:27:51 PM)</font> <b>sarkis:</b></font> so, im looking at the precedence ordering for attributes: http://docs.opscode.com/chef_overview_attributes.html<br/>
+<font color="#A82F2F"><font size="2">(03:28:20 PM)</font> <b>sarkis:</b></font> i was assuming that i can also override an attribute in the nodes/node.json file?<br/>
+<font color="#A82F2F"><font size="2">(03:28:21 PM)</font> <b>zeroXten:</b></font> coderanger: ah ok<br/>
+<font color="#A82F2F"><font size="2">(03:28:29 PM)</font> <b>coderanger:</b></font> zeroXten: You could fix this by forcing your sensu_spec resource to converge at compile time<br/>
+<font color="#A82F2F"><font size="2">(03:28:48 PM)</font> <b>coderanger:</b></font> zeroXten: Or by using the include_recipe_now helper from the now cookbook<br/>
+<font color="#A82F2F"><font size="2">(03:29:09 PM)</font> <b>sarkis:</b></font> is this not possible?<br/>
+<font color="#A82F2F"><font size="2">(03:29:31 PM)</font> <b>zeroXten:</b></font> coderanger: is it bad practise to force compile time convergence?<br/>
+<font color="#A82F2F"><font size="2">(03:29:33 PM)</font> <b>coderanger:</b></font> sarkis: No, you cannot set at the override level in a node, only normal<br/>
+<font color="#A82F2F"><font size="2">(03:29:54 PM)</font> <b>coderanger:</b></font> zeroXten: ¯\_(ツ)_/¯<br/>
+<font size="2">(03:30:01 PM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(03:30:27 PM)</font> <b>coderanger:</b></font> zeroXten: I think the rigid two-pass loading is unhelpful and poise is basically a workaround for it to do nested compile-converge cycles instead<br/>
+<font color="#A82F2F"><font size="2">(03:30:50 PM)</font> <b>coderanger:</b></font> zeroXten: But taking my advice on such things can be considered dangerous, or at least full of sharp edges :)<br/>
+<font color="#A82F2F"><font size="2">(03:30:57 PM)</font> <b>zeroXten:</b></font> heh<br/>
+<font color="#A82F2F"><font size="2">(03:32:36 PM)</font> <b>zeroXten:</b></font> coderanger: any particular docs on making the lrwp converge at compile time?<br/>
+<font color="#A82F2F"><font size="2">(03:33:14 PM)</font> <b>coderanger:</b></font> zeroXten: … do action :nothing … end.run_action(:foo)<br/>
+<font color="#A82F2F"><font size="2">(03:33:22 PM)</font> <b>coderanger:</b></font> where :foo is whatever the original action name was<br/>
+<font color="#A82F2F"><font size="2">(03:34:16 PM)</font> <b>zeroXten:</b></font> ohh, so I&apos;d do that for the resource in the recipe? huh<br/>
+<font color="#A82F2F"><font size="2">(03:34:21 PM)</font> <b>coderanger:</b></font> zeroXten: Yahr<br/>
+<font color="#A82F2F"><font size="2">(03:34:40 PM)</font> <b>coderanger:</b></font> zeroXten: If you want it to _always_ run at compile time there are other ways to do it too<br/>
+<font color="#A82F2F"><font size="2">(03:35:04 PM)</font> <b>zeroXten:</b></font> ah, should be fine for this.. doing it in test.rb anyway<br/>
+<font color="#A82F2F"><font size="2">(03:35:12 PM)</font> <b>coderanger:</b></font> Yeah<br/>
+<font color="#A82F2F"><font size="2">(03:35:13 PM)</font> <b>zeroXten:</b></font> if you&apos;re not using solo then two stages is ok<br/>
+<font color="#A82F2F"><font size="2">(03:35:29 PM)</font> <b>zeroXten:</b></font> as one is a client and the other happens on the server<br/>
+<font color="#A82F2F"><font size="2">(03:35:36 PM)</font> <b>coderanger:</b></font> zeroXten: No, both are on the client<br/>
+<font color="#A82F2F"><font size="2">(03:35:46 PM)</font> <b>coderanger:</b></font> server has nothing to do with converge behavior<br/>
+<font color="#A82F2F"><font size="2">(03:36:08 PM)</font> <b>coderanger:</b></font> Oh, you mean sensu server :)<br/>
+<font color="#A82F2F"><font size="2">(03:36:14 PM)</font> <b>zeroXten:</b></font> coderanger: yeah ;)<br/>
+<font color="#A82F2F"><font size="2">(03:37:36 PM)</font> <b>holms:</b></font> k let&apos;s try debian<br/>
+<font color="#A82F2F"><font size="2">(03:37:48 PM)</font> <b>zeroXten:</b></font> coderanger: sweet, seems to have worked. many thanks<br/>
+<font color="#A82F2F"><font size="2">(03:38:03 PM)</font> <b>zeroXten:</b></font> i need to look at chef runs in more detail i think<br/>
+<font color="#16569E"><font size="2">(03:39:29 PM)</font> <b>Randy How:</b></font> hey  we have multiple developers working in the same cookbook, what is the best way that recipes on the chef server don't get clobbered?  Is there a way to 'knife upload cookbook &lt;cookbook&gt;/&lt;single recipe&gt;' ?<br/>
+<font color="#A82F2F"><font size="2">(03:40:12 PM)</font> <b>coderanger:</b></font> randingo: Don&apos;t<br/>
+<font color="#A82F2F"><font size="2">(03:40:38 PM)</font> <b>coderanger:</b></font> randingo: And no, uploads are at the level of cookbook only<br/>
+<font color="#16569E"><font size="2">(03:40:57 PM)</font> <b>Randy How:</b></font> ok, that confirms what i can find.<br/>
+<font color="#16569E"><font size="2">(03:42:50 PM)</font> <b>Randy How:</b></font> i'm very interested in developers making tests for recipes.  Is there something more up to date, I've read over this: http://technology.customink.com/blog/2012/08/03/testing-chef-cookbooks/<br/>
+<font color="#A82F2F"><font size="2">(03:43:49 PM)</font> <b>mannyt:</b></font> ran dingo this guide gives you a pretty good starting point http://kitchen.ci/<br/>
+<font color="#A82F2F"><font size="2">(03:43:57 PM)</font> <b>mannyt:</b></font> randingo: ^^<br/>
+<font color="#16569E"><font size="2">(03:44:27 PM)</font> <b>Randy How:</b></font> thanks manyt.<br/>
+<font size="2">(03:45:01 PM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#16569E"><font size="2">(03:45:20 PM)</font> <b>Randy How:</b></font> is a VM required for test-kitchen?<br/>
+<font size="2">(03:46:00 PM)</font><b> mattupstate1 is now known as mattupstate</b><br/>
+<font color="#A82F2F"><font size="2">(03:46:38 PM)</font> <b>jidar:</b></font> I think test-kitchen is really integration testing, which would require a VM no?<br/>
+<font color="#A82F2F"><font size="2">(03:46:54 PM)</font> <b>jidar:</b></font> the other one, using rspec I think is unit testing<br/>
+<font color="#A82F2F"><font size="2">(03:47:10 PM)</font> <b>coderanger:</b></font> randingo: Technically no, but you need somewhere to run the tests<br/>
+<font color="#A82F2F"><font size="2">(03:47:11 PM)</font> <b>jidar:</b></font> (though I&apos;m not sure how test-kitchen fits in there because it does some unit testing too?)<br/>
+<font color="#A82F2F"><font size="2">(03:47:49 PM)</font> <b>someara:</b></font> test-kitchen drives VMs, either locally with vagrant (transparently. no vagrantfile), or with IaaS plugins<br/>
+<font color="#A82F2F"><font size="2">(03:47:49 PM)</font> <b>jidar:</b></font> hmm, I feel like test-kitchen could use docker with great value<br/>
+<font color="#A82F2F"><font size="2">(03:47:57 PM)</font> <b>someara:</b></font> or with docker =)<br/>
+<font color="#A82F2F"><font size="2">(03:48:12 PM)</font> <b>jidar:</b></font> docker has made me consider running cent on my laptop<br/>
+<font color="#A82F2F"><font size="2">(03:48:14 PM)</font> <b>someara:</b></font> ChefSpec is in-memory unit testing on a workstation or CI system<br/>
+<font color="#A82F2F"><font size="2">(03:48:41 PM)</font> <b>holms:</b></font> coderanger: No such file or directory - /var/www/msgapp/bin/pip install  gunicorn==18.0<br/>
+<font color="#A82F2F"><font size="2">(03:48:43 PM)</font> <b>holms:</b></font> with debian<br/>
+<font color="#A82F2F"><font size="2">(03:48:50 PM)</font> <b>gleam:</b></font> if you&apos;re on a mac, check out dvm<br/>
+<font color="#A82F2F"><font size="2">(03:48:52 PM)</font> <b>coderanger:</b></font> jidar: You can just grab the boot2docker VM image<br/>
+<font color="#A82F2F"><font size="2">(03:48:54 PM)</font> <b>coderanger:</b></font> or dvm<br/>
+<font color="#A82F2F"><font size="2">(03:49:11 PM)</font> <b>coderanger:</b></font> holms: Does pip exist at that path?<br/>
+<font color="#A82F2F"><font size="2">(03:49:14 PM)</font> <b>jidar:</b></font> yea, I wanted to run it nativly<br/>
+<font color="#A82F2F"><font size="2">(03:49:21 PM)</font> <b>holms:</b></font> http://pastebin.com/raw.php?i=UTL0LAmV<br/>
+<font color="#062585"><font size="2">(03:49:29 PM)</font> <b>***jidar</b></font> shrugs<br/>
+<font color="#A82F2F"><font size="2">(03:49:40 PM)</font> <b>jidar:</b></font> I think it&apos;s my excuse to go back to linux for my workstation<br/>
+<font color="#A82F2F"><font size="2">(03:49:52 PM)</font> <b>holms:</b></font> ah my bad<br/>
+<font color="#A82F2F"><font size="2">(03:49:56 PM)</font> <b>coderanger:</b></font> jidar: I need to finish my patch to add auth support to kitchen-docker, then I can just run a docker node off in the cloud somewhere and give no shits :)<br/>
+<font color="#A82F2F"><font size="2">(03:50:09 PM)</font> <b>jidar:</b></font> hahah, that would be pretty nice<br/>
+<font color="#A82F2F"><font size="2">(03:50:27 PM)</font> <b>coderanger:</b></font> jidar: Its a pretty minor change, but docker auth is a PITA :-(<br/>
+<font color="#A82F2F"><font size="2">(03:50:39 PM)</font> <b>coderanger:</b></font> (you need to make your own TLS CA)<br/>
+<font color="#A82F2F"><font size="2">(03:50:45 PM)</font> <b>jidar:</b></font> interesting<br/>
+<font color="#A82F2F"><font size="2">(03:51:08 PM)</font> <b>jidar:</b></font> is that so the docker images can speak secure with the host, or with other hosts?<br/>
+<font color="#A82F2F"><font size="2">(03:52:40 PM)</font> <b>holms:</b></font> oh yes it works<br/>
+<font color="#A82F2F"><font size="2">(03:52:42 PM)</font> <b>holms:</b></font> finally<br/>
+<font color="#A82F2F"><font size="2">(03:54:08 PM)</font> <b>holms:</b></font> i though newest redhat/centos has py2.7<br/>
+<font color="#A82F2F"><font size="2">(03:54:23 PM)</font> <b>holms:</b></font> when this will happen, probably everybody will code in python3<br/>
+<font color="#A82F2F"><font size="2">(03:54:25 PM)</font> <b>holms:</b></font> lol<br/>
+<font color="#A82F2F"><font size="2">(03:54:55 PM)</font> <b>ypaq:</b></font> hey<br/>
+<font color="#A82F2F"><font size="2">(03:55:09 PM)</font> <b>ypaq:</b></font> i&apos;m having problems with the chef-server cookbook<br/>
+<font color="#A82F2F"><font size="2">(03:55:26 PM)</font> <b>ypaq:</b></font> for a GET on http://www.opscode.com/chef/download-server?p=ubuntu&amp;pv=14.04&amp;m=x86_64&amp;v=latest&amp;prerelease=false&amp;nightlies=false<br/>
+<font color="#A82F2F"><font size="2">(03:55:32 PM)</font> <b>ypaq:</b></font> i&apos;m getting a server error<br/>
+<font size="2">(03:56:26 PM)</font><b> zz_cdracars is now known as cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(03:56:27 PM)</font> <b>ypaq:</b></font> same for 13.04<br/>
+<font color="#A82F2F"><font size="2">(03:58:33 PM)</font> <b>coderanger:</b></font> jidar: Nah, its just CLI &lt;-&gt; dockerd comms<br/>
+<font color="#A82F2F"><font size="2">(04:01:49 PM)</font> <b>rburton-:</b></font> Anyone know of a good recipe for neo4j? e.g., 2.x support<br/>
+<font color="#A82F2F"><font size="2">(04:04:12 PM)</font> <b>sarkis:</b></font> coderanger: what is the nodes/ directory called? is it just roles?<br/>
+<font color="#A82F2F"><font size="2">(04:04:30 PM)</font> <b>sarkis:</b></font> i can&apos;t find documentation pertaining to this specifically in the chef docs<br/>
+<font color="#A82F2F"><font size="2">(04:04:32 PM)</font> <b>coderanger:</b></font> sarkis: Not sure what you mean<br/>
+<font color="#A82F2F"><font size="2">(04:04:44 PM)</font> <b>coderanger:</b></font> sarkis: Nodes are not stored on disk normally<br/>
+<font color="#A82F2F"><font size="2">(04:05:15 PM)</font> <b>coderanger:</b></font> but a nodes/ folder containing JSON is used with some tools like knife upload or knife-solo<br/>
+<font color="#A82F2F"><font size="2">(04:06:46 PM)</font> <b>alexbst_:</b></font> ypaq - 14.04 and 13.04 aren&apos;t listed at https://github.com/opscode-cookbooks/chef-server yet<br/>
+<font color="#A82F2F"><font size="2">(04:07:30 PM)</font> <b>alexbst_:</b></font> ypaq - I suggest you make an issue - the new LTS should be supported.<br/>
+<font color="#A82F2F"><font size="2">(04:07:37 PM)</font> <b>sarkis:</b></font> coderanger: ah right im using knife-solo sorry confused it as  chef feature<br/>
+<font color="#A82F2F"><font size="2">(04:07:43 PM)</font> <b>sarkis:</b></font> thanks<br/>
+<font color="#A82F2F"><font size="2">(04:09:07 PM)</font> <b>ypaq:</b></font> alexbst_: where can i do that? github site of chef-server cookbooks doesn&apos;t have an issues tab<br/>
+<font color="#A82F2F"><font size="2">(04:09:33 PM)</font> <b>coderanger:</b></font> ypaq: https://tickets.opscode.com/secure/Dashboard.jspa<br/>
+<font color="#A82F2F"><font size="2">(04:09:40 PM)</font> <b>ypaq:</b></font> coderanger: thanks<br/>
+<font size="2">(04:15:05 PM)</font><b> gondoi is now known as zz_gondoi</b><br/>
+<font color="#A82F2F"><font size="2">(04:23:24 PM)</font> <b>JoeNuspl:</b></font> I&apos;m having an issue with chef-zero 2.0.2… knife cookbook upload -a fails w/ EPIPE but nothing on the zero side, even w/ -ldebug.  It&apos;ll finally succeed after retrying 3-5 times.  Is there somewhere other than STDOUT chef-zero logs?<br/>
+<font color="#A82F2F"><font size="2">(04:24:25 PM)</font> <b>jkeiser:</b></font> JoeNuspl: chef-zero -l debug isn&apos;t showing you anything at all?<br/>
+<font color="#A82F2F"><font size="2">(04:25:25 PM)</font> <b>JoeNuspl:</b></font> it shows debug but nothing to indicate a failure<br/>
+<font color="#A82F2F"><font size="2">(04:30:30 PM)</font> <b>JoeNuspl:</b></font> I have 125 cookbooks.  Each iteration it get further into the list.  There isn&apos;t any rate limiter?<br/>
+<font color="#A82F2F"><font size="2">(04:31:29 PM)</font> <b>coderanger:</b></font> JoeNuspl: What are you trying to test?<br/>
+<font size="2">(04:32:48 PM)</font><b> cdracars is now known as zz_cdracars</b><br/>
+<font color="#A82F2F"><font size="2">(04:38:00 PM)</font> <b>damien:</b></font> greetings<br/>
+<font color="#A82F2F"><font size="2">(04:38:13 PM)</font> <b>damien:</b></font> hey anyone got a min to discuss a cookbook wrapper question?<br/>
+<font color="#A82F2F"><font size="2">(04:38:25 PM)</font> <b>coderanger:</b></font> damien: Just ask<br/>
+<font color="#A82F2F"><font size="2">(04:38:27 PM)</font> <b>JoeNuspl:</b></font> coderanger: I&apos;m writing tests for our chef deployment pipeline scripts.  So the test pre-populates a cookbook set and then goes through various upload scenarios testing that the deployer catches various errors.<br/>
+<font color="#A82F2F"><font size="2">(04:39:08 PM)</font> <b>coderanger:</b></font> JoeNuspl: You can just copy the cookbooks to disk before you launch chef-zero<br/>
+<font color="#A82F2F"><font size="2">(04:39:16 PM)</font> <b>bricker:</b></font> Does it make sense to have multiple VMs which use the same chef node?<br/>
+<font color="#A82F2F"><font size="2">(04:39:32 PM)</font> <b>coderanger:</b></font> bricker: No<br/>
+<font size="2">(04:39:45 PM)</font><b> bricker left the room (quit: Quit: leaving).</b><br/>
+<font color="#A82F2F"><font size="2">(04:39:46 PM)</font> <b>coderanger:</b></font> JoeNuspl: berks vendor can be useful for this if you use berkshelf<br/>
+<font color="#A82F2F"><font size="2">(04:40:18 PM)</font> <b>damien:</b></font> I am trying to setup elasticsearch cookbook, which calls for an aws data bag with the credentials, but they did not use EncryptedDataBagItem.load and instead the secrets are stored in plain text, I would like to encrypt them, I set up the encrypted data bag, but noticed that it didn&apos;t get applied because they are only using DataBagItem.load, is using a cookbook wrapper the best way to customize? Or do a chef-rewind?<br/>
+<font color="#A82F2F"><font size="2">(04:40:54 PM)</font> <b>coderanger:</b></font> damien: No real option but to fork and patch<br/>
+<font color="#A82F2F"><font size="2">(04:40:55 PM)</font> <b>rayrod2030:</b></font> damien: I&apos;ve accomplished the same thing using a wrapper cookbook<br/>
+<font color="#A82F2F"><font size="2">(04:41:16 PM)</font> <b>coderanger:</b></font> damien: Otherwise you need to rewind every resource that uses the creds<br/>
+<font color="#A82F2F"><font size="2">(04:41:28 PM)</font> <b>damien:</b></font> coderanger, hmmm<br/>
+<font color="#A82F2F"><font size="2">(04:41:35 PM)</font> <b>damien:</b></font> rayrod2030, oh yeah? how did you do?<br/>
+<font color="#A82F2F"><font size="2">(04:42:18 PM)</font> <b>damien:</b></font> coderanger, I think they only use it in setting up the attributes, but yeah, you are right all of those would have to be reevaluated and anything in any subsequent recipe...<br/>
+<font color="#A82F2F"><font size="2">(04:42:35 PM)</font> <b>rayrod2030:</b></font> damien: sorry I was thinking of zookeeper<br/>
+<font color="#A82F2F"><font size="2">(04:42:38 PM)</font> <b>damien:</b></font> maybe I will just deal with forking and managing it<br/>
+<font color="#A82F2F"><font size="2">(04:42:42 PM)</font> <b>coderanger:</b></font> damien: Which cookbook are you using?<br/>
+<font color="#A82F2F"><font size="2">(04:42:43 PM)</font> <b>damien:</b></font> rayrod2030, ahh, k, ty<br/>
+<font color="#A82F2F"><font size="2">(04:42:46 PM)</font> <b>rayrod2030:</b></font> but I could swear I did something similar with elasticsearch<br/>
+<font color="#A82F2F"><font size="2">(04:43:05 PM)</font> <b>damien:</b></font> https://github.com/elasticsearch/cookbook-elasticsearch<br/>
+<font color="#A82F2F"><font size="2">(04:43:58 PM)</font> <b>coderanger:</b></font> damien: Oh god this is terrifying<br/>
+<font color="#A82F2F"><font size="2">(04:44:13 PM)</font> <b>coderanger:</b></font> damien: Replacing that with an encrypted data bag will accomplish nothing, don&apos;t bother<br/>
+<font color="#A82F2F"><font size="2">(04:44:22 PM)</font> <b>damien:</b></font> coderanger, oh yeah? how come?<br/>
+<font color="#A82F2F"><font size="2">(04:44:27 PM)</font> <b>rayrod2030:</b></font> coderanger: that&apos;s surprising.  The elasticsearch cookbook is pretty good imo<br/>
+<font color="#A82F2F"><font size="2">(04:44:37 PM)</font> <b>coderanger:</b></font> damien: Node attributes are readable by any client<br/>
+<font color="#A82F2F"><font size="2">(04:44:44 PM)</font> <b>rayrod2030:</b></font> right<br/>
+<font color="#A82F2F"><font size="2">(04:44:45 PM)</font> <b>coderanger:</b></font> rayrod2030: lolno, this is terrible<br/>
+<font color="#A82F2F"><font size="2">(04:44:51 PM)</font> <b>damien:</b></font> Is it storing the creds back up?<br/>
+<font color="#A82F2F"><font size="2">(04:44:55 PM)</font> <b>damien:</b></font> oh man didn&apos;t even realize that<br/>
+<font color="#A82F2F"><font size="2">(04:44:59 PM)</font> <b>coderanger:</b></font> damien: Yep<br/>
+<font color="#A82F2F"><font size="2">(04:45:01 PM)</font> <b>damien:</b></font> they are not whitelisted...<br/>
+<font color="#A82F2F"><font size="2">(04:45:08 PM)</font> <b>damien:</b></font> oh egads, it&apos;s worse than I thought....<br/>
+<font color="#A82F2F"><font size="2">(04:45:29 PM)</font> <b>coderanger:</b></font> damien: Unless you use something that hacks how you store node attributes, this is a security risk as written<br/>
+<font color="#A82F2F"><font size="2">(04:45:30 PM)</font> <b>rayrod2030:</b></font> yeah the node credentials are saved back to chef server<br/>
+<font color="#A82F2F"><font size="2">(04:45:43 PM)</font> <b>damien:</b></font> yeah the s3cmd cookbook did that too... I opend up a feature request to delete the creds before the recipe finishes converge so they didn&apos;t get sent back<br/>
+<font color="#A82F2F"><font size="2">(04:46:07 PM)</font> <b>coderanger:</b></font> damien: Still not safe, some cookbook call node.save from inside the recipe code<br/>
+<font color="#A82F2F"><font size="2">(04:46:20 PM)</font> <b>coderanger:</b></font> (which they shouldn&apos;t, but some do anyway)<br/>
+<font color="#A82F2F"><font size="2">(04:46:46 PM)</font> <b>damien:</b></font> coderanger, really? I thought that this would at least help: -184-9-58.hsd1.ca.comcast.net) has joined #chef<br/>
+<font color="#A82F2F"><font size="2">(04:46:46 PM)</font> <b>damien:</b></font> &lt;damien&gt; yeah the s3cmd cookbook<br/>
+<font color="#A82F2F"><font size="2">(04:46:51 PM)</font> <b>damien:</b></font> er<br/>
+<font color="#A82F2F"><font size="2">(04:46:54 PM)</font> <b>damien:</b></font> wrong paste ;)<br/>
+<font color="#A82F2F"><font size="2">(04:47:04 PM)</font> <b>damien:</b></font> node.normal_attrs.delete(:amazon_...)<br/>
+<font color="#A82F2F"><font size="2">(04:47:13 PM)</font> <b>coderanger:</b></font> damien: Where are you running that<br/>
+<font color="#A82F2F"><font size="2">(04:47:48 PM)</font> <b>coderanger:</b></font> damien: The right way to fix this is generally more like https://github.com/balanced-cookbooks/citadel/blob/master/libraries/safe_node.rb<br/>
+<font color="#A82F2F"><font size="2">(04:47:55 PM)</font> <b>damien:</b></font> I did that for another cookbook, amazon_s3cmd, that did a similar thing of storing plain text creds to the node (even though that authoer actually went through effort to implement encypted data bag and even provided instructions for users how to create and use)<br/>
+<font color="#A82F2F"><font size="2">(04:48:07 PM)</font> <b>coderanger:</b></font> damien: but its a royal pain to do properly<br/>
+<font color="#A82F2F"><font size="2">(04:48:23 PM)</font> <b>coderanger:</b></font> damien: Need to wipe it from all three levels, for example<br/>
+<font color="#A82F2F"><font size="2">(04:48:26 PM)</font> <b>damien:</b></font> coderanger, oh wow<br/>
+<font color="#A82F2F"><font size="2">(04:48:38 PM)</font> <b>coderanger:</b></font> damien: Basically don&apos;t store secrets in node attributes, evaaaaarrrrrrr<br/>
+<font color="#A82F2F"><font size="2">(04:48:41 PM)</font> <b>damien:</b></font> coderanger, thanks for that link, interesting - so overwrite the save method so that it never gets back<br/>
+<font color="#A82F2F"><font size="2">(04:48:46 PM)</font> <b>damien:</b></font> hahah no kidding<br/>
+<font color="#A82F2F"><font size="2">(04:49:02 PM)</font> <b>damien:</b></font> what about that whitelist recipe? one you put at the end of your run....<br/>
+<font color="#A82F2F"><font size="2">(04:49:13 PM)</font> <b>coderanger:</b></font> damien: The facebook one?<br/>
+<font color="#A82F2F"><font size="2">(04:49:36 PM)</font> <b>coderanger:</b></font> damien: https://github.com/opscode-cookbooks/whitelist-node-attrs is safe too, it uses the same technique<br/>
+<font color="#A82F2F"><font size="2">(04:49:52 PM)</font> <b>coderanger:</b></font> though it doesn&apos;t restore things after saving<br/>
+<font color="#A82F2F"><font size="2">(04:50:10 PM)</font> <b>coderanger:</b></font> so if you do call node.save in the middle of a run, things will just break horribly instead<br/>
+<font color="#A82F2F"><font size="2">(04:50:17 PM)</font> <b>coderanger:</b></font> (but thats probably okay since you shouldn&apos;t do that)<br/>
+<font color="#A82F2F"><font size="2">(04:51:01 PM)</font> <b>damien:</b></font> interesting<br/>
+<font color="#A82F2F"><font size="2">(04:52:09 PM)</font> <b>damien:</b></font> wow, yeah this security stuff gets pretty complicatd pretty quick<br/>
+<font color="#A82F2F"><font size="2">(04:52:14 PM)</font> <b>coderanger:</b></font> damien: \o/<br/>
+<font color="#A82F2F"><font size="2">(04:52:21 PM)</font> <b>rayrod2030:</b></font> computers<br/>
+<font color="#A82F2F"><font size="2">(04:52:22 PM)</font> <b>coderanger:</b></font> damien: Secrets management is Really Really Hard™<br/>
+<font color="#A82F2F"><font size="2">(04:52:24 PM)</font> <b>damien:</b></font> heheh<br/>
+<font color="#A82F2F"><font size="2">(04:52:30 PM)</font> <b>damien:</b></font> yaup<br/>
+<font color="#A82F2F"><font size="2">(04:52:43 PM)</font> <b>damien:</b></font> eff it, may as well just post on a sticky note in on front door<br/>
+<font color="#A82F2F"><font size="2">(04:52:51 PM)</font> <b>coderanger:</b></font> damien: If you check out my pycon 2014 talk on app deployments I spend a few minutes showing the available options<br/>
+<font color="#A82F2F"><font size="2">(04:53:06 PM)</font> <b>damien:</b></font> or that reminds me of: http://www.supermantv.net/articles/fortress/fortress-solitude.jpg<br/>
+<font color="#A82F2F"><font size="2">(04:53:08 PM)</font> <b>coderanger:</b></font> but the tl;dr is &quot;lolwut even is security&quot;<br/>
+<font color="#A82F2F"><font size="2">(04:53:22 PM)</font> <b>damien:</b></font> hah<br/>
+<font color="#A82F2F"><font size="2">(04:53:27 PM)</font> <b>damien:</b></font> coderanger, do you have a link handy?<br/>
+<font color="#A82F2F"><font size="2">(04:53:35 PM)</font> <b>damien:</b></font> I would love to check out<br/>
+<font color="#A82F2F"><font size="2">(04:54:41 PM)</font> <b>coderanger:</b></font> damien: http://youtu.be/SW1OXGl3Mck?t=23m34s<br/>
+<font color="#A82F2F"><font size="2">(04:54:49 PM)</font> <b>geggam:</b></font> only reasonable solution i have come up with secrets is to make ramdisks and store the secrets there... so apps can access but if machine reboots / dies / is killed secrets go away<br/>
+<font color="#A82F2F"><font size="2">(04:55:00 PM)</font> <b>coderanger:</b></font> unrelated: oh god I hate listening to my own talks<br/>
+<font color="#A82F2F"><font size="2">(04:55:02 PM)</font> <b>geggam:</b></font> but that has problems too :) ...<br/>
+<font color="#A82F2F"><font size="2">(04:55:05 PM)</font> <b>damien:</b></font> coderanger, nice ty<br/>
+<font color="#A82F2F"><font size="2">(04:55:17 PM)</font> <b>damien:</b></font> geggam, also intresting<br/>
+<font color="#A82F2F"><font size="2">(04:55:20 PM)</font> <b>geggam:</b></font> your own voice ... always sounds terrible<br/>
+<font color="#A82F2F"><font size="2">(04:55:22 PM)</font> <b>damien:</b></font> coderanger, hah i bet<br/>
+<font color="#A82F2F"><font size="2">(04:56:20 PM)</font> <b>geggam:</b></font> our security policy is all keys / secrets have to be encoded at rest aka disk... so i made resting place not disk<br/>
+<font color="#A82F2F"><font size="2">(04:56:43 PM)</font> <b>coderanger:</b></font> geggam: pretty sure that policy is unusable right now<br/>
+<font color="#A82F2F"><font size="2">(04:56:47 PM)</font> <b>geggam:</b></font> you can even encrypt that ramdisk so its not wide out in the open<br/>
+<font color="#A82F2F"><font size="2">(04:57:28 PM)</font> <b>geggam:</b></font> if the people writing the policies say its ok.. it is :)<br/>
+<font color="#A82F2F"><font size="2">(04:57:50 PM)</font> <b>coderanger:</b></font> geggam: This is why I don&apos;t do big companies<br/>
+<font color="#A82F2F"><font size="2">(04:59:12 PM)</font> <b>geggam:</b></font> i know coderanger ... its hard to go with the flow when you know what the issues are<br/>
+<font color="#A82F2F"><font size="2">(04:59:23 PM)</font> <b>geggam:</b></font> but im getting older and its getting easier<br/>
+<font color="#A82F2F"><font size="2">(05:00:51 PM)</font> <b>rayrod2030:</b></font> security theatre<br/>
+<font color="#A82F2F"><font size="2">(05:02:21 PM)</font> <b>Quanqued:</b></font> hi - I&apos;m trying to get test-kitchen working with openstack (test-kitchen 1.2.1 and kitchen-openstack 1.4.0) but running kitchen create hangs indefinitely after &quot;(server ready)&quot;.   anyone have suggestions that might cause it to block there?  shows nothing after that line even with debug output enabled..<br/>
+<font color="#A82F2F"><font size="2">(05:02:25 PM)</font> <b>geggam:</b></font> the more i see the more i think its all theater<br/>
+<font color="#062585"><font size="2">(05:03:27 PM)</font> <b>***damien</b></font> grins<br/>
+<font color="#A82F2F"><font size="2">(05:03:50 PM)</font> <b>geggam:</b></font> http://spritesmods.com/?art=hddhack<br/>
+<font color="#A82F2F"><font size="2">(05:03:55 PM)</font> <b>geggam:</b></font> example ^<br/>
+<font color="#A82F2F"><font size="2">(05:11:18 PM)</font> <b>damien:</b></font> geggam, wow cool, I like &quot;All that implies there&apos;s some intelligence in an hard disk, and intelligence usually implies hackability.&quot;<br/>
+<font color="#A82F2F"><font size="2">(05:13:01 PM)</font> <b>geggam:</b></font> yeah... now take that to every other device connected to the motherboard damien<br/>
+<font color="#A82F2F"><font size="2">(05:15:33 PM)</font> <b>damien:</b></font> :/<br/>
+<font color="#A82F2F"><font size="2">(05:15:35 PM)</font> <b>damien:</b></font> glass world<br/>
+<font size="2">(05:18:07 PM)</font><b> alop_ is now known as alop</b><br/>
+<font color="#A82F2F"><font size="2">(05:28:09 PM)</font> <b>wdpro_kevin:</b></font> coderanger: Good afternoon… I&apos;m getting and error using the &apos;chef_server_endpoint&apos; in your berkshelf-api cookbook<br/>
+<font color="#A82F2F"><font size="2">(05:28:59 PM)</font> <b>wdpro_kevin:</b></font> it&apos;s yelling at me about &apos;Required argument client_name is missing!&apos; when it is definitely there.<br/>
+<font color="#A82F2F"><font size="2">(05:33:25 PM)</font> <b>wdpro_kevin:</b></font> coderanger: Here&apos;s a gist with the details:   https://gist.github.com/crackmac/11306784<br/>
+<font size="2">(05:59:22 PM)</font><b> mode (+o jkeiser) by ChanServ</b><br/>
+<font size="2">(05:59:40 PM)</font><b> paulmooring is now known as paulmooring_away</b><br/>
+<font color="#A82F2F"><font size="2">(06:10:34 PM)</font> <b>coderanger:</b></font> Whats that &quot;git_repository&quot; line doing?<br/>
+<font size="2">(06:19:00 PM)</font><b> The account has disconnected and you are no longer in this chat. You will be automatically rejoined in the chat when the account reconnects.</b><br/>
+</body></html>

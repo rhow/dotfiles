@@ -1,0 +1,46 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with snelsen@i3.com at Mon 07 Jul 2014 12:41:34 PM MDT on rhow@i3.com/Gmail (jabber)</title></head><body><h3>Conversation with snelsen@i3.com at Mon 07 Jul 2014 12:41:34 PM MDT on rhow@i3.com/Gmail (jabber)</h3>
+<font color="#16569E"><font size="2">(12:42:11 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>what to chat tomorrow morning about the TomTom data hackery?</span><br/>
+<font color="#A82F2F"><font size="2">(12:44:47 PM)</font> <b>Shawn Nelsen:</b></font> yeah, if ya want to.<br/>
+<font color="#16569E"><font size="2">(12:45:26 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>boy do I!  </span><br/>
+<font color="#A82F2F"><font size="2">(01:03:46 PM)</font> <b>Shawn Nelsen:</b></font> did anything change recently with the TMSProvider that you are aware of?<br/>
+<font color="#16569E"><font size="2">(01:04:50 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>no</span><br/>
+<font color="#A82F2F"><font size="2">(01:05:31 PM)</font> <b>Shawn Nelsen:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>I only ask because of this:<br/><a href="http://cdn1.datadoors.net/i3_ArcGIS/wmsc/116B1481-0965-43DB-BA0D-837AFC9CA44A?LAYERS=0&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-8717337.3298387,4746739.4520702,-8717184.4557822,4746892.3261267&amp;WIDTH=256&amp;HEIGHT=256">http://cdn1.datadoors.net/i3_ArcGIS/wmsc/116B1481-0965-43DB-BA0D-837AFC9CA44A?LAYERS=0&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-8717337.3298387,4746739.4520702,-8717184.4557822,4746892.3261267&amp;WIDTH=256&amp;HEIGHT=256</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(01:09:09 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>would you expect an image to show up on the Map Details?<br/><a href="https://gisservices.datadoors.net/muggadmin/Map/Details/116b1481-0965-43db-ba0d-837afc9ca44a">https://gisservices.datadoors.net/muggadmin/Map/Details/116b1481-0965-43db-ba0d-837afc9ca44a</a></span><br/>
+<font color="#A82F2F"><font size="2">(01:12:04 PM)</font> <b>Shawn Nelsen:</b></font> probably not, it doesn't turn on til like 17<br/>
+<font color="#A82F2F"><font size="2">(04:05:16 PM)</font> <b>Shawn Nelsen:</b></font> I don't have the source on the gpfs at all. but I could copy it.<br/>
+<font color="#A82F2F"><font size="2">(04:05:31 PM)</font> <b>Shawn Nelsen:</b></font> I also have it here:<br/>\\prod-26\D\TomTom\sf_data\jpg<br/>
+<font color="#16569E"><font size="2">(04:05:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah put it on gpfs</span><br/>
+<font color="#A82F2F"><font size="2">(04:08:02 PM)</font> <b>Shawn Nelsen:</b></font> \\data\1\dd\streaming\tomtom\i3cache\tomtom_city_centers\jpg<br/>
+<font color="#16569E"><font size="2">(04:09:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>down at AV it looks like this:<br/>\\data\1\dd\streaming\tomtom\i3cache\tomtom_city_centers</span><br/>
+<font color="#16569E"><font size="2">(04:10:27 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>there's no &quot;jpg&quot; dir.</span><br/>
+<font color="#A82F2F"><font size="2">(04:36:44 PM)</font> <b>Shawn Nelsen:</b></font> \\data\1\dd\configuration\i3mapcache_cc.xml<br/>
+<font color="#16569E"><font size="2">(04:36:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'm thinking cache would be:<br/><br/>&lt;cache name=&quot;tomtom_cc_sanfran&quot; type=&quot;disk&quot;&gt;<br/>&lt;template&gt;<br/>/data/1/dd/streaming/tomtom/i3cache/tomtom_city_centers/jpg/{z}/{x}/{inv_y}.jpg<br/>&lt;/template&gt;<br/>&lt;xcount&gt;2&lt;/xcount&gt;<br/>&lt;ycount&gt;2&lt;/ycount&gt;<br/>&lt;/cache&gt;</span><br/>
+<font color="#A82F2F"><font size="2">(04:03:27 PM)</font> <b>Shawn Nelsen:</b></font>     fout = open(jgwName, 'w')<br/>    fout.write('%-s\n%-s\n%-s\n%-s\n%-s\n%-s\n' % (jgw[0], jgw[1], jgw[2], jgw[3], jgw[4], jgw[5]))<br/>    fout.closed<br/>
+<font color="#16569E"><font size="2">(03:41:08 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>ugh. AV's python is 2.6, and the argparser is not available.</span><br/>
+<font color="#A82F2F"><font size="2">(03:41:33 PM)</font> <b>Shawn Nelsen:</b></font> what were you using?<br/>
+<font color="#16569E"><font size="2">(03:43:37 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>2.7 on my machine</span><br/>
+<font color="#A82F2F"><font size="2">(03:43:55 PM)</font> <b>Shawn Nelsen:</b></font> well that's just dumb.<br/>
+<font color="#16569E"><font size="2">(03:44:07 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>tellin' me!</span><br/>
+<font color="#A82F2F"><font size="2">(03:44:25 PM)</font> <b>Shawn Nelsen:</b></font> I bet you can install 2.7 and then explicitly make a call to it.<br/>
+<font color="#16569E"><font size="2">(03:47:15 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, probably so.  it's just that it's the mugg machine(s) that a change need  to be changed.</span><br/>
+<font color="#16569E"><font size="2">(03:47:31 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i'll go see what Chris has to say.</span><br/>
+<font color="#A82F2F"><font size="2">(03:47:52 PM)</font> <b>Shawn Nelsen:</b></font> I bet I can guess<br/>
+<font color="#16569E"><font size="2">(03:48:05 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>=]</span><br/>
+<font color="#A82F2F"><font size="2">(03:48:19 PM)</font> <b>Shawn Nelsen:</b></font> he'll say &quot;Randy, what are you talking about, and why are you telling me&quot;<br/>
+<font color="#16569E"><font size="2">(03:52:56 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah, probably so.</span><br/>
+<font color="#A82F2F"><font size="2">(12:57:03 PM)</font> <b>Shawn Nelsen:</b></font> <html xmlns='http://jabber.org/protocol/xhtml-im'><body xmlns='http://www.w3.org/1999/xhtml'><p>oh yeah, this.<br/><a href="http://www.usatoday.com/story/tech/2014/07/15/internet-of-things-new-wireless-protocol-thread-group/12655535/">http://www.usatoday.com/story/tech/2014/07/15/internet-of-things-new-wireless-protocol-thread-group/12655535/</a></p></body></html><br/>
+<font color="#16569E"><font size="2">(12:59:12 PM)</font> <b>Randy How:</b></font> <span style='color: #333333;'><span style='font-family: arial, sans-serif;'>&quot;founding seven members are Google's Nest Labs, Samsung Electronics, Yale Security, Silicon Labs, Freescale Semiconductor and ... ceiling fan giant Big Ass Fans!&quot;  </span></span><span style='color: #0a841a;'>That's hilarious!</span><br/>
+<font color="#A82F2F"><font size="2">(01:00:15 PM)</font> <b>Shawn Nelsen:</b></font> yeah, I was gonna mention that I read the article this morning while we were talking about node, then other things happened.<br/>
+<font color="#16569E"><font size="2">(03:29:25 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>here you can watch bears catch salmon:<br/><a href="http://www.nps.gov/katm/photosmultimedia/brown-bear-salmon-cam-brooks-falls.htm">http://www.nps.gov/katm/photosmultimedia/brown-bear-salmon-cam-brooks-falls.htm</a> </span><br/>
+<font color="#A82F2F"><font size="2">(03:33:06 PM)</font> <b>Shawn Nelsen:</b></font> those bears are never prevent any forest fires that way<br/>
+<font color="#A82F2F"><font size="2">(03:34:22 PM)</font> <b>Shawn Nelsen:</b></font> is this really live?<br/>
+<font color="#16569E"><font size="2">(03:34:29 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>yeah.</span><br/>
+<font color="#A82F2F"><font size="2">(03:34:33 PM)</font> <b>Shawn Nelsen:</b></font> wow<br/>
+<font color="#16569E"><font size="2">(03:34:58 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>i think they're just taking a fire break, they're at lunch</span><br/>
+<font color="#16569E"><font size="2">(03:35:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>the one in the front has had 3 so far.</span><br/>
+<font color="#A82F2F"><font size="2">(03:35:24 PM)</font> <b>Shawn Nelsen:</b></font> they don't seem very motivated<br/>
+<font color="#16569E"><font size="2">(03:35:43 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>at fighting forest fires?</span><br/>
+<font color="#A82F2F"><font size="2">(03:35:57 PM)</font> <b>Shawn Nelsen:</b></font> really. all I've seen is him stare at the fish<br/>
+<font color="#A82F2F"><font size="2">(03:37:53 PM)</font> <b>Shawn Nelsen:</b></font> Ahh! Giant fly! We're all doomed!<br/>
+<font color="#16569E"><font size="2">(03:38:22 PM)</font> <b>Randy How:</b></font> <span style='color: #0a841a;'>web cam eating flying bugs!</span><br/>
+</body></html>

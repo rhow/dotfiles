@@ -1,0 +1,36 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with #sailsjs at Sat 31 May 2014 06:56:32 AM MDT on randingo@irc.freenode.net (irc)</title></head><body><h3>Conversation with #sailsjs at Sat 31 May 2014 06:56:32 AM MDT on randingo@irc.freenode.net (irc)</h3>
+<font size="2">(06:56:32 AM)</font><b> The topic for #sailsjs is: npm star sails | <a href="https://www.npmjs.org/package/sails">https://www.npmjs.org/package/sails</a></b><br/>
+<font size="2">(07:44:01 AM)</font><b> marionebl is now known as marionebl_</b><br/>
+<font color="#A82F2F"><font size="2">(09:00:27 AM)</font> <b>blaind:</b></font> anybody know how to query from array in waterline? User has a tokens array, so basically: user: { username: &apos;test&apos;, tokens: [{token: &apos;something&apos;, a: &apos;b&apos;, }, {token: &apos;something2&apos;}]}<br/>
+<font color="#A82F2F"><font size="2">(09:00:40 AM)</font> <b>blaind:</b></font> i&apos;d like to User.findOne(&quot;one of tokens is something2&quot;)<br/>
+<font size="2">(09:05:09 AM)</font><b> pms is now known as rsub</b><br/>
+<font size="2">(09:05:26 AM)</font><b> rsub is now known as rsp</b><br/>
+<font color="#A82F2F"><font size="2">(09:05:57 AM)</font> <b>rsp:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(09:07:13 AM)</font> <b>blaind:</b></font> hmm I think I&apos;ll just create another tokens collection<br/>
+<font color="#A82F2F"><font size="2">(09:09:01 AM)</font> <b>komlev:</b></font> hey guys<br/>
+<font color="#A82F2F"><font size="2">(09:09:10 AM)</font> <b>komlev:</b></font> i have a question about sails<br/>
+<font color="#A82F2F"><font size="2">(09:09:28 AM)</font> <b>komlev:</b></font> how do i redefine public folder<br/>
+<font color="#A82F2F"><font size="2">(09:10:35 AM)</font> <b>rsp:</b></font> i can&apos;t seem to understand how the default GET route for controllers works. without /id, index is called, with id, no method is called (but results are returned anyway) - what is being called here? (sails 0.10-rc7)<br/>
+<font color="#A82F2F"><font size="2">(09:13:31 AM)</font> <b>rsp:</b></font> or rather, what can i override? i need to limit access based on user login. do i have to define a route for /id?<br/>
+<font color="#A82F2F"><font size="2">(09:31:47 AM)</font> <b>blaind:</b></font> rsp: I think u need to define a policy<br/>
+<font color="#A82F2F"><font size="2">(09:31:52 AM)</font> <b>blaind:</b></font> config/policies.js<br/>
+<font color="#A82F2F"><font size="2">(09:41:15 AM)</font> <b>rsp:</b></font> blaind: no my problem is that i want to restrict the returned records, not the access to the method in general. what i could do of course, is to define my own route for &lt;controller&gt;/&lt;id&gt;, but i was wondering if there was an easier way of doing it<br/>
+<font color="#A82F2F"><font size="2">(09:41:37 AM)</font> <b>rsp:</b></font> (namely overriding some default method in the controller)<br/>
+<font color="#A82F2F"><font size="2">(09:48:12 AM)</font> <b>da_wunder:</b></font> more finetune to my boilerplate<br/>
+<font color="#A82F2F"><font size="2">(09:48:14 AM)</font> <b>da_wunder:</b></font> http://wunder.sytes.net:3000/chat<br/>
+<font color="#A82F2F"><font size="2">(09:52:38 AM)</font> <b>sethetter:</b></font> Anyone here use the sails-generate-auth package?<br/>
+<font color="#A82F2F"><font size="2">(09:52:46 AM)</font> <b>da_wunder:</b></font> o/<br/>
+<font color="#A82F2F"><font size="2">(09:53:49 AM)</font> <b>sethetter:</b></font> All examples of using passport I find are putting the strategies on the user model directly, but this uses a separate model with association<br/>
+<font color="#A82F2F"><font size="2">(09:54:04 AM)</font> <b>sethetter:</b></font> How do I do my register form so that all ties together?<br/>
+<font color="#A82F2F"><font size="2">(09:54:15 AM)</font> <b>sethetter:</b></font> Am I creating my own register controller action? Or is that handled by the generator<br/>
+<font color="#A82F2F"><font size="2">(09:55:28 AM)</font> <b>da_wunder:</b></font> that generate auth contains an example of registration form also<br/>
+<font color="#A82F2F"><font size="2">(09:56:24 AM)</font> <b>sethetter:</b></font> da_wunder: in what&apos;s generated? or with docs in repo?<br/>
+<font color="#A82F2F"><font size="2">(09:59:18 AM)</font> <b>da_wunder:</b></font> https://github.com/kasperisager/sails-generate-auth/blob/master/templates/api/controllers/AuthController.js#L73<br/>
+<font color="#A82F2F"><font size="2">(09:59:42 AM)</font> <b>sethetter:</b></font> da_wunder: thanks!<br/>
+<font color="#A82F2F"><font size="2">(10:15:49 AM)</font> <b>blaind:</b></font> rsp: maybe model-&gt;toJSON ? (just giving ideas, I&apos;m new to sails too so dont take them at face value)<br/>
+<font color="#A82F2F"><font size="2">(11:39:26 AM)</font> <b>mattblang:</b></font> anyone here use mongodb?<br/>
+<font color="#A82F2F"><font size="2">(11:40:06 AM)</font> <b>da_wunder:</b></font> mattblang: sorry, no<br/>
+<font size="2">(11:48:37 AM)</font><b> mattblang left the room (quit: Ping timeout: 252 seconds).</b><br/>
+<font color="#A82F2F"><font size="2">(12:28:54 PM)</font> <b>JemiloII:</b></font> sup<br/>
+<font size="2">(01:14:32 PM)</font><b> Brocken is now known as zz_Brocken</b><br/>
+</body></html>
