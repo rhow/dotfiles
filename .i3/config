@@ -49,6 +49,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# next/previous workspace
+# bindsym Mod1+Tab focus right
+# bindsym Mod1+Shift+Tab focus left
+bindsym $mod+Tab workspace back_and_forth
+
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+l move up
@@ -84,7 +89,6 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-
 #bindsym $mod+d focus child
 
 # reload the configuration file
@@ -147,7 +151,10 @@ bindsym $mod+n bar mode toggle
 #for_window [class="Pigdin" ] floating enable
 #for_window [class="Pigdin" window_role="conversation"] floating enable
 for_window [class="Gcalctool" ] floating enable
-#for_window [class=
+
+# scratchpad - 
+# bindsym $mod+m move scratchpad     ### moves current window into scratchpad
+# bindsym $mod+o scratchpad show
 
 # Applets
 exec --no-startup-id gnome-settings-daemon
