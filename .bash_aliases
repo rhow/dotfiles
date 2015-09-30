@@ -20,8 +20,12 @@ alias g='git'
 alias gstat='git status'
 alias gadd='git add --all'
 alias gcommit='git commit -a -m'
+alias gdf='git diff'
+alias gmerge='git merge --no-ff'
 alias glog='git log --graph --pretty=format":%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gweb='git instaweb --httpd=webrick'
+
+alias v='vagrant'
 
 alias dps='docker ps'
 alias dimages='docker images'
@@ -30,7 +34,8 @@ alias singlescreen='sh ~/bin/singlescreen.sh'
 alias offscreen='sleep 2; xset dpms force off'
 
 alias agi='sudo apt-get install'
-alias agu='sudo apt-get update'
+alias agu='sudo apt-get update && sudo apt-get dist-upgrade -y'
+
 alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
 alias net-reconfigure='sudo dpkg-reconfigure resolvconf'
@@ -49,11 +54,11 @@ alias fu='knife environment edit ceph-and-ha-budd3'
 alias eu='knife data bag edit passwords'
 alias xclip='xclip -selection c'
 
-alias mount-gpfs='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777,sec=ntlmv2 //data.i3.local/1 ~/mounts/gpfs'
+alias mount-gpfs='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777,sec=ntlmv2 //data.i3.local/1 /data'
 alias mount-jungfrau='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777 //documents.i3.local/jungfrau ~/mounts/jungfrau'
 
 alias umount-gpfs='sudo umount ~/mounts/gpfs'
 alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
 alias pyserv='python -m SimpleHTTPServer'
-
+alias s3cmd=/usr/local/bin/s3cmd

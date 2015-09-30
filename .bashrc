@@ -122,7 +122,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+# source /usr/local/bin/virtualenvwrapper_lazy.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 export PATH="$HOME/.activator-1.2.3-minimal:$PATH"
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
@@ -131,4 +132,4 @@ bind '"\e[1;5D" backward-word'
 bind '"\e[1;5C" forward-word'
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh

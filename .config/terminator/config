@@ -9,6 +9,7 @@
     use_system_font = False
     font = DejaVu Sans Mono 15
     urgent_bell = True
+    background_image = None
     cursor_color = red
     cursor_blink = False
     login_shell = True
