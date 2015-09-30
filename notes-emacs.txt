@@ -1,0 +1,47 @@
+What's the purpose of the Menu bar options? 
+- I don't see them being accessible 
+- Added '(menu-bar-mode -1)' to .emacs and C-x C-e (eval.) and menu be-gone
+  - meta-control-x, also executes eval
+
+Motion to begining of buffer stops 
+- go to the end of document (end of buffer)
+- paging up (fn up arrow)     
+
+It appears that TMUX hijacks some key strokes
+
+shift pretty much anything makes a selection/starts a buffer
+- although shift-cntl arrow left/right does not select/start buffer
+- alt-f jumps a word - how to select/create buffer by word
+
+
+M-> or M-< (Alt-left or right arrows) don't function to go to beginning or end of buffer.?? 
+I thought C-SPC did something.
+- says to "set mark here", i don't see it doing anything
+- issue with ibus: https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/1278569
+
+How to search and move the cursor to that location, C-r string,
+- increment with by repeating C-r or C-s, but then the cursor doesn't move
+- this seems to be working as expected.
+       
+Multiple cursors
+- http://emacsrocks.com/e13.html
+- how did he do this?
+- Attempted to install this:
+- https://github.com/magnars/multiple-cursors.el, but package wasn't found
+- Attempted to add Packages Repositories
+- http://ergoemacs.org/emacs/emacs_package_system.html
+
+Tab only 2 or 4 spaces
+- currently it looks to be tab to beginning of next word
+- I want both (also to TAB 4 spaces)
+    
+Shell mode
+- how to up arrow to previous command?? 
+-- C-p and C-n
+- To jump words: M-f and M-b
+
+What is a registery?
+
+To get rid of the buffer list pane - bottom
+- C-x 1 "removes help window" and the buffer list pane
+- C-x 1 Close other windows
