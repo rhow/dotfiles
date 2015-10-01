@@ -115,15 +115,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-export WORKON_HOME=$HOME/.virtualenvs
-# source /usr/local/bin/virtualenvwrapper_lazy.sh
-source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 export PATH="$HOME/.activator-1.2.3-minimal:$PATH"
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin

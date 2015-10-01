@@ -60,5 +60,7 @@ alias mount-jungfrau='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,f
 alias umount-gpfs='sudo umount ~/mounts/gpfs'
 alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
+alias py34virtualenv='python3.4 -m venv --without-pip virtualenv'
+alias py34pip='curl https://bootstrap.pypa.io/get-pip.py | python'
 alias pyserv='python -m SimpleHTTPServer'
 alias s3cmd=/usr/local/bin/s3cmd

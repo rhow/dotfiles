@@ -1,0 +1,9 @@
+.emacs.d/auto-save-list/*
+
+# Ignore everyting in .config:
+.config/*
+
+# Except
+!.config/htop
+!.config/terminator
+!.config/sublime-text-3
