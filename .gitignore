@@ -1,4 +1,5 @@
 .emacs.d/auto-save-list/*
+.bash_history
 
 # Ignore everyting in .config:
 .config/*
