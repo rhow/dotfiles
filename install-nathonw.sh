@@ -7,7 +7,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     # remove existing config and add symlinks to the dot files from the repo in their place
     find $DOTDIR -maxdepth 1 -name ".[^.]*" -print0 | while IFS= read -r -d $'\0' path; do
 	file=$(basename $path)
-	if [[ $file != ".git" ]]; then
+	if [[ $file != ".git" ] || [ $file != ".config" ] || [ $file != ".gitignore" ]]; then
 	    rm -rf ~/$file
 	    ln -s $DOTDIR/$file ~/$file
 	fi
