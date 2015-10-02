@@ -43,9 +43,8 @@ Java install: http://ubuntuhandbook.org/index.php/2014/02/install-oracle-java-6-
 The idea.desktop file goes into here: /usr/share/applications for it
 to be added into Synapse Launcher 
 
-Desktop Example:
-    I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop
-	[Desktop Entry]
+Desktop Example: `I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop`
+    [Desktop Entry]	
 	Name=IntelliJ IDEA
 	Comment=IntelliJ IDEA IDE
 	Exec=/home/local/I3/rhow/Programs/idea.sh
