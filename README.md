@@ -20,11 +20,20 @@ IMPORTANT!!: Executed the install-nathonw.sh, and it remove the ~/.config and cr
 PulseAudio GUI
 sudo apt-get install pavucontrol
 
-To set caplocks to control key
+To set caplocks to control key - added to .bashrc file
 setxkbmap -option caps:ctrl_modifier
 - I'd like to switch the cntl+f and alt+f functions in a terminal
 - I'd like to switch the cntl+b and alt+b functions in a terminal
 
+i3wm
+For some reason with i3wm, the brightness function keys become disabled.  They working Unity.
+A work around was to add the Fn key bindings to the i3 config file.  Requires:
+sudo apt-get install xbacklight
+
+Sound controls are also disabled, this reference looks to be helpful:
+http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
+ 
+IntelliJ
 Java install: http://ubuntuhandbook.org/index.php/2014/02/install-oracle-java-6-7-or-8-ubuntu-14-04/
 
 Desktop Example:
