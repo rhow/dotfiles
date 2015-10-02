@@ -7,7 +7,7 @@
   [[default]]
     foreground_color = "#ffffff"
     use_system_font = False
-    font = DejaVu Sans Mono 15
+    font = DejaVu Sans Mono 14
     urgent_bell = True
     background_image = None
     cursor_color = red
