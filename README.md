@@ -34,16 +34,18 @@ A work around was to add the Fn key bindings to the i3 config file.  Requires:
     sudo apt-get install xbacklight
 
 Sound controls are also disabled, this reference looks to be helpful:
-http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
+* http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
 
 # IntelliJ
-Java install: http://ubuntuhandbook.org/index.php/2014/02/install-oracle-java-6-7-or-8-ubuntu-14-04/
+Java install
+* http://ubuntuhandbook.org/index.php/2014/02/install-oracle-java-6-7-or-8-ubuntu-14-04/
 
 ## Desktop
 The idea.desktop file goes into here: /usr/share/applications for it
 to be added into Synapse Launcher 
 
 Desktop Example: `I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop`
+
     [Desktop Entry]	
 	Name=IntelliJ IDEA
 	Comment=IntelliJ IDEA IDE
