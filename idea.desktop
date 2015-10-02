@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=IntelliJ IDEA
+Comment=IntelliJ IDEA IDE
+Exec=/home/local/I3/rhow/Programs/idea.sh
+Icon=/home/local/I3/rhow/Programs/idea.png
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Development;IDE;

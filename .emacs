@@ -35,9 +35,14 @@
 (global-set-key "\eP" 'goto-line)          ; function key F6
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
+
 (autoload 'json-mode "json-mode" "Json Mode." t)
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
+(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ; Example of how to specify control key:
 ; to redefine control-y to go to the start of the line (like control-a)
