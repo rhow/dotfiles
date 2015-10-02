@@ -1,32 +1,32 @@
-#!/bin/sh
+DOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-inst(){
-    if [ -f $2 ]; then
-	mv $2 $2.bak
-    fi
-    cp $1 $2
-}
-instl(){
-    if [ -e $1 -a ! -L $1 ]; then
-	echo "$1 exists, but it's not a link; you'll have to link this by hand"
-	return
-    fi
-    ln -sf $2 $1
-}
-instd(){
-    cp -a $1 $2
-} 
+read -p "This will DELETE YOUR EXISTING bash, emacs, and tmux configurations. Are you sure? [y/N] " -r
 
-ln -sf $PWD/.bashrc ~
-ln -sf ~/.bashrc ~/.profile 
-ln -sf $PWD/.emacs ~
-ln -sf $PWD/._gitconfig ~/.gitconfig
-ln -sf $PWD/._gitignore_global ~/.gitignore_global
-ln -sf $PWD/.bash_aliases ~
-instd emacs ~
-# using shellmarks instead
-#(cd autojump; ./install.sh)
-ln -sf $PWD/.bash.shellmarks ~
+if [[ $REPLY =~ ^[Yy]$ ]]; then
 
-if [ ! -d ~/bin ]; then mkdir ~/bin; fi
-ln -sf $PWD/bin/git-diff.sh ~/bin/git-diff.sh
+    # remove existing, and add symlinks to the dot files from the repo in their place
+    find $DOTDIR -maxdepth 1 -name ".[^.]*" -print0 | while IFS= read -r -d $'\0' path; do
+	file=$(basename $path)
+	if [[ $file != ".git" && $file != ".gitignore" ]]; then
+	    rm -rf ~/$file
+	    ln -sf $DOTDIR/$file ~/$file
+	fi
+    done
+
+    rm -rf ~/bin
+    ln -sf $DOTDIR/bin ~/bin
+
+    rm -f ~/.gitconfig
+    ln -sf $DOTDIR/dot_gitconfig_global ~/.gitconfig
+    rm -f ~/.gitignore_global
+    ln -sf $DOTDIR/dot_gitignore_global ~/.gitignore_global
+
+    rm -rf ~/.config/htop
+    ln -sf $DOTDIR/dot_config/htop ~/.config/htop
+    rm -rf ~/.config/terminator
+    ln -sf $DOTDIR/dot_config/terminator ~/.config/terminator
+    rm -rf ~/.config/sublime-text-3
+    ln -sf $DOTDIR/dot_config/sublime-text-3 ~/.config/sublime-text-3
+
+    echo "Done"
+fi

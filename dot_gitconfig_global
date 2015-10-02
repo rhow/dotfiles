@@ -1,6 +1,8 @@
 [user]
         email = rhow@i3.com
         name = Randy How
+[push]
+	default = simple
 [core]
         excludesfile = /home/likewise-open/I3/rhow/.gitignore_global
 [color]
