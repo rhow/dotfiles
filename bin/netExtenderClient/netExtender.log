@@ -1,0 +1,255 @@
+03/27/2014 13:04:59.352 [general info    10774] NetExtender installation helper launched
+03/27/2014 13:04:59.352 [config  info    10774] Loading saved profiles...
+03/27/2014 13:04:59.361 [general info    10774] Installed /etc/ppp/netextender.pid
+03/27/2014 13:04:59.361 [general info    10774] Installed /etc/ppp/netextenderppp.pid
+03/27/2014 13:08:27.053 [config  info    10865] Loading saved profiles...
+03/27/2014 13:08:27.053 [general info    10865] NetExtender launched
+03/27/2014 13:08:27.053 [general info    10865] NetExtender 7.5.760 for Linux initialized
+03/27/2014 13:08:27.054 [config  info    10865] Compatibility mode: SUSE/Ubuntu
+03/27/2014 13:08:29.416 [general notice  10865] User Access Authentication
+03/27/2014 13:08:40.294 [connect info    10865] User:   "rhow"
+03/27/2014 13:08:40.294 [connect info    10865] Domain: "i3.local"
+03/27/2014 13:08:40.294 [connect info    10865] Server: "216.17.145.61"
+03/27/2014 13:08:40.303 [general notice  10865] Connecting to 216.17.145.61...
+03/27/2014 13:08:40.458 [connect warn    10865] SSL_get_peer_certificate: X509_V_ERR_INVALID_CA
+03/27/2014 13:08:49.190 [general notice  10865] Connected.
+03/27/2014 13:08:49.190 [general notice  10865] Logging in...
+03/27/2014 13:08:49.217 [general error   10865] Authentication failure: Authentication failed.
+03/27/2014 13:08:49.217 [general notice  10865] SSL VPN logging out...
+03/27/2014 13:08:49.378 [https   error   10865] httpReqAddCookie: value is NULL
+03/27/2014 13:08:49.378 [https   error   10865] Missing parameter(s); returning false
+03/27/2014 13:08:49.403 [general error   10865] Logout command failed
+03/27/2014 13:08:49.405 [general notice  10865] SSL VPN connection is terminated.
+03/27/2014 13:10:32.818 [config  info    10895] Loading saved profiles...
+03/27/2014 13:10:32.818 [general info    10895] NetExtender launched
+03/27/2014 13:10:32.818 [general info    10895] NetExtender 7.5.760 for Linux initialized
+03/27/2014 13:10:32.819 [config  info    10895] Compatibility mode: SUSE/Ubuntu
+03/27/2014 13:10:48.747 [general notice  10895] User Access Authentication
+03/27/2014 13:11:03.801 [connect info    10895] User:   "rhow@i3.local"
+03/27/2014 13:11:03.801 [connect info    10895] Domain: "i3.local"
+03/27/2014 13:11:03.801 [connect info    10895] Server: "216.17.145.61"
+03/27/2014 13:11:03.807 [general notice  10895] Connecting to 216.17.145.61...
+03/27/2014 13:11:03.964 [connect warn    10895] SSL_get_peer_certificate: X509_V_ERR_INVALID_CA
+03/27/2014 13:11:07.155 [general notice  10895] Connected.
+03/27/2014 13:11:07.156 [general notice  10895] Logging in...
+03/27/2014 13:11:07.179 [general error   10895] Authentication failure: Authentication failed.
+03/27/2014 13:11:07.180 [general notice  10895] SSL VPN logging out...
+03/27/2014 13:11:07.336 [https   error   10895] httpReqAddCookie: value is NULL
+03/27/2014 13:11:07.337 [https   error   10895] Missing parameter(s); returning false
+03/27/2014 13:11:07.359 [general error   10895] Logout command failed
+03/27/2014 13:11:07.361 [general notice  10895] SSL VPN connection is terminated.
+03/27/2014 15:59:25.181 [config  info    14811] Loading saved profiles...
+03/27/2014 15:59:25.181 [general info    14811] NetExtender launched
+03/27/2014 15:59:25.181 [general info    14811] NetExtender 7.5.760 for Linux initialized
+03/27/2014 15:59:25.181 [config  info    14811] Compatibility mode: SUSE/Ubuntu
+03/27/2014 15:59:43.871 [config  info    14816] Loading saved profiles...
+03/27/2014 15:59:43.871 [general info    14816] NetExtender launched
+03/27/2014 15:59:43.872 [general info    14816] NetExtender 7.5.760 for Linux initialized
+03/27/2014 15:59:43.872 [config  info    14816] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:00:07.786 [general notice  14816] User Access Authentication
+03/27/2014 16:00:26.467 [connect info    14816] User:   "rhow"
+03/27/2014 16:00:26.467 [connect info    14816] Domain: "LocalDomain"
+03/27/2014 16:00:26.467 [connect info    14816] Server: "216.17.145.61:4433"
+03/27/2014 16:00:26.481 [general notice  14816] Connecting to 216.17.145.61:4433...
+03/27/2014 16:00:26.484 [general error   14816] ERROR: connect: Connection refused (111)
+03/27/2014 16:00:26.484 [general error   14816] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:00:26.484 [general error   14816] NetExtender connection failed.
+03/27/2014 16:00:26.484 [general notice  14816] SSL VPN logging out...
+03/27/2014 16:00:26.485 [general error   14816] ERROR: connect: Connection refused (111)
+03/27/2014 16:00:26.485 [general error   14816] Logout command failed
+03/27/2014 16:00:26.486 [general notice  14816] SSL VPN connection is terminated.
+03/27/2014 16:00:45.569 [config  info    14829] Loading saved profiles...
+03/27/2014 16:00:45.570 [general info    14829] NetExtender launched
+03/27/2014 16:00:45.570 [general info    14829] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:00:45.570 [config  info    14829] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:01:03.030 [general notice  14829] User Access Authentication
+03/27/2014 16:01:27.583 [connect info    14829] User:   "mlikes"
+03/27/2014 16:01:27.583 [connect info    14829] Domain: "LocalDomain"
+03/27/2014 16:01:27.583 [connect info    14829] Server: "216.17.145.61:4433"
+03/27/2014 16:01:27.590 [general notice  14829] Connecting to 216.17.145.61:4433...
+03/27/2014 16:01:27.591 [general error   14829] ERROR: connect: Connection refused (111)
+03/27/2014 16:01:27.592 [general error   14829] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:01:27.592 [general error   14829] NetExtender connection failed.
+03/27/2014 16:01:27.592 [general notice  14829] SSL VPN logging out...
+03/27/2014 16:01:27.593 [general error   14829] ERROR: connect: Connection refused (111)
+03/27/2014 16:01:27.593 [general error   14829] Logout command failed
+03/27/2014 16:01:27.593 [general notice  14829] SSL VPN connection is terminated.
+03/27/2014 16:02:12.208 [general info    14855] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:02:12.208 [config  info    14855] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:02:12.763 [gui     info    14855] createLogPanel()
+03/27/2014 16:02:12.962 [gui     warn    14855] Unable to load certificate:java.io.FileNotFoundException: /root/.netExtenderCerts/PUB_CERT/ca-bundle.crt (No such file or directory)
+03/27/2014 16:02:13.079 [config  info    14855] Loading saved profiles...
+03/27/2014 16:03:07.313 [connect info    14855] User:   "mlikes"
+03/27/2014 16:03:07.313 [connect info    14855] Domain: "LocalDomain"
+03/27/2014 16:03:07.313 [connect info    14855] Server: "216.17.145.61:4433"
+03/27/2014 16:03:07.325 [general notice  14855] Connecting to 216.17.145.61:4433...
+03/27/2014 16:03:07.326 [general error   14855] ERROR: connect: Connection refused (111)
+03/27/2014 16:03:07.326 [general error   14855] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:03:07.326 [general error   14855] NetExtender connection failed.
+03/27/2014 16:03:07.326 [general notice  14855] SSL VPN logging out...
+03/27/2014 16:03:07.327 [general error   14855] ERROR: connect: Connection refused (111)
+03/27/2014 16:03:07.327 [general error   14855] Logout command failed
+03/27/2014 16:03:07.328 [general notice  14855] SSL VPN connection is terminated.
+03/27/2014 16:03:07.328 [config  info    14855] Loading saved profiles...
+03/27/2014 16:03:07.330 [gui     info    14855] Connection failed. Check log for details.
+03/27/2014 16:03:39.977 [general notice  14855] A diagnostic report has been created at:
+/tmp/nxdiag.tgz
+03/27/2014 16:09:34.754 [general info    15359] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:09:34.754 [config  info    15359] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:09:35.173 [gui     info    15359] createLogPanel()
+03/27/2014 16:09:35.363 [gui     warn    15359] Unable to load certificate:java.io.FileNotFoundException: /root/.netExtenderCerts/PUB_CERT/ca-bundle.crt (No such file or directory)
+03/27/2014 16:09:35.458 [config  info    15359] Loading saved profiles...
+03/27/2014 16:10:30.912 [connect info    15359] User:   "testuser"
+03/27/2014 16:10:30.913 [connect info    15359] Domain: "LocalDomain"
+03/27/2014 16:10:30.913 [connect info    15359] Server: "216.17.145.61:4433"
+03/27/2014 16:10:30.928 [general notice  15359] Connecting to 216.17.145.61:4433...
+03/27/2014 16:10:30.929 [general error   15359] ERROR: connect: Connection refused (111)
+03/27/2014 16:10:30.929 [general error   15359] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:10:30.929 [general error   15359] NetExtender connection failed.
+03/27/2014 16:10:30.929 [general notice  15359] SSL VPN logging out...
+03/27/2014 16:10:30.931 [general error   15359] ERROR: connect: Connection refused (111)
+03/27/2014 16:10:30.931 [general error   15359] Logout command failed
+03/27/2014 16:10:30.932 [general notice  15359] SSL VPN connection is terminated.
+03/27/2014 16:10:30.932 [config  info    15359] Loading saved profiles...
+03/27/2014 16:10:30.933 [gui     info    15359] Connection failed. Check log for details.
+03/27/2014 16:14:44.197 [connect info    15359] User:   "testuser"
+03/27/2014 16:14:44.197 [connect info    15359] Domain: "LocalDomain"
+03/27/2014 16:14:44.197 [connect info    15359] Server: "216.17.145.61:4433"
+03/27/2014 16:14:44.210 [general notice  15359] Connecting to 216.17.145.61:4433...
+03/27/2014 16:14:44.212 [general error   15359] ERROR: connect: Connection refused (111)
+03/27/2014 16:14:44.212 [general error   15359] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:14:44.212 [general error   15359] NetExtender connection failed.
+03/27/2014 16:14:44.212 [general notice  15359] SSL VPN logging out...
+03/27/2014 16:14:44.214 [general error   15359] ERROR: connect: Connection refused (111)
+03/27/2014 16:14:44.214 [general error   15359] Logout command failed
+03/27/2014 16:14:44.214 [general notice  15359] SSL VPN connection is terminated.
+03/27/2014 16:14:44.215 [config  info    15359] Loading saved profiles...
+03/27/2014 16:14:44.216 [gui     info    15359] Connection failed. Check log for details.
+03/27/2014 16:15:41.914 [config  info    15789] Loading saved profiles...
+03/27/2014 16:15:41.914 [general info    15789] NetExtender launched
+03/27/2014 16:15:41.914 [general info    15789] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:15:41.914 [config  info    15789] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:15:53.044 [general notice  15789] User Access Authentication
+03/27/2014 16:16:02.833 [connect info    15789] User:   "rhow"
+03/27/2014 16:16:02.833 [connect info    15789] Domain: "i3.local"
+03/27/2014 16:16:02.833 [connect info    15789] Server: "216.17.145.61"
+03/27/2014 16:16:02.846 [general notice  15789] Connecting to 216.17.145.61...
+03/27/2014 16:16:03.015 [connect warn    15789] SSL_get_peer_certificate: X509_V_ERR_INVALID_CA
+03/27/2014 16:16:07.650 [general notice  15789] Connected.
+03/27/2014 16:16:07.650 [general notice  15789] Logging in...
+03/27/2014 16:16:07.678 [general error   15789] Authentication failure: Authentication failed.
+03/27/2014 16:16:07.678 [general notice  15789] SSL VPN logging out...
+03/27/2014 16:16:07.833 [https   error   15789] httpReqAddCookie: value is NULL
+03/27/2014 16:16:07.833 [https   error   15789] Missing parameter(s); returning false
+03/27/2014 16:16:07.874 [general error   15789] Logout command failed
+03/27/2014 16:16:07.876 [general notice  15789] SSL VPN connection is terminated.
+03/27/2014 16:17:19.161 [config  info    15822] Loading saved profiles...
+03/27/2014 16:17:19.161 [general info    15822] NetExtender launched
+03/27/2014 16:17:19.162 [general info    15822] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:17:19.162 [config  info    15822] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:17:27.426 [general notice  15822] User Access Authentication
+03/27/2014 16:17:51.679 [connect info    15822] User:   "mlikes"
+03/27/2014 16:17:51.680 [connect info    15822] Domain: "i3.local"
+03/27/2014 16:17:51.680 [connect info    15822] Server: "216.17.145.61"
+03/27/2014 16:17:51.694 [general notice  15822] Connecting to 216.17.145.61...
+03/27/2014 16:17:51.847 [connect warn    15822] SSL_get_peer_certificate: X509_V_ERR_INVALID_CA
+03/27/2014 16:18:03.404 [general notice  15822] Connected.
+03/27/2014 16:18:03.404 [general notice  15822] Logging in...
+03/27/2014 16:18:03.441 [general error   15822] Authentication failure: Authentication failed.
+03/27/2014 16:18:03.442 [general notice  15822] SSL VPN logging out...
+03/27/2014 16:18:03.741 [https   error   15822] httpReqAddCookie: value is NULL
+03/27/2014 16:18:03.742 [https   error   15822] Missing parameter(s); returning false
+03/27/2014 16:18:03.764 [general error   15822] Logout command failed
+03/27/2014 16:18:03.766 [general notice  15822] SSL VPN connection is terminated.
+03/27/2014 16:18:24.854 [config  info    15835] Loading saved profiles...
+03/27/2014 16:18:24.854 [general info    15835] NetExtender launched
+03/27/2014 16:18:24.854 [general info    15835] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:18:24.854 [config  info    15835] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:18:37.617 [general notice  15835] User Access Authentication
+03/27/2014 16:18:57.685 [connect info    15835] User:   "mlikes"
+03/27/2014 16:18:57.685 [connect info    15835] Domain: "localdomain"
+03/27/2014 16:18:57.685 [connect info    15835] Server: "216.17.145.61:4433"
+03/27/2014 16:18:57.699 [general notice  15835] Connecting to 216.17.145.61:4433...
+03/27/2014 16:18:57.700 [general error   15835] ERROR: connect: Connection refused (111)
+03/27/2014 16:18:57.701 [general error   15835] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:18:57.701 [general error   15835] NetExtender connection failed.
+03/27/2014 16:18:57.701 [general notice  15835] SSL VPN logging out...
+03/27/2014 16:18:57.702 [general error   15835] ERROR: connect: Connection refused (111)
+03/27/2014 16:18:57.702 [general error   15835] Logout command failed
+03/27/2014 16:18:57.702 [general notice  15835] SSL VPN connection is terminated.
+03/27/2014 16:19:13.938 [config  info    15848] Loading saved profiles...
+03/27/2014 16:19:13.938 [general info    15848] NetExtender launched
+03/27/2014 16:19:13.938 [general info    15848] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:19:13.938 [config  info    15848] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:19:21.769 [general notice  15848] User Access Authentication
+03/27/2014 16:19:45.763 [connect info    15848] User:   "mlikes"
+03/27/2014 16:19:45.763 [connect info    15848] Domain: "localdomain"
+03/27/2014 16:19:45.763 [connect info    15848] Server: "216.17.145.61"
+03/27/2014 16:19:45.780 [general notice  15848] Connecting to 216.17.145.61...
+03/27/2014 16:19:46.078 [connect warn    15848] SSL_get_peer_certificate: X509_V_ERR_INVALID_CA
+03/27/2014 16:19:52.995 [general notice  15848] Connected.
+03/27/2014 16:19:52.995 [general notice  15848] Logging in...
+03/27/2014 16:19:53.018 [general error   15848] Authentication failure: Authentication failed.
+03/27/2014 16:19:53.018 [general notice  15848] SSL VPN logging out...
+03/27/2014 16:19:53.209 [https   error   15848] httpReqAddCookie: value is NULL
+03/27/2014 16:19:53.209 [https   error   15848] Missing parameter(s); returning false
+03/27/2014 16:19:53.234 [general error   15848] Logout command failed
+03/27/2014 16:19:53.235 [general notice  15848] SSL VPN connection is terminated.
+03/27/2014 16:20:07.061 [config  info    15861] Loading saved profiles...
+03/27/2014 16:20:07.061 [general info    15861] NetExtender launched
+03/27/2014 16:20:07.061 [general info    15861] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:20:07.061 [config  info    15861] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:20:15.258 [general notice  15861] User Access Authentication
+03/27/2014 16:20:21.546 [config  info    15865] Loading saved profiles...
+03/27/2014 16:20:21.546 [general info    15865] NetExtender launched
+03/27/2014 16:20:21.546 [general info    15865] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:20:21.546 [config  info    15865] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:20:33.056 [general notice  15865] User Access Authentication
+03/27/2014 16:20:52.539 [connect info    15865] User:   "mlikes"
+03/27/2014 16:20:52.539 [connect info    15865] Domain: "i3.local"
+03/27/2014 16:20:52.539 [connect info    15865] Server: "216.17.145.61:4433"
+03/27/2014 16:20:52.553 [general notice  15865] Connecting to 216.17.145.61:4433...
+03/27/2014 16:20:52.555 [general error   15865] ERROR: connect: Connection refused (111)
+03/27/2014 16:20:52.555 [general error   15865] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:20:52.555 [general error   15865] NetExtender connection failed.
+03/27/2014 16:20:52.555 [general notice  15865] SSL VPN logging out...
+03/27/2014 16:20:52.560 [general error   15865] ERROR: connect: Connection refused (111)
+03/27/2014 16:20:52.560 [general error   15865] Logout command failed
+03/27/2014 16:20:52.561 [general notice  15865] SSL VPN connection is terminated.
+03/27/2014 16:22:27.017 [config  info    16068] Loading saved profiles...
+03/27/2014 16:23:38.301 [config  info    16095] Loading saved profiles...
+03/27/2014 16:23:38.301 [general info    16095] NetExtender launched
+03/27/2014 16:23:38.301 [general info    16095] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:23:38.301 [config  info    16095] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:23:52.302 [general notice  16095] User Access Authentication
+03/27/2014 16:24:04.640 [connect info    16095] User:   "mlikes@i3.local"
+03/27/2014 16:24:04.640 [connect info    16095] Domain: "localdomain"
+03/27/2014 16:24:04.640 [connect info    16095] Server: "216.17.145.61:4433"
+03/27/2014 16:24:04.655 [general notice  16095] Connecting to 216.17.145.61:4433...
+03/27/2014 16:24:04.656 [general error   16095] ERROR: connect: Connection refused (111)
+03/27/2014 16:24:04.656 [general error   16095] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:24:04.656 [general error   16095] NetExtender connection failed.
+03/27/2014 16:24:04.656 [general notice  16095] SSL VPN logging out...
+03/27/2014 16:24:04.657 [general error   16095] ERROR: connect: Connection refused (111)
+03/27/2014 16:24:04.657 [general error   16095] Logout command failed
+03/27/2014 16:24:04.659 [general notice  16095] SSL VPN connection is terminated.
+03/27/2014 16:25:25.740 [general info    16183] NetExtender installation helper launched
+03/27/2014 16:25:25.740 [config  info    16183] Loading saved profiles...
+03/27/2014 16:25:25.769 [general info    16183] Installed /etc/ppp/netextender.pid
+03/27/2014 16:25:25.769 [general info    16183] Installed /etc/ppp/netextenderppp.pid
+03/27/2014 16:26:33.905 [config  info    16241] Loading saved profiles...
+03/27/2014 16:26:33.905 [general info    16241] NetExtender launched
+03/27/2014 16:26:33.905 [general info    16241] NetExtender 7.5.760 for Linux initialized
+03/27/2014 16:26:33.906 [config  info    16241] Compatibility mode: SUSE/Ubuntu
+03/27/2014 16:27:03.504 [connect info    16241] User:   "testuser"
+03/27/2014 16:27:03.505 [connect info    16241] Domain: "localdomain"
+03/27/2014 16:27:03.505 [connect info    16241] Server: "216.17.145.61:4433"
+03/27/2014 16:27:03.519 [general notice  16241] Connecting to 216.17.145.61:4433...
+03/27/2014 16:27:03.521 [general error   16241] ERROR: connect: Connection refused (111)
+03/27/2014 16:27:03.521 [general error   16241] Authentication failure: Connection failed. Check log for details.
+03/27/2014 16:27:03.521 [general error   16241] NetExtender connection failed.
+03/27/2014 16:27:03.521 [general notice  16241] SSL VPN logging out...
+03/27/2014 16:27:03.522 [general error   16241] ERROR: connect: Connection refused (111)
+03/27/2014 16:27:03.522 [general error   16241] Logout command failed
+03/27/2014 16:27:03.523 [general notice  16241] SSL VPN connection is terminated.
+03/27/2014 16:30:47.580 [config  info    16301] Loading saved profiles...

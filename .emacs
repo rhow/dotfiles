@@ -44,6 +44,10 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(autoload 'yaml-mode "yaml-mode" "Major mode for editing YAML files" t)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+
 ; Example of how to specify control key:
 ; to redefine control-y to go to the start of the line (like control-a)
 ; (global-set-key "\C-y" 'beginning-of-line) 

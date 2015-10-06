@@ -55,3 +55,9 @@ Desktop Example: `I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop`
 	StartupNotify=true
 	Type=Application
 	Categories=Development;IDE;
+
+# Centos
+
+Command prompt
+
+    export PS1="\e[1;32m\u@\h\e[1;37m:\e[1;34m\w\e[1;37m\$ \e[m"

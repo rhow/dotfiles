@@ -9,8 +9,8 @@
 	"highlight_line": false,
 	"ignored_packages":
 	[
-		"SublimeLinter",
 		"Better CoffeeScript",
+		"SublimeLinter",
 		"Vintage"
 	],
 	"rulers":
