@@ -63,6 +63,6 @@ alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 alias py34virtualenv='python3.4 -m venv --without-pip virtualenv'
 alias py34pipinstall='curl https://bootstrap.pypa.io/get-pip.py | python'
 alias pyserv='python -m SimpleHTTPServer'
-alias s3cmd=/usr/bin/s3cmd
+alias s3cmd=/usr/local/bin/s3cmd
 
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"

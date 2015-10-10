@@ -22,10 +22,16 @@ following file:
 * Use the Keyboard icon in the tray
 
 ## Cap Locks
-To set caplocks to control key - added to .bashrc file
-setxkbmap -option caps:ctrl_modifier
+To set caplocks to control key for terminal, added the following to .bashrc file:
+* `setxkbmap -option caps:ctrl_modifier`
 * I'd like to switch the `cntl+f` and `alt+f` functions in a terminal
 * I'd like to switch the `cntl+b` and `alt+b` functions in a terminal
+
+Limitation to this is that it only works on local terminals, doesn't
+apply when ssh-ing to other machines.
+
+Instead using the `gnome-tweak-tool`, and under *Typing* set _CapLocks
+to additional Cntl_
 
 ## i3wm
 For some reason with i3wm, the brightness function keys become disabled.  They working Unity.
@@ -61,3 +67,10 @@ Desktop Example: `I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop`
 Command prompt
 
     export PS1="\e[1;32m\u@\h\e[1;37m:\e[1;34m\w\e[1;37m\$ \e[m"
+
+## s3cmd
+
+* Distro repositories are not update with latest versions
+* Sourceforge has the latest: http://sourceforge.net/projects/s3tools/files/s3cmd/
+* Follow INSTALL instructions: `sudo python setup.py install`
+* Set alias for: `/usr/local/bin/s3cmd`
