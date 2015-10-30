@@ -1,9 +1,9 @@
 # some more ls aliases
 alias le='less'
 alias lla='ls -alFh'
-alias ll='ls -lFh --color=auto'
-alias lls='ls -lSh --color=auto'
-alias llt='ls -lth --color=auto'
+alias ll='ls -oFh --color=auto'
+alias lls='ls -oSh --color=auto'
+alias llt='ls -oth --color=auto'
 alias lth='llt | head'
 alias la='ls -A'
 alias l='ls -CF'
@@ -29,6 +29,8 @@ alias v='vagrant'
 
 alias dps='docker ps'
 alias dimages='docker images'
+alias dips='docker ps | tail -n +2 | while read -a a; do name=${a[$((${#a[@]}-1))]}; echo -ne "$name\t"; docker inspect $name | grep IPAddress | cut -d \" -f 4; done'
+
 alias dualscreen='sh ~/bin/dualscreen.sh'
 alias singlescreen='sh ~/bin/singlescreen.sh'
 alias offscreen='sleep 2; xset dpms force off'
@@ -61,7 +63,7 @@ alias umount-gpfs='sudo umount ~/mounts/gpfs'
 alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
 alias py34virtualenv='python3.4 -m venv --without-pip virtualenv'
-alias py34pipinstall='curl https://bootstrap.pypa.io/get-pip.py | python'
+alias py34pipinstall='curl https://bootstrap.pypa.io/get-pip.py | python'
 alias pyserv='python -m SimpleHTTPServer'
 alias s3cmd=/usr/local/bin/s3cmd
 
