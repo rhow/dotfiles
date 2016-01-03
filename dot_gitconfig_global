@@ -4,7 +4,7 @@
 [push]
 	default = simple
 [core]
-        excludesfile = /home/local/I3/rhow/.gitignore_global
+        excludesfile = ~/.gitignore_global
 [color]
         ui = true
 [alias]
