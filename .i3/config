@@ -38,8 +38,8 @@ bindsym $mod+Shift+Ctrl+q kill
 # bindsym $mod+d exec --no-startup-id synapse    # rhow - 2014-02
 
 # requires: sudo apt-get install xbacklight
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 2
+bindsym XF86MonBrightnessUp exec xbacklight -inc 2
 
 # change focus
 bindsym $mod+j focus left
