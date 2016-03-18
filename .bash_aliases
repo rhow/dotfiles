@@ -9,11 +9,12 @@ alias la='ls -A'
 alias l='ls -CF'
 alias gr='grep'
 alias hi='history | ag -i'
-alias psg='ps -ef | ag'
+alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
 alias emacs='/usr/bin/emacs24-nox'
+alias df='/bin/df -h'
 
 # GIT Aliases
 alias g='git'
@@ -43,8 +44,8 @@ alias net-unblock='rfkill unblock all'
 alias net-reconfigure='sudo dpkg-reconfigure resolvconf'
 
 # alias ping-test='ping i3dc6.i3.local -c 2; ping 8.8.8.8 -c 2'
-alias ping-test="echo 'Ping i3dc6.i3.local, Stats:'; ping i3dc6.i3.local -c 2 -W 1| ag packets; echo 'Ping Google Nameserver, Stats:'; ping 8.8.8.8 -c 2 -W 1| ag packets"
-alias ping-g='ping 8.8.8.8 -c 2'
+alias ping-test="echo 'Ping i3dc6.i3.local, Stats:'| ag i3dc6; ping i3dc6.i3.local -c 2 -W 1| ag 'packet loss'; echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
+alias ping-g="echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias i3vpn='sh ~/bin/netExtender.sh'
 alias tail-syslog='sudo tail -f /var/log/syslog'
 
