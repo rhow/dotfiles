@@ -13,7 +13,7 @@ alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
-alias emacs='/usr/bin/emacs24-nox'
+alias emacs='/usr/bin/emacs-24.3-nox'
 alias df='/bin/df -h'
 
 # GIT Aliases
