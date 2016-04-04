@@ -13,7 +13,7 @@ alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
-alias emacs='/usr/bin/emacs-24.3-nox'
+alias emacs='/usr/bin/emacs24-nox'
 alias df='/bin/df -h'
 
 # GIT Aliases
@@ -73,3 +73,4 @@ alias s3cmd=/usr/local/bin/s3cmd
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 alias nlist='nova list | ag'
+alias eval-ssh='eval `ssh-agent -s` && ssh-add'
