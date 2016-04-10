@@ -71,3 +71,6 @@ alias pyserv='python -m SimpleHTTPServer'
 alias s3cmd=/usr/local/bin/s3cmd
 
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
+
+alias nlist='nova list | ag'
+alias eval-ssh='eval `ssh-agent -s` && ssh-add'
