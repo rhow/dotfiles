@@ -74,3 +74,4 @@ alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keyco
 
 alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
+alias glist='gcloud compute instances list | ag'
