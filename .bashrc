@@ -119,7 +119,9 @@ fi
 
 export PATH="$HOME/.activator-1.2.3-minimal:$PATH"
 export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+export PATH=$PATH:/usr/local/go/bin
 
 bind '"\e[1;5D" backward-word' 
 bind '"\e[1;5C" forward-word'

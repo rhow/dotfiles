@@ -1,10 +1,17 @@
 {
 	"folder_history":
 	[
+		"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer",
+		"/home/local/I3/rhow/projects-django/padawan-cache-management-ui",
+		"/home/local/I3/rhow/projects-django/padawan-cache-management",
+		"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01",
+		"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master",
+		"/home/local/I3/rhow/git-repos/ftp-downloader/src",
+		"/home/local/I3/rhow/git-repos/padawan-proto-client",
+		"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan",
 		"/home/local/I3/rhow/projects/luigi/data-engineering-101",
 		"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy",
 		"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/testserver",
-		"/home/local/I3/rhow/projects-django/padawan-cache-management-ui",
 		"/home/local/I3/rhow/git-repos/mapserver_mapcache",
 		"/home/likewise-open/I3/rhow/Downloads/RotateMap",
 		"/home/likewise-open/I3/rhow/git-repos/adm-deploy/roles",
@@ -38,8 +45,8 @@
 		"/home/likewise-open/I3/rhow/projects/sailsjs-v10-angularjs-requirejs-boilerplate",
 		"/home/likewise-open/I3/rhow/projects/mapcache-testing"
 	],
-	"last_version": 3083,
-	"last_window_id": 55,
+	"last_version": 3126,
+	"last_window_id": 67,
 	"log_indexing": false,
 	"settings":
 	{
@@ -148,7 +155,7 @@
 					],
 					[
 						"op",
-						"option	Tag"
+						"option\tTag"
 					],
 					[
 						"ly",
@@ -332,6 +339,39 @@
 			},
 			"file_history":
 			[
+				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/seed-sqs.py",
+				"/home/local/I3/rhow/Downloads/gdb_mc_gdal.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/database/data-offer.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache-progress.log",
+				"/home/local/I3/rhow/Downloads/SmartArchive_Robots_V3.csv",
+				"/home/local/I3/rhow/Downloads/mapcache-i3.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/astrium.map",
+				"/home/local/I3/rhow/Downloads/mugg_create_schema.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/3857-wms.html",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/spot_minidrv.xml",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/conf.py",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/Dropbox/ubuntu/nova.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/cloudwatt/set-ftp-download-list.txt",
+				"/home/local/I3/rhow/tmp/consol-log_p1-fs1.txt",
+				"/data/1/misc/padawan/keys/i3_cw.pem",
+				"/data/1/misc/padawan/set-ftp-download-list-gpfs.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/red/hosts",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/i3_cw.pem",
+				"/data/1/dd/streaming/mapfiles/wms_wfs/wms_wfs_suncorSOD_petrel_embedded_service.map",
+				"/home/local/I3/rhow/Downloads",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py'",
+				"/home/local/I3/rhow/projects/tomtom/quantum.html",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/Vagrantfile",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
@@ -426,40 +466,7 @@
 				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
 				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
 				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/13ef96a5-fc46-41a4-a9c3-a07ec830cc7e.map",
-				"/home/likewise-open/I3/rhow/Downloads/download.txt",
-				"/home/likewise-open/I3/rhow/Downloads/mapserv.fcgi",
-				"/home/likewise-open/I3/rhow/Vagrant/ansible/Vagrantfile",
-				"/home/likewise-open/I3/rhow/temp/padawan-dep.txt",
-				"/home/likewise-open/I3/rhow/Docker/centos7-ansible/Dockerfile",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8975d901-f6aa-4a50-bae8-3a0e348168e2.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/ee71e047-d062-4ee0-aca3-867c62bf2665.map",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/likewise-open/I3/rhow/.bash_aliases",
-				"/home/likewise-open/I3/rhow/mounts/jungfrau/Temp/JTG/airbus_maps_com_version_4.html",
-				"/home/likewise-open/I3/rhow/temp/wmts_example.xml",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_id_replace.sh",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/jrsmith/mapserver62_cent7.rb",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/mugg/context_urls-av-ags01_2.txt",
-				"/home/likewise-open/I3/rhow/Fiddler2/Scripts/CustomRules.cs",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/first.sh",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/masks/ROI_SPOT6_PMS_201409111023484_ORT_1113819101_MSK.GML",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_listing.txt",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/adm_response_toulouse.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/b2585d6b-c3c9-4a0c-a6d9-a8319f6788e9.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr_2.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8915752a-5752-4130-bc50-9e9e0b63c225.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/47c9881b-2cd0-46b3-968c-689be58703ef.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/035225aa-585b-405f-8736-96e3494fc4bc.map",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path_dirs.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/136e8c4d-1c87-4ba1-b2db-c29bc74b1578.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/403ede55-08e8-40c6-98e9-9bec48cf763f.map"
+				"/data/1/misc/padawan/testing/debug_padawan.txt"
 			],
 			"find":
 			{
@@ -503,7 +510,116 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					"==",
+					"world",
+					"tif",
+					" | ",
+					" |",
+					"\\",
+					"=",
+					"- ",
+					"-",
+					"&",
+					" ",
+					"   ",
+					"\n",
+					" \n",
+					"     ",
+					"         ",
+					" \n",
+					"          ",
+					"https://www",
+					"          ",
+					"\n",
+					" ",
+					"  ",
+					"\n",
+					"          ",
+					"source_gdal",
+					")))",
+					"(((",
+					",",
+					"'id': ",
+					", 'id'",
+					"}, {",
+					"\n",
+					"...",
+					"root@padawan3-db-cl1:/var/lib/postgresql/governor",
+					",",
+					"    ",
+					"  6",
+					"  ",
+					"mpm_",
+					"    ",
+					"AS_SP_",
+					"DS_SPOT7_201506131822184_FR1_FR1_FR1_FR1_W120N38_06499",
+					",",
+					":",
+					"\\",
+					"WITH_",
+					"case",
+					"with",
+					"mapserver62",
+					"6.2",
+					":",
+					": ",
+					"data ",
+					"=",
+					"data",
+					"nearblack",
+					", ",
+					"\\",
+					",",
+					",\\\n ",
+					"\\",
+					", ",
+					"target",
+					",\"",
+					"},",
+					"SqsConnection",
+					"boto",
+					"I3\\rhow@lap-31:~/Downloads/padawan_maptiler_workflow",
+					"  ",
+					":",
+					"    ",
+					"   ",
+					"\n\n",
+					"# ",
+					"  ",
+					"    ",
+					"\n",
+					"echo",
+					"\\",
+					"  ",
+					"\n",
+					"1715",
+					"  ",
+					"\n",
+					"*",
+					"\n",
+					"+",
+					",",
+					"  ",
+					"/data/1/misc/padawan/set_download/",
+					"p1-ftp-download1: /cifs/data/set-download/",
+					"'git",
+					"id",
+					"Get:79 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main ",
+					"100 packets",
+					"ansible_ssh_host",
+					"MapRequest: a7c072bc-4483-4b7f-b1b8-d44ba2c7469a",
+					"DataDoors.Api.Server.Streaming.ServerMapRequest.AddAudit;",
+					"[626] INFO",
+					"C:\\logs\\DataDoors\\Streaming-Streaming.txt",
+					"padawan2",
+					"keepalived_router_id",
+					"datetime",
+					" ",
+					"  ",
+					":",
+					"10.200.60",
+					"red-",
+					"pip",
+					"auth",
 					"padawan_redis",
 					"padawan-ogc",
 					"1",
@@ -521,116 +637,7 @@
 					"denied",
 					"  ",
 					"- ",
-					" ",
-					"$ ",
-					"mount",
-					"$ ",
-					"yast",
-					"\n\n",
-					"\n",
-					">",
-					"# ",
-					"&",
-					"libpq",
-					"bfba8fb7-c140-4d85-a8d4-4651d00bee75",
-					"432b8ddd-ff3d-4aa8-b861-8e3b596af35",
-					"&",
-					"&\\n",
-					"Version",
-					"&",
-					"name",
-					"./",
-					"path: \"file:/",
-					"path",
-					"=\"",
-					"&",
-					"n",
-					"&",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_11138",
-					"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_1113823101_R1C1.JP2",
-					"\"file://data/2/dd/pops/i3/imagery/ikonos/z34/Tripolis/alpha/DM_73700_14700_50_50_1_a.tif\"",
-					"?\";\n",
-					"/",
-					"padawan_vintage_png",
-					"&",
-					"$BUILD_DIR",
-					"WORKDIR",
-					"RUN ",
-					"png",
-					"   ",
-					"MAXSCALE 250000",
-					"OUTLINECOLOR 0 200 100",
-					"COLOR -1 -1 -1",
-					"COLOR",
-					">>> ",
-					"package",
-					"zlib",
-					"DEFAULT",
-					"STATUS OFF",
-					"STATUS DEFAULT",
-					"MASK",
-					"\n",
-					",",
-					"  ",
-					"\n",
-					"[ ",
-					" ]",
-					" [",
-					"  ",
-					"                            ",
-					"\n",
-					"JPEG",
-					"PNG",
-					"/",
-					",",
-					" 4",
-					" -0.",
-					" 0",
-					"(  0",
-					">>> ",
-					"/",
-					"STATUS DEFAULT",
-					"STATUS",
-					"==",
-					"]",
-					"path_list",
-					"        ",
-					"'",
-					"L17_R55360_C36096_64_64",
-					"/data/2/dd/pops/i3/imagery",
-					"/data/2/dd/pops/i3",
-					">>> ",
-					" ",
-					"||",
-					",",
-					"),(",
-					"(",
-					"]",
-					"[",
-					"[\n[",
-					"200",
-					">>> ",
-					", ",
-					"__streaminguid",
-					"<gx:duration>",
-					"         ",
-					"0 ",
-					"(",
-					"0",
-					" ",
-					"(",
-					"  ",
-					" ",
-					"av-",
-					" ",
-					"VALUES ",
-					"-- ",
-					"VALUES",
-					"update_database_live.sql.erb:",
-					"tomtom_cc_sanfran_cc_webmercator_slayer",
-					"symlink_blank",
-					"&&"
+					" "
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -638,6 +645,7 @@
 				"regex": false,
 				"replace_history":
 				[
+					"padawan2-",
 					"",
 					"&\\n",
 					"&",
@@ -696,8 +704,8 @@
 				"selected_items":
 				[
 					[
-						"ml",
-						"ml-pipeline.py"
+						"vag",
+						"Vagrantfile"
 					],
 					[
 						"mo",
@@ -734,10 +742,6 @@
 					[
 						"hosts",
 						"deploy/ansible/project-configs/vagrant/hosts"
-					],
-					[
-						"vag",
-						"deploy/Vagrantfile"
 					],
 					[
 						"inven/var",
@@ -1212,7 +1216,7 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 402.0,
+			"side_bar_width": 382.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
@@ -1325,7 +1329,7 @@
 					],
 					[
 						"op",
-						"option	Tag"
+						"option\tTag"
 					],
 					[
 						"ly",
@@ -1336,19 +1340,128 @@
 			"buffers":
 			[
 				{
-					"file": "/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
+					"contents": "Issues:\n\n* Airflow!!! WTF - only working 95% with cacheman-master\n** working better with single airflow worker (cacheman-master) with multiple queues\n* What to do with the cacheman-workers and airflow? not use airflow test in service/script?\n\nBug:\n# 29 of 100 twey-phr have an empty cutline, exception when WM gets bbox of cutline to reproject.\n** Did you set cutline to null when resetting to process again.\n\nReference:\n* Update airflow configuration to version 1.7.1.2\n** Checkout the examples in the new version, docker and twiitter examples: interesting\n* Airflow connection\n** update connection set host = 'database-1', schema = 'airflow', login = 'ddsuperadmin', password = 'xich7Phaein7Ieb0Ja3Aechi' where id = 11;\n\nFeatures:\n# Reprocess areas, from bbox & offer & grid (assume both); select cutlines and set is_published = false, clean slate?\n** schema change, or redis\n\n# Move configuration to DB\n* Max-Workers (geo and wm)\n* machine sizes (geo and wm)\n* Network and Subnetwork paths for starting cacheman-workers\n* Machine types for geo and wm workers\n* Service account",
 					"settings":
 					{
-						"buffer_size": 6643,
+						"buffer_size": 1079,
+						"line_ending": "Unix",
+						"name": "Issues:"
+					}
+				},
+				{
+					"contents": "r*.Fg!L92Ftu\n\nselect round(AVG(CAST(nullif(processing->'duration', '') AS DECIMAL))) as avg_duration \nfrom padawan.offer_cutline \nwhere offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\nGet-Content .\\mugg.log -Tail 3 | %{ $_.Split(';')[1]; }\n\n3csLe.w=SIPj#:(\n",
+					"settings":
+					{
+						"buffer_size": 261,
+						"line_ending": "Unix",
+						"name": "r*.Fg!L92Ftu"
+					}
+				},
+				{
+					"contents": "update\n\nupdate padawan.offer_cutline set \noffer_id = '',\nis_published = 'f',\nis_archived = 'f',\nis_locked = 'f',\nhas_error = 'f',\nwhere offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\n/usr/local/share/google/google-cloud-sdk/platform/gsutil/gsutil",
+					"settings":
+					{
+						"buffer_size": 251,
+						"line_ending": "Unix",
+						"name": "update"
+					}
+				},
+				{
+					"contents": "SELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer_cutline \nWHERE (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON((0.0 0.0,0.0 1.0,1.0 1.0,1.0 0.0,0.0 0.0))')) AND\n padawan.offer_cutline.offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9';\n\n\n project-configs/gce/scripts/create-master-image.sh cacheman-master recreate-cache-master\n\n\n UPDATE padawan.offer_cutline \n SET offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9',\n     is_published = 'false',\n     is_archived = 'false',\n     is_locked = 'false',\n     has_error = 'false',\n     is_wm_published = 'false',\n WHERE offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\nFILTER (offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and is_published = 'true' and has_error = 'false' and is_archived = 'false' and resolution_meters > 1)\n",
+					"settings":
+					{
+						"buffer_size": 815,
+						"line_ending": "Unix",
+						"name": "SELECT count(padawan.offer_cutline.id) AS count_1"
+					}
+				},
+				{
+					"contents": "wget http://www.netfort.gr.jp/~dancer/software/downloads/dsh-0.22.0.tar.gz\ntar xfz dsh-0.22.0.tar.gz\ncd dsh-*\n./configure ; make \nmake install\n\nupdate connection set host = 'database-1', schema = 'oneatlas', login = 'ddsuperadmin', password = 'xich7Phaein7Ieb0Ja3Aechi', port = '5432' where conn_id = 'postgres_default';\n\ndD@taD0oR$\n\nselect * from streaming_audit sa\nwhere sa.image_width > 0 and sa.image_height > 0 and\nsa.image_width != 501 and sa.image_height != 501 and\nsa.context_url ilike '%=getm%' and\nsa.audit_date > '2016-08-29 02:00' and sa.audit_date < '2016-08-29 03:00';\n\n\nles-only        print rows onl\n\npsql -h dbslive.datadoors.net -U ddsuperadmin datadoors_live268 -F '\\t' -o /root/wms-test.txt -t -c 'select * from product;'\n\nsed \"s/|/\\t\\g\" test.csv >> newtest.csv",
+					"settings":
+					{
+						"buffer_size": 781,
+						"line_ending": "Unix",
+						"name": "wget http://www.netfort.gr.jp/~dancer/software/dow"
+					}
+				},
+				{
+					"contents": "does not work:\nhttp://hsservices.datadoors.net/__streaminguid.7f77a3aa-49a8-4d0e-b458-a176e42c4c71/wms.ashx?srs=EPSG:4326&bbox=-42.763720575,-9.652570575,-39.908367425,-6.797217425&version=1.1&request=getmap&width=503&height=503&format=JPEG&layers=3d8d2c3a-450b-48dc-a648-09f6068fde48\nhttp://hsservices.datadoors.net/__streaminguid.7f77a3aa-49a8-4d0e-b458-a176e42c4c71/wms.ashx?srs=EPSG:4326&bbox=-42.763720575,-9.652570575,-39.908367425,-6.797217425&version=1.1&request=getmap&width=503&height=503&format=JPEG&layers=3d8d2c3a-450b-48dc-a648-09f6068fde48\n\nworks",
+					"settings":
+					{
+						"buffer_size": 561,
+						"line_ending": "Unix",
+						"name": "does not work:"
+					}
+				},
+				{
+					"contents": "git clone git@utility2:adm/adm.git -b release/4.5.2\ngit clone git@utility2:padawan/ad-deploy.git\ngit clone git@utility2:padawan/logging-deploy \ngit clone git@utility2:padawan/padawan-api-deploy\ngit clone git@utility2:dwatts/gcloud-build.git",
+					"settings":
+					{
+						"buffer_size": 240,
+						"line_ending": "Unix",
+						"name": "git clone git@utility2:adm/adm.git -b release/4.5."
+					}
+				},
+				{
+					"contents": "/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot --grid 4326 --nthreads 128 --zoom 7,16 --extent 22.240645833333357,-11.19765972222221,22.893770833333356,-10.620437499999987 --metasize 1,1 --iteration-mode level-by-level --quiet\n\n/opt/i-cubed/bin/mapcache_seed --force --config /padawan/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 128 --zoom 7,17 --extent 2475817.3690802115,-1254529.5754773752,2548522.9115045685,-1189090.6420674573 --metasize 1,1 --iteration-mode level-by-level\n --quiet\n\n; cutline ID: 4bc27062-43f8-11e6-82a5-ef34b0094b16",
+					"settings":
+					{
+						"buffer_size": 629,
+						"line_ending": "Unix",
+						"name": "/opt/i-cubed/bin/mapcache_seed --force --config /o"
+					}
+				},
+				{
+					"contents": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmin@database-1:5432/oneatlas?sslmode=require\"\n\nselect into TABLE padawan.offer_cutline_rhow_qc_20160718 FROM padawan.offer_cutline;\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 8,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level\n\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 8,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 41064 tiles, now at z18 x139982 y164731                                                 \nseeded 41064 metatiles (41064 tiles) in 793.0 seconds at 51.8 tiles/sec\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 48 --zoom 17,\n17 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0                              \nseeded 7740 tiles, now at z17 x69969 y82365                                                    \nseeded 7740 metatiles (7740 tiles) in 167.7 seconds at 46.2 tiles/sec\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 48 --zoom 16,16 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 1978 tiles, now at z16 x34999 y41182                                                    \nseeded 1978 metatiles (1978 tiles) in 37.4 seconds at 52.9 tiles/sec\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 15,16 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 2504 tiles, now at z16 x34982 y41181                                                    \nseeded 2506 metatiles (2506 total tiles, 2506 non-empty tiles) in 24.9 seconds at 100.8 tiles/sec (100.8 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances\n\n[root@rhow-cacheman i-cubed]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 7,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0                             \nseeded 41063 tiles, now at z18 x140073 y164731                                                 \nseeded 41065 metatiles (41065 total tiles, 41065 non-empty tiles) in 422.3 seconds at 97.2 tiles/sec (97.2 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29008 tiles, now at z16 x37560 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 204.6 seconds at 142.3 tiles/sec (142.3 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 2,2\n[rhow@rhow-cacheman ~]$ /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30192 tiles, now at z16 x37600 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 174.5 seconds at 173.4 tiles/sec (173.4 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 4,4\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 -\n-extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30016 tiles, now at z16 x37552 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 149.0 seconds at 203.1 tiles/sec (203.1 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 4,4; 32 threads\n\nOverall\n1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729\nproblem bbox\n1368833.108202,5139777.461623,1368988.370916,5139932.724337\n\ndrawGDAL(): Unable to access file. GDALDatasetRasterIO() failed: GetBlockRef failed at X block offset 70030, Y block offset 17519\n\nError in httpd/error_log\n[Wed Jul 20 20:56:53.567625 2016] [core:warn] [pid 2658] (99)Cannot assign requested address: AH00056: connect to listener on [::]:80\nhttp://localhost/cgi-bin/mapserv.fcgi?map=/padawan/mapfiles/oneatlas.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&STYLES=&BBOX=1355838.813394%2c5137484.350775%2c1355994.076108%2c5137639.613488&WIDTH=260&HEIGHT=260&FORMAT=image%2fpng&SRS=EPSG%3a3857&LAYERS=most-recent-phr&TRANSPARENT=true\n\nADM\nStartServers=4\nMaxClients=75\nMinSpareThreads=10\nMaxSpareThreads=25\nThreadsPerChild=25\nMaxRequestsPerChild=0\n\nCacheman\n    ServerLimit           16                                                                                                                                                  \n    StartServers          4                                                                                                                                                   \n    MaxClients            75                                                                                                                                                  \n    ThreadLimit           64                                                                                                                                                  \n    MinSpareThreads       25                                                                                                                                                  \n    MaxSpareThreads       75                                                                                                                                                  \n    ThreadsPerChild       25                                                                                                                                                  \n    MaxRequestsPerChild   0       \n\n    postgresql://dbmaster:5433/mydb?sslmode=require\n    postgresql://ddsuperadmin:5432/oneatlas?sslmode=require",
+					"settings":
+					{
+						"buffer_size": 7238,
+						"line_ending": "Unix",
+						"name": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmi"
+					}
+				},
+				{
+					"contents": "/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 20 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29088 tiles, now at z16 x37602 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 238.7 seconds at 122.0 tiles/sec (122.0 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29008 tiles, now at z16 x37560 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 204.6 seconds at 142.3 tiles/sec (142.3 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30192 tiles, now at z16 x37600 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 174.5 seconds at 173.4 tiles/sec (173.4 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30016 tiles, now at z16 x37552 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 149.0 seconds at 203.1 tiles/sec (203.1 non-empty tiles/sec)\nload 22\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 8,8 --iteration-mode level-by-level                                              \nseeded 32512 tiles, now at z16 x37576 y41744                                                   \nseeded 511 metatiles (32704 total tiles, 32704 non-empty tiles) in 151.9 seconds at 215.3 tiles/sec (215.3 non-empty tiles/sec)\nload 15\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 8,8 --iteration-mode level-by-level                                              \nseeded 32576 tiles, now at z16 x37592 y41744                                                   \nseeded 511 metatiles (32704 total tiles, 32704 non-empty tiles) in 181.3 seconds at 180.4 tiles/sec (180.4 non-empty tiles/sec)\nload 20",
+					"settings":
+					{
+						"buffer_size": 3329,
+						"line_ending": "Unix",
+						"name": "/opt/i-cubed/bin/mapcache_seed --force --config /o"
+					}
+				},
+				{
+					"contents": "\n\nST_GeomFromText('MULTIPOLYGON(((-179.999 -89.999,-179.999 89.999,179.999 89.999,179.999 -89.999,-179.999 -89.999)))')",
+					"settings":
+					{
+						"buffer_size": 119,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/vars.yaml",
+					"contents": "The thematic layers, from a cache processing point-of-view will be regarded as a new offer associated with a unique thematic_tag. These will be processed similar to the most_recent offer (AYCG or OneStack). When new items appear in the HERE catalog and sync'd to ADM, with the new thematic predicate. Via the new_asset_consumer, the ADM asset will be assigned to each offer logical collection according to the values in the thematic predicate.\n\nDatabase schema:\noffer.thematic_tag - Add field that defines the value associated with ADM predicate value for the thematic offer\nDatabase populate thematic offer:\nInsert new thematic offers: name, mapcache_tileset, thematic_tag etc\nNew Asset Consumer\nRespect the new ADM thematic predicate and values; for each value insert the asset into appropriate offer logical collection (offer_cutline)",
 					"settings":
 					{
-						"buffer_size": 1710,
-						"line_ending": "Unix"
+						"buffer_size": 837,
+						"line_ending": "Unix",
+						"name": "The thematic layers, from a cache processing point"
+					}
+				},
+				{
+					"contents": "x,y: -95.0742 39.5907 \nz-cache-w-mome",
+					"settings":
+					{
+						"buffer_size": 37,
+						"line_ending": "Unix",
+						"name": "x,y: -95.0742 39.5907"
+					}
+				},
+				{
+					"contents": "Create second Apache daemon\ncp -pr /etc/httpd /etc/httpd8080\n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /etc/httpd/conf/httpd.conf conf/httpd.conf                                                                                         \n--- /etc/httpd/conf/httpd.conf  2016-07-21 23:22:10.615920071 +0000\n+++ conf/httpd.conf     2016-07-22 17:38:56.780598634 +0000\n@@ -28,7 +28,8 @@\n # same ServerRoot for multiple httpd daemons, you will need to change at\n # least PidFile.\n #\n-ServerRoot \"/etc/httpd\"\n+ServerRoot \"/etc/httpd8080\"\n+PidFile \"run/httpd8080.pid\"\n \n #\n # Listen: Allows you to bind Apache to specific IP addresses and/or\n@@ -39,7 +40,7 @@\n # prevent Apache from glomming onto all bound IP addresses.\n #\n #Listen 12.34.56.78:80\n-Listen 80\n+Listen 8080\n \n #\n # Dynamic Shared Object (DSO) Support\n@@ -216,7 +217,7 @@\n     # (Combined Logfile Format) you can use the following directive.\n     #\n     #CustomLog \"logs/access_log\" combined\n-    CustomLog logs/access_log combined_w_resp\n+    CustomLog logs/8080access_log combined_w_resp\n </IfModule>\n \n <IfModule alias_module>\n\n### Important\nmv /etc/httpd8080/conf.d/ssl.conf to /etc/httpd8080/conf.d/ssl.conf-ignore\n\n# cp /etc/init.d/httpd /etc/init.d/httpd8080       ### Didn't work, doesn't exist.\n\ncp /usr/lib/systemd/system/httpd.service /etc/systemd/system/httpd8080.service     \n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /usr/lib/systemd/system/httpd.service /etc/systemd/system/httpd8080.service\n--- /usr/lib/systemd/system/httpd.service       2016-07-18 15:22:22.000000000 +0000\n+++ /etc/systemd/system/httpd8080.service       2016-07-22 17:43:57.488412776 +0000\n@@ -6,7 +6,8 @@\n \n [Service]\n Type=notify\n-EnvironmentFile=/etc/sysconfig/httpd\n+#EnvironmentFile=/etc/sysconfig/httpd\n+EnvironmentFile=/etc/sysconfig/httpd8080\n ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND\n ExecReload=/usr/sbin/httpd $OPTIONS -k graceful\n ExecStop=/bin/kill -WINCH ${MAINPID}\n\n\ncp /etc/sysconfig/httpd /etc/sysconfig/httpd8080                                   \n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /etc/sysconfig/httpd /etc/sysconfig/httpd8080\n--- /etc/sysconfig/httpd        2016-07-18 15:22:22.000000000 +0000\n+++ /etc/sysconfig/httpd8080    2016-07-22 17:19:25.702941620 +0000\n@@ -14,7 +14,7 @@\n # To pass additional options (for instance, -D definitions) to the\n # httpd binary at startup, set OPTIONS here.\n #\n-#OPTIONS=\n+OPTIONS=\"-d /etc/httpd8080\"\n\n\ncp /usr/sbin/apachectl /usr/sbin/apachectl8080\n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /usr/sbin/apachectl /usr/sbin/apachectl8080\n--- /usr/sbin/apachectl 2016-07-18 15:30:10.000000000 +0000\n+++ /usr/sbin/apachectl8080     2016-07-22 17:43:49.533407030 +0000\n@@ -56,11 +56,11 @@\n #\n # the URL to your server's mod_status status page.  If you do not\n # have one, then status and fullstatus will not work.\n-STATUSURL=\"http://localhost:80/server-status\"\n+STATUSURL=\"http://localhost:8080/server-status\"\n \n # Source /etc/sysconfig/httpd for $HTTPD setting, etc.\n-if [ -r /etc/sysconfig/httpd ]; then\n-   . /etc/sysconfig/httpd\n+if [ -r /etc/sysconfig/httpd8080 ]; then\n+   . /etc/sysconfig/httpd8080\n fi\n\n",
+					"settings":
+					{
+						"buffer_size": 3153,
+						"line_ending": "Unix",
+						"name": "Create second Apache daemon"
 					}
 				}
 			],
@@ -1529,1355 +1642,66 @@
 			},
 			"expanded_folders":
 			[
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates"
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/run",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/wms",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/wms/gce"
 			],
 			"file_history":
 			[
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-				"/home/local/I3/rhow/Downloads/download",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/etc.resolv.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults/main.yml",
-				"/home/local/I3/rhow/Downloads/download2",
-				"/home/local/I3/rhow/Downloads/WCSServer",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/Vagrantfile",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/Downloads/mapserv",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/ansible.cfg",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/meta/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/vars/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/centos.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/group_vars/all.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.consul.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver2.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul.client",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/templates/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.internet.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq_d.file.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/README.md",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/i3build.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/httpd.conf-2.4",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/install-mapcache-code.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/install-mapserver-code-6.2.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/private.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts/launch-ms.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/open_root.yaml",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
-				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/13ef96a5-fc46-41a4-a9c3-a07ec830cc7e.map",
-				"/home/likewise-open/I3/rhow/Downloads/download.txt",
-				"/home/likewise-open/I3/rhow/Downloads/mapserv.fcgi",
-				"/home/likewise-open/I3/rhow/Vagrant/ansible/Vagrantfile",
-				"/home/likewise-open/I3/rhow/temp/padawan-dep.txt",
-				"/home/likewise-open/I3/rhow/Docker/centos7-ansible/Dockerfile",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8975d901-f6aa-4a50-bae8-3a0e348168e2.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/ee71e047-d062-4ee0-aca3-867c62bf2665.map",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/likewise-open/I3/rhow/.bash_aliases",
-				"/home/likewise-open/I3/rhow/mounts/jungfrau/Temp/JTG/airbus_maps_com_version_4.html",
-				"/home/likewise-open/I3/rhow/temp/wmts_example.xml",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_id_replace.sh",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/jrsmith/mapserver62_cent7.rb",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/mugg/context_urls-av-ags01_2.txt",
-				"/home/likewise-open/I3/rhow/Fiddler2/Scripts/CustomRules.cs",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/first.sh",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/masks/ROI_SPOT6_PMS_201409111023484_ORT_1113819101_MSK.GML",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_listing.txt",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/adm_response_toulouse.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/b2585d6b-c3c9-4a0c-a6d9-a8319f6788e9.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr_2.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8915752a-5752-4130-bc50-9e9e0b63c225.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/47c9881b-2cd0-46b3-968c-689be58703ef.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/035225aa-585b-405f-8736-96e3494fc4bc.map",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path_dirs.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/136e8c4d-1c87-4ba1-b2db-c29bc74b1578.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/403ede55-08e8-40c6-98e9-9bec48cf763f.map",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/ol_padawan_layer.html"
-			],
-			"find":
-			{
-				"height": 30.0
-			},
-			"find_in_files":
-			{
-				"height": 93.0,
-				"where_history":
-				[
-					"*.js",
-					"*.rb",
-					"",
-					"/home/likewise-open/I3/rhow/projects,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin/assets/templates/tileset",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.html",
-					"*.html,/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"*.html",
-					"-.tmp/*,-bowwer_components/*,-*.txt",
-					"-*tmp,-*bowwer_components,-*.txt",
-					"-.tmp/,-bowwer_components/,-*.txt",
-					"-.tmp/, -bowwer_components/",
-					"-.tmp/ -bowwer_components/",
-					"-.tmp/",
-					"-/.tmp",
-					"-/.tmp -/bower_components",
-					"-.tmp/ -/bower_components",
-					"-.tmp/",
-					"",
-					"/home/likewise-open/I3/rhow/projects/angularjs-book/chapter4/guthub/app",
-					""
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-					"padawan_redis",
-					"padawan-ogc",
-					"1",
-					"Rittwager",
-					"temp",
-					"{{",
-					"{",
-					"{{",
-					"files/",
-					"- name:",
-					"needed_rpm",
-					"font",
-					"size",
-					"configure",
-					"denied",
-					"  ",
-					"- ",
-					" ",
-					"$ ",
-					"mount",
-					"$ ",
-					"yast",
-					"\n\n",
-					"\n",
-					">",
-					"# ",
-					"&",
-					"libpq",
-					"bfba8fb7-c140-4d85-a8d4-4651d00bee75",
-					"432b8ddd-ff3d-4aa8-b861-8e3b596af35",
-					"&",
-					"&\\n",
-					"Version",
-					"&",
-					"name",
-					"./",
-					"path: \"file:/",
-					"path",
-					"=\"",
-					"&",
-					"n",
-					"&",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_11138",
-					"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_1113823101_R1C1.JP2",
-					"\"file://data/2/dd/pops/i3/imagery/ikonos/z34/Tripolis/alpha/DM_73700_14700_50_50_1_a.tif\"",
-					"?\";\n",
-					"/",
-					"padawan_vintage_png",
-					"&",
-					"$BUILD_DIR",
-					"WORKDIR",
-					"RUN ",
-					"png",
-					"   ",
-					"MAXSCALE 250000",
-					"OUTLINECOLOR 0 200 100",
-					"COLOR -1 -1 -1",
-					"COLOR",
-					">>> ",
-					"package",
-					"zlib",
-					"DEFAULT",
-					"STATUS OFF",
-					"STATUS DEFAULT",
-					"MASK",
-					"\n",
-					",",
-					"  ",
-					"\n",
-					"[ ",
-					" ]",
-					" [",
-					"  ",
-					"                            ",
-					"\n",
-					"JPEG",
-					"PNG",
-					"/",
-					",",
-					" 4",
-					" -0.",
-					" 0",
-					"(  0",
-					">>> ",
-					"/",
-					"STATUS DEFAULT",
-					"STATUS",
-					"==",
-					"]",
-					"path_list",
-					"        ",
-					"'",
-					"L17_R55360_C36096_64_64",
-					"/data/2/dd/pops/i3/imagery",
-					"/data/2/dd/pops/i3",
-					">>> ",
-					" ",
-					"||",
-					",",
-					"),(",
-					"(",
-					"]",
-					"[",
-					"[\n[",
-					"200",
-					">>> ",
-					", ",
-					"__streaminguid",
-					"<gx:duration>",
-					"         ",
-					"0 ",
-					"(",
-					"0",
-					" ",
-					"(",
-					"  ",
-					" ",
-					"av-",
-					" ",
-					"VALUES ",
-					"-- ",
-					"VALUES",
-					"update_database_live.sql.erb:",
-					"tomtom_cc_sanfran_cc_webmercator_slayer",
-					"symlink_blank",
-					"&&",
-					"RUN"
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": true,
-				"regex": false,
-				"replace_history":
-				[
-					"",
-					"&\\n",
-					"&",
-					"&\\n",
-					"&/n",
-					"OFF",
-					"\", \"",
-					"tileset",
-					"Tileset"
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"folders":
-			[
-				{
-					"path": "/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy"
-				}
-			],
-			"groups":
-			[
-				{
-					"selected": 1,
-					"sheets":
-					[
-						{
-							"buffer": 0,
-							"file": "/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 6643,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2719,
-										2719
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/XML/XML.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 726.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/vars.yaml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1710,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										847,
-										847
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/YAML/YAML.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						}
-					]
-				}
-			],
-			"incremental_find":
-			{
-				"height": 30.0
-			},
-			"input":
-			{
-				"height": 35.0
-			},
-			"layout":
-			{
-				"cells":
-				[
-					[
-						0,
-						0,
-						1,
-						1
-					]
-				],
-				"cols":
-				[
-					0.0,
-					1.0
-				],
-				"rows":
-				[
-					0.0,
-					1.0
-				]
-			},
-			"menu_visible": true,
-			"output.GoSublime-output":
-			{
-				"height": 142.0
-			},
-			"output.MarGo-output":
-			{
-				"height": 115.0
-			},
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"output.sbt":
-			{
-				"height": 0.0
-			},
-			"output.sbt_error":
-			{
-				"height": 0.0
-			},
-			"pinned_build_system": "",
-			"position": "0,0,1,0,0,0,46,1916,1198,3280,1200",
-			"project": "",
-			"replace":
-			{
-				"height": 56.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"mo",
-						"server/models.py"
-					],
-					[
-						"requi",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"re",
-						"README.md"
-					],
-					[
-						"pla",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"var",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"req",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"play",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"vars",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"hosts",
-						"deploy/ansible/project-configs/vagrant/hosts"
-					],
-					[
-						"vag",
-						"deploy/Vagrantfile"
-					],
-					[
-						"inven/var",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"group_var",
-						"deploy/inventory/group_vars/all.yaml"
-					],
-					[
-						"mapserver.y",
-						"deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml"
-					],
-					[
-						"host",
-						"deploy/project-configs/vagrant-ms-mc/hosts"
-					],
-					[
-						"rea",
-						"deploy/project-configs/vagrant-ms-mc/README.md"
-					],
-					[
-						"playbs/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"inven/vars",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"maps/va/m",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/var",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/defa",
-						"deploy/roles/mapserver/defaults/main.yml"
-					],
-					[
-						"task/ma",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"priv",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/role/map/ta",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"de/p/r/p",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/pro/rho/pl",
-						"deploy/project-configs/rhow-ms/playbooks/mapserver.yaml"
-					],
-					[
-						"buil/op",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"depl/role/open",
-						"deploy/roles/open_root/tasks/main.yml"
-					],
-					[
-						"open",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"playbo/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"rhow/",
-						"deploy/project-configs/rhow-ms/README.md"
-					],
-					[
-						"",
-						"sanfran_citycenter_2.html"
-					],
-					[
-						"style",
-						"public/stylesheets/main.css"
-					],
-					[
-						"app/views",
-						"app/views/index.scala.html"
-					],
-					[
-						"javascripts",
-						"public/javascripts/main.js"
-					],
-					[
-						"app/vi/",
-						"app/views/index.scala.html"
-					],
-					[
-						"app/mo",
-						"app/models/user.scala"
-					],
-					[
-						"ng-",
-						"project/target/resolution-cache/reports/default-angularjs_mongo-build-compile.xml"
-					],
-					[
-						"ass/js/",
-						"assets/js/application.js"
-					],
-					[
-						"assets/cont",
-						"assets/js/controllers/controllers.js"
-					],
-					[
-						"adap",
-						"config/adapters.js"
-					],
-					[
-						"mod",
-						"config/models.js"
-					],
-					[
-						"connect",
-						"config/connections.js"
-					],
-					[
-						"models",
-						"config/models.js"
-					],
-					[
-						"connec",
-						"config/connections.js"
-					],
-					[
-						"local",
-						"api/services/protocols/local.js"
-					],
-					[
-						"angul",
-						"assets/app/bower_components/angular/angular.min.js"
-					],
-					[
-						"layou",
-						"views/layout.ejs"
-					],
-					[
-						"app.",
-						"app.js"
-					],
-					[
-						"mapser",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"winpops",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"samba/rec",
-						"cookbooks/samba/recipes/server.rb"
-					],
-					[
-						"win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"setenv",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"ha-p",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"chef-cron",
-						"cookbooks/icubed/recipes/chef-cron-win-update-frequency.rb"
-					],
-					[
-						"alerting",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"win_",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"set-up",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"bring-up-gdm-cache-instances.rb",
-						"cookbooks/icubed/recipes/bring-up-gdm-cache-instances.rb"
-					],
-					[
-						"set-up-openstack-environment.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment.rb"
-					],
-					[
-						"set-up-openstack-environment-gc.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment-gc.rb"
-					],
-					[
-						"ha-postgresql.rb",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data-shares.rb",
-						"cookbooks/icubed/recipes/data-shares.rb"
-					],
-					[
-						"data-shares-linux-client",
-						"cookbooks/icubed/recipes/data-shares-linux-client.rb"
-					],
-					[
-						"databa",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"mapserv",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"map",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chef-cronw",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-c",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"win_po",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"ic/reci/da",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"ic/reci/al",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"note",
-						"notes-on-password-management.txt"
-					],
-					[
-						"icu/recip/ma",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chefcronwin",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-cr",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"icubed/win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"node/pop-i",
-						"nodes/pops01-i3-local.json"
-					],
-					[
-						"icu/lib/",
-						"cookbooks/icubed/libraries/default.rb"
-					],
-					[
-						"contro",
-						"mapcache-admin/assets/js/controllers/controllers.js"
-					],
-					[
-						"ass/ap",
-						"mapcache-admin/assets/js/app.js"
-					],
-					[
-						"app",
-						"mapcache-admin/app.js"
-					],
-					[
-						"ass/contro/cach",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"app/main.j",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"yo/grun",
-						"angular-app-by-yo/Gruntfile.js"
-					],
-					[
-						"pack",
-						"angular-app-by-yo/package.json"
-					],
-					[
-						"spec/contact",
-						"angular-app-by-yo/test/spec/directives/contact.js"
-					],
-					[
-						"spec/tel",
-						"angular-app-by-yo/test/spec/filters/tel.js"
-					],
-					[
-						"yo/spec/con/ma",
-						"angular-app-by-yo/test/spec/controllers/main.js"
-					],
-					[
-						"filters/",
-						"angular-app-by-yo/app/scripts/filters/tel.js"
-					],
-					[
-						"contactss",
-						"angular-app-by-yo/app/scripts/services/contactsservice.js"
-					],
-					[
-						"contactsser",
-						"angular-app-by-yo/test/spec/services/contactsservice.js"
-					],
-					[
-						"main",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"servic",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"spec/",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"serv",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controll",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"templates/",
-						"mapcache-admin/assets/templates/tilesetList.html"
-					],
-					[
-						"karma",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"kar",
-						"mapcache-admin/node_modules/karma/bin/karma"
-					],
-					[
-						"cache-",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"lay",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"config/mo",
-						"mapcache-admin/config/models.js"
-					],
-					[
-						"config/",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"karma.e2e",
-						"guthub/karma.e2e.conf.js"
-					],
-					[
-						"e2e/",
-						"mapcache-admin/assets/test/e2e/recipesListSpec.js"
-					],
-					[
-						"e2e",
-						"mapcache-admin/karma.e2e.conf.js"
-					],
-					[
-						"tilesetcon",
-						"mapcache-admin/api/controllers/TilesetController.js"
-					],
-					[
-						"karma.conf.js",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"conf.j",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"service",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controlller",
-						"guthub/app/scripts/controllers/controllers.js"
-					],
-					[
-						"guthub/test/sp",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"controle",
-						"mapcache-admin/.tmp/public/js/controllers/controllers.js"
-					],
-					[
-						"test/spec/",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"tile",
-						"mapcache-admin/.tmp/public/templates/viewTileset.html"
-					],
-					[
-						"blu",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"tileset",
-						"mapcache-admin/assets/templates/tilesetForm.html"
-					],
-					[
-						"l",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"simre",
-						"simpleRequest.js"
-					],
-					[
-						"index.e",
-						"views/index/index.ejs"
-					]
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"selected_group": 0,
-			"settings":
-			{
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 402.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			},
-			"window_id": 53,
-			"workspace_name": ""
-		},
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-					[
-						"conf",
-						"config"
-					],
-					[
-						"pad",
-						"padawan-cache-ui"
-					],
-					[
-						"inst",
-						"install-mapserver-code-6"
-					],
-					[
-						"shp",
-						"shpFile"
-					],
-					[
-						"wm",
-						"wms_layer"
-					],
-					[
-						"SE",
-						"SELECT"
-					],
-					[
-						"layer",
-						"layerName"
-					],
-					[
-						"log",
-						"logsuccess"
-					],
-					[
-						"el",
-						"elif"
-					],
-					[
-						"lo",
-						"logfile"
-					],
-					[
-						"add",
-						"address"
-					],
-					[
-						"pass",
-						"password"
-					],
-					[
-						"Ad",
-						"Administrators"
-					],
-					[
-						"is",
-						"isTesting"
-					],
-					[
-						"pops_",
-						"pops_user"
-					],
-					[
-						"en",
-						"encryptedDB"
-					],
-					[
-						"get",
-						"get_popsadmin_password"
-					],
-					[
-						"pop",
-						"pops_password"
-					],
-					[
-						"tiles",
-						"tileset"
-					],
-					[
-						"tileset",
-						"tilesets"
-					],
-					[
-						"fun",
-						"function"
-					],
-					[
-						"t",
-						"total"
-					],
-					[
-						"l",
-						"length"
-					],
-					[
-						"j",
-						"journey"
-					],
-					[
-						"op",
-						"option	Tag"
-					],
-					[
-						"ly",
-						"layerNodes"
-					]
-				]
-			},
-			"buffers":
-			[
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-					"settings":
-					{
-						"buffer_size": 4530,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/services/jobs-service.js",
-					"settings":
-					{
-						"buffer_size": 1645,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/components/job-detail/job-detail.html",
-					"settings":
-					{
-						"buffer_size": 1331,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-					"settings":
-					{
-						"buffer_size": 2574,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-					"settings":
-					{
-						"buffer_size": 758,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-					"settings":
-					{
-						"buffer_size": 558,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/git/tasks/main.yaml",
-					"settings":
-					{
-						"buffer_size": 930,
-						"line_ending": "Unix"
-					}
-				}
-			],
-			"build_system": "",
-			"build_system_choices":
-			[
-			],
-			"build_varint": "",
-			"command_palette":
-			{
-				"height": 369.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"sy xml",
-						"Set Syntax: XML"
-					],
-					[
-						"user",
-						"Preferences: Settings - User"
-					],
-					[
-						"synru",
-						"Set Syntax: Ruby"
-					],
-					[
-						"json",
-						"Set Syntax: JSON"
-					],
-					[
-						"pack",
-						"Package Control: Remove Package"
-					],
-					[
-						"instal",
-						"Package Control: Install Package"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"insta",
-						"Package Control: Install Package"
-					],
-					[
-						"defau",
-						"Preferences: Settings - Default"
-					],
-					[
-						"instl",
-						"Package Control: Install Package"
-					],
-					[
-						"togg",
-						"View: Toggle Open Files in Side Bar"
-					],
-					[
-						"open",
-						"Move Tab: To first position"
-					],
-					[
-						"ref",
-						"Project: Refresh Folders"
-					],
-					[
-						"refr",
-						"Project: Refresh Folders"
-					],
-					[
-						"defa",
-						"Preferences: Key Bindings - Default"
-					],
-					[
-						"mini",
-						"View: Toggle Minimap"
-					],
-					[
-						"tog",
-						"View: Toggle Minimap"
-					],
-					[
-						"default",
-						"Preferences: Settings - Default"
-					],
-					[
-						"min",
-						"View: Toggle Minimap"
-					],
-					[
-						"re",
-						"Project: Refresh Folders"
-					],
-					[
-						"add",
-						"Project: Add Folder"
-					],
-					[
-						"fold",
-						"Code Folding: Fold Tag Attributes"
-					],
-					[
-						"prefe",
-						"Preferences: Settings - Default"
-					],
-					[
-						"refre",
-						"Project: Refresh Folders"
-					],
-					[
-						"key",
-						"Preferences: SublimeLinter Key Bindings – Default"
-					],
-					[
-						"wor",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wr",
-						"Word Wrap: Toggle"
-					],
-					[
-						"form",
-						"Pretty JSON: Format (Pretty Print) JSON"
-					],
-					[
-						"fol",
-						"Project: Add Folder"
-					],
-					[
-						"folder",
-						"Project: Add Folder"
-					],
-					[
-						"Package Control: in",
-						"Package Control: Install Package"
-					],
-					[
-						"wra",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wrap",
-						"Word Wrap: Toggle"
-					],
-					[
-						"linter",
-						"SublimeLinter: Show All Errors"
-					],
-					[
-						"lint",
-						"Preferences: SublimeLinter Settings – User"
-					],
-					[
-						"ja",
-						"Set Syntax: JavaScript"
-					]
-				],
-				"width": 449.0
-			},
-			"console":
-			{
-				"height": 210.0,
-				"history":
-				[
-					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"expanded_folders":
-			[
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/services",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server"
-			],
-			"file_history":
-			[
+				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
+				"/home/local/I3/rhow/tmp/gcp-response.json",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example-orig/public/index.html",
+				"/home/local/I3/rhow/tmp/cacheman-worker-log-invalid-geometry.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/master-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/create-master-image.sh",
+				"/tmp/data/offer_cutline.txt",
+				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/seed-sqs.py",
+				"/home/local/I3/rhow/Downloads/gdb_mc_gdal.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/database/data-offer.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache-progress.log",
+				"/home/local/I3/rhow/Downloads/SmartArchive_Robots_V3.csv",
+				"/home/local/I3/rhow/Downloads/mapcache-i3.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/astrium.map",
+				"/home/local/I3/rhow/Downloads/mugg_create_schema.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/3857-wms.html",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/spot_minidrv.xml",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/conf.py",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/Dropbox/ubuntu/nova.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/cloudwatt/set-ftp-download-list.txt",
+				"/home/local/I3/rhow/tmp/consol-log_p1-fs1.txt",
+				"/data/1/misc/padawan/keys/i3_cw.pem",
+				"/data/1/misc/padawan/set-ftp-download-list-gpfs.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/red/hosts",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/i3_cw.pem",
+				"/data/1/dd/streaming/mapfiles/wms_wfs/wms_wfs_suncorSOD_petrel_embedded_service.map",
+				"/home/local/I3/rhow/Downloads",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py'",
+				"/home/local/I3/rhow/projects/tomtom/quantum.html",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/Vagrantfile",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
@@ -2955,57 +1779,7 @@
 				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
 				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/i3build.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/httpd.conf-2.4",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/install-mapcache-code.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/install-mapserver-code-6.2.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/private.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts/launch-ms.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/open_root.yaml",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
-				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/13ef96a5-fc46-41a4-a9c3-a07ec830cc7e.map",
-				"/home/likewise-open/I3/rhow/Downloads/download.txt",
-				"/home/likewise-open/I3/rhow/Downloads/mapserv.fcgi",
-				"/home/likewise-open/I3/rhow/Vagrant/ansible/Vagrantfile",
-				"/home/likewise-open/I3/rhow/temp/padawan-dep.txt",
-				"/home/likewise-open/I3/rhow/Docker/centos7-ansible/Dockerfile",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8975d901-f6aa-4a50-bae8-3a0e348168e2.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/ee71e047-d062-4ee0-aca3-867c62bf2665.map",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/likewise-open/I3/rhow/.bash_aliases",
-				"/home/likewise-open/I3/rhow/mounts/jungfrau/Temp/JTG/airbus_maps_com_version_4.html",
-				"/home/likewise-open/I3/rhow/temp/wmts_example.xml",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_id_replace.sh",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/jrsmith/mapserver62_cent7.rb",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/mugg/context_urls-av-ags01_2.txt",
-				"/home/likewise-open/I3/rhow/Fiddler2/Scripts/CustomRules.cs",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/first.sh",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/masks/ROI_SPOT6_PMS_201409111023484_ORT_1113819101_MSK.GML",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_listing.txt",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/adm_response_toulouse.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/b2585d6b-c3c9-4a0c-a6d9-a8319f6788e9.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr_2.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8915752a-5752-4130-bc50-9e9e0b63c225.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/47c9881b-2cd0-46b3-968c-689be58703ef.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/035225aa-585b-405f-8736-96e3494fc4bc.map",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path_dirs.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/136e8c4d-1c87-4ba1-b2db-c29bc74b1578.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/403ede55-08e8-40c6-98e9-9bec48cf763f.map"
+				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml"
 			],
 			"find":
 			{
@@ -3049,134 +1823,134 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					"padawan_redis",
-					"padawan-ogc",
-					"1",
-					"Rittwager",
-					"temp",
-					"{{",
-					"{",
-					"{{",
-					"files/",
-					"- name:",
-					"needed_rpm",
-					"font",
-					"size",
-					"configure",
-					"denied",
+					"| ",
+					"|",
+					"', ' ",
+					" ',",
 					"  ",
-					"- ",
-					" ",
-					"$ ",
-					"mount",
-					"$ ",
-					"yast",
+					"|",
+					",",
+					",'",
+					"\n",
 					"\n\n",
+					"      ",
 					"\n",
-					">",
+					"basePath",
+					"</api>\\r                                                                                                                          ",
+					"<tileSize>256</tileSize>\\r                                                                                                      ",
+					"<basePath>",
+					" <api>    \\r                                                                                                                     |     1",
+					"</api>                                                                                                                            ",
+					"</basePath>\\r                 \n </api>",
+					"</basePath>\\r                 \n </api>                                         ",
+					"</basePath>\\r                 \n </api>                                                                                                                            ",
+					" <api>\\r                                                                                                                         |     1\n   <basePath>",
 					"# ",
-					"&",
-					"libpq",
-					"bfba8fb7-c140-4d85-a8d4-4651d00bee75",
-					"432b8ddd-ff3d-4aa8-b861-8e3b596af35",
-					"&",
-					"&\\n",
-					"Version",
-					"&",
-					"name",
-					"./",
-					"path: \"file:/",
-					"path",
-					"=\"",
-					"&",
-					"n",
-					"&",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_11138",
-					"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_1113823101_R1C1.JP2",
-					"\"file://data/2/dd/pops/i3/imagery/ikonos/z34/Tripolis/alpha/DM_73700_14700_50_50_1_a.tif\"",
-					"?\";\n",
-					"/",
-					"padawan_vintage_png",
-					"&",
-					"$BUILD_DIR",
-					"WORKDIR",
-					"RUN ",
-					"png",
-					"   ",
-					"MAXSCALE 250000",
-					"OUTLINECOLOR 0 200 100",
-					"COLOR -1 -1 -1",
-					"COLOR",
-					">>> ",
-					"package",
-					"zlib",
-					"DEFAULT",
-					"STATUS OFF",
-					"STATUS DEFAULT",
-					"MASK",
-					"\n",
+					"            ",
+					"[rhow@rhow-cacheman ~]$ ",
+					"read",
+					"spot",
+					"most-recent",
+					"phr",
+					"most-recent",
+					"PHR",
+					"most-recent-phr",
+					"=",
+					"%2c",
+					"\n\n\n",
+					"\n\n",
+					"wms request for",
+					"aborting",
+					"seed tile",
+					"curl",
 					",",
-					"  ",
-					"\n",
-					"[ ",
-					" ]",
-					" [",
-					"  ",
-					"                            ",
-					"\n",
-					"JPEG",
-					"PNG",
-					"/",
-					",",
-					" 4",
-					" -0.",
-					" 0",
-					"(  0",
-					">>> ",
-					"/",
-					"STATUS DEFAULT",
-					"STATUS",
-					"==",
-					"]",
-					"path_list",
-					"        ",
-					"'",
-					"L17_R55360_C36096_64_64",
-					"/data/2/dd/pops/i3/imagery",
-					"/data/2/dd/pops/i3",
-					">>> ",
+					"https",
 					" ",
-					"||",
+					"jpeg",
+					"m-jpeg",
+					"sources-",
+					"mosaic-",
+					";",
+					"  \n",
+					"cacheman-worker",
+					"\n",
 					",",
-					"),(",
-					"(",
-					"]",
-					"[",
-					"[\n[",
-					"200",
+					":",
+					"completion_info",
+					"        ",
+					"\n",
 					">>> ",
 					", ",
-					"__streaminguid",
-					"<gx:duration>",
+					",",
+					">>> ",
+					";",
+					"ZONE",
+					"\\n",
+					"discovery",
+					"    ",
 					"         ",
-					"0 ",
-					"(",
-					"0",
+					"\n",
+					"seeder",
+					"world",
+					"tif",
+					" | ",
+					" |",
+					"\\",
+					"=",
+					"- ",
+					"-",
+					"&",
 					" ",
-					"(",
+					"   ",
+					"\n",
+					" \n",
+					"     ",
+					"         ",
+					" \n",
+					"          ",
+					"https://www",
+					"          ",
+					"\n",
+					" ",
 					"  ",
-					" ",
-					"av-",
-					" ",
-					"VALUES ",
-					"-- ",
-					"VALUES",
-					"update_database_live.sql.erb:",
-					"tomtom_cc_sanfran_cc_webmercator_slayer",
-					"symlink_blank",
-					"&&",
-					"RUN"
+					"\n",
+					"          ",
+					"source_gdal",
+					")))",
+					"(((",
+					",",
+					"'id': ",
+					", 'id'",
+					"}, {",
+					"\n",
+					"...",
+					"root@padawan3-db-cl1:/var/lib/postgresql/governor",
+					",",
+					"    ",
+					"  6",
+					"  ",
+					"mpm_",
+					"    ",
+					"AS_SP_",
+					"DS_SPOT7_201506131822184_FR1_FR1_FR1_FR1_W120N38_06499",
+					",",
+					":",
+					"\\",
+					"WITH_",
+					"case",
+					"with",
+					"mapserver62",
+					"6.2",
+					":",
+					": ",
+					"data ",
+					"=",
+					"data",
+					"nearblack",
+					", ",
+					"\\",
+					",",
+					",\\\n "
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -3184,6 +1958,11 @@
 				"regex": false,
 				"replace_history":
 				[
+					"phr",
+					"revisit-12",
+					"spot",
+					"revisit-12",
+					"padawan2-",
 					"",
 					"&\\n",
 					"&",
@@ -3203,50 +1982,193 @@
 			"folders":
 			[
 				{
-					"path": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui"
+					"path": "/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer"
 				}
 			],
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 5,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4530,
+								"buffer_size": 1079,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1309,
-										1309
+										962,
+										962
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Python/Python.tmLanguage"
+									"auto_name": "Issues:",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 132.0,
+								"translation.y": 88.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 6,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 261,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										261,
+										261
+									]
+								],
+								"settings":
+								{
+									"auto_name": "r*.Fg!L92Ftu",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 251,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										251,
+										251
+									]
+								],
+								"settings":
+								{
+									"auto_name": "update",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 815,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										704,
+										704
+									]
+								],
+								"settings":
+								{
+									"auto_name": "SELECT count(padawan.offer_cutline.id) AS count_1",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 781,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										582,
+										582
+									]
+								],
+								"settings":
+								{
+									"auto_name": "wget http://www.netfort.gr.jp/~dancer/software/dow",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 561,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										555,
+										555
+									]
+								],
+								"settings":
+								{
+									"auto_name": "does not work:",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
 							"type": "text"
 						},
 						{
-							"buffer": 1,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/services/jobs-service.js",
+							"buffer": 6,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1645,
+								"buffer_size": 240,
 								"regions":
 								{
 								},
@@ -3259,119 +2181,8 @@
 								],
 								"settings":
 								{
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 5,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/components/job-detail/job-detail.html",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1331,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										468,
-										468
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/HTML/HTML.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 4,
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 2574,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1461,
-										1461
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Python/Python.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 462.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 4,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 758,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										557,
-										557
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/YAML/YAML.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 6,
-							"type": "text"
-						},
-						{
-							"buffer": 5,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 558,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										496,
-										496
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Python/Python.tmLanguage"
+									"auto_name": "git clone git@utility2:adm/adm.git -b release/4.5.",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -3381,1315 +2192,39 @@
 							"type": "text"
 						},
 						{
-							"buffer": 6,
-							"file": "/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/git/tasks/main.yaml",
-							"semi_transient": true,
-							"settings":
-							{
-								"buffer_size": 930,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										532,
-										532
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/YAML/YAML.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
-						}
-					]
-				}
-			],
-			"incremental_find":
-			{
-				"height": 30.0
-			},
-			"input":
-			{
-				"height": 35.0
-			},
-			"layout":
-			{
-				"cells":
-				[
-					[
-						0,
-						0,
-						1,
-						1
-					]
-				],
-				"cols":
-				[
-					0.0,
-					1.0
-				],
-				"rows":
-				[
-					0.0,
-					1.0
-				]
-			},
-			"menu_visible": true,
-			"output.GoSublime-output":
-			{
-				"height": 142.0
-			},
-			"output.MarGo-output":
-			{
-				"height": 115.0
-			},
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"output.sbt":
-			{
-				"height": 0.0
-			},
-			"output.sbt_error":
-			{
-				"height": 0.0
-			},
-			"pinned_build_system": "",
-			"position": "0,0,1,0,0,0,46,1916,1198,3280,1200",
-			"project": "",
-			"replace":
-			{
-				"height": 56.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"mo",
-						"server/models.py"
-					],
-					[
-						"requi",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"re",
-						"README.md"
-					],
-					[
-						"pla",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"var",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"req",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"play",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"vars",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"hosts",
-						"deploy/ansible/project-configs/vagrant/hosts"
-					],
-					[
-						"vag",
-						"deploy/Vagrantfile"
-					],
-					[
-						"inven/var",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"group_var",
-						"deploy/inventory/group_vars/all.yaml"
-					],
-					[
-						"mapserver.y",
-						"deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml"
-					],
-					[
-						"host",
-						"deploy/project-configs/vagrant-ms-mc/hosts"
-					],
-					[
-						"rea",
-						"deploy/project-configs/vagrant-ms-mc/README.md"
-					],
-					[
-						"playbs/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"inven/vars",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"maps/va/m",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/var",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/defa",
-						"deploy/roles/mapserver/defaults/main.yml"
-					],
-					[
-						"task/ma",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"priv",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/role/map/ta",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"de/p/r/p",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/pro/rho/pl",
-						"deploy/project-configs/rhow-ms/playbooks/mapserver.yaml"
-					],
-					[
-						"buil/op",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"depl/role/open",
-						"deploy/roles/open_root/tasks/main.yml"
-					],
-					[
-						"open",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"playbo/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"rhow/",
-						"deploy/project-configs/rhow-ms/README.md"
-					],
-					[
-						"",
-						"sanfran_citycenter_2.html"
-					],
-					[
-						"style",
-						"public/stylesheets/main.css"
-					],
-					[
-						"app/views",
-						"app/views/index.scala.html"
-					],
-					[
-						"javascripts",
-						"public/javascripts/main.js"
-					],
-					[
-						"app/vi/",
-						"app/views/index.scala.html"
-					],
-					[
-						"app/mo",
-						"app/models/user.scala"
-					],
-					[
-						"ng-",
-						"project/target/resolution-cache/reports/default-angularjs_mongo-build-compile.xml"
-					],
-					[
-						"ass/js/",
-						"assets/js/application.js"
-					],
-					[
-						"assets/cont",
-						"assets/js/controllers/controllers.js"
-					],
-					[
-						"adap",
-						"config/adapters.js"
-					],
-					[
-						"mod",
-						"config/models.js"
-					],
-					[
-						"connect",
-						"config/connections.js"
-					],
-					[
-						"models",
-						"config/models.js"
-					],
-					[
-						"connec",
-						"config/connections.js"
-					],
-					[
-						"local",
-						"api/services/protocols/local.js"
-					],
-					[
-						"angul",
-						"assets/app/bower_components/angular/angular.min.js"
-					],
-					[
-						"layou",
-						"views/layout.ejs"
-					],
-					[
-						"app.",
-						"app.js"
-					],
-					[
-						"mapser",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"winpops",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"samba/rec",
-						"cookbooks/samba/recipes/server.rb"
-					],
-					[
-						"win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"setenv",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"ha-p",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"chef-cron",
-						"cookbooks/icubed/recipes/chef-cron-win-update-frequency.rb"
-					],
-					[
-						"alerting",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"win_",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"set-up",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"bring-up-gdm-cache-instances.rb",
-						"cookbooks/icubed/recipes/bring-up-gdm-cache-instances.rb"
-					],
-					[
-						"set-up-openstack-environment.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment.rb"
-					],
-					[
-						"set-up-openstack-environment-gc.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment-gc.rb"
-					],
-					[
-						"ha-postgresql.rb",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data-shares.rb",
-						"cookbooks/icubed/recipes/data-shares.rb"
-					],
-					[
-						"data-shares-linux-client",
-						"cookbooks/icubed/recipes/data-shares-linux-client.rb"
-					],
-					[
-						"databa",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"mapserv",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"map",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chef-cronw",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-c",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"win_po",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"ic/reci/da",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"ic/reci/al",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"note",
-						"notes-on-password-management.txt"
-					],
-					[
-						"icu/recip/ma",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chefcronwin",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-cr",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"icubed/win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"node/pop-i",
-						"nodes/pops01-i3-local.json"
-					],
-					[
-						"icu/lib/",
-						"cookbooks/icubed/libraries/default.rb"
-					],
-					[
-						"contro",
-						"mapcache-admin/assets/js/controllers/controllers.js"
-					],
-					[
-						"ass/ap",
-						"mapcache-admin/assets/js/app.js"
-					],
-					[
-						"app",
-						"mapcache-admin/app.js"
-					],
-					[
-						"ass/contro/cach",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"app/main.j",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"yo/grun",
-						"angular-app-by-yo/Gruntfile.js"
-					],
-					[
-						"pack",
-						"angular-app-by-yo/package.json"
-					],
-					[
-						"spec/contact",
-						"angular-app-by-yo/test/spec/directives/contact.js"
-					],
-					[
-						"spec/tel",
-						"angular-app-by-yo/test/spec/filters/tel.js"
-					],
-					[
-						"yo/spec/con/ma",
-						"angular-app-by-yo/test/spec/controllers/main.js"
-					],
-					[
-						"filters/",
-						"angular-app-by-yo/app/scripts/filters/tel.js"
-					],
-					[
-						"contactss",
-						"angular-app-by-yo/app/scripts/services/contactsservice.js"
-					],
-					[
-						"contactsser",
-						"angular-app-by-yo/test/spec/services/contactsservice.js"
-					],
-					[
-						"main",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"servic",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"spec/",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"serv",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controll",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"templates/",
-						"mapcache-admin/assets/templates/tilesetList.html"
-					],
-					[
-						"karma",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"kar",
-						"mapcache-admin/node_modules/karma/bin/karma"
-					],
-					[
-						"cache-",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"lay",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"config/mo",
-						"mapcache-admin/config/models.js"
-					],
-					[
-						"config/",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"karma.e2e",
-						"guthub/karma.e2e.conf.js"
-					],
-					[
-						"e2e/",
-						"mapcache-admin/assets/test/e2e/recipesListSpec.js"
-					],
-					[
-						"e2e",
-						"mapcache-admin/karma.e2e.conf.js"
-					],
-					[
-						"tilesetcon",
-						"mapcache-admin/api/controllers/TilesetController.js"
-					],
-					[
-						"karma.conf.js",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"conf.j",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"service",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controlller",
-						"guthub/app/scripts/controllers/controllers.js"
-					],
-					[
-						"guthub/test/sp",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"controle",
-						"mapcache-admin/.tmp/public/js/controllers/controllers.js"
-					],
-					[
-						"test/spec/",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"tile",
-						"mapcache-admin/.tmp/public/templates/viewTileset.html"
-					],
-					[
-						"blu",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"tileset",
-						"mapcache-admin/assets/templates/tilesetForm.html"
-					],
-					[
-						"l",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"simre",
-						"simpleRequest.js"
-					],
-					[
-						"index.e",
-						"views/index/index.ejs"
-					]
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"selected_group": 0,
-			"settings":
-			{
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 402.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			},
-			"window_id": 51,
-			"workspace_name": ""
-		},
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-					[
-						"conf",
-						"config"
-					],
-					[
-						"pad",
-						"padawan-cache-ui"
-					],
-					[
-						"inst",
-						"install-mapserver-code-6"
-					],
-					[
-						"shp",
-						"shpFile"
-					],
-					[
-						"wm",
-						"wms_layer"
-					],
-					[
-						"SE",
-						"SELECT"
-					],
-					[
-						"layer",
-						"layerName"
-					],
-					[
-						"log",
-						"logsuccess"
-					],
-					[
-						"el",
-						"elif"
-					],
-					[
-						"lo",
-						"logfile"
-					],
-					[
-						"add",
-						"address"
-					],
-					[
-						"pass",
-						"password"
-					],
-					[
-						"Ad",
-						"Administrators"
-					],
-					[
-						"is",
-						"isTesting"
-					],
-					[
-						"pops_",
-						"pops_user"
-					],
-					[
-						"en",
-						"encryptedDB"
-					],
-					[
-						"get",
-						"get_popsadmin_password"
-					],
-					[
-						"pop",
-						"pops_password"
-					],
-					[
-						"tiles",
-						"tileset"
-					],
-					[
-						"tileset",
-						"tilesets"
-					],
-					[
-						"fun",
-						"function"
-					],
-					[
-						"t",
-						"total"
-					],
-					[
-						"l",
-						"length"
-					],
-					[
-						"j",
-						"journey"
-					],
-					[
-						"op",
-						"option	Tag"
-					],
-					[
-						"ly",
-						"layerNodes"
-					]
-				]
-			},
-			"buffers":
-			[
-				{
-					"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/ml-pipeline.py",
-					"settings":
-					{
-						"buffer_size": 6392,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements.txt",
-					"settings":
-					{
-						"buffer_size": 1705,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "abstract-rendering\nargcomplete\nastropy\natom\nbackports.ssl-match-hostname\nbeautifulsoup4\nbinstar\nbitarray\nblaze\nblz\nbokeh\nboto\ncasuarius\n# cdecimal\ncffi\n#chaco\ncolorama\nconda\n#conda-build\nconda-env\nconfigobj\ncryptography\nCython\ncytoolz\nDataShape\ndecorator\ndocutils\n#Senable\nenaml\nFlask\nfuture\nfutures\ngevent\ngevent-websocket\ngreenlet\ngrin\nh5py\nipdb\nipython\nitsdangerous\njdcal\nJinja2\nkiwisolver\n#llvmpy\nlockfile\nloremipsum\nluigi\nlxml\nMarkupSafe\nmatplotlib\nmock\nmultipledispatch\nnetworkx\nnltk\nnose\nnumba\nnumexpr\nnumpy==1.7\nopenpyxl\npandas\npatsy\npep8\n#PIL\nply\nprotobuf\npsutil\n#psycopg2\npy\nPyAudio\npycosat\npycparser\npycrypto\n# pycurl\npyface\npyflakes\nPygments\npymongo\npyOpenSSL\npyparsing\npytest\npython-daemon\npython-dateutil\npytz\nPyYAML\npyzmq\nredis\nrequests\n#rope\nrunipy\n#scikit-image",
-					"settings":
-					{
-						"buffer_size": 778,
-						"line_ending": "Unix",
-						"name": "abstract-rendering"
-					}
-				}
-			],
-			"build_system": "",
-			"build_system_choices":
-			[
-			],
-			"build_varint": "",
-			"command_palette":
-			{
-				"height": 369.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"sy xml",
-						"Set Syntax: XML"
-					],
-					[
-						"user",
-						"Preferences: Settings - User"
-					],
-					[
-						"synru",
-						"Set Syntax: Ruby"
-					],
-					[
-						"json",
-						"Set Syntax: JSON"
-					],
-					[
-						"pack",
-						"Package Control: Remove Package"
-					],
-					[
-						"instal",
-						"Package Control: Install Package"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"insta",
-						"Package Control: Install Package"
-					],
-					[
-						"defau",
-						"Preferences: Settings - Default"
-					],
-					[
-						"instl",
-						"Package Control: Install Package"
-					],
-					[
-						"togg",
-						"View: Toggle Open Files in Side Bar"
-					],
-					[
-						"open",
-						"Move Tab: To first position"
-					],
-					[
-						"ref",
-						"Project: Refresh Folders"
-					],
-					[
-						"refr",
-						"Project: Refresh Folders"
-					],
-					[
-						"defa",
-						"Preferences: Key Bindings - Default"
-					],
-					[
-						"mini",
-						"View: Toggle Minimap"
-					],
-					[
-						"tog",
-						"View: Toggle Minimap"
-					],
-					[
-						"default",
-						"Preferences: Settings - Default"
-					],
-					[
-						"min",
-						"View: Toggle Minimap"
-					],
-					[
-						"re",
-						"Project: Refresh Folders"
-					],
-					[
-						"add",
-						"Project: Add Folder"
-					],
-					[
-						"fold",
-						"Code Folding: Fold Tag Attributes"
-					],
-					[
-						"prefe",
-						"Preferences: Settings - Default"
-					],
-					[
-						"refre",
-						"Project: Refresh Folders"
-					],
-					[
-						"key",
-						"Preferences: SublimeLinter Key Bindings – Default"
-					],
-					[
-						"wor",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wr",
-						"Word Wrap: Toggle"
-					],
-					[
-						"form",
-						"Pretty JSON: Format (Pretty Print) JSON"
-					],
-					[
-						"fol",
-						"Project: Add Folder"
-					],
-					[
-						"folder",
-						"Project: Add Folder"
-					],
-					[
-						"Package Control: in",
-						"Package Control: Install Package"
-					],
-					[
-						"wra",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wrap",
-						"Word Wrap: Toggle"
-					],
-					[
-						"linter",
-						"SublimeLinter: Show All Errors"
-					],
-					[
-						"lint",
-						"Preferences: SublimeLinter Settings – User"
-					],
-					[
-						"ja",
-						"Set Syntax: JavaScript"
-					]
-				],
-				"width": 449.0
-			},
-			"console":
-			{
-				"height": 210.0,
-				"history":
-				[
-					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"expanded_folders":
-			[
-				"/home/local/I3/rhow/projects/luigi/data-engineering-101"
-			],
-			"file_history":
-			[
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-				"/home/local/I3/rhow/Downloads/download",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/etc.resolv.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults/main.yml",
-				"/home/local/I3/rhow/Downloads/download2",
-				"/home/local/I3/rhow/Downloads/WCSServer",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/Vagrantfile",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/Downloads/mapserv",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/ansible.cfg",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/meta/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/vars/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/centos.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/group_vars/all.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.consul.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver2.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul.client",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/templates/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.internet.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq_d.file.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/README.md",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/i3build.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/httpd.conf-2.4",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/install-mapcache-code.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/install-mapserver-code-6.2.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/private.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts/launch-ms.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/open_root.yaml",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
-				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/13ef96a5-fc46-41a4-a9c3-a07ec830cc7e.map",
-				"/home/likewise-open/I3/rhow/Downloads/download.txt",
-				"/home/likewise-open/I3/rhow/Downloads/mapserv.fcgi",
-				"/home/likewise-open/I3/rhow/Vagrant/ansible/Vagrantfile",
-				"/home/likewise-open/I3/rhow/temp/padawan-dep.txt",
-				"/home/likewise-open/I3/rhow/Docker/centos7-ansible/Dockerfile",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8975d901-f6aa-4a50-bae8-3a0e348168e2.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/ee71e047-d062-4ee0-aca3-867c62bf2665.map",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/likewise-open/I3/rhow/.bash_aliases",
-				"/home/likewise-open/I3/rhow/mounts/jungfrau/Temp/JTG/airbus_maps_com_version_4.html",
-				"/home/likewise-open/I3/rhow/temp/wmts_example.xml",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_id_replace.sh",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/jrsmith/mapserver62_cent7.rb",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/mugg/context_urls-av-ags01_2.txt",
-				"/home/likewise-open/I3/rhow/Fiddler2/Scripts/CustomRules.cs",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/first.sh",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/masks/ROI_SPOT6_PMS_201409111023484_ORT_1113819101_MSK.GML",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_listing.txt",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/adm_response_toulouse.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/b2585d6b-c3c9-4a0c-a6d9-a8319f6788e9.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr_2.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8915752a-5752-4130-bc50-9e9e0b63c225.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/47c9881b-2cd0-46b3-968c-689be58703ef.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/035225aa-585b-405f-8736-96e3494fc4bc.map",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path_dirs.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/136e8c4d-1c87-4ba1-b2db-c29bc74b1578.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/403ede55-08e8-40c6-98e9-9bec48cf763f.map"
-			],
-			"find":
-			{
-				"height": 30.0
-			},
-			"find_in_files":
-			{
-				"height": 93.0,
-				"where_history":
-				[
-					"*.js",
-					"*.rb",
-					"",
-					"/home/likewise-open/I3/rhow/projects,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin/assets/templates/tileset",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.html",
-					"*.html,/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"*.html",
-					"-.tmp/*,-bowwer_components/*,-*.txt",
-					"-*tmp,-*bowwer_components,-*.txt",
-					"-.tmp/,-bowwer_components/,-*.txt",
-					"-.tmp/, -bowwer_components/",
-					"-.tmp/ -bowwer_components/",
-					"-.tmp/",
-					"-/.tmp",
-					"-/.tmp -/bower_components",
-					"-.tmp/ -/bower_components",
-					"-.tmp/",
-					"",
-					"/home/likewise-open/I3/rhow/projects/angularjs-book/chapter4/guthub/app",
-					""
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-					"==",
-					"padawan_redis",
-					"padawan-ogc",
-					"1",
-					"Rittwager",
-					"temp",
-					"{{",
-					"{",
-					"{{",
-					"files/",
-					"- name:",
-					"needed_rpm",
-					"font",
-					"size",
-					"configure",
-					"denied",
-					"  ",
-					"- ",
-					" ",
-					"$ ",
-					"mount",
-					"$ ",
-					"yast",
-					"\n\n",
-					"\n",
-					">",
-					"# ",
-					"&",
-					"libpq",
-					"bfba8fb7-c140-4d85-a8d4-4651d00bee75",
-					"432b8ddd-ff3d-4aa8-b861-8e3b596af35",
-					"&",
-					"&\\n",
-					"Version",
-					"&",
-					"name",
-					"./",
-					"path: \"file:/",
-					"path",
-					"=\"",
-					"&",
-					"n",
-					"&",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_11138",
-					"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_1113823101_R1C1.JP2",
-					"\"file://data/2/dd/pops/i3/imagery/ikonos/z34/Tripolis/alpha/DM_73700_14700_50_50_1_a.tif\"",
-					"?\";\n",
-					"/",
-					"padawan_vintage_png",
-					"&",
-					"$BUILD_DIR",
-					"WORKDIR",
-					"RUN ",
-					"png",
-					"   ",
-					"MAXSCALE 250000",
-					"OUTLINECOLOR 0 200 100",
-					"COLOR -1 -1 -1",
-					"COLOR",
-					">>> ",
-					"package",
-					"zlib",
-					"DEFAULT",
-					"STATUS OFF",
-					"STATUS DEFAULT",
-					"MASK",
-					"\n",
-					",",
-					"  ",
-					"\n",
-					"[ ",
-					" ]",
-					" [",
-					"  ",
-					"                            ",
-					"\n",
-					"JPEG",
-					"PNG",
-					"/",
-					",",
-					" 4",
-					" -0.",
-					" 0",
-					"(  0",
-					">>> ",
-					"/",
-					"STATUS DEFAULT",
-					"STATUS",
-					"==",
-					"]",
-					"path_list",
-					"        ",
-					"'",
-					"L17_R55360_C36096_64_64",
-					"/data/2/dd/pops/i3/imagery",
-					"/data/2/dd/pops/i3",
-					">>> ",
-					" ",
-					"||",
-					",",
-					"),(",
-					"(",
-					"]",
-					"[",
-					"[\n[",
-					"200",
-					">>> ",
-					", ",
-					"__streaminguid",
-					"<gx:duration>",
-					"         ",
-					"0 ",
-					"(",
-					"0",
-					" ",
-					"(",
-					"  ",
-					" ",
-					"av-",
-					" ",
-					"VALUES ",
-					"-- ",
-					"VALUES",
-					"update_database_live.sql.erb:",
-					"tomtom_cc_sanfran_cc_webmercator_slayer",
-					"symlink_blank",
-					"&&"
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": true,
-				"regex": false,
-				"replace_history":
-				[
-					"",
-					"&\\n",
-					"&",
-					"&\\n",
-					"&/n",
-					"OFF",
-					"\", \"",
-					"tileset",
-					"Tileset"
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"folders":
-			[
-				{
-					"path": "/home/local/I3/rhow/projects/luigi/data-engineering-101"
-				}
-			],
-			"groups":
-			[
-				{
-					"selected": 1,
-					"sheets":
-					[
-						{
-							"buffer": 0,
-							"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/ml-pipeline.py",
+							"buffer": 7,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 6392,
+								"buffer_size": 629,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1201,
-										1201
+										629,
+										629
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Python/Python.tmLanguage"
+									"auto_name": "/opt/i-cubed/bin/mapcache_seed --force --config /o",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
+							"stack_index": 13,
 							"type": "text"
 						},
 						{
-							"buffer": 1,
-							"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements.txt",
+							"buffer": 8,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1705,
+								"buffer_size": 7238,
 								"regions":
 								{
 								},
@@ -4702,41 +2237,157 @@
 								],
 								"settings":
 								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
+									"auto_name": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmi",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 12,
 							"type": "text"
 						},
 						{
-							"buffer": 2,
+							"buffer": 9,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 778,
+								"buffer_size": 3329,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										778,
-										778
+										2959,
+										2959
 									]
 								],
 								"settings":
 								{
-									"auto_name": "abstract-rendering",
+									"auto_name": "/opt/i-cubed/bin/mapcache_seed --force --config /o",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 10,
+							"type": "text"
+						},
+						{
+							"buffer": 10,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 119,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2,
+										2
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 7,
+							"type": "text"
+						},
+						{
+							"buffer": 11,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 837,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										837,
+										837
+									]
+								],
+								"settings":
+								{
+									"auto_name": "The thematic layers, from a cache processing point",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 1028.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 9,
+							"type": "text"
+						},
+						{
+							"buffer": 12,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 37,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										37,
+										37
+									]
+								],
+								"settings":
+								{
+									"auto_name": "x,y: -95.0742 39.5907",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 8,
+							"type": "text"
+						},
+						{
+							"buffer": 13,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3153,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										27,
+										27
+									]
+								],
+								"settings":
+								{
+									"auto_name": "Create second Apache daemon",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 11,
 							"type": "text"
 						}
 					]
@@ -4794,11 +2445,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,1,0,0,0,46,1916,1198,3280,1200",
+			"position": "0,0,0,0,0,0,46,1916,1078,1920,1080",
 			"project": "",
 			"replace":
 			{
-				"height": 56.0
+				"height": 70.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -4808,8 +2459,8 @@
 				"selected_items":
 				[
 					[
-						"ml",
-						"ml-pipeline.py"
+						"vag",
+						"Vagrantfile"
 					],
 					[
 						"mo",
@@ -4846,10 +2497,6 @@
 					[
 						"hosts",
 						"deploy/ansible/project-configs/vagrant/hosts"
-					],
-					[
-						"vag",
-						"deploy/Vagrantfile"
 					],
 					[
 						"inven/var",
@@ -5327,1311 +2974,13 @@
 			"show_minimap": true,
 			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 402.0,
+			"side_bar_visible": false,
+			"side_bar_width": 364.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			},
-			"window_id": 54,
-			"workspace_name": ""
-		},
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-					[
-						"conf",
-						"config"
-					],
-					[
-						"pad",
-						"padawan-cache-ui"
-					],
-					[
-						"inst",
-						"install-mapserver-code-6"
-					],
-					[
-						"shp",
-						"shpFile"
-					],
-					[
-						"wm",
-						"wms_layer"
-					],
-					[
-						"SE",
-						"SELECT"
-					],
-					[
-						"layer",
-						"layerName"
-					],
-					[
-						"log",
-						"logsuccess"
-					],
-					[
-						"el",
-						"elif"
-					],
-					[
-						"lo",
-						"logfile"
-					],
-					[
-						"add",
-						"address"
-					],
-					[
-						"pass",
-						"password"
-					],
-					[
-						"Ad",
-						"Administrators"
-					],
-					[
-						"is",
-						"isTesting"
-					],
-					[
-						"pops_",
-						"pops_user"
-					],
-					[
-						"en",
-						"encryptedDB"
-					],
-					[
-						"get",
-						"get_popsadmin_password"
-					],
-					[
-						"pop",
-						"pops_password"
-					],
-					[
-						"tiles",
-						"tileset"
-					],
-					[
-						"tileset",
-						"tilesets"
-					],
-					[
-						"fun",
-						"function"
-					],
-					[
-						"t",
-						"total"
-					],
-					[
-						"l",
-						"length"
-					],
-					[
-						"j",
-						"journey"
-					],
-					[
-						"op",
-						"option	Tag"
-					],
-					[
-						"ly",
-						"layerNodes"
-					]
-				]
-			},
-			"buffers":
-			[
-				{
-					"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements.txt",
-					"settings":
-					{
-						"buffer_size": 1705,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements_end.txt",
-					"settings":
-					{
-						"buffer_size": 177,
-						"line_ending": "Unix"
-					}
-				}
-			],
-			"build_system": "",
-			"build_system_choices":
-			[
-			],
-			"build_varint": "",
-			"command_palette":
-			{
-				"height": 369.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"sy xml",
-						"Set Syntax: XML"
-					],
-					[
-						"user",
-						"Preferences: Settings - User"
-					],
-					[
-						"synru",
-						"Set Syntax: Ruby"
-					],
-					[
-						"json",
-						"Set Syntax: JSON"
-					],
-					[
-						"pack",
-						"Package Control: Remove Package"
-					],
-					[
-						"instal",
-						"Package Control: Install Package"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"insta",
-						"Package Control: Install Package"
-					],
-					[
-						"defau",
-						"Preferences: Settings - Default"
-					],
-					[
-						"instl",
-						"Package Control: Install Package"
-					],
-					[
-						"togg",
-						"View: Toggle Open Files in Side Bar"
-					],
-					[
-						"open",
-						"Move Tab: To first position"
-					],
-					[
-						"ref",
-						"Project: Refresh Folders"
-					],
-					[
-						"refr",
-						"Project: Refresh Folders"
-					],
-					[
-						"defa",
-						"Preferences: Key Bindings - Default"
-					],
-					[
-						"mini",
-						"View: Toggle Minimap"
-					],
-					[
-						"tog",
-						"View: Toggle Minimap"
-					],
-					[
-						"default",
-						"Preferences: Settings - Default"
-					],
-					[
-						"min",
-						"View: Toggle Minimap"
-					],
-					[
-						"re",
-						"Project: Refresh Folders"
-					],
-					[
-						"add",
-						"Project: Add Folder"
-					],
-					[
-						"fold",
-						"Code Folding: Fold Tag Attributes"
-					],
-					[
-						"prefe",
-						"Preferences: Settings - Default"
-					],
-					[
-						"refre",
-						"Project: Refresh Folders"
-					],
-					[
-						"key",
-						"Preferences: SublimeLinter Key Bindings – Default"
-					],
-					[
-						"wor",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wr",
-						"Word Wrap: Toggle"
-					],
-					[
-						"form",
-						"Pretty JSON: Format (Pretty Print) JSON"
-					],
-					[
-						"fol",
-						"Project: Add Folder"
-					],
-					[
-						"folder",
-						"Project: Add Folder"
-					],
-					[
-						"Package Control: in",
-						"Package Control: Install Package"
-					],
-					[
-						"wra",
-						"Word Wrap: Toggle"
-					],
-					[
-						"wrap",
-						"Word Wrap: Toggle"
-					],
-					[
-						"linter",
-						"SublimeLinter: Show All Errors"
-					],
-					[
-						"lint",
-						"Preferences: SublimeLinter Settings – User"
-					],
-					[
-						"ja",
-						"Set Syntax: JavaScript"
-					]
-				],
-				"width": 449.0
-			},
-			"console":
-			{
-				"height": 210.0,
-				"history":
-				[
-					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"expanded_folders":
-			[
-				"/home/local/I3/rhow/projects/luigi/data-engineering-101"
-			],
-			"file_history":
-			[
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-				"/home/local/I3/rhow/Downloads/download",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/etc.resolv.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults/main.yml",
-				"/home/local/I3/rhow/Downloads/download2",
-				"/home/local/I3/rhow/Downloads/WCSServer",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/Vagrantfile",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/Downloads/mapserv",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/ansible.cfg",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/meta/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/vars/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/centos.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/group_vars/all.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.consul.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver2.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul.client",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/templates/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.internet.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq_d.file.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/README.md",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/i3build.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/httpd.conf-2.4",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/install-mapcache-code.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/install-mapserver-code-6.2.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/private.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts/launch-ms.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/open_root.yaml",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
-				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/13ef96a5-fc46-41a4-a9c3-a07ec830cc7e.map",
-				"/home/likewise-open/I3/rhow/Downloads/download.txt",
-				"/home/likewise-open/I3/rhow/Downloads/mapserv.fcgi",
-				"/home/likewise-open/I3/rhow/Vagrant/ansible/Vagrantfile",
-				"/home/likewise-open/I3/rhow/temp/padawan-dep.txt",
-				"/home/likewise-open/I3/rhow/Docker/centos7-ansible/Dockerfile",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8975d901-f6aa-4a50-bae8-3a0e348168e2.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/ee71e047-d062-4ee0-aca3-867c62bf2665.map",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-				"/home/likewise-open/I3/rhow/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-				"/home/likewise-open/I3/rhow/.bash_aliases",
-				"/home/likewise-open/I3/rhow/mounts/jungfrau/Temp/JTG/airbus_maps_com_version_4.html",
-				"/home/likewise-open/I3/rhow/temp/wmts_example.xml",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_id_replace.sh",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/jrsmith/mapserver62_cent7.rb",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/mugg/context_urls-av-ags01_2.txt",
-				"/home/likewise-open/I3/rhow/Fiddler2/Scripts/CustomRules.cs",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/first.sh",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/masks/ROI_SPOT6_PMS_201409111023484_ORT_1113819101_MSK.GML",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/gml_listing.txt",
-				"/home/likewise-open/I3/rhow/projects-django/padawan-ogc/scripts/adm_response_toulouse.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/b2585d6b-c3c9-4a0c-a6d9-a8319f6788e9.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr_2.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/8915752a-5752-4130-bc50-9e9e0b63c225.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/debug_padawan.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/testing/adm_results_west_fr.json",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/47c9881b-2cd0-46b3-968c-689be58703ef.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/035225aa-585b-405f-8736-96e3494fc4bc.map",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path.txt",
-				"/home/likewise-open/I3/rhow/temp/borbeax_files_path_dirs.txt",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/136e8c4d-1c87-4ba1-b2db-c29bc74b1578.map",
-				"/home/likewise-open/I3/rhow/mounts/gpfs/misc/padawan/403ede55-08e8-40c6-98e9-9bec48cf763f.map"
-			],
-			"find":
-			{
-				"height": 30.0
-			},
-			"find_in_files":
-			{
-				"height": 93.0,
-				"where_history":
-				[
-					"*.js",
-					"*.rb",
-					"",
-					"/home/likewise-open/I3/rhow/projects,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin/assets/templates/tileset",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.html",
-					"*.html,/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"*.html",
-					"-.tmp/*,-bowwer_components/*,-*.txt",
-					"-*tmp,-*bowwer_components,-*.txt",
-					"-.tmp/,-bowwer_components/,-*.txt",
-					"-.tmp/, -bowwer_components/",
-					"-.tmp/ -bowwer_components/",
-					"-.tmp/",
-					"-/.tmp",
-					"-/.tmp -/bower_components",
-					"-.tmp/ -/bower_components",
-					"-.tmp/",
-					"",
-					"/home/likewise-open/I3/rhow/projects/angularjs-book/chapter4/guthub/app",
-					""
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-					"==",
-					"padawan_redis",
-					"padawan-ogc",
-					"1",
-					"Rittwager",
-					"temp",
-					"{{",
-					"{",
-					"{{",
-					"files/",
-					"- name:",
-					"needed_rpm",
-					"font",
-					"size",
-					"configure",
-					"denied",
-					"  ",
-					"- ",
-					" ",
-					"$ ",
-					"mount",
-					"$ ",
-					"yast",
-					"\n\n",
-					"\n",
-					">",
-					"# ",
-					"&",
-					"libpq",
-					"bfba8fb7-c140-4d85-a8d4-4651d00bee75",
-					"432b8ddd-ff3d-4aa8-b861-8e3b596af35",
-					"&",
-					"&\\n",
-					"Version",
-					"&",
-					"name",
-					"./",
-					"path: \"file:/",
-					"path",
-					"=\"",
-					"&",
-					"n",
-					"&",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A",
-					"DATA \"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_11138",
-					"/data/1/dd/streaming/airbus/imagery/20141118/DS_SPOT6_201408281031001_FR1_FR1_FR1_FR1_E001N44_01871/PROD_SPOT6_001/VOL_SPOT6_001_A/IMG_SPOT6_PMS_001_A/IMG_SPOT6_PMS_201408281031001_ORT_1113823101_R1C1.JP2",
-					"\"file://data/2/dd/pops/i3/imagery/ikonos/z34/Tripolis/alpha/DM_73700_14700_50_50_1_a.tif\"",
-					"?\";\n",
-					"/",
-					"padawan_vintage_png",
-					"&",
-					"$BUILD_DIR",
-					"WORKDIR",
-					"RUN ",
-					"png",
-					"   ",
-					"MAXSCALE 250000",
-					"OUTLINECOLOR 0 200 100",
-					"COLOR -1 -1 -1",
-					"COLOR",
-					">>> ",
-					"package",
-					"zlib",
-					"DEFAULT",
-					"STATUS OFF",
-					"STATUS DEFAULT",
-					"MASK",
-					"\n",
-					",",
-					"  ",
-					"\n",
-					"[ ",
-					" ]",
-					" [",
-					"  ",
-					"                            ",
-					"\n",
-					"JPEG",
-					"PNG",
-					"/",
-					",",
-					" 4",
-					" -0.",
-					" 0",
-					"(  0",
-					">>> ",
-					"/",
-					"STATUS DEFAULT",
-					"STATUS",
-					"==",
-					"]",
-					"path_list",
-					"        ",
-					"'",
-					"L17_R55360_C36096_64_64",
-					"/data/2/dd/pops/i3/imagery",
-					"/data/2/dd/pops/i3",
-					">>> ",
-					" ",
-					"||",
-					",",
-					"),(",
-					"(",
-					"]",
-					"[",
-					"[\n[",
-					"200",
-					">>> ",
-					", ",
-					"__streaminguid",
-					"<gx:duration>",
-					"         ",
-					"0 ",
-					"(",
-					"0",
-					" ",
-					"(",
-					"  ",
-					" ",
-					"av-",
-					" ",
-					"VALUES ",
-					"-- ",
-					"VALUES",
-					"update_database_live.sql.erb:",
-					"tomtom_cc_sanfran_cc_webmercator_slayer",
-					"symlink_blank",
-					"&&"
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": true,
-				"regex": false,
-				"replace_history":
-				[
-					"",
-					"&\\n",
-					"&",
-					"&\\n",
-					"&/n",
-					"OFF",
-					"\", \"",
-					"tileset",
-					"Tileset"
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"folders":
-			[
-				{
-					"path": "/home/local/I3/rhow/projects/luigi/data-engineering-101"
-				}
-			],
-			"groups":
-			[
-				{
-					"selected": 1,
-					"sheets":
-					[
-						{
-							"buffer": 0,
-							"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements.txt",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1705,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										486,
-										486
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/local/I3/rhow/projects/luigi/data-engineering-101/requirements_end.txt",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 177,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						}
-					]
-				}
-			],
-			"incremental_find":
-			{
-				"height": 30.0
-			},
-			"input":
-			{
-				"height": 35.0
-			},
-			"layout":
-			{
-				"cells":
-				[
-					[
-						0,
-						0,
-						1,
-						1
-					]
-				],
-				"cols":
-				[
-					0.0,
-					1.0
-				],
-				"rows":
-				[
-					0.0,
-					1.0
-				]
-			},
-			"menu_visible": true,
-			"output.GoSublime-output":
-			{
-				"height": 142.0
-			},
-			"output.MarGo-output":
-			{
-				"height": 115.0
-			},
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"output.sbt":
-			{
-				"height": 0.0
-			},
-			"output.sbt_error":
-			{
-				"height": 0.0
-			},
-			"pinned_build_system": "",
-			"position": "0,0,0,0,0,0,46,1916,1198,3280,1200",
-			"project": "",
-			"replace":
-			{
-				"height": 56.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-					[
-						"ml",
-						"ml-pipeline.py"
-					],
-					[
-						"mo",
-						"server/models.py"
-					],
-					[
-						"requi",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"re",
-						"README.md"
-					],
-					[
-						"pla",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"var",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"req",
-						"deploy/ansible/requirements-roles.yml"
-					],
-					[
-						"play",
-						"deploy/ansible/playbook.yaml"
-					],
-					[
-						"vars",
-						"deploy/ansible/project-configs/vagrant/vars.yaml"
-					],
-					[
-						"hosts",
-						"deploy/ansible/project-configs/vagrant/hosts"
-					],
-					[
-						"vag",
-						"deploy/Vagrantfile"
-					],
-					[
-						"inven/var",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"group_var",
-						"deploy/inventory/group_vars/all.yaml"
-					],
-					[
-						"mapserver.y",
-						"deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml"
-					],
-					[
-						"host",
-						"deploy/project-configs/vagrant-ms-mc/hosts"
-					],
-					[
-						"rea",
-						"deploy/project-configs/vagrant-ms-mc/README.md"
-					],
-					[
-						"playbs/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"inven/vars",
-						"deploy/inventory/vars.yaml"
-					],
-					[
-						"maps/va/m",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/var",
-						"deploy/roles/mapserver/vars/main.yml"
-					],
-					[
-						"map/defa",
-						"deploy/roles/mapserver/defaults/main.yml"
-					],
-					[
-						"task/ma",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"priv",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/role/map/ta",
-						"deploy/roles/mapserver/tasks/main.yml"
-					],
-					[
-						"de/p/r/p",
-						"deploy/project-configs/rhow-ms/inventory/private.yaml"
-					],
-					[
-						"de/pro/rho/pl",
-						"deploy/project-configs/rhow-ms/playbooks/mapserver.yaml"
-					],
-					[
-						"buil/op",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"depl/role/open",
-						"deploy/roles/open_root/tasks/main.yml"
-					],
-					[
-						"open",
-						"deploy/build/open_root.yaml"
-					],
-					[
-						"playbo/",
-						"deploy/playbooks/mapserver.yaml"
-					],
-					[
-						"rhow/",
-						"deploy/project-configs/rhow-ms/README.md"
-					],
-					[
-						"",
-						"sanfran_citycenter_2.html"
-					],
-					[
-						"style",
-						"public/stylesheets/main.css"
-					],
-					[
-						"app/views",
-						"app/views/index.scala.html"
-					],
-					[
-						"javascripts",
-						"public/javascripts/main.js"
-					],
-					[
-						"app/vi/",
-						"app/views/index.scala.html"
-					],
-					[
-						"app/mo",
-						"app/models/user.scala"
-					],
-					[
-						"ng-",
-						"project/target/resolution-cache/reports/default-angularjs_mongo-build-compile.xml"
-					],
-					[
-						"ass/js/",
-						"assets/js/application.js"
-					],
-					[
-						"assets/cont",
-						"assets/js/controllers/controllers.js"
-					],
-					[
-						"adap",
-						"config/adapters.js"
-					],
-					[
-						"mod",
-						"config/models.js"
-					],
-					[
-						"connect",
-						"config/connections.js"
-					],
-					[
-						"models",
-						"config/models.js"
-					],
-					[
-						"connec",
-						"config/connections.js"
-					],
-					[
-						"local",
-						"api/services/protocols/local.js"
-					],
-					[
-						"angul",
-						"assets/app/bower_components/angular/angular.min.js"
-					],
-					[
-						"layou",
-						"views/layout.ejs"
-					],
-					[
-						"app.",
-						"app.js"
-					],
-					[
-						"mapser",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"winpops",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"samba/rec",
-						"cookbooks/samba/recipes/server.rb"
-					],
-					[
-						"win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"setenv",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"ha-p",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"chef-cron",
-						"cookbooks/icubed/recipes/chef-cron-win-update-frequency.rb"
-					],
-					[
-						"alerting",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"win_",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"set-up",
-						"cookbooks/icubed/recipes/set-up-environment.rb"
-					],
-					[
-						"bring-up-gdm-cache-instances.rb",
-						"cookbooks/icubed/recipes/bring-up-gdm-cache-instances.rb"
-					],
-					[
-						"set-up-openstack-environment.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment.rb"
-					],
-					[
-						"set-up-openstack-environment-gc.rb",
-						"cookbooks/icubed/recipes/set-up-openstack-environment-gc.rb"
-					],
-					[
-						"ha-postgresql.rb",
-						"cookbooks/icubed/recipes/ha-postgresql.rb"
-					],
-					[
-						"data-shares.rb",
-						"cookbooks/icubed/recipes/data-shares.rb"
-					],
-					[
-						"data-shares-linux-client",
-						"cookbooks/icubed/recipes/data-shares-linux-client.rb"
-					],
-					[
-						"databa",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"mapserv",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"map",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chef-cronw",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-c",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"win_po",
-						"cookbooks/icubed/recipes/win_pops.rb"
-					],
-					[
-						"ic/reci/da",
-						"cookbooks/icubed/recipes/database.rb"
-					],
-					[
-						"ic/reci/al",
-						"cookbooks/icubed/recipes/alerting.rb"
-					],
-					[
-						"note",
-						"notes-on-password-management.txt"
-					],
-					[
-						"icu/recip/ma",
-						"cookbooks/icubed/recipes/mapserver.rb"
-					],
-					[
-						"chefcronwin",
-						"cookbooks/icubed/recipes/chef-cron-win.rb"
-					],
-					[
-						"chef-cr",
-						"cookbooks/icubed/recipes/chef-cron.rb"
-					],
-					[
-						"icubed/win",
-						"cookbooks/icubed/recipes/win_dd_web.rb"
-					],
-					[
-						"node/pop-i",
-						"nodes/pops01-i3-local.json"
-					],
-					[
-						"icu/lib/",
-						"cookbooks/icubed/libraries/default.rb"
-					],
-					[
-						"contro",
-						"mapcache-admin/assets/js/controllers/controllers.js"
-					],
-					[
-						"ass/ap",
-						"mapcache-admin/assets/js/app.js"
-					],
-					[
-						"app",
-						"mapcache-admin/app.js"
-					],
-					[
-						"ass/contro/cach",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"app/main.j",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"yo/grun",
-						"angular-app-by-yo/Gruntfile.js"
-					],
-					[
-						"pack",
-						"angular-app-by-yo/package.json"
-					],
-					[
-						"spec/contact",
-						"angular-app-by-yo/test/spec/directives/contact.js"
-					],
-					[
-						"spec/tel",
-						"angular-app-by-yo/test/spec/filters/tel.js"
-					],
-					[
-						"yo/spec/con/ma",
-						"angular-app-by-yo/test/spec/controllers/main.js"
-					],
-					[
-						"filters/",
-						"angular-app-by-yo/app/scripts/filters/tel.js"
-					],
-					[
-						"contactss",
-						"angular-app-by-yo/app/scripts/services/contactsservice.js"
-					],
-					[
-						"contactsser",
-						"angular-app-by-yo/test/spec/services/contactsservice.js"
-					],
-					[
-						"main",
-						"angular-app-by-yo/app/scripts/controllers/main.js"
-					],
-					[
-						"servic",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"spec/",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"serv",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controll",
-						"mapcache-admin/assets/js/controllers/cache-controller.js"
-					],
-					[
-						"templates/",
-						"mapcache-admin/assets/templates/tilesetList.html"
-					],
-					[
-						"karma",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"kar",
-						"mapcache-admin/node_modules/karma/bin/karma"
-					],
-					[
-						"cache-",
-						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
-					],
-					[
-						"lay",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"config/mo",
-						"mapcache-admin/config/models.js"
-					],
-					[
-						"config/",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"karma.e2e",
-						"guthub/karma.e2e.conf.js"
-					],
-					[
-						"e2e/",
-						"mapcache-admin/assets/test/e2e/recipesListSpec.js"
-					],
-					[
-						"e2e",
-						"mapcache-admin/karma.e2e.conf.js"
-					],
-					[
-						"tilesetcon",
-						"mapcache-admin/api/controllers/TilesetController.js"
-					],
-					[
-						"karma.conf.js",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"conf.j",
-						"mapcache-admin/karma.conf.js"
-					],
-					[
-						"service",
-						"mapcache-admin/assets/js/services/services.js"
-					],
-					[
-						"controlller",
-						"guthub/app/scripts/controllers/controllers.js"
-					],
-					[
-						"guthub/test/sp",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"controle",
-						"mapcache-admin/.tmp/public/js/controllers/controllers.js"
-					],
-					[
-						"test/spec/",
-						"guthub/test/spec/controllersSpec.js"
-					],
-					[
-						"tile",
-						"mapcache-admin/.tmp/public/templates/viewTileset.html"
-					],
-					[
-						"blu",
-						"mapcache-admin/config/blueprints.js"
-					],
-					[
-						"tileset",
-						"mapcache-admin/assets/templates/tilesetForm.html"
-					],
-					[
-						"l",
-						"mapcache-admin/views/layout.ejs"
-					],
-					[
-						"simre",
-						"simpleRequest.js"
-					],
-					[
-						"index.e",
-						"views/index/index.ejs"
-					]
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"selected_group": 0,
-			"settings":
-			{
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 402.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			},
-			"window_id": 55,
+			"window_id": 67,
 			"workspace_name": ""
 		}
 	],

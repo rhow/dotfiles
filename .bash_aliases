@@ -28,6 +28,7 @@ alias gweb='git instaweb --httpd=webrick'
 
 alias v='vagrant'
 
+# Docker
 alias dps='docker ps'
 alias dimages='docker images'
 alias dips='docker ps | tail -n +2 | while read -a a; do name=${a[$((${#a[@]}-1))]}; echo -ne "$name\t"; docker inspect $name | grep IPAddress | cut -d \" -f 4; done'
@@ -68,10 +69,19 @@ alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 alias py34virtualenv='python3.4 -m venv --without-pip virtualenv'
 alias py34pipinstall='curl https://bootstrap.pypa.io/get-pip.py | python'
 alias pyserv='python -m SimpleHTTPServer'
+alias prettyjson='python -m json.tool'
 alias s3cmd=/usr/local/bin/s3cmd
 
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
+
+alias net-test='speedtest-cli --server 1101 --simple'
+
+# Google
 alias glist='gcloud compute instances list | ag'
+alias gimages='gcloud compute images list | ag'
+# alias gssh="function _gssh(){ echo $(glist $1 | awk '{print $5}'); };_gssh"
+alias gssh='~/bin/google-ssh.sh'
+alias gconfig='gcloud config list'

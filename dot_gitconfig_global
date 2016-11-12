@@ -1,6 +1,6 @@
 [user]
-        email = rhow@i3.com
-        name = Randy How
+	email = rhow@i3.com
+	name = Randy How
 [push]
 	default = simple
 [core]
