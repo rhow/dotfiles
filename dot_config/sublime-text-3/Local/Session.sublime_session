@@ -1340,42 +1340,6 @@
 			"buffers":
 			[
 				{
-					"contents": "Issues:\n\n* Airflow!!! WTF - only working 95% with cacheman-master\n** working better with single airflow worker (cacheman-master) with multiple queues\n* What to do with the cacheman-workers and airflow? not use airflow test in service/script?\n\nBug:\n# 29 of 100 twey-phr have an empty cutline, exception when WM gets bbox of cutline to reproject.\n** Did you set cutline to null when resetting to process again.\n\nReference:\n* Update airflow configuration to version 1.7.1.2\n** Checkout the examples in the new version, docker and twiitter examples: interesting\n* Airflow connection\n** update connection set host = 'database-1', schema = 'airflow', login = 'ddsuperadmin', password = 'xich7Phaein7Ieb0Ja3Aechi' where id = 11;\n\nFeatures:\n# Reprocess areas, from bbox & offer & grid (assume both); select cutlines and set is_published = false, clean slate?\n** schema change, or redis\n\n# Move configuration to DB\n* Max-Workers (geo and wm)\n* machine sizes (geo and wm)\n* Network and Subnetwork paths for starting cacheman-workers\n* Machine types for geo and wm workers\n* Service account",
-					"settings":
-					{
-						"buffer_size": 1079,
-						"line_ending": "Unix",
-						"name": "Issues:"
-					}
-				},
-				{
-					"contents": "r*.Fg!L92Ftu\n\nselect round(AVG(CAST(nullif(processing->'duration', '') AS DECIMAL))) as avg_duration \nfrom padawan.offer_cutline \nwhere offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\nGet-Content .\\mugg.log -Tail 3 | %{ $_.Split(';')[1]; }\n\n3csLe.w=SIPj#:(\n",
-					"settings":
-					{
-						"buffer_size": 261,
-						"line_ending": "Unix",
-						"name": "r*.Fg!L92Ftu"
-					}
-				},
-				{
-					"contents": "update\n\nupdate padawan.offer_cutline set \noffer_id = '',\nis_published = 'f',\nis_archived = 'f',\nis_locked = 'f',\nhas_error = 'f',\nwhere offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\n/usr/local/share/google/google-cloud-sdk/platform/gsutil/gsutil",
-					"settings":
-					{
-						"buffer_size": 251,
-						"line_ending": "Unix",
-						"name": "update"
-					}
-				},
-				{
-					"contents": "SELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer_cutline \nWHERE (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON((0.0 0.0,0.0 1.0,1.0 1.0,1.0 0.0,0.0 0.0))')) AND\n padawan.offer_cutline.offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9';\n\n\n project-configs/gce/scripts/create-master-image.sh cacheman-master recreate-cache-master\n\n\n UPDATE padawan.offer_cutline \n SET offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9',\n     is_published = 'false',\n     is_archived = 'false',\n     is_locked = 'false',\n     has_error = 'false',\n     is_wm_published = 'false',\n WHERE offer_id = 'c238f177-11a4-4959-9067-8142caf14bdd';\n\nFILTER (offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and is_published = 'true' and has_error = 'false' and is_archived = 'false' and resolution_meters > 1)\n",
-					"settings":
-					{
-						"buffer_size": 815,
-						"line_ending": "Unix",
-						"name": "SELECT count(padawan.offer_cutline.id) AS count_1"
-					}
-				},
-				{
 					"contents": "wget http://www.netfort.gr.jp/~dancer/software/downloads/dsh-0.22.0.tar.gz\ntar xfz dsh-0.22.0.tar.gz\ncd dsh-*\n./configure ; make \nmake install\n\nupdate connection set host = 'database-1', schema = 'oneatlas', login = 'ddsuperadmin', password = 'xich7Phaein7Ieb0Ja3Aechi', port = '5432' where conn_id = 'postgres_default';\n\ndD@taD0oR$\n\nselect * from streaming_audit sa\nwhere sa.image_width > 0 and sa.image_height > 0 and\nsa.image_width != 501 and sa.image_height != 501 and\nsa.context_url ilike '%=getm%' and\nsa.audit_date > '2016-08-29 02:00' and sa.audit_date < '2016-08-29 03:00';\n\n\nles-only        print rows onl\n\npsql -h dbslive.datadoors.net -U ddsuperadmin datadoors_live268 -F '\\t' -o /root/wms-test.txt -t -c 'select * from product;'\n\nsed \"s/|/\\t\\g\" test.csv >> newtest.csv",
 					"settings":
 					{
@@ -1385,83 +1349,91 @@
 					}
 				},
 				{
-					"contents": "does not work:\nhttp://hsservices.datadoors.net/__streaminguid.7f77a3aa-49a8-4d0e-b458-a176e42c4c71/wms.ashx?srs=EPSG:4326&bbox=-42.763720575,-9.652570575,-39.908367425,-6.797217425&version=1.1&request=getmap&width=503&height=503&format=JPEG&layers=3d8d2c3a-450b-48dc-a648-09f6068fde48\nhttp://hsservices.datadoors.net/__streaminguid.7f77a3aa-49a8-4d0e-b458-a176e42c4c71/wms.ashx?srs=EPSG:4326&bbox=-42.763720575,-9.652570575,-39.908367425,-6.797217425&version=1.1&request=getmap&width=503&height=503&format=JPEG&layers=3d8d2c3a-450b-48dc-a648-09f6068fde48\n\nworks",
+					"file": "/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
 					"settings":
 					{
-						"buffer_size": 561,
-						"line_ending": "Unix",
-						"name": "does not work:"
-					}
-				},
-				{
-					"contents": "git clone git@utility2:adm/adm.git -b release/4.5.2\ngit clone git@utility2:padawan/ad-deploy.git\ngit clone git@utility2:padawan/logging-deploy \ngit clone git@utility2:padawan/padawan-api-deploy\ngit clone git@utility2:dwatts/gcloud-build.git",
-					"settings":
-					{
-						"buffer_size": 240,
-						"line_ending": "Unix",
-						"name": "git clone git@utility2:adm/adm.git -b release/4.5."
-					}
-				},
-				{
-					"contents": "/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot --grid 4326 --nthreads 128 --zoom 7,16 --extent 22.240645833333357,-11.19765972222221,22.893770833333356,-10.620437499999987 --metasize 1,1 --iteration-mode level-by-level --quiet\n\n/opt/i-cubed/bin/mapcache_seed --force --config /padawan/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 128 --zoom 7,17 --extent 2475817.3690802115,-1254529.5754773752,2548522.9115045685,-1189090.6420674573 --metasize 1,1 --iteration-mode level-by-level\n --quiet\n\n; cutline ID: 4bc27062-43f8-11e6-82a5-ef34b0094b16",
-					"settings":
-					{
-						"buffer_size": 629,
-						"line_ending": "Unix",
-						"name": "/opt/i-cubed/bin/mapcache_seed --force --config /o"
-					}
-				},
-				{
-					"contents": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmin@database-1:5432/oneatlas?sslmode=require\"\n\nselect into TABLE padawan.offer_cutline_rhow_qc_20160718 FROM padawan.offer_cutline;\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 8,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level\n\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 8,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 41064 tiles, now at z18 x139982 y164731                                                 \nseeded 41064 metatiles (41064 tiles) in 793.0 seconds at 51.8 tiles/sec\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 48 --zoom 17,\n17 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0                              \nseeded 7740 tiles, now at z17 x69969 y82365                                                    \nseeded 7740 metatiles (7740 tiles) in 167.7 seconds at 46.2 tiles/sec\n[root@rhow-cacheman httpd]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 48 --zoom 16,16 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 1978 tiles, now at z16 x34999 y41182                                                    \nseeded 1978 metatiles (1978 tiles) in 37.4 seconds at 52.9 tiles/sec\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 15,16 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0\nseeded 2504 tiles, now at z16 x34982 y41181                                                    \nseeded 2506 metatiles (2506 total tiles, 2506 non-empty tiles) in 24.9 seconds at 100.8 tiles/sec (100.8 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances\n\n[root@rhow-cacheman i-cubed]# /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-phr-wm --grid 3857 --nthreads 24 --zoom 7,18 --extent 1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729 --metasize 1,1 --iteration-mode level-by-level --percent 0                             \nseeded 41063 tiles, now at z18 x140073 y164731                                                 \nseeded 41065 metatiles (41065 total tiles, 41065 non-empty tiles) in 422.3 seconds at 97.2 tiles/sec (97.2 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29008 tiles, now at z16 x37560 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 204.6 seconds at 142.3 tiles/sec (142.3 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 2,2\n[rhow@rhow-cacheman ~]$ /opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30192 tiles, now at z16 x37600 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 174.5 seconds at 173.4 tiles/sec (173.4 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 4,4\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 -\n-extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30016 tiles, now at z16 x37552 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 149.0 seconds at 203.1 tiles/sec (203.1 non-empty tiles/sec)\n+ multi-tier mapcache.xml; two apache instances; metatiles 4,4; 32 threads\n\nOverall\n1349888.7482839485,5119702.093512096,1377191.3995072325,5145685.906404729\nproblem bbox\n1368833.108202,5139777.461623,1368988.370916,5139932.724337\n\ndrawGDAL(): Unable to access file. GDALDatasetRasterIO() failed: GetBlockRef failed at X block offset 70030, Y block offset 17519\n\nError in httpd/error_log\n[Wed Jul 20 20:56:53.567625 2016] [core:warn] [pid 2658] (99)Cannot assign requested address: AH00056: connect to listener on [::]:80\nhttp://localhost/cgi-bin/mapserv.fcgi?map=/padawan/mapfiles/oneatlas.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&STYLES=&BBOX=1355838.813394%2c5137484.350775%2c1355994.076108%2c5137639.613488&WIDTH=260&HEIGHT=260&FORMAT=image%2fpng&SRS=EPSG%3a3857&LAYERS=most-recent-phr&TRANSPARENT=true\n\nADM\nStartServers=4\nMaxClients=75\nMinSpareThreads=10\nMaxSpareThreads=25\nThreadsPerChild=25\nMaxRequestsPerChild=0\n\nCacheman\n    ServerLimit           16                                                                                                                                                  \n    StartServers          4                                                                                                                                                   \n    MaxClients            75                                                                                                                                                  \n    ThreadLimit           64                                                                                                                                                  \n    MinSpareThreads       25                                                                                                                                                  \n    MaxSpareThreads       75                                                                                                                                                  \n    ThreadsPerChild       25                                                                                                                                                  \n    MaxRequestsPerChild   0       \n\n    postgresql://dbmaster:5433/mydb?sslmode=require\n    postgresql://ddsuperadmin:5432/oneatlas?sslmode=require",
-					"settings":
-					{
-						"buffer_size": 7238,
-						"line_ending": "Unix",
-						"name": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmi"
-					}
-				},
-				{
-					"contents": "/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 20 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29088 tiles, now at z16 x37602 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 238.7 seconds at 122.0 tiles/sec (122.0 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 2,2 --iteration-mode level-by-level                                              \nseeded 29008 tiles, now at z16 x37560 y41746                                                   \nseeded 7281 metatiles (29124 total tiles, 29124 non-empty tiles) in 204.6 seconds at 142.3 tiles/sec (142.3 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30192 tiles, now at z16 x37600 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 174.5 seconds at 173.4 tiles/sec (173.4 non-empty tiles/sec)\n\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 4,4 --iteration-mode level-by-level                                              \nseeded 30016 tiles, now at z16 x37552 y41744                                                   \nseeded 1891 metatiles (30256 total tiles, 30256 non-empty tiles) in 149.0 seconds at 203.1 tiles/sec (203.1 non-empty tiles/sec)\nload 22\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 32 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 8,8 --iteration-mode level-by-level                                              \nseeded 32512 tiles, now at z16 x37576 y41744                                                   \nseeded 511 metatiles (32704 total tiles, 32704 non-empty tiles) in 151.9 seconds at 215.3 tiles/sec (215.3 non-empty tiles/sec)\nload 15\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset most-recent-spot-wm --grid 3857 --nthreads 24 --zoom 8,16 --extent 2872343.5797020057,5404603.596963465,2962340.7496962454,5490590.560354676 --metasize 8,8 --iteration-mode level-by-level                                              \nseeded 32576 tiles, now at z16 x37592 y41744                                                   \nseeded 511 metatiles (32704 total tiles, 32704 non-empty tiles) in 181.3 seconds at 180.4 tiles/sec (180.4 non-empty tiles/sec)\nload 20",
-					"settings":
-					{
-						"buffer_size": 3329,
-						"line_ending": "Unix",
-						"name": "/opt/i-cubed/bin/mapcache_seed --force --config /o"
-					}
-				},
-				{
-					"contents": "\n\nST_GeomFromText('MULTIPOLYGON(((-179.999 -89.999,-179.999 89.999,179.999 89.999,179.999 -89.999,-179.999 -89.999)))')",
-					"settings":
-					{
-						"buffer_size": 119,
+						"buffer_size": 6064,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"contents": "The thematic layers, from a cache processing point-of-view will be regarded as a new offer associated with a unique thematic_tag. These will be processed similar to the most_recent offer (AYCG or OneStack). When new items appear in the HERE catalog and sync'd to ADM, with the new thematic predicate. Via the new_asset_consumer, the ADM asset will be assigned to each offer logical collection according to the values in the thematic predicate.\n\nDatabase schema:\noffer.thematic_tag - Add field that defines the value associated with ADM predicate value for the thematic offer\nDatabase populate thematic offer:\nInsert new thematic offers: name, mapcache_tileset, thematic_tag etc\nNew Asset Consumer\nRespect the new ADM thematic predicate and values; for each value insert the asset into appropriate offer logical collection (offer_cutline)",
+					"contents": "CREATE TABLE padawan.subscription_user \nsubscription_id UUID NOT NULL, \nend_user_id UUID NOT NULL, \nPRIMARY KEY (subscription_id, end_user_id), \nFOREIGN KEY(subscription_id) REFERENCES padawan.subscription (id), \nFOREIGN KEY(end_user_id) REFERENCES public.identity (identity_id);",
 					"settings":
 					{
-						"buffer_size": 837,
+						"buffer_size": 279,
 						"line_ending": "Unix",
-						"name": "The thematic layers, from a cache processing point"
+						"name": "CREATE TABLE padawan.subscription_user"
 					}
 				},
 				{
-					"contents": "x,y: -95.0742 39.5907 \nz-cache-w-mome",
+					"contents": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))\nMULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))\n\nSELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer JOIN padawan.offer_cutline ON padawan.offer.id = padawan.offer_cutline.offer_id \nWHERE padawan.offer_cutline.is_published = 'false' AND \npadawan.offer_cutline.is_locked = 'false' AND \npadawan.offer_cutline.is_archived = 'false' AND \npadawan.offer_cutline.is_deleted = 'false' AND \npadawan.offer.is_managed_cache = 'true' AND \npadawan.offer.active = 'true' AND \n(padawan.offer_cutline.adm_geometry && ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))'));\n\nSELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer_cutline \nWHERE padawan.offer_cutline.is_published = 'false' AND \npadawan.offer_cutline.is_locked = 'false' AND \npadawan.offer_cutline.is_archived = 'false' AND \npadawan.offer_cutline.is_deleted = 'false' AND \npadawan.offer_cutline.offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' AND\n(padawan.offer_cutline.adm_geometry && ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))'));\n\n\n",
 					"settings":
 					{
-						"buffer_size": 37,
+						"buffer_size": 4206,
 						"line_ending": "Unix",
-						"name": "x,y: -95.0742 39.5907"
+						"name": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9"
 					}
 				},
 				{
-					"contents": "Create second Apache daemon\ncp -pr /etc/httpd /etc/httpd8080\n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /etc/httpd/conf/httpd.conf conf/httpd.conf                                                                                         \n--- /etc/httpd/conf/httpd.conf  2016-07-21 23:22:10.615920071 +0000\n+++ conf/httpd.conf     2016-07-22 17:38:56.780598634 +0000\n@@ -28,7 +28,8 @@\n # same ServerRoot for multiple httpd daemons, you will need to change at\n # least PidFile.\n #\n-ServerRoot \"/etc/httpd\"\n+ServerRoot \"/etc/httpd8080\"\n+PidFile \"run/httpd8080.pid\"\n \n #\n # Listen: Allows you to bind Apache to specific IP addresses and/or\n@@ -39,7 +40,7 @@\n # prevent Apache from glomming onto all bound IP addresses.\n #\n #Listen 12.34.56.78:80\n-Listen 80\n+Listen 8080\n \n #\n # Dynamic Shared Object (DSO) Support\n@@ -216,7 +217,7 @@\n     # (Combined Logfile Format) you can use the following directive.\n     #\n     #CustomLog \"logs/access_log\" combined\n-    CustomLog logs/access_log combined_w_resp\n+    CustomLog logs/8080access_log combined_w_resp\n </IfModule>\n \n <IfModule alias_module>\n\n### Important\nmv /etc/httpd8080/conf.d/ssl.conf to /etc/httpd8080/conf.d/ssl.conf-ignore\n\n# cp /etc/init.d/httpd /etc/init.d/httpd8080       ### Didn't work, doesn't exist.\n\ncp /usr/lib/systemd/system/httpd.service /etc/systemd/system/httpd8080.service     \n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /usr/lib/systemd/system/httpd.service /etc/systemd/system/httpd8080.service\n--- /usr/lib/systemd/system/httpd.service       2016-07-18 15:22:22.000000000 +0000\n+++ /etc/systemd/system/httpd8080.service       2016-07-22 17:43:57.488412776 +0000\n@@ -6,7 +6,8 @@\n \n [Service]\n Type=notify\n-EnvironmentFile=/etc/sysconfig/httpd\n+#EnvironmentFile=/etc/sysconfig/httpd\n+EnvironmentFile=/etc/sysconfig/httpd8080\n ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND\n ExecReload=/usr/sbin/httpd $OPTIONS -k graceful\n ExecStop=/bin/kill -WINCH ${MAINPID}\n\n\ncp /etc/sysconfig/httpd /etc/sysconfig/httpd8080                                   \n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /etc/sysconfig/httpd /etc/sysconfig/httpd8080\n--- /etc/sysconfig/httpd        2016-07-18 15:22:22.000000000 +0000\n+++ /etc/sysconfig/httpd8080    2016-07-22 17:19:25.702941620 +0000\n@@ -14,7 +14,7 @@\n # To pass additional options (for instance, -D definitions) to the\n # httpd binary at startup, set OPTIONS here.\n #\n-#OPTIONS=\n+OPTIONS=\"-d /etc/httpd8080\"\n\n\ncp /usr/sbin/apachectl /usr/sbin/apachectl8080\n# Edits\n[root@rhow-cacheman httpd8080]# diff -ruNa /usr/sbin/apachectl /usr/sbin/apachectl8080\n--- /usr/sbin/apachectl 2016-07-18 15:30:10.000000000 +0000\n+++ /usr/sbin/apachectl8080     2016-07-22 17:43:49.533407030 +0000\n@@ -56,11 +56,11 @@\n #\n # the URL to your server's mod_status status page.  If you do not\n # have one, then status and fullstatus will not work.\n-STATUSURL=\"http://localhost:80/server-status\"\n+STATUSURL=\"http://localhost:8080/server-status\"\n \n # Source /etc/sysconfig/httpd for $HTTPD setting, etc.\n-if [ -r /etc/sysconfig/httpd ]; then\n-   . /etc/sysconfig/httpd\n+if [ -r /etc/sysconfig/httpd8080 ]; then\n+   . /etc/sysconfig/httpd8080\n fi\n\n",
+					"contents": "select count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593))'));\n\nMULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))",
 					"settings":
 					{
-						"buffer_size": 3153,
+						"buffer_size": 3173,
 						"line_ending": "Unix",
-						"name": "Create second Apache daemon"
+						"name": "select count(*) from padawan.offer_cutline where o"
+					}
+				},
+				{
+					"contents": "select count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593))'));\n\n\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and ST_Intersects(padawan.offer_cutline.adm_geometry, ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))', 4326));\n\nhttp://104.197.10.99/cgi-bin/mapserv.fcgi?map=/var/www/html/mapfiles/nwp_wm_v2_gcp.map&LAYERS=nwp_wm_l1&FORMAT=image%2Fjpeg&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A3857&BBOX=2.4214386940002e-7,2.4214386940002e-7,5009377.0856976,5009377.0856976&WIDTH=256&HEIGHT=256\n\nhttp://104.154.166.194:6080/arcgis/services/nwp_wm/ImageServer/WMSServer?LAYERS=nwp_wm&FORMAT=image%2Fjpeg&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A3857&BBOX=-9079495.9678261,2035059.4410648,-8922952.9338981,2191602.4749928&WIDTH=256&HEIGHT=256",
+					"settings":
+					{
+						"buffer_size": 3905,
+						"line_ending": "Unix",
+						"name": "select count(*) from padawan.offer_cutline where o"
+					}
+				},
+				{
+					"contents": "18:20:58.000\nJan 30 18:20:58 localhost kernel: mapcache_seed[28138]: segfault at 0 ip 00007f99b3b7ef34 sp 00007f99a85f8b00 error 6 in libmapcache.so.1.5dev[7f99b3b45000+52000]\n {\n textPayload: \"Jan 30 18:20:58 localhost kernel: mapcache_seed[28138]: segfault at 0 ip 00007f99b3b7ef34 sp 00007f99a85f8b00 error 6 in libmapcache.so.1.5dev[7f99b3b45000+52000]\"   \n insertId: \"1lfyuigg3qlvkga\"   \n resource: {\n  type: \"gce_instance\"    \n  labels: {\n   instance_id: \"3507064129143848825\"     \n   zone: \"europe-west1-b\"     \n   project_id: \"one-atlas-i3\"     \n  }\n }\n timestamp: \"2017-01-30T18:20:58Z\"   \n labels: {\n  compute.googleapis.com/resource_name: \"z-cache-g-hjoe\"    \n  compute.googleapis.com/resource_type: \"instance\"    \n  compute.googleapis.com/resource_id: \"3507064129143848825\"    \n }\n logName: \"projects/one-atlas-i3/logs/syslog\"   \n}",
+					"settings":
+					{
+						"buffer_size": 843,
+						"line_ending": "Unix",
+						"name": "18:20:58.000"
+					}
+				},
+				{
+					"contents": "\nMaster\n* Creating slug that's not currently being used\n** Check worker_api.getinstance()\n* \n\nuse hostname = hostname.split('.')[0] through out CacheDal\n\nmove app_settings to project metadata\n* image\n* max_cache, max_cache_wm, max_cache_delete,\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset thematic-defence-wm --grid 3857 --nthreads 32 --zoom 8,18 --extent -906372.828347072,1408615.8010986098,-885865.8197428612,1427985.1136020997 --metasize 8,8 --iteration-mode level-by-level\n\nfailed to seed tile z15,x15656,y17552:\nwms request for tileset thematic-defence-wm returned an unsupported format:\n<?xml version='1.0' encoding=\"UTF-8\" standalone=\"no\" ?>\n<!DOCTYPE ServiceExceptionReport SYSTEM \"http://schemas.opengis.net/wms/1.1.1/exception_1_1_1.dtd\">\n<ServiceExceptionReport version=\"1.1.1\">\n<ServiceException code=\"LayerNotDefined\">\nmsWMSLoadGetMapParams(): WMS server error. Invalid layer(s) given in the LAYERS parameter. A layer might be disabled for this request. Check wms/ows_enable_request settings.\n</ServiceException>\n",
+					"settings":
+					{
+						"buffer_size": 1075,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "                                Table \"padawan.offer_cutline\"\n         Column         \n------------------------+-----------------------------+---------------------------------------\n id                     unique identifier of the cutline\n offer_id               the associated offer\n adm_xuid               adm_xuid asset id\n acquisition_date       aquisition date from ADM\n resolution_meters      resolution from ADM\n vehicle                constellation vehicle from ADM\n is_locked              is the cutline currently being processed\n is_published           is the cutline integrated into the geographic mosaic of the offer  \n is_archived            is the cutline buried and not visible in the content mosaic\n has_error              did an error occur during processing, geo and wm workers write here\n archived_date          date/time the cutline was archived\n last_updated           obsolete\n updated_by             obsolete\n cutline                geometry representing the delineation of visible pixels in the content  \n adm_geometry           original geometry from ADM\n last_modified          date/time when an attribute was modified, locked, published, \n modified_by            hostname of who modified it, specific cache worker or cache-master\n processing             statistics of geo processing: rate, total tiles, machine type (resources)  \n created_on             date/time when the cutline row was created\n is_wm_published        is the cutline integrated into the web mercator mosaic of the offer  \n processing_wm          statistics of WM processing: rate, total tiles, machine type (resources)  \n adm_xuid_offer_id_hash | hash of offer and adm_xuid, used as unique constraint \n is_deleted             is the cutline deleted",
+					"settings":
+					{
+						"buffer_size": 1744,
+						"line_ending": "Unix",
+						"name": "Table \"padawan.off"
+					}
+				},
+				{
+					"contents": "'57bb882feee3a2f76cb3ab465e148b6606785d67',\n'264b9a37a3a4676f06023262a4fe5416a17203e2',\n'9b33f541d0135bda9b5eaec164d4eb03d06ab3c7',\n'5b18cc62377c42d675442944fdac97a17eb68314',\n'3e856387ca2db12c82a78b92593cad880776e8aa',\n'59bd32ea636e72b80659fd832fb659ce2ddd851d',\n'5f433d7136122cf0a8dd879ba7544a744c3d1bc8',\n'3846891ed06af2e84dca39a3f29bed8929813d6e',\n'00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb',\n'675978711aa2a4dca5dc2a9578a1d0df6d30005b',\n'c90eec078adab09fd28b198f0b8f85e6a6b6cae6',\n'9017e0e35fe8bb6e0297533b00193494a21f3a82',\n'85aed29d080e3973ddbe13adfd5bf9c61f83cf8d',\n'675978711aa2a4dca5dc2a9578a1d0df6d30005b',\n'c90eec078adab09fd28b198f0b8f85e6a6b6cae6',\n'f3f9bdd03e2ebbc2a58c946907c33c167a7b0363',\n'45f892ea658dca264552fa3789e868fd3efebc1a',\n'e598bc975870519088a2fb691da4cb336afbf1c5',\n'00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb',\n'd04dfa8d3309f37641ac46f8506d07ad850941d3',\n'4ed7753122da1def16b06038b547a73716fccff4',\n'50917a68c377a14a0a6cb12acb71f87be886af17',\n'92e97e910f0d4277e64a6fab89c434f1c8d98b04',\n'8fc3c7effc01a11a69159ba4b3f63e4b7d59f8d5'",
+					"settings":
+					{
+						"buffer_size": 1054,
+						"line_ending": "Unix",
+						"name": "'57bb882feee3a2f76cb3ab465e148b6606785d67',"
+					}
+				},
+				{
+					"contents": "$ ./adm-id-to-xuid.sh adm_id_list.txt \n\nDS_PHR1B_201506072223434_FR1_PX_E174S37_0704_01728\n        \"xuid\": \"57bb882feee3a2f76cb3ab465e148b6606785d67\",\nDS_PHR1B_201506072223538_FR1_PX_E174S37_0902_02862\n        \"xuid\": \"264b9a37a3a4676f06023262a4fe5416a17203e2\",\nDS_PHR1B_201506072224061_FR1_PX_E174S37_1101_03114\n        \"xuid\": \"9b33f541d0135bda9b5eaec164d4eb03d06ab3c7\",\nDS_SPOT6_201605030845244_FR1_FR1_SE1_SE1_E016S11_01790\n        \"xuid\": \"5b18cc62377c42d675442944fdac97a17eb68314\",\nDS_SPOT7_201609250156222_FR1_FR1_SE1_SE1_E118S21_05687\n        \"xuid\": \"3e856387ca2db12c82a78b92593cad880776e8aa\",\nDS_SPOT7_201610210158487_FR1_FR1_SE1_SE1_E117S27_01871\n        \"xuid\": \"59bd32ea636e72b80659fd832fb659ce2ddd851d\",\nDS_SPOT6_201610280735339_FR1_FR1_SE1_SE1_E035S09_01871\n        \"xuid\": \"5f433d7136122cf0a8dd879ba7544a744c3d1bc8\",\nDS_SPOT6_201610280735480_FR1_FR1_SE1_SE1_E035S10_01871\n        \"xuid\": \"3846891ed06af2e84dca39a3f29bed8929813d6e\",\nDS_SPOT7_201610280825585_FR1_FR1_FR1_FR1_E022S12_01871\n        \"xuid\": \"00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb\",\nDS_SPOT6_201610290817101_FR1_FR1_FR1_FR1_E024S12_06012\n        \"xuid\": \"675978711aa2a4dca5dc2a9578a1d0df6d30005b\",         \"xuid\": \"c90eec078adab09fd28b198f0b8f85e6a6b6cae6\",\nDS_SPOT7_201610300810597_FR1_FR1_FR1_FR1_E026S12_02683\n        \"xuid\": \"9017e0e35fe8bb6e0297533b00193494a21f3a82\",\nDS_SPOT7_201610310707556_FR1_FR1_FR1_FR1_E044N07_01790\n        \"xuid\": \"85aed29d080e3973ddbe13adfd5bf9c61f83cf8d\",\nDS_SPOT6_201610290817101_FR1_FR1_FR1_FR1_E024S12_06012\n        \"xuid\": \"675978711aa2a4dca5dc2a9578a1d0df6d30005b\",         \"xuid\": \"c90eec078adab09fd28b198f0b8f85e6a6b6cae6\",\nDS_SPOT6_201610290818245_FR1_FR1_FR1_FR1_E023S13_03170\n        \"xuid\": \"f3f9bdd03e2ebbc2a58c946907c33c167a7b0363\",         \"xuid\": \"45f892ea658dca264552fa3789e868fd3efebc1a\",\nDS_SPOT6_201610270832370_FR1_FR1_FR1_FR1_E021S13_05768\n        \"xuid\": \"e598bc975870519088a2fb691da4cb336afbf1c5\",\nDS_SPOT7_201610280825585_FR1_FR1_FR1_FR1_E022S12_01871\n        \"xuid\": \"00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb\",\nDS_SPOT6_201611010843157_FR1_FR1_FR1_FR1_E018S10_05930\n        \"xuid\": \"d04dfa8d3309f37641ac46f8506d07ad850941d3\",\nDS_SPOT6_201611010844127_FR1_FR1_FR1_FR1_E017S11_01871\n        \"xuid\": \"4ed7753122da1def16b06038b547a73716fccff4\",\nDS_SPOT6_201611010844292_FR1_FR1_FR1_FR1_E016S11_01871\n        \"xuid\": \"50917a68c377a14a0a6cb12acb71f87be886af17\",\nDS_SPOT6_201611020747356_FR1_FR1_FR1_FR1_E030S12_01871\n        \"xuid\": \"92e97e910f0d4277e64a6fab89c434f1c8d98b04\",\nDS_SPOT6_201610310802466_FR1_FR1_FR1_FR1_E028S11_01871\n        \"xuid\": \"8fc3c7effc01a11a69159ba4b3f63e4b7d59f8d5\",",
+					"settings":
+					{
+						"buffer_size": 2622,
+						"line_ending": "Unix",
+						"name": "$ ./adm-id-to-xuid.sh adm_id_list.txt"
 					}
 				}
 			],
@@ -1643,20 +1615,35 @@
 			"expanded_folders":
 			[
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/run",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/wms",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/wms/gce"
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder"
 			],
 			"file_history":
 			[
+				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed-phr.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed.txt",
+				"/home/local/I3/rhow/tmp/zero-touched-bboxes.txt",
+				"/home/local/I3/rhow/tmp/Serial console output for database-1.txt",
+				"/home/local/I3/rhow/tmp/cache-w-list.txt",
+				"/home/local/I3/rhow/tmp/delete-segments-uids-13809.txt",
+				"/home/local/I3/rhow/tmp/padawan-created-on-20141114.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/misc/adm_xuid_list.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/padawan-test-geom.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines.json",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-docker.txt",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-qual.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/topological_error_20161005.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines-20160929.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/errors.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines2.json",
 				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
@@ -1759,31 +1746,11 @@
 				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
 				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
 				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.consul.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver2.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul.client",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/templates/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.internet.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq_d.file.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/README.md",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml"
+				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml"
 			],
 			"find":
 			{
-				"height": 38.0
+				"height": 60.0
 			},
 			"find_in_files":
 			{
@@ -1823,6 +1790,86 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"\n",
+					"'",
+					",(",
+					"\n",
+					"POLYLGON",
+					"POYLGON",
+					")),",
+					"),(",
+					"%(",
+					"AND ",
+					"\n",
+					",",
+					"\n",
+					"\",         \"xuid\": \"",
+					"\n        \"xuid\": \"",
+					"DS_",
+					"|",
+					"| ",
+					"File \"",
+					"SIZE",
+					"BLOCKS",
+					"subprocess",
+					"gdal_tran",
+					"gdaltr",
+					"comp_val",
+					"DataFile",
+					"GDAL_DATA",
+					"GDAL_PATH",
+					"\"${INSTANCE_NAME}\"",
+					"MINSCALE",
+					"'",
+					" , '",
+					", '",
+					", ' ",
+					", '",
+					"  ",
+					"|",
+					"                  ",
+					"\\n\\t",
+					"=\"mosaic-mercator",
+					"cached-mosaic-geo",
+					"global-wms",
+					"most-recent-spot",
+					"gdal",
+					"z-",
+					"\n",
+					"BOX(",
+					" BOX",
+					"&amp;",
+					";",
+					"', '",
+					"('",
+					"\n",
+					"last_modified",
+					"is_published",
+					"'",
+					"is_published",
+					"cutline_ewkt",
+					"'has_error'",
+					"\n {",
+					" {",
+					", {",
+					"b_id",
+					"\"\"",
+					"False",
+					"True",
+					"<shapely.geometry.multipolygon.MultiPolygon object at",
+					"None",
+					"'",
+					"}, ",
+					", ",
+					"\\",
+					"), (",
+					"((",
+					"adm_geometry",
+					"'",
+					"\"b_id\": \"",
+					"\"cutline_geom\":",
+					"\n (",
+					"\n(",
 					"| ",
 					"|",
 					"', ' ",
@@ -1870,87 +1917,7 @@
 					"m-jpeg",
 					"sources-",
 					"mosaic-",
-					";",
-					"  \n",
-					"cacheman-worker",
-					"\n",
-					",",
-					":",
-					"completion_info",
-					"        ",
-					"\n",
-					">>> ",
-					", ",
-					",",
-					">>> ",
-					";",
-					"ZONE",
-					"\\n",
-					"discovery",
-					"    ",
-					"         ",
-					"\n",
-					"seeder",
-					"world",
-					"tif",
-					" | ",
-					" |",
-					"\\",
-					"=",
-					"- ",
-					"-",
-					"&",
-					" ",
-					"   ",
-					"\n",
-					" \n",
-					"     ",
-					"         ",
-					" \n",
-					"          ",
-					"https://www",
-					"          ",
-					"\n",
-					" ",
-					"  ",
-					"\n",
-					"          ",
-					"source_gdal",
-					")))",
-					"(((",
-					",",
-					"'id': ",
-					", 'id'",
-					"}, {",
-					"\n",
-					"...",
-					"root@padawan3-db-cl1:/var/lib/postgresql/governor",
-					",",
-					"    ",
-					"  6",
-					"  ",
-					"mpm_",
-					"    ",
-					"AS_SP_",
-					"DS_SPOT7_201506131822184_FR1_FR1_FR1_FR1_W120N38_06499",
-					",",
-					":",
-					"\\",
-					"WITH_",
-					"case",
-					"with",
-					"mapserver62",
-					"6.2",
-					":",
-					": ",
-					"data ",
-					"=",
-					"data",
-					"nearblack",
-					", ",
-					"\\",
-					",",
-					",\\\n "
+					";"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -1996,76 +1963,20 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1079,
+								"buffer_size": 781,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										962,
-										962
+										322,
+										322
 									]
 								],
 								"settings":
 								{
-									"auto_name": "Issues:",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 88.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 6,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 261,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										261,
-										261
-									]
-								],
-								"settings":
-								{
-									"auto_name": "r*.Fg!L92Ftu",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 5,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 251,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										251,
-										251
-									]
-								],
-								"settings":
-								{
-									"auto_name": "update",
+									"auto_name": "wget http://www.netfort.gr.jp/~dancer/software/dow",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
@@ -2073,7 +1984,64 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 4,
+							"stack_index": 9,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 6064,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2065,
+										2065
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/XML/XML.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 831.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 10,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 279,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"auto_name": "CREATE TABLE padawan.subscription_user",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 6,
 							"type": "text"
 						},
 						{
@@ -2081,20 +2049,20 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 815,
+								"buffer_size": 4206,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										704,
-										704
+										1649,
+										1649
 									]
 								],
 								"settings":
 								{
-									"auto_name": "SELECT count(padawan.offer_cutline.id) AS count_1",
+									"auto_name": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
@@ -2110,24 +2078,24 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 781,
+								"buffer_size": 3173,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										582,
-										582
+										2348,
+										2348
 									]
 								],
 								"settings":
 								{
-									"auto_name": "wget http://www.netfort.gr.jp/~dancer/software/dow",
+									"auto_name": "select count(*) from padawan.offer_cutline where o",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
-								"translation.x": 0.0,
+								"translation.x": 1014.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
@@ -2139,20 +2107,20 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 561,
+								"buffer_size": 3905,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										555,
-										555
+										3649,
+										3649
 									]
 								],
 								"settings":
 								{
-									"auto_name": "does not work:",
+									"auto_name": "select count(*) from padawan.offer_cutline where o",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
@@ -2168,27 +2136,27 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 240,
+								"buffer_size": 843,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										0
+										557,
+										557
 									]
 								],
 								"settings":
 								{
-									"auto_name": "git clone git@utility2:adm/adm.git -b release/4.5.",
+									"auto_name": "18:20:58.000",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 3,
+							"stack_index": 8,
 							"type": "text"
 						},
 						{
@@ -2196,101 +2164,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 629,
+								"buffer_size": 1075,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										629,
-										629
-									]
-								],
-								"settings":
-								{
-									"auto_name": "/opt/i-cubed/bin/mapcache_seed --force --config /o",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 13,
-							"type": "text"
-						},
-						{
-							"buffer": 8,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 7238,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										94,
-										94
-									]
-								],
-								"settings":
-								{
-									"auto_name": "[rhow@admin-lin ~]$ psql \"postgresql://ddsuperadmi",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 12,
-							"type": "text"
-						},
-						{
-							"buffer": 9,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 3329,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2959,
-										2959
-									]
-								],
-								"settings":
-								{
-									"auto_name": "/opt/i-cubed/bin/mapcache_seed --force --config /o",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 10,
-							"type": "text"
-						},
-						{
-							"buffer": 10,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 119,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2,
-										2
+										527,
+										527
 									]
 								],
 								"settings":
@@ -2307,87 +2189,88 @@
 							"type": "text"
 						},
 						{
-							"buffer": 11,
+							"buffer": 8,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 837,
+								"buffer_size": 1744,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										837,
-										837
+										1744,
+										1744
 									]
 								],
 								"settings":
 								{
-									"auto_name": "The thematic layers, from a cache processing point",
+									"auto_name": "Table \"padawan.off",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 9,
+							"stack_index": 5,
 							"type": "text"
 						},
 						{
-							"buffer": 12,
+							"buffer": 9,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 37,
+								"buffer_size": 1054,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										37,
-										37
+										1012,
+										1012
 									]
 								],
 								"settings":
 								{
-									"auto_name": "x,y: -95.0742 39.5907",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
+									"auto_name": "'57bb882feee3a2f76cb3ab465e148b6606785d67',",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": false
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 8,
+							"stack_index": 3,
 							"type": "text"
 						},
 						{
-							"buffer": 13,
+							"buffer": 10,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3153,
+								"buffer_size": 2622,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										27,
-										27
+										1872,
+										1872
 									]
 								],
 								"settings":
 								{
-									"auto_name": "Create second Apache daemon",
+									"auto_name": "$ ./adm-id-to-xuid.sh adm_id_list.txt",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 11,
+							"stack_index": 4,
 							"type": "text"
 						}
 					]
@@ -2975,7 +2858,7 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": false,
-			"side_bar_width": 364.0,
+			"side_bar_width": 462.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
