@@ -15,6 +15,7 @@ alias les='less'
 alias bc='/usr/bin/bc -l'
 alias emacs='/usr/bin/emacs24-nox'
 alias df='/bin/df -h'
+alias ip4='ip a | ag inet| grep -v inet6'
 
 # GIT Aliases
 alias g='git'
@@ -30,12 +31,15 @@ alias v='vagrant'
 
 # Docker
 alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias drmi='docker rmi'
 alias dimages='docker images'
 alias dips='docker ps | tail -n +2 | while read -a a; do name=${a[$((${#a[@]}-1))]}; echo -ne "$name\t"; docker inspect $name | grep IPAddress | cut -d \" -f 4; done'
 
 alias dualscreen='sh ~/bin/dualscreen.sh'
 alias singlescreen='sh ~/bin/singlescreen.sh'
 alias offscreen='sleep 2; xset dpms force off'
+alias usb-reset='sudo modprobe -r usbhid'
 
 alias agi='sudo apt-get install'
 alias agu='sudo apt-get update && sudo apt-get dist-upgrade -y'

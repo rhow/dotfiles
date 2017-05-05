@@ -18,3 +18,12 @@ export OS_USERNAME="rhow"
 export OS_PASSWORD=gcopenstack
 export OS_REGION_NAME="regionOne"
 if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
+
+# Load pyenv automatically by adding
+# the following to ~/.bash_profile:
+export PATH="$PATH:/home/local/I3/rhow/.pyenv/bin"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+source <(kubectl completion bash)
+

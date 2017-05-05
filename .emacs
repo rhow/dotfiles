@@ -58,6 +58,24 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
+;; ==== Indention functions
+(defun my-indent-region (N)
+  (interactive "p")
+  (if (use-region-p)
+      (progn (indent-rigidly (region-beginning) (region-end) (* N +2))
+             (setq deactivate-mark nil))
+    (self-insert-command N)))
+
+(defun my-unindent-region (N)
+  (interactive "p")
+  (if (use-region-p)
+      (progn (indent-rigidly (region-beginning) (region-end) (* N -2))
+             (setq deactivate-mark nil))
+    (self-insert-command N)))
+
+(global-set-key ">" 'my-indent-region)
+(global-set-key "<" 'my-unindent-region)
+
 ; Example of how to specify control key:
 ; to redefine control-y to go to the start of the line (like control-a)
 ; (global-set-key "\C-y" 'beginning-of-line) 
