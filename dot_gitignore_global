@@ -6,3 +6,6 @@
 */#*#
 */#.*#
 commit-handler.out
+.idea/
+*.iml
+virtualenv/
