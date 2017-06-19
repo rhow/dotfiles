@@ -55,12 +55,7 @@ alias i3vpn='sh ~/bin/netExtender.sh'
 alias tail-syslog='sudo tail -f /var/log/syslog'
 
 alias enable_alert='PS1="$PS1\a"'
-alias idea='bash ~/Programs/idea/bin/idea.sh &'
 
-alias ku='knife cookbook upload -E ceph-and-ha-budd3'
-alias kt='knife cookbook test'
-alias fu='knife environment edit ceph-and-ha-budd3'
-alias eu='knife data bag edit passwords'
 alias xclip='xclip -selection c'
 alias tocb='function _tocb(){ echo "$1"| xclip; };_tocb'
 
@@ -81,7 +76,8 @@ alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keyco
 alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
 
-alias net-test='speedtest-cli --server 1101 --simple'
+# alias net-test='speedtest-cli --server 1101 --simple'
+alias net-speed='echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh && ./speedtest.sh --simple && rm ./speedtest.sh)"'
 
 # Google
 alias glist='gcloud compute instances list | ag'
@@ -89,3 +85,4 @@ alias gimages='gcloud compute images list | ag'
 # alias gssh="function _gssh(){ echo $(glist $1 | awk '{print $5}'); };_gssh"
 alias gssh='~/bin/google-ssh.sh'
 alias gconfig='gcloud config list'
+alias kconfig='kubectl config get-contexts'
