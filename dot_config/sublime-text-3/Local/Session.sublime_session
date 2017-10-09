@@ -1,6 +1,8 @@
 {
 	"folder_history":
 	[
+		"/home/local/I3/rhow/git-repos/angular-quickstart",
+		"/home/local/I3/rhow/git-repos/kubernetes-kubernetes/examples/spark",
 		"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer",
 		"/home/local/I3/rhow/projects-django/padawan-cache-management-ui",
 		"/home/local/I3/rhow/projects-django/padawan-cache-management",
@@ -45,8 +47,8 @@
 		"/home/likewise-open/I3/rhow/projects/sailsjs-v10-angularjs-requirejs-boilerplate",
 		"/home/likewise-open/I3/rhow/projects/mapcache-testing"
 	],
-	"last_version": 3126,
-	"last_window_id": 67,
+	"last_version": 3143,
+	"last_window_id": 71,
 	"log_indexing": false,
 	"settings":
 	{
@@ -57,6 +59,30 @@
 			{
 				"selected_items":
 				[
+					[
+						"MAP",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"map",
+						"mapserver-"
+					],
+					[
+						"M",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"curl",
+						"CURL_VERSION"
+					],
+					[
+						"C",
+						"CURL_VERSION"
+					],
+					[
+						"GEOS",
+						"GEOS_VERSION"
+					],
 					[
 						"conf",
 						"config"
@@ -339,6 +365,77 @@
 			},
 			"file_history":
 			[
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/Dockerfile.centos",
+				"/home/local/I3/rhow/git-repos/kubernetes_gcp-project-tools/projects.txt",
+				"/home/local/I3/rhow/tmp/dd-projects2.txt",
+				"/home/local/I3/rhow/git-repos/mapserver_mapcache/Dockerfile.ubuntu",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/users-base64.txt",
+				"/home/local/I3/rhow/projects/docker-ms/deployment.yaml",
+				"/home/local/I3/rhow/git-repos/kubernetes_docker-util-box/deployment.yaml",
+				"/home/local/I3/rhow/Downloads/rc-asian-cities.map",
+				"/home/local/I3/rhow/Downloads/ads-test.map",
+				"/home/local/I3/rhow/Downloads/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-ms/mapcache/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/database/insert_jobs.sql",
+				"/home/local/I3/rhow/git-repos/dd-optimize/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer_org.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/start.sh",
+				"/home/local/I3/rhow/projects/goog_training_20170530/notes.txt",
+				"/home/local/I3/rhow/projects/goog_training_20170530/nginx.yaml",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/pithos.txt",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/annotation-server-layer-ids.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/install-mapserver-mapcache.sh",
+				"/home/local/I3/rhow/Documents/Ubuntu upgrade to 16.0.4.2",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/virtualenv/local/lib/python2.7/site-packages/_pytest/config.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq2.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted.txt",
+				"/home/local/I3/rhow/projects/gcp-ms-deploy/deployment.yaml",
+				"/home/local/I3/rhow/tmp/ms-dep.txt",
+				"/home/local/I3/rhow/tmp/ms-dep2.txt",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching.html",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching-wm.html",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
+				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed-phr.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed.txt",
+				"/home/local/I3/rhow/tmp/zero-touched-bboxes.txt",
+				"/home/local/I3/rhow/tmp/Serial console output for database-1.txt",
+				"/home/local/I3/rhow/tmp/cache-w-list.txt",
+				"/home/local/I3/rhow/tmp/delete-segments-uids-13809.txt",
+				"/home/local/I3/rhow/tmp/padawan-created-on-20141114.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/misc/adm_xuid_list.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/padawan-test-geom.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines.json",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-docker.txt",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-qual.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/topological_error_20161005.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines-20160929.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/errors.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines2.json",
+				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
+				"/home/local/I3/rhow/tmp/gcp-response.json",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example-orig/public/index.html",
+				"/home/local/I3/rhow/tmp/cacheman-worker-log-invalid-geometry.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/master-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/create-master-image.sh",
+				"/tmp/data/offer_cutline.txt",
 				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
 				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
@@ -395,114 +492,17 @@
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-				"/home/local/I3/rhow/Downloads/download",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/etc.resolv.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults/main.yml",
-				"/home/local/I3/rhow/Downloads/download2",
-				"/home/local/I3/rhow/Downloads/WCSServer",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/Vagrantfile",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/Downloads/mapserv",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/ansible.cfg",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/meta/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/vars/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/centos.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/group_vars/all.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapcache.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.consul.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/service-mapserver2.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul.client",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/templates/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq.internet.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/dnsmasq_d.file.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/templates/etc.sysconfig.consul",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/README.md",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/mapcache.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/i3build.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/httpd.conf-2.4",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/install-mapcache-code.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/handlers/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/templates/files/install-mapserver-code-6.2.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/rhow-ms/inventory/private.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/deploy-scripts/launch-ms.sh",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/build/open_root.yaml",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_12bit.html",
-				"/home/likewise-open/I3/rhow/Downloads/PADAWAN_Assets_GEO.html",
-				"/data/1/misc/padawan/testing/4a581f44-e444-44ec-bec0-87093302f896.map",
-				"/data/1/misc/padawan/testing/debug_padawan.txt"
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts"
 			],
 			"find":
 			{
-				"height": 30.0
+				"height": 37.0
 			},
 			"find_in_files":
 			{
 				"height": 93.0,
 				"where_history":
 				[
-					"*.js",
-					"*.rb",
-					"",
-					"/home/likewise-open/I3/rhow/projects,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,-*/.idea/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin/assets/templates/tileset",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/vendor/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*,*.html",
-					"*.html,/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"/home/likewise-open/I3/rhow/projects/mapcache-admin,-*/bower_components/*,-*/node_modules/*,-*/.tmp/*",
-					"*.html",
-					"-.tmp/*,-bowwer_components/*,-*.txt",
-					"-*tmp,-*bowwer_components,-*.txt",
-					"-.tmp/,-bowwer_components/,-*.txt",
-					"-.tmp/, -bowwer_components/",
-					"-.tmp/ -bowwer_components/",
-					"-.tmp/",
-					"-/.tmp",
-					"-/.tmp -/bower_components",
-					"-.tmp/ -/bower_components",
-					"-.tmp/",
-					"",
-					"/home/likewise-open/I3/rhow/projects/angularjs-book/chapter4/guthub/app",
-					""
 				]
 			},
 			"find_state":
@@ -510,151 +510,15 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					"world",
-					"tif",
-					" | ",
-					" |",
-					"\\",
-					"=",
-					"- ",
-					"-",
-					"&",
-					" ",
-					"   ",
-					"\n",
-					" \n",
-					"     ",
-					"         ",
-					" \n",
-					"          ",
-					"https://www",
-					"          ",
-					"\n",
-					" ",
-					"  ",
-					"\n",
-					"          ",
-					"source_gdal",
-					")))",
-					"(((",
-					",",
-					"'id': ",
-					", 'id'",
-					"}, {",
-					"\n",
-					"...",
-					"root@padawan3-db-cl1:/var/lib/postgresql/governor",
-					",",
-					"    ",
-					"  6",
-					"  ",
-					"mpm_",
-					"    ",
-					"AS_SP_",
-					"DS_SPOT7_201506131822184_FR1_FR1_FR1_FR1_W120N38_06499",
-					",",
-					":",
-					"\\",
-					"WITH_",
-					"case",
-					"with",
-					"mapserver62",
-					"6.2",
-					":",
-					": ",
-					"data ",
-					"=",
-					"data",
-					"nearblack",
-					", ",
-					"\\",
-					",",
-					",\\\n ",
-					"\\",
-					", ",
-					"target",
-					",\"",
-					"},",
-					"SqsConnection",
-					"boto",
-					"I3\\rhow@lap-31:~/Downloads/padawan_maptiler_workflow",
-					"  ",
-					":",
-					"    ",
-					"   ",
-					"\n\n",
-					"# ",
-					"  ",
-					"    ",
-					"\n",
-					"echo",
-					"\\",
-					"  ",
-					"\n",
-					"1715",
-					"  ",
-					"\n",
-					"*",
-					"\n",
-					"+",
-					",",
-					"  ",
-					"/data/1/misc/padawan/set_download/",
-					"p1-ftp-download1: /cifs/data/set-download/",
-					"'git",
-					"id",
-					"Get:79 http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main ",
-					"100 packets",
-					"ansible_ssh_host",
-					"MapRequest: a7c072bc-4483-4b7f-b1b8-d44ba2c7469a",
-					"DataDoors.Api.Server.Streaming.ServerMapRequest.AddAudit;",
-					"[626] INFO",
-					"C:\\logs\\DataDoors\\Streaming-Streaming.txt",
-					"padawan2",
-					"keepalived_router_id",
-					"datetime",
-					" ",
-					"  ",
-					":",
-					"10.200.60",
-					"red-",
-					"pip",
-					"auth",
-					"padawan_redis",
-					"padawan-ogc",
-					"1",
-					"Rittwager",
-					"temp",
-					"{{",
-					"{",
-					"{{",
-					"files/",
-					"- name:",
-					"needed_rpm",
-					"font",
-					"size",
-					"configure",
-					"denied",
-					"  ",
-					"- ",
-					" "
+					"displ",
+					"hd"
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": true,
-				"regex": false,
+				"regex": true,
 				"replace_history":
 				[
-					"padawan2-",
-					"",
-					"&\\n",
-					"&",
-					"&\\n",
-					"&/n",
-					"OFF",
-					"\", \"",
-					"tileset",
-					"Tileset"
 				],
 				"reverse": false,
 				"show_context": true,
@@ -664,7 +528,7 @@
 			},
 			"incremental_find":
 			{
-				"height": 30.0
+				"height": 28.0
 			},
 			"input":
 			{
@@ -694,7 +558,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 56.0
+				"height": 52.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -1212,11 +1076,11 @@
 				],
 				"width": 0.0
 			},
-			"show_minimap": true,
+			"show_minimap": false,
 			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 382.0,
+			"side_bar_visible": false,
+			"side_bar_width": 462.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
@@ -1231,6 +1095,30 @@
 			{
 				"selected_items":
 				[
+					[
+						"MAP",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"map",
+						"mapserver-"
+					],
+					[
+						"M",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"curl",
+						"CURL_VERSION"
+					],
+					[
+						"C",
+						"CURL_VERSION"
+					],
+					[
+						"GEOS",
+						"GEOS_VERSION"
+					],
 					[
 						"conf",
 						"config"
@@ -1340,100 +1228,68 @@
 			"buffers":
 			[
 				{
-					"contents": "wget http://www.netfort.gr.jp/~dancer/software/downloads/dsh-0.22.0.tar.gz\ntar xfz dsh-0.22.0.tar.gz\ncd dsh-*\n./configure ; make \nmake install\n\nupdate connection set host = 'database-1', schema = 'oneatlas', login = 'ddsuperadmin', password = 'xich7Phaein7Ieb0Ja3Aechi', port = '5432' where conn_id = 'postgres_default';\n\ndD@taD0oR$\n\nselect * from streaming_audit sa\nwhere sa.image_width > 0 and sa.image_height > 0 and\nsa.image_width != 501 and sa.image_height != 501 and\nsa.context_url ilike '%=getm%' and\nsa.audit_date > '2016-08-29 02:00' and sa.audit_date < '2016-08-29 03:00';\n\n\nles-only        print rows onl\n\npsql -h dbslive.datadoors.net -U ddsuperadmin datadoors_live268 -F '\\t' -o /root/wms-test.txt -t -c 'select * from product;'\n\nsed \"s/|/\\t\\g\" test.csv >> newtest.csv",
+					"contents": "kubectl autoscale deployment dd-optimizer --cpu-percent=50 --min=1 --max=4 deployment \"dd-optimizer\" autoscaled\n\n\n* secret for REDIS, \n* secret for auth JSON, why is this needed?\n* docker push optimizer to GCP\n* deploy to GCP\n** start with while-true\n* monitor.py to put msgs in queue\n** part of data-mapping\n* change queue name: \n** dd-optimize to tiff-cache\n** \n\nContainer for each format\n\n\ndata-mapping-status table\nformat: tiff-cache, tiff-slap, mrf-lerc\ninventory_query: [\n* [select name from inventory where name = ] \n* => 'data/1/dd/streaming/i3/nwp/' \n* [and  FINALIZED;]\n\nUI for this database\n* present count on query prior to submit\n\nqueue per \"format:dataset\" ? \n** select REDIS on key wildcard 'tiff-cache*' ?\n** How does the worker know what queue to poll ?\ninitial size of queue, msgs PUT\nstatus of queue\n\nbatch process ==> insert data mappings\n* procject name\n* bucket names ?\n\nMonitor => adds tiff-cache queues\ntiff-cache-migration\n",
 					"settings":
 					{
-						"buffer_size": 781,
+						"buffer_size": 948,
 						"line_ending": "Unix",
-						"name": "wget http://www.netfort.gr.jp/~dancer/software/dow"
+						"name": "kubectl autoscale deployment dd-optimizer --cpu-pe"
 					}
 				},
 				{
-					"file": "/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
+					"contents": "To do\nlibcurl issue with mapservers, new build of mapserver, contact community\n\nAdd project paths to catalog.project_path\n- project_id\n- path\nunique project_id has many paths, linked to project table\ncreate table (columns, perms); get list; make insert statements\n\nMove dd-optimize to Kubernetes group in gitlabs\n",
 					"settings":
 					{
-						"buffer_size": 6064,
+						"buffer_size": 313,
+						"line_ending": "Unix",
+						"name": "To do"
+					}
+				},
+				{
+					"contents": "Redo dataset:\n0b65b98c-b72c-4617-a50d-8da5a4635ad8\n\nSELECT r.id, org_location \n  FROM catalog.dataset d, catalog.raster r \n  WHERE r.dataset_id = d.id AND\n  r.dataset_id = 'cd175c3b-408f-4f6a-b740-7930f5f9a3b4' AND\n  r.status -> 'source' = 'unknown' AND\n  d.process -> 'index' = 'completed';",
+					"settings":
+					{
+						"buffer_size": 291,
+						"line_ending": "Unix",
+						"name": "Redo dataset:"
+					}
+				},
+				{
+					"contents": "MAP\nEXTENT -80.6551638128871 28.5791501871129 -80.6515981871129 28.5827158128871\nIMAGECOLOR 255 255 255\nSIZE 1001 1001\nSTATUS ON\nUNITS DD\nNAME \"ddStreaming_2a49a373-1040-43d4-bb3b-55f12cd4e62a_\"\nRESOLUTION 96\n\n# SYMBOLSET \"symbol.sym\"\nPROJECTION\n  \"proj=longlat\" \"datum=WGS84\" \"pm=greenwich\" \"ellps=WGS84\" \"no_defs\"\nEND\n\nWEB\nMETADATA\n          bms_maxpixels     \"2250000\"\n          bms_chunk_width   \"1500\"\n          bms_chunk_height  \"1500\"\n          bms_overlap       \"200\"\n  END\n  TEMPLATE \"template.html\"\n  IMAGEPATH \"//dd-proto-valida/wms_img/\"\n  IMAGEURL \"http://www.datadoors.net/wms_img/\"\nEND\n\nCONFIG GDAL_DISABLE_READDIR_ON_OPEN \"YES\"\nCONFIG VSI_CACHE \"TRUE\"\nCONFIG CPL_VSIL_CURL_ALLOWED_EXTENSIONS \".tif,.msk\"\nCONFIG GDAL_HTTP_HEADER_FILE \"/google-token/auth.header\"\nCONFIG \"CPL_DEBUG\" \"ON\"\n\n  ##########################################################\n  #############     naip_fl_100_20150425 [Added: 2016/10/05 11:23:45]\n  ##########################################################\n  LAYER\n    NAME \"naip_fl_100_20150425\"\n    PROJECTION\n    \"proj=longlat\" \"ellps=WGS84\" \"datum=WGS84\" \"no_defs\"\n    END\n    PROCESSING \"RESAMPLE=AVERAGE\"\n    MAXSCALE 10000\n    SIZEUNITS PIXELS\n    STATUS DEFAULT\n    #DATA \"/tmp/naip_fl_100_2015_R11C30.tif\"\n    DATA \"/data/1/dd/streaming/tomtom/imagery/usda/naip_fl_100_20150425/vrt/naip_fl_100_2015_R11C30.vrt\"\n#    DATA \"/vsigs/3871edf1-6286-4c60-b89d-704dbb3ccac4/naip_fl_100_2015_R11C30.tif\"\n#    DATA \"/vsigs/rhow_ms_data_test/naip_fl_100_2015_R11C30.tif\"\n    # TILEINDEX \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n    # TILESRS \"src_srs\"\n    EXTENT -87.7521939 24.3866848 -79.8077031 31.1274718\n    TILEITEM \"location\"\n    TYPE RASTER\n    UNITS METERS\n  END\n\n  # LAYER\n  #   NAME \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n  #   CONNECTIONTYPE POSTGIS\n  #   CONNECTION \"host=pg-hosted-services dbname=streaming_content user=streaminguser password=r3ad0nly port=5432\"\n  #   DATA \"geom from catalog.raster using unique id using srid=4326\"\n  #   FILTER ([dataset_id] = '3871edf1-6286-4c60-b89d-704dbb3ccac4')\n  #   METADATA\n  #     \"wms_title\" \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n  #     \"wms_layer_group\" \"\"\n  #     \"wms_enable_request\" \"!GetCapabilities\"\n  #   END\n  #   TYPE POLYGON\n  #   STATUS OFF\n  #   PROCESSING \"CLOSE_CONNECTION=DEFER\"\n  #   PROJECTION\n  #     \"proj=longlat\" \"ellps=WGS84\" \"datum=WGS84\" \"no_defs\"\n  #   END\n  # END\n\nOUTPUTFORMAT\n  NAME jpeg\n  DRIVER \"AGG/JPEG\"\n  MIMETYPE \"image/jpeg\"\n  IMAGEMODE RGB\n  EXTENSION \"jpg\"\n  FORMATOPTION QUALITY=50\n  FORMATOPTION \"INTERLACE=OFF\"\nEND\n\nEND\n",
+					"file": "/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
+					"file_size": 2665,
+					"file_write_time": 131496484155614471,
+					"settings":
+					{
+						"buffer_size": 2665,
+						"line_ending": "Unix",
+						"name": "MAP"
+					}
+				},
+				{
+					"contents": "\ndd-ms-proxy features:\n- download fonts and symbols\n- support storage version of map: \"mapversion=12345\"\n- ensure support for openlayers template: \"?mode=browse&template=openlayers\" \n-- http://mapserver.org/cgi/openlayers.html\n\nCreate streaminguser user and pswd used for RO access to catalog.raster and dataset.extent\n\nCREATE USER streaminguser NOSUPERUSER NOCREATEDB NOCREATEROLE NOCREATEUSER NOINHERIT LOGIN PASSWORD 'r3ad0nly';\nGRANT USAGE ON SCHEMA catalog TO streaminguser;\nGRANT SELECT ON catalog.raster TO streaminguser;\nGRANT SELECT ON catalog.dataset TO streaminguser;\n\n6ee054a9-687b-46ff-aec8-09ef61874c48 - 20 rasters\n\nselect bucket, name\n from object_history WHERE event_type='OBJECT_FINALIZE'\n and name ilike 'data/1/dd/streaming/tomtom/imagery/asia_cities/ge1_bandanaira_050_20111005/%' limit 1000\n\n\n\nTODO: dd-streaming-migration\n\nNew database in GCP project: ads-ftc\n- create schema\n\nOptimize TomTom asian_cities\n-- Begin optimizing on Monday\n-- make catalog db, create schema, cred's\n-- cloudsql connection container\n-- tag and push images to gcp\n-- GCP YAML deployments\n-- implement work submition and progress\n---- update tomtom asian cities catalog.datasets with tomtom-project-id\n\nStreaming database update\n-- worker to rewrite MS dataset in dd.server_layer.layer_settings\n---- rewrite TILEINDEX to reference additional:\n---- MS LAYER to Postgres connection to catalog.raster plus FILTER\n\nRaster Indexing - Scale-able Pods\n- Catalog.dataset rasters created from TILEINDEX shapefile \n-- catalog.dataset URI exists in DMI db => dataset.status \"uri_exists\": 'true'\n-- Set dataset.status \"rasters\": \"INDEXING\"\n-- Locking catalog.dataset raster INDEXING, race condition\n---- update dataset set status.rasters \"INDEXING\" where status.rasters not \"INDEXING\"\n-- Check if catalog.raster.exists in DB\n-- Exists in staging, download\n\nlocalhost -U data_tracker_reader -p  data_migration_tracker\n\nCatalog Monitor:\n- Sync DD datasets to Catalog\n- Process Raster Shapefile Index\n-- If shapefile exists, check object storage or DMI\n-- Set Dataset.Status || Rasters: Processing, Done\n\nDataset.process: {\n  \"index\": \"unknown, unavailable, indexing, completed\"\n  \"status\": \"idle, submitting, submitted, processing, completed\"\n  \"error\": \"\"\n}\n\nDataset.process.index.unknown: initialized (inserted/created)\nDataset.process.index.unavailable: tileindex/data is not in object storage\nDataset.process.index.indexing: In progress of indexing tileindex shapefile, creating rasters\nDataset.process.index.completed: Indexing is done\nDataset.process.status.idle: initialized (inserted/created)\nDataset.process.status.submitting: submitting rasters to work queue\nDataset.process.status.submitted: finished submitting rasters to work queue\nDataset.process.status.processing: work_count is not 0\nDataset.process.status.completed: work_count equals raster count\nDataset.process.error: error/exception\nDataset.work_count: Updated when work is submitted; updated by Monitor\nDataset.progress: (remainging work) How many are in work queue, updated by monitor\n\n\nRaster.Status: {\n  \"source\": \"unknown, unavailable, processing, completed\"   # currently assigned during insert, status initial value \n  \"uri_new\": \"bucket/<path>/filename.tif\"\n  \"uri_old\": \"//data/1/<path>/filename.tif\"\n  \"error\": \"\"\n  \"duration\": \"total in seconds\"\n}\n\nWork Master: Tiff-Slab\n- If Project_ID is assigned to Dataset and it has Rasters\n-- Make bucket in Project\n-- Sumbit rasters for work\n\nWorker: Tiff-Slab\n- Update raster location to bucket path\n\nTiff-Cache\nHow do we know Tiff-Cache dataset is completely available?\n-- Keep checking DMI db if anymore rasters appear\nDoes worker have to update status on DMI record when completed?\n-- No, Check corresponding bucket count.\n\niptables -t nat -A PREROUTING -p tcp -d 10.0.0.132 --dport 5432 -j DNAT --to-destination 172.17.0.2:5432\n",
+					"settings":
+					{
+						"buffer_size": 3841,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"contents": "CREATE TABLE padawan.subscription_user \nsubscription_id UUID NOT NULL, \nend_user_id UUID NOT NULL, \nPRIMARY KEY (subscription_id, end_user_id), \nFOREIGN KEY(subscription_id) REFERENCES padawan.subscription (id), \nFOREIGN KEY(end_user_id) REFERENCES public.identity (identity_id);",
+					"file": "/home/local/I3/rhow/tmp/ms-mc-build.txt",
 					"settings":
 					{
-						"buffer_size": 279,
-						"line_ending": "Unix",
-						"name": "CREATE TABLE padawan.subscription_user"
-					}
-				},
-				{
-					"contents": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))\nMULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))\n\nSELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer JOIN padawan.offer_cutline ON padawan.offer.id = padawan.offer_cutline.offer_id \nWHERE padawan.offer_cutline.is_published = 'false' AND \npadawan.offer_cutline.is_locked = 'false' AND \npadawan.offer_cutline.is_archived = 'false' AND \npadawan.offer_cutline.is_deleted = 'false' AND \npadawan.offer.is_managed_cache = 'true' AND \npadawan.offer.active = 'true' AND \n(padawan.offer_cutline.adm_geometry && ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))'));\n\nSELECT count(padawan.offer_cutline.id) AS count_1 \nFROM padawan.offer_cutline \nWHERE padawan.offer_cutline.is_published = 'false' AND \npadawan.offer_cutline.is_locked = 'false' AND \npadawan.offer_cutline.is_archived = 'false' AND \npadawan.offer_cutline.is_deleted = 'false' AND \npadawan.offer_cutline.offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' AND\n(padawan.offer_cutline.adm_geometry && ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))'));\n\n\n",
-					"settings":
-					{
-						"buffer_size": 4206,
-						"line_ending": "Unix",
-						"name": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9"
-					}
-				},
-				{
-					"contents": "select count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593))'));\n\nMULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))",
-					"settings":
-					{
-						"buffer_size": 3173,
-						"line_ending": "Unix",
-						"name": "select count(*) from padawan.offer_cutline where o"
-					}
-				},
-				{
-					"contents": "select count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211))'));\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and (padawan.offer_cutline.adm_geometry && ST_GeomFromText('POLYGON ((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593))'));\n\n\nselect count(*) from padawan.offer_cutline where offer_id = '3e9dfec6-adec-4648-b431-b1538e07a7c9' and ST_Intersects(padawan.offer_cutline.adm_geometry, ST_GeomFromText('MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9252 43.1577, 0.9697 43.1577, 0.9697 44.0515)),((-8.0 12.0,-8.0 13.0,-7.0 13.0,-7.0 12.0,-8.0 12.0)),((-4.5538 57.7452, -1.6672 57.7452, -1.6672 56.561, -4.5538 56.561, -4.5538 57.7452)),((8.053 56.5716, 10.9863 56.5716, 10.9863 55.8445, 8.053 55.8445, 8.053 56.5716)),((7.164459 5.193526, 7.414398 5.193526, 7.414398 5.019811, 7.164459 5.019811, 7.164459 5.193526)),((-73.03 -13.07, -71.88 -13.07, -71.88 -13.67, -73.03 -13.67, -73.03 -13.07)),((-99.830704 32.506866, -99.630203 32.506866, -99.630203 32.377642, -99.830704 32.377642, -99.830704 32.506866)),((150.877991 -33.675211, 151.318817 -33.675211, 151.318817 -34.084512, 150.877991 -34.084512, 150.877991 -33.675211)),((-150.5786 61.5593, -149.4525 61.5593, -149.4525 60.8181, -150.5786 60.8181, -150.5786 61.5593)))', 4326));\n\nhttp://104.197.10.99/cgi-bin/mapserv.fcgi?map=/var/www/html/mapfiles/nwp_wm_v2_gcp.map&LAYERS=nwp_wm_l1&FORMAT=image%2Fjpeg&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A3857&BBOX=2.4214386940002e-7,2.4214386940002e-7,5009377.0856976,5009377.0856976&WIDTH=256&HEIGHT=256\n\nhttp://104.154.166.194:6080/arcgis/services/nwp_wm/ImageServer/WMSServer?LAYERS=nwp_wm&FORMAT=image%2Fjpeg&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A3857&BBOX=-9079495.9678261,2035059.4410648,-8922952.9338981,2191602.4749928&WIDTH=256&HEIGHT=256",
-					"settings":
-					{
-						"buffer_size": 3905,
-						"line_ending": "Unix",
-						"name": "select count(*) from padawan.offer_cutline where o"
-					}
-				},
-				{
-					"contents": "18:20:58.000\nJan 30 18:20:58 localhost kernel: mapcache_seed[28138]: segfault at 0 ip 00007f99b3b7ef34 sp 00007f99a85f8b00 error 6 in libmapcache.so.1.5dev[7f99b3b45000+52000]\n {\n textPayload: \"Jan 30 18:20:58 localhost kernel: mapcache_seed[28138]: segfault at 0 ip 00007f99b3b7ef34 sp 00007f99a85f8b00 error 6 in libmapcache.so.1.5dev[7f99b3b45000+52000]\"   \n insertId: \"1lfyuigg3qlvkga\"   \n resource: {\n  type: \"gce_instance\"    \n  labels: {\n   instance_id: \"3507064129143848825\"     \n   zone: \"europe-west1-b\"     \n   project_id: \"one-atlas-i3\"     \n  }\n }\n timestamp: \"2017-01-30T18:20:58Z\"   \n labels: {\n  compute.googleapis.com/resource_name: \"z-cache-g-hjoe\"    \n  compute.googleapis.com/resource_type: \"instance\"    \n  compute.googleapis.com/resource_id: \"3507064129143848825\"    \n }\n logName: \"projects/one-atlas-i3/logs/syslog\"   \n}",
-					"settings":
-					{
-						"buffer_size": 843,
-						"line_ending": "Unix",
-						"name": "18:20:58.000"
-					}
-				},
-				{
-					"contents": "\nMaster\n* Creating slug that's not currently being used\n** Check worker_api.getinstance()\n* \n\nuse hostname = hostname.split('.')[0] through out CacheDal\n\nmove app_settings to project metadata\n* image\n* max_cache, max_cache_wm, max_cache_delete,\n\n/opt/i-cubed/bin/mapcache_seed --force --config /opt/i-cubed/mapcache-seeder.xml --tileset thematic-defence-wm --grid 3857 --nthreads 32 --zoom 8,18 --extent -906372.828347072,1408615.8010986098,-885865.8197428612,1427985.1136020997 --metasize 8,8 --iteration-mode level-by-level\n\nfailed to seed tile z15,x15656,y17552:\nwms request for tileset thematic-defence-wm returned an unsupported format:\n<?xml version='1.0' encoding=\"UTF-8\" standalone=\"no\" ?>\n<!DOCTYPE ServiceExceptionReport SYSTEM \"http://schemas.opengis.net/wms/1.1.1/exception_1_1_1.dtd\">\n<ServiceExceptionReport version=\"1.1.1\">\n<ServiceException code=\"LayerNotDefined\">\nmsWMSLoadGetMapParams(): WMS server error. Invalid layer(s) given in the LAYERS parameter. A layer might be disabled for this request. Check wms/ows_enable_request settings.\n</ServiceException>\n",
-					"settings":
-					{
-						"buffer_size": 1075,
+						"buffer_size": 307,
+						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"contents": "                                Table \"padawan.offer_cutline\"\n         Column         \n------------------------+-----------------------------+---------------------------------------\n id                     unique identifier of the cutline\n offer_id               the associated offer\n adm_xuid               adm_xuid asset id\n acquisition_date       aquisition date from ADM\n resolution_meters      resolution from ADM\n vehicle                constellation vehicle from ADM\n is_locked              is the cutline currently being processed\n is_published           is the cutline integrated into the geographic mosaic of the offer  \n is_archived            is the cutline buried and not visible in the content mosaic\n has_error              did an error occur during processing, geo and wm workers write here\n archived_date          date/time the cutline was archived\n last_updated           obsolete\n updated_by             obsolete\n cutline                geometry representing the delineation of visible pixels in the content  \n adm_geometry           original geometry from ADM\n last_modified          date/time when an attribute was modified, locked, published, \n modified_by            hostname of who modified it, specific cache worker or cache-master\n processing             statistics of geo processing: rate, total tiles, machine type (resources)  \n created_on             date/time when the cutline row was created\n is_wm_published        is the cutline integrated into the web mercator mosaic of the offer  \n processing_wm          statistics of WM processing: rate, total tiles, machine type (resources)  \n adm_xuid_offer_id_hash | hash of offer and adm_xuid, used as unique constraint \n is_deleted             is the cutline deleted",
+					"contents": "/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R1C1-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/baltic_sea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/mediterranean_sea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R2C1-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R1C2-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/papua_new_guinea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/i3/esat/water_tile/world_15_32_48.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20070115_20110216_General1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/atlantic_europe_dbm_shd_2015_10.tif\n/data/1/dd/streaming/i3/modis/modis_5km/world.topo.bathy.200407_ov.tif\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R2C2-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20110216_20140125_Features1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/east_africa_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/indonesia_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/madagascar_seychelles_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/north_sea_ireland_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20110216_20140125_General1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/access_midstream/20150303/aerial_WV_Aerial_WV_030_20141001_i3tif/aerial_WV_Aerial_WV_030_20141001_i3tif_R01C03.tif\n/data/1/dd/streaming/spatialenergy/noble/20151015/airbus_seeps_global_na_20151001_shp/NE1_HR_LC_SR_W_DR.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20070115_20110216_Features1_UTMz38.tif",
 					"settings":
 					{
-						"buffer_size": 1744,
+						"buffer_size": 3061,
 						"line_ending": "Unix",
-						"name": "Table \"padawan.off"
-					}
-				},
-				{
-					"contents": "'57bb882feee3a2f76cb3ab465e148b6606785d67',\n'264b9a37a3a4676f06023262a4fe5416a17203e2',\n'9b33f541d0135bda9b5eaec164d4eb03d06ab3c7',\n'5b18cc62377c42d675442944fdac97a17eb68314',\n'3e856387ca2db12c82a78b92593cad880776e8aa',\n'59bd32ea636e72b80659fd832fb659ce2ddd851d',\n'5f433d7136122cf0a8dd879ba7544a744c3d1bc8',\n'3846891ed06af2e84dca39a3f29bed8929813d6e',\n'00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb',\n'675978711aa2a4dca5dc2a9578a1d0df6d30005b',\n'c90eec078adab09fd28b198f0b8f85e6a6b6cae6',\n'9017e0e35fe8bb6e0297533b00193494a21f3a82',\n'85aed29d080e3973ddbe13adfd5bf9c61f83cf8d',\n'675978711aa2a4dca5dc2a9578a1d0df6d30005b',\n'c90eec078adab09fd28b198f0b8f85e6a6b6cae6',\n'f3f9bdd03e2ebbc2a58c946907c33c167a7b0363',\n'45f892ea658dca264552fa3789e868fd3efebc1a',\n'e598bc975870519088a2fb691da4cb336afbf1c5',\n'00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb',\n'd04dfa8d3309f37641ac46f8506d07ad850941d3',\n'4ed7753122da1def16b06038b547a73716fccff4',\n'50917a68c377a14a0a6cb12acb71f87be886af17',\n'92e97e910f0d4277e64a6fab89c434f1c8d98b04',\n'8fc3c7effc01a11a69159ba4b3f63e4b7d59f8d5'",
-					"settings":
-					{
-						"buffer_size": 1054,
-						"line_ending": "Unix",
-						"name": "'57bb882feee3a2f76cb3ab465e148b6606785d67',"
-					}
-				},
-				{
-					"contents": "$ ./adm-id-to-xuid.sh adm_id_list.txt \n\nDS_PHR1B_201506072223434_FR1_PX_E174S37_0704_01728\n        \"xuid\": \"57bb882feee3a2f76cb3ab465e148b6606785d67\",\nDS_PHR1B_201506072223538_FR1_PX_E174S37_0902_02862\n        \"xuid\": \"264b9a37a3a4676f06023262a4fe5416a17203e2\",\nDS_PHR1B_201506072224061_FR1_PX_E174S37_1101_03114\n        \"xuid\": \"9b33f541d0135bda9b5eaec164d4eb03d06ab3c7\",\nDS_SPOT6_201605030845244_FR1_FR1_SE1_SE1_E016S11_01790\n        \"xuid\": \"5b18cc62377c42d675442944fdac97a17eb68314\",\nDS_SPOT7_201609250156222_FR1_FR1_SE1_SE1_E118S21_05687\n        \"xuid\": \"3e856387ca2db12c82a78b92593cad880776e8aa\",\nDS_SPOT7_201610210158487_FR1_FR1_SE1_SE1_E117S27_01871\n        \"xuid\": \"59bd32ea636e72b80659fd832fb659ce2ddd851d\",\nDS_SPOT6_201610280735339_FR1_FR1_SE1_SE1_E035S09_01871\n        \"xuid\": \"5f433d7136122cf0a8dd879ba7544a744c3d1bc8\",\nDS_SPOT6_201610280735480_FR1_FR1_SE1_SE1_E035S10_01871\n        \"xuid\": \"3846891ed06af2e84dca39a3f29bed8929813d6e\",\nDS_SPOT7_201610280825585_FR1_FR1_FR1_FR1_E022S12_01871\n        \"xuid\": \"00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb\",\nDS_SPOT6_201610290817101_FR1_FR1_FR1_FR1_E024S12_06012\n        \"xuid\": \"675978711aa2a4dca5dc2a9578a1d0df6d30005b\",         \"xuid\": \"c90eec078adab09fd28b198f0b8f85e6a6b6cae6\",\nDS_SPOT7_201610300810597_FR1_FR1_FR1_FR1_E026S12_02683\n        \"xuid\": \"9017e0e35fe8bb6e0297533b00193494a21f3a82\",\nDS_SPOT7_201610310707556_FR1_FR1_FR1_FR1_E044N07_01790\n        \"xuid\": \"85aed29d080e3973ddbe13adfd5bf9c61f83cf8d\",\nDS_SPOT6_201610290817101_FR1_FR1_FR1_FR1_E024S12_06012\n        \"xuid\": \"675978711aa2a4dca5dc2a9578a1d0df6d30005b\",         \"xuid\": \"c90eec078adab09fd28b198f0b8f85e6a6b6cae6\",\nDS_SPOT6_201610290818245_FR1_FR1_FR1_FR1_E023S13_03170\n        \"xuid\": \"f3f9bdd03e2ebbc2a58c946907c33c167a7b0363\",         \"xuid\": \"45f892ea658dca264552fa3789e868fd3efebc1a\",\nDS_SPOT6_201610270832370_FR1_FR1_FR1_FR1_E021S13_05768\n        \"xuid\": \"e598bc975870519088a2fb691da4cb336afbf1c5\",\nDS_SPOT7_201610280825585_FR1_FR1_FR1_FR1_E022S12_01871\n        \"xuid\": \"00230de7fe7f8eeac5e4b8d3090d47c5eaa90eeb\",\nDS_SPOT6_201611010843157_FR1_FR1_FR1_FR1_E018S10_05930\n        \"xuid\": \"d04dfa8d3309f37641ac46f8506d07ad850941d3\",\nDS_SPOT6_201611010844127_FR1_FR1_FR1_FR1_E017S11_01871\n        \"xuid\": \"4ed7753122da1def16b06038b547a73716fccff4\",\nDS_SPOT6_201611010844292_FR1_FR1_FR1_FR1_E016S11_01871\n        \"xuid\": \"50917a68c377a14a0a6cb12acb71f87be886af17\",\nDS_SPOT6_201611020747356_FR1_FR1_FR1_FR1_E030S12_01871\n        \"xuid\": \"92e97e910f0d4277e64a6fab89c434f1c8d98b04\",\nDS_SPOT6_201610310802466_FR1_FR1_FR1_FR1_E028S11_01871\n        \"xuid\": \"8fc3c7effc01a11a69159ba4b3f63e4b7d59f8d5\",",
-					"settings":
-					{
-						"buffer_size": 2622,
-						"line_ending": "Unix",
-						"name": "$ ./adm-id-to-xuid.sh adm_id_list.txt"
+						"name": "/data/1/dd/streaming/spatialenergy/exxonmobil/2010"
 					}
 				}
 			],
@@ -1615,10 +1471,46 @@
 			"expanded_folders":
 			[
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder"
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce"
 			],
 			"file_history":
 			[
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/Dockerfile.centos",
+				"/home/local/I3/rhow/git-repos/kubernetes_gcp-project-tools/projects.txt",
+				"/home/local/I3/rhow/tmp/dd-projects2.txt",
+				"/home/local/I3/rhow/git-repos/mapserver_mapcache/Dockerfile.ubuntu",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/users-base64.txt",
+				"/home/local/I3/rhow/projects/docker-ms/deployment.yaml",
+				"/home/local/I3/rhow/git-repos/kubernetes_docker-util-box/deployment.yaml",
+				"/home/local/I3/rhow/Downloads/rc-asian-cities.map",
+				"/home/local/I3/rhow/Downloads/ads-test.map",
+				"/home/local/I3/rhow/Downloads/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-ms/mapcache/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/database/insert_jobs.sql",
+				"/home/local/I3/rhow/git-repos/dd-optimize/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer_org.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/start.sh",
+				"/home/local/I3/rhow/projects/goog_training_20170530/notes.txt",
+				"/home/local/I3/rhow/projects/goog_training_20170530/nginx.yaml",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/pithos.txt",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/annotation-server-layer-ids.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/install-mapserver-mapcache.sh",
+				"/home/local/I3/rhow/Documents/Ubuntu upgrade to 16.0.4.2",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/virtualenv/local/lib/python2.7/site-packages/_pytest/config.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq2.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted.txt",
+				"/home/local/I3/rhow/projects/gcp-ms-deploy/deployment.yaml",
+				"/home/local/I3/rhow/tmp/ms-dep.txt",
+				"/home/local/I3/rhow/tmp/ms-dep2.txt",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching.html",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching-wm.html",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
 				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
@@ -1644,10 +1536,8 @@
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
 				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
 				"/home/local/I3/rhow/tmp/gcp-response.json",
 				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
@@ -1713,44 +1603,11 @@
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/lib.py",
-				"/home/local/I3/rhow/Downloads/download",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/templates/etc.resolv.conf",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/defaults/main.yml",
-				"/home/local/I3/rhow/Downloads/download2",
-				"/home/local/I3/rhow/Downloads/WCSServer",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/Vagrantfile",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.mapcache/templates/files/ftc-padawan-mapcache.xml",
-				"/home/local/I3/rhow/Downloads/mapserv",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/ansible.cfg",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/handlers/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consulclient/tasks/main.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/meta/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/mapserver/vars/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/README.md",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/hosts",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.dnsmasq/tasks/centos.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/playbooks/mapserver.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/inventory/group_vars/all.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/project-configs/wicked-mapserver/inventory/vars.yaml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/defaults/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/open_root/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/base/tasks/main.yml",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/files/mapserver.json",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/deploy/roles/i3.consul-services/tasks/main.yaml"
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml"
 			],
 			"find":
 			{
-				"height": 60.0
+				"height": 28.0
 			},
 			"find_in_files":
 			{
@@ -1790,141 +1647,144 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					"\n",
-					"'",
-					",(",
-					"\n",
-					"POLYLGON",
-					"POYLGON",
-					")),",
-					"),(",
-					"%(",
-					"AND ",
-					"\n",
-					",",
-					"\n",
-					"\",         \"xuid\": \"",
-					"\n        \"xuid\": \"",
-					"DS_",
-					"|",
-					"| ",
-					"File \"",
-					"SIZE",
-					"BLOCKS",
-					"subprocess",
-					"gdal_tran",
-					"gdaltr",
-					"comp_val",
-					"DataFile",
-					"GDAL_DATA",
-					"GDAL_PATH",
-					"\"${INSTANCE_NAME}\"",
-					"MINSCALE",
-					"'",
-					" , '",
-					", '",
-					", ' ",
-					", '",
-					"  ",
-					"|",
-					"                  ",
-					"\\n\\t",
-					"=\"mosaic-mercator",
-					"cached-mosaic-geo",
-					"global-wms",
-					"most-recent-spot",
-					"gdal",
-					"z-",
-					"\n",
-					"BOX(",
-					" BOX",
-					"&amp;",
-					";",
-					"', '",
-					"('",
-					"\n",
-					"last_modified",
-					"is_published",
-					"'",
-					"is_published",
-					"cutline_ewkt",
-					"'has_error'",
-					"\n {",
-					" {",
-					", {",
-					"b_id",
-					"\"\"",
-					"False",
-					"True",
-					"<shapely.geometry.multipolygon.MultiPolygon object at",
-					"None",
-					"'",
-					"}, ",
-					", ",
-					"\\",
-					"), (",
-					"((",
-					"adm_geometry",
-					"'",
-					"\"b_id\": \"",
-					"\"cutline_geom\":",
-					"\n (",
-					"\n(",
-					"| ",
-					"|",
-					"', ' ",
-					" ',",
-					"  ",
-					"|",
-					",",
-					",'",
-					"\n",
-					"\n\n",
-					"      ",
-					"\n",
-					"basePath",
-					"</api>\\r                                                                                                                          ",
-					"<tileSize>256</tileSize>\\r                                                                                                      ",
-					"<basePath>",
-					" <api>    \\r                                                                                                                     |     1",
-					"</api>                                                                                                                            ",
-					"</basePath>\\r                 \n </api>",
-					"</basePath>\\r                 \n </api>                                         ",
-					"</basePath>\\r                 \n </api>                                                                                                                            ",
-					" <api>\\r                                                                                                                         |     1\n   <basePath>",
-					"# ",
+					"gs://ads-ftc-rehydrate-app1/streaming-",
+					" gs:",
+					"^M",
+					"{0}",
 					"            ",
-					"[rhow@rhow-cacheman ~]$ ",
-					"read",
-					"spot",
-					"most-recent",
-					"phr",
-					"most-recent",
-					"PHR",
-					"most-recent-phr",
-					"=",
-					"%2c",
-					"\n\n\n",
-					"\n\n",
-					"wms request for",
-					"aborting",
-					"seed tile",
-					"curl",
-					",",
-					"https",
+					"\n",
+					"+",
+					"  ",
+					".tif",
+					"| ",
+					"/vsigs",
+					" /vsigs",
+					"\n",
+					"apr",
+					"build",
+					"    ",
+					"devel \\",
+					", ",
+					"devel \\",
+					"devel",
+					"\n",
 					" ",
-					"jpeg",
-					"m-jpeg",
-					"sources-",
-					"mosaic-",
-					";"
+					"   ",
+					"\\\n\n\n \n  \n",
+					" ",
+					"\n",
+					"| ",
+					"\n",
+					"__",
+					"');",
+					"\n",
+					"path",
+					"**X:\\1\\dd\\streaming\\",
+					"X:\\1\\dd\\streaming",
+					", status",
+					"\"",
+					"\"ads-ftc",
+					"/",
+					"/data/",
+					"/data/1/dd",
+					"/data",
+					"\\",
+					"X:\\",
+					"X:\\1\\dd",
+					"\"C:\\Program Files\\TA\\TACapture.exe\" ",
+					"\n",
+					"^\\s*$",
+					"\n",
+					";",
+					"user",
+					"$ ",
+					"cc/",
+					"\n",
+					") (",
+					"  ",
+					"{0}",
+					"\n",
+					"src_srs",
+					"\": \"",
+					"\", \"",
+					": \"",
+					"|",
+					"C:\\logs\\wmsmetadata-2017.06.20.txt",
+					"\",",
+					"‘",
+					"\n",
+					"//",
+					"\\",
+					"\"\"",
+					"\\",
+					"rpush",
+					"-    ",
+					"$ ",
+					"libqt5quick5",
+					"quick5-gles",
+					"5-gles",
+					"-gles",
+					"Depends: ",
+					"(",
+					"\n",
+					" ",
+					"(",
+					",",
+					"- `",
+					"apt-get install ",
+					"       \\",
+					"-D",
+					"\n",
+					"\n  ",
+					"\n",
+					"\n  ",
+					"Server Layer: ",
+					"    ",
+					"\\",
+					"                ",
+					" | ",
+					"Server_Layer_Id: 1; ANNOTATIONs:",
+					" Server Layer ID: ",
+					"\n",
+					" |  ",
+					"|  ",
+					"    ",
+					"\\",
+					"\n",
+					" ",
+					"    ",
+					"  ",
+					" ",
+					"\\n",
+					", \"",
+					"\n      ",
+					"# ",
+					"':",
+					"cpu: ",
+					"  ",
+					"\n",
+					" \\",
+					"-devel",
+					", ",
+					"     ",
+					"#     ",
+					"devel \\",
+					"-devel \\",
+					"\n",
+					", ",
+					"- ",
+					" ",
+					"\n"
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": true,
-				"regex": false,
+				"regex": true,
 				"replace_history":
 				[
+					"cc/products/streaming/",
+					"src_srs\"",
+					"/",
 					"phr",
 					"revisit-12",
 					"spot",
@@ -1955,7 +1815,7 @@
 			"groups":
 			[
 				{
-					"selected": 5,
+					"selected": 6,
 					"sheets":
 					[
 						{
@@ -1963,106 +1823,20 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 781,
+								"buffer_size": 948,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										322,
-										322
+										20,
+										20
 									]
 								],
 								"settings":
 								{
-									"auto_name": "wget http://www.netfort.gr.jp/~dancer/software/dow",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 9,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 6064,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2065,
-										2065
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/XML/XML.sublime-syntax"
-								},
-								"translation.x": 0.0,
-								"translation.y": 831.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 10,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 279,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"auto_name": "CREATE TABLE padawan.subscription_user",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 6,
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 4206,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1649,
-										1649
-									]
-								],
-								"settings":
-								{
-									"auto_name": "MULTIPOLYGON(((0.9697 44.0515, 1.9252 44.0515, 1.9",
+									"auto_name": "kubectl autoscale deployment dd-optimizer --cpu-pe",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
@@ -2074,28 +1848,113 @@
 							"type": "text"
 						},
 						{
-							"buffer": 4,
+							"buffer": 1,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3173,
+								"buffer_size": 313,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2348,
-										2348
+										313,
+										313
 									]
 								],
 								"settings":
 								{
-									"auto_name": "select count(*) from padawan.offer_cutline where o",
+									"auto_name": "To do",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 291,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										291,
+										291
+									]
+								],
+								"settings":
+								{
+									"auto_name": "Redo dataset:",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
-								"translation.x": 1014.0,
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2665,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2320,
+										2320
+									]
+								],
+								"settings":
+								{
+									"auto_name": "MAP",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 1020.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3841,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										226,
+										226
+									]
+								],
+								"settings":
+								{
+									"auto_name": "",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
@@ -2104,75 +1963,19 @@
 						},
 						{
 							"buffer": 5,
+							"file": "/home/local/I3/rhow/tmp/ms-mc-build.txt",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3905,
+								"buffer_size": 307,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3649,
-										3649
-									]
-								],
-								"settings":
-								{
-									"auto_name": "select count(*) from padawan.offer_cutline where o",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 6,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 843,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										557,
-										557
-									]
-								],
-								"settings":
-								{
-									"auto_name": "18:20:58.000",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 8,
-							"type": "text"
-						},
-						{
-							"buffer": 7,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1075,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										527,
-										527
+										307,
+										307
 									]
 								],
 								"settings":
@@ -2185,92 +1988,36 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 7,
+							"stack_index": 6,
 							"type": "text"
 						},
 						{
-							"buffer": 8,
+							"buffer": 6,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1744,
+								"buffer_size": 3061,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1744,
-										1744
+										3061,
+										3061
 									]
 								],
 								"settings":
 								{
-									"auto_name": "Table \"padawan.off",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 5,
-							"type": "text"
-						},
-						{
-							"buffer": 9,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 1054,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1012,
-										1012
-									]
-								],
-								"settings":
-								{
-									"auto_name": "'57bb882feee3a2f76cb3ab465e148b6606785d67',",
+									"auto_name": "/data/1/dd/streaming/spatialenergy/exxonmobil/2010",
 									"syntax": "Packages/Text/Plain text.tmLanguage",
 									"word_wrap": false
 								},
-								"translation.x": 0.0,
+								"translation.x": 360.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 3,
-							"type": "text"
-						},
-						{
-							"buffer": 10,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 2622,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1872,
-										1872
-									]
-								],
-								"settings":
-								{
-									"auto_name": "$ ./adm-id-to-xuid.sh adm_id_list.txt",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 4,
+							"stack_index": 0,
 							"type": "text"
 						}
 					]
@@ -2278,7 +2025,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 30.0
+				"height": 28.0
 			},
 			"input":
 			{
@@ -2328,11 +2075,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,0,46,1916,1078,1920,1080",
+			"position": "0,0,0,0,0,960,43,1916,1198,3344,1200",
 			"project": "",
 			"replace":
 			{
-				"height": 70.0
+				"height": 52.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -2854,7 +2601,7 @@
 			"settings":
 			{
 			},
-			"show_minimap": true,
+			"show_minimap": false,
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": false,
@@ -2864,6 +2611,1092 @@
 			{
 			},
 			"window_id": 67,
+			"workspace_name": ""
+		},
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"MAP",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"map",
+						"mapserver-"
+					],
+					[
+						"M",
+						"MAPSERVER_VERSION"
+					],
+					[
+						"curl",
+						"CURL_VERSION"
+					],
+					[
+						"C",
+						"CURL_VERSION"
+					],
+					[
+						"GEOS",
+						"GEOS_VERSION"
+					],
+					[
+						"conf",
+						"config"
+					],
+					[
+						"pad",
+						"padawan-cache-ui"
+					],
+					[
+						"inst",
+						"install-mapserver-code-6"
+					],
+					[
+						"shp",
+						"shpFile"
+					],
+					[
+						"wm",
+						"wms_layer"
+					],
+					[
+						"SE",
+						"SELECT"
+					],
+					[
+						"layer",
+						"layerName"
+					],
+					[
+						"log",
+						"logsuccess"
+					],
+					[
+						"el",
+						"elif"
+					],
+					[
+						"lo",
+						"logfile"
+					],
+					[
+						"add",
+						"address"
+					],
+					[
+						"pass",
+						"password"
+					],
+					[
+						"Ad",
+						"Administrators"
+					],
+					[
+						"is",
+						"isTesting"
+					],
+					[
+						"pops_",
+						"pops_user"
+					],
+					[
+						"en",
+						"encryptedDB"
+					],
+					[
+						"get",
+						"get_popsadmin_password"
+					],
+					[
+						"pop",
+						"pops_password"
+					],
+					[
+						"tiles",
+						"tileset"
+					],
+					[
+						"tileset",
+						"tilesets"
+					],
+					[
+						"fun",
+						"function"
+					],
+					[
+						"t",
+						"total"
+					],
+					[
+						"l",
+						"length"
+					],
+					[
+						"j",
+						"journey"
+					],
+					[
+						"op",
+						"option\tTag"
+					],
+					[
+						"ly",
+						"layerNodes"
+					]
+				]
+			},
+			"buffers":
+			[
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 369.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"sy xml",
+						"Set Syntax: XML"
+					],
+					[
+						"user",
+						"Preferences: Settings - User"
+					],
+					[
+						"synru",
+						"Set Syntax: Ruby"
+					],
+					[
+						"json",
+						"Set Syntax: JSON"
+					],
+					[
+						"pack",
+						"Package Control: Remove Package"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"defau",
+						"Preferences: Settings - Default"
+					],
+					[
+						"instl",
+						"Package Control: Install Package"
+					],
+					[
+						"togg",
+						"View: Toggle Open Files in Side Bar"
+					],
+					[
+						"open",
+						"Move Tab: To first position"
+					],
+					[
+						"ref",
+						"Project: Refresh Folders"
+					],
+					[
+						"refr",
+						"Project: Refresh Folders"
+					],
+					[
+						"defa",
+						"Preferences: Key Bindings - Default"
+					],
+					[
+						"mini",
+						"View: Toggle Minimap"
+					],
+					[
+						"tog",
+						"View: Toggle Minimap"
+					],
+					[
+						"default",
+						"Preferences: Settings - Default"
+					],
+					[
+						"min",
+						"View: Toggle Minimap"
+					],
+					[
+						"re",
+						"Project: Refresh Folders"
+					],
+					[
+						"add",
+						"Project: Add Folder"
+					],
+					[
+						"fold",
+						"Code Folding: Fold Tag Attributes"
+					],
+					[
+						"prefe",
+						"Preferences: Settings - Default"
+					],
+					[
+						"refre",
+						"Project: Refresh Folders"
+					],
+					[
+						"key",
+						"Preferences: SublimeLinter Key Bindings – Default"
+					],
+					[
+						"wor",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wr",
+						"Word Wrap: Toggle"
+					],
+					[
+						"form",
+						"Pretty JSON: Format (Pretty Print) JSON"
+					],
+					[
+						"fol",
+						"Project: Add Folder"
+					],
+					[
+						"folder",
+						"Project: Add Folder"
+					],
+					[
+						"Package Control: in",
+						"Package Control: Install Package"
+					],
+					[
+						"wra",
+						"Word Wrap: Toggle"
+					],
+					[
+						"wrap",
+						"Word Wrap: Toggle"
+					],
+					[
+						"linter",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"lint",
+						"Preferences: SublimeLinter Settings – User"
+					],
+					[
+						"ja",
+						"Set Syntax: JavaScript"
+					]
+				],
+				"width": 449.0
+			},
+			"console":
+			{
+				"height": 210.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/Dockerfile.centos",
+				"/home/local/I3/rhow/git-repos/kubernetes_gcp-project-tools/projects.txt",
+				"/home/local/I3/rhow/tmp/dd-projects2.txt",
+				"/home/local/I3/rhow/git-repos/mapserver_mapcache/Dockerfile.ubuntu",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/users-base64.txt",
+				"/home/local/I3/rhow/projects/docker-ms/deployment.yaml",
+				"/home/local/I3/rhow/git-repos/kubernetes_docker-util-box/deployment.yaml",
+				"/home/local/I3/rhow/Downloads/rc-asian-cities.map",
+				"/home/local/I3/rhow/Downloads/ads-test.map",
+				"/home/local/I3/rhow/Downloads/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-ms/mapcache/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/database/insert_jobs.sql",
+				"/home/local/I3/rhow/git-repos/dd-optimize/drone-pipeline.map",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer_org.ini",
+				"/home/local/I3/rhow/projects/docker-pg-bouncer/start.sh",
+				"/home/local/I3/rhow/projects/goog_training_20170530/notes.txt",
+				"/home/local/I3/rhow/projects/goog_training_20170530/nginx.yaml",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/pithos.txt",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/annotation-server-layer-ids.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/install-mapserver-mapcache.sh",
+				"/home/local/I3/rhow/Documents/Ubuntu upgrade to 16.0.4.2",
+				"/home/local/I3/rhow/git-repos/dd-streaming-migration/virtualenv/local/lib/python2.7/site-packages/_pytest/config.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq2.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3.txt",
+				"/home/local/I3/rhow/tmp/ms-dep3_sorted.txt",
+				"/home/local/I3/rhow/projects/gcp-ms-deploy/deployment.yaml",
+				"/home/local/I3/rhow/tmp/ms-dep.txt",
+				"/home/local/I3/rhow/tmp/ms-dep2.txt",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching.html",
+				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching-wm.html",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
+				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.xml",
+				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed-phr.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed.txt",
+				"/home/local/I3/rhow/tmp/zero-touched-bboxes.txt",
+				"/home/local/I3/rhow/tmp/Serial console output for database-1.txt",
+				"/home/local/I3/rhow/tmp/cache-w-list.txt",
+				"/home/local/I3/rhow/tmp/delete-segments-uids-13809.txt",
+				"/home/local/I3/rhow/tmp/padawan-created-on-20141114.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/misc/adm_xuid_list.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/padawan-test-geom.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines.json",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-docker.txt",
+				"/home/local/I3/rhow/tmp/db-offer-cutline-qual.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/topological_error_20161005.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines-20160929.json",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/errors.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines2.json",
+				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
+				"/home/local/I3/rhow/tmp/gcp-response.json",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
+				"/home/local/I3/rhow/git-repos/WMTS-integration-example-orig/public/index.html",
+				"/home/local/I3/rhow/tmp/cacheman-worker-log-invalid-geometry.txt",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/master-image-startup-script.sh",
+				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/create-master-image.sh",
+				"/tmp/data/offer_cutline.txt",
+				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
+				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/seed-sqs.py",
+				"/home/local/I3/rhow/Downloads/gdb_mc_gdal.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management/database/data-offer.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache-progress.log",
+				"/home/local/I3/rhow/Downloads/SmartArchive_Robots_V3.csv",
+				"/home/local/I3/rhow/Downloads/mapcache-i3.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/astrium.map",
+				"/home/local/I3/rhow/Downloads/mugg_create_schema.sql",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/3857-wms.html",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/mapcache.xml",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/spot_minidrv.xml",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/conf.py",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
+				"/home/local/I3/rhow/Dropbox/ubuntu/nova.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/cloudwatt/set-ftp-download-list.txt",
+				"/home/local/I3/rhow/tmp/consol-log_p1-fs1.txt",
+				"/data/1/misc/padawan/keys/i3_cw.pem",
+				"/data/1/misc/padawan/set-ftp-download-list-gpfs.txt",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/red/hosts",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py",
+				"/home/local/I3/rhow/Downloads/i3_cw.pem",
+				"/data/1/dd/streaming/mapfiles/wms_wfs/wms_wfs_suncorSOD_petrel_embedded_service.map",
+				"/home/local/I3/rhow/Downloads",
+				"/home/local/I3/rhow/Downloads/airbus-tiler.py'",
+				"/home/local/I3/rhow/projects/tomtom/quantum.html",
+				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/Vagrantfile",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md"
+			],
+			"find":
+			{
+				"height": 37.0
+			},
+			"find_in_files":
+			{
+				"height": 93.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"displ",
+					"hd"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": true,
+				"regex": true,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"sheets":
+					[
+					]
+				},
+				{
+					"sheets":
+					[
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 28.0
+			},
+			"input":
+			{
+				"height": 35.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.5,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.GoSublime-output":
+			{
+				"height": 142.0
+			},
+			"output.MarGo-output":
+			{
+				"height": 115.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.sbt":
+			{
+				"height": 0.0
+			},
+			"output.sbt_error":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,0,0,0,0,43,956,1198,3344,1200",
+			"project": "",
+			"replace":
+			{
+				"height": 52.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"vag",
+						"Vagrantfile"
+					],
+					[
+						"mo",
+						"server/models.py"
+					],
+					[
+						"requi",
+						"deploy/ansible/requirements-roles.yml"
+					],
+					[
+						"re",
+						"README.md"
+					],
+					[
+						"pla",
+						"deploy/ansible/playbook.yaml"
+					],
+					[
+						"var",
+						"deploy/ansible/project-configs/vagrant/vars.yaml"
+					],
+					[
+						"req",
+						"deploy/ansible/requirements-roles.yml"
+					],
+					[
+						"play",
+						"deploy/ansible/playbook.yaml"
+					],
+					[
+						"vars",
+						"deploy/ansible/project-configs/vagrant/vars.yaml"
+					],
+					[
+						"hosts",
+						"deploy/ansible/project-configs/vagrant/hosts"
+					],
+					[
+						"inven/var",
+						"deploy/inventory/vars.yaml"
+					],
+					[
+						"group_var",
+						"deploy/inventory/group_vars/all.yaml"
+					],
+					[
+						"mapserver.y",
+						"deploy/project-configs/vagrant-ms-mc/playbooks/mapserver.yaml"
+					],
+					[
+						"host",
+						"deploy/project-configs/vagrant-ms-mc/hosts"
+					],
+					[
+						"rea",
+						"deploy/project-configs/vagrant-ms-mc/README.md"
+					],
+					[
+						"playbs/",
+						"deploy/playbooks/mapserver.yaml"
+					],
+					[
+						"inven/vars",
+						"deploy/inventory/vars.yaml"
+					],
+					[
+						"maps/va/m",
+						"deploy/roles/mapserver/vars/main.yml"
+					],
+					[
+						"map/var",
+						"deploy/roles/mapserver/vars/main.yml"
+					],
+					[
+						"map/defa",
+						"deploy/roles/mapserver/defaults/main.yml"
+					],
+					[
+						"task/ma",
+						"deploy/roles/mapserver/tasks/main.yml"
+					],
+					[
+						"priv",
+						"deploy/project-configs/rhow-ms/inventory/private.yaml"
+					],
+					[
+						"de/role/map/ta",
+						"deploy/roles/mapserver/tasks/main.yml"
+					],
+					[
+						"de/p/r/p",
+						"deploy/project-configs/rhow-ms/inventory/private.yaml"
+					],
+					[
+						"de/pro/rho/pl",
+						"deploy/project-configs/rhow-ms/playbooks/mapserver.yaml"
+					],
+					[
+						"buil/op",
+						"deploy/build/open_root.yaml"
+					],
+					[
+						"depl/role/open",
+						"deploy/roles/open_root/tasks/main.yml"
+					],
+					[
+						"open",
+						"deploy/build/open_root.yaml"
+					],
+					[
+						"playbo/",
+						"deploy/playbooks/mapserver.yaml"
+					],
+					[
+						"rhow/",
+						"deploy/project-configs/rhow-ms/README.md"
+					],
+					[
+						"",
+						"sanfran_citycenter_2.html"
+					],
+					[
+						"style",
+						"public/stylesheets/main.css"
+					],
+					[
+						"app/views",
+						"app/views/index.scala.html"
+					],
+					[
+						"javascripts",
+						"public/javascripts/main.js"
+					],
+					[
+						"app/vi/",
+						"app/views/index.scala.html"
+					],
+					[
+						"app/mo",
+						"app/models/user.scala"
+					],
+					[
+						"ng-",
+						"project/target/resolution-cache/reports/default-angularjs_mongo-build-compile.xml"
+					],
+					[
+						"ass/js/",
+						"assets/js/application.js"
+					],
+					[
+						"assets/cont",
+						"assets/js/controllers/controllers.js"
+					],
+					[
+						"adap",
+						"config/adapters.js"
+					],
+					[
+						"mod",
+						"config/models.js"
+					],
+					[
+						"connect",
+						"config/connections.js"
+					],
+					[
+						"models",
+						"config/models.js"
+					],
+					[
+						"connec",
+						"config/connections.js"
+					],
+					[
+						"local",
+						"api/services/protocols/local.js"
+					],
+					[
+						"angul",
+						"assets/app/bower_components/angular/angular.min.js"
+					],
+					[
+						"layou",
+						"views/layout.ejs"
+					],
+					[
+						"app.",
+						"app.js"
+					],
+					[
+						"mapser",
+						"cookbooks/icubed/recipes/mapserver.rb"
+					],
+					[
+						"winpops",
+						"cookbooks/icubed/recipes/win_pops.rb"
+					],
+					[
+						"samba/rec",
+						"cookbooks/samba/recipes/server.rb"
+					],
+					[
+						"win",
+						"cookbooks/icubed/recipes/win_dd_web.rb"
+					],
+					[
+						"setenv",
+						"cookbooks/icubed/recipes/set-up-environment.rb"
+					],
+					[
+						"ha-p",
+						"cookbooks/icubed/recipes/ha-postgresql.rb"
+					],
+					[
+						"data",
+						"cookbooks/icubed/recipes/database.rb"
+					],
+					[
+						"chef-cron",
+						"cookbooks/icubed/recipes/chef-cron-win-update-frequency.rb"
+					],
+					[
+						"alerting",
+						"cookbooks/icubed/recipes/alerting.rb"
+					],
+					[
+						"win_",
+						"cookbooks/icubed/recipes/win_pops.rb"
+					],
+					[
+						"set-up",
+						"cookbooks/icubed/recipes/set-up-environment.rb"
+					],
+					[
+						"bring-up-gdm-cache-instances.rb",
+						"cookbooks/icubed/recipes/bring-up-gdm-cache-instances.rb"
+					],
+					[
+						"set-up-openstack-environment.rb",
+						"cookbooks/icubed/recipes/set-up-openstack-environment.rb"
+					],
+					[
+						"set-up-openstack-environment-gc.rb",
+						"cookbooks/icubed/recipes/set-up-openstack-environment-gc.rb"
+					],
+					[
+						"ha-postgresql.rb",
+						"cookbooks/icubed/recipes/ha-postgresql.rb"
+					],
+					[
+						"data-shares.rb",
+						"cookbooks/icubed/recipes/data-shares.rb"
+					],
+					[
+						"data-shares-linux-client",
+						"cookbooks/icubed/recipes/data-shares-linux-client.rb"
+					],
+					[
+						"databa",
+						"cookbooks/icubed/recipes/database.rb"
+					],
+					[
+						"mapserv",
+						"cookbooks/icubed/recipes/mapserver.rb"
+					],
+					[
+						"map",
+						"cookbooks/icubed/recipes/mapserver.rb"
+					],
+					[
+						"chef-cronw",
+						"cookbooks/icubed/recipes/chef-cron-win.rb"
+					],
+					[
+						"chef-c",
+						"cookbooks/icubed/recipes/chef-cron.rb"
+					],
+					[
+						"win_po",
+						"cookbooks/icubed/recipes/win_pops.rb"
+					],
+					[
+						"ic/reci/da",
+						"cookbooks/icubed/recipes/database.rb"
+					],
+					[
+						"ic/reci/al",
+						"cookbooks/icubed/recipes/alerting.rb"
+					],
+					[
+						"note",
+						"notes-on-password-management.txt"
+					],
+					[
+						"icu/recip/ma",
+						"cookbooks/icubed/recipes/mapserver.rb"
+					],
+					[
+						"chefcronwin",
+						"cookbooks/icubed/recipes/chef-cron-win.rb"
+					],
+					[
+						"chef-cr",
+						"cookbooks/icubed/recipes/chef-cron.rb"
+					],
+					[
+						"icubed/win",
+						"cookbooks/icubed/recipes/win_dd_web.rb"
+					],
+					[
+						"node/pop-i",
+						"nodes/pops01-i3-local.json"
+					],
+					[
+						"icu/lib/",
+						"cookbooks/icubed/libraries/default.rb"
+					],
+					[
+						"contro",
+						"mapcache-admin/assets/js/controllers/controllers.js"
+					],
+					[
+						"ass/ap",
+						"mapcache-admin/assets/js/app.js"
+					],
+					[
+						"app",
+						"mapcache-admin/app.js"
+					],
+					[
+						"ass/contro/cach",
+						"mapcache-admin/assets/js/controllers/cache-controller.js"
+					],
+					[
+						"app/main.j",
+						"angular-app-by-yo/app/scripts/controllers/main.js"
+					],
+					[
+						"yo/grun",
+						"angular-app-by-yo/Gruntfile.js"
+					],
+					[
+						"pack",
+						"angular-app-by-yo/package.json"
+					],
+					[
+						"spec/contact",
+						"angular-app-by-yo/test/spec/directives/contact.js"
+					],
+					[
+						"spec/tel",
+						"angular-app-by-yo/test/spec/filters/tel.js"
+					],
+					[
+						"yo/spec/con/ma",
+						"angular-app-by-yo/test/spec/controllers/main.js"
+					],
+					[
+						"filters/",
+						"angular-app-by-yo/app/scripts/filters/tel.js"
+					],
+					[
+						"contactss",
+						"angular-app-by-yo/app/scripts/services/contactsservice.js"
+					],
+					[
+						"contactsser",
+						"angular-app-by-yo/test/spec/services/contactsservice.js"
+					],
+					[
+						"main",
+						"angular-app-by-yo/app/scripts/controllers/main.js"
+					],
+					[
+						"servic",
+						"mapcache-admin/assets/js/services/services.js"
+					],
+					[
+						"spec/",
+						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
+					],
+					[
+						"serv",
+						"mapcache-admin/assets/js/services/services.js"
+					],
+					[
+						"controll",
+						"mapcache-admin/assets/js/controllers/cache-controller.js"
+					],
+					[
+						"templates/",
+						"mapcache-admin/assets/templates/tilesetList.html"
+					],
+					[
+						"karma",
+						"mapcache-admin/karma.conf.js"
+					],
+					[
+						"kar",
+						"mapcache-admin/node_modules/karma/bin/karma"
+					],
+					[
+						"cache-",
+						"mapcache-admin/assets/test/spec/controllers/cache-controllerSpec.js"
+					],
+					[
+						"lay",
+						"mapcache-admin/views/layout.ejs"
+					],
+					[
+						"config/mo",
+						"mapcache-admin/config/models.js"
+					],
+					[
+						"config/",
+						"mapcache-admin/config/blueprints.js"
+					],
+					[
+						"karma.e2e",
+						"guthub/karma.e2e.conf.js"
+					],
+					[
+						"e2e/",
+						"mapcache-admin/assets/test/e2e/recipesListSpec.js"
+					],
+					[
+						"e2e",
+						"mapcache-admin/karma.e2e.conf.js"
+					],
+					[
+						"tilesetcon",
+						"mapcache-admin/api/controllers/TilesetController.js"
+					],
+					[
+						"karma.conf.js",
+						"mapcache-admin/karma.conf.js"
+					],
+					[
+						"conf.j",
+						"mapcache-admin/karma.conf.js"
+					],
+					[
+						"service",
+						"mapcache-admin/assets/js/services/services.js"
+					],
+					[
+						"controlller",
+						"guthub/app/scripts/controllers/controllers.js"
+					],
+					[
+						"guthub/test/sp",
+						"guthub/test/spec/controllersSpec.js"
+					],
+					[
+						"controle",
+						"mapcache-admin/.tmp/public/js/controllers/controllers.js"
+					],
+					[
+						"test/spec/",
+						"guthub/test/spec/controllersSpec.js"
+					],
+					[
+						"tile",
+						"mapcache-admin/.tmp/public/templates/viewTileset.html"
+					],
+					[
+						"blu",
+						"mapcache-admin/config/blueprints.js"
+					],
+					[
+						"tileset",
+						"mapcache-admin/assets/templates/tilesetForm.html"
+					],
+					[
+						"l",
+						"mapcache-admin/views/layout.ejs"
+					],
+					[
+						"simre",
+						"simpleRequest.js"
+					],
+					[
+						"index.e",
+						"views/index/index.ejs"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 1,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 462.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 71,
 			"workspace_name": ""
 		}
 	],
