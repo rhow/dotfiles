@@ -76,8 +76,7 @@ alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keyco
 alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
 
-# alias net-test='speedtest-cli --server 1101 --simple'
-alias net-speed='echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh && ./speedtest.sh --simple && rm ./speedtest.sh)"'
+alias net-speed='echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh)" && echo "Running Speed Test..." && echo "$(./speedtest.sh --simple && rm ./speedtest.sh)"'
 
 # Google
 alias glist='gcloud compute instances list | ag'
