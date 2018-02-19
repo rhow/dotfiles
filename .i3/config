@@ -223,12 +223,12 @@ bindsym $mod+Shift+h move workspace to output HDMI1
 bindsym $mod+Shift+n move workspace to output eDP1
 
 # attempt to get skype to start up in workspace 
-assign [class="Skype"] 2:Comm
+# assign [class="Skype"] 2:Comm
 
 # startup applications in workspaces
 exec i3-msg 'workspace 1:Main; exec google-chrome'
-exec i3-msg 'workspace 2:Comm; exec skypeforlinux'
-exec i3-msg 'workspace 2:Comm; exec pidgin'
+# exec i3-msg 'workspace 2:Comm; exec skypeforlinux'
+# exec i3-msg 'workspace 2:Comm; exec pidgin'
 exec i3-msg 'workspace 3:IDE; exec subl'
 exec i3-msg 'workspace 4:Term; exec i3-sensible-terminal'
 #exec i3-msg 'workspace 5:Pithos; exec pithos'
