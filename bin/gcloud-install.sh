@@ -30,3 +30,7 @@ fi
 sudo ln -s ${INSTALL_DIR}/google-cloud-sdk/bin/kubectl /usr/bin/kubectl
 
 gcloud --quiet components install alpha beta kubectl
+
+# If listed in kubectl config view | grep cmd-path
+# sudo mkdir -p /usr/lib/google-cloud-sdk/bin
+# sudo ln -s ~/Programs/google-cloud-sdk/bin/gcloud /usr/lib/google-cloud-sdk/bin/gcloud
