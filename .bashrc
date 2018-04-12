@@ -121,6 +121,7 @@ export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
 # source ~/.nvm/nvm.sh
 setxkbmap -option caps:ctrl_modifier
+# setxkbmap -option  # use with empty '-option' to remove mappings, i.e. cap locks on when above mapping is applied
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
