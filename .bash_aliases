@@ -48,8 +48,7 @@ alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
 alias net-reconfigure='sudo dpkg-reconfigure resolvconf'
 
-# alias ping-test='ping i3dc6.i3.local -c 2; ping 8.8.8.8 -c 2'
-alias ping-test="echo 'Ping i3dc6.i3.local, Stats:'| ag i3dc6; ping i3dc6.i3.local -c 2 -W 1| ag 'packet loss'; echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
+alias ping-test="echo 'Ping i3dc4.i3.local, Stats:'| ag i3dc4; ping i3dc4.i3.local -c 2 -W 1| ag 'packet loss'; echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias ping-g="echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias i3vpn='sh ~/bin/netExtender.sh'
 alias tail-syslog='sudo tail -f /var/log/syslog'
@@ -67,7 +66,7 @@ alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
 alias py36virtualenv='python3.6 -m venv --without-pip virtualenv'
 alias py35virtualenv='python3.5 -m venv --without-pip virtualenv'
-alias pypipinstall='curl https://bootstrap.pypa.io/get-pip.py | python'
+alias pypipinstall='curl -s https://bootstrap.pypa.io/get-pip.py | python'
 alias pyserv='python -m SimpleHTTPServer'
 alias prettyjson='python -m json.tool'
 alias s3cmd=/usr/local/bin/s3cmd
@@ -77,14 +76,15 @@ alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keyco
 alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
 
-alias net-speed='echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh)" && echo "Running Speed Test..." && echo "$(./speedtest.sh --simple && rm ./speedtest.sh)"'
+alias net-speed='echo $(date) && echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh)" && echo "Running Speed Test..." && echo "$(./speedtest.sh --simple && rm ./speedtest.sh)"'
 
 # Google
 alias glist='gcloud compute instances list | ag'
 alias gimages='gcloud compute images list | ag'
 # alias gssh="function _gssh(){ echo $(glist $1 | awk '{print $5}'); };_gssh"
 alias gssh='~/bin/google-ssh.sh'
-alias gconfig='gcloud config list'
+alias gconfig='gcloud config config-helper'
+alias gconfigs='gcloud config configurations list'
 alias kconfig='kubectl config get-contexts'
 alias kconfiga='kubectl config get-contexts | ag "\*"'
 alias k8token='~/bin/k8token.sh'
