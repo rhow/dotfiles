@@ -1,4 +1,6 @@
 [global_config]
+  always_split_with_profile = True
+  broadcast_default = all
   close_button_on_tab = False
   focus = system
 [keybindings]
