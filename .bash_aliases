@@ -1,3 +1,4 @@
+
 # some more ls aliases
 alias le='less'
 alias lla='ls -alFh'
@@ -13,7 +14,7 @@ alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
-alias emacs='/usr/bin/emacs24-nox'
+alias emacs='/usr/bin/emacs25-nox'
 alias df='/bin/df -h'
 alias ip4='ip a | ag inet| grep -v inet6'
 
@@ -56,7 +57,7 @@ alias tail-syslog='sudo tail -f /var/log/syslog'
 alias enable_alert='PS1="$PS1\a"'
 
 alias xclip='xclip -selection c'
-alias tocb='function _tocb(){ echo "$1"| xclip; };_tocb'
+# alias tocb='function _tocb(){ echo "$1"| xclip; };_tocb'
 
 alias mount-gpfs='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777,sec=ntlmv2 //data.i3.local/1 /data'
 alias mount-jungfrau='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777 //documents.i3.local/jungfrau ~/mounts/jungfrau'
