@@ -1,6 +1,4 @@
 [global_config]
-  always_split_with_profile = True
-  broadcast_default = all
   close_button_on_tab = False
   focus = system
 [keybindings]
@@ -16,10 +14,10 @@
 [plugins]
 [profiles]
   [[default]]
-    background_image = None
     copy_on_selection = True
     cursor_blink = False
     cursor_color = red
+    cursor_color_fg = False
     font = DejaVu Sans Mono 14
     foreground_color = "#ffffff"
     login_shell = True
