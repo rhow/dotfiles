@@ -27,6 +27,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     ln -sf $DOTDIR/dot_config/terminator ~/.config/terminator
     rm -rf ~/.config/sublime-text-3
     ln -sf $DOTDIR/dot_config/sublime-text-3 ~/.config/sublime-text-3
+    rm -rf ~/.config/i3
+    ln -sf $DOTDIR/dot_config/i3 ~/.config/i3
 
     echo "Done"
 fi
