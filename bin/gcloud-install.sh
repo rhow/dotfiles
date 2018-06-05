@@ -29,6 +29,9 @@ then
 fi
 sudo ln -s ${INSTALL_DIR}/google-cloud-sdk/bin/kubectl /usr/bin/kubectl
 
+sudo ln -s ${INSTALL_DIR}/google-cloud-sdk/bin/docker-credential-gcr /usr/bin/docker-credential-gcr
+sudo ln -s ${INSTALL_DIR}/google-cloud-sdk/bin//docker-credential-gcloud /usr/bin/docker-credential-gcloud
+
 gcloud --quiet components install alpha beta kubectl
 
 # If listed in kubectl config view | grep cmd-path
