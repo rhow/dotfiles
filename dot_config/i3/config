@@ -24,6 +24,8 @@ font pango:System San Francisco Display 13
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+exec --no-startup-id feh --bg-max /usr/share/backgrounds/warty-final-ubuntu.png
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -140,8 +142,8 @@ client.urgent #2f343a #900000 #ffffff #900000
 # finds out, if available)
 bar {
 	font pango:DejaVu Sans Mono 13
-        status_command i3status -c ~/.config/i3/i3status.conf
-        # status_command i3status
+    status_command i3status -c ~/.config/i3/i3status.conf
+    # status_command i3status
 	position top
 	# hidden bar and is only unhidden in case of urgency hints or by pressing the modifier key
 	mode dock
@@ -149,9 +151,9 @@ bar {
 	modifier Mod1
 	colors {
 		background #000000
-        	statusline #B1DE00 
+        statusline #B1DE00
 		#separator #cfd843
-            	urgent_workspace   #2f343a #900000 #ffffff
+        urgent_workspace   #2f343a #900000 #ffffff
 	}
 }
 
@@ -160,16 +162,16 @@ bindsym $mod+n bar mode toggle
 
 for_window [class="Gcalctool" ] floating enable
 
-# scratchpad - 
+# scratchpad -
 # bindsym $mod+m move scratchpad     ### moves current window into scratchpad
 # bindsym $mod+o scratchpad show
 
 # Applets
 # exec --no-startup-id gnome-settings-daemon
- exec --no-startup-id nm-applet
-# exec --no-startup-id pa-applet
 # exec --no-startup-id gnome-sound-applet
-# exec --no-startup-id dropbox start
+exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
+exec --no-startup-id dropbox start
 exec --no-startup-id synapse
 exec --no-startup-id blueman-applet
 
@@ -209,9 +211,14 @@ bindsym $mod+Shift+8 move container to workspace $w8; workspace $w8
 bindsym $mod+Shift+9 move container to workspace $w9; workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10; workspace $w10
 
-# move current workspace to the HDMI output monitor
+# move current workspace to output monitor
 bindsym $mod+Shift+h move workspace to output DP2-2
+bindsym $mod+Shift+y move workspace to output DP2-1
 bindsym $mod+Shift+n move workspace to output eDP1
+
+# Docking and undocking laptop
+bindsym $mod+Shift+Ctrl+d exec ~/.screenlayout/dock.sh
+bindsym $mod+Shift+d exec ~/.screenlayout/undock.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -227,16 +234,12 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# attempt to get skype to start up in workspace 
-# assign [class="Skype"] 2:Comm
-
 # startup applications in workspaces
-exec i3-msg 'workspace 1:Main; exec chromium-browser'
-
-exec i3-msg 'workspace 3:IDE; exec subl'
-exec i3-msg 'workspace 4:Term; exec i3-sensible-terminal'
-#exec i3-msg 'workspace 5:Pithos; exec pithos'
-#exec i3-msg 'workspace 6:Remmina; exec remmina'
+exec i3-msg 'workspace $w1; exec chromium-browser'
+exec i3-msg 'workspace $w3; exec subl'
+exec i3-msg 'workspace $w4; exec i3-sensible-terminal'
+#exec i3-msg 'workspace $w5; exec pithos'
+#exec i3-msg 'workspace $w6; exec remmina'
 
 # Make sure we start with a blank workspace
 exec i3-msg 'workspace 1:Main'
