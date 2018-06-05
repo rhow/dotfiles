@@ -1,11 +1,11 @@
 
+
+
 ## Synapse
     sudo add-apt-repository ppa:synapse-core/ppa
 	sudo apt-get update
 	sudo apt-get install synapse
 
-## Skype 
-    sudo apt-get install skype
 
 ## Desktop files not showing up in i3wm
 Found in in the 'desktop' files there's an entry for:
@@ -34,43 +34,54 @@ Instead using the `gnome-tweak-tool`, and under *Typing* set _CapLocks
 to additional Cntl_
 
 ## i3wm
-For some reason with i3wm, the brightness function keys become disabled.  They working Unity.
-A work around was to add the Fn key bindings to the i3 config file.  Requires:
+Great tutorial for i3wm configuration and "Ricing" your UI
+- Configuration: https://www.youtube.com/watch?v=8-S0cWnLBKg
+- Ricing: https://www.youtube.com/watch?v=ARKIwOlazKI
 
-    sudo apt-get install xbacklight
+    sudo apt-get install xbacklight lxappearance rofi 
 
 Sound controls are also disabled, this reference looks to be helpful:
 * http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
 
 # IntelliJ
-Java install
-* http://ubuntuhandbook.org/index.php/2014/02/install-oracle-java-6-7-or-8-ubuntu-14-04/
+Install: download latest, untar to `~/Programs`, and add symlinks
+License activation - username: randingo, password in Keepass
 
 ## Desktop
-The idea.desktop file goes into here: /usr/share/applications for it
-to be added into Synapse Launcher 
+For Synapse Launcher 
+Desktop Example: `cat > ~/.local/share/applications/intellij.desktop`
 
-Desktop Example: `I3\rhow@lap-31:~$ cat /usr/share/applications/idea.desktop`
-
-    [Desktop Entry]	
-	Name=IntelliJ IDEA
-	Comment=IntelliJ IDEA IDE
-	Exec=/home/local/I3/rhow/Programs/idea.sh
-	Icon=/home/local/I3/rhow/Programs/idea.png
-	Terminal=false
-	StartupNotify=true
+	[Desktop Entry]
+	Name=IntelliJ
+	Exec=/home/rhow/Programs/idea.sh
+	Icon=/home/rhow/Programs/idea.png
 	Type=Application
-	Categories=Development;IDE;
+	Categories=Development;IDE,GTK;GNOME;Utility;
 
-# Centos
+# pa-applet
+sudo apt-get install -y libglib2.0-dev libgtk-3-dev libnotify-dev libpulse-dev libx11-dev autoconf automake pkg-config
+Use this fork: https://github.com/mschwager/pa-applet/tree/master
+- Limited activity in repo, consider: https://github.com/nicklan/pnmixer
+sudo cp src/pa-applet /usr/bin/
 
-Command prompt
+# Packages installed
+curl ncdu blueman htop silversearcher-ag chromium-browser lxappearance ncdu
+emacs25-nox
+terminator
+keepass2
+git
+gdebi
+arandr
+cifs-utils
+sublime
+python3-distutils
 
-    export PS1="\e[1;32m\u@\h\e[1;37m:\e[1;34m\w\e[1;37m\$ \e[m"
-
-## s3cmd
-
-* Distro repositories are not update with latest versions
-* Sourceforge has the latest: http://sourceforge.net/projects/s3tools/files/s3cmd/
-* Follow INSTALL instructions: `sudo python setup.py install`
-* Set alias for: `/usr/local/bin/s3cmd`
+pithos 
+suru-icon-theme 
+arc-theme
+synapse
+thunar
+indicator-synapse
+postgresql-client 
+pavucontrol
+libcanberra-gtk-module
