@@ -5,4 +5,4 @@ xrandr --output VIRTUAL1 --off
 xrandr --output DP1 --off
 xrandr --output DP2-3 --off
 xrandr --output DP2 --off
-xrandr --output eDP1 --mode 1600x900 --pos 0x0 --rotate normal
+xrandr --output eDP1 --mode 1600x900 --pos 0x0 --rotate normal --below DP2-2
