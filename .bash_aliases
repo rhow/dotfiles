@@ -58,11 +58,8 @@ alias enable_alert='PS1="$PS1\a"'
 
 alias xclip='xclip -selection c'
 # alias tocb='function _tocb(){ echo "$1"| xclip; };_tocb'
-
-alias mount-gpfs='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777,sec=ntlmv2 //data.i3.local/1 /data'
-alias mount-jungfrau='sudo mount -t cifs -o user=rhow,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777 //documents.i3.local/jungfrau ~/mounts/jungfrau'
-
-alias umount-gpfs='sudo umount ~/mounts/gpfs'
+alias mount-jungfrau='sudo mount -t cifs -o user=$USER,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777 //10.200.30.19/jungfrau ~/mounts/jungfrau'
+alias mount-scripts='sudo mount -t cifs -o user=$USER,domain=I3,iocharset=utf8,file_mode=0777,dir_mode=0777 //10.200.30.19/scripts ~/mounts/scripts'
 alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
 alias py36virtualenv='python3.6 -m venv --without-pip virtualenv'
