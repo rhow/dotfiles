@@ -115,7 +115,7 @@ export GOROOT=$HOME/Programs/go
 export GOPATH=$HOME/go_path
 export PATH=$PATH:$GOROOT/bin
 
-bind '"\e[1;5D" backward-word' 
+bind '"\e[1;5D" backward-word'
 bind '"\e[1;5C" forward-word'
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
@@ -126,3 +126,7 @@ setxkbmap -option caps:ctrl_modifier
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
+
+# added by Anaconda3 installer
+export PATH="/home/rhow/anaconda3/bin:$PATH"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
