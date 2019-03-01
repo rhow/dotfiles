@@ -119,7 +119,7 @@ bind '"\e[1;5D" backward-word'
 bind '"\e[1;5C" forward-word'
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
-# source ~/.nvm/nvm.sh
+
 setxkbmap -option caps:ctrl_modifier
 # setxkbmap -option  # use with empty '-option' to remove mappings, i.e. cap locks on when above mapping is applied
 
@@ -127,6 +127,13 @@ docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-# added by Anaconda3 installer
-export PATH="/home/rhow/anaconda3/bin:$PATH"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+. /home/rhow/anaconda3/etc/profile.d/conda.sh
+# conda activate
+source ~/.nvm/nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
