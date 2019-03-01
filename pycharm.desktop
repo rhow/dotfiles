@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PyCharm
+Comment=IntelliJ IDEA IDE
+Exec=/home/rhow/Programs/pycharm.sh
+Icon=/home/rhow/Programs/pycharm.png
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Development;IDE;
