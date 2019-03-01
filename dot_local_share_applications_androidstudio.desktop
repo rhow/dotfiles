@@ -1,0 +1,10 @@
+cat > ~/.local/share/applications/androidstudio.desktop
+
+[Desktop Entry]
+Name=AndroidStudio
+Exec=/home/rhow/Programs/studio.sh
+Icon=/home/rhow/Programs/studio.png
+Type=Application
+Categories=Development;IDE,GTK;GNOME;Utility;
+
+$ sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch
