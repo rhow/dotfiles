@@ -120,7 +120,9 @@ bind '"\e[1;5C" forward-word'
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
 
-setxkbmap -option caps:ctrl_modifier
+if [ -f /usr/bin/setxkbmap ]; then
+    setxkbmap -option caps:ctrl_modifier
+fi
 # setxkbmap -option  # use with empty '-option' to remove mappings, i.e. cap locks on when above mapping is applied
 
 docker-ip() {
@@ -128,8 +130,11 @@ docker-ip() {
 }
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-. /home/rhow/anaconda3/etc/profile.d/conda.sh
+
 # conda activate
+if [ -f ~/anaconda3/etc/profile.d/conda.sh ]; then
+    source ~/anaconda3/etc/profile.d/conda.sh
+fi
 
 if [ -f ~/.nvm/nvm.sh ]; then
     source ~/.nvm/nvm.sh
