@@ -43,7 +43,7 @@ alias offscreen='sleep 2; xset dpms force off'
 alias usb-reset='sudo modprobe -r usbhid'
 
 alias agi='sudo apt-get install'
-alias agu='sudo apt-get update && sudo apt-get dist-upgrade -y'
+alias agu='sudo apt -o Acquire::http::AllowRedirect=false update && sudo apt-get -o Acquire::http::AllowRedirect=false dist-upgrade -y'
 
 alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
@@ -86,3 +86,4 @@ alias gconfigs='gcloud config configurations list'
 alias kconfig='kubectl config get-contexts'
 alias kconfiga='kubectl config get-contexts | ag "\*"'
 alias k8token='~/bin/k8token.sh'
+alias maelstrom-fullscreen='maelstrom -fullscreen -volume 1'
