@@ -189,6 +189,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id dropbox start
 exec --no-startup-id synapse
 exec --no-startup-id blueman-applet
+exec --no-startup-id xscreensaver -nosplash
 
 # Workspace names/variables
 set $w1 1:Main
@@ -229,6 +230,7 @@ bindsym $mod+Shift+0 move container to workspace $w10; workspace $w10
 # move current workspace to output monitor
 bindsym $mod+Shift+h move workspace to output DP2-2
 bindsym $mod+Shift+y move workspace to output DP2-1
+bindsym $mod+Shift+u move workspace to output DP2
 bindsym $mod+Shift+n move workspace to output eDP1
 
 # Docking and undocking laptop
