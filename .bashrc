@@ -153,3 +153,4 @@ fi
 if [ -f ~/.custom_ps1 ]; then
     source ~/.custom_ps1
 fi
+source <(kubectl completion bash)
