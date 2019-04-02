@@ -18,7 +18,6 @@ autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:5466:35.188.105.191
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:8363:10.128.0.230:80 -N -f
 
 # Elasticsearch - streaming-utilization
-
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:19201:10.128.0.151:9200 -N -f
 
 # Cluster: Streaming-Utilization: ElasticSearch & Kibana
@@ -27,10 +26,18 @@ autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:15600:10.128.0.225:
 
 # Elasticsearch
 autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:29201:10.128.0.151:9200 -N -f
-autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:25601:10.128.0.224:5601 -N -f
+autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:25601:10.128.0.225:5601 -N -f
+autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:25602:10.128.0.224:5601 -N -f
+
+# Single Kibana ES
+autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:39200:10.128.0.159:9200 -N -f
+autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:35601:10.128.0.226:5601 -N -f
 
 # streaming-inventory-server
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:8383:10.128.0.251:80 -N -f
 
 # QUAL DB
 autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:5477:35.194.26.54:5432 -N -f
+
+# Tensorboard
+autossh rhow@rhow-ml-vm.us-central1-a.ag-qual-frontend-adsftc -L 0.0.0.0:26006:10.128.0.19:6006 -N -f
