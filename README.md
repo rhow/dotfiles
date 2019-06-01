@@ -64,6 +64,25 @@ Use this fork: https://github.com/mschwager/pa-applet/tree/master
 - Limited activity in repo, consider: https://github.com/nicklan/pnmixer
 sudo cp src/pa-applet /usr/bin/
 
+# QGIS
+```
+conda create --name qgis
+source activate qgis
+```
+From: https://anaconda.org/conda-forge/qgis
+```
+conda install -c conda-forge qgis 
+conda install -c conda-forge/label/cf201901 qgis 
+```
+Desktop Example: `cat > ~/.local/share/applications/qgis.desktop`
+
+[Desktop Entry]
+Name=QGIS
+Exec=/bin/bash -c 'cd /home/rhow/anaconda3/bin;source activate qgis;qgis'
+Icon=/home/rhow/anaconda3/envs/qgis/share/qgis/doc/images/qgis-icon-60x60.png
+Type=Application
+Categories=GIS,Development;
+
 # Packages installed
 curl ncdu blueman htop silversearcher-ag chromium-browser lxappearance ncdu
 emacs25-nox
