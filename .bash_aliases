@@ -48,7 +48,7 @@ alias agu='sudo apt -o Acquire::http::AllowRedirect=false update && sudo apt-get
 alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
 alias net-reconfigure='sudo dpkg-reconfigure resolvconf'
-
+alias net-speed='date && curl -skLO https://git.io/speedtest.sh && chmod +x ./speedtest.sh && echo "Running Speed Test..." && ./speedtest.sh --simple && rm ./speedtest.sh'
 alias ping-test="echo 'Ping i3dc4.i3.local, Stats:'| ag i3dc4; ping i3dc4.i3.local -c 2 -W 1| ag 'packet loss'; echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias ping-g="echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias i3vpn='sh ~/bin/netExtender.sh'
@@ -71,10 +71,7 @@ alias s3cmd=/usr/local/bin/s3cmd
 
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
-alias nlist='nova list | ag'
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
-
-alias net-speed='echo $(date) && echo "$(curl -skLO https://git.io/speedtest.sh && chmod +x speedtest.sh)" && echo "Running Speed Test..." && echo "$(./speedtest.sh --simple && rm ./speedtest.sh)"'
 
 # Google
 alias glist='gcloud compute instances list | ag'
