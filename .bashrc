@@ -154,3 +154,14 @@ if [ -f ~/.custom_ps1 ]; then
     source ~/.custom_ps1
 fi
 source <(kubectl completion bash)
+source ~/Programs/google-cloud-sdk/completion.bash.inc
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
