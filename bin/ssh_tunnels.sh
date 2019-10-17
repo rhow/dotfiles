@@ -41,3 +41,7 @@ autossh ${USER}@bastion.us-central1-b.datadoors-qual -L 0.0.0.0:5477:35.194.26.5
 
 # Tensorboard
 autossh rhow@rhow-ml-vm.us-central1-a.ag-qual-frontend-adsftc -L 0.0.0.0:26006:10.128.0.19:6006 -N -f
+
+# OneAtlas
+autossh rhow@admin-lin.europe-west1-b.one-atlas-live-1334 -L 0.0.0.0:44444:192.168.10.3:5432 -N -f   	# database-2
+autossh rhow@admin-lin.europe-west1-b.one-atlas-dc-dev -L 0.0.0.0:44445:192.168.10.2:5432 -N -f 		# database-1
