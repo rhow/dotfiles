@@ -53,6 +53,7 @@ alias ping-test="echo 'Ping gcp-bridge, Stats:'| ag gcp-bridge; ping gcp-bridge 
 alias ping-g="echo 'Ping Google Nameserver, Stats:'| ag Google; ping 8.8.8.8 -c 2 -W 1| ag 'packet loss'"
 alias i3vpn='sh ~/bin/netExtender.sh'
 alias tail-syslog='sudo tail -f /var/log/syslog'
+alias ipinet='ip -f inet addr | ag inet'
 
 alias enable_alert='PS1="$PS1\a"'
 
