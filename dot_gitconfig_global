@@ -16,8 +16,6 @@
 	br = branch
 	a = add
 
-[url "https://github"]
-	insteadOf = git://github
 [push]
 	default = simple
 [credential "https://source.developers.google.com"]
