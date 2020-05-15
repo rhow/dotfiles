@@ -1,0 +1,141 @@
+rhow@dev-lap-rhow:~/git-repos$ for i in $(ls ~/git-repos); do echo "*** $i"; cd ~/git-repos/$i && ag --nonumbers url .git/config; done; cd ~/git-repos;
+
+*** ab-sass-client
+	url = git@development.datadoors.net:abarton/sass-client.git
+*** adm
+	url = git@development.datadoors.net:adm/adm.git
+*** adm-ogc
+	url = git@development.datadoors.net:airbusaerial/adm-ogc.git
+*** ads-cloud-live
+	url = https://source.developers.google.com/p/ads-ftc-noc/r/ads-cloud-live
+*** aerial-tiler
+	url = git@github.com:AirbusAerial/aerial-tiler.git
+*** ag-processor
+	url = git@development.datadoors.net:ag/ag-processor.git
+*** airbus-aerial
+ERR: Error stat()ing: .git/config
+*** airflow_multi_dagrun
+	url = https://github.com/flinz/airflow_multi_dagrun
+*** bing-api-test
+ERR: Error stat()ing: .git/config
+*** bluetooth
+ERR: Error stat()ing: .git/config
+*** build_mapserver_mapcache
+	url = git@development.datadoors.net:mapserver/mapserver_mapcache.git
+*** dd-ms-cloud
+	url = git@development.datadoors.net:kubernetes/dd-ms-cloud.git
+*** dd-package-wolf
+	url = git@development.datadoors.net:rhow/dd-package-wolf.git
+*** dd-recover-logs
+	url = git@development.datadoors.net:rhow/dd-recover-logs.git
+*** dd-wms-tester
+	url = git@development.datadoors.net:rhow/dd-wms-tester.git
+*** discovery-api
+	url = git@github.com:AirbusAerial/discovery-api.git
+*** dms-deployment
+	url = git@github.com:AirbusAerial/dms-deployment.git
+*** docker-elasticsearch-kubernetes
+	url = git@development.datadoors.net:rhow/docker-elasticsearch-kubernetes.git
+*** docker-kibana-kubernetes
+	url = git@development.datadoors.net:rhow/docker-kibana-kubernetes.git
+*** docker-ms
+	url = git@development.datadoors.net:kubernetes/docker-ms.git
+*** dotfiles
+	url = git@development.datadoors.net:rhow/dotfiles.git
+*** es-wfs-proxy
+	url = git@development.datadoors.net:rhow/es-wfs-proxy.git
+*** es-wfs-proxy-virt-env
+	url = git@development.datadoors.net:rhow/es-wfs-proxy.git
+*** forseti-security
+	url = https://github.com/GoogleCloudPlatform/forseti-security.git
+*** gcp-deploy-ansible
+	url = git@development.datadoors.net:tele-porter/gcp-deploy-ansible.git
+*** gcp-deploy-common
+	url = git@development.datadoors.net:tele-porter/gcp-deploy-common.git
+*** gcp-deploy-mugg
+	url = git@development.datadoors.net:tele-porter/gcp-deploy-mugg.git
+*** gcp-deploy-project-configs
+	url = git@development.datadoors.net:tele-porter/gcp-deploy-project-configs.git
+*** gcp-deploy-vars
+	url = git@development.datadoors.net:tele-porter/gcp-deploy-vars.git
+*** gcp-python-docs-samples
+	url = https://github.com/GoogleCloudPlatform/python-docs-samples.git
+*** gdal-base
+	url = git@development.datadoors.net:kubernetes/gdal-base.git
+*** gisservices-config
+	url = https://source.developers.google.com/p/ads-ftc-noc/r/gisservices
+*** infrastructure-terraform
+	url = git@github.com:AirbusAerial/infrastructure-terraform.git
+*** kartoza-docker-mapserver
+	url = https://github.com/kartoza/docker-mapserver.git
+*** kubernetes-db-utils
+	url = git@development.datadoors.net:kubernetes/kubernetes-db-utils.git
+*** mapserver_mapcache
+	url = git@development.datadoors.net:mapserver/mapserver_mapcache.git
+*** Mask_RCNN
+	url = https://github.com/matterport/Mask_RCNN
+*** mdd_tile_grid_ex1
+	url = git@development.datadoors.net:mdillon/tile_grid_ex1.git
+*** micasense-imaging
+	url = git@development.datadoors.net:rhow/micasense-imaging.git
+*** micasense-micmac
+	url = https://github.com/loicdtx/micamac.git
+*** micmac-build
+	url = https://github.com/micmacIGN/micmac.git
+*** mugg-core
+	url = git@development.datadoors.net:mugg/core.git
+*** mugg-gator
+	url = git@development.datadoors.net:mugg/gator.git
+*** mugg-qual-config
+	url = https://source.developers.google.com/p/datadoors-qual/r/mugg-qual-config
+*** one2one_pubsub
+	url = git@development.datadoors.net:rhow/one2one_pubsub.git
+*** padawan-cache-management
+	url = git@development.datadoors.net:padawan/cache-management.git
+*** pca-experiments
+	url = git@development.datadoors.net:mdillon/pca-experiments.git
+*** py_hole_extraction
+	url = git@development.datadoors.net:rhow/extract-islands.git
+*** s2-coverage
+	url = git@development.datadoors.net:rhow/s2-coverage.git
+*** sao
+	url = git@github.com:AirbusAerial/streaming-authoring-optimize.git
+*** serverless_wmts
+	url = git@development.datadoors.net:rhow/serverless-tiles.git
+*** shell-inventory
+	url = git@development.datadoors.net:rhow/shell-inventory.git
+*** simplot-aois
+	url = git@development.datadoors.net:rhow/simplot-aois.git
+*** simplot-field-bndy
+	url = git@development.datadoors.net:rhow/simplot-field-bndy.git
+*** simplot-web
+	url = git@development.datadoors.net:simplot/web.git
+*** slack-dark-mode
+	url = https://github.com/LanikSJ/slack-dark-mode
+*** st
+	url = https://github.com/nferraz/st.git
+*** streaming-auth-api
+	url = git@github.com:AirbusAerial/streaming-authoring-api.git
+*** streaming-authoring-api
+	url = git@development.datadoors.net:rhow/streaming-authoring-api.git
+*** streaming-authoring-optimize
+	url = git@github.com:AirbusAerial/streaming-authoring-optimize.git
+*** streaming-dd-optimize
+	url = git@development.datadoors.net:rhow/dd-optimize.git
+*** streaming-inventory-client
+	url = git@development.datadoors.net:rhow/streaming-inventory-client.git
+*** streaming-inventory-server
+	url = git@development.datadoors.net:rhow/streaming-inventory-server.git
+*** streaming-stats-bq
+	url = git@development.datadoors.net:tele-porter/streaming-stats.git
+*** streaming-storage
+	url = git@development.datadoors.net:rhow/streaming-storage.git
+*** tcod-manager
+	url = git@development.datadoors.net:rhow/tcod-manager.git
+	url = https://source.developers.google.com/p/adsftc-production/r/tcod-manager
+*** tele-porter_container-engine-ads-ftc-noc
+	url = git@development.datadoors.net:tele-porter/container-engine-ads-ftc-noc.git
+*** tele-porter_one2one
+	url = git@development.datadoors.net:tele-porter/one2one.git
+*** upgrade-cluster
+	url = git@development.datadoors.net:kubernetes/upgrade-cluster.git
