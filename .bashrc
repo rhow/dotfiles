@@ -165,3 +165,8 @@ source ~/Programs/google-cloud-sdk/completion.bash.inc
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/rhow/.nvm/versions/node/v12.7.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+
+if [ -f /home/rhow/.ssh/github ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+    ssh-add -q /home/rhow/.ssh/github > /dev/null 2>&1
+fi
