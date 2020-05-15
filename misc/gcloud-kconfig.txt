@@ -1,0 +1,22 @@
+rhow@dev-lap-rhow:~/Programs$ gcloud config configurations list
+NAME            IS_ACTIVE  ACCOUNT             PROJECT              COMPUTE_DEFAULT_ZONE  COMPUTE_DEFAULT_REGION
+ads-ftc-noc     False      rhow@airbus-na.com  ads-ftc-noc
+aerial-dev      True       rhow@airbus-na.com  aerial-dev           us-central1-a         us-central1
+aerial-mvp      False      rhow@airbus-na.com  aerial-mvp
+datadoors-qual  False      rhow@airbus-na.com  datadoors-qual       us-central1-c         us-central1
+forseti         False      rhow@airbus-na.com  ads-ftc-noc-forseti  us-central1-c         us-central1
+
+rhow@dev-lap-rhow:~/Programs$ kconfig
+* aerial-mvp_aerial-dev
+ads-ftc-primary
+aerial-dev_default-dev
+ag-qual-frontend-ag-processing
+datadoors-qual-primary
+dd-qual-strm-processing-airflow
+gke_ads-ftc-noc_us-central1-c_streaming
+gke_aerial-dev_us-central1-a_dms-deployment
+gke_datadoors-qual_us-central1-b_dd-mapserver-tests
+gke_datadoors-qual_us-central1-c_utilization-large-disk
+minikube
+streaming-utilization
+streaming-utilization-qual

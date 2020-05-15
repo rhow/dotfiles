@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=QGIS
+Exec=/bin/bash -c 'cd /home/rhow/anaconda3/bin;source activate qgis;qgis'
+Icon=/home/rhow/anaconda3/envs/qgis/share/qgis/doc/images/qgis-icon-60x60.png
+Type=Application
+Categories=GIS,Development;

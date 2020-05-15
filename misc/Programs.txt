@@ -1,0 +1,32 @@
+total 3.5G
+drwxrwxr-x  8 rhow  4.0K Jan 28  2019 android-studio/
+-rw-rw-r--  1 rhow 1015M Feb 14  2019 android-studio-ide-182.5264788-linux.zip
+drwxrwxr-x  3 rhow  4.0K Apr  2 19:38 blender/
+lrwxrwxrwx  1 rhow    49 Apr  2 19:58 blender.sh -> blender/blender-2.83-75f6e6b39e41-linux64/blender*
+lrwxrwxrwx  1 rhow    53 Apr  2 19:57 blender.svg -> blender/blender-2.83-75f6e6b39e41-linux64/blender.svg
+drwxr-xr-x 10 rhow  4.0K Jul  8  2019 go/
+-rw-rw-r--  1 rhow  123M Aug 12  2019 go1.12.7.linux-amd64.tar.gz
+drwxr-xr-x  9 rhow  4.0K May  7 11:46 google-cloud-sdk/
+-rw-rw-r--  1 rhow   18M Oct  4  2017 google-cloud-sdk-174.0.0-linux-x86_64.tar.gz
+drwxrwxr-x  9 rhow  4.0K Sep 19  2018 idea-IU-182.4505.22/
+drwxrwxr-x  9 rhow  4.0K Dec 15  2018 idea-IU-183.4588.61/
+drwxrwxr-x  9 rhow  4.0K May  7 15:51 idea-IU-183.6156.11/
+-rw-rw-r--  1 rhow  618M Sep 19  2018 ideaIU-2018.2.4.tar.gz
+-rw-rw-r--  1 rhow  656M Dec 15  2018 ideaIU-2018.3.1.tar.gz
+-rw-rw-r--  1 rhow  657M May 26  2019 ideaIU-2018.3.6.tar.gz
+lrwxrwxrwx  1 rhow    33 May 26  2019 idea.png -> idea-IU-183.6156.11/bin//idea.png
+lrwxrwxrwx  1 rhow    32 May 26  2019 idea.sh -> idea-IU-183.6156.11/bin//idea.sh*
+drwxrwxr-x  2 rhow  4.0K Feb 19  2019 ks_0.13.1_linux_amd64/
+-rw-rw-r--  1 rhow   22M Nov 21  2018 ks_0.13.1_linux_amd64.tar.gz
+drwxrwxr-x 13 rhow  4.0K Feb 21  2019 opencv/
+drwxrwxr-x  6 rhow  4.0K Nov 17  2018 opencv_contrib/
+-rw-rw-r--  1 rhow   59M Feb  4  2019 opencv_contrib.zip
+-rw-rw-r--  1 rhow   87M Feb  4  2019 opencv.zip
+drwxrwxr-x 10 rhow  4.0K Aug 24  2018 pycharm-community-2018.2.2/
+-rw-rw-r--  1 rhow  249M Aug 24  2018 pycharm-community-2018.2.2.tar.gz
+lrwxrwxrwx  1 rhow    42 Aug 24  2018 pycharm.png -> pycharm-community-2018.2.2/bin/pycharm.png
+lrwxrwxrwx  1 rhow    41 Aug 24  2018 pycharm.sh -> pycharm-community-2018.2.2/bin/pycharm.sh*
+drwxrwxr-x  8 rhow  4.0K Nov  6  2019 SoapUI-5.5.0/
+drwxr-xr-x  4 rhow  4.0K Nov  6  2019 SoapUI-Tutorials/
+lrwxrwxrwx  1 rhow    29 Feb 15  2019 studio.png -> android-studio/bin/studio.png
+lrwxrwxrwx  1 rhow    28 Feb 15  2019 studio.sh -> android-studio/bin/studio.sh*

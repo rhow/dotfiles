@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=IntelliJ
+Exec=/home/rhow/Programs/idea.sh
+Icon=/home/rhow/Programs/idea.png
+Type=Application
+Categories=GTK;GNOME;Utility;
