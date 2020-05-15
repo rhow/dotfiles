@@ -21,6 +21,6 @@
     font = DejaVu Sans Mono 10
     foreground_color = "#ffffff"
     login_shell = True
-    scrollback_lines = 999
+    scrollback_lines = 1000
     show_titlebar = False
     urgent_bell = True
