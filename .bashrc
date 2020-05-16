@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -176,3 +176,5 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/path.bash.inc' ]; then . '/home/rh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc'; fi
+
+export PATH=$PATH:/var/lib/flatpak/exports/share
