@@ -179,4 +179,4 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/h
 
 if [ -d "/var/lib/flatpak/exports/share" ]; then export PATH="$PATH:/var/lib/flatpak/exports/share"; fi
 
-if [ -f "/home/rhow/anaconda3/bin/conda" ]; then export PATH="/home/rhow/anaconda3/bin:$PATH"; fi
+if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then source "/home/rhow/anaconda3/etc/profile.d/conda.sh"; fi
