@@ -15,7 +15,6 @@
     show_titlebar = False
     scrollback_lines = 1000
     login_shell = True
-    use_system_font = False
     copy_on_selection = True
 [layouts]
   [[default]]
