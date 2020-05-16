@@ -43,7 +43,7 @@ alias offscreen='sleep 2; xset dpms force off'
 alias usb-reset='sudo modprobe -r usbhid'
 
 alias agi='sudo apt-get install'
-alias agu='sudo apt -o Acquire::http::AllowRedirect=false update && sudo apt-get -o Acquire::http::AllowRedirect=false dist-upgrade -y'
+alias agu='echo "Updating..." && sudo apt update && echo "" && echo "Dist Upgrade..." && sudo apt-get dist-upgrade -y && echo "" && echo "Autoremove..." && sudo apt autoremove --purge'
 
 alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
