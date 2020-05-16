@@ -14,7 +14,7 @@ alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
-alias emacs='/usr/bin/emacs25-nox'
+# alias emacs='/usr/bin/emacs-nox'
 alias df='/bin/df -h'
 alias ip4='ip a | ag inet| grep -v inet6'
 
@@ -65,9 +65,9 @@ alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 
 alias py36virtualenv='python3.6 -m venv --without-pip virtualenv'
 alias py35virtualenv='python3.5 -m venv --without-pip virtualenv'
-alias pypipinstall='curl -s https://bootstrap.pypa.io/get-pip.py | python'
-alias pyserv='python -m SimpleHTTPServer'
-alias prettyjson='python -m json.tool'
+alias pypipinstall='curl -s https://bootstrap.pypa.io/get-pip.py | python3'
+alias pyserv='python3 -m SimpleHTTPServer'
+alias prettyjson='python3 -m json.tool'
 alias s3cmd=/usr/local/bin/s3cmd
 
 alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
