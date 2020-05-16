@@ -132,9 +132,9 @@ docker-ip() {
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # conda activate
-if [ -f ~/anaconda3/etc/profile.d/conda.sh ]; then
-    source ~/anaconda3/etc/profile.d/conda.sh
-fi
+# if [ -f ~/anaconda3/etc/profile.d/conda.sh ]; then
+#   source ~/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
+# fi
 
 if [ -f ~/.nvm/nvm.sh ]; then
     source ~/.nvm/nvm.sh
@@ -177,4 +177,6 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/path.bash.inc' ]; then . '/home/rh
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc'; fi
 
-export PATH=$PATH:/var/lib/flatpak/exports/share
+if [ -d "/var/lib/flatpak/exports/share" ]; then export PATH="$PATH:/var/lib/flatpak/exports/share"; fi
+
+if [ -f "/home/rhow/anaconda3/bin/conda" ]; then export PATH="/home/rhow/anaconda3/bin:$PATH"; fi
