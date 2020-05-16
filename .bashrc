@@ -170,3 +170,9 @@ if [ -f /home/rhow/.ssh/github ]; then
     eval "$(ssh-agent -s)" > /dev/null
     ssh-add -q /home/rhow/.ssh/github > /dev/null 2>&1
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/rhow/Programs/google-cloud-sdk/path.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc'; fi
