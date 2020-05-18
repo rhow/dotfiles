@@ -4,7 +4,7 @@
 ## Synapse
     sudo add-apt-repository ppa:synapse-core/ppa
 	sudo apt-get update
-	sudo apt-get install synapse
+	sudo apt-get install -y synapse
 
 
 ## Desktop files not showing up in i3wm
