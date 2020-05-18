@@ -1,5 +1,45 @@
+# Notes for setup
+
+```bash
+sudo apt install -y git curl ncdu htop terminator silversearcher-ag emacs-nox vscode
+sudo apt install -y chromium-browser xscreensaver gdebi flatpak
+sudo apt install -y apt-transport-https ca-certificates software-properties-common
+sudo apt-get install -y python3-gpg python3-distutils python3-testresources
+sudo apt install -y gnome-tweak-tool
+sudo apt install -y i3 dropbox keepassx
+curl -s https://bootstrap.pypa.io/get-pip.py | python3
+/home/rhow/.local/bin/pip3 install PyRIC
+
+# Installs application launcher synapse; need to remove from apt repo, causes upgrade to fail 
+sudo add-apt-repository ppa:synapse-core/ppa
+sudo apt-get -y install synapse
+# sudo emacs /etc/apt/sources.list.d/synapse-core-ubuntu-ppa-focal.list
+
+curl https://github.com/supermarin/YosemiteSanFranciscoFont/archive/master.zip
+unzip YosemiteSanFranciscoFont-master.zip
+cd YosemiteSanFranciscoFont-master/
+mkdir ~/.fonts
+cp *.ttf ~/.fonts/
+
+./install.sh
 
 
+# https://docs.anaconda.com/anaconda/install/linux/
+sudo apt install -y apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+sha256sum Anaconda3-2020.02-Linux-x86_64.sh 
+bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh 
+
+conda create --name qgis
+conda activate qgis
+conda install -c conda-forge qgis
+
+cp misc/dot_local_share_applications_qgis.desktop ~/.local/share/applications/qgis.desktop
+cp misc/dot_local_share_applications_intellij.desktop ~/.local/share/applications/intellij.desktop
+
+# Using gdm3 for a Display Manager, LightDM might be better
+# sudo apt-get install gnome-flashback
+# https://github.com/i3-gnome/i3-gnome.git > sudo make install
+```
 
 ## Synapse
     sudo add-apt-repository ppa:synapse-core/ppa
