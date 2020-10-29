@@ -1,0 +1,10 @@
+Error
+Error from chokidar (/home/rhow/git-repos/frontend_mono_start_test/projects/ag): Error: ENOSPC: System limit for number of file watchers reached, watch '/home/rhow/git-repos/frontend_mono_start_test/projects/ag/tslint.json'
+
+Stackoverflow
+https://stackoverflow.com/questions/53930305/nodemon-error-system-limit-for-number-of-file-watchers-reached
+
+sudo emacs /etc/sysctl.d/10-user-watches.conf
+fs.inotify.max_user_watches = 100000
+
+sudo service procps restart
