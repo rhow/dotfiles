@@ -47,7 +47,7 @@
 		"/home/likewise-open/I3/rhow/projects/sailsjs-v10-angularjs-requirejs-boilerplate",
 		"/home/likewise-open/I3/rhow/projects/mapcache-testing"
 	],
-	"last_version": 3176,
+	"last_version": 3211,
 	"last_window_id": 71,
 	"log_indexing": false,
 	"settings":
@@ -1397,88 +1397,21 @@
 			"buffers":
 			[
 				{
-					"contents": "kubectl autoscale deployment dd-optimizer --cpu-percent=50 --min=1 --max=4 deployment \"dd-optimizer\" autoscaled\n\n\n* secret for REDIS, \n* secret for auth JSON, why is this needed?\n* docker push optimizer to GCP\n* deploy to GCP\n** start with while-true\n* monitor.py to put msgs in queue\n** part of data-mapping\n* change queue name: \n** dd-optimize to tiff-cache\n** \n\nContainer for each format\n\n\ndata-mapping-status table\nformat: tiff-cache, tiff-slap, mrf-lerc\ninventory_query: [\n* [select name from inventory where name = ] \n* => 'data/1/dd/streaming/i3/nwp/' \n* [and  FINALIZED;]\n\nUI for this database\n* present count on query prior to submit\n\nqueue per \"format:dataset\" ? \n** select REDIS on key wildcard 'tiff-cache*' ?\n** How does the worker know what queue to poll ?\ninitial size of queue, msgs PUT\nstatus of queue\n\nbatch process ==> insert data mappings\n* procject name\n* bucket names ?\n\nMonitor => adds tiff-cache queues\ntiff-cache-migration\n",
+					"contents": "http://localhost:8686/styles/klokantech-basic/?raster#18/40.55534/-105.07976\n",
 					"settings":
 					{
-						"buffer_size": 948,
+						"buffer_size": 77,
 						"line_ending": "Unix",
-						"name": "kubectl autoscale deployment dd-optimizer --cpu-pe"
+						"name": "http://localhost:8686/styles/klokantech-basic/?ras"
 					}
 				},
 				{
-					"contents": "To do\nlibcurl issue with mapservers, new build of mapserver, contact community\n\nAdd project paths to catalog.project_path\n- project_id\n- path\nunique project_id has many paths, linked to project table\ncreate table (columns, perms); get list; make insert statements\n\nMove dd-optimize to Kubernetes group in gitlabs\n",
+					"file": "/home/rhow/.bash_aliases",
 					"settings":
 					{
-						"buffer_size": 313,
-						"line_ending": "Unix",
-						"name": "To do"
-					}
-				},
-				{
-					"contents": "Redo dataset:\n0b65b98c-b72c-4617-a50d-8da5a4635ad8\n\nSELECT r.id, org_location \n  FROM catalog.dataset d, catalog.raster r \n  WHERE r.dataset_id = d.id AND\n  r.dataset_id = 'cd175c3b-408f-4f6a-b740-7930f5f9a3b4' AND\n  r.status -> 'source' = 'unknown' AND\n  d.process -> 'index' = 'completed';",
-					"settings":
-					{
-						"buffer_size": 291,
-						"line_ending": "Unix",
-						"name": "Redo dataset:"
-					}
-				},
-				{
-					"contents": "MAP\nEXTENT -80.6551638128871 28.5791501871129 -80.6515981871129 28.5827158128871\nIMAGECOLOR 255 255 255\nSIZE 1001 1001\nSTATUS ON\nUNITS DD\nNAME \"ddStreaming_2a49a373-1040-43d4-bb3b-55f12cd4e62a_\"\nRESOLUTION 96\n\n# SYMBOLSET \"symbol.sym\"\nPROJECTION\n  \"proj=longlat\" \"datum=WGS84\" \"pm=greenwich\" \"ellps=WGS84\" \"no_defs\"\nEND\n\nWEB\nMETADATA\n          bms_maxpixels     \"2250000\"\n          bms_chunk_width   \"1500\"\n          bms_chunk_height  \"1500\"\n          bms_overlap       \"200\"\n  END\n  TEMPLATE \"template.html\"\n  IMAGEPATH \"//dd-proto-valida/wms_img/\"\n  IMAGEURL \"http://www.datadoors.net/wms_img/\"\nEND\n\nCONFIG GDAL_DISABLE_READDIR_ON_OPEN \"YES\"\nCONFIG VSI_CACHE \"TRUE\"\nCONFIG CPL_VSIL_CURL_ALLOWED_EXTENSIONS \".tif,.msk\"\nCONFIG GDAL_HTTP_HEADER_FILE \"/google-token/auth.header\"\nCONFIG \"CPL_DEBUG\" \"ON\"\n\n  ##########################################################\n  #############     naip_fl_100_20150425 [Added: 2016/10/05 11:23:45]\n  ##########################################################\n  LAYER\n    NAME \"naip_fl_100_20150425\"\n    PROJECTION\n    \"proj=longlat\" \"ellps=WGS84\" \"datum=WGS84\" \"no_defs\"\n    END\n    PROCESSING \"RESAMPLE=AVERAGE\"\n    MAXSCALE 10000\n    SIZEUNITS PIXELS\n    STATUS DEFAULT\n    #DATA \"/tmp/naip_fl_100_2015_R11C30.tif\"\n    DATA \"/data/1/dd/streaming/tomtom/imagery/usda/naip_fl_100_20150425/vrt/naip_fl_100_2015_R11C30.vrt\"\n#    DATA \"/vsigs/3871edf1-6286-4c60-b89d-704dbb3ccac4/naip_fl_100_2015_R11C30.tif\"\n#    DATA \"/vsigs/rhow_ms_data_test/naip_fl_100_2015_R11C30.tif\"\n    # TILEINDEX \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n    # TILESRS \"src_srs\"\n    EXTENT -87.7521939 24.3866848 -79.8077031 31.1274718\n    TILEITEM \"location\"\n    TYPE RASTER\n    UNITS METERS\n  END\n\n  # LAYER\n  #   NAME \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n  #   CONNECTIONTYPE POSTGIS\n  #   CONNECTION \"host=pg-hosted-services dbname=streaming_content user=streaminguser password=r3ad0nly port=5432\"\n  #   DATA \"geom from catalog.raster using unique id using srid=4326\"\n  #   FILTER ([dataset_id] = '3871edf1-6286-4c60-b89d-704dbb3ccac4')\n  #   METADATA\n  #     \"wms_title\" \"naip_fl_100_20150425_catalog_dataset_3871edf1-6286-4c60-b89d-704dbb3ccac4\"\n  #     \"wms_layer_group\" \"\"\n  #     \"wms_enable_request\" \"!GetCapabilities\"\n  #   END\n  #   TYPE POLYGON\n  #   STATUS OFF\n  #   PROCESSING \"CLOSE_CONNECTION=DEFER\"\n  #   PROJECTION\n  #     \"proj=longlat\" \"ellps=WGS84\" \"datum=WGS84\" \"no_defs\"\n  #   END\n  # END\n\nOUTPUTFORMAT\n  NAME jpeg\n  DRIVER \"AGG/JPEG\"\n  MIMETYPE \"image/jpeg\"\n  IMAGEMODE RGB\n  EXTENSION \"jpg\"\n  FORMATOPTION QUALITY=50\n  FORMATOPTION \"INTERLACE=OFF\"\nEND\n\nEND\n",
-					"file": "/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
-					"file_size": 2665,
-					"file_write_time": 131496484155614471,
-					"settings":
-					{
-						"buffer_size": 2665,
-						"line_ending": "Unix",
-						"name": "MAP"
-					}
-				},
-				{
-					"contents": "Software application is pretty cool\nClamd, ClamTK (gui)\nssh keys from Laptop\n~/.pgpass\n\nUpdateConfig script\npa-applet\n\nTomTom ",
-					"settings":
-					{
-						"buffer_size": 126,
-						"line_ending": "Unix",
-						"name": "Software application is pretty cool"
-					}
-				},
-				{
-					"contents": "\n\n\n## Synapse\n    sudo add-apt-repository ppa:synapse-core/ppa\n\tsudo apt-get update\n\tsudo apt-get install synapse\n\n\n## Desktop files not showing up in i3wm\nFound in in the 'desktop' files there's an entry for:\n* `OnlyShowIn=Unity;`\nCommenting this out allows it to be shown in Synapse, edit the\nfollowing file:\n* `/usr/share/applications/unity-control-center.desktop`\n\n## PulseAudio GUI\n    sudo apt-get install pavucontrol\n\n## Key conflict\n`<Control>+space` is used by Ibus to change keyboard inputs, changed to `<Control><Shift><Alt>i`\n* Use the Keyboard icon in the tray\n\n## Cap Locks\nTo set caplocks to control key for terminal, added the following to .bashrc file:\n* `setxkbmap -option caps:ctrl_modifier`\n* I'd like to switch the `cntl+f` and `alt+f` functions in a terminal\n* I'd like to switch the `cntl+b` and `alt+b` functions in a terminal\n\nLimitation to this is that it only works on local terminals, doesn't\napply when ssh-ing to other machines.\n\nInstead using the `gnome-tweak-tool`, and under *Typing* set _CapLocks\nto additional Cntl_\n\n## i3wm\nGreat tutorial for i3wm configuration and \"Ricing\" your UI\n- Configuration: https://www.youtube.com/watch?v=8-S0cWnLBKg\n- Ricing: https://www.youtube.com/watch?v=ARKIwOlazKI\n\n    sudo apt-get install xbacklight lxappearance rofi \n\nSound controls are also disabled, this reference looks to be helpful:\n* http://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume\n\n# IntelliJ\nInstall: download latest, untar to `~/Programs`, and add symlinks\nLicense activation - username: randingo, password in Keepass\n\n## Desktop\nFor Synapse Launcher \nDesktop Example: `cat > ~/.local/share/applications/intellij.desktop`\n\n\t[Desktop Entry]\n\tName=IntelliJ\n\tExec=/home/rhow/Programs/idea.sh\n\tIcon=/home/rhow/Programs/idea.png\n\tType=Application\n\tCategories=Development;IDE,GTK;GNOME;Utility;\n\n# pa-applet\nsudo apt-get install -y libglib2.0-dev libgtk-3-dev libnotify-dev libpulse-dev libx11-dev autoconf automake pkg-config\nUse this fork: https://github.com/mschwager/pa-applet/tree/master\n- Limited activity in repo, consider: https://github.com/nicklan/pnmixer\nsudo cp src/pa-applet /usr/bin/\n\n# Packages installed\ncurl ncdu blueman htop silversearcher-ag chromium-browser lxappearance ncdu\nemacs25-nox\nterminator\nkeepass2\ngit\ngdebi\narandr\ncifs-utils\nsublime\npython3-distutils\n\npithos \nsuru-icon-theme \narc-theme\nsynapse\nthunar\nindicator-synapse\npostgresql-client \npavucontrol\nlibcanberra-gtk-module",
-					"file": "/home/rhow/git-repos/dotfiles/README.md",
-					"file_size": 2350,
-					"file_write_time": 131710625973071214,
-					"settings":
-					{
-						"buffer_size": 2456,
+						"buffer_size": 3848,
+						"encoding": "UTF-8",
 						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "sudo apt-get install -y libglib2.0-dev libgtk-3-dev libnotify-dev libpulse-dev libx11-dev autoconf automake pkg-config",
-					"settings":
-					{
-						"buffer_size": 118,
-						"line_ending": "Unix",
-						"name": "sudo apt-get install -y libglib2.0-dev libgtk-3-de"
-					}
-				},
-				{
-					"contents": "\ndd-ms-proxy features:\n- download fonts and symbols\n- support storage version of map: \"mapversion=12345\"\n- ensure support for openlayers template: \"?mode=browse&template=openlayers\" \n-- http://mapserver.org/cgi/openlayers.html\n\nCreate streaminguser user and pswd used for RO access to catalog.raster and dataset.extent\n\nCREATE USER streaminguser NOSUPERUSER NOCREATEDB NOCREATEROLE NOCREATEUSER NOINHERIT LOGIN PASSWORD 'r3ad0nly';\nGRANT USAGE ON SCHEMA catalog TO streaminguser;\nGRANT SELECT ON catalog.raster TO streaminguser;\nGRANT SELECT ON catalog.dataset TO streaminguser;\n\n6ee054a9-687b-46ff-aec8-09ef61874c48 - 20 rasters\n\nselect bucket, name\n from object_history WHERE event_type='OBJECT_FINALIZE'\n and name ilike 'data/1/dd/streaming/tomtom/imagery/asia_cities/ge1_bandanaira_050_20111005/%' limit 1000\n\n\n\nTODO: dd-streaming-migration\n\nNew database in GCP project: ads-ftc\n- create schema\n\nOptimize TomTom asian_cities\n-- Begin optimizing on Monday\n-- make catalog db, create schema, cred's\n-- cloudsql connection container\n-- tag and push images to gcp\n-- GCP YAML deployments\n-- implement work submition and progress\n---- update tomtom asian cities catalog.datasets with tomtom-project-id\n\nStreaming database update\n-- worker to rewrite MS dataset in dd.server_layer.layer_settings\n---- rewrite TILEINDEX to reference additional:\n---- MS LAYER to Postgres connection to catalog.raster plus FILTER\n\nRaster Indexing - Scale-able Pods\n- Catalog.dataset rasters created from TILEINDEX shapefile \n-- catalog.dataset URI exists in DMI db => dataset.status \"uri_exists\": 'true'\n-- Set dataset.status \"rasters\": \"INDEXING\"\n-- Locking catalog.dataset raster INDEXING, race condition\n---- update dataset set status.rasters \"INDEXING\" where status.rasters not \"INDEXING\"\n-- Check if catalog.raster.exists in DB\n-- Exists in staging, download\n\nlocalhost -U data_tracker_reader -p  data_migration_tracker\n\nCatalog Monitor:\n- Sync DD datasets to Catalog\n- Process Raster Shapefile Index\n-- If shapefile exists, check object storage or DMI\n-- Set Dataset.Status || Rasters: Processing, Done\n\nDataset.process: {\n  \"index\": \"unknown, unavailable, indexing, completed\"\n  \"status\": \"idle, submitting, submitted, processing, completed\"\n  \"error\": \"\"\n}\n\nDataset.process.index.unknown: initialized (inserted/created)\nDataset.process.index.unavailable: tileindex/data is not in object storage\nDataset.process.index.indexing: In progress of indexing tileindex shapefile, creating rasters\nDataset.process.index.completed: Indexing is done\nDataset.process.status.idle: initialized (inserted/created)\nDataset.process.status.submitting: submitting rasters to work queue\nDataset.process.status.submitted: finished submitting rasters to work queue\nDataset.process.status.processing: work_count is not 0\nDataset.process.status.completed: work_count equals raster count\nDataset.process.error: error/exception\nDataset.work_count: Updated when work is submitted; updated by Monitor\nDataset.progress: (remainging work) How many are in work queue, updated by monitor\n\n\nRaster.Status: {\n  \"source\": \"unknown, unavailable, processing, completed\"   # currently assigned during insert, status initial value \n  \"uri_new\": \"bucket/<path>/filename.tif\"\n  \"uri_old\": \"//data/1/<path>/filename.tif\"\n  \"error\": \"\"\n  \"duration\": \"total in seconds\"\n}\n\nWork Master: Tiff-Slab\n- If Project_ID is assigned to Dataset and it has Rasters\n-- Make bucket in Project\n-- Sumbit rasters for work\n\nWorker: Tiff-Slab\n- Update raster location to bucket path\n\nTiff-Cache\nHow do we know Tiff-Cache dataset is completely available?\n-- Keep checking DMI db if anymore rasters appear\nDoes worker have to update status on DMI record when completed?\n-- No, Check corresponding bucket count.\n\niptables -t nat -A PREROUTING -p tcp -d 10.0.0.132 --dport 5432 -j DNAT --to-destination 172.17.0.2:5432\n",
-					"settings":
-					{
-						"buffer_size": 3841,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"contents": "/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R1C1-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/baltic_sea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/mediterranean_sea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R2C1-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R1C2-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/papua_new_guinea_dbm_shd_2015_10.tif\n/data/1/dd/streaming/i3/esat/water_tile/world_15_32_48.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20070115_20110216_General1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/atlantic_europe_dbm_shd_2015_10.tif\n/data/1/dd/streaming/i3/modis/modis_5km/world.topo.bathy.200407_ov.tif\n/data/1/dd/streaming/spatialenergy/exxonmobil/20100920/wv2_qatarfacility_qat_050_2010723_src/052405302010_01/052405302010_01_P001_PSH/10JUL23071534-S2AS_R2C2-052405302010_01_P001.TIF\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20110216_20140125_Features1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/east_africa_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/indonesia_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/madagascar_seychelles_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_spatialenergy/auxiliary/20151015/tcarta_bathymetryhillshades_global_90m_20150101_i3tif/north_sea_ireland_dbm_shd_2015_10.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20110216_20140125_General1_UTMz38.tif\n/data/1/dd/streaming/spatialenergy/access_midstream/20150303/aerial_WV_Aerial_WV_030_20141001_i3tif/aerial_WV_Aerial_WV_030_20141001_i3tif_R01C03.tif\n/data/1/dd/streaming/spatialenergy/noble/20151015/airbus_seeps_global_na_20151001_shp/NE1_HR_LC_SR_W_DR.tif\n/data/1/dd/streaming/spatialenergy/_se_ogc/changedetectionsample_rumalia_irq_20140101_src/maps_rumalia_irq_na_various_tif/RUMAILA_20070115_20110216_Features1_UTMz38.tif",
-					"settings":
-					{
-						"buffer_size": 3061,
-						"line_ending": "Unix",
-						"name": "/data/1/dd/streaming/spatialenergy/exxonmobil/2010"
 					}
 				}
 			],
@@ -1663,6 +1596,14 @@
 			],
 			"file_history":
 			[
+				"/home/rhow/git-repos/dotfiles/README.md",
+				"/home/rhow/.bashrc",
+				"/home/rhow/git-repos/dotfiles/dot_config/i3/config",
+				"/home/rhow/.bash_aliases",
+				"/home/rhow/.screenlayout/undock.sh",
+				"/home/rhow/git-repos/dotfiles/dot_config/i3/wrapper.py",
+				"/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
+				"/home/rhow/.bash",
 				"/home/local/I3/rhow/tmp/ms-mc-build.txt",
 				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
 				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
@@ -1782,23 +1723,15 @@
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
 				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts"
+				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml"
 			],
 			"find":
 			{
-				"height": 31.0
+				"height": 45.0
 			},
 			"find_in_files":
 			{
-				"height": 93.0,
+				"height": 97.0,
 				"where_history":
 				[
 					"*.js",
@@ -1834,6 +1767,21 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"sudo",
+					"  ",
+					"conda",
+					"mod+d",
+					"mod-d",
+					"mod+d",
+					"mode+d",
+					"exec_always",
+					"sdk",
+					"synap",
+					"XF86AudioRaiseVolume",
+					"Audio",
+					"XF86AudioMute",
+					"XF86AudioMute,",
+					"back",
 					"\n",
 					"* ",
 					" in Debia",
@@ -1946,22 +1894,7 @@
 					" ",
 					"    ",
 					"  ",
-					" ",
-					"\\n",
-					", \"",
-					"\n      ",
-					"# ",
-					"':",
-					"cpu: ",
-					"  ",
-					"\n",
-					" \\",
-					"-devel",
-					", ",
-					"     ",
-					"#     ",
-					"devel \\",
-					"-devel \\"
+					" "
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -2002,7 +1935,7 @@
 			"groups":
 			[
 				{
-					"selected": 5,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -2010,135 +1943,20 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 948,
+								"buffer_size": 77,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										458,
-										458
+										77,
+										77
 									]
 								],
 								"settings":
 								{
-									"auto_name": "kubectl autoscale deployment dd-optimizer --cpu-pe",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 5,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 313,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										313,
-										313
-									]
-								],
-								"settings":
-								{
-									"auto_name": "To do",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 6,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 291,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										291,
-										291
-									]
-								],
-								"settings":
-								{
-									"auto_name": "Redo dataset:",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 4,
-							"type": "text"
-						},
-						{
-							"buffer": 3,
-							"file": "/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 2665,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										2398,
-										2398
-									]
-								],
-								"settings":
-								{
-									"auto_name": "MAP",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 1276.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 3,
-							"type": "text"
-						},
-						{
-							"buffer": 4,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 126,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										87,
-										87
-									]
-								],
-								"settings":
-								{
-									"auto_name": "Software application is pretty cool",
+									"auto_name": "http://localhost:8686/styles/klokantech-basic/?ras",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
@@ -2149,116 +1967,31 @@
 							"type": "text"
 						},
 						{
-							"buffer": 5,
-							"file": "/home/rhow/git-repos/dotfiles/README.md",
+							"buffer": 1,
+							"file": "/home/rhow/.bash_aliases",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 2456,
+								"buffer_size": 3848,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2422,
-										2422
+										414,
+										414
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+									"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 								},
 								"translation.x": 0.0,
-								"translation.y": 906.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 6,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 118,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										118,
-										118
-									]
-								],
-								"settings":
-								{
-									"auto_name": "sudo apt-get install -y libglib2.0-dev libgtk-3-de",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
-							"type": "text"
-						},
-						{
-							"buffer": 7,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 3841,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										226,
-										226
-									]
-								],
-								"settings":
-								{
-									"auto_name": "",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 8,
-							"type": "text"
-						},
-						{
-							"buffer": 8,
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 3061,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										3061,
-										3061
-									]
-								],
-								"settings":
-								{
-									"auto_name": "/data/1/dd/streaming/spatialenergy/exxonmobil/2010",
-									"syntax": "Packages/Text/Plain text.tmLanguage",
-									"word_wrap": false
-								},
-								"translation.x": 643.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 7,
 							"type": "text"
 						}
 					]
@@ -2266,7 +1999,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 31.0
+				"height": 33.0
 			},
 			"input":
 			{
@@ -2316,11 +2049,11 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,0,54,2044,1150,2048,1152",
+			"position": "0,0,0,0,0,0,66,2044,1150,2048,1152",
 			"project": "",
 			"replace":
 			{
-				"height": 58.0
+				"height": 62.0
 			},
 			"save_all_on_build": true,
 			"select_file":
