@@ -180,3 +180,8 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/h
 if [ -d "/var/lib/flatpak/exports/share" ]; then export PATH="$PATH:/var/lib/flatpak/exports/share"; fi
 
 if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then source "/home/rhow/anaconda3/etc/profile.d/conda.sh"; fi
+
+# Turn off Tap to Click on Dell touchpad
+synclient MaxTapTime=0
+
+export CI_NEXUS_CREDENTIALS=YWVyaWFsZGV2OkAzcjFAbGQzdg==
