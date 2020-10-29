@@ -14,7 +14,7 @@ alias psg='ps -ef | ag -i'
 alias acs='apt-cache search'
 alias les='less'
 alias bc='/usr/bin/bc -l'
-# alias emacs='/usr/bin/emacs-nox'
+alias cal='/usr/bin/cal -B 1 -A 1'
 alias df='/bin/df -h'
 alias ip4='ip a | ag inet| grep -v inet6'
 
@@ -43,7 +43,7 @@ alias offscreen='sleep 2; xset dpms force off'
 alias usb-reset='sudo modprobe -r usbhid'
 
 alias agi='sudo apt-get install'
-alias agu='echo "Updating..." && sudo apt update && echo "" && echo "Dist Upgrade..." && sudo apt-get dist-upgrade -y && echo "" && echo "Autoremove..." && sudo apt autoremove --purge'
+alias agu='echo "Updating..." && sudo apt update && echo "" && echo "Dist Upgrade..." && sudo apt-get dist-upgrade -y && echo "" && echo "Autoremove..." && sudo apt autoremove -y --purge'
 
 alias net-restart='sudo service network-manager restart'
 alias net-unblock='rfkill unblock all'
@@ -85,3 +85,4 @@ alias kconfig='kconfiga && kubectl config get-contexts | grep -v "\*" | grep -v 
 alias kconfiga='kubectl config get-contexts | ag "\*" | awk '"'"'{print $1, $2}'"'"
 alias k8token='~/bin/k8token.sh'
 alias maelstrom-fullscreen='maelstrom -fullscreen -volume 1'
+alias tf='terraform'
