@@ -11,8 +11,10 @@ ps -C autossh -o pid= | xargs kill -9 && ps -C ssh -o pid= | xargs kill -9
 # Mugg
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:8484:10.128.0.200:80 -N -f
 
-# DB
+# DB hosted-services - project: ads-ftc-noc
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:5466:35.188.105.191:5432 -N -f
+# DB streaming-content-dev - project: ads-ftc-noc
+autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:5467:35.184.160.225:5432 -N -f
 
 # mapserver
 autossh ${USER}@bastion.us-central1-c.ads-ftc-noc -L 0.0.0.0:8363:10.128.0.230:80 -N -f
