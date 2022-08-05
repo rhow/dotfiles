@@ -153,8 +153,7 @@ fi
 if [ -f ~/.custom_ps1 ]; then
     source ~/.custom_ps1
 fi
-source <(kubectl completion bash)
-source ~/Programs/google-cloud-sdk/completion.bash.inc
+
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -177,11 +176,14 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/path.bash.inc' ]; then . '/home/rh
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc'; fi
 
+source <(kubectl completion bash)
+
 if [ -d "/var/lib/flatpak/exports/share" ]; then export PATH="$PATH:/var/lib/flatpak/exports/share"; fi
 
 if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then source "/home/rhow/anaconda3/etc/profile.d/conda.sh"; fi
 
 # Turn off Tap to Click on Dell touchpad
+#     MaxTapTime              = 180
 synclient MaxTapTime=0
 
 export CI_NEXUS_CREDENTIALS=YWVyaWFsZGV2OkAzcjFAbGQzdg==
