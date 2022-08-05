@@ -12,7 +12,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango:System San Francisco Display 11
+font pango:System San Francisco Display 13
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -38,8 +38,11 @@ bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opaci
 # requires: sudo apt-get install xbacklight
 # https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder#715310
 # symlink existed, making /etc/X11/xorg.conf file worked: Driver      "intel"
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1
+
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym $mod+Shift+F6 exec xbacklight -dec 5
+bindsym $mod+Shift+F7 exec xbacklight -inc 1
 
 # change focus
 bindsym $mod+j focus left
@@ -79,7 +82,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# Set the initial stacking 
+# Set the initial stacking
 workspace_layout tabbed
 
 # change container layout (stacked, tabbed, toggle split)
@@ -185,6 +188,7 @@ exec --no-startup-id synapse --startup
 exec --no-startup-id blueman-applet
 exec --no-startup-id xscreensaver -nosplash
 
+
 # https://github.com/i3-gnome/i3-gnome/wiki/Tips-&-Tricks
 exec --no-startup-id /usr/libexec/gsd-xsettings     # <<< this was the winner
 # exec --no-startup-id gnome-flashback
@@ -196,7 +200,7 @@ set $w2 2:Comm
 set $w3 3:IDE
 set $w4 4:Term
 set $w5 5:Pithos
-set $w6 6:Remmina
+set $w6 6:Six
 set $w7 7:Seven
 set $w8 8:Eight
 set $w9 9:Nine
@@ -250,12 +254,16 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# startup applications in workspaces
-exec i3-msg 'workspace $w3; exec subl'
-exec i3-msg 'workspace $w4; exec i3-sensible-terminal'
-#exec i3-msg 'workspace $w5; exec pithos'
-#exec i3-msg 'workspace $w6; exec remmina'
-
 # Make sure we start with a blank workspace
-exec i3-msg 'workspace 1:Main'
-exec i3-msg 'workspace $w1; exec chromium-browser'
+# exec i3-msg 'workspace $w1'
+
+# startup applications in workspaces
+# assign [class="Google-chrome"] $w1    # assign forces all new instances into specific workspace
+
+exec --no-startup-id i3-msg 'workspace $w1; exec google-chrome-stable; workspace $w1'
+# exec i3-msg 'workspace $w2; exec google-chrome-stable --new-window chat.google.com'  # attempt to open google chat
+exec --no-startup-id i3-msg 'workspace $w3; exec subl; workspace $w1'
+exec --no-startup-id i3-msg 'workspace $w4; exec i3-sensible-terminal; workspace $w1'
+
+# exec i3-msg 'workspace $w5; exec pithos'
+# exec i3-msg 'workspace $w6; exec remmina'
