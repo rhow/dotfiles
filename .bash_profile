@@ -19,5 +19,4 @@ export OS_PASSWORD=gcopenstack
 export OS_REGION_NAME="regionOne"
 if [ -z "$OS_REGION_NAME" ]; then unset OS_REGION_NAME; fi
 
-source <(kubectl completion bash)
 
