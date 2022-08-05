@@ -36,7 +36,7 @@ import pyric.pyw as pyw  # iw functionality
 import socket
 
 ETH = 'enxd89ef3f5dddf'
-WIFI = 'wlp2s0'
+WIFI = 'wlp0s20f3'          # acquired from 'ip add'
 
 def get_interface():
 
