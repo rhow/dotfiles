@@ -1,7 +1,7 @@
 [global_config]
   focus = mouse
   close_button_on_tab = False
-  title_font = Sans 12
+  title_font = Sans 14
 [keybindings]
   full_screen = <Ctrl><Shift>F10
 [profiles]
@@ -10,11 +10,12 @@
     cursor_blink = False
     cursor_color = red
     cursor_color_fg = False
-    font = DejaVu Sans Mono 16
+    font = DejaVu Sans Mono 14
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollback_lines = 1000
     login_shell = True
+    use_system_font = False
     copy_on_selection = True
 [layouts]
   [[default]]
