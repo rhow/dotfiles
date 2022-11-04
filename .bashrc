@@ -187,3 +187,8 @@ if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then source "/home/rhow
 synclient MaxTapTime=0
 
 export CI_NEXUS_CREDENTIALS=YWVyaWFsZGV2OkAzcjFAbGQzdg==
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
