@@ -42,8 +42,8 @@ cp misc/dot_local_share_applications_intellij.desktop ~/.local/share/application
 ```
 
 ## Synapse
-    sudo add-apt-repository ppa:synapse-core/ppa
-	sudo apt-get update
+    # sudo add-apt-repository ppa:synapse-core/ppa
+	# sudo apt-get update
 	sudo apt-get install -y synapse
 
 
@@ -64,8 +64,6 @@ following file:
 ## Cap Locks
 To set caplocks to control key for terminal, added the following to .bashrc file:
 * `setxkbmap -option caps:ctrl_modifier`
-* I'd like to switch the `cntl+f` and `alt+f` functions in a terminal
-* I'd like to switch the `cntl+b` and `alt+b` functions in a terminal
 
 Limitation to this is that it only works on local terminals, doesn't
 apply when ssh-ing to other machines.
@@ -144,3 +142,7 @@ indicator-synapse
 postgresql-client 
 pavucontrol
 libcanberra-gtk-module
+
+sudo apt install xfce4-notifyd
+* tried `dunst`, couldn't get it to theme
+* test with `notify-send Test 'This is a test'`; also Google Chat settings `Show an example`
