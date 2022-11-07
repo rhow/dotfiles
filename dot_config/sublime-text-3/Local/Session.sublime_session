@@ -47,18 +47,105 @@
 		"/home/likewise-open/I3/rhow/projects/sailsjs-v10-angularjs-requirejs-boilerplate",
 		"/home/likewise-open/I3/rhow/projects/mapcache-testing"
 	],
-	"last_version": 3211,
-	"last_window_id": 71,
+	"last_version": 4126,
+	"last_window_id": 74,
 	"log_indexing": false,
+	"next_update_check": 1655400653,
 	"settings":
 	{
-		"new_window_height": 0.0,
+		"new_window_full_screen": false,
+		"new_window_height": 1084.0,
+		"new_window_maximized": false,
 		"new_window_settings":
 		{
 			"auto_complete":
 			{
 				"selected_items":
 				[
+					[
+						"cnt",
+						"cnt_below_15"
+					],
+					[
+						"cn",
+						"cnt_below_15"
+					],
+					[
+						"cnt_be",
+						"cnt_below_10"
+					],
+					[
+						"da",
+						"datefile"
+					],
+					[
+						"yea",
+						"year_datetime_temps"
+					],
+					[
+						"s",
+						"s_month"
+					],
+					[
+						"mon",
+						"months"
+					],
+					[
+						"dat",
+						"date_time_temp"
+					],
+					[
+						"CL",
+						"CLUSTER_VERSION"
+					],
+					[
+						"n",
+						"np"
+					],
+					[
+						"node",
+						"node-pool"
+					],
+					[
+						"CLU",
+						"CLUSTER_VERSION"
+					],
+					[
+						"pro",
+						"project_id"
+					],
+					[
+						"con",
+						"config-tls"
+					],
+					[
+						"CON",
+						"CONTEXT_AERIAL_CONFIG"
+					],
+					[
+						"C",
+						"CONTEXT_AERIAL_JENKINS"
+					],
+					[
+						"K",
+						"KEY"
+					],
+					[
+						"ag",
+						"agneo-oneatlas-airbus-certificate"
+					],
+					[
+						"res",
+						"resolutions_wm"
+					],
+					[
+						"ima",
+						"imagery"
+					],
+					[
+						"re",
+						"resolutions_wm"
+					],
 					[
 						"MAP",
 						"MAPSERVER_VERSION"
@@ -73,10 +160,6 @@
 					],
 					[
 						"curl",
-						"CURL_VERSION"
-					],
-					[
-						"C",
 						"CURL_VERSION"
 					],
 					[
@@ -200,6 +283,30 @@
 				"selected_items":
 				[
 					[
+						"pre",
+						"Pretty JSON: Format JSON"
+					],
+					[
+						"pret",
+						"Pretty JSON: Format JSON"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"inst",
+						"Install Package Control"
+					],
+					[
+						"wra",
+						"Word Wrap: Toggle"
+					],
+					[
+						"tog wr",
+						"Word Wrap: Toggle"
+					],
+					[
 						"sy xml",
 						"Set Syntax: XML"
 					],
@@ -221,14 +328,6 @@
 					],
 					[
 						"instal",
-						"Package Control: Install Package"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"insta",
 						"Package Control: Install Package"
 					],
 					[
@@ -324,10 +423,6 @@
 						"Package Control: Install Package"
 					],
 					[
-						"wra",
-						"Word Wrap: Toggle"
-					],
-					[
 						"wrap",
 						"Word Wrap: Toggle"
 					],
@@ -365,142 +460,142 @@
 			},
 			"file_history":
 			[
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/Dockerfile.centos",
-				"/home/local/I3/rhow/git-repos/kubernetes_gcp-project-tools/projects.txt",
-				"/home/local/I3/rhow/tmp/dd-projects2.txt",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/Dockerfile.ubuntu",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/users-base64.txt",
-				"/home/local/I3/rhow/projects/docker-ms/deployment.yaml",
-				"/home/local/I3/rhow/git-repos/kubernetes_docker-util-box/deployment.yaml",
-				"/home/local/I3/rhow/Downloads/rc-asian-cities.map",
-				"/home/local/I3/rhow/Downloads/ads-test.map",
-				"/home/local/I3/rhow/Downloads/drone-pipeline.map",
-				"/home/local/I3/rhow/projects/docker-ms/mapcache/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/database/insert_jobs.sql",
-				"/home/local/I3/rhow/git-repos/dd-optimize/drone-pipeline.map",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer_org.ini",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/start.sh",
-				"/home/local/I3/rhow/projects/goog_training_20170530/notes.txt",
-				"/home/local/I3/rhow/projects/goog_training_20170530/nginx.yaml",
-				"/home/local/I3/rhow/Dropbox/ubuntu/notes/pithos.txt",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/annotation-server-layer-ids.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/install-mapserver-mapcache.sh",
-				"/home/local/I3/rhow/Documents/Ubuntu upgrade to 16.0.4.2",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/virtualenv/local/lib/python2.7/site-packages/_pytest/config.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq2.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted.txt",
-				"/home/local/I3/rhow/projects/gcp-ms-deploy/deployment.yaml",
-				"/home/local/I3/rhow/tmp/ms-dep.txt",
-				"/home/local/I3/rhow/tmp/ms-dep2.txt",
-				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching.html",
-				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching-wm.html",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
-				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
-				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.xml",
-				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed-phr.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed.txt",
-				"/home/local/I3/rhow/tmp/zero-touched-bboxes.txt",
-				"/home/local/I3/rhow/tmp/Serial console output for database-1.txt",
-				"/home/local/I3/rhow/tmp/cache-w-list.txt",
-				"/home/local/I3/rhow/tmp/delete-segments-uids-13809.txt",
-				"/home/local/I3/rhow/tmp/padawan-created-on-20141114.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/misc/adm_xuid_list.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/padawan-test-geom.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines.json",
-				"/home/local/I3/rhow/tmp/db-offer-cutline-docker.txt",
-				"/home/local/I3/rhow/tmp/db-offer-cutline-qual.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/topological_error_20161005.json",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines-20160929.json",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/errors.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines2.json",
-				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
-				"/home/local/I3/rhow/tmp/gcp-response.json",
-				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
-				"/home/local/I3/rhow/git-repos/WMTS-integration-example-orig/public/index.html",
-				"/home/local/I3/rhow/tmp/cacheman-worker-log-invalid-geometry.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/master-image-startup-script.sh",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/create-master-image.sh",
-				"/tmp/data/offer_cutline.txt",
-				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
-				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/seed-sqs.py",
-				"/home/local/I3/rhow/Downloads/gdb_mc_gdal.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/database/data-offer.sql",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache-progress.log",
-				"/home/local/I3/rhow/Downloads/SmartArchive_Robots_V3.csv",
-				"/home/local/I3/rhow/Downloads/mapcache-i3.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master/airbus-tiler.py",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/astrium.map",
-				"/home/local/I3/rhow/Downloads/mugg_create_schema.sql",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/3857-wms.html",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/mapcache.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/spot_minidrv.xml",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/conf.py",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
-				"/home/local/I3/rhow/Dropbox/ubuntu/nova.txt",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/cloudwatt/set-ftp-download-list.txt",
-				"/home/local/I3/rhow/tmp/consol-log_p1-fs1.txt",
-				"/data/1/misc/padawan/keys/i3_cw.pem",
-				"/data/1/misc/padawan/set-ftp-download-list-gpfs.txt",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/red/hosts",
-				"/home/local/I3/rhow/Downloads/airbus-tiler.py",
-				"/home/local/I3/rhow/Downloads/i3_cw.pem",
-				"/data/1/dd/streaming/mapfiles/wms_wfs/wms_wfs_suncorSOD_petrel_embedded_service.map",
-				"/home/local/I3/rhow/Downloads",
-				"/home/local/I3/rhow/Downloads/airbus-tiler.py'",
-				"/home/local/I3/rhow/projects/tomtom/quantum.html",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/Vagrantfile",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.service",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/tmpfile.conf.j2",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/padawan-cache-ui-nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/default/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/nginx.conf",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/README.md",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/hosts",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/handlers/main.yaml"
+				"/home/rhow/tmp/lifecycle-delete.json",
+				"/home/rhow/projects/fc-weather/below-zero.py",
+				"/home/rhow/git-repos/ag-processor/images/scmrs/ortho.py",
+				"/home/rhow/git-repos/ag-processor/airflow/dags/agneo/__init__.py",
+				"/home/rhow/git-repos/ag-processor/images/scmrs/docker/manifest.txt",
+				"/home/rhow/projects/fc-weather/csu-temp.py",
+				"/home/rhow/projects/fc-weather/datetime_temps_2021.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2022.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2011.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2000.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2001.json",
+				"/home/rhow/tmp/test-msproxy.json",
+				"/home/rhow/tmp/firebase/index.js",
+				"/home/rhow/projects/fc-weather/csu-temp.sh",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/users-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/customers-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-agapi.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-agapi-worker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/broker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/auth-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/discovery-api/configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/discovery-api/discovery-api-web.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/notifications-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/coordinate-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/secrets/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/auth-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/discovery-api/discovery-api-web.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/discovery-api/configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/users-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/notifications-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/customers-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/coordinate-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/broker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/secrets/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-ogc/deployment.yaml",
+				"/tmp/b15e4be4-d6cf-4bac-b665-2d8c13ada7af.map",
+				"/home/rhow/tmp/gdalinfo-simplot-pleiades.txt",
+				"/home/rhow/tmp/es-get-data.json",
+				"/home/rhow/.m2/settings.xml",
+				"/home/rhow/Downloads/ttconnections - contacts.csv",
+				"/home/rhow/Downloads/NC2021_DO1_job-submit.yaml",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/explorer/result-item/result-item.component.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/api/src/lib/models/stac.model.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/app.guard.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/settings/users/user-row/user-row.component.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/explorer/results/results.component.ts",
+				"/home/rhow/git-repos/frontend_mono/README.md",
+				"/home/rhow/git-repos/frontend_mono/angular.json",
+				"/home/rhow/git-repos/frontend_mono/package.json",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/client/catalog.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/datadoors/agneo-ingress-service.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/client/admin.yaml",
+				"/home/rhow/git-repos/frontend_mono/deployment/docker/Dockerfile.catalog",
+				"/home/rhow/git-repos/frontend_mono/deployment/docker/nginx.catalog.conf",
+				"/home/rhow/git-repos/frontend_mono/environments/environment.adsftcnoc.ts",
+				"/home/rhow/tmp/cluster-rotate.sh",
+				"/home/rhow/tmp/cluster-rotate-update.sh",
+				"/home/rhow/tmp/cluster-node-version.sh",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/test-mapcache-stack.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/update-aerialairbus-tls.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/api-nginx-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/agneo-api-nginx-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/ingress-nginx-agneo.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/agneo-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/firebase/index.js",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210827.txt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/update-aerialairbus-tls.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/mapcache.xml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/firebase/firebase-mvp-delete.log",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/keys/create_instance_credentials.sh",
+				"/home/rhow/tmp/aerial-production-delete-endpoints.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/ag-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/create_static_ip.txt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/idk-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/ingress/agneo-proxy-ingress.yaml",
+				"/home/rhow/tmp/test_py_futures.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts-test-flask.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts-svc-test-flask.yaml",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-localhost-20210623.txt",
+				"/home/rhow/git-repos/adm-wmts/jmeter/tiler-urls.txt",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210826-121253.txt",
+				"/home/rhow/git-repos/tele-porter",
+				"/home/rhow/bin/curl-format.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ads-tiler/deploy-serverless.sh",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-logs-20210818-130422.csv",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210812.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ads-tiler/ads-tiler",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/secret-merged.yaml",
+				"/home/rhow/projects/aer-7506/results.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/README.md",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/mapcache-stack.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/datadoors/datadoors-ingress-service.yaml",
+				"/home/rhow/Downloads/WMTSCapabilities.xml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/generate_yaml.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.crt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.key",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.key.yaml",
+				"/home/rhow/git-repos/indigo-deployment-core/modules/compute/agw-nsg-config/permitted_addresses.json",
+				"/home/rhow/git-repos/dotfiles/dot_config/i3/config",
+				"/home/rhow/git-repos/docker-pg-bouncer/deployment-production.yaml",
+				"/home/rhow/tmp/secrets.yaml",
+				"/home/rhow/git-repos/docker-pg-bouncer/pgbouncer_transaction.ini",
+				"/home/rhow/git-repos/docker-pg-bouncer/pgbouncer_session.ini",
+				"/home/rhow/git-repos/docker-pg-bouncer/make_secrets.sh",
+				"/home/rhow/git-repos/dotfiles/dot_config/i3/i3status.conf",
+				"/home/rhow/tmp/logs-production-processing.txt",
+				"/home/rhow/bin/ssh_tunnels.sh",
+				"/home/rhow/bin/rstudio.sh",
+				"/home/rhow/projects/escalante-river/mileage.txt",
+				"/home/rhow/projects/image-processing/cog_list_automated.txt",
+				"/home/rhow/bin/cog_list_automated.tif",
+				"/home/rhow/projects/image-processing/scripts/test_job.json",
+				"/home/rhow/Downloads/job.yaml",
+				"/home/rhow/.pgpass",
+				"/home/rhow/projects/osm_testing/README.md",
+				"/home/rhow/projects/backpacking/profile-elev-gain.txt",
+				"/home/rhow/projects/backpacking/profile-test.txt",
+				"/home/rhow/.screenlayout/dualscreen.sh",
+				"/home/rhow/.screenlayout/singlescreen.sh",
+				"/home/rhow/.screenlayout/only-dp2.sh",
+				"/home/rhow/Downloads/NED_Hillshade_1m.map",
+				"/home/rhow/tmp/usbmount.conf",
+				"/home/rhow/projects/osm_testing/openlayers.html",
+				"/home/rhow/projects/osm_testing/mc-vectors.xml",
+				"/home/rhow/git-repos/dms-deployment/helm/basemap/templates/deployment.yaml"
 			],
 			"find":
 			{
-				"height": 28.0
+				"height": 33.0
 			},
 			"find_in_files":
 			{
-				"height": 93.0,
+				"height": 150.0,
 				"where_history":
 				[
 					"*.js",
@@ -533,144 +628,145 @@
 			},
 			"find_state":
 			{
-				"case_sensitive": false,
+				"case_sensitive": true,
 				"find_history":
 				[
-					"gs://ads-ftc-rehydrate-app1/streaming-",
-					" gs:",
-					"^M",
-					"{0}",
-					"            ",
+					"cnt_below_10",
+					"</",
+					"Analysing",
+					"2000",
+					": ",
+					"-H '",
 					"\n",
-					"+",
-					"  ",
-					".tif",
-					"| ",
-					"/vsigs",
-					" /vsigs",
-					"\n",
-					"apr",
-					"build",
-					"    ",
-					"devel \\",
-					", ",
-					"devel \\",
-					"devel",
-					"\n",
-					" ",
-					"   ",
-					"\\\n\n\n \n  \n",
-					" ",
-					"\n",
-					"| ",
-					"\n",
-					"__",
-					"');",
-					"\n",
-					"path",
-					"**X:\\1\\dd\\streaming\\",
-					"X:\\1\\dd\\streaming",
-					", status",
-					"\"",
-					"\"ads-ftc",
-					"/",
-					"/data/",
-					"/data/1/dd",
-					"/data",
-					"\\",
-					"X:\\",
-					"X:\\1\\dd",
-					"\"C:\\Program Files\\TA\\TACapture.exe\" ",
-					"\n",
-					"^\\s*$",
-					"\n",
+					"geom",
+					"gdal",
+					"apis/",
 					";",
-					"user",
-					"$ ",
-					"cc/",
-					"\n",
-					") (",
-					"  ",
-					"{0}",
-					"\n",
-					"src_srs",
-					"\": \"",
-					"\", \"",
-					": \"",
-					"|",
-					"C:\\logs\\wmsmetadata-2017.06.20.txt",
-					"\",",
-					"‘",
-					"\n",
-					"//",
-					"\\",
-					"\"\"",
-					"\\",
-					"rpush",
-					"-    ",
-					"$ ",
-					"libqt5quick5",
-					"quick5-gles",
-					"5-gles",
-					"-gles",
-					"Depends: ",
-					"(",
-					"\n",
-					" ",
-					"(",
-					",",
-					"- `",
-					"apt-get install ",
-					"       \\",
-					"-D",
-					"\n",
-					"\n  ",
-					"\n",
-					"\n  ",
-					"Server Layer: ",
+					"'",
+					"', '",
+					"geometry",
 					"    ",
-					"\\",
-					"                ",
-					" | ",
-					"Server_Layer_Id: 1; ANNOTATIONs:",
-					" Server Layer ID: ",
+					">,",
+					"<",
+					"> ",
+					",\n",
+					"<",
+					", ",
+					"g-ui",
+					"ag-portal",
+					"mvp",
+					"catalog",
+					"adsftc",
+					"ads-ftc-primary",
+					"ads-ftc-noc",
 					"\n",
-					" |  ",
-					"|  ",
-					"    ",
-					"\\",
+					"\"",
+					"date",
 					"\n",
-					" ",
-					"    ",
-					"  ",
-					" ",
+					"b",
+					"Validity",
+					"noc",
+					"CONTEXT_AERIAL_DEV",
+					".tif",
+					"/vsigs",
+					"/vsigs/qqua3003ws2021_north_carolina_source/source/DO1/Johnston_Wilson/DO1",
+					"gs:/",
+					"test_1",
+					"/vsigs",
+					"/vsigs/qqua3003ws2021_north_carolina_source/source/DO1",
+					"\n\n",
+					"default",
+					"$1, ",
+					"aerial-mvp_aerial-mvp",
+					"gke_aerial-mvp_us-central1-a_aerial-mvp",
+					"kubectl",
+					"--context",
+					"aerial-mvp/aerial-dev/",
+					"aerial-mvp/aerial-mvp/",
+					"aerial-mvp/",
+					"gcloud",
+					"\t",
+					"\n",
+					"\t",
+					"endpoints",
+					"namespace: ingress-nginx",
+					"nodata",
 					"\\n",
-					", \"",
-					"\n      ",
-					"# ",
-					"':",
-					"cpu: ",
-					"  ",
+					"\\n ",
+					"/wmts",
+					"https://www.datadoors.net/catresponse",
+					"adm-wmts",
+					"https://www.datadoors.net/catresponse",
+					"  ",
 					"\n",
-					" \\",
-					"-devel",
-					", ",
-					"     ",
-					"#     ",
-					"devel \\",
-					"-devel \\",
+					"rgb/",
+					"cir/",
+					"cir",
+					"/catresponse",
+					"https://ads-tiler-a6jdd4zxnq-uc.a.run.app",
+					"(adm-wmts) rhow@lap31:~/git-repos/adm-wmts",
+					"request",
+					"Error",
+					"\\n",
+					"\n            ",
+					".",
+					"\\n",
+					"}",
+					"Glass_Shady",
+					"geodelivery",
+					"        <Layer",
+					"_cir",
+					"name=",
+					"#",
+					"url",
+					"echo",
+					":\"",
 					"\n",
-					", ",
-					"- ",
+					"\\n ",
 					" ",
-					"\n"
+					",\n,",
+					"\n",
+					"_}",
+					"/",
+					"L20_",
+					"L20",
+					", ",
+					"5467",
+					"LADOTD_2020",
+					"LADOTD_2020,",
+					"LADOTD_2020_PCI_",
+					"i3cache",
+					"output_shapes",
+					"\\path\\to",
+					"source_footprints",
+					"input_shapes",
+					"\n",
+					"mmiddendorf",
+					"LADOTD_2020_PCI_L20",
+					"LADOTD_2020_source_fp",
+					"i3cache_",
+					"\\\\synology\\matt\\LADOTD_2020",
+					"\"",
+					"\n",
+					"dotd",
+					"hba",
+					":",
+					"\n",
+					"@angular",
+					"of ",
+					"@",
+					"You must install peer dependencies yourself",
+					"syn",
+					"  ",
+					"+"
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": true,
-				"regex": true,
+				"regex": false,
 				"replace_history":
 				[
+					"\\\"",
 					"cc/products/streaming/",
 					"src_srs\"",
 					"/",
@@ -690,18 +786,20 @@
 					"Tileset"
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
 			"incremental_find":
 			{
-				"height": 28.0
+				"height": 33.0
 			},
 			"input":
 			{
-				"height": 35.0
+				"height": 54.0
 			},
 			"menu_visible": true,
 			"output.GoSublime-output":
@@ -727,7 +825,7 @@
 			"pinned_build_system": "",
 			"replace":
 			{
-				"height": 52.0
+				"height": 62.0
 			},
 			"save_all_on_build": true,
 			"select_file":
@@ -1255,7 +1353,7 @@
 			{
 			}
 		},
-		"new_window_width": 0.0
+		"new_window_width": 2044.0
 	},
 	"windows":
 	[
@@ -1264,6 +1362,90 @@
 			{
 				"selected_items":
 				[
+					[
+						"cnt",
+						"cnt_below_15"
+					],
+					[
+						"cn",
+						"cnt_below_15"
+					],
+					[
+						"cnt_be",
+						"cnt_below_10"
+					],
+					[
+						"da",
+						"datefile"
+					],
+					[
+						"yea",
+						"year_datetime_temps"
+					],
+					[
+						"s",
+						"s_month"
+					],
+					[
+						"mon",
+						"months"
+					],
+					[
+						"dat",
+						"date_time_temp"
+					],
+					[
+						"CL",
+						"CLUSTER_VERSION"
+					],
+					[
+						"n",
+						"np"
+					],
+					[
+						"node",
+						"node-pool"
+					],
+					[
+						"CLU",
+						"CLUSTER_VERSION"
+					],
+					[
+						"pro",
+						"project_id"
+					],
+					[
+						"con",
+						"config-tls"
+					],
+					[
+						"CON",
+						"CONTEXT_AERIAL_CONFIG"
+					],
+					[
+						"C",
+						"CONTEXT_AERIAL_JENKINS"
+					],
+					[
+						"K",
+						"KEY"
+					],
+					[
+						"ag",
+						"agneo-oneatlas-airbus-certificate"
+					],
+					[
+						"res",
+						"resolutions_wm"
+					],
+					[
+						"ima",
+						"imagery"
+					],
+					[
+						"re",
+						"resolutions_wm"
+					],
 					[
 						"MAP",
 						"MAPSERVER_VERSION"
@@ -1278,10 +1460,6 @@
 					],
 					[
 						"curl",
-						"CURL_VERSION"
-					],
-					[
-						"C",
 						"CURL_VERSION"
 					],
 					[
@@ -1397,22 +1575,910 @@
 			"buffers":
 			[
 				{
-					"contents": "http://localhost:8686/styles/klokantech-basic/?raster#18/40.55534/-105.07976\n",
+					"contents": "http://localhost:8686/styles/klokantech-basic/?raster#18/40.55534/-105.07976\n\n(hJy^=Bx=9ZJ!jC\n\n\ngcloud beta container clusters describe datadoors-qual --zone us-central1 --format=\"value(releaseChannel.channel)\"\n\n\nf822d68d-84cc-411e\n\n\n1007c2bc-90de-42be-b855-a284052e7a19\n\n\nCouldn't load SIP module.\nPython support will be disabled.\n\n\nTraceback (most recent call last)\n:  File \"\", line 1, in \n  File \"/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python/qgis/__init__.py\", line 70, in \n    from qgis.PyQt import QtCore\n  File \"/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python/qgis/PyQt/QtCore.py\", line 24, in \n    from PyQt5.QtCore import *\nImportError: /home/rhow/anaconda3/envs/qgis-3-14/bin/../lib/libQt5Core.so.5: version `Qt_5.15' not found (required by /home/rhow/.local/lib/python3.8/site-packages/PyQt5/QtCore.abi3.so)\n\n\nPython version:\n3.8.5 | packaged by conda-forge | (default, Jul 31 2020, 02:52:55) \n[GCC 7.5.0]\n\nQGIS version:\n3.14.1-Pi 'Pi', exported\n\nPython path:\n['/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python', '/home/rhow/.local/share/QGIS/QGIS3/profiles/default/python', '/home/rhow/.local/share/QGIS/QGIS3/profiles/default/python/plugins', '/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python/plugins', '/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python/plugins', '/home/rhow/anaconda3/envs/qgis-3-14/share/qgis/python', '/home/rhow/anaconda3/bin', '/home/rhow/anaconda3/envs/qgis-3-14/lib/python38.zip', '/home/rhow/anaconda3/envs/qgis-3-14/lib/python3.8', '/home/rhow/anaconda3/envs/qgis-3-14/lib/python3.8/lib-dynload', '/home/rhow/.local/lib/python3.8/site-packages', '/home/rhow/anaconda3/envs/qgis-3-14/lib/python3.8/site-packages']",
 					"settings":
 					{
-						"buffer_size": 77,
+						"buffer_size": 1679,
 						"line_ending": "Unix",
 						"name": "http://localhost:8686/styles/klokantech-basic/?ras"
-					}
+					},
+					"undo_stack":
+					[
+						[
+							3,
+							1,
+							"transpose",
+							null,
+							"AgAAAOkAAAAAAAAA6gAAAAAAAAABAAAACugAAAAAAAAA6QAAAAAAAAABAAAACg",
+							"DQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA6QAAAAAAAADpAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							3,
+							1,
+							"transpose",
+							null,
+							"AgAAAHABAAAAAAAAcQEAAAAAAAABAAAACm8BAAAAAAAAcAEAAAAAAAABAAAAOg",
+							"AQAAAAAAAAABAAAAcAEAAAAAAABwAQAAAAAAAAAAAAAAAPC/"
+						]
+					]
 				},
 				{
-					"file": "/home/rhow/.bash_aliases",
+					"contents": "createopts = {\n        'COMPRESS': 'JPEG',\n        'QUALITY': '85',\n        'PREDICTOR': 'YES'\n        'ADD_ALPHA': 'YES',\n        'BIGTIFF': 'IF_SAFER',\n        'NUM_THREADS': 'ALL_CPUS',\n        'BLOCKSIZE': '256'\n    }\n    if create_overviews:\n        createopts['OVERVIEWS'] = 'AUTO'\n        createopts['OVERVIEW_RESAMPLING'] = overview_resamp\n\nThis works:\ngdal_translate hxip_m_3009028_sw4_15_15.tif hxip_m_3009028_sw4_15_15-cog.tif -of COG -co BLOCKSIZE=256 -co COMPRESS=JPEG -co QUALITY=85 -co PREDICTOR=YES -co ADD_ALPHA=YES -co BIGTIFF=IF_SAFER -co NUM_THREADS=ALL_CPUS -co OVERVIEWS=AUTO\n\nWarning 1: hxip_m_3009037_nw2_15_15.tif\n\ngdal_translate hxip_m_3009037_nw2_15_15.tif hxip_m_3009037_nw2_15_15-cog.tif -of COG \\\n-co TILING_SCHEME=GoogleMapsCompatible -co COMPRESS=JPEG -co QUALITY=85 \\\n-co PREDICTOR=YES -co ADD_ALPHA=YES -co BIGTIFF=IF_SAFER -co NUM_THREADS=ALL_CPUS \\\n-co OVERVIEWS=AUTO\n\nWarning 6: driver COG does not support creation option OVERVIEW_RESAMPLING\n -co OVERVIEW_RESAMPLING=average\n\nWarning 1: hxip_m_3009028_sw_15_30.tif, band 4: Wrong number of ExtraSamples : 3. 1 were expected\n\n???\nERROR 1: Error when compressing strip/tile 242\nERROR 1: JPEGLib:Too many color components: 5, max 4\nMore than 1000 errors or warnings have been reported. No more will be reported from now.\n..60...70...80...90...100 - done.\nCPLAcquireMutex: Error = 22 (Invalid argument)\nCPLReleaseMutex: Error = 22 (Invalid argument)\n\n\nwkt_geom    source_group    path    rows    cols    num_bands   num_overviews   min_x   min_y   max_x   max_y   res_x   res_y   crs lin_unit    nodata  alpha   in_bands    blend_pix   priority    start_level end_level\nPolygon ((-90.59455216332145255 30.49922413520715025, -90.59435500731140678 30.50723028577608886, -90.5941577722261826 30.51523642534809966, -90.59396045803880781 30.52324255392114694, -90.59376306472221074 30.53124867149314525, -90.58569402739074405 30.53109930910498448, -90.57762505051407231 30.5309494476408041, -90.56955613429350649 30.53079908711391255, -90.56148727893027228 30.53064822753764673, -90.56168731360537549 30.52264230070761641, -90.56188726809398304 30.51463636284600867, -90.56208714242349345 30.50663041395489827, -90.56228693662129103 30.49862445403637068, -90.57035315233596862 30.49877512196633589, -90.57841942882488695 30.49892529148034015, -90.58648576588704771 30.49907496256504302, -90.59455216332145255 30.49922413520715025))    0   /vsigs/0-production-testing/LADOTD_Test_Data/source/2017_Input_Imagery/RPC_15cm/RPC_8BitUnsignedTIF/2017_hxip_hammond_la_z15/hxip_m_3009028_sw4_15_15.tif   23680   20660   4   0   730863  3376566 733962  3380118 0.15    0.15    PROJCS[\"NAD83 / UTM zone 15N\",GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4269\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-93],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"26915\"]] metre   0   gs://0-production-testing/LADOTD_Test_Data/i3cache_input_shapes/LADOTD_2020_L20_Alpha.shp   1,2,3   5   1   0   20\n\n\n\ngs://0-production-testing/LADOTD_Test_Data/source/2017_Input_Imagery/RPC_15cm/RPC_8BitUnsignedTIF/2017_hxip_hammond_la_z15/hxip_m_3009028_sw2_15_15.tif",
 					"settings":
 					{
-						"buffer_size": 3848,
-						"encoding": "UTF-8",
-						"line_ending": "Unix"
-					}
+						"buffer_size": 3543,
+						"line_ending": "Unix",
+						"name": "createopts = {"
+					},
+					"undo_stack":
+					[
+						[
+							7,
+							1,
+							"transpose",
+							null,
+							"AgAAAF8AAAAAAAAAYAAAAAAAAAABAAAACl4AAAAAAAAAXwAAAAAAAAABAAAALA",
+							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABfAAAAAAAAAF8AAAAAAAAAAAAAAAAA8L8"
+						],
+						[
+							8,
+							1,
+							"left_delete",
+							null,
+							"AQAAAF8AAAAAAAAAXwAAAAAAAAABAAAALA",
+							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAA8L8"
+						]
+					]
+				},
+				{
+					"contents": "minx/y:-119.69175,46.72955\nmaxx/y:-119.66460,46.74841\n\nservice=wms&request=getmap&version=1.1.1&srs=4326&format=image/png&width=512&height=512&bbox=-119.69175,46.72955,-119.66460,46.74841\n\n\nSF minx/y: -105.19048,39.97639\nSF maxx/y: -105.13569,40.00828\n\nhttp://127.0.0.1:8000/admquery/?p_query=owner%3D9c5b5068-3d54-4042-a985-8f1478c4f99d%26product%3Dstreaming-ready-cog&service=wms&request=getmap&version=1.1.1&srs=epsg:4326&format=image/png&width=512&height=512&bbox=-117.061092592778,32.5286497900639,-117.029169855368,32.5303611120694\n\n\n\nhttp://127.0.0.1:8000/admquery/?p_query=format%3DGTiff%26numberOfBands%3D3%26constellation%3DPleiades%26type%3Draster&service=wms&request=getmap&version=1.1.1&srs=epsg:4326&format=image/png&width=512&height=512&bbox=-117.061092592778,32.5286497900639,-117.029169855368,32.5303611120694\n\n\n\ncurl -k -v -X POST \\\n-H \"Authorization: Bearer $(cat /google-token/auth.header)\" -H \"Content-Length: 144272\" \\\n-H \"Content-Type: image/png\" \\\n'https://www.googleapis.com/upload/storage/v1/b/mapserver-files/o?uploadType=media&name=ADM_OGC16517663881057.png' \\\n-d 'ADM_OGC16517663881057.png'",
+					"settings":
+					{
+						"buffer_size": 1119,
+						"line_ending": "Unix",
+						"name": "minx/y:-119.69175,46.72955"
+					},
+					"undo_stack":
+					[
+						[
+							1,
+							1,
+							"paste",
+							null,
+							"AQAAAAAAAAAAAAAAEwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							3,
+							1,
+							"insert",
+							{
+								"characters": "minx"
+							},
+							"BAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							4,
+							1,
+							"insert",
+							{
+								"characters": "/x"
+							},
+							"AgAAAAQAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAGAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							5,
+							1,
+							"left_delete",
+							null,
+							"AQAAAAUAAAAAAAAABQAAAAAAAAABAAAAeA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							6,
+							1,
+							"insert",
+							{
+								"characters": "y:"
+							},
+							"AgAAAAUAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAABQAAAAAAAAAFAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							8,
+							1,
+							"insert",
+							{
+								"characters": "\nmax"
+							},
+							"BAAAABoAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAAB0AAAAAAAAAAAAAAB0AAAAAAAAAHgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAGgAAAAAAAAAaAAAAAAAAAP///////+9/"
+						],
+						[
+							9,
+							1,
+							"insert",
+							{
+								"characters": "x/y:"
+							},
+							"BAAAAB4AAAAAAAAAHwAAAAAAAAAAAAAAHwAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAHgAAAAAAAAAeAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							10,
+							1,
+							"insert",
+							{
+								"characters": " "
+							},
+							"AQAAACIAAAAAAAAAIwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAIgAAAAAAAAAiAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							11,
+							1,
+							"left_delete",
+							null,
+							"AQAAACIAAAAAAAAAIgAAAAAAAAABAAAAIA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAIwAAAAAAAAAjAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							12,
+							1,
+							"paste",
+							null,
+							"AQAAACIAAAAAAAAANQAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAIgAAAAAAAAAiAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							13,
+							1,
+							"insert",
+							{
+								"characters": "\n"
+							},
+							"AQAAADUAAAAAAAAANgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANQAAAAAAAAA1AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							14,
+							1,
+							"insert",
+							{
+								"characters": "width"
+							},
+							"BQAAADYAAAAAAAAANwAAAAAAAAAAAAAANwAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADkAAAAAAAAAAAAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA7AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANgAAAAAAAAA2AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							15,
+							5,
+							"left_delete",
+							null,
+							"BQAAADoAAAAAAAAAOgAAAAAAAAABAAAAaDkAAAAAAAAAOQAAAAAAAAABAAAAdDgAAAAAAAAAOAAAAAAAAAABAAAAZDcAAAAAAAAANwAAAAAAAAABAAAAaTYAAAAAAAAANgAAAAAAAAABAAAAdw",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOwAAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							16,
+							1,
+							"insert",
+							{
+								"characters": "width"
+							},
+							"BQAAADYAAAAAAAAANwAAAAAAAAAAAAAANwAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADkAAAAAAAAAAAAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA7AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANgAAAAAAAAA2AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							17,
+							1,
+							"insert",
+							{
+								"characters": "="
+							},
+							"AQAAADsAAAAAAAAAPAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOwAAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							18,
+							1,
+							"insert",
+							{
+								"characters": "512"
+							},
+							"AwAAADwAAAAAAAAAPQAAAAAAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPAAAAAAAAAA8AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							19,
+							1,
+							"insert",
+							{
+								"characters": "&height"
+							},
+							"BwAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAEIAAAAAAAAAQwAAAAAAAAAAAAAAQwAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEUAAAAAAAAAAAAAAEUAAAAAAAAARgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							20,
+							1,
+							"insert",
+							{
+								"characters": "=512"
+							},
+							"BAAAAEYAAAAAAAAARwAAAAAAAAAAAAAARwAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEkAAAAAAAAAAAAAAEkAAAAAAAAASgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARgAAAAAAAABGAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							21,
+							1,
+							"insert",
+							{
+								"characters": "&bbox"
+							},
+							"BQAAAEoAAAAAAAAASwAAAAAAAAAAAAAASwAAAAAAAABMAAAAAAAAAAAAAABMAAAAAAAAAE0AAAAAAAAAAAAAAE0AAAAAAAAATgAAAAAAAAAAAAAATgAAAAAAAABPAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAASgAAAAAAAABKAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							29,
+							1,
+							"insert",
+							{
+								"characters": "="
+							},
+							"AQAAAE8AAAAAAAAAUAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAATwAAAAAAAABPAAAAAAAAAAAAAAAAIHVA"
+						],
+						[
+							30,
+							1,
+							"paste",
+							null,
+							"AQAAAFAAAAAAAAAAYwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUAAAAAAAAABQAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							31,
+							1,
+							"insert",
+							{
+								"characters": ","
+							},
+							"AQAAAGMAAAAAAAAAZAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAYwAAAAAAAABjAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							39,
+							1,
+							"paste",
+							null,
+							"AQAAAGQAAAAAAAAAdwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAZAAAAAAAAABkAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							41,
+							1,
+							"insert",
+							{
+								"characters": "\n"
+							},
+							"AQAAADYAAAAAAAAANwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANgAAAAAAAAA2AAAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							42,
+							1,
+							"insert",
+							{
+								"characters": "srs=4"
+							},
+							"BQAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA5AAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOwAAAAAAAAAAAAAAOwAAAAAAAAA8AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANwAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							43,
+							1,
+							"insert",
+							{
+								"characters": "326"
+							},
+							"AwAAADwAAAAAAAAAPQAAAAAAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPAAAAAAAAAA8AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							44,
+							1,
+							"insert",
+							{
+								"characters": "&format"
+							},
+							"BwAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAEIAAAAAAAAAQwAAAAAAAAAAAAAAQwAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEUAAAAAAAAAAAAAAEUAAAAAAAAARgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							45,
+							1,
+							"insert",
+							{
+								"characters": "="
+							},
+							"AQAAAEYAAAAAAAAARwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARgAAAAAAAABGAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							46,
+							1,
+							"insert",
+							{
+								"characters": "image/png"
+							},
+							"CQAAAEcAAAAAAAAASAAAAAAAAAAAAAAASAAAAAAAAABJAAAAAAAAAAAAAABJAAAAAAAAAEoAAAAAAAAAAAAAAEoAAAAAAAAASwAAAAAAAAAAAAAASwAAAAAAAABMAAAAAAAAAAAAAABMAAAAAAAAAE0AAAAAAAAAAAAAAE0AAAAAAAAATgAAAAAAAAAAAAAATgAAAAAAAABPAAAAAAAAAAAAAABPAAAAAAAAAFAAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARwAAAAAAAABHAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							47,
+							1,
+							"insert",
+							{
+								"characters": "&"
+							},
+							"AQAAAFAAAAAAAAAAUQAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUAAAAAAAAABQAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							49,
+							1,
+							"insert",
+							{
+								"characters": "service="
+							},
+							"CAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA5AAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOwAAAAAAAAAAAAAAOwAAAAAAAAA8AAAAAAAAAAAAAAA8AAAAAAAAAD0AAAAAAAAAAAAAAD0AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA/AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAANwAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							50,
+							1,
+							"insert",
+							{
+								"characters": "m"
+							},
+							"AQAAAD8AAAAAAAAAQAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							51,
+							1,
+							"left_delete",
+							null,
+							"AQAAAD8AAAAAAAAAPwAAAAAAAAABAAAAbQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							52,
+							1,
+							"insert",
+							{
+								"characters": "m"
+							},
+							"AQAAAD8AAAAAAAAAQAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							53,
+							1,
+							"left_delete",
+							null,
+							"AQAAAD8AAAAAAAAAPwAAAAAAAAABAAAAbQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							54,
+							1,
+							"insert",
+							{
+								"characters": "wms&"
+							},
+							"BAAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAEIAAAAAAAAAQwAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							55,
+							1,
+							"insert",
+							{
+								"characters": "m"
+							},
+							"AQAAAEMAAAAAAAAARAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQwAAAAAAAABDAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							56,
+							1,
+							"left_delete",
+							null,
+							"AQAAAEMAAAAAAAAAQwAAAAAAAAABAAAAbQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							57,
+							1,
+							"insert",
+							{
+								"characters": "request="
+							},
+							"CAAAAEMAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABFAAAAAAAAAAAAAABFAAAAAAAAAEYAAAAAAAAAAAAAAEYAAAAAAAAARwAAAAAAAAAAAAAARwAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEkAAAAAAAAAAAAAAEkAAAAAAAAASgAAAAAAAAAAAAAASgAAAAAAAABLAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQwAAAAAAAABDAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							58,
+							1,
+							"insert",
+							{
+								"characters": "getmap&"
+							},
+							"BwAAAEsAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABNAAAAAAAAAAAAAABNAAAAAAAAAE4AAAAAAAAAAAAAAE4AAAAAAAAATwAAAAAAAAAAAAAATwAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFEAAAAAAAAAAAAAAFEAAAAAAAAAUgAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAASwAAAAAAAABLAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							59,
+							1,
+							"insert",
+							{
+								"characters": "version="
+							},
+							"CAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAABUAAAAAAAAAFUAAAAAAAAAAAAAAFUAAAAAAAAAVgAAAAAAAAAAAAAAVgAAAAAAAABXAAAAAAAAAAAAAABXAAAAAAAAAFgAAAAAAAAAAAAAAFgAAAAAAAAAWQAAAAAAAAAAAAAAWQAAAAAAAABaAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAUgAAAAAAAABSAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							60,
+							1,
+							"insert",
+							{
+								"characters": "1.1.1&"
+							},
+							"BgAAAFoAAAAAAAAAWwAAAAAAAAAAAAAAWwAAAAAAAABcAAAAAAAAAAAAAABcAAAAAAAAAF0AAAAAAAAAAAAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAXgAAAAAAAABfAAAAAAAAAAAAAABfAAAAAAAAAGAAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAWgAAAAAAAABaAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							70,
+							1,
+							"insert",
+							{
+								"characters": "\n\n\n"
+							},
+							"AwAAALsAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAAC9AAAAAAAAAAAAAAC9AAAAAAAAAL4AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAuwAAAAAAAAC7AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							71,
+							1,
+							"paste",
+							null,
+							"AQAAAL4AAAAAAAAAtwEAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAvgAAAAAAAAC+AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							76,
+							1,
+							"insert",
+							{
+								"characters": "epsg:"
+							},
+							"BQAAAGABAAAAAAAAYQEAAAAAAAAAAAAAYQEAAAAAAABiAQAAAAAAAAAAAABiAQAAAAAAAGMBAAAAAAAAAAAAAGMBAAAAAAAAZAEAAAAAAAAAAAAAZAEAAAAAAABlAQAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAYAEAAAAAAABgAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							87,
+							1,
+							"insert",
+							{
+								"characters": "\n\n"
+							},
+							"AgAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAvAAAAAAAAAC8AAAAAAAAAAAAAAAAQFBA"
+						],
+						[
+							88,
+							1,
+							"insert",
+							{
+								"characters": "SF:"
+							},
+							"AwAAAL4AAAAAAAAAvwAAAAAAAAAAAAAAvwAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAMEAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAvgAAAAAAAAC+AAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							89,
+							1,
+							"left_delete",
+							null,
+							"AQAAAMAAAAAAAAAAwAAAAAAAAAABAAAAOg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAwQAAAAAAAADBAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							90,
+							1,
+							"insert",
+							{
+								"characters": " minx/"
+							},
+							"BgAAAMAAAAAAAAAAwQAAAAAAAAAAAAAAwQAAAAAAAADCAAAAAAAAAAAAAADCAAAAAAAAAMMAAAAAAAAAAAAAAMMAAAAAAAAAxAAAAAAAAAAAAAAAxAAAAAAAAADFAAAAAAAAAAAAAADFAAAAAAAAAMYAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAwAAAAAAAAADAAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							91,
+							1,
+							"insert",
+							{
+								"characters": "y:"
+							},
+							"AgAAAMYAAAAAAAAAxwAAAAAAAAAAAAAAxwAAAAAAAADIAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAxgAAAAAAAADGAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							92,
+							1,
+							"insert",
+							{
+								"characters": " "
+							},
+							"AQAAAMgAAAAAAAAAyQAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAyAAAAAAAAADIAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							93,
+							1,
+							"paste",
+							null,
+							"AQAAAMkAAAAAAAAA3AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAyQAAAAAAAADJAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							94,
+							1,
+							"insert",
+							{
+								"characters": "\nSF"
+							},
+							"AwAAANwAAAAAAAAA3QAAAAAAAAAAAAAA3QAAAAAAAADeAAAAAAAAAAAAAADeAAAAAAAAAN8AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							95,
+							1,
+							"insert",
+							{
+								"characters": " minx"
+							},
+							"BQAAAN8AAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADhAAAAAAAAAAAAAADhAAAAAAAAAOIAAAAAAAAAAAAAAOIAAAAAAAAA4wAAAAAAAAAAAAAA4wAAAAAAAADkAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA3wAAAAAAAADfAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							96,
+							3,
+							"left_delete",
+							null,
+							"AwAAAOMAAAAAAAAA4wAAAAAAAAABAAAAeOIAAAAAAAAA4gAAAAAAAAABAAAAbuEAAAAAAAAA4QAAAAAAAAABAAAAaQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA5AAAAAAAAADkAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							97,
+							1,
+							"insert",
+							{
+								"characters": "axx/y:"
+							},
+							"BgAAAOEAAAAAAAAA4gAAAAAAAAAAAAAA4gAAAAAAAADjAAAAAAAAAAAAAADjAAAAAAAAAOQAAAAAAAAAAAAAAOQAAAAAAAAA5QAAAAAAAAAAAAAA5QAAAAAAAADmAAAAAAAAAAAAAADmAAAAAAAAAOcAAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA4QAAAAAAAADhAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							98,
+							1,
+							"insert",
+							{
+								"characters": " "
+							},
+							"AQAAAOcAAAAAAAAA6AAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA5wAAAAAAAADnAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							101,
+							1,
+							"paste",
+							null,
+							"AQAAAOgAAAAAAAAA+wAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA6AAAAAAAAADoAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							114,
+							1,
+							"paste",
+							null,
+							"AgAAANQBAAAAAAAA5wEAAAAAAAAAAAAA5wEAAAAAAADnAQAAAAAAACcAAAAtMTE5LjY5MTc1LDQ2LjcyOTU1LC0xMTkuNjY0NjAsNDYuNzQ4NDE",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA1AEAAAAAAAD7AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							115,
+							1,
+							"insert",
+							{
+								"characters": ","
+							},
+							"AQAAAOcBAAAAAAAA6AEAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA5wEAAAAAAADnAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							124,
+							1,
+							"paste",
+							null,
+							"AQAAAOgBAAAAAAAA+wEAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA6AEAAAAAAADoAQAAAAAAAP///////+9/"
+						],
+						[
+							129,
+							1,
+							"insert",
+							{
+								"characters": "\n\n"
+							},
+							"AgAAAPsBAAAAAAAA/AEAAAAAAAAAAAAA/AEAAAAAAAD9AQAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA+wEAAAAAAAD7AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							130,
+							1,
+							"paste",
+							null,
+							"AQAAAP0BAAAAAAAAfgIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA/QEAAAAAAAD9AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							153,
+							1,
+							"cut",
+							null,
+							"AQAAAD4CAAAAAAAAPgIAAAAAAAAgAAAAZ2VvbWV0cnlNaW5YOiAtMTE3LjA2MTA5MjU5Mjc3OCw",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPgIAAAAAAABeAgAAAAAAAP///////+9/"
+						],
+						[
+							155,
+							1,
+							"insert",
+							{
+								"characters": "\n"
+							},
+							"AQAAAP0BAAAAAAAA/gEAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA/QEAAAAAAAD9AQAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							157,
+							1,
+							"paste",
+							null,
+							"AQAAAD8CAAAAAAAAXwIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwIAAAAAAAA/AgAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							161,
+							1,
+							"cut",
+							null,
+							"AQAAAP4BAAAAAAAA/gEAAAAAAABAAAAAZ2VvbWV0cnlNYXhYOiAtMTE3LjAyOTE2OTg1NTM2OCwKZ2VvbWV0cnlNYXhZOiAzMi41MzAzNjExMTIwNjk0LA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPgIAAAAAAAD+AQAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							163,
+							1,
+							"insert",
+							{
+								"characters": "\n"
+							},
+							"AQAAAD8CAAAAAAAAQAIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPwIAAAAAAAA/AgAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							164,
+							1,
+							"paste",
+							null,
+							"AQAAAEACAAAAAAAAgAIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQAIAAAAAAABAAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							172,
+							1,
+							"left_delete",
+							null,
+							"BAAAAGECAAAAAAAAYQIAAAAAAAAIAAAAZ2VvbWV0cnlAAgAAAAAAAEACAAAAAAAACAAAAGdlb21ldHJ5IAIAAAAAAAAgAgAAAAAAAAgAAABnZW9tZXRyef8BAAAAAAAA/wEAAAAAAAAIAAAAZ2VvbWV0cnk",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAAEAAAA/wEAAAAAAAAHAgAAAAAAAAAAAAAAAPC/IAIAAAAAAAAoAgAAAAAAAAAAAAAAAPC/QAIAAAAAAABIAgAAAAAAAAAAAAAAAPC/YQIAAAAAAABpAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							175,
+							1,
+							"left_delete",
+							null,
+							"BAAAAEkCAAAAAAAASQIAAAAAAAAGAAAATWF4WTogMAIAAAAAAAAwAgAAAAAAAAYAAABNYXhYOiAYAgAAAAAAABgCAAAAAAAABgAAAE1pblk6IP8BAAAAAAAA/wEAAAAAAAAGAAAATWluWDog",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAAEAAAA/wEAAAAAAAAFAgAAAAAAAAAAAAAAAPC/GAIAAAAAAAAeAgAAAAAAAAAAAAAAAPC/MAIAAAAAAAA2AgAAAAAAAAAAAAAAAPC/SQIAAAAAAABPAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							177,
+							1,
+							"right_delete",
+							null,
+							"AwAAADYCAAAAAAAANgIAAAAAAAABAAAACiMCAAAAAAAAIwIAAAAAAAABAAAAChECAAAAAAAAEQIAAAAAAAABAAAACg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAAEAAAAEQIAAAAAAAARAgAAAAAAAP///////+9/IwIAAAAAAAAjAgAAAAAAAP///////+9/NgIAAAAAAAA2AgAAAAAAAP///////+9/SAIAAAAAAABIAgAAAAAAAP///////+9/"
+						],
+						[
+							180,
+							1,
+							"left_delete",
+							null,
+							"AQAAAEQCAAAAAAAARAIAAAAAAAABAAAALA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARQIAAAAAAABFAgAAAAAAAP///////+9/"
+						],
+						[
+							198,
+							1,
+							"cut",
+							null,
+							"AQAAAP8BAAAAAAAA/wEAAAAAAABFAAAALTExNy4wNjEwOTI1OTI3NzgsMzIuNTI4NjQ5NzkwMDYzOSwtMTE3LjAyOTE2OTg1NTM2OCwzMi41MzAzNjExMTIwNjk0",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAARAIAAAAAAAD/AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							199,
+							2,
+							"left_delete",
+							null,
+							"AgAAAP4BAAAAAAAA/gEAAAAAAAABAAAACv0BAAAAAAAA/QEAAAAAAAABAAAACg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA/wEAAAAAAAD/AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							204,
+							1,
+							"paste",
+							null,
+							"AgAAANQBAAAAAAAAGQIAAAAAAAAAAAAAGQIAAAAAAAAZAgAAAAAAACcAAAAtMTA1LjE5MDQ4LDM5Ljk3NjM5LC0xMDUuMTM1NjksNDAuMDA4Mjg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA+wEAAAAAAADUAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							207,
+							1,
+							"insert",
+							{
+								"characters": "\n\n"
+							},
+							"AgAAABsCAAAAAAAAHAIAAAAAAAAAAAAAHAIAAAAAAAAdAgAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAGwIAAAAAAAAbAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							208,
+							1,
+							"paste",
+							null,
+							"AQAAAB0CAAAAAAAAtQIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAHQIAAAAAAAAdAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							216,
+							1,
+							"paste",
+							null,
+							"AQAAAB0CAAAAAAAARQIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAHQIAAAAAAAAdAgAAAAAAAAAAAAAAAAAA"
+						],
+						[
+							230,
+							1,
+							"left_delete",
+							null,
+							"AQAAAJICAAAAAAAAkgIAAAAAAAABAAAAJg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAkwIAAAAAAACTAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							231,
+							1,
+							"paste",
+							null,
+							"AQAAAJICAAAAAAAA7wIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAkgIAAAAAAACSAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							232,
+							1,
+							"insert",
+							{
+								"characters": "&"
+							},
+							"AQAAAO8CAAAAAAAA8AIAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAA7wIAAAAAAADvAgAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							241,
+							1,
+							"insert",
+							{
+								"characters": "\n\n\n\n"
+							},
+							"BAAAADoDAAAAAAAAOwMAAAAAAAAAAAAAOwMAAAAAAAA8AwAAAAAAAAAAAAA8AwAAAAAAAD0DAAAAAAAAAAAAAD0DAAAAAAAAPgMAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAOgMAAAAAAAA6AwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							242,
+							1,
+							"paste",
+							null,
+							"AQAAAD4DAAAAAAAALgQAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAPgMAAAAAAAA+AwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							251,
+							1,
+							"left_delete",
+							null,
+							"AQAAAG0DAAAAAAAAbQMAAAAAAAATAAAAPHlvdXJfb2F1dGgyX3Rva2VuPg",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAgAMAAAAAAABtAwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							252,
+							1,
+							"paste",
+							null,
+							"AQAAAG0DAAAAAAAAjQMAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAbQMAAAAAAABtAwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							255,
+							1,
+							"insert",
+							{
+								"characters": "image/png"
+							},
+							"CgAAALoDAAAAAAAAuwMAAAAAAAAAAAAAuwMAAAAAAAC7AwAAAAAAAAoAAAB0ZXh0L3BsYWluuwMAAAAAAAC8AwAAAAAAAAAAAAC8AwAAAAAAAL0DAAAAAAAAAAAAAL0DAAAAAAAAvgMAAAAAAAAAAAAAvgMAAAAAAAC/AwAAAAAAAAAAAAC/AwAAAAAAAMADAAAAAAAAAAAAAMADAAAAAAAAwQMAAAAAAAAAAAAAwQMAAAAAAADCAwAAAAAAAAAAAADCAwAAAAAAAMMDAAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAxAMAAAAAAAC6AwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							258,
+							1,
+							"paste",
+							null,
+							"AgAAAPcDAAAAAAAABgQAAAAAAAAAAAAABgQAAAAAAAAGBAAAAAAAAAsAAAB5b3VyLWJ1Y2tldA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAgQAAAAAAAD3AwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							261,
+							1,
+							"paste",
+							null,
+							"AgAAAB8EAAAAAAAAOAQAAAAAAAAAAAAAOAQAAAAAAAA4BAAAAAAAAA4AAAB5b3Vyb2JqZWN0bmFtZQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAHwQAAAAAAAAtBAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							266,
+							1,
+							"paste",
+							null,
+							"AgAAAEAEAAAAAAAAWQQAAAAAAAAAAAAAWQQAAAAAAABZBAAAAAAAAAgAAAB5b3VyZGF0YQ",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAQAQAAAAAAABIBAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							271,
+							1,
+							"left_delete",
+							null,
+							"AQAAAKMDAAAAAAAAowMAAAAAAAABAAAAOA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAApAMAAAAAAACkAwAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							272,
+							1,
+							"paste",
+							null,
+							"AQAAAKMDAAAAAAAAqQMAAAAAAAAAAAAA",
+							"BAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAowMAAAAAAACjAwAAAAAAAAAAAAAAAPC/"
+						]
+					]
 				}
 			],
 			"build_system": "",
@@ -1426,6 +2492,30 @@
 				"last_filter": "",
 				"selected_items":
 				[
+					[
+						"pre",
+						"Pretty JSON: Format JSON"
+					],
+					[
+						"pret",
+						"Pretty JSON: Format JSON"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"inst",
+						"Install Package Control"
+					],
+					[
+						"wra",
+						"Word Wrap: Toggle"
+					],
+					[
+						"tog wr",
+						"Word Wrap: Toggle"
+					],
 					[
 						"sy xml",
 						"Set Syntax: XML"
@@ -1448,14 +2538,6 @@
 					],
 					[
 						"instal",
-						"Package Control: Install Package"
-					],
-					[
-						"inst",
-						"Package Control: Install Package"
-					],
-					[
-						"insta",
 						"Package Control: Install Package"
 					],
 					[
@@ -1551,10 +2633,6 @@
 						"Package Control: Install Package"
 					],
 					[
-						"wra",
-						"Word Wrap: Toggle"
-					],
-					[
 						"wrap",
 						"Word Wrap: Toggle"
 					],
@@ -1596,142 +2674,142 @@
 			],
 			"file_history":
 			[
-				"/home/rhow/git-repos/dotfiles/README.md",
-				"/home/rhow/.bashrc",
+				"/home/rhow/tmp/lifecycle-delete.json",
+				"/home/rhow/projects/fc-weather/below-zero.py",
+				"/home/rhow/git-repos/ag-processor/images/scmrs/ortho.py",
+				"/home/rhow/git-repos/ag-processor/airflow/dags/agneo/__init__.py",
+				"/home/rhow/git-repos/ag-processor/images/scmrs/docker/manifest.txt",
+				"/home/rhow/projects/fc-weather/csu-temp.py",
+				"/home/rhow/projects/fc-weather/datetime_temps_2021.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2022.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2011.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2000.json",
+				"/home/rhow/projects/fc-weather/datetime_temps_2001.json",
+				"/home/rhow/tmp/test-msproxy.json",
+				"/home/rhow/tmp/firebase/index.js",
+				"/home/rhow/projects/fc-weather/csu-temp.sh",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/users-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/customers-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-agapi.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ag/mvp-agapi-worker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/broker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/auth-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/discovery-api/configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/discovery-api/discovery-api-web.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/notifications-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/apis/coordinate-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/secrets/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/auth-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/discovery-api/discovery-api-web.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/discovery-api/configmaps/settings.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/users-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/notifications-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/customers-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/coordinate-api.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/apis/broker.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/datadoors-qual/aa/secrets/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-ogc/deployment.yaml",
+				"/tmp/b15e4be4-d6cf-4bac-b665-2d8c13ada7af.map",
+				"/home/rhow/tmp/gdalinfo-simplot-pleiades.txt",
+				"/home/rhow/tmp/es-get-data.json",
+				"/home/rhow/.m2/settings.xml",
+				"/home/rhow/Downloads/ttconnections - contacts.csv",
+				"/home/rhow/Downloads/NC2021_DO1_job-submit.yaml",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/explorer/result-item/result-item.component.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/api/src/lib/models/stac.model.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/app.guard.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/settings/users/user-row/user-row.component.ts",
+				"/home/rhow/git-repos/frontend_mono/projects/catalog/src/app/explorer/results/results.component.ts",
+				"/home/rhow/git-repos/frontend_mono/README.md",
+				"/home/rhow/git-repos/frontend_mono/angular.json",
+				"/home/rhow/git-repos/frontend_mono/package.json",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/client/catalog.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/datadoors/agneo-ingress-service.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/aa/client/admin.yaml",
+				"/home/rhow/git-repos/frontend_mono/deployment/docker/Dockerfile.catalog",
+				"/home/rhow/git-repos/frontend_mono/deployment/docker/nginx.catalog.conf",
+				"/home/rhow/git-repos/frontend_mono/environments/environment.adsftcnoc.ts",
+				"/home/rhow/tmp/cluster-rotate.sh",
+				"/home/rhow/tmp/cluster-rotate-update.sh",
+				"/home/rhow/tmp/cluster-node-version.sh",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/test-mapcache-stack.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/update-aerialairbus-tls.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/api-nginx-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/agneo-api-nginx-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/ingress-nginx-agneo.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/agneo-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/firebase/index.js",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210827.txt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/update-aerialairbus-tls.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/firebase-web-admin-secrets.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/mapcache.xml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/firebase/firebase-mvp-delete.log",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/keys/create_instance_credentials.sh",
+				"/home/rhow/tmp/aerial-production-delete-endpoints.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/ag-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/create_static_ip.txt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/mvp/idk-ingress.yaml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/production/ingress/agneo-proxy-ingress.yaml",
+				"/home/rhow/tmp/test_py_futures.py",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts-test-flask.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/adm-wmts/adm-wmts-svc-test-flask.yaml",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-localhost-20210623.txt",
+				"/home/rhow/git-repos/adm-wmts/jmeter/tiler-urls.txt",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210826-121253.txt",
+				"/home/rhow/git-repos/tele-porter",
+				"/home/rhow/bin/curl-format.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ads-tiler/deploy-serverless.sh",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-logs-20210818-130422.csv",
+				"/home/rhow/git-repos/adm-wmts/jmeter/requests-20210812.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/ads-tiler/ads-tiler",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/secret-merged.yaml",
+				"/home/rhow/projects/aer-7506/results.txt",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/README.md",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/mapcache/mapcache-stack.yaml",
+				"/home/rhow/git-repos/tele-porter_container-engine-ads-ftc-noc/ads-ftc-primary/datadoors/datadoors-ingress-service.yaml",
+				"/home/rhow/Downloads/WMTSCapabilities.xml",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/generate_yaml.sh",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.crt",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.key",
+				"/home/rhow/git-repos/airbus_aerial/aerial-config/tls/airbusaerial/tls.key.yaml",
+				"/home/rhow/git-repos/indigo-deployment-core/modules/compute/agw-nsg-config/permitted_addresses.json",
 				"/home/rhow/git-repos/dotfiles/dot_config/i3/config",
-				"/home/rhow/.bash_aliases",
-				"/home/rhow/.screenlayout/undock.sh",
-				"/home/rhow/git-repos/dotfiles/dot_config/i3/wrapper.py",
-				"/data/1/dd/streaming/i3/rh_testing/archive/gcp_naip_fl_test.map",
-				"/home/rhow/.bash",
-				"/home/local/I3/rhow/tmp/ms-mc-build.txt",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer-base64.ini",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/temp.yaml",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/Dockerfile.centos",
-				"/home/local/I3/rhow/git-repos/kubernetes_gcp-project-tools/projects.txt",
-				"/home/local/I3/rhow/tmp/dd-projects2.txt",
-				"/home/local/I3/rhow/git-repos/mapserver_mapcache/Dockerfile.ubuntu",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/users-base64.txt",
-				"/home/local/I3/rhow/projects/docker-ms/deployment.yaml",
-				"/home/local/I3/rhow/git-repos/kubernetes_docker-util-box/deployment.yaml",
-				"/home/local/I3/rhow/Downloads/rc-asian-cities.map",
-				"/home/local/I3/rhow/Downloads/ads-test.map",
-				"/home/local/I3/rhow/Downloads/drone-pipeline.map",
-				"/home/local/I3/rhow/projects/docker-ms/mapcache/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/database/insert_jobs.sql",
-				"/home/local/I3/rhow/git-repos/dd-optimize/drone-pipeline.map",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/pgbouncer_org.ini",
-				"/home/local/I3/rhow/projects/docker-pg-bouncer/start.sh",
-				"/home/local/I3/rhow/projects/goog_training_20170530/notes.txt",
-				"/home/local/I3/rhow/projects/goog_training_20170530/nginx.yaml",
-				"/home/local/I3/rhow/Dropbox/ubuntu/notes/pithos.txt",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/annotation-server-layer-ids.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/install-mapserver-mapcache.sh",
-				"/home/local/I3/rhow/Documents/Ubuntu upgrade to 16.0.4.2",
-				"/home/local/I3/rhow/git-repos/dd-streaming-migration/virtualenv/local/lib/python2.7/site-packages/_pytest/config.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gcp_helper.py",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted_uniq2.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3.txt",
-				"/home/local/I3/rhow/tmp/ms-dep3_sorted.txt",
-				"/home/local/I3/rhow/projects/gcp-ms-deploy/deployment.yaml",
-				"/home/local/I3/rhow/tmp/ms-dep.txt",
-				"/home/local/I3/rhow/tmp/ms-dep2.txt",
-				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching.html",
-				"/home/local/I3/rhow/git-repos/padawan-configs/mapserver/html/caching-wm.html",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/mapcache.xml",
-				"/home/local/I3/rhow/tmp/padawan-sql-14008.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas.map",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/global-layer-gdal-minidriver.xml",
-				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.xml",
-				"/home/local/I3/rhow/git-repos/OptimizeRasters/OptimizeRasters.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed-phr.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/padawan-most-recent-processed.txt",
-				"/home/local/I3/rhow/tmp/zero-touched-bboxes.txt",
-				"/home/local/I3/rhow/tmp/Serial console output for database-1.txt",
-				"/home/local/I3/rhow/tmp/cache-w-list.txt",
-				"/home/local/I3/rhow/tmp/delete-segments-uids-13809.txt",
-				"/home/local/I3/rhow/tmp/padawan-created-on-20141114.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/misc/adm_xuid_list.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/padawan-test-geom.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines.json",
-				"/home/local/I3/rhow/tmp/db-offer-cutline-docker.txt",
-				"/home/local/I3/rhow/tmp/db-offer-cutline-qual.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/topological_error_20161005.json",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines-20160929.json",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/errors.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/tests/intersection_error_cutlines2.json",
-				"/home/local/I3/rhow/tmp/mugg_cc_paths.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/extent.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/worker-image-startup-script.sh",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/conf.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/transfer/mapcache.xml",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/oneatlas_logging.py",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/set-max-autoscaling.sh",
-				"/home/local/I3/rhow/tmp/gcp-response.json",
-				"/home/local/I3/rhow/git-repos/WMTS-integration-example/public/map.js",
-				"/home/local/I3/rhow/git-repos/WMTS-integration-example-orig/public/index.html",
-				"/home/local/I3/rhow/tmp/cacheman-worker-log-invalid-geometry.txt",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/master-image-startup-script.sh",
-				"/home/local/I3/rhow/git-repos/one-atlas-google-repo-seeder/default/global-layer/seeder/gce/create-master-image.sh",
-				"/tmp/data/offer_cutline.txt",
-				"/home/local/I3/rhow/Downloads/mugg-google-services.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/pipeline/pipeline-notes.txt",
-				"/home/local/I3/rhow/Dropbox/ubuntu/notes/misc.txt",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/seed-sqs.py",
-				"/home/local/I3/rhow/Downloads/gdb_mc_gdal.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management/database/data-offer.sql",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/mapcache-progress.log",
-				"/home/local/I3/rhow/Downloads/SmartArchive_Robots_V3.csv",
-				"/home/local/I3/rhow/Downloads/mapcache-i3.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/airbus-tiler-master/airbus-tiler.py",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/astrium.map",
-				"/home/local/I3/rhow/Downloads/mugg_create_schema.sql",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/3857-wms.html",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/mapcache.xml",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/wms/home/ubuntu/astrium/spot_minidrv.xml",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-				"/home/local/I3/rhow/Downloads/padawan_maptiler_workflow/terriscope_delivery_2015-12-01/seeder/home/ubuntu/astrium/conf.py",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/SublimePythonIDE/SublimePython.sublime-settings",
-				"/home/local/I3/rhow/git-repos/dotfiles/dot_config/sublime-text-3/Packages/User/SublimePython.sublime-settings",
-				"/home/local/I3/rhow/Dropbox/ubuntu/nova.txt",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/cloudwatt/set-ftp-download-list.txt",
-				"/home/local/I3/rhow/tmp/consol-log_p1-fs1.txt",
-				"/data/1/misc/padawan/keys/i3_cw.pem",
-				"/data/1/misc/padawan/set-ftp-download-list-gpfs.txt",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/project-configs/red/hosts",
-				"/home/local/I3/rhow/Downloads/airbus-tiler.py",
-				"/home/local/I3/rhow/Downloads/i3_cw.pem",
-				"/data/1/dd/streaming/mapfiles/wms_wfs/wms_wfs_suncorSOD_petrel_embedded_service.map",
-				"/home/local/I3/rhow/Downloads",
-				"/home/local/I3/rhow/Downloads/airbus-tiler.py'",
-				"/home/local/I3/rhow/projects/tomtom/quantum.html",
-				"/home/local/I3/rhow/git-repos/cluster-builder/openstack/padawan/Vagrantfile",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/api.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/project-configs/vagrant/vars.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/defaults/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3-roles/uwsgi/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/__init__.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/config.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/server/models.py",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/playbook.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.padawan-cache-ui/templates/uwsgi.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/client/app/index.html",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/requirements-roles.yml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/requirements.txt",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/tasks/main.yaml",
-				"/home/local/I3/rhow/projects-django/padawan-cache-management-ui/deploy/ansible/roles/i3.bower/defaults/main.yaml"
+				"/home/rhow/git-repos/docker-pg-bouncer/deployment-production.yaml",
+				"/home/rhow/tmp/secrets.yaml",
+				"/home/rhow/git-repos/docker-pg-bouncer/pgbouncer_transaction.ini",
+				"/home/rhow/git-repos/docker-pg-bouncer/pgbouncer_session.ini",
+				"/home/rhow/git-repos/docker-pg-bouncer/make_secrets.sh",
+				"/home/rhow/git-repos/dotfiles/dot_config/i3/i3status.conf",
+				"/home/rhow/tmp/logs-production-processing.txt",
+				"/home/rhow/bin/ssh_tunnels.sh",
+				"/home/rhow/bin/rstudio.sh",
+				"/home/rhow/projects/escalante-river/mileage.txt",
+				"/home/rhow/projects/image-processing/cog_list_automated.txt",
+				"/home/rhow/bin/cog_list_automated.tif",
+				"/home/rhow/projects/image-processing/scripts/test_job.json",
+				"/home/rhow/Downloads/job.yaml",
+				"/home/rhow/.pgpass",
+				"/home/rhow/projects/osm_testing/README.md",
+				"/home/rhow/projects/backpacking/profile-elev-gain.txt",
+				"/home/rhow/projects/backpacking/profile-test.txt",
+				"/home/rhow/.screenlayout/dualscreen.sh",
+				"/home/rhow/.screenlayout/singlescreen.sh",
+				"/home/rhow/.screenlayout/only-dp2.sh",
+				"/home/rhow/Downloads/NED_Hillshade_1m.map",
+				"/home/rhow/tmp/usbmount.conf",
+				"/home/rhow/projects/osm_testing/openlayers.html",
+				"/home/rhow/projects/osm_testing/mc-vectors.xml",
+				"/home/rhow/git-repos/dms-deployment/helm/basemap/templates/deployment.yaml"
 			],
 			"find":
 			{
-				"height": 45.0
+				"height": 33.0
 			},
 			"find_in_files":
 			{
-				"height": 97.0,
+				"height": 150.0,
 				"where_history":
 				[
 					"*.js",
@@ -1764,144 +2842,145 @@
 			},
 			"find_state":
 			{
-				"case_sensitive": false,
+				"case_sensitive": true,
 				"find_history":
 				[
-					"sudo",
-					"  ",
-					"conda",
-					"mod+d",
-					"mod-d",
-					"mod+d",
-					"mode+d",
-					"exec_always",
-					"sdk",
-					"synap",
-					"XF86AudioRaiseVolume",
-					"Audio",
-					"XF86AudioMute",
-					"XF86AudioMute,",
-					"back",
+					"cnt_below_10",
+					"</",
+					"Analysing",
+					"2000",
+					": ",
+					"-H '",
 					"\n",
-					"* ",
-					" in Debia",
-					"\n",
-					"TomTom",
-					"gs://ads-ftc-rehydrate-app1/streaming-",
-					" gs:",
-					"^M",
-					"{0}",
-					"            ",
-					"\n",
-					"+",
-					"  ",
-					".tif",
-					"| ",
-					"/vsigs",
-					" /vsigs",
-					"\n",
-					"apr",
-					"build",
-					"    ",
-					"devel \\",
-					", ",
-					"devel \\",
-					"devel",
-					"\n",
-					" ",
-					"   ",
-					"\\\n\n\n \n  \n",
-					" ",
-					"\n",
-					"| ",
-					"\n",
-					"__",
-					"');",
-					"\n",
-					"path",
-					"**X:\\1\\dd\\streaming\\",
-					"X:\\1\\dd\\streaming",
-					", status",
-					"\"",
-					"\"ads-ftc",
-					"/",
-					"/data/",
-					"/data/1/dd",
-					"/data",
-					"\\",
-					"X:\\",
-					"X:\\1\\dd",
-					"\"C:\\Program Files\\TA\\TACapture.exe\" ",
-					"\n",
-					"^\\s*$",
-					"\n",
+					"geom",
+					"gdal",
+					"apis/",
 					";",
-					"user",
-					"$ ",
-					"cc/",
+					"'",
+					"', '",
+					"geometry",
+					"    ",
+					">,",
+					"<",
+					"> ",
+					",\n",
+					"<",
+					", ",
+					"g-ui",
+					"ag-portal",
+					"mvp",
+					"catalog",
+					"adsftc",
+					"ads-ftc-primary",
+					"ads-ftc-noc",
 					"\n",
-					") (",
+					"\"",
+					"date",
+					"\n",
+					"b",
+					"Validity",
+					"noc",
+					"CONTEXT_AERIAL_DEV",
+					".tif",
+					"/vsigs",
+					"/vsigs/qqua3003ws2021_north_carolina_source/source/DO1/Johnston_Wilson/DO1",
+					"gs:/",
+					"test_1",
+					"/vsigs",
+					"/vsigs/qqua3003ws2021_north_carolina_source/source/DO1",
+					"\n\n",
+					"default",
+					"$1, ",
+					"aerial-mvp_aerial-mvp",
+					"gke_aerial-mvp_us-central1-a_aerial-mvp",
+					"kubectl",
+					"--context",
+					"aerial-mvp/aerial-dev/",
+					"aerial-mvp/aerial-mvp/",
+					"aerial-mvp/",
+					"gcloud",
+					"\t",
+					"\n",
+					"\t",
+					"endpoints",
+					"namespace: ingress-nginx",
+					"nodata",
+					"\\n",
+					"\\n ",
+					"/wmts",
+					"https://www.datadoors.net/catresponse",
+					"adm-wmts",
+					"https://www.datadoors.net/catresponse",
 					"  ",
-					"{0}",
 					"\n",
-					"src_srs",
-					"\": \"",
-					"\", \"",
-					": \"",
-					"|",
-					"C:\\logs\\wmsmetadata-2017.06.20.txt",
-					"\",",
-					"‘",
+					"rgb/",
+					"cir/",
+					"cir",
+					"/catresponse",
+					"https://ads-tiler-a6jdd4zxnq-uc.a.run.app",
+					"(adm-wmts) rhow@lap31:~/git-repos/adm-wmts",
+					"request",
+					"Error",
+					"\\n",
+					"\n            ",
+					".",
+					"\\n",
+					"}",
+					"Glass_Shady",
+					"geodelivery",
+					"        <Layer",
+					"_cir",
+					"name=",
+					"#",
+					"url",
+					"echo",
+					":\"",
 					"\n",
-					"//",
-					"\\",
-					"\"\"",
-					"\\",
-					"rpush",
-					"-    ",
-					"$ ",
-					"libqt5quick5",
-					"quick5-gles",
-					"5-gles",
-					"-gles",
-					"Depends: ",
-					"(",
-					"\n",
+					"\\n ",
 					" ",
-					"(",
-					",",
-					"- `",
-					"apt-get install ",
-					"       \\",
-					"-D",
+					",\n,",
 					"\n",
-					"\n  ",
+					"_}",
+					"/",
+					"L20_",
+					"L20",
+					", ",
+					"5467",
+					"LADOTD_2020",
+					"LADOTD_2020,",
+					"LADOTD_2020_PCI_",
+					"i3cache",
+					"output_shapes",
+					"\\path\\to",
+					"source_footprints",
+					"input_shapes",
 					"\n",
-					"\n  ",
-					"Server Layer: ",
-					"    ",
-					"\\",
-					"                ",
-					" | ",
-					"Server_Layer_Id: 1; ANNOTATIONs:",
-					" Server Layer ID: ",
+					"mmiddendorf",
+					"LADOTD_2020_PCI_L20",
+					"LADOTD_2020_source_fp",
+					"i3cache_",
+					"\\\\synology\\matt\\LADOTD_2020",
+					"\"",
 					"\n",
-					" |  ",
-					"|  ",
-					"    ",
-					"\\",
+					"dotd",
+					"hba",
+					":",
 					"\n",
-					" ",
-					"    ",
+					"@angular",
+					"of ",
+					"@",
+					"You must install peer dependencies yourself",
+					"syn",
 					"  ",
-					" "
+					"+"
 				],
 				"highlight": true,
 				"in_selection": false,
 				"preserve_case": true,
-				"regex": true,
+				"regex": false,
 				"replace_history":
 				[
+					"\\\"",
 					"cc/products/streaming/",
 					"src_srs\"",
 					"/",
@@ -1921,8 +3000,10 @@
 					"Tileset"
 				],
 				"reverse": false,
+				"scrollbar_highlights": true,
 				"show_context": true,
 				"use_buffer2": true,
+				"use_gitignore": true,
 				"whole_word": false,
 				"wrap": true
 			},
@@ -1935,63 +3016,98 @@
 			"groups":
 			[
 				{
-					"selected": 1,
 					"sheets":
 					[
 						{
 							"buffer": 0,
+							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 77,
+								"buffer_size": 1679,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										77,
-										77
+										369,
+										369
 									]
 								],
 								"settings":
 								{
 									"auto_name": "http://localhost:8686/styles/klokantech-basic/?ras",
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/rhow/.bash_aliases",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 3848,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										414,
-										414
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
+							"stack_multiselect": false,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3543,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										188,
+										188
+									]
+								],
+								"settings":
+								{
+									"auto_name": "createopts = {",
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"stack_multiselect": false,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1119,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1119,
+										1119
+									]
+								],
+								"settings":
+								{
+									"auto_name": "minx/y:-119.69175,46.72955",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"stack_multiselect": false,
 							"type": "text"
 						}
 					]
@@ -2003,7 +3119,7 @@
 			},
 			"input":
 			{
-				"height": 35.0
+				"height": 54.0
 			},
 			"layout":
 			{
@@ -2049,7 +3165,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,0,66,2044,1150,2048,1152",
+			"position": "0,0,0,0,0,0,66,2044,1150,2048,1152,2",
 			"project": "",
 			"replace":
 			{
