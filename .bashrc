@@ -111,9 +111,7 @@ fi
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="$HOME/.activator-1.2.3-minimal:$PATH"
-export GOROOT=$HOME/Programs/go
-export GOPATH=$HOME/go_path
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin
 
 bind '"\e[1;5D" backward-word'
 bind '"\e[1;5C" forward-word'
