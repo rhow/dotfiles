@@ -231,10 +231,13 @@ bindsym $mod+Shift+9 move container to workspace $w9; workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10; workspace $w10
 
 # move current workspace to output monitor
-bindsym $mod+Shift+h move workspace to output DP2-2
-bindsym $mod+Shift+y move workspace to output DP2-1
-# bindsym $mod+Shift+u move workspace to output DP2
-bindsym $mod+Shift+n move workspace to output eDP1
+set $DISP_LAP eDP1
+set $DISP_MLT DP2-1
+set $DISP_MRT DP2-3
+bindsym $mod+Shift+n move workspace to output $DISP_LAP
+bindsym $mod+Shift+h move workspace to output $DISP_MRT
+bindsym $mod+Shift+y move workspace to output $DISP_MLT
+
 
 # Docking and undocking laptop
 bindsym $mod+Shift+Ctrl+d exec ~/.screenlayout/dock.sh
@@ -260,7 +263,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # startup applications in workspaces
 # assign [class="Google-chrome"] $w1    # assign forces all new instances into specific workspace
 
-exec --no-startup-id i3-msg 'workspace $w1; exec google-chrome-stable; workspace $w1'
+exec picom --config /home/rhow/.config/picom/config
+# exec --no-startup-id i3-msg 'workspace $w1; exec google-chrome-stable; workspace $w1'
 # exec i3-msg 'workspace $w2; exec google-chrome-stable --new-window chat.google.com'  # attempt to open google chat
 exec --no-startup-id i3-msg 'workspace $w3; exec subl; workspace $w1'
 exec --no-startup-id i3-msg 'workspace $w4; exec i3-sensible-terminal; workspace $w1'
