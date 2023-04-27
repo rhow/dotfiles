@@ -66,7 +66,7 @@ alias umount-jungfrau='sudo umount ~/mounts/jungfrau'
 alias py36virtualenv='python3.6 -m venv --without-pip virtualenv'
 alias py35virtualenv='python3.5 -m venv --without-pip virtualenv'
 alias pypipinstall='curl -s https://bootstrap.pypa.io/get-pip.py | python3'
-alias pyserv='python3 -m SimpleHTTPServer'
+alias pyserv='python3 -m http.server'
 alias prettyjson='python3 -m json.tool'
 alias s3cmd=/usr/local/bin/s3cmd
 
@@ -86,3 +86,5 @@ alias kconfiga='kubectl config get-contexts | ag "\*" | awk '"'"'{print $1, $2}'
 alias k8token='~/bin/k8token.sh'
 alias maelstrom-fullscreen='maelstrom -fullscreen -volume 1'
 alias tf='terraform'
+
+alias code='code --disable-gpu'
