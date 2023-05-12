@@ -146,3 +146,19 @@ libcanberra-gtk-module
 sudo apt install xfce4-notifyd
 * tried `dunst`, couldn't get it to theme
 * test with `notify-send Test 'This is a test'`; also Google Chat settings `Show an example`
+$ echo $PATH
+/home/rhow/.local/bin:/home/rhow/anaconda3/condabin:/home/rhow/Programs/google-cloud-sdk/bin:/home/rhow/.nvm/versions/node/v19.0.1/bin:/home/rhow/.activator-1.2.3-minimal:/home/rhow/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin:/home/rhow/npm/bin
+
+## 2023/05/10 - Laptop Dell Precision 5570
+Issue: Booting up, shutting down seeing following list of hundreds
+(in-a-loop)
+```
+[   16.001658] nouveau 0000:01L00.0:  mc: intr 00000040
+```
+searching for `nouveau mc: intr` resulted in the following post
+https://linuxconfig.org/how-to-disable-blacklist-nouveau-nvidia-driver-on-ubuntu-20-04-focal-fossa-linux
+```
+sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
+sudo update-initramfs -u
+```
