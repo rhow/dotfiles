@@ -35,9 +35,10 @@ bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opaci
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # changes the display brightness
-# requires: sudo apt-get install xbacklight
+# sudo apt-get install xbacklight
 # https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder#715310
-# symlink existed, making /etc/X11/xorg.conf file worked: Driver      "intel"
+# rhow 20230511 symlink existed
+# Needed to make `/etc/X11/xorg.conf` file worked: Driver      "intel"
 
 # bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # bindsym XF86MonBrightnessUp exec xbacklight -inc 1
