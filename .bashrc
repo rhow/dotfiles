@@ -118,9 +118,10 @@ bind '"\e[1;5C" forward-word'
 export PATH="$PATH:$HOME/npm/bin"
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:$HOME/npm/lib/node_modules
 
-if [ -f /usr/bin/setxkbmap ]; then
-    setxkbmap -option caps:ctrl_modifier
-fi
+# Moved to input section in .config/sway/config
+# if [ -f /usr/bin/setxkbmap ]; then
+#    setxkbmap -option caps:ctrl_modifier
+# fi
 # setxkbmap -option  # use with empty '-option' to remove mappings, i.e. cap locks on when above mapping is applied
 
 docker-ip() {
@@ -172,17 +173,23 @@ fi
 if [ -f '/home/rhow/Programs/google-cloud-sdk/path.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then
+    . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc';
+fi
 
 source <(kubectl completion bash)
 
-if [ -d "/var/lib/flatpak/exports/share" ]; then export PATH="$PATH:/var/lib/flatpak/exports/share"; fi
+if [ -d "/var/lib/flatpak/exports/share" ]; then
+    export PATH="$PATH:/var/lib/flatpak/exports/share";
+fi
 
-if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then source "/home/rhow/anaconda3/etc/profile.d/conda.sh"; fi
+if [ -f "/home/rhow/anaconda3/etc/profile.d/conda.sh" ]; then
+    source "/home/rhow/anaconda3/etc/profile.d/conda.sh";
+fi
 
 # Turn off Tap to Click on Dell touchpad
 #     MaxTapTime              = 180
-synclient MaxTapTime=0
+# synclient MaxTapTime=0
 
 export CI_NEXUS_CREDENTIALS=YWVyaWFsZGV2OkAzcjFAbGQzdg==
 
