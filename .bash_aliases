@@ -87,4 +87,4 @@ alias k8token='~/bin/k8token.sh'
 alias maelstrom-fullscreen='maelstrom -fullscreen -volume 1'
 alias tf='terraform'
 
-alias code='code --disable-gpu'
+# alias code='code --disable-gpu'
