@@ -1,0 +1,8 @@
+configuration {
+  modi: "window,run,ssh,drun,calc";
+  combi-modi: "window,run";
+  show-icons: true;
+  display-drun: "Applications";
+}
+
+@theme "rounded-blue-dark"
