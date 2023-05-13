@@ -117,7 +117,7 @@ input "type:keyboard" {
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 1%+
 
     # Close all notifications
-    bindsym $mod+Shift+u exec dunstctl close-all
+    bindsym $mod+t exec dunstctl close-all
 #
 # Moving around:
 #
