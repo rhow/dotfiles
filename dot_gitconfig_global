@@ -29,3 +29,5 @@
 	required = true
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
+[url "ssh://git@github.com/AirbusAerial/"]
+      insteadOf = https://github.com/AirbusAerial/
