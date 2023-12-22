@@ -70,7 +70,7 @@ alias pyserv='python3 -m http.server'
 alias prettyjson='python3 -m json.tool'
 alias s3cmd=/usr/local/bin/s3cmd
 
-alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
+# alias show-keys="xev  | grep -A2 --line-buffered '^KeyRelease'  | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 alias eval-ssh='eval `ssh-agent -s` && ssh-add'
 
