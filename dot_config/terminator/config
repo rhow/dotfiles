@@ -1,15 +1,15 @@
 [global_config]
   focus = mouse
   close_button_on_tab = False
-  title_font = Sans 14
 [keybindings]
   full_screen = <Ctrl><Shift>F10
 [profiles]
   [[default]]
     urgent_bell = True
     cursor_blink = False
-    cursor_color = red
-    cursor_color_fg = False
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#c01c28"
+    cursor_color_default = False
     font = DejaVu Sans Mono 14
     foreground_color = "#ffffff"
     show_titlebar = False
