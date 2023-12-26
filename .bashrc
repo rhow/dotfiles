@@ -177,7 +177,7 @@ if [ -f '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc' ]; then
     . '/home/rhow/Programs/google-cloud-sdk/completion.bash.inc';
 fi
 
-source <(kubectl completion bash)
+# source <(kubectl completion bash)
 
 if [ -d "/var/lib/flatpak/exports/share" ]; then
     export PATH="$PATH:/var/lib/flatpak/exports/share";
